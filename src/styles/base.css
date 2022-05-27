@@ -1,10 +1,21 @@
+html {
+	height: -webkit-fill-available;
+}
+
 body {
-	@apply font-sans text-base antialiased;
+	@apply font-sans text-base antialiased min-h-screen flex flex-col;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
+}
+
+#root {
+	@apply flex flex-col flex-1;
 }
 
 main {
-	@apply bg-theme-background text-theme-text;
+	@apply bg-theme-background text-theme-text flex-1;
 }
+
 
 .link {
 	@apply cursor-pointer transition-colors duration-100 ease-linear text-theme-primary-600;
