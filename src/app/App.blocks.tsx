@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
 import { useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
@@ -18,6 +18,7 @@ import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { useBetaNotice } from "@/domains/profile/hooks/use-beta-notice";
 import { BetaNotice } from "@/domains/profile/pages/BetaNotice/BetaNotice";
+import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 
 const AppRouter: React.FC = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -83,7 +84,7 @@ const Main: React.VFC = () => {
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
 	const { setTheme } = useTheme();
-
+	const { setShowMobileNavigation } = useNavigationContext();
 	const { showBetaNotice, acceptBetaNotice } = useBetaNotice();
 
 	const { t } = useTranslation();
@@ -100,6 +101,8 @@ const Main: React.VFC = () => {
 			setTheme("system");
 
 			toasts.dismiss();
+
+			setShowMobileNavigation(false);
 		},
 		onProfileSyncComplete: async () => {
 			await toasts.dismiss();
@@ -181,6 +184,8 @@ const Main: React.VFC = () => {
 
 	return (
 		<main data-testid="Main">
+			<InstallPWA />
+
 			<ToastContainer closeOnClick={false} newestOnTop />
 
 			{renderContent()}

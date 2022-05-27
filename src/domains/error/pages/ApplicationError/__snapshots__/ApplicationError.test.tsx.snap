@@ -7,7 +7,7 @@ exports[`ApplicationError should render with error message and reload 1`] = `
     data-testid="Main"
   >
     <div
-      class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+      class="css-34yj9a"
     >
       <nav
         aria-labelledby="main menu"
@@ -149,7 +149,7 @@ exports[`ApplicationError should render without error message 1`] = `
     data-testid="Main"
   >
     <div
-      class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+      class="css-34yj9a"
     >
       <nav
         aria-labelledby="main menu"

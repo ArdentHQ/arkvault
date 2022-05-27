@@ -343,7 +343,8 @@ describe("Welcome", () => {
 
 	it("should use the system theme", () => {
 		const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-		const spy = jest.spyOn(document.body.classList, "add");
+		// eslint-disable-next-line testing-library/no-node-access
+		const spy = jest.spyOn(document.querySelector("html").classList, "add");
 
 		render(<Welcome />);
 

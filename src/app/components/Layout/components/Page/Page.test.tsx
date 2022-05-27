@@ -1,16 +1,44 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 
 import { Page } from "./Page";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
+import { useNavigationContext } from "@/app/contexts";
 let profile: Contracts.IProfile;
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
+
+const TestComponent = ({
+	hasFixedFormButtons,
+	showMobileNavigation,
+}: {
+	hasFixedFormButtons: boolean;
+	showMobileNavigation: boolean;
+}) => {
+	const { setHasFixedFormButtons, setShowMobileNavigation } = useNavigationContext();
+
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setShowMobileNavigation(showMobileNavigation);
+		setHasFixedFormButtons(hasFixedFormButtons);
+		setMounted(true);
+	}, []);
+
+	if (!mounted) {
+		return <></>;
+	}
+
+	return (
+		<Page title="Test">
+			<div data-testid="Content" />
+		</Page>
+	);
+};
 
 describe("Page", () => {
 	beforeAll(() => {
@@ -32,6 +60,26 @@ describe("Page", () => {
 		);
 
 		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each([
+		[true, true],
+		[true, false],
+		[false, false],
+	])("should render with navigation context", (showMobileNavigation, hasFixedFormButtons) => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TestComponent hasFixedFormButtons={hasFixedFormButtons} showMobileNavigation={showMobileNavigation} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Content")).toBeInTheDocument();
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 

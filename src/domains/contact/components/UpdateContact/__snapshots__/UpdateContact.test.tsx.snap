@@ -327,7 +327,7 @@ exports[`UpdateContact should render responsive 1`] = `
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-between"
                 >
                   <div
-                    class="css-ngzslp"
+                    class="css-v3xgej"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -712,7 +712,7 @@ exports[`UpdateContact should render responsive 2`] = `
                     </div>
                   </button>
                   <div
-                    class="css-ngzslp"
+                    class="css-v3xgej"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1102,7 +1102,7 @@ exports[`UpdateContact should render responsive 3`] = `
                     </div>
                   </button>
                   <div
-                    class="css-ngzslp"
+                    class="css-v3xgej"
                   >
                     <button
                       class="css-1jhy6v9"

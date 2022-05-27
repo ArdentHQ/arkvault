@@ -3,7 +3,7 @@
 exports[`SendTransfer should display unconfirmed transactions modal when submitting with Enter 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col"
+    class="css-1v4rx69"
   >
     <nav
       aria-labelledby="main menu"
@@ -761,7 +761,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 </section>
               </div>
               <div
-                class="css-ngzslp"
+                class="css-v3xgej"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1016,7 +1016,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         </div>
                       </div>
                       <div
-                        class="css-ngzslp"
+                        class="css-v3xgej"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -1057,10 +1057,10 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
 exports[`SendTransfer should error if wrong mnemonic 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1600,7 +1600,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1649,10 +1649,10 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
 exports[`SendTransfer should render form and use location state 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2774,7 +2774,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2812,10 +2812,10 @@ exports[`SendTransfer should render form and use location state 1`] = `
 exports[`SendTransfer should render form and use location state without memo 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3926,7 +3926,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -7305,10 +7305,10 @@ exports[`SendTransfer should render form step without test networks 1`] = `
 exports[`SendTransfer should render network selection without selected wallet 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -7885,7 +7885,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -10210,10 +10210,10 @@ exports[`SendTransfer should render summary step 1`] = `
 exports[`SendTransfer should send a single transfer and handle undefined expiration 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -11046,7 +11046,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -11072,7 +11072,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
 exports[`SendTransfer should send a single transfer and show unconfirmed transactions modal 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col"
+    class="css-1v4rx69"
   >
     <nav
       aria-labelledby="main menu"
@@ -11830,7 +11830,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 </section>
               </div>
               <div
-                class="css-ngzslp"
+                class="css-v3xgej"
               >
                 <button
                   class="css-1jhy6v9"
@@ -12159,7 +12159,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         </div>
                       </div>
                       <div
-                        class="css-ngzslp"
+                        class="css-v3xgej"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -12200,10 +12200,10 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
 exports[`SendTransfer should send a single transfer using wallet with encryption password 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -13036,7 +13036,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -13062,10 +13062,10 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
 exports[`SendTransfer should send a single transfer with keyboard 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -13898,7 +13898,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -13924,10 +13924,10 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
 exports[`SendTransfer should send a single transfer without keyboard 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -14760,7 +14760,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -14786,10 +14786,10 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
 exports[`SendTransfer should show error step and go back 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -15315,7 +15315,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <div
                       class="mr-auto"

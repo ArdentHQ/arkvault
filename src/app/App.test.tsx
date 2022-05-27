@@ -293,7 +293,8 @@ describe("App", () => {
 				screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 			).resolves.toBeVisible();
 
-			expect(document.body).toHaveClass(shouldUseDarkColors ? "dark" : "light");
+			// eslint-disable-next-line testing-library/no-node-access
+			expect(document.querySelector("html")).toHaveClass(shouldUseDarkColors ? "dark" : "light");
 
 			toastSpy.mockRestore();
 			utilsSpy.mockRestore();

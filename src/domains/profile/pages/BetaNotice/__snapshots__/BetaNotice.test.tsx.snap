@@ -3,7 +3,7 @@
 exports[`BetaNotice should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col"
+    class="css-1v4rx69"
   >
     <nav
       aria-labelledby="main menu"
@@ -116,7 +116,7 @@ The Software is provided «AS IS» without any express or implied warranty of an
                     </span>
                   </label>
                   <div
-                    class="css-ngzslp"
+                    class="css-v3xgej"
                   >
                     <button
                       class="css-1yqe28v"

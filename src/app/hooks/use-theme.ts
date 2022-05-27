@@ -7,12 +7,15 @@ import { browser } from "@/utils/platform";
 export type ViewingModeType = "light" | "dark";
 
 const setTheme = (theme: Theme) => {
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+	const htmlElement = document.querySelector("html")!;
+
 	if (theme === "system") {
 		const theme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
-		document.body.classList.remove("dark");
-		document.body.classList.remove("light");
-		document.body.classList.add(theme);
+		htmlElement.classList.remove("dark");
+		htmlElement.classList.remove("light");
+		htmlElement.classList.add(theme);
 
 		if (!browser.supportsOverflowOverlay()) {
 			document.documentElement.classList.remove("firefox-scrollbar-dark");
@@ -23,8 +26,8 @@ const setTheme = (theme: Theme) => {
 		return;
 	}
 
-	document.body.classList.remove(theme === "dark" ? "light" : "dark");
-	document.body.classList.add(theme);
+	htmlElement.classList.remove(theme === "dark" ? "light" : "dark");
+	htmlElement.classList.add(theme);
 
 	if (!browser.supportsOverflowOverlay()) {
 		document.documentElement.classList.remove(
@@ -52,7 +55,8 @@ export const useTheme: () => {
 		const hasDifferentTheme = shouldUseDarkColors() !== (profileTheme === "dark");
 
 		/* istanbul ignore else */
-		if (hasDifferentTheme || !document.body.classList.contains(theme)) {
+		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+		if (hasDifferentTheme || !document.querySelector("html")!.classList.contains(theme)) {
 			setTheme(profileTheme as Theme);
 		}
 	};

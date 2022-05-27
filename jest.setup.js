@@ -5,6 +5,18 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 
+jest.mock(
+	"virtual:pwa-register/react",
+	() => {
+		return {
+			useRegisterSW: () => ({}),
+		};
+	},
+	{
+		virtual: true,
+	},
+);
+
 jest.mock("@/app/hooks/use-synchronizer", () => {
 	const { useSynchronizer } = jest.requireActual("@/app/hooks/use-synchronizer");
 

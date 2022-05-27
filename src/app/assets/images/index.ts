@@ -31,6 +31,30 @@ import { ReactComponent as WelcomeBannerDarkBlue } from "./welcome-banner-dark-b
 import { ReactComponent as WelcomeBannerDarkGreen } from "./welcome-banner-dark-green.svg";
 import { ReactComponent as WelcomeBannerLightBlue } from "./welcome-banner-light-blue.svg";
 import { ReactComponent as WelcomeBannerLightGreen } from "./welcome-banner-light-green.svg";
+import {
+	ReactComponent as IOsInstructionsStep1DarkBlue,
+	ReactComponent as IOsInstructionsStep1DarkGreen,
+} from "./ios-instructions-step-1-dark.svg";
+import {
+	ReactComponent as IOsInstructionsStep1LightBlue,
+	ReactComponent as IOsInstructionsStep1LightGreen,
+} from "./ios-instructions-step-1-light.svg";
+import {
+	ReactComponent as IOsInstructionsStep2DarkBlue,
+	ReactComponent as IOsInstructionsStep2DarkGreen,
+} from "./ios-instructions-step-2-dark.svg";
+import {
+	ReactComponent as IOsInstructionsStep2LightBlue,
+	ReactComponent as IOsInstructionsStep2LightGreen,
+} from "./ios-instructions-step-2-light.svg";
+import {
+	ReactComponent as IOsInstructionsStep3DarkBlue,
+	ReactComponent as IOsInstructionsStep3DarkGreen,
+} from "./ios-instructions-step-3-dark.svg";
+import {
+	ReactComponent as IOsInstructionsStep3LightBlue,
+	ReactComponent as IOsInstructionsStep3LightGreen,
+} from "./ios-instructions-step-3-light.svg";
 import { ReactComponent as TrashLight } from "./trash-light.svg";
 import { ReactComponent as TrashDark } from "./trash-dark.svg";
 import { ReactComponent as InfoLight } from "./info-light.svg";
@@ -63,6 +87,18 @@ export const images = {
 		GenericWarningDarkGreen,
 		GenericWarningLightBlue,
 		GenericWarningLightGreen,
+		IOsInstructionsStep1DarkBlue,
+		IOsInstructionsStep1DarkGreen,
+		IOsInstructionsStep1LightBlue,
+		IOsInstructionsStep1LightGreen,
+		IOsInstructionsStep2DarkBlue,
+		IOsInstructionsStep2DarkGreen,
+		IOsInstructionsStep2LightBlue,
+		IOsInstructionsStep2LightGreen,
+		IOsInstructionsStep3DarkBlue,
+		IOsInstructionsStep3DarkGreen,
+		IOsInstructionsStep3LightBlue,
+		IOsInstructionsStep3LightGreen,
 		InfoDark,
 		InfoLight,
 		NoResultsDarkBlue,

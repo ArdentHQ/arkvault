@@ -3,10 +3,10 @@
 exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -747,7 +747,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -784,10 +784,10 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
 exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1533,7 +1533,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1570,10 +1570,10 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
 exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2245,7 +2245,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2282,10 +2282,10 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
 exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2868,7 +2868,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2917,10 +2917,10 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
 exports[`SendDelegateResignation Delegate Resignation should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3450,7 +3450,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                     </div>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <div
                       class="mr-auto"
@@ -3529,10 +3529,10 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
 exports[`SendDelegateResignation Delegate Resignation should show mnemonic authentication error 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4128,7 +4128,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4177,10 +4177,10 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4939,7 +4939,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4965,10 +4965,10 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction using encryption password 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5727,7 +5727,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -5753,10 +5753,10 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction with keyboard 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6515,7 +6515,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"

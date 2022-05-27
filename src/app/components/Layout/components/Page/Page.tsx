@@ -1,10 +1,22 @@
 import React, { FC } from "react";
 
-import cn from "classnames";
+import tw, { styled, css } from "twin.macro";
 import { PageProperties } from "./Page.contracts";
 import { NavigationBar } from "@/app/components/NavigationBar";
 import { useDocumentTitle } from "@/app/hooks/use-document-title";
 import { useNavigationContext } from "@/app/contexts";
+
+export const PageWrapper = styled.div<{ showMobileNavigation: boolean; hasFixedFormButtons: boolean }>`
+	${tw`relative flex flex-col`}
+
+	${({ showMobileNavigation, hasFixedFormButtons }) =>
+		showMobileNavigation && !hasFixedFormButtons && tw`pb-14 sm:pb-0`}
+	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && hasFixedFormButtons && tw`pb-32 sm:pb-0`}
+	${css`
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
+	`}
+`;
 
 export const Page: FC<PageProperties> = ({
 	navbarVariant = "full",
@@ -31,15 +43,10 @@ export const Page: FC<PageProperties> = ({
 	);
 
 	return (
-		<div
-			className={cn("relative flex min-h-screen flex-col", {
-				"pb-14 sm:pb-0": showMobileNavigation && !hasFixedFormButtons,
-				"pb-32 sm:pb-0": showMobileNavigation && hasFixedFormButtons,
-			})}
-		>
+		<PageWrapper showMobileNavigation={showMobileNavigation} hasFixedFormButtons={hasFixedFormButtons}>
 			<NavigationBar variant={navbarVariant} title={title} isBackDisabled={isBackDisabled} />
 
 			<div className="flex flex-1 flex-col">{sidebar ? renderWithSidebar() : children}</div>
-		</div>
+		</PageWrapper>
 	);
 };

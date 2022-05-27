@@ -29,6 +29,9 @@ export const translations = {
 		},
 		TITLE: "Import Profile",
 	},
+	INSTALL_PWA: {
+		MESSAGE: "Get a native user experience by installing the app.",
+	},
 	MODAL_BETA_NOTICE: {
 		DESCRIPTION:
 			"Payvo is experimental and shall not create any obligation for ARK Ecosystem SCIC to continue to develop, productize, support, repair, offer for sale, or in any other way continue to provide or develop Software either to Licensee or to any other party.\nThe Software is provided «AS IS» without any express or implied warranty of any kind including warranties of merchantability or fitness for any particular purpose. In no event shall ARK Ecosystem SCIC or its subsidiaries, partners, or related entities be liable for any damages whatsoever (including, without limitation, damages for loss of profits or funds, business interruption, loss of information arising out of the use or inability to use the software).",

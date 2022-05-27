@@ -20,6 +20,7 @@ import { ReactComponent as Code } from "./code.svg";
 import { ReactComponent as Copy } from "./copy.svg";
 import { ReactComponent as CopyKey } from "./copy-key.svg";
 import { ReactComponent as Cross } from "./cross.svg";
+import { ReactComponent as Download } from "./download.svg";
 import { ReactComponent as CrossSmall } from "./cross-small.svg";
 import { Currencies } from "./currencies";
 import { ReactComponent as Dash } from "./dash.svg";
@@ -97,6 +98,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Dash,
 	Dashboard,
 	Delegate: TransactionIcons.DelegateRegistration,
+	Download,
 	EllipsisVertical,
 	ExtensionJson,
 	ExtensionWwe,

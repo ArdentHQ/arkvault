@@ -3,10 +3,10 @@
 exports[`SendTransfer Network Selection should select a cryptoasset and select sender without wallet id param 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1125,7 +1125,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1163,10 +1163,10 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
 exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1755,7 +1755,7 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"

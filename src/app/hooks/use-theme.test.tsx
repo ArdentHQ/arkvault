@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@payvo/sdk-profiles";
 
 import { useTheme } from "@/app/hooks/use-theme";
@@ -39,11 +40,11 @@ describe("useTheme", () => {
 		it.each(["light", "dark"])("should set %s theme", (theme) => {
 			useTheme().setTheme(theme === "light" ? "dark" : "light");
 
-			expect(document.body.classList.contains(theme)).toBe(false);
+			expect(document.querySelector("html").classList.contains(theme)).toBe(false);
 
 			useTheme().setTheme(theme);
 
-			expect(document.body.classList.contains(theme)).toBe(true);
+			expect(document.querySelector("html").classList.contains(theme)).toBe(true);
 		});
 
 		it("should set system theme", () => {
@@ -73,8 +74,8 @@ describe("useTheme", () => {
 
 			useTheme().setTheme("system");
 
-			expect(document.body.classList.contains("light")).toBe(false);
-			expect(document.body.classList.contains("dark")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(false);
+			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
 			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
 
@@ -111,13 +112,13 @@ describe("useTheme", () => {
 
 			useTheme().setTheme("dark");
 
-			expect(document.body.classList.contains("dark")).toBe(true);
-			expect(document.body.classList.contains("light")).toBe(false);
+			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(false);
 
 			useTheme().setProfileTheme(profile);
 
-			expect(document.body.classList.contains("dark")).toBe(false);
-			expect(document.body.classList.contains("light")).toBe(true);
+			expect(document.querySelector("html").classList.contains("dark")).toBe(false);
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});
 
 		it("should not set theme from profile settings", async () => {
@@ -130,11 +131,11 @@ describe("useTheme", () => {
 
 			const themeSpy = jest.spyOn(themeHook, "setTheme");
 
-			expect(document.body.classList.contains("light")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
 			themeHook.setProfileTheme(profile);
 
-			expect(document.body.classList.contains("light")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
 			expect(themeSpy).not.toHaveBeenCalledWith();
 
@@ -160,31 +161,31 @@ describe("useTheme", () => {
 
 			setTheme(systemTheme);
 
-			expect(document.body.classList.contains(systemTheme)).toBe(true);
+			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 
 			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
 			setTheme(profileTheme as Theme);
 
-			expect(document.body.classList.contains(profileTheme)).toBe(true);
+			expect(document.querySelector("html").classList.contains(profileTheme)).toBe(true);
 
 			resetProfileTheme(profile);
 
-			expect(document.body.classList.contains(systemTheme)).toBe(true);
+			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 			expect(profile.appearance().get("theme")).toBe(systemTheme);
 		});
 	});
 
 	describe("resetTheme", () => {
 		it("should reset theme to defaults", () => {
-			expect(document.body.classList.contains("light")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
 			useTheme().setTheme("dark");
 
-			expect(document.body.classList.contains("dark")).toBe(true);
+			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
 			useTheme().resetTheme();
 
-			expect(document.body.classList.contains("light")).toBe(true);
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});
 	});
 });

@@ -3,10 +3,10 @@
 exports[`Network Settings should list the public networks selected 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -962,7 +962,7 @@ exports[`Network Settings should list the public networks selected 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"
@@ -991,10 +991,10 @@ exports[`Network Settings should list the public networks selected 1`] = `
 exports[`Network Settings should render networks settings section 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1950,7 +1950,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"

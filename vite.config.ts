@@ -6,6 +6,7 @@ import macrosPlugin from "vite-plugin-babel-macros";
 import OptimizationPersist from "vite-plugin-optimize-persist";
 import PkgConfig from "vite-plugin-package-config";
 import { visualizer } from "rollup-plugin-visualizer";
+import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -81,5 +82,52 @@ export default defineConfig({
 		macrosPlugin(),
 		PkgConfig(),
 		OptimizationPersist(),
+		VitePWA({
+			includeAssets: [
+				"favicon.svg",
+				"favicon.ico",
+				"favicon-32x32.png",
+				"favicon-16x16.png",
+				"robots.txt",
+				"app-icon-192.png",
+				"app-maskable-icon-512.png",
+				"splashscreens/iphone5_splash.png",
+				"splashscreens/iphone6_splash.png",
+				"splashscreens/iphoneplus_splash.png",
+				"splashscreens/iphonex_splash.png",
+				"splashscreens/iphonexr_splash.png",
+				"splashscreens/iphonexsmax_splash.png",
+				"splashscreens/ipad_splash.png",
+				"splashscreens/ipadpro1_splash.png",
+				"splashscreens/ipadpro3_splash.png",
+				"splashscreens/ipadpro2_splash.png",
+			],
+			registerType: "autoUpdate",
+			manifest: {
+				display: "standalone",
+				lang: "en-US",
+				orientation: "portrait-primary",
+				start_url: "/",
+				name: "ARKVault",
+				short_name: "ARKVault",
+				description: "Control Your Assets",
+				theme_color: "#FFFFFF",
+				background_color: "#235B95",
+				icons: [
+					{
+						src: "app-icon-192.png",
+						sizes: "192x192",
+						type: "image/png",
+						purpose: "any",
+					},
+					{
+						src: "app-maskable-icon-512.png",
+						sizes: "512x512",
+						type: "image/png",
+						purpose: "maskable",
+					},
+				],
+			},
+		}),
 	],
 });

@@ -3,10 +3,10 @@
 exports[`Contacts should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1308,10 +1308,10 @@ exports[`Contacts should render compact on md screen 1`] = `
 exports[`Contacts should render compact on md screen if uses expanded tables 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2613,10 +2613,10 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
 exports[`Contacts should render responsive with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3241,10 +3241,10 @@ exports[`Contacts should render responsive with contacts 1`] = `
 exports[`Contacts should render with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4546,10 +4546,10 @@ exports[`Contacts should render with contacts 1`] = `
 exports[`Contacts should render without contacts 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div

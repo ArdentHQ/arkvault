@@ -95,6 +95,18 @@ export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> =
 	);
 };
 
+const NavigationBarMobileWrapper = styled.div<{
+	hasFixedFormButtons?: boolean;
+}>`
+	${({ hasFixedFormButtons }) => !hasFixedFormButtons && tw`shadow-footer-smooth dark:shadow-footer-smooth-dark`};
+	${tw`fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden`}
+	${css`
+		@supports (padding-bottom: env(safe-area-inset-bottom)) {
+			padding-bottom: env(safe-area-inset-bottom);
+		}
+	`}
+`;
+
 const NavigationBarMobile: React.VFC<{
 	sendButtonClickHandler: () => void;
 	receiveButtonClickHandler: () => void;
@@ -102,15 +114,7 @@ const NavigationBarMobile: React.VFC<{
 	disabled: boolean;
 	hasFixedFormButtons: boolean;
 }> = ({ sendButtonClickHandler, receiveButtonClickHandler, homeButtonHandler, disabled, hasFixedFormButtons }) => (
-	<div
-		data-testid="NavigationBarMobile"
-		className={cn(
-			"fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden",
-			{
-				"shadow-footer-smooth dark:shadow-footer-smooth-dark": !hasFixedFormButtons,
-			},
-		)}
-	>
+	<NavigationBarMobileWrapper data-testid="NavigationBarMobile" hasFixedFormButtons={hasFixedFormButtons}>
 		{hasFixedFormButtons && (
 			<div
 				data-testid="NavigationBar__buttons-separator"
@@ -161,7 +165,7 @@ const NavigationBarMobile: React.VFC<{
 				<Icon name="Sent" size="lg" />
 			</Button>
 		</div>
-	</div>
+	</NavigationBarMobileWrapper>
 );
 
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({

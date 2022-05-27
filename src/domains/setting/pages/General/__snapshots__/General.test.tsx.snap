@@ -3,10 +3,10 @@
 exports[`General Settings should disable submit button when profile is not restored yet 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1575,7 +1575,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"
@@ -1604,10 +1604,10 @@ exports[`General Settings should disable submit button when profile is not resto
 exports[`General Settings should not update the uploaded avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3190,7 +3190,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -3218,10 +3218,10 @@ exports[`General Settings should not update the uploaded avatar when removing fo
 exports[`General Settings should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4786,7 +4786,7 @@ exports[`General Settings should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"
@@ -4815,10 +4815,10 @@ exports[`General Settings should render 1`] = `
 exports[`General Settings should show identicon when removing image if name is set 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6383,7 +6383,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"
@@ -6412,10 +6412,10 @@ exports[`General Settings should show identicon when removing image if name is s
 exports[`General Settings should update profile 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -7980,7 +7980,7 @@ exports[`General Settings should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1yqe28v"
@@ -8009,10 +8009,10 @@ exports[`General Settings should update profile 1`] = `
 exports[`General Settings should update the avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -9577,7 +9577,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -9605,10 +9605,10 @@ exports[`General Settings should update the avatar when removing focus from name
 exports[`General Settings should update the avatar when removing focus from name input 2`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -11166,7 +11166,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <button
                       class="css-1bx0hyc"

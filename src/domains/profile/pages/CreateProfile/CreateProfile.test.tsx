@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 /* eslint-disable @typescript-eslint/require-await */
 import { ARK } from "@payvo/sdk-ark";
 import userEvent from "@testing-library/user-event";
@@ -412,7 +413,7 @@ describe("CreateProfile", () => {
 			expect(darkButton).not.toBeChecked();
 		}
 
-		expect(document.body).toHaveClass(shouldUseDarkColors ? "dark" : "light");
+		expect(document.querySelector("html")).toHaveClass(shouldUseDarkColors ? "dark" : "light");
 
 		shouldUseDarkColorsSpy.mockRestore();
 	});
@@ -425,13 +426,13 @@ describe("CreateProfile", () => {
 		const lightButton = screen.getAllByRole("radio")[0];
 		const darkButton = screen.getAllByRole("radio")[1];
 
-		expect(document.body).toHaveClass("dark");
+		expect(document.querySelector("html")).toHaveClass("dark");
 		expect(darkButton).toBeChecked();
 		expect(lightButton).not.toBeChecked();
 
 		userEvent.click(lightButton);
 
-		expect(document.body).toHaveClass("light");
+		expect(document.querySelector("html")).toHaveClass("light");
 		expect(lightButton).toBeChecked();
 		expect(darkButton).not.toBeChecked();
 

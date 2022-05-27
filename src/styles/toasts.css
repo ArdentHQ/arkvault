@@ -32,3 +32,9 @@
 .Toastify__toast-body {
 	@apply overflow-hidden;
 }
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+	.Toastify__toast-container {
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+}

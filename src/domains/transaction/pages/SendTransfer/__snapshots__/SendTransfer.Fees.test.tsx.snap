@@ -3,10 +3,10 @@
 exports[`SendTransfer Fee Handling should send a single transfer with a high fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -839,7 +839,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -865,10 +865,10 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
 exports[`SendTransfer Fee Handling should send a single transfer with a low fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1701,7 +1701,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a low fee 
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"

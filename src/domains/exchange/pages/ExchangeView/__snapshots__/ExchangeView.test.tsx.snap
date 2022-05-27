@@ -3,10 +3,10 @@
 exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -952,7 +952,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -991,10 +991,10 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 exports[`ExchangeView should render 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1940,7 +1940,7 @@ exports[`ExchangeView should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -1979,10 +1979,10 @@ exports[`ExchangeView should render 1`] = `
 exports[`ExchangeView should render dark theme 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2928,7 +2928,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -2967,10 +2967,10 @@ exports[`ExchangeView should render dark theme 1`] = `
 exports[`ExchangeView should render light theme 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3916,7 +3916,7 @@ exports[`ExchangeView should render light theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -3955,10 +3955,10 @@ exports[`ExchangeView should render light theme 1`] = `
 exports[`ExchangeView should render warning without exchange 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div

@@ -3,10 +3,10 @@
 exports[`News should filter results based on category query and asset 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1167,10 +1167,10 @@ exports[`News should filter results based on category query and asset 1`] = `
 exports[`News should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2331,10 +2331,10 @@ exports[`News should render responsive (md) 1`] = `
 exports[`News should render responsive (xs) 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3453,10 +3453,10 @@ exports[`News should render responsive (xs) 1`] = `
 exports[`News should show error toast if news cannot be fetched 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div

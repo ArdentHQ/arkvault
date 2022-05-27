@@ -6,7 +6,7 @@ exports[`PageSkeleton should render without profile 1`] = `
     data-testid="PageSkeleton"
   >
     <div
-      class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+      class="css-34yj9a"
     >
       <nav
         aria-labelledby="main menu"

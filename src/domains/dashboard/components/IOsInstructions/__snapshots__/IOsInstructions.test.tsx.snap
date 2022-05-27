@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IOsInstructions should render ios instructions 1`] = `
+<div>
+  <div
+    class="mt-8"
+    data-testid="IOsInstructions"
+  >
+    <div
+      class="flex flex-col items-start"
+    >
+      <div
+        class="mb-4 font-semibold text-theme-secondary-text"
+      >
+        1. Press the share button
+      </div>
+      <svg
+        class="mb-8 h-auto w-full"
+      >
+        ios-instructions-step-1-light.svg
+      </svg>
+      <div
+        class="mb-4 font-semibold text-theme-secondary-text"
+      >
+        2. Select "Add to Home Screen"
+      </div>
+      <svg
+        class="mb-8 h-auto w-full"
+      >
+        ios-instructions-step-2-light.svg
+      </svg>
+      <div
+        class="mb-4 font-semibold text-theme-secondary-text"
+      >
+        3. Press the "Add" button
+      </div>
+      <svg
+        class="h-auto w-full"
+      >
+        ios-instructions-step-3-light.svg
+      </svg>
+    </div>
+    <div
+      class="mt-8 flex items-end justify-end"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="IOsInstructions__close-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

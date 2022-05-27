@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -539,13 +540,13 @@ describe("General Settings", () => {
 		const { setTheme, theme } = useTheme();
 
 		expect(getCurrentAccentColor()).toBe("green");
-		expect(document.body.classList.contains("dark")).toBe(false);
+		expect(document.querySelector("html").classList.contains("dark")).toBe(false);
 
 		setAccentColor("blue");
 		setTheme("dark");
 
 		expect(getCurrentAccentColor()).toBe("blue");
-		expect(document.body.classList.contains("dark")).toBe(true);
+		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
 		render(
 			<Route path="/profiles/:profileId/settings">

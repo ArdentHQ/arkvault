@@ -45,7 +45,7 @@ exports[`NavigationBar should render as logo-only variant 1`] = `
 exports[`NavigationBar should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -443,7 +443,7 @@ exports[`NavigationBar should render full variant when profile restored is false
 exports[`NavigationBar should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -833,7 +833,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
 exports[`NavigationBar should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1223,7 +1223,7 @@ exports[`NavigationBar should render in md 1`] = `
 exports[`NavigationBar should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -1613,7 +1613,7 @@ exports[`NavigationBar should render in sm 1`] = `
 exports[`NavigationBar should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2003,7 +2003,7 @@ exports[`NavigationBar should render in small screen variant 1`] = `
 exports[`NavigationBar should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2393,7 +2393,7 @@ exports[`NavigationBar should render in xs 1`] = `
 exports[`NavigationBar should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -2783,7 +2783,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
 exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
@@ -3173,7 +3173,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
 exports[`NavigationBar should render with title 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div

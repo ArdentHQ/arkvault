@@ -7,10 +7,10 @@ exports[`Registration should register delegate without keyboard 1`] = `<Document
 exports[`Registration should register second signature 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -546,7 +546,7 @@ exports[`Registration should register second signature 1`] = `
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -594,10 +594,10 @@ exports[`Registration should register second signature 1`] = `
 exports[`Registration should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1127,7 +1127,7 @@ exports[`Registration should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <div
                       class="mr-auto"
@@ -1207,10 +1207,10 @@ exports[`Registration should show error step and go back 1`] = `
 exports[`Registration should show mnemonic error 1`] = `
 <div>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1807,7 +1807,7 @@ exports[`Registration should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"

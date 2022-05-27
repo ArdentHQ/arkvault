@@ -1,3 +1,3 @@
-const shouldUseDarkColors = () => document.body.classList.contains("dark");
+const shouldUseDarkColors = () => document.querySelector("html")?.classList.contains("dark");
 
 export { shouldUseDarkColors };

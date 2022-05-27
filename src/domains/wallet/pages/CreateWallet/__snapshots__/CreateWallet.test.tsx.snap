@@ -3,10 +3,10 @@
 exports[`CreateWallet should create a wallet 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -718,7 +718,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -757,10 +757,10 @@ exports[`CreateWallet should create a wallet 1`] = `
 exports[`CreateWallet should create a wallet 2`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1456,10 +1456,10 @@ exports[`CreateWallet should create a wallet 2`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 />
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1bx0hyc"
@@ -1486,10 +1486,10 @@ exports[`CreateWallet should create a wallet 2`] = `
 exports[`CreateWallet should create a wallet with encryption 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2201,7 +2201,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -2240,10 +2240,10 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
 exports[`CreateWallet should create a wallet with encryption 2`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2942,10 +2942,10 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 />
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1bx0hyc"
@@ -2974,10 +2974,10 @@ exports[`CreateWallet should not have a pending wallet if leaving on step 1 1`] 
 exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3689,7 +3689,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -3730,10 +3730,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 2`] = `<Docu
 exports[`CreateWallet should show an error message for duplicate name 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4441,7 +4441,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -4480,10 +4480,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
 exports[`CreateWallet should show an error message if wallet generation failed 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5236,7 +5236,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                   </section>
                 </div>
                 <div
-                  class="css-ppnppl"
+                  class="css-1rsixno"
                 >
                   <button
                     class="css-1jhy6v9"

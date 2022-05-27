@@ -3,10 +3,10 @@
 exports[`SendIpfs should error if wrong mnemonic 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -550,7 +550,7 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1811,10 +1811,10 @@ exports[`SendIpfs should render summary step 1`] = `
 exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2552,7 +2552,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2578,10 +2578,10 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
 exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -3319,7 +3319,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3347,10 +3347,10 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 2`]
 exports[`SendIpfs should send an IPFS transaction using encryption password 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4088,7 +4088,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4114,10 +4114,10 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
 exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -4855,7 +4855,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4881,10 +4881,10 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
 exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -5633,7 +5633,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 </section>
               </div>
               <div
-                class="css-ppnppl"
+                class="css-1rsixno"
               >
                 <button
                   class="css-1jhy6v9"
@@ -5671,10 +5671,10 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
 exports[`SendIpfs should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
+    class="css-i3vi18"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -6204,7 +6204,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-ppnppl"
+                    class="css-1rsixno"
                   >
                     <div
                       class="mr-auto"

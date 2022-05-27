@@ -3,10 +3,10 @@
 exports[`Dashboard should display empty block when there are no transactions 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1064,10 +1064,10 @@ exports[`Dashboard should navigate to import wallet page 1`] = `<DocumentFragmen
 exports[`Dashboard should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -2935,10 +2935,10 @@ exports[`Dashboard should render 1`] = `
 exports[`Dashboard should render loading state when profile is syncing 1`] = `
 <DocumentFragment>
   <div
-    class="relative flex min-h-screen flex-col pb-14 sm:pb-0"
+    class="css-34yj9a"
   >
     <div
-      class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
       <div
