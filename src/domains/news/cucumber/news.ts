@@ -82,8 +82,8 @@ cucumber(
 		"And the results should be filtered by the search term": async (t: TestController) => {
 			await t.expect(Selector('[data-testid="NewsCard__content"]').withText(/major league hacking/i).exists).ok();
 		},
-		"Then the page should display that no results have been found": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="EmptyResults"]').exists).ok();
+		"Then the page should display only one news card": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=NewsCard]").count).eql(1);
 		},
 	},
 	[
