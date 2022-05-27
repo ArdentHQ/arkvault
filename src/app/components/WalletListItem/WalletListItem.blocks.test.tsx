@@ -13,7 +13,6 @@ import {
 	Starred,
 	Info,
 	Balance,
-	MobileRecipient,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -322,75 +321,5 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 
 		walletSpy.mockRestore();
-	});
-
-	it.each(["wallet", "contact"])("should render MobileRecipient", (type) => {
-		const clickHandler = jest.fn();
-
-		const recipient: MobileRecipient = {
-			address: "address",
-			avatar: "avatar",
-			id: "id",
-			type: type,
-		};
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={false} />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		userEvent.click(screen.getByTestId("ListItemSmall"));
-
-		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-
-		expect(asFragment).toMatchSnapshot();
-	});
-
-	it.each(["wallet", "contact"])("should render selected MobileRecipient", (type) => {
-		const clickHandler = jest.fn();
-
-		const recipient: MobileRecipient = {
-			address: "address",
-			avatar: "avatar",
-			id: "id",
-			type: type,
-		};
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={true} />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		userEvent.click(screen.getByTestId("ListItemSmall"));
-
-		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-
-		expect(asFragment).toMatchSnapshot();
 	});
 });

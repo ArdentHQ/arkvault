@@ -19,7 +19,7 @@ import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { useBreakpoint } from "@/app/hooks";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
-import { MobileRecipient } from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { WalletListItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	index,
@@ -83,14 +83,42 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 	onAction,
 	selectedAddress,
 }) => {
-	const buttonClickHandler = useCallback(() => onAction(recipient.address), [recipient]);
+	const { t } = useTranslation();
 
-	const buttonIsSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
+	const handleClick = useCallback(() => onAction(recipient.address), [recipient]);
+
+	const isSelected = useMemo(() => selectedAddress === recipient.address, [selectedAddress, recipient]);
 
 	return (
 		<tr data-testid={`SearchRecipientListItemResponsive--item-${index}`}>
 			<td className="pt-3">
-				<MobileRecipient clickHandler={buttonClickHandler} selected={buttonIsSelected} recipient={recipient} />
+				<WalletListItemMobile
+					avatar={
+						<Avatar
+							shadowClassName="ring-transparent dark:ring-transparent"
+							size="lg"
+							address={recipient.address}
+						/>
+					}
+					details={
+						<Address
+							address={recipient.address}
+							addressClass="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+							walletName={recipient.alias}
+							walletNameClass="text-sm text-theme-text"
+							wrapperClass="space-y-1"
+							maxNameChars={0}
+							orientation="vertical"
+						/>
+					}
+					extraDetails={
+						<span className="mt-0.5 text-sm font-semibold text-theme-secondary-500">
+							{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
+						</span>
+					}
+					selected={isSelected}
+					onClick={handleClick}
+				/>
 			</td>
 		</tr>
 	);

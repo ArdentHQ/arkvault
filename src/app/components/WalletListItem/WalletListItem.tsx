@@ -6,7 +6,7 @@ import {
 	Info,
 	WalletCell,
 	Starred,
-	MobileLayout,
+	WalletListItemMobile,
 	WalletItemAvatar,
 	WalletItemDetails,
 	WalletItemExtraDetails,
@@ -59,10 +59,10 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 	}
 
 	return (
-		<MobileLayout
+		<WalletListItemMobile
 			isButtonDisabled={isButtonDisabled}
-			buttonClickHandler={handleSend}
-			clickHandler={isSynced ? handleOpen : undefined}
+			onClick={isSynced ? handleOpen : undefined}
+			onButtonClick={handleSend}
 			avatar={<WalletItemAvatar wallet={wallet} />}
 			details={<WalletItemDetails wallet={wallet} />}
 			extraDetails={<WalletItemExtraDetails wallet={wallet} isCompact={isCompact} />}

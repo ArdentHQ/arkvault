@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
-import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 
 export interface WalletListItemSkeletonProperties {
 	isCompact: boolean;
@@ -52,19 +51,14 @@ export interface ButtonsCellProperties {
 	handleSelectOption: ReturnType<typeof useWalletActions>["handleSelectOption"];
 }
 
-export interface MobileLayoutProperties {
-	clickHandler?: () => void;
-	buttonClickHandler?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
+export interface WalletListItemMobileProperties {
+	onClick?: () => void;
+	onButtonClick?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
 	buttonLabel?: React.ReactNode;
 	isButtonDisabled?: boolean;
 	avatar?: React.ReactNode;
 	details?: React.ReactNode;
 	balance?: React.ReactNode;
 	extraDetails?: React.ReactNode;
-}
-
-export interface MobileRecipientProperties {
-	clickHandler: () => void;
-	recipient: RecipientProperties;
-	selected: boolean;
+	selected?: boolean;
 }
