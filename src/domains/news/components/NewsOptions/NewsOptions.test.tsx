@@ -6,7 +6,6 @@ import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
 const categories: AvailableNewsCategories[] = ["Technical"];
-const coins = ["ark"];
 
 describe("NewsOptions", () => {
 	it("should render", () => {
