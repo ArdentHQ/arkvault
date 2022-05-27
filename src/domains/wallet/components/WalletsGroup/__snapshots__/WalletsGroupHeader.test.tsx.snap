@@ -50,7 +50,7 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
       </h1>
     </div>
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-3"
     >
       <div
         class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
@@ -144,7 +144,7 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
       </div>
     </div>
     <div
-      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700"
     >
       <div
         class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
@@ -214,7 +214,7 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
       </h1>
     </div>
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-3"
     >
       <div
         class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
@@ -308,7 +308,7 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
       </div>
     </div>
     <div
-      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700"
     >
       <div
         class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
@@ -408,7 +408,7 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
       </span>
     </div>
     <div
-      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700"
     >
       <div
         class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
@@ -508,7 +508,7 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
       </span>
     </div>
     <div
-      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700"
     >
       <div
         class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"

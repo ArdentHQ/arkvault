@@ -572,7 +572,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -1722,7 +1722,7 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                                class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                                 data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
