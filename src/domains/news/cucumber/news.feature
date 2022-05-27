@@ -20,7 +20,7 @@ Feature: News Page
 		And searches for a specifc term
 		Then the results should be filtered by category
 		And the results should be filtered by the search term
-		Then the page should display that no results have been found
+		Then the page should display only one news card
 
 	@news-searchNoResults
 	Scenario: Display no results page from search
