@@ -1,0 +1,13 @@
+name: Refactor Request
+description: Create a refactor request for the Payvo Wallet
+labels: ["web", "refactor"]
+body:
+    - type: markdown
+      attributes:
+          value: Thanks for taking the time to file a refactor request! Please fill out this form as completely as possible.
+    - type: textarea
+      attributes:
+          label: Describe the refactor you'd like to request
+          description: A clear and concise description of what you want.
+      validations:
+          required: true

@@ -1,0 +1,18 @@
+{
+	"data": {
+		"address": "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		"publicKey": "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+		"nonce": "245",
+		"balance": "3375089801",
+		"attributes": {
+			"htlc": {
+				"locks": {},
+				"lockedBalance": "0"
+			},
+			"vote": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
+		},
+		"lockedBalance": "0",
+		"isDelegate": false,
+		"isResigned": false
+	}
+}

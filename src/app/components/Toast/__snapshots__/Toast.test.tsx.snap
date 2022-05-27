@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-1skql00"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-exclamation-mark.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-1mnink9"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toast should render as danger toast 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-n1f8sq"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-cross.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-18p6zz7"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toast should render as hint toast 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-ubekw2"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-question-mark.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-1bsea4m"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toast should render as info toast 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-1x20b6z"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-info.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-hfho32"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toast should render as success toast 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-1urufw8"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-check-mark.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-134altb"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toast should render as warning toast 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-stretch overflow-hidden md:rounded-xl"
+  >
+    <div
+      class="css-1skql00"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-exclamation-mark.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-1mnink9"
+    >
+      <span>
+        Hello World!
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

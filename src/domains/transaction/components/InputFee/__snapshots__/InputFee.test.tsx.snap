@@ -1,0 +1,2885 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputFee advanced view type should allow to input a value 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            checked=""
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative"
+    >
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="InputCurrency"
+            type="text"
+            value="0.447"
+          />
+        </div>
+        <div
+          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
+        >
+          <div
+            class=""
+          >
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
+              >
+                <button
+                  class="border-r sm:border-r-0 css-1wqyzac"
+                  data-testid="InputFeeAdvanced__up"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-up-small.svg
+                    </svg>
+                  </div>
+                </button>
+                <button
+                  class="css-1p5qk9o"
+                  data-testid="InputFeeAdvanced__down"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee advanced view type should display converted value when on live net 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            checked=""
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative"
+    >
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="InputCurrency"
+            type="text"
+            value="0.3"
+          />
+        </div>
+        <div
+          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
+        >
+          <div
+            class=""
+          >
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="whitespace-no-break mr-3 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  €0.00
+                </span>
+              </div>
+              <div
+                class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
+              >
+                <button
+                  class="border-r sm:border-r-0 css-1wqyzac"
+                  data-testid="InputFeeAdvanced__up"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-up-small.svg
+                    </svg>
+                  </div>
+                </button>
+                <button
+                  class="css-1p5qk9o"
+                  data-testid="InputFeeAdvanced__down"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee advanced view type should render disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div
+      class="css-n29l73"
+      disabled=""
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+          data-testid="InputCurrency"
+          disabled=""
+          type="text"
+          value="0.3"
+        />
+      </div>
+      <div
+        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+        data-testid="Input__addon-end"
+      >
+        <div
+          class=""
+        >
+          <div
+            class="flex items-center"
+          >
+            <div
+              class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
+            >
+              <button
+                class="border-r sm:border-r-0 css-1wqyzac"
+                data-testid="InputFeeAdvanced__up"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg>
+                    chevron-up-small.svg
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="css-1p5qk9o"
+                data-testid="InputFeeAdvanced__down"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee should keep different values for simple and advanced view types 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative"
+    >
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="InputCurrency"
+            type="text"
+            value="0.3"
+          />
+        </div>
+        <div
+          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
+        >
+          <div
+            class=""
+          >
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-400"
+              >
+                <button
+                  class="border-r sm:border-r-0 css-1wqyzac"
+                  data-testid="InputFeeAdvanced__up"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-up-small.svg
+                    </svg>
+                  </div>
+                </button>
+                <button
+                  class="css-1p5qk9o"
+                  data-testid="InputFeeAdvanced__down"
+                  type="button"
+                >
+                  <div
+                    class="css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee should keep different values for simple and advanced view types 2`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should change fee option with converted values = false 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative w-full"
+      data-testid="SelectDropdown"
+    >
+      <div
+        class="sr-only css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="select-list__input"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value="0.006 DARK"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="InputFeeSimpleSelect__dropdown-menu"
+          role="combobox"
+        >
+          <div>
+            <label
+              for="InputFeeSimpleSelect__dropdown-input"
+              id="InputFeeSimpleSelect__dropdown-label"
+            />
+            <div
+              class="invisible fixed w-auto whitespace-nowrap"
+            >
+              0.006 DARK…
+            </div>
+            <div
+              class="relative css-1psxlcd"
+            >
+              <div
+                class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
+              >
+                Avg.
+              </div>
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="InputFeeSimpleSelect__dropdown-menu"
+                  aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="SelectDropdown__input"
+                  id="InputFeeSimpleSelect__dropdown-input"
+                  placeholder="Select option"
+                  readonly=""
+                  type="text"
+                  value="0.006 DARK"
+                />
+                <span
+                  class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                  data-testid="Input__suggestion"
+                >
+                  <span
+                    class="truncate"
+                  >
+                    0.006 DARK
+                  </span>
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center justify-center py-2 px-1"
+                      data-testid="SelectDropdown__caret"
+                    >
+                      <div
+                        class="transition-transform text-theme-secondary-500 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          caret-down.svg
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+            id="InputFeeSimpleSelect__dropdown-menu"
+            role="listbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should change fee option with converted values = true 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative w-full"
+      data-testid="SelectDropdown"
+    >
+      <div
+        class="sr-only css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="select-list__input"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value="0.006 DARK"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="InputFeeSimpleSelect__dropdown-menu"
+          role="combobox"
+        >
+          <div>
+            <label
+              for="InputFeeSimpleSelect__dropdown-input"
+              id="InputFeeSimpleSelect__dropdown-label"
+            />
+            <div
+              class="invisible fixed w-auto whitespace-nowrap"
+            >
+              0.006 DARK…
+            </div>
+            <div
+              class="relative css-1psxlcd"
+            >
+              <div
+                class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
+              >
+                Avg.
+              </div>
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="InputFeeSimpleSelect__dropdown-menu"
+                  aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="SelectDropdown__input"
+                  id="InputFeeSimpleSelect__dropdown-input"
+                  placeholder="Select option"
+                  readonly=""
+                  type="text"
+                  value="0.006 DARK"
+                />
+                <span
+                  class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                  data-testid="Input__suggestion"
+                >
+                  <span
+                    class="truncate"
+                  >
+                    0.006 DARK
+                  </span>
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="whitespace-no-break mr-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        €0.00
+                      </span>
+                    </div>
+                    <div
+                      class="flex items-center justify-center py-2 px-1"
+                      data-testid="SelectDropdown__caret"
+                    >
+                      <div
+                        class="transition-transform text-theme-secondary-500 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          caret-down.svg
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+            id="InputFeeSimpleSelect__dropdown-menu"
+            role="listbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should display converted values when on live net 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render loading state of simple view in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-i7v2as"
+          disabled=""
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-p8zz1l"
+          disabled=""
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            disabled=""
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-1j6b5ro"
+              disabled=""
+            />
+          </div>
+        </label>
+        <span
+          class="css-wlmabt"
+          disabled=""
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton my-1 h-3 css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton my-1 h-3 css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton my-1 h-3 css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render loading state of simple view in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-i7v2as"
+          disabled=""
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-p8zz1l"
+          disabled=""
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            disabled=""
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-1j6b5ro"
+              disabled=""
+            />
+          </div>
+        </label>
+        <span
+          class="css-wlmabt"
+          disabled=""
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <span>
+      <span
+        class="flex max-w-full items-center overflow-hidden leading-none"
+      >
+        <span
+          class="react-loading-skeleton h-14 w-full css-1eg0sfo-skeletonStyles-Skeleton"
+        >
+          ‌
+        </span>
+        ‌
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view in lg 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view in md 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view in xl 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative w-full"
+      data-testid="SelectDropdown"
+    >
+      <div
+        class="sr-only css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="select-list__input"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value="0.456 DARK"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="InputFeeSimpleSelect__dropdown-menu"
+          role="combobox"
+        >
+          <div>
+            <label
+              for="InputFeeSimpleSelect__dropdown-input"
+              id="InputFeeSimpleSelect__dropdown-label"
+            />
+            <div
+              class="invisible fixed w-auto whitespace-nowrap"
+            >
+              0.456 DARK…
+            </div>
+            <div
+              class="relative css-1psxlcd"
+            >
+              <div
+                class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
+              >
+                Avg.
+              </div>
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="InputFeeSimpleSelect__dropdown-menu"
+                  aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="SelectDropdown__input"
+                  id="InputFeeSimpleSelect__dropdown-input"
+                  placeholder="Select option"
+                  readonly=""
+                  type="text"
+                  value="0.456 DARK"
+                />
+                <span
+                  class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                  data-testid="Input__suggestion"
+                >
+                  <span
+                    class="truncate"
+                  >
+                    0.456 DARK
+                  </span>
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center justify-center py-2 px-1"
+                      data-testid="SelectDropdown__caret"
+                    >
+                      <div
+                        class="transition-transform text-theme-secondary-500 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          caret-down.svg
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+            id="InputFeeSimpleSelect__dropdown-menu"
+            role="listbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view with converted values in lg 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view with converted values in md 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view with converted values in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view with converted values in xl 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500"
+            data-testid="Amount"
+          >
+            €0.00
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should render simple view with converted values in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="relative w-full"
+      data-testid="SelectDropdown"
+    >
+      <div
+        class="sr-only css-1psxlcd"
+      >
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="select-list__input"
+            readonly=""
+            tabindex="-1"
+            type="text"
+            value="0.456 DARK"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="InputFeeSimpleSelect__dropdown-menu"
+          role="combobox"
+        >
+          <div>
+            <label
+              for="InputFeeSimpleSelect__dropdown-input"
+              id="InputFeeSimpleSelect__dropdown-label"
+            />
+            <div
+              class="invisible fixed w-auto whitespace-nowrap"
+            >
+              0.456 DARK…
+            </div>
+            <div
+              class="relative css-1psxlcd"
+            >
+              <div
+                class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
+              >
+                Avg.
+              </div>
+              <div
+                class="relative flex h-full flex-1"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="InputFeeSimpleSelect__dropdown-menu"
+                  aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+                  autocomplete="off"
+                  class="no-ligatures w-full border-none css-1nupw50"
+                  data-testid="SelectDropdown__input"
+                  id="InputFeeSimpleSelect__dropdown-input"
+                  placeholder="Select option"
+                  readonly=""
+                  type="text"
+                  value="0.456 DARK"
+                />
+                <span
+                  class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                  data-testid="Input__suggestion"
+                >
+                  <span
+                    class="truncate"
+                  >
+                    0.456 DARK
+                  </span>
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
+              >
+                <div
+                  class=""
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="whitespace-no-break mr-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        €0.00
+                      </span>
+                    </div>
+                    <div
+                      class="flex items-center justify-center py-2 px-1"
+                      data-testid="SelectDropdown__caret"
+                    >
+                      <div
+                        class="transition-transform text-theme-secondary-500 css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          caret-down.svg
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-labelledby="InputFeeSimpleSelect__dropdown-label"
+            id="InputFeeSimpleSelect__dropdown-menu"
+            role="listbox"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should update value when clicking button Average 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should update value when clicking button Fast 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputFee simple view type should update value when clicking button Slow 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="true"
+        aria-label="0.006"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.006 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.456"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.456 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.5"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.5 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

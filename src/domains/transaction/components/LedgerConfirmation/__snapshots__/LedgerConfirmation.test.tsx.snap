@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LedgerConfirmation should render 1`] = `
+<DocumentFragment>
+  <svg
+    class="my-8 max-w-full"
+  >
+    confirm-transaction-ledger-banner-light-green.svg
+  </svg>
+  <div
+    class="mt-8 text-theme-secondary-text"
+    data-testid="LedgerConfirmation-description"
+  >
+    Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
+  </div>
+  <div
+    class="mt-8 inline-flex w-full items-center justify-center space-x-3"
+  >
+    <div
+      class="css-i3nrbr"
+      color="info"
+    />
+    <span
+      class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
+      data-testid="LedgerConfirmation-loading_message"
+    >
+      Waiting for confirmation …
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LedgerConfirmation should render with children 1`] = `
+<DocumentFragment>
+  <svg
+    class="my-8 max-w-full"
+  >
+    confirm-transaction-ledger-banner-light-green.svg
+  </svg>
+  <div
+    class="mt-8 text-theme-secondary-text"
+    data-testid="LedgerConfirmation-description"
+  >
+    Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
+  </div>
+  <div
+    class="mt-8 inline-flex w-full items-center justify-center space-x-3"
+  >
+    <div
+      class="css-i3nrbr"
+      color="info"
+    />
+    <span
+      class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
+      data-testid="LedgerConfirmation-loading_message"
+    >
+      Waiting for confirmation …
+    </span>
+  </div>
+  <div
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    type="horizontal"
+  />
+  <section
+    data-testid="LedgerReview__details"
+  >
+    <h2
+      class="mb-0 text-2xl font-bold"
+    >
+      Transaction Details
+    </h2>
+    confirmation
+  </section>
+</DocumentFragment>
+`;
+
+exports[`LedgerConfirmation should render with children and custom heading 1`] = `
+<DocumentFragment>
+  <svg
+    class="my-8 max-w-full"
+  >
+    confirm-transaction-ledger-banner-light-green.svg
+  </svg>
+  <div
+    class="mt-8 text-theme-secondary-text"
+    data-testid="LedgerConfirmation-description"
+  >
+    Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
+  </div>
+  <div
+    class="mt-8 inline-flex w-full items-center justify-center space-x-3"
+  >
+    <div
+      class="css-i3nrbr"
+      color="info"
+    />
+    <span
+      class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
+      data-testid="LedgerConfirmation-loading_message"
+    >
+      Waiting for confirmation …
+    </span>
+  </div>
+  <div
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+    type="horizontal"
+  />
+  <section
+    data-testid="LedgerReview__details"
+  >
+    <h2
+      class="mb-0 text-2xl font-bold"
+    >
+      heading
+    </h2>
+    confirmation
+  </section>
+</DocumentFragment>
+`;

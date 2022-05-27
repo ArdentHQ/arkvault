@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterTransactions should open dropdown list with all transaction types 1`] = `
+<div>
+  <div
+    data-testid="FilterTransactions"
+  >
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <button
+          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+          data-testid="CollapseToggleButton"
+        >
+          <span
+            class="flex items-center space-x-1"
+          >
+            <span
+              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+            >
+              Type
+              :
+            </span>
+             
+            <span
+              class="whitespace-nowrap leading-tight"
+            >
+              All
+            </span>
+          </span>
+          <span
+            class="css-a8q9z0"
+          >
+            <div
+              class="p-1 css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </span>
+        </button>
+      </span>
+      <div
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-yq8tnb"
+        data-testid="dropdown__content"
+        style="opacity: 1; height: -30px; overflow-y: scroll;"
+      >
+        <div
+          class="pt-5 pb-1"
+        >
+          <div
+            class="mt-4 first:mt-0"
+          >
+            <ul>
+              <ul
+                data-testid="dropdown__options"
+              >
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--all-0"
+                  tabindex="0"
+                >
+                  <span>
+                    All
+                  </span>
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div
+            class="mt-4 first:mt-0"
+          >
+            <div
+              class="mx-8 -my-2"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                type="horizontal"
+              />
+            </div>
+            <ul>
+              <li
+                class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
+              >
+                CORE
+              </li>
+              <ul
+                data-testid="dropdown__options"
+              >
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-0"
+                  tabindex="0"
+                >
+                  <span>
+                    Delegate Registration
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-1"
+                  tabindex="0"
+                >
+                  <span>
+                    Delegate Resignation
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-2"
+                  tabindex="0"
+                >
+                  <span>
+                    IPFS
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-3"
+                  tabindex="0"
+                >
+                  <span>
+                    Multipayment
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-4"
+                  tabindex="0"
+                >
+                  <span>
+                    Multisignature
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-5"
+                  tabindex="0"
+                >
+                  <span>
+                    Second Signature
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-6"
+                  tabindex="0"
+                >
+                  <span>
+                    Transfer
+                  </span>
+                </li>
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--core-7"
+                  tabindex="0"
+                >
+                  <span>
+                    Vote
+                  </span>
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div
+            class="mt-4 first:mt-0"
+          >
+            <div
+              class="mx-8 -my-2"
+            >
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                type="horizontal"
+              />
+            </div>
+            <ul>
+              <ul
+                data-testid="dropdown__options"
+              >
+                <li
+                  class="css-x2cq94"
+                  data-testid="dropdown__option--magistrate-0"
+                  tabindex="0"
+                >
+                  <span>
+                    Magistrate
+                  </span>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilterTransactions should render 1`] = `
+<div>
+  <div
+    data-testid="FilterTransactions"
+  >
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <button
+          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+          data-testid="CollapseToggleButton"
+        >
+          <span
+            class="flex items-center space-x-1"
+          >
+            <span
+              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+            >
+              Type
+              :
+            </span>
+             
+            <span
+              class="whitespace-nowrap leading-tight"
+            >
+              All
+            </span>
+          </span>
+          <span
+            class="css-e3wx3i"
+          >
+            <div
+              class="p-1 css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilterTransactions should render with default selected option 1`] = `
+<div>
+  <div
+    data-testid="FilterTransactions"
+  >
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <button
+          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+          data-testid="CollapseToggleButton"
+        >
+          <span
+            class="flex items-center space-x-1"
+          >
+            <span
+              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
+            >
+              Type
+              :
+            </span>
+             
+            <span
+              class="whitespace-nowrap leading-tight"
+            >
+              All
+            </span>
+          </span>
+          <span
+            class="css-e3wx3i"
+          >
+            <div
+              class="p-1 css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,32 @@
+import React from "react";
+import { Contracts } from "@payvo/sdk-profiles";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import * as envHooks from "@/app/hooks/env";
+import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup/WalletsGroupsList";
+
+describe("WalletsGroupsList", () => {
+	let profile: Contracts.IProfile;
+	let mainnetWallet: Contracts.IReadWriteWallet;
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		mainnetWallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		mainnetWallet.mutator().alias("AAA");
+
+		profile.wallets().push(mainnetWallet);
+
+		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+	});
+
+	it("should render WalletsGroupsList", () => {
+		const { asFragment } = render(<WalletsGroupsList />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+});

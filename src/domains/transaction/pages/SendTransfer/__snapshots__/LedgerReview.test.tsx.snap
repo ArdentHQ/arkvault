@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransferLedgerReview should render 1`] = `
+<DocumentFragment>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        <div
+          class="flex items-center space-x-2"
+          data-testid="LedgerReview__expiration"
+        >
+          <span>
+            Expiration
+          </span>
+          <div
+            class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          >
+            <div
+              class="css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                question-mark-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        123
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+        >
+          <div
+            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+        >
+          <div
+            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="css-1j6ndo3"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransferLedgerReview should render skeleton while loading expiration 1`] = `
+<DocumentFragment>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        <div
+          class="flex items-center space-x-2"
+          data-testid="LedgerReview__expiration"
+        >
+          <span>
+            Expiration
+          </span>
+          <div
+            class="questionmark flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white dark:bg-theme-secondary-800 dark:text-theme-secondary-200"
+          >
+            <div
+              class="css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                question-mark-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <span
+          class="my-0.5 flex"
+          data-testid="TransferLedgerReview__expiration-skeleton"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 80px; height: 16px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+        >
+          <div
+            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+        >
+          <div
+            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="css-1j6ndo3"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

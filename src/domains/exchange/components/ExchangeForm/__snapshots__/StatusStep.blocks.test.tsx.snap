@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeStatus should show expired status 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl my-6"
+  >
+    <div
+      class="css-ic0qlc"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-cross.svg
+        </svg>
+      </div>
+      <span>
+        Error
+      </span>
+    </div>
+    <div
+      class="css-6o9bco"
+    >
+      This transaction has expired.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeStatus should show failed status 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl my-6"
+  >
+    <div
+      class="css-ic0qlc"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-cross.svg
+        </svg>
+      </div>
+      <span>
+        Error
+      </span>
+    </div>
+    <div
+      class="css-6o9bco"
+    >
+      This transaction has failed.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeStatus should show refunded status 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl my-6"
+  >
+    <div
+      class="css-pra96q"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-exclamation-mark.svg
+        </svg>
+      </div>
+      <span>
+        Warning
+      </span>
+    </div>
+    <div
+      class="css-1pvpof3"
+    >
+      This transaction has been refunded.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeStatus should show verifying status 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden rounded-xl my-6"
+  >
+    <div
+      class="css-pra96q"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          circle-exclamation-mark.svg
+        </svg>
+      </div>
+      <span>
+        Warning
+      </span>
+    </div>
+    <div
+      class="css-1pvpof3"
+    >
+      This transaction is being verified by the provider.
+    </div>
+  </div>
+</div>
+`;

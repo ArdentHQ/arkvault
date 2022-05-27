@@ -1,0 +1,3023 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletsGroup should handle list wallet click 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mt-0 sm:mb-6 sm:border-b-0 sm:bg-transparent sm:py-0 sm:px-0 sm:dark:bg-transparent"
+    data-testid="Portfolio__Header"
+  >
+    <div
+      class="text-lg font-bold sm:text-2xl"
+    >
+      Portfolio
+    </div>
+    <div
+      class="-mr-4 text-right sm:mr-0"
+    >
+      <div
+        class="flex items-center justify-end"
+        data-testid="WalletControls"
+      >
+        <div
+          class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+        >
+          <div
+            class="static sm:relative"
+          >
+            <span
+              data-testid="dropdown__toggle"
+            >
+              <span>
+                <div
+                  class="group"
+                >
+                  <button
+                    class="ring-focus css-1wz6bm9"
+                  >
+                    <div
+                      class="flex h-5 w-5 items-center justify-center"
+                    >
+                      <div
+                        class="css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          sliders-vertical.svg
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex sm:hidden"
+        >
+          <div
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+            type="vertical"
+          />
+        </div>
+        <div
+          class="hidden gap-3 sm:flex"
+        >
+          <button
+            class="css-1oyl9hh"
+            data-testid="WalletControls__import-ledger"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    ledger.svg
+                  </svg>
+                </div>
+                <span
+                  class="hidden lg:inline"
+                >
+                  Import Ledger
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            class="css-1jhy6v9"
+            data-testid="WalletControls__import-wallet"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    arrow-turn-down-bracket.svg
+                  </svg>
+                </div>
+                <span>
+                  Import
+                </span>
+              </div>
+            </div>
+          </button>
+          <button
+            class="css-1bx0hyc"
+            data-testid="WalletControls__create-wallet"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    plus.svg
+                  </svg>
+                </div>
+                <span>
+                  Create
+                </span>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="flex items-center sm:hidden"
+        >
+          <div
+            class="static sm:relative"
+          >
+            <span
+              data-testid="dropdown__toggle"
+            >
+              <span
+                class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    plus.svg
+                  </svg>
+                </div>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="NetworkWalletsGroupList"
+  >
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-xfxopm"
+          >
+            <div
+              aria-label="ARK"
+              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK
+            </h1>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-4"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 110px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-xfxopm"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK Devnet
+            </h1>
+            <div
+              class="hidden sm:inline-flex"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                N/A
+              </span>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  N/A
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
+<DocumentFragment>
+  <div
+    class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+  >
+    <span
+      class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        50,205.64217699 DARK
+      </span>
+    </span>
+    <span
+      class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+    >
+      <span
+        class="text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        N/A
+      </span>
+    </span>
+  </div>
+  <div
+    class="hidden flex-initial space-x-4 sm:flex"
+    css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+  >
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Wallets
+      </span>
+      <span
+        class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+      >
+        3
+      </span>
+    </div>
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Total Balance
+      </span>
+      <span
+        class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          50,205.64217699 DARK
+        </span>
+      </span>
+    </div>
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Total Currency
+      </span>
+      <span
+        class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+      >
+        <span
+          class="text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          N/A
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+  >
+    <span
+      class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        50,205.64217699 ARK
+      </span>
+    </span>
+    <span
+      class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        0 BTC
+      </span>
+    </span>
+  </div>
+  <div
+    class="hidden flex-initial space-x-4 sm:flex"
+    css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+  >
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Wallets
+      </span>
+      <span
+        class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+      >
+        3
+      </span>
+    </div>
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Total Balance
+      </span>
+      <span
+        class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          50,205.64217699 ARK
+        </span>
+      </span>
+    </div>
+    <div
+      class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+    >
+      <span
+        class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Total Currency
+      </span>
+      <span
+        class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          0 BTC
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render group with different widths 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xhm62p"
+    data-testid="WalletsGroup"
+  >
+    <div
+      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="WalletsGroupHeader"
+    >
+      <div
+        class="flex flex-grow flex-row items-center"
+      >
+        <div
+          class="css-xfxopm"
+        >
+          <div
+            aria-label="ARK"
+            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            data-testid="NetworkIcon-ARK-ark.mainnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg>
+                ark.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+        >
+          <h1
+            class="mb-0 text-base md:text-lg"
+            data-testid="header__title"
+          >
+            ARK
+          </h1>
+          <div
+            class="grow"
+          />
+        </div>
+        <div
+          class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+        >
+          <span
+            class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-5"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 140px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+          <span
+            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-4"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 110px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+        </div>
+        <div
+          class="hidden flex-initial space-x-4 sm:flex"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Wallets
+            </span>
+            <span
+              class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 60px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Balance
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Currency
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+      >
+        <div
+          class="css-16yt50s"
+          data-testid="Accordion__toggle"
+        >
+          <div
+            class="transition-transform css-15txs7d"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-down-small.svg
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render group with different widths 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1xhm62p"
+    data-testid="WalletsGroup"
+  >
+    <div
+      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="WalletsGroupHeader"
+    >
+      <div
+        class="flex flex-grow flex-row items-center"
+      >
+        <div
+          class="css-xfxopm"
+        >
+          <div
+            aria-label="ARK"
+            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            data-testid="NetworkIcon-ARK-ark.mainnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg>
+                ark.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+        >
+          <h1
+            class="mb-0 text-base md:text-lg"
+            data-testid="header__title"
+          >
+            ARK
+          </h1>
+          <div
+            class="grow"
+          />
+        </div>
+        <div
+          class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+        >
+          <span
+            class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-5"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 140px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+          <span
+            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-4"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 110px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+        </div>
+        <div
+          class="hidden flex-initial space-x-4 sm:flex"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Wallets
+            </span>
+            <span
+              class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 60px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Balance
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Currency
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+      >
+        <div
+          class="css-16yt50s"
+          data-testid="Accordion__toggle"
+        >
+          <div
+            class="transition-transform css-15txs7d"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-down-small.svg
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render group with different widths 3`] = `
+<DocumentFragment>
+  <div
+    class="css-1xhm62p"
+    data-testid="WalletsGroup"
+  >
+    <div
+      class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="WalletsGroupHeader"
+    >
+      <div
+        class="flex flex-grow flex-row items-center"
+      >
+        <div
+          class="css-xfxopm"
+        >
+          <div
+            aria-label="ARK"
+            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            data-testid="NetworkIcon-ARK-ark.mainnet"
+          >
+            <div
+              class="css-1i4b0eq"
+              data-testid="NetworkIcon__icon"
+              height="20"
+              width="20"
+            >
+              <svg>
+                ark.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+        >
+          <h1
+            class="mb-0 text-base md:text-lg"
+            data-testid="header__title"
+          >
+            ARK
+          </h1>
+          <div
+            class="grow"
+          />
+        </div>
+        <div
+          class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+        >
+          <span
+            class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-5"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 140px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+          <span
+            class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            <div
+              class="flex items-center justify-end sm:h-6 h-4"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 110px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </span>
+        </div>
+        <div
+          class="hidden flex-initial space-x-4 sm:flex"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Wallets
+            </span>
+            <span
+              class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 60px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            style="width: 500px;"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Balance
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            style="width: 500px;"
+          >
+            <span
+              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Total Currency
+            </span>
+            <span
+              class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+      >
+        <div
+          class="css-16yt50s"
+          data-testid="Accordion__toggle"
+        >
+          <div
+            class="transition-transform css-15txs7d"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-down-small.svg
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render with dark mode = false 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="NetworkWalletsGroupList"
+  >
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-xfxopm"
+          >
+            <div
+              aria-label="ARK"
+              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK
+            </h1>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-4"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 110px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-xfxopm"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK Devnet
+            </h1>
+            <div
+              class="hidden sm:inline-flex"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                N/A
+              </span>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  N/A
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render with dark mode = true 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="NetworkWalletsGroupList"
+  >
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-u6dtok"
+          >
+            <div
+              aria-label="ARK"
+              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK
+            </h1>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-4"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 110px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 bg-transparent"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-u6dtok"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK Devnet
+            </h1>
+            <div
+              class="hidden sm:inline-flex"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-5"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 140px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                N/A
+              </span>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-5"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 140px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  N/A
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroup should render with show all button 1`] = `<DocumentFragment />`;
+
+exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="NetworkWalletsGroupList"
+  >
+    <div
+      class="css-8cvvgy"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-14q2wpv"
+          >
+            <div
+              aria-label="ARK"
+              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK
+            </h1>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                50,114.21127898 ARK
+              </span>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <div
+                class="flex items-center justify-end sm:h-6 h-4"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 110px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                1
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  50,114.21127898 ARK
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <div
+                  class="flex items-center justify-end sm:h-6 h-4"
+                >
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 110px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform rotate-180 css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="px-8 pb-6 md:px-4 md:pb-0 md:pt-6"
+        data-testid="WalletsList"
+      >
+        <div
+          data-testid="WalletTable"
+        >
+          <div
+            class="-mt-3 css-1m6rt2i"
+            role="table"
+          >
+            <table
+              cellpadding="0"
+              class="table-auto"
+            >
+              <thead>
+                <tr
+                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                  role="row"
+                >
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1 min-w-1"
+                    colspan="1"
+                    data-testid="table__th--0"
+                    role="columnheader"
+                  >
+                    <div
+                      class="flex flex-inline align-top"
+                    >
+                      <div
+                        class=""
+                      >
+                        <div
+                          class="border-r border-theme-secondary-300 py-0.5 pr-3 dark:border-theme-secondary-800"
+                        >
+                          <button
+                            class="flex shrink-0 cursor-pointer items-center justify-center rounded ring-theme-primary-400 ring-offset-theme-background focus:outline-none focus:ring-2 focus:ring-offset-8"
+                            data-testid="WalletIcon__Starred__header"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-warning-400 css-tuuiwl"
+                              height="18"
+                              width="18"
+                            >
+                              <svg>
+                                star-filled.svg
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                    colspan="1"
+                    data-testid="table__th--1"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
+                  >
+                    <div
+                      class="flex flex-inline align-top -ml-3"
+                    >
+                      <div
+                        class=""
+                      >
+                        Wallet
+                      </div>
+                      <div
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                      >
+                        <div
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
+                        >
+                          <svg>
+                            chevron-down-small.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-36 min-w-36"
+                    colspan="1"
+                    data-testid="table__th--2"
+                    role="columnheader"
+                  >
+                    <div
+                      class="flex flex-inline align-top justify-center"
+                    >
+                      <div
+                        class=""
+                      >
+                        Info
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-40 min-w-40"
+                    colspan="1"
+                    data-testid="table__th--3"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
+                  >
+                    <div
+                      class="flex flex-inline align-top flex-row-reverse justify-end flex-row-reverse"
+                    >
+                      <div
+                        class=""
+                      >
+                        Balance
+                      </div>
+                      <div
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                      >
+                        <div
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
+                        >
+                          <svg>
+                            chevron-down-small.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell w-32 min-w-32"
+                    colspan="1"
+                    data-testid="table__th--4"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
+                  >
+                    <div
+                      class="flex flex-inline align-top justify-end flex-row-reverse"
+                    >
+                      <div
+                        class=""
+                      >
+                        Currency
+                      </div>
+                      <div
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                      >
+                        <div
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
+                        >
+                          <svg>
+                            chevron-down-small.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                    colspan="1"
+                    data-testid="table__th--5"
+                    role="columnheader"
+                  >
+                    <div
+                      class="flex flex-inline align-top hidden"
+                    >
+                      <div
+                        class=""
+                      >
+                        Actions
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                role="rowgroup"
+              >
+                <tr
+                  class="group css-1gk67vk"
+                  data-testid="TableRow"
+                >
+                  <td
+                    data-testid="TableCell_Starred"
+                  >
+                    <div
+                      class="space-x-3 css-g4cpbs"
+                    >
+                      <div
+                        class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                      >
+                        <div
+                          class="flex shrink-0 items-center justify-center"
+                          data-testid="WalletIcon__Starred"
+                        >
+                          <div
+                            class="text-theme-warning-400 css-tuuiwl"
+                            height="18"
+                            width="18"
+                          >
+                            <svg>
+                              star.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    data-testid="TableCell_Wallet"
+                  >
+                    <div
+                      class="-ml-3 space-x-3 css-31so1s"
+                    >
+                      <div
+                        class="flex shrink-0 items-center"
+                      >
+                        <div
+                          class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-xjjrn6"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="w-20 flex-1 overflow-hidden"
+                      >
+                        <div
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+                        >
+                          <span
+                            class="font-semibold text-base text-sm text-theme-text group-hover:text-theme-primary-700 w-full truncate"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="css-u3jrna"
+                              data-testid="TruncateEnd"
+                            >
+                              New Name
+                            </span>
+                          </span>
+                          <span
+                            class="min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="justify-center text-sm font-bold text-center align-middle css-31so1s"
+                    >
+                      <div
+                        class="inline-flex items-center space-x-1"
+                      >
+                        <div
+                          class="inline-block p-1 text-theme-secondary-700"
+                          data-testid="WalletIcon__SecondSignature"
+                        >
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              second-signature.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="font-semibold justify-end css-31so1s"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        50,114.21127898 ARK
+                      </span>
+                    </div>
+                  </td>
+                  <td
+                    class="hidden lg:block"
+                    data-testid="CurrencyCell"
+                  >
+                    <div
+                      class="justify-end css-31so1s"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 100px; height: 16px;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="justify-end text-theme-secondary-text css-9rjigo"
+                    >
+                      <div>
+                        <button
+                          class="text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                          data-testid="WalletListItem__send-button"
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            Send
+                          </div>
+                        </button>
+                      </div>
+                      <div
+                        class=""
+                        data-testid="WalletListItem__more-button"
+                      >
+                        <div
+                          class="static sm:relative"
+                        >
+                          <span
+                            data-testid="dropdown__toggle"
+                          >
+                            <button
+                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                <div
+                                  class="css-1i4b0eq"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <svg>
+                                    ellipsis-vertical.svg
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1xhm62p"
+      data-testid="WalletsGroup"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="WalletsGroupHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="css-xfxopm"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+          >
+            <h1
+              class="mb-0 text-base md:text-lg"
+              data-testid="header__title"
+            >
+              ARK Devnet
+            </h1>
+            <div
+              class="hidden sm:inline-flex"
+            >
+              <div
+                class="inline-block p-1 text-theme-secondary-700"
+                data-testid="WalletIcon__TestNetwork"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    code.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="grow"
+            />
+          </div>
+          <div
+            class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+          >
+            <span
+              class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                50,519.2220551 DARK
+              </span>
+            </span>
+            <span
+              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              <span
+                class="text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                N/A
+              </span>
+            </span>
+          </div>
+          <div
+            class="hidden flex-initial space-x-4 sm:flex"
+            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          >
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Wallets
+              </span>
+              <span
+                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+              >
+                13
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Balance
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  50,519.2220551 DARK
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+            >
+              <span
+                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              >
+                Total Currency
+              </span>
+              <span
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+              >
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  N/A
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmountLabel should render 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1vb1527"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-stretch"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render compact 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mirnqf"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-center"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render compact with hint 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mirnqf"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-center"
+    >
+      <div
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
+        data-testid="AmountLabel__hint"
+      >
+        <div
+          class="dark:text-white css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            hint-small.svg
+          </svg>
+        </div>
+      </div>
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render negative 1`] = `
+<DocumentFragment>
+  <div
+    class="css-fbeerz"
+    color="danger"
+  >
+    <div
+      class="flex space-x-1 items-stretch"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        - 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render with hint 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1vb1527"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-stretch"
+    >
+      <div
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+        data-testid="AmountLabel__hint"
+      >
+        <div
+          class="dark:text-white css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            hint-small.svg
+          </svg>
+        </div>
+      </div>
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        + 10 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AmountLabel should render zero 1`] = `
+<DocumentFragment>
+  <div
+    class="css-hp3hbt"
+    color="neutral"
+  >
+    <div
+      class="flex space-x-1 items-stretch"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        0 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

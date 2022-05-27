@@ -1,0 +1,133 @@
+import { UUID } from "@payvo/sdk-cryptography";
+import { ARK } from "@payvo/sdk-ark";
+import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@payvo/sdk";
+import { uniq } from "@payvo/sdk-helpers";
+import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
+import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
+
+export const networkName = (network: Networks.NetworkManifest) => `${network.name}`;
+
+export const networkInitials = (network: Networks.NetworkManifest): string =>
+	networkName(network).slice(0, 2).toUpperCase();
+
+export const buildNetwork = (
+	networkData: UserCustomNetwork,
+	response: NodeConfigurationResponse,
+): Networks.NetworkManifest => {
+	const arkNetwork = ARK.manifest.networks["ark.mainnet"];
+
+	const constants: Networks.NetworkManifestConstants = {
+		...arkNetwork.constants,
+	};
+
+	constants.slip44 = Number(networkData.slip44);
+
+	const currency = {
+		decimals: arkNetwork.currency.decimals,
+		symbol: response.symbol ?? arkNetwork.currency.symbol,
+		ticker: networkData.ticker ?? arkNetwork.currency.ticker,
+	};
+
+	const { explorer, featureFlags, governance, importMethods, transactions } = arkNetwork;
+
+	const hosts: Networks.NetworkHost[] = [
+		{
+			failedCount: 0,
+			host: networkData.address,
+			type: "full",
+		},
+	];
+
+	if (networkData.explorer) {
+		hosts.push({
+			host: networkData.explorer,
+			type: "explorer",
+		});
+	}
+
+	const meta = {
+		epoch: response.constants?.epoch,
+		nethash: response.nethash,
+		version: response.version,
+	};
+
+	return {
+		coin: networkData.name,
+		constants,
+		currency,
+		explorer,
+		featureFlags,
+		governance,
+		hosts,
+		id: `${UUID.random()}.custom`,
+		importMethods,
+		knownWallets: networkData.knownWallets,
+		meta,
+		name: networkData.name,
+		transactions,
+		type: networkData.type,
+	};
+};
+
+export const isCustomNetwork = (network: Networks.NetworkManifest | Networks.Network): boolean => {
+	if (typeof network.id === "function") {
+		return network.id().endsWith(".custom");
+	}
+
+	return network.id.endsWith(".custom");
+};
+
+export const isValidKnownWalletUrlResponse = (response: PromiseSettledResult<any>): boolean => {
+	if (response.status === "rejected") {
+		return false;
+	} else {
+		try {
+			const knownWallets = JSON.parse(response.value.body());
+
+			return (
+				Array.isArray(knownWallets) &&
+				(knownWallets.length === 0 ||
+					(typeof knownWallets === "object" &&
+						knownWallets[0].name !== undefined &&
+						knownWallets[0].address !== undefined &&
+						knownWallets[0].type !== undefined))
+			);
+		} catch {
+			return false;
+		}
+	}
+};
+
+export const networkDisplayName = (network: Networks.Network | undefined | null) => {
+	if (!network) {
+		return "";
+	}
+
+	if (isCustomNetwork(network)) {
+		return network.coinName();
+	}
+
+	return network.displayName();
+};
+
+export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
+	profile
+		.availableNetworks()
+		.filter((network) => {
+			if (isCustomNetwork(network)) {
+				return !!network.toObject().meta?.enabled;
+			}
+
+			return true;
+		})
+		.map((network) => network.id());
+
+export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
+	uniq(
+		profile
+			.wallets()
+			.values()
+			.filter((wallet) => profileAllEnabledNetworkIds(profile).includes(wallet.network().id()))
+			.map((wallet) => wallet.network().id()),
+	);

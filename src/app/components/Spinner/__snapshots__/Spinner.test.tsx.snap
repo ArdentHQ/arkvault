@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render 1`] = `
+<div>
+  <div
+    class="css-i3nrbr"
+    color="info"
+  />
+</div>
+`;
+
+exports[`Spinner should render a danger color 1`] = `
+<div>
+  <div
+    class="css-136fprg"
+    color="danger"
+  />
+</div>
+`;
+
+exports[`Spinner should render a hint color 1`] = `
+<div>
+  <div
+    class="css-tdbrsl"
+    color="hint"
+  />
+</div>
+`;
+
+exports[`Spinner should render a info color 1`] = `
+<div>
+  <div
+    class="css-i3nrbr"
+    color="info"
+  />
+</div>
+`;
+
+exports[`Spinner should render a large one 1`] = `
+<div>
+  <div
+    class="css-2m4ycy"
+    color="info"
+  />
+</div>
+`;
+
+exports[`Spinner should render a small one 1`] = `
+<div>
+  <div
+    class="css-47316"
+    color="info"
+  />
+</div>
+`;
+
+exports[`Spinner should render a success color 1`] = `
+<div>
+  <div
+    class="css-hkn646"
+    color="success"
+  />
+</div>
+`;
+
+exports[`Spinner should render a warning color 1`] = `
+<div>
+  <div
+    class="css-kclq7o"
+    color="warning"
+  />
+</div>
+`;

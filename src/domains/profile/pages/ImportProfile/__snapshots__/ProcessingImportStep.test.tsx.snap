@@ -1,0 +1,646 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Import Profile - Processing import should enter password again 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name export is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="mx-auto max-w-xl"
+        data-testid="ImportError"
+      >
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
+          </div>
+        </div>
+        <div
+          class="mt-6"
+        >
+          <div
+            class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+          >
+            <div
+              class="flex items-center justify-between space-x-4"
+            >
+              <div
+                class="flex flex-grow items-center space-x-4"
+              >
+                <div
+                  class="css-1atxdzc"
+                  height="40"
+                  width="40"
+                >
+                  <svg>
+                    extension-wwe.svg
+                  </svg>
+                </div>
+                <div
+                  class="w-0 flex-1 truncate font-semibold"
+                >
+                  export
+                </div>
+              </div>
+              <div
+                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg>
+                    cross-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-ppnppl"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="ImportError__cancel"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Cancel
+            </div>
+          </button>
+          <button
+            class="css-1bx0hyc"
+            data-testid="ImportError__retry"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Retry
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should handle import error 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name test.wwe is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="mx-auto max-w-xl"
+        data-testid="ImportError"
+      >
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
+          </div>
+        </div>
+        <div
+          class="mt-6"
+        >
+          <div
+            class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+          >
+            <div
+              class="flex items-center justify-between space-x-4"
+            >
+              <div
+                class="flex flex-grow items-center space-x-4"
+              >
+                <div
+                  class="css-1atxdzc"
+                  height="40"
+                  width="40"
+                >
+                  <svg>
+                    extension-wwe.svg
+                  </svg>
+                </div>
+                <div
+                  class="w-0 flex-1 truncate font-semibold"
+                >
+                  test.wwe
+                </div>
+              </div>
+              <div
+                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg>
+                    cross-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-ngzslp"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="ImportError__cancel"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Cancel
+            </div>
+          </button>
+          <button
+            class="css-1bx0hyc"
+            data-testid="ImportError__retry"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Retry
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should not run import process if file is not provided 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name  is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    />
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should require password for password-protected profile import 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name export is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+      >
+        <div
+          class="flex items-center justify-between space-x-4"
+        >
+          <div
+            class="flex flex-grow items-center space-x-4"
+          >
+            <div
+              class="css-1atxdzc"
+              height="40"
+              width="40"
+            >
+              <svg>
+                extension-wwe.svg
+              </svg>
+            </div>
+            <div
+              class="w-0 flex-1 truncate font-semibold"
+            >
+              export
+            </div>
+          </div>
+          <div
+            class="css-i3nrbr"
+            color="info"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should show error if json import has an error 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name export is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="mx-auto max-w-xl"
+        data-testid="ImportError"
+      >
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred while importing the profile, try importing again. Select Retry to re-import the profile. If the error occurs again, you can contact our support team.
+          </div>
+        </div>
+        <div
+          class="mt-6"
+        >
+          <div
+            class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+          >
+            <div
+              class="flex items-center justify-between space-x-4"
+            >
+              <div
+                class="flex flex-grow items-center space-x-4"
+              >
+                <div
+                  class="css-1atxdzc"
+                  height="40"
+                  width="40"
+                >
+                  <svg>
+                    extension-json.svg
+                  </svg>
+                </div>
+                <div
+                  class="w-0 flex-1 truncate font-semibold"
+                >
+                  export
+                </div>
+              </div>
+              <div
+                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500"
+              >
+                <div
+                  class="css-15txs7d"
+                  height="10"
+                  width="10"
+                >
+                  <svg>
+                    cross-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-ngzslp"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="ImportError__cancel"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Cancel
+            </div>
+          </button>
+          <button
+            class="css-1bx0hyc"
+            data-testid="ImportError__retry"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              Retry
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should successfully import json profile 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name export is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+      >
+        <div
+          class="flex items-center justify-between space-x-4"
+        >
+          <div
+            class="flex flex-grow items-center space-x-4"
+          >
+            <div
+              class="css-1atxdzc"
+              height="40"
+              width="40"
+            >
+              <svg>
+                extension-json.svg
+              </svg>
+            </div>
+            <div
+              class="w-0 flex-1 truncate font-semibold"
+            >
+              export
+            </div>
+          </div>
+          <div
+            class="css-i3nrbr"
+            color="info"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;
+
+exports[`Import Profile - Processing import should successfully import wwe profile 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+    data-testid="ProcessingImport"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          The file with name profile.wwe is being imported.
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6 sm:mt-8"
+    >
+      <div
+        class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+      >
+        <div
+          class="flex items-center justify-between space-x-4"
+        >
+          <div
+            class="flex flex-grow items-center space-x-4"
+          >
+            <div
+              class="css-1atxdzc"
+              height="40"
+              width="40"
+            >
+              <svg>
+                extension-wwe.svg
+              </svg>
+            </div>
+            <div
+              class="w-0 flex-1 truncate font-semibold"
+            >
+              profile.wwe
+            </div>
+          </div>
+          <div
+            class="css-i3nrbr"
+            color="info"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="items-left text-left"
+    />
+  </div>
+</div>
+`;

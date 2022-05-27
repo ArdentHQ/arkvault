@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppearanceForm should render 1`] = `
+<DocumentFragment>
+  <form
+    class="mt-8"
+    data-testid="AppearanceForm"
+  >
+    <ul
+      class="css-14npy8n"
+      data-testid="list-divided__items"
+    >
+      <li
+        class="flex w-full flex-col pb-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex w-full flex-col space-y-2"
+          >
+            <div
+              class="flex items-center justify-between space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Accent Color
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Choose a color for buttons and other wallet features.
+            </span>
+          </div>
+          <div
+            class="ml-5"
+          >
+            <span
+              data-testid="list-divided-item__value"
+            >
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="Navy"
+                  class="css-12yryft"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="mx-1 h-5 w-5 rounded bg-theme-navy-600"
+                  />
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="Green"
+                  class="css-12yryft"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="mx-1 h-5 w-5 rounded bg-theme-success-600"
+                  />
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex w-full flex-col py-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex w-full flex-col space-y-2"
+          >
+            <div
+              class="flex items-center justify-between space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Viewing Mode
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Choose a light or dark viewing mode.
+            </span>
+          </div>
+          <div
+            class="ml-5"
+          >
+            <span
+              data-testid="list-divided-item__value"
+            >
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="true"
+                  aria-label="light"
+                  class="css-12yryft"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center px-2"
+                  >
+                    <div
+                      class="dark:text-theme-secondary-600 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        underline-sun.svg
+                      </svg>
+                    </div>
+                    <span
+                      class="ml-2 hidden sm:inline"
+                    >
+                      Light
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="dark"
+                  class="css-12yryft"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center px-2"
+                  >
+                    <div
+                      class="dark:text-theme-secondary-600 css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        underline-moon.svg
+                      </svg>
+                    </div>
+                    <span
+                      class="ml-2 hidden sm:inline"
+                    >
+                      Dark
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex w-full flex-col py-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex w-full flex-col space-y-2"
+          >
+            <div
+              class="flex items-center justify-between space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Portfolio Latest Transactions
+              </span>
+              <span>
+                <label
+                  class="css-xklln0"
+                >
+                  <input
+                    class="css-1r71f0z toggle-input"
+                    data-testid="AppearanceToggle__toggle-dashboardTransactionHistory"
+                    name="dashboardTransactionHistory"
+                    type="checkbox"
+                  />
+                  <div
+                    class="css-7lwhds toggle-handle"
+                  >
+                    <span
+                      class="css-1fmiyrr"
+                    />
+                  </div>
+                </label>
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Enables latest transactions on Portfolio page.
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex w-full flex-col pt-6 sm:pb-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex w-full flex-col space-y-2"
+          >
+            <div
+              class="flex items-center justify-between space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Wallet Naming
+              </span>
+              <span>
+                <label
+                  class="css-xklln0"
+                >
+                  <input
+                    class="css-1r71f0z toggle-input"
+                    data-testid="AppearanceToggle__toggle-useNetworkWalletNames"
+                    name="useNetworkWalletNames"
+                    type="checkbox"
+                  />
+                  <div
+                    class="css-7lwhds toggle-handle"
+                  >
+                    <span
+                      class="css-1fmiyrr"
+                    />
+                  </div>
+                </label>
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Prioritize showing network provided names over wallet names.
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="flex w-full flex-col pt-6 sm:pb-6"
+        data-testid="list-divided-item__wrapper"
+      >
+        <div
+          class="flex justify-between items-center"
+          data-testid="list-divided-item__inner-wrapper"
+        >
+          <div
+            class="flex w-full flex-col space-y-2"
+          >
+            <div
+              class="flex items-center justify-between space-x-5"
+            >
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                data-testid="list-divided-item__label"
+              >
+                Expanded Tables
+              </span>
+              <span>
+                <label
+                  class="css-xklln0"
+                >
+                  <input
+                    class="css-1r71f0z toggle-input"
+                    data-testid="AppearanceToggle__toggle-useExpandedTables"
+                    name="useExpandedTables"
+                    type="checkbox"
+                  />
+                  <div
+                    class="css-7lwhds toggle-handle"
+                  >
+                    <span
+                      class="css-1fmiyrr"
+                    />
+                  </div>
+                </label>
+              </span>
+            </div>
+            <span
+              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+              data-testid="list-divided-item__label--description"
+            >
+              Increases spacing of table items.
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div
+      class="css-ppnppl"
+    >
+      <button
+        class="css-1yqe28v"
+        data-testid="AppearanceFooterButtons__save"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Save
+        </div>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

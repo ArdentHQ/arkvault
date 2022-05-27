@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeeField should render 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="InputFee"
+  >
+    <div
+      class="absolute right-0 -mt-7"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="css-w6ofpw"
+          role="button"
+        >
+          Simple
+        </span>
+        <label
+          class="css-1uxo3sa"
+        >
+          <input
+            class="css-1r71f0z toggle-input"
+            type="checkbox"
+          />
+          <div
+            class="css-1f5xwvv toggle-handle"
+          >
+            <span
+              class="css-19qsmxy"
+            />
+          </div>
+        </label>
+        <span
+          class="css-iwfou6"
+          role="button"
+        >
+          Advanced
+        </span>
+      </div>
+    </div>
+    <div
+      class="inline-flex w-full items-center space-x-3"
+      data-testid="ButtonGroup"
+      role="radiogroup"
+    >
+      <button
+        aria-checked="false"
+        aria-label="0.00357"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Slow
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.00357 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="true"
+        aria-label="0.07320598"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Average
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.07320598 DARK
+          </span>
+        </div>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="0.1"
+        class="css-17i051m"
+        data-testid="ButtonGroupOption"
+        role="radio"
+        type="button"
+      >
+        <div
+          class="flex flex-col space-y-2"
+        >
+          <div>
+            Fast
+          </div>
+          <span
+            class="whitespace-nowrap text-sm"
+            data-testid="Amount"
+          >
+            0.1 DARK
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,22 @@
+{
+	"meta": {
+		"count": 1
+	},
+	"network": {
+		"name": "ARK Devnet",
+		"nethash": "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		"token": "DARK",
+		"symbol": "DѦ"
+	},
+	"wallets": [
+		{
+			"name": "Ledger 1",
+			"username": "mandy",
+			"address": "D6Zq1RfFau7xz3BF3PrpEZwMWM2ZHSmxM6",
+			"publicKey": "03cb041f3fca04f88ab9757241d4355d9864922c0e31f7e098863037a970e214f4",
+			"balance": {
+				"DARK": "4809.73569276"
+			}
+		}
+	]
+}

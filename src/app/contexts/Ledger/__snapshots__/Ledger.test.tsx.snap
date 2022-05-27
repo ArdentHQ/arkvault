@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ledger Provider should render ledger provider 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="content"
+  />
+</DocumentFragment>
+`;

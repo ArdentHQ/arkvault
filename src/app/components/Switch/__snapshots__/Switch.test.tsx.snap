@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <span
+      class="css-hbgfjt"
+      role="button"
+    >
+      Option A
+    </span>
+    <label
+      class="css-xklln0"
+    >
+      <input
+        class="css-1r71f0z toggle-input"
+        type="checkbox"
+      />
+      <div
+        class="css-7lwhds toggle-handle"
+      >
+        <span
+          class="css-1274c8s"
+        />
+      </div>
+    </label>
+    <span
+      class="css-mpm6i9"
+      role="button"
+    >
+      Option B
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Switch should render disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <span
+      class="css-o4mojg"
+      disabled=""
+      role="button"
+    >
+      Option A
+    </span>
+    <label
+      class="css-irspe1"
+      disabled=""
+    >
+      <input
+        class="css-1r71f0z toggle-input"
+        disabled=""
+        type="checkbox"
+      />
+      <div
+        class="css-7lwhds toggle-handle"
+      >
+        <span
+          class="css-2v9y9y"
+          disabled=""
+        />
+      </div>
+    </label>
+    <span
+      class="css-8jmzt2"
+      disabled=""
+      role="button"
+    >
+      Option B
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Switch should render large labels 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <span
+      class="css-13d6ubz"
+      role="button"
+    >
+      Option A
+    </span>
+    <label
+      class="css-xklln0"
+    >
+      <input
+        class="css-1r71f0z toggle-input"
+        type="checkbox"
+      />
+      <div
+        class="css-7lwhds toggle-handle"
+      >
+        <span
+          class="css-1274c8s"
+        />
+      </div>
+    </label>
+    <span
+      class="css-b8nf83"
+      role="button"
+    >
+      Option B
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Switch should render small labels 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <span
+      class="css-w6ofpw"
+      role="button"
+    >
+      Option A
+    </span>
+    <label
+      class="css-1uxo3sa"
+    >
+      <input
+        class="css-1r71f0z toggle-input"
+        type="checkbox"
+      />
+      <div
+        class="css-1f5xwvv toggle-handle"
+      >
+        <span
+          class="css-19qsmxy"
+        />
+      </div>
+    </label>
+    <span
+      class="css-iwfou6"
+      role="button"
+    >
+      Option B
+    </span>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should render 1`] = `
+<DocumentFragment>
+  <span>
+    <span
+      class="flex max-w-full items-center overflow-hidden leading-none"
+    >
+      <span
+        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+      >
+        ‌
+      </span>
+      ‌
+    </span>
+  </span>
+</DocumentFragment>
+`;

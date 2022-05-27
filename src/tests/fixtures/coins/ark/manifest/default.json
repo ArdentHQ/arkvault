@@ -1,0 +1,123 @@
+{
+	"coin": "net",
+	"constants": {
+		"slip44": 111
+	},
+	"currency": {
+		"decimals": 8,
+		"symbol": "Ѧ",
+		"ticker": "ARK"
+	},
+	"explorer": {
+		"block": "blocks/{0}",
+		"transaction": "transactions/{0}",
+		"wallet": "wallets/{0}"
+	},
+	"featureFlags": {
+		"Address": ["mnemonic.bip39", "multiSignature", "privateKey", "publicKey", "validate", "wif"],
+		"Client": [
+			"transaction",
+			"transactions",
+			"wallet",
+			"wallets",
+			"delegate",
+			"delegates",
+			"votes",
+			"voters",
+			"broadcast"
+		],
+		"Fee": ["all", "calculate"],
+		"KeyPair": ["mnemonic.bip39", "privateKey", "wif"],
+		"Ledger": ["getVersion", "getPublicKey", "signTransaction", "signMessage"],
+		"Message": ["sign", "verify"],
+		"PrivateKey": ["mnemonic.bip39", "wif"],
+		"PublicKey": ["mnemonic.bip39", "multiSignature", "wif"],
+		"Transaction": [
+			"delegateRegistration",
+			"delegateResignation",
+			"estimateExpiration",
+			"ipfs.ledgerS",
+			"ipfs.ledgerX",
+			"ipfs.musig",
+			"ipfs",
+			"multiPayment.musig",
+			"multiPayment",
+			"multiSignature.ledgerX",
+			"multiSignature.musig",
+			"multiSignature",
+			"secondSignature",
+			"transfer.ledgerS",
+			"transfer.ledgerX",
+			"transfer.musig",
+			"transfer",
+			"vote.ledgerS",
+			"vote.ledgerX",
+			"vote.musig",
+			"vote"
+		],
+		"WIF": ["mnemonic.bip39"]
+	},
+	"governance": {
+		"delegateCount": 51,
+		"votesPerTransaction": 1,
+		"votesPerWallet": 1
+	},
+	"hosts": [
+		{
+			"failedCount": 0,
+			"host": "https://ark-live.payvo.com/api",
+			"type": "full"
+		},
+		{
+			"host": "https://explorer.ark.io",
+			"type": "explorer"
+		}
+	],
+	"id": "17761cea-1725-4763-81c6-1de233c792c4.custom",
+	"importMethods": {
+		"address": {
+			"default": false,
+			"permissions": ["read"]
+		},
+		"bip39": {
+			"canBeEncrypted": true,
+			"default": true,
+			"permissions": ["read", "write"]
+		},
+		"publicKey": {
+			"default": false,
+			"permissions": ["read"]
+		},
+		"secret": {
+			"canBeEncrypted": true,
+			"default": false,
+			"permissions": ["read", "write"]
+		}
+	},
+	"knownWallets": "",
+	"meta": {
+		"epoch": "2017-03-21T13:00:00.000Z",
+		"nethash": "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+		"version": 23
+	},
+	"name": "net",
+	"transactions": {
+		"expirationType": "height",
+		"fees": {
+			"ticker": "ARK",
+			"type": "dynamic"
+		},
+		"memo": true,
+		"multiPaymentRecipients": 64,
+		"types": [
+			"delegateRegistration",
+			"delegateResignation",
+			"ipfs",
+			"multiPayment",
+			"multiSignature",
+			"secondSignature",
+			"transfer",
+			"vote"
+		]
+	}
+}

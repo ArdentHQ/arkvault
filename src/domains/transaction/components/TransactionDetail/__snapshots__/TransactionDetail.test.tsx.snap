@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionDetail should always render as desktop is useDesktop is set lg 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should always render as desktop is useDesktop is set md 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should always render as desktop is useDesktop is set sm 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should always render as desktop is useDesktop is set xl 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should always render as desktop is useDesktop is set xs 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render in lg desktop screen 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render in md desktop screen 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render in sm mobile screen 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
+      data-testid="TransactionDetail--mobile"
+    >
+      <div
+        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      >
+        Test
+      </div>
+      <div
+        class="flex min-w-0 grow items-center justify-end space-x-4"
+      >
+        <div
+          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+        >
+          test
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render in xl desktop screen 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render in xs mobile screen 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="items-top flex w-full justify-between space-x-4 md:items-center"
+      data-testid="TransactionDetail--mobile"
+    >
+      <div
+        class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+      >
+        Test
+      </div>
+      <div
+        class="flex min-w-0 grow items-center justify-end space-x-4"
+      >
+        <div
+          class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+        >
+          test
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render with bottom border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-s5w13h"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render with extra children 1`] = `
+<div>
+  <div
+    class="no-ligatures css-tnqofj"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+    <div
+      data-testid="TEST_CHILD"
+    />
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render with top border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render without border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-1iw2tte"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionDetail should render without padding 1`] = `
+<div>
+  <div
+    class="no-ligatures css-tnqofj"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Test
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</div>
+`;

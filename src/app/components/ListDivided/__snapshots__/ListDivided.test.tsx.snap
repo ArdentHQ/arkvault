@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListDivided should render an empty list divided 1`] = `
+<DocumentFragment>
+  <span
+    data-testid="list-divided__empty"
+  >
+    empty
+  </span>
+</DocumentFragment>
+`;
+
+exports[`ListDivided should render an list divided with lastBorder = false 1`] = `
+<DocumentFragment>
+  <ul
+    class="css-14npy8n"
+    data-testid="list-divided__items"
+  >
+    <li
+      class="flex w-full flex-col "
+      data-testid="list-divided-item__wrapper"
+    >
+      <div
+        class="flex justify-between flex-col items-start"
+        data-testid="list-divided-item__inner-wrapper"
+      >
+        <div
+          class="flex w-full flex-col space-y-2"
+        >
+          <div
+            class="flex items-center justify-between space-x-5"
+          >
+            <span
+              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              data-testid="list-divided-item__label"
+            >
+              New Profile
+            </span>
+          </div>
+          <span
+            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+            data-testid="list-divided-item__label--description"
+          >
+            Select Profile Image
+          </span>
+        </div>
+      </div>
+      <div
+        class=""
+        data-testid="list-divided-item__content"
+      >
+        <div
+          class="mt-2 flex flex-row"
+        >
+          <div
+            class="mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-theme-secondary-500"
+          />
+          <div
+            class="relative h-24 w-24 rounded bg-theme-secondary-500"
+          >
+            <img
+              alt="random avatar"
+              class="rounded object-cover"
+              src="https://randomuser.me/api/portraits/men/3.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`ListDivided should render an list divided with lastBorder = true 1`] = `
+<DocumentFragment>
+  <ul
+    class="css-slpw39"
+    data-testid="list-divided__items"
+  >
+    <li
+      class="flex w-full flex-col "
+      data-testid="list-divided-item__wrapper"
+    >
+      <div
+        class="flex justify-between flex-col items-start"
+        data-testid="list-divided-item__inner-wrapper"
+      >
+        <div
+          class="flex w-full flex-col space-y-2"
+        >
+          <div
+            class="flex items-center justify-between space-x-5"
+          >
+            <span
+              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              data-testid="list-divided-item__label"
+            >
+              New Profile
+            </span>
+          </div>
+          <span
+            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+            data-testid="list-divided-item__label--description"
+          >
+            Select Profile Image
+          </span>
+        </div>
+      </div>
+      <div
+        class=""
+        data-testid="list-divided-item__content"
+      >
+        <div
+          class="mt-2 flex flex-row"
+        >
+          <div
+            class="mr-6 flex h-24 w-24 items-center justify-center rounded border-2 border-dashed border-theme-secondary-500"
+          />
+          <div
+            class="relative h-24 w-24 rounded bg-theme-secondary-500"
+          >
+            <img
+              alt="random avatar"
+              class="rounded object-cover"
+              src="https://randomuser.me/api/portraits/men/3.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

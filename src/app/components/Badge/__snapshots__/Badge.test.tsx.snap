@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge should render 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-19jfgr"
+  >
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with icon 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-19jfgr"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'bottom' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-cys5ec"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'bottom-left' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1os0w1"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'bottom-right' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-19jfgr"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'left' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1ltu2fy"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'right' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-n63zof"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'top' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1aektxz"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'top-left' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1lw6cca"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with position 'top-right' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1sslbw4"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with size 'lg' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-1jfmq7q"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;
+
+exports[`Badge should render with size 'md' 1`] = `
+<div>
+  <span
+    class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent css-19jfgr"
+  >
+    <div
+      class="css-15txs7d"
+      height="10"
+      width="10"
+    />
+    <span />
+  </span>
+</div>
+`;

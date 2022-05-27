@@ -1,0 +1,11 @@
+.swiper-pagination-bullets {
+    @apply space-x-2.5 !important;
+}
+
+.swiper-pagination-bullet {
+    @apply w-2.5 h-2.5 bg-theme-secondary-300 dark:bg-theme-secondary-600 mx-0 opacity-100 !important;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-theme-primary-600 !important;
+}

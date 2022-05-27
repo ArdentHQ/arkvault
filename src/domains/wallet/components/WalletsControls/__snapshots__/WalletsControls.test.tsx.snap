@@ -1,0 +1,1135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletsControls should render 1`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render responsive 1`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render responsive 2`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render responsive 3`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render responsive 4`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render responsive 5`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletsControls should render with networks selection 1`] = `
+<div>
+  <div
+    class="flex items-center justify-end"
+    data-testid="WalletControls"
+  >
+    <div
+      class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span>
+            <div
+              class="group"
+            >
+              <button
+                class="ring-focus css-1wz6bm9"
+              >
+                <div
+                  class="flex h-5 w-5 items-center justify-center"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sliders-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex sm:hidden"
+    >
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        type="vertical"
+      />
+    </div>
+    <div
+      class="hidden gap-3 sm:flex"
+    >
+      <button
+        class="css-1oyl9hh"
+        data-testid="WalletControls__import-ledger"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                ledger.svg
+              </svg>
+            </div>
+            <span
+              class="hidden lg:inline"
+            >
+              Import Ledger
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1jhy6v9"
+        data-testid="WalletControls__import-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-turn-down-bracket.svg
+              </svg>
+            </div>
+            <span>
+              Import
+            </span>
+          </div>
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="WalletControls__create-wallet"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+            <span>
+              Create
+            </span>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="flex items-center sm:hidden"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <span
+            class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

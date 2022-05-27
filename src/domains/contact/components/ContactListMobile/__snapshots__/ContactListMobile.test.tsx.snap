@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactListMobile should render 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-8"
+    data-testid="ContactListMobile"
+  >
+    <div
+      class="css-8cvvgy"
+    >
+      <div
+        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        data-testid="AccordionHeader"
+      >
+        <div
+          class="flex flex-grow flex-row items-center"
+        >
+          <div
+            class="flex w-0 flex-grow items-center justify-between space-x-3"
+          >
+            <span
+              class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              Brian
+            </span>
+            <div
+              class="ml-5 flex items-center space-x-3"
+            >
+              <div
+                class="static sm:relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <button
+                    class="flex text-theme-primary-300 dark:text-theme-secondary-500"
+                    type="button"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ellipsis-vertical.svg
+                      </svg>
+                    </div>
+                  </button>
+                </span>
+              </div>
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                type="vertical"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
+          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        >
+          <div
+            class="css-16yt50s"
+            data-testid="Accordion__toggle"
+          >
+            <div
+              class="transition-transform css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

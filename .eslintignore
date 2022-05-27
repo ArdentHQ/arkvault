@@ -1,0 +1,12 @@
+build/
+config-overrides.js
+coverage/
+dist/
+jest.setup.js
+public/
+scripts/
+src/i18n
+src/resources/*
+src/tailwind.config.js
+src/tests
+*.d.ts

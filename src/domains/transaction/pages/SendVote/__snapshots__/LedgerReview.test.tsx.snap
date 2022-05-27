@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LedgerReview should render for unvote and vote transaction 1`] = `
+<div>
+  <div
+    class="no-ligatures css-1iw2tte"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Unvote
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="css-1rbgdnn"
+        >
+          <div
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+          >
+            <div
+              class="shrink-0 css-y5oe37"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="ml-4 w-28 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Vote
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="css-1rbgdnn"
+        >
+          <div
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+          >
+            <div
+              class="shrink-0 css-y5oe37"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="ml-4 w-28 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+        >
+          <div
+            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+        >
+          <div
+            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="css-1j6ndo3"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LedgerReview should render for unvote transaction 1`] = `
+<div>
+  <div
+    class="no-ligatures css-1iw2tte"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Unvote
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="css-1rbgdnn"
+        >
+          <div
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+          >
+            <div
+              class="shrink-0 css-y5oe37"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="ml-4 w-28 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+        >
+          <div
+            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+        >
+          <div
+            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="css-1j6ndo3"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LedgerReview should render for vote transaction 1`] = `
+<div>
+  <div
+    class="no-ligatures css-1iw2tte"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Vote
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="css-1rbgdnn"
+        >
+          <div
+            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+          >
+            <div
+              class="shrink-0 css-y5oe37"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="ml-4 w-28 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-y-0 sm:divide-x"
+        >
+          <div
+            class="mb-4 flex flex-col justify-center py-2 px-4 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
+          >
+            <span
+              class="css-1j6ndo3"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap text-md mt-1 font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+        >
+          <div
+            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="css-1j6ndo3"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-md font-bold sm:text-lg"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

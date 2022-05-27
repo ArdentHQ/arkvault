@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Server Status Indicator should render as downgraded 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <div
+          class="group css-1ietn6u"
+        >
+          <button
+            class="css-12xyeiw"
+            data-testid="NavigationBar__buttons--server-status"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+              >
+                <div
+                  class="h-2 w-2 rounded-full bg-theme-warning-600"
+                />
+              </div>
+            </div>
+          </button>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Server Status Indicator should render as healthy 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <div
+          class="group css-1ietn6u"
+        >
+          <button
+            class="css-12xyeiw"
+            data-testid="NavigationBar__buttons--server-status"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+              >
+                <div
+                  class="h-2 w-2 rounded-full bg-theme-success-700"
+                />
+              </div>
+            </div>
+          </button>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Server Status Indicator should render as unavailable 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <div
+          class="group css-1ietn6u"
+        >
+          <button
+            class="css-12xyeiw"
+            data-testid="NavigationBar__buttons--server-status"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+              >
+                <div
+                  class="h-2 w-2 rounded-full bg-theme-danger-500"
+                />
+              </div>
+            </div>
+          </button>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Server Status Indicator should render default 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="static sm:relative"
+    >
+      <span
+        data-testid="dropdown__toggle"
+      >
+        <div
+          class="group css-1ietn6u"
+        >
+          <button
+            class="css-12xyeiw"
+            data-testid="NavigationBar__buttons--server-status"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+              >
+                <div
+                  class="h-2 w-2 rounded-full bg-theme-gray-100"
+                />
+              </div>
+            </div>
+          </button>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Server Status Indicator should render in lg 1`] = `<DocumentFragment />`;
+
+exports[`Server Status Indicator should render in md 1`] = `<DocumentFragment />`;
+
+exports[`Server Status Indicator should render in sm 1`] = `<DocumentFragment />`;
+
+exports[`Server Status Indicator should render in xl 1`] = `<DocumentFragment />`;

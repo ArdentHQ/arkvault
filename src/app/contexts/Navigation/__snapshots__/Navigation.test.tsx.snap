@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Context should render the wrapper properly 1`] = `
+<DocumentFragment>
+  <span
+    data-testid="NavigationProvider__content"
+  >
+    Navigation Provider content
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Navigation Context should update navigation 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="Navigation__consumer"
+  >
+    Has fixed form buttons
+  </div>
+</DocumentFragment>
+`;

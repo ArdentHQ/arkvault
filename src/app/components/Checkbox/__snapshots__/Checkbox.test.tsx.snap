@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render 1`] = `
+<div>
+  <input
+    class="css-7i915u"
+    color="success"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox should render a danger color 1`] = `
+<div>
+  <input
+    class="css-fk5efg"
+    color="danger"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox should render a hint color 1`] = `
+<div>
+  <input
+    class="css-197uj2o"
+    color="hint"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox should render a info color 1`] = `
+<div>
+  <input
+    class="css-9xjqk6"
+    color="info"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox should render a success color 1`] = `
+<div>
+  <input
+    class="css-7i915u"
+    color="success"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Checkbox should render a warning color 1`] = `
+<div>
+  <input
+    class="css-1o05xi8"
+    color="warning"
+    type="checkbox"
+  />
+</div>
+`;

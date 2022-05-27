@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = false 1`] = `
+<div>
+  <table>
+    <tbody
+      data-testid="WalletListSkeleton"
+    >
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="items-center space-x-4 css-1raetv7"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 18px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+            <div
+              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 space-x-4 pl-4"
+            >
+              <div
+                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 200px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 100px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-1v8ywjx"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-1v8ywjx"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 100px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1wedxq0"
+          >
+            <button
+              class="ml-3 my-auto css-1yqe28v"
+              data-testid="WalletHeader__send-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Send
+              </div>
+            </button>
+            <div
+              class="ml-3"
+              data-testid="WalletHeader__more-button"
+            >
+              <button
+                class="w-11 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1yqe28v"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      ellipsis-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = true 1`] = `
+<div>
+  <table>
+    <tbody
+      data-testid="WalletListSkeleton"
+    >
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="items-center space-x-3 css-g4cpbs"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 18px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+            <div
+              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
+            >
+              <div
+                class="border-transparent ring-theme-background duration-100 css-1jea4xx"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 20px; height: 20px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 200px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-31so1s"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 100px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 100px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-9rjigo"
+          >
+            <button
+              class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
+              data-testid="WalletHeader__send-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Send
+              </div>
+            </button>
+            <div
+              class="ml-3"
+              data-testid="WalletHeader__more-button"
+            >
+              <button
+                class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-127bt7l"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      ellipsis-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

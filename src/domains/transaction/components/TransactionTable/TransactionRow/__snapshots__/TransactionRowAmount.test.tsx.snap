@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionRowAmount should show as received 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1vb1527"
+    color="success"
+  >
+    <div
+      class="flex space-x-1 items-stretch"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        + 121 ARK
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

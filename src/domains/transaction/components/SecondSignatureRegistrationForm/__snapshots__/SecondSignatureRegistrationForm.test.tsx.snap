@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecondSignatureRegistrationForm backup step should render 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="SecondSignatureRegistrationForm__backup-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Your Second Signature
+            </h1>
+          </div>
+        </div>
+        <div
+          class="space-y-6 pt-6"
+        >
+          <div
+            class="flex flex-col overflow-hidden rounded-xl"
+          >
+            <div
+              class="css-pra96q"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  circle-exclamation-mark.svg
+                </svg>
+              </div>
+              <span>
+                Warning
+              </span>
+            </div>
+            <div
+              class="css-1pvpof3"
+            >
+              You are responsible for storing and protecting this mnemonic passphrase offline. The Payvo Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
+            </div>
+          </div>
+          <ul
+            class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"
+          >
+            <li
+              class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+              data-testid="MnemonicList__item"
+            >
+              <span
+                class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+              >
+                1
+              </span>
+              <div
+                class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+              >
+                1
+              </div>
+              <div
+                class="sm:text-md text-sm"
+              >
+                test
+              </div>
+            </li>
+            <li
+              class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+              data-testid="MnemonicList__item"
+            >
+              <span
+                class="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+              >
+                2
+              </span>
+              <div
+                class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+              >
+                2
+              </div>
+              <div
+                class="sm:text-md text-sm"
+              >
+                mnemonic
+              </div>
+            </li>
+          </ul>
+          <div
+            class="-mx-8 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left"
+          >
+            <span
+              class="text-lg font-semibold text-theme-secondary-text"
+            >
+              Copy or Download Mnemonic Passphrase
+            </span>
+            <p
+              class="text-sm text-theme-secondary-500"
+            >
+              You can copy or download your mnemonic, but store it safely.
+            </p>
+            <div
+              class="flex items-center justify-center space-x-3 sm:justify-start"
+            >
+              <button
+                aria-describedby="tippy-7"
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="link flex items-center space-x-2 font-semibold"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      copy.svg
+                    </svg>
+                  </div>
+                  <span>
+                    Copy
+                  </span>
+                </div>
+              </button>
+              <div
+                class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                type="vertical"
+              />
+              <button
+                class="link flex items-center space-x-2 font-semibold"
+                data-testid="CopyOrDownload__download"
+                type="button"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    arrow-down-bracket.svg
+                  </svg>
+                </div>
+                <span>
+                  Download
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SecondSignatureRegistrationForm should not generate mnemonic if already set 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="SecondSignatureRegistrationForm__generation-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Second Signature
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              You can additionaly secure your address with a second mnemonic passphrase.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-pra96q"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-exclamation-mark.svg
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            Before creating the second mnemonic, we strongly recommend that you save it, as its loss will lead to a loss of access to your money.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-s5w13h"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-6"
+        >
+          <fieldset
+            class="flex flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+            >
+              <div
+                class="css-n29l73"
+                disabled=""
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    autocomplete="off"
+                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                    data-testid="InputCurrency"
+                    disabled=""
+                    name="fee"
+                    type="text"
+                    value="1.354"
+                  />
+                </div>
+                <div
+                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <div
+                        class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
+                      >
+                        <button
+                          class="border-r sm:border-r-0 css-1wqyzac"
+                          data-testid="InputFeeAdvanced__up"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-up-small.svg
+                            </svg>
+                          </div>
+                        </button>
+                        <button
+                          class="css-1p5qk9o"
+                          data-testid="InputFeeAdvanced__down"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-down-small.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      <section
+        data-testid="SecondSignatureRegistrationForm__generation-step"
+      >
+        <div
+          class="flex items-end justify-between bg-theme-background"
+        >
+          <div
+            class="space-y-4"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Register Second Signature
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              You can additionaly secure your address with a second mnemonic passphrase.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl mt-6"
+        >
+          <div
+            class="css-pra96q"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-exclamation-mark.svg
+              </svg>
+            </div>
+            <span>
+              Warning
+            </span>
+          </div>
+          <div
+            class="css-1pvpof3"
+          >
+            Before creating the second mnemonic, we strongly recommend that you save it, as its loss will lead to a loss of access to your money.
+          </div>
+        </div>
+        <div
+          class="no-ligatures css-s5w13h"
+          data-testid="TransactionSender"
+        >
+          <div
+            class="w-40 flex-1 space-y-2 whitespace-nowrap"
+            data-testid="TransactionDetail--desktop"
+          >
+            <div
+              class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            >
+              Sender
+            </div>
+            <div
+              class="flex items-center font-semibold"
+            >
+              <div
+                class="w-0 flex-1 overflow-auto text-right md:text-left"
+              >
+                <div
+                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-base text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="css-u3jrna"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center -space-x-1"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-6"
+        >
+          <fieldset
+            class="flex flex-col css-1bcidjh"
+          >
+            <label
+              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              data-testid="FormLabel"
+              for="fee"
+            >
+              Transaction Fee
+            </label>
+            <div
+              class="relative"
+            >
+              <div
+                class="css-n29l73"
+                disabled=""
+              >
+                <div
+                  class="relative flex h-full flex-1"
+                >
+                  <input
+                    autocomplete="off"
+                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                    data-testid="InputCurrency"
+                    disabled=""
+                    name="fee"
+                    type="text"
+                    value="1.354"
+                  />
+                </div>
+                <div
+                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                  data-testid="Input__addon-end"
+                >
+                  <div
+                    class=""
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <div
+                        class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
+                      >
+                        <button
+                          class="border-r sm:border-r-0 css-1wqyzac"
+                          data-testid="InputFeeAdvanced__up"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-up-small.svg
+                            </svg>
+                          </div>
+                        </button>
+                        <button
+                          class="css-1p5qk9o"
+                          data-testid="InputFeeAdvanced__down"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-down-small.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SecondSignatureRegistrationForm should render transaction details 1`] = `
+<DocumentFragment>
+  <div
+    class="no-ligatures css-19d5ufe"
+    data-testid="TransactionFee"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Transaction Fee
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          0.1 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BetaNotice should render 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex min-h-screen flex-col"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="css-97i12m"
+    >
+      <div
+        class="relative flex h-21"
+      >
+        <div
+          class="flex flex-1 px-8 sm:ml-12"
+        >
+          <div
+            class="my-auto flex items-center"
+          >
+            <button
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              data-testid="NavigationBarLogo--button"
+              type="button"
+            >
+              <span
+                class="relative"
+              >
+                <div
+                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
+                >
+                  BETA
+                </div>
+                <svg
+                  height="28"
+                >
+                  payvo-logo.svg
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-1 flex-col"
+    >
+      <div
+        class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+        data-testid="Modal__overlay"
+      >
+        <div
+          class="css-1vhnc7q"
+          tabindex="-1"
+        >
+          <div
+            class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pt-10 pb-24 sm:pb-10"
+            data-testid="Modal__inner"
+          >
+            <div
+              class="relative space-y-4"
+            >
+              <h2
+                class="mb-0 text-2xl font-bold"
+              >
+                Payvo Beta Testing
+              </h2>
+              <div
+                class="flex-1"
+              >
+                <svg
+                  class="my-8 mx-auto max-w-52"
+                >
+                  info-light.svg
+                </svg>
+                <div
+                  class="flex flex-col overflow-hidden rounded-xl whitespace-pre-line"
+                >
+                  <div
+                    class="css-1mvrtw8"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        circle-info.svg
+                      </svg>
+                    </div>
+                    <span>
+                      Information
+                    </span>
+                  </div>
+                  <div
+                    class="css-16kimoc"
+                  >
+                    Payvo is experimental and shall not create any obligation for ARK Ecosystem SCIC to continue to develop, productize, support, repair, offer for sale, or in any other way continue to provide or develop Software either to Licensee or to any other party.
+The Software is provided «AS IS» without any express or implied warranty of any kind including warranties of merchantability or fitness for any particular purpose. In no event shall ARK Ecosystem SCIC or its subsidiaries, partners, or related entities be liable for any damages whatsoever (including, without limitation, damages for loss of profits or funds, business interruption, loss of information arising out of the use or inability to use the software).
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between sm:space-x-3"
+                >
+                  <label
+                    class="mt-8 flex cursor-pointer items-center space-x-3 text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
+                    data-testid="BetaNoticeModal__agree"
+                  >
+                    <input
+                      class="css-7i915u"
+                      color="success"
+                      type="checkbox"
+                    />
+                    <span>
+                      I agree, do not show this message again
+                    </span>
+                  </label>
+                  <div
+                    class="css-ngzslp"
+                  >
+                    <button
+                      class="css-1yqe28v"
+                      data-testid="BetaNoticeModal__submit-button"
+                      disabled=""
+                      type="submit"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Continue
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

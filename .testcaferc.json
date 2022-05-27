@@ -1,0 +1,20 @@
+{
+	"browsers": "chrome",
+	"src": ["./src/domains/**/cucumber/*.ts", "./src/domains/**/cucumber/*.feature"],
+	"screenshots": {
+		"takeOnFails": true,
+		"path": "./screenshots",
+		"pathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png"
+	},
+	"skipJsErrors": true,
+	"selectorTimeout": 20000,
+	"assertionTimeout": 15000,
+	"compilerOptions": {
+		"typescript": {
+			"customCompilerModulePath": "../typescript",
+			"options": {
+				"esModuleInterop": true
+			}
+		}
+	}
+}

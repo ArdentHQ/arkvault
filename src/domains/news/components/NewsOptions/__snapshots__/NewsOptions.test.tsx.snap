@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsOptions should render 1`] = `
+<DocumentFragment>
+  <div
+    class="px-10 pt-7 pb-2"
+    data-testid="NewsOptions"
+  >
+    <div
+      class="flex flex-col space-y-8"
+    >
+      <div
+        class="flex flex-col space-y-3"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <h5
+            class="font-semibold"
+          >
+            Category
+          </h5>
+          <button
+            class="-my-px border-b border-t border-dashed border-b-current border-t-transparent text-sm font-semibold text-theme-primary-600 transition-colors hover:border-b-transparent hover:text-theme-primary-700 focus:outline-none active:text-theme-primary-400"
+          >
+            Select All
+          </button>
+        </div>
+        <p
+          class="text-sm text-theme-secondary-500"
+        >
+          Select your categories
+        </p>
+        <div
+          class="-mx-1 flex flex-wrap"
+        >
+          <label
+            class="p-1"
+            data-testid="NewsOptions__category-Community"
+          >
+            <input
+              class="css-1r71f0z select-category-input"
+              type="checkbox"
+              value=""
+            />
+            <div
+              class="css-fn0s68"
+            >
+              #Community
+            </div>
+          </label>
+          <label
+            class="p-1"
+            data-testid="NewsOptions__category-Emergency"
+          >
+            <input
+              class="css-1r71f0z select-category-input"
+              type="checkbox"
+              value=""
+            />
+            <div
+              class="css-fn0s68"
+            >
+              #Emergency
+            </div>
+          </label>
+          <label
+            class="p-1"
+            data-testid="NewsOptions__category-Marketing"
+          >
+            <input
+              class="css-1r71f0z select-category-input"
+              type="checkbox"
+              value=""
+            />
+            <div
+              class="css-fn0s68"
+            >
+              #Marketing
+            </div>
+          </label>
+          <label
+            class="p-1"
+            data-testid="NewsOptions__category-Technical"
+          >
+            <input
+              checked=""
+              class="css-1r71f0z select-category-input"
+              type="checkbox"
+              value=""
+            />
+            <div
+              class="css-fn0s68"
+            >
+              #Technical
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        type="horizontal"
+      />
+      <div
+        class="flex flex-col space-y-3"
+      >
+        <h5
+          class="font-semibold"
+        >
+          Filter Assets
+        </h5>
+        <p
+          class="text-sm text-theme-secondary-500"
+        >
+          Your current selections:
+        </p>
+        <div
+          data-testid="FilterNetwork"
+        >
+          <ul
+            class="flex flex-wrap"
+            data-testid="NetworkOptions"
+          >
+            <li
+              class="inline-block cursor-pointer pr-5 pb-5"
+              data-testid="NetworkOption__ark.mainnet"
+            >
+              <div
+                class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-v0ob3f"
+                  data-testid="NetworkIcon__icon"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    ark.svg
+                  </svg>
+                </div>
+                <span
+                  class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+                >
+                  <span />
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyBlock should render 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+    data-testid="EmptyBlock"
+  />
+</DocumentFragment>
+`;
+
+exports[`EmptyBlock should render with size 1`] = `
+<div>
+  <div
+    class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:py-3 px-4"
+    data-testid="EmptyBlock"
+  >
+    <div>
+      I am a children
+    </div>
+  </div>
+</div>
+`;

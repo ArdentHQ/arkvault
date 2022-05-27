@@ -1,0 +1,46 @@
+body {
+	@apply font-sans text-base antialiased;
+}
+
+main {
+	@apply bg-theme-background text-theme-text;
+}
+
+.link {
+	@apply cursor-pointer transition-colors duration-100 ease-linear text-theme-primary-600;
+}
+
+.link:hover {
+	@apply text-theme-primary-500;
+}
+
+.important\:bottom-8 {
+	bottom: 2rem !important;
+}
+
+.important\:z-0 {
+	z-index: 0 !important;
+}
+
+.important\:block {
+	display: block !important;
+}
+
+.important\:px-0 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.no-ligatures {
+	font-feature-settings: "liga" off, "calt" off;
+}
+
+@layer utilities {
+	.overflow-overlay {
+		overflow: overlay;
+	}
+
+	.filter-grayscale {
+		filter: grayscale(1);
+	}
+}

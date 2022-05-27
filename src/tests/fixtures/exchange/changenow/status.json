@@ -1,0 +1,14 @@
+{
+	"data": {
+		"id": "id",
+		"status": "waiting",
+		"payinHash": null,
+		"payoutHash": null,
+		"payinAddress": "payinAddress",
+		"payoutAddress": "payoutAddress",
+		"from": "btc",
+		"to": "ark",
+		"amountFrom": null,
+		"amountTo": null
+	}
+}

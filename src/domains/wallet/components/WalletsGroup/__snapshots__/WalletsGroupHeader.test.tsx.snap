@@ -1,0 +1,529 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletsGroupHeaderSkeleton should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-20 items-center py-4 px-8 md:px-4"
+    data-testid="WalletsGroupHeaderSkeleton"
+  >
+    <div
+      class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 20px; height: 20px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="grow justify-between space-x-3 py-3 px-3"
+    >
+      <h1
+        class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+        data-testid="header__title"
+      >
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 150px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </h1>
+    </div>
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Wallets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 60px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Total Balance
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 160px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Total Currency
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 130px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+    >
+      <div
+        class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+      >
+        <div
+          class="css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            chevron-down-small.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-20 items-center py-4 px-8 md:px-4"
+    data-testid="WalletsGroupHeaderSkeleton"
+  >
+    <div
+      class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 20px; height: 20px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="grow justify-between space-x-3 py-3 px-3"
+    >
+      <h1
+        class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+        data-testid="header__title"
+      >
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 150px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </h1>
+    </div>
+    <div
+      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Wallets
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 60px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Total Balance
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 160px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div
+        class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Total Currency
+        </span>
+        <span
+          class="text-lg text-theme-secondary-600 dark:text-theme-secondary-700"
+        >
+          <div
+            class="flex items-center justify-end sm:h-6"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 130px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+    >
+      <div
+        class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+      >
+        <div
+          class="css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            chevron-down-small.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-20 items-center py-4 px-8 md:px-4"
+    data-testid="WalletsGroupHeaderSkeleton"
+  >
+    <div
+      class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 20px; height: 20px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="grow justify-between space-x-3 py-3 px-3"
+    >
+      <h1
+        class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+        data-testid="header__title"
+      >
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 150px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </h1>
+    </div>
+    <div
+      class="flex h-10 flex-col items-end justify-between"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 90px; height: 14px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 50px; height: 12px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+    >
+      <div
+        class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+      >
+        <div
+          class="css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            chevron-down-small.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-20 items-center py-4 px-8 md:px-4"
+    data-testid="WalletsGroupHeaderSkeleton"
+  >
+    <div
+      class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 20px; height: 20px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="grow justify-between space-x-3 py-3 px-3"
+    >
+      <h1
+        class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+        data-testid="header__title"
+      >
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 150px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </h1>
+    </div>
+    <div
+      class="flex h-10 flex-col items-end justify-between"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 90px; height: 14px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 50px; height: 12px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l"
+    >
+      <div
+        class="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
+      >
+        <div
+          class="css-15txs7d"
+          height="10"
+          width="10"
+        >
+          <svg>
+            chevron-down-small.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

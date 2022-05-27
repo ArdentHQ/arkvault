@@ -1,0 +1,396 @@
+import { Contracts } from "@payvo/sdk-profiles";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
+import React from "react";
+import { Route } from "react-router-dom";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
+import {
+	ButtonsCell,
+	Currency,
+	WalletCell,
+	Starred,
+	Info,
+	Balance,
+	MobileRecipient,
+} from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+
+const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
+const history = createHashHistory();
+
+describe("WalletListItem.blocks", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+
+	beforeAll(() => {
+		history.push(dashboardURL);
+	});
+
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
+	it("should render StarredCell", () => {
+		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
+
+		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.STAR_WALLET)).toBeInTheDocument();
+		expect(screen.getByText("star.svg")).toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it("should render StarredCell in small screen", () => {
+		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<Starred
+									wallet={wallet}
+									handleToggleStar={jest.fn()}
+									isCompact={true}
+									isLargeScreen={false}
+								/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
+
+		expect(asFragment).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it("should render WalletCell", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<WalletCell wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByText(wallet.address())).toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
+	it("should render CurrencyCell", () => {
+		const useConfigurationReturn = { profileIsSyncingExchangeRates: true };
+		const useConfigurationSpy = jest
+			.spyOn(useConfigurationModule, "useConfiguration")
+			.mockReturnValue(useConfigurationReturn);
+
+		let walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+
+		const { asFragment, rerender } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<Currency wallet={wallet} isSynced={true} isCompact={true} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("CurrencyCell").querySelector(".react-loading-skeleton")).toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+
+		useConfigurationReturn.profileIsSyncingExchangeRates = false;
+
+		rerender(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<Currency wallet={wallet} isSynced={false} isCompact={true} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+		);
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("CurrencyCell").querySelector(".react-loading-skeleton")).toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+
+		rerender(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<Currency wallet={wallet} isSynced={true} isCompact={true} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+		);
+
+		expect(screen.getByTestId("Amount")).toBeInTheDocument();
+
+		walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+
+		rerender(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<Currency wallet={wallet} isSynced={true} isCompact={true} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+		);
+
+		expect(screen.getByText(commonTranslations.NOT_AVAILABLE)).toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+		useConfigurationSpy.mockRestore();
+	});
+
+	it("should render CurrencyCell in small screen", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<Currency wallet={wallet} isSynced={true} isCompact={true} isLargeScreen={false} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
+	it("should avoid click on ButtonsCell when Send button is disabled", () => {
+		const walletSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const handleSend = jest.fn();
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<ButtonsCell
+								wallet={wallet}
+								isCompact={true}
+								handleSelectOption={jest.fn()}
+								handleSend={handleSend}
+							/>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("WalletListItem__send-button"));
+
+		expect(handleSend).not.toHaveBeenCalled();
+
+		expect(history.location.pathname).toBe(dashboardURL);
+
+		walletSpy.mockRestore();
+	});
+
+	it("should render Info in small screen", () => {
+		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<Info
+									wallet={wallet}
+									handleToggleStar={jest.fn()}
+									isCompact={true}
+									isLargeScreen={false}
+								/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(asFragment).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it("should render Balance in small screen", () => {
+		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<Balance
+									wallet={wallet}
+									handleToggleStar={jest.fn()}
+									isCompact={true}
+									isLargeScreen={false}
+								/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(asFragment).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
+	it.each(["wallet", "contact"])("should render MobileRecipient", (type) => {
+		const clickHandler = jest.fn();
+
+		const recipient: MobileRecipient = {
+			address: "address",
+			avatar: "avatar",
+			id: "id",
+			type: type,
+		};
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={false} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("ListItemSmall"));
+
+		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
+	it.each(["wallet", "contact"])("should render selected MobileRecipient", (type) => {
+		const clickHandler = jest.fn();
+
+		const recipient: MobileRecipient = {
+			address: "address",
+			avatar: "avatar",
+			id: "id",
+			type: type,
+		};
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={true} />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("ListItemSmall"));
+
+		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+});

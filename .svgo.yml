@@ -1,0 +1,9 @@
+plugins:
+    - removeViewBox: false
+    - convertStyleToAttrs: true
+    - cleanupIDs: false
+    - removeUnknownsAndDefaults: false
+    - convertPathData:
+        noSpaceAfterFlags: false
+    - mergePaths:
+        noSpaceAfterFlags: false

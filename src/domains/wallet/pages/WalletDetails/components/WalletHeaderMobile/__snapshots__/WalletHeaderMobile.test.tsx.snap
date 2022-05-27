@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletHeaderMobile should render 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 -mt-8 flex h-13 items-center justify-between bg-black px-8 py-4"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        aria-label="ARK Devnet"
+        class="inline-flex h-5 w-5 items-center text-theme-secondary-text"
+        data-testid="NetworkIcon-ARK-ark.devnet"
+      >
+        <div
+          class="css-1i4b0eq"
+          data-testid="NetworkIcon__icon"
+          height="20"
+          width="20"
+        >
+          <svg>
+            ark.svg
+          </svg>
+        </div>
+      </div>
+      <div
+        class="shrink-0 css-jxpwdn"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        >
+          <img
+            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center"
+    >
+      <div
+        class="mr-2 flex items-center space-x-1 border-r border-theme-secondary-800 pr-2 empty:border-0"
+      />
+      <button
+        class="p-1 css-p48ezs"
+        type="button"
+      >
+        <div
+          class="text-theme-secondary-text css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            star.svg
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    class="flex flex-col items-center pt-4 text-white"
+  >
+    <div
+      class="mx-auto flex w-full items-center justify-center space-x-2"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
+      >
+        <span
+          class="font-semibold text-base text-theme-secondary-200"
+          data-testid="Address__alias"
+        >
+          <span
+            class="css-u3jrna"
+            data-testid="TruncateEnd"
+          >
+            ARK Wallet 1
+          </span>
+        </span>
+        <span
+          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          data-testid="Address__address"
+        >
+          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+        </span>
+      </div>
+      <div
+        class="flex items-center space-x-3 text-theme-secondary-text"
+      >
+        <button
+          class="ring-focus relative focus:outline-none"
+          data-ring-focus-margin="-m-1"
+          data-testid="clipboard-icon__wrapper"
+          type="button"
+        >
+          <div
+            class="hover:text-theme-secondary-500 css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              copy.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="ring-focus relative focus:outline-none"
+          data-ring-focus-margin="-m-1"
+          data-testid="clipboard-icon__wrapper"
+          type="button"
+        >
+          <div
+            class="hover:text-theme-secondary-500 css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              copy-key.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <span
+      class="whitespace-nowrap mt-4 text-xl font-semibold leading-6 text-white"
+      data-testid="Amount"
+    >
+      33.75089801 DARK
+    </span>
+  </div>
+  <div
+    class="mt-6 flex items-center space-x-3"
+  >
+    <button
+      class="bg-theme-dark-500 my-auto flex-1 css-1bx0hyc"
+      data-testid="WalletHeaderMobile__send-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Send
+      </div>
+    </button>
+    <div
+      class="my-auto ml-3"
+      data-testid="WalletHeaderMobile__more-button"
+    >
+      <div
+        class="static sm:relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <button
+            class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ellipsis-vertical.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

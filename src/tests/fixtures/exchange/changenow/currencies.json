@@ -1,0 +1,19 @@
+{
+	"data": [
+		{
+			"coin": "btc",
+			"name": "Bitcoin",
+			"image": "https://changenow.io/images/sprite/currencies/btc.svg"
+		},
+		{
+			"coin": "ark",
+			"name": "Ark",
+			"image": "https://changenow.io/images/sprite/currencies/ark.svg"
+		},
+		{
+			"coin": "eth",
+			"name": "Ethereum",
+			"image": "https://changenow.io/images/sprite/currencies/eth.svg"
+		}
+	]
+}

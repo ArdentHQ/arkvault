@@ -1,0 +1,506 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should render 1`] = `
+<div>
+  <div
+    class="-mt-3 css-1m6rt2i"
+    role="table"
+  >
+    <table
+      cellpadding="0"
+      class="table-auto"
+    >
+      <thead>
+        <tr
+          class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+          role="row"
+        >
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+            colspan="1"
+            data-testid="table__th--0"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 1
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+            colspan="1"
+            data-testid="table__th--1"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top"
+            >
+              <div
+                class=""
+              >
+                Header 2
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            colspan="1"
+            data-testid="table__th--2"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top justify-end flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 3
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        role="rowgroup"
+      >
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+        </tr>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Table should render empty rows if template is not provided 1`] = `
+<div>
+  <div
+    class="-mt-3 css-1m6rt2i"
+    role="table"
+  >
+    <table
+      cellpadding="0"
+      class="table-auto"
+    >
+      <thead>
+        <tr
+          class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+          role="row"
+        >
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+            colspan="1"
+            data-testid="table__th--0"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 1
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+            colspan="1"
+            data-testid="table__th--1"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top"
+            >
+              <div
+                class=""
+              >
+                Header 2
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            colspan="1"
+            data-testid="table__th--2"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top justify-end flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 3
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        role="rowgroup"
+      >
+        <tr />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Table should render empty table if pagination returns undefined rows 1`] = `
+<div>
+  <div
+    class="-mt-3 css-1m6rt2i"
+    role="table"
+  >
+    <table
+      cellpadding="0"
+      class="table-auto"
+    >
+      <thead>
+        <tr
+          class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+          role="row"
+        >
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+            colspan="1"
+            data-testid="table__th--0"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 1
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+            colspan="1"
+            data-testid="table__th--1"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top"
+            >
+              <div
+                class=""
+              >
+                Header 2
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            colspan="1"
+            data-testid="table__th--2"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top justify-end flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 3
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        role="rowgroup"
+      />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Table should split rows 1`] = `
+<div>
+  <div
+    class="-mt-3 css-1m6rt2i"
+    role="table"
+  >
+    <table
+      cellpadding="0"
+      class="table-auto"
+    >
+      <thead>
+        <tr
+          class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+          role="row"
+        >
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+            colspan="1"
+            data-testid="table__th--0"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 1
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+            colspan="1"
+            data-testid="table__th--1"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top"
+            >
+              <div
+                class=""
+              >
+                Header 2
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            colspan="1"
+            data-testid="table__th--2"
+            role="columnheader"
+            style="cursor: pointer;"
+            title="Toggle SortBy"
+          >
+            <div
+              class="flex flex-inline align-top justify-end flex-row-reverse"
+            >
+              <div
+                class=""
+              >
+                Header 3
+              </div>
+              <div
+                class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+              >
+                <div
+                  class="transition-transform rotate-180 css-15txs7d"
+                  height="10"
+                  role="img"
+                  width="10"
+                >
+                  <svg>
+                    chevron-down-small.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        role="rowgroup"
+      >
+        <tr />
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,1436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionRow should omit the currency for transactions from test networks 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1bqsw5h"
+          >
+            <a
+              class="ring-focus group inline-block css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    magnifying-glass-id.svg
+                  </svg>
+                </div>
+              </span>
+            </a>
+          </div>
+        </td>
+        <td
+          class="table-cell md:hidden lg:table-cell"
+        >
+          <div
+            class="text-theme-secondary-text css-31so1s"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="flex items-center space-x-2"
+              data-testid="TransactionRowMode"
+            >
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <div
+              class="flex items-center"
+              data-testid="TransactionAmount__tooltip"
+            >
+              <div
+                class="css-8zppvw"
+                color="danger"
+              >
+                <div
+                  class="flex space-x-1 items-center"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    - 121 BTC
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="justify-end css-1bel921"
+          >
+            <span
+              class="whitespace-nowrap text-theme-secondary-text"
+              data-testid="TransactionRow__currency"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1bqsw5h"
+          >
+            <a
+              class="ring-focus group inline-block css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    magnifying-glass-id.svg
+                  </svg>
+                </div>
+              </span>
+            </a>
+          </div>
+        </td>
+        <td
+          class="table-cell md:hidden lg:table-cell"
+        >
+          <div
+            class="text-theme-secondary-text css-31so1s"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="flex items-center space-x-2"
+              data-testid="TransactionRowMode"
+            >
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <div
+              class="css-8zppvw"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-center"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 121 DARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="justify-end css-1bel921"
+          >
+            <span
+              class="whitespace-nowrap text-theme-secondary-text"
+              data-testid="TransactionRow__currency"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render compact skeleton 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 16px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="table-cell md:hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1v8ywjx"
+          >
+            <div
+              class="mr-4 flex items-center -space-x-1"
+            >
+              <div
+                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div
+                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-1v8ywjx"
+          >
+            <div
+              class="mr-4"
+            >
+              <div
+                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-1v8ywjx"
+          >
+            <span
+              class="flex h-7 items-center space-x-1 rounded border-2 border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 1px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="justify-end css-1kcio9n"
+          >
+            <span
+              class="flex items-center space-x-1"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 0px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render responsive 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td
+          class="flex-col space-y-4 py-4"
+          data-testid="TableRow__mobile"
+        >
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              ID
+            </div>
+            <a
+              class="ring-focus group inline-block css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <span
+                  class="css-0"
+                  data-testid="TruncateMiddle"
+                >
+                  ea63bf…b5c79b
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Date
+            </div>
+            <div
+              class="whitespace-nowrap text-theme-secondary-text"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Sender
+            </div>
+            <div
+              class="flex w-full text-right"
+            >
+              <div
+                class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
+              >
+                <div
+                  class="w-0 flex-1"
+                >
+                  <div
+                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="css-u3jrna"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <span
+                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 css-jxpwdn"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Recipient
+            </div>
+            <div
+              class="flex w-full text-right"
+            >
+              <div
+                class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
+              >
+                <div
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-0 flex-1"
+                >
+                  <div
+                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="css-u3jrna"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <span
+                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Amount
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 121 DARK
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Currency
+            </div>
+            <div
+              class="flex flex-col justify-end"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="TransactionRow__currency"
+              >
+                N/A
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render responsive 2`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td
+          class="flex-col space-y-4 py-4"
+          data-testid="TableRow__mobile"
+        >
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              ID
+            </div>
+            <a
+              class="ring-focus group inline-block css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <span
+                  class="css-0"
+                  data-testid="TruncateMiddle"
+                >
+                  ea63bf…b5c79b
+                </span>
+              </span>
+            </a>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Date
+            </div>
+            <div
+              class="whitespace-nowrap text-theme-secondary-text"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Sender
+            </div>
+            <div
+              class="flex w-full text-right"
+            >
+              <div
+                class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
+              >
+                <div
+                  class="w-0 flex-1"
+                >
+                  <div
+                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="css-u3jrna"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <span
+                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="shrink-0 css-jxpwdn"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Recipient
+            </div>
+            <div
+              class="flex w-full text-right"
+            >
+              <div
+                class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
+              >
+                <div
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-0 flex-1"
+                >
+                  <div
+                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
+                  >
+                    <span
+                      class="font-semibold text-base text-theme-text"
+                      data-testid="Address__alias"
+                    >
+                      <span
+                        class="css-u3jrna"
+                        data-testid="TruncateEnd"
+                      >
+                        ARK Wallet 1
+                      </span>
+                    </span>
+                    <span
+                      class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Amount
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 121 DARK
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between space-x-4"
+          >
+            <div
+              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+            >
+              Currency
+            </div>
+            <div
+              class="flex flex-col justify-end"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="TransactionRow__currency"
+              >
+                N/A
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render skeleton 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1bqsw5h"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 16px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="table-cell md:hidden lg:table-cell"
+        >
+          <div
+            class="css-31so1s"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 150px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-31so1s"
+          >
+            <div
+              class="mr-4 flex items-center space-x-2"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="css-31so1s"
+          >
+            <div
+              class="mr-4"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 1px; height: 16px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <span
+              class="flex h-7 items-center space-x-1"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 1px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="justify-end css-1bel921"
+          >
+            <span
+              class="flex items-center space-x-1"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 0px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 35px; height: 16px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TransactionRow should render with currency 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1bqsw5h"
+          >
+            <a
+              class="ring-focus group inline-block css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    magnifying-glass-id.svg
+                  </svg>
+                </div>
+              </span>
+            </a>
+          </div>
+        </td>
+        <td
+          class="table-cell md:hidden lg:table-cell"
+        >
+          <div
+            class="text-theme-secondary-text css-31so1s"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="TransactionRow__timestamp"
+            >
+              31.07.2020 4:34 PM
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="flex items-center space-x-2"
+              data-testid="TransactionRowMode"
+            >
+              <span
+                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                >
+                  <img
+                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="space-x-4 css-31so1s"
+          >
+            <div
+              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end css-31so1s"
+          >
+            <div
+              class="flex items-center"
+              data-testid="TransactionAmount__tooltip"
+            >
+              <div
+                class="css-8zppvw"
+                color="danger"
+              >
+                <div
+                  class="flex space-x-1 items-center"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    - 121 BTC
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden xl:block"
+        >
+          <div
+            class="justify-end css-1bel921"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="TransactionRow__currency"
+            >
+              <span
+                class="whitespace-nowrap text-theme-secondary-text"
+                data-testid="Amount"
+              >
+                0 BTC
+              </span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

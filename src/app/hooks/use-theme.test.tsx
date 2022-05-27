@@ -1,0 +1,190 @@
+import { Contracts } from "@payvo/sdk-profiles";
+
+import { useTheme } from "@/app/hooks/use-theme";
+import { Theme } from "@/types";
+import * as themeUtils from "@/utils/theme";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { browser } from "@/utils/platform";
+
+describe("useTheme", () => {
+	describe("theme", () => {
+		it("should return 'dark' if shouldUseDarkColors is true", () => {
+			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
+
+			expect(useTheme().theme).toBe("dark");
+		});
+
+		it("should return 'light' if shouldUseDarkColors is false", () => {
+			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
+
+			expect(useTheme().theme).toBe("light");
+		});
+	});
+
+	describe("isDarkMode", () => {
+		it("should return true if dark mode", () => {
+			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
+
+			expect(useTheme().isDarkMode).toBe(true);
+		});
+
+		it("should return false if not dark mode", () => {
+			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
+
+			expect(useTheme().isDarkMode).toBe(false);
+		});
+	});
+
+	describe("setTheme", () => {
+		it.each(["light", "dark"])("should set %s theme", (theme) => {
+			useTheme().setTheme(theme === "light" ? "dark" : "light");
+
+			expect(document.body.classList.contains(theme)).toBe(false);
+
+			useTheme().setTheme(theme);
+
+			expect(document.body.classList.contains(theme)).toBe(true);
+		});
+
+		it("should set system theme", () => {
+			const overflowOverlayMock = jest.spyOn(browser, "supportsOverflowOverlay").mockReturnValue(false);
+
+			Object.defineProperty(window, "matchMedia", {
+				value: jest.fn().mockImplementation((query) => ({
+					// Deprecated
+					addEventListener: jest.fn(),
+
+					addListener: jest.fn(),
+
+					dispatchEvent: jest.fn(),
+
+					matches: "dark",
+
+					media: query,
+
+					onchange: null,
+
+					removeEventListener: jest.fn(),
+					// Deprecated
+					removeListener: jest.fn(),
+				})),
+				writable: true,
+			});
+
+			useTheme().setTheme("system");
+
+			expect(document.body.classList.contains("light")).toBe(false);
+			expect(document.body.classList.contains("dark")).toBe(true);
+			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
+			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
+
+			overflowOverlayMock.mockRestore();
+		});
+
+		it("should add firefox classes to the html element if overflow overlay is not supported", () => {
+			const overflowOverlayMock = jest.spyOn(browser, "supportsOverflowOverlay");
+
+			overflowOverlayMock.mockReturnValue(false);
+
+			useTheme().setTheme("light");
+
+			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(true);
+
+			useTheme().setTheme("dark");
+
+			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
+
+			overflowOverlayMock.mockReturnValue(true);
+
+			useTheme().setTheme("light");
+
+			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
+
+			overflowOverlayMock.mockRestore();
+		});
+	});
+
+	describe("setProfileTheme", () => {
+		it("should set theme from profile settings", async () => {
+			const profile = env.profiles().findById(getDefaultProfileId());
+			await env.profiles().restore(profile);
+
+			useTheme().setTheme("dark");
+
+			expect(document.body.classList.contains("dark")).toBe(true);
+			expect(document.body.classList.contains("light")).toBe(false);
+
+			useTheme().setProfileTheme(profile);
+
+			expect(document.body.classList.contains("dark")).toBe(false);
+			expect(document.body.classList.contains("light")).toBe(true);
+		});
+
+		it("should not set theme from profile settings", async () => {
+			const profile = env.profiles().findById(getDefaultProfileId());
+			await env.profiles().restore(profile);
+
+			const themeHook = useTheme();
+
+			themeHook.setTheme("light");
+
+			const themeSpy = jest.spyOn(themeHook, "setTheme");
+
+			expect(document.body.classList.contains("light")).toBe(true);
+
+			themeHook.setProfileTheme(profile);
+
+			expect(document.body.classList.contains("light")).toBe(true);
+
+			expect(themeSpy).not.toHaveBeenCalledWith();
+
+			themeSpy.mockRestore();
+		});
+	});
+
+	describe("resetProfileTheme", () => {
+		it.each([
+			["light", "dark"],
+			["dark", "light"],
+		])("should reset profile %s theme to defaults", async (profileTheme, systemTheme) => {
+			Object.defineProperty(window, "matchMedia", {
+				value: jest.fn().mockImplementation(() => ({
+					matches: systemTheme === "dark",
+				})),
+			});
+
+			const profile = env.profiles().findById(getDefaultProfileId());
+			await env.profiles().restore(profile);
+
+			const { resetProfileTheme, setTheme } = useTheme();
+
+			setTheme(systemTheme);
+
+			expect(document.body.classList.contains(systemTheme)).toBe(true);
+
+			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
+			setTheme(profileTheme as Theme);
+
+			expect(document.body.classList.contains(profileTheme)).toBe(true);
+
+			resetProfileTheme(profile);
+
+			expect(document.body.classList.contains(systemTheme)).toBe(true);
+			expect(profile.appearance().get("theme")).toBe(systemTheme);
+		});
+	});
+
+	describe("resetTheme", () => {
+		it("should reset theme to defaults", () => {
+			expect(document.body.classList.contains("light")).toBe(true);
+
+			useTheme().setTheme("dark");
+
+			expect(document.body.classList.contains("dark")).toBe(true);
+
+			useTheme().resetTheme();
+
+			expect(document.body.classList.contains("light")).toBe(true);
+		});
+	});
+});

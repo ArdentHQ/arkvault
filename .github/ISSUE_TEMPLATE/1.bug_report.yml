@@ -1,0 +1,53 @@
+name: Bug Report
+description: Create a bug report for the Payvo Wallet
+title: '[Section] '
+labels: ["web", "bug"]
+body:
+    - type: markdown
+      attributes:
+          value: Thanks for taking the time to file a bug report! Please fill out this form as completely as possible.
+    - type: textarea
+      attributes:
+          label: Describe the Bug
+          description: A clear and concise description of what the bug is.
+      validations:
+          required: true
+    - type: textarea
+      attributes:
+          label: Expected Behavior
+          description: A clear and concise description of what you expected to happen.
+      validations:
+          required: true
+    - type: textarea
+      attributes:
+          label: To Reproduce
+          description: Steps to reproduce the behavior, please provide clear steps that always reproduces the issue.
+      validations:
+          required: true
+    - type: dropdown
+      id: os
+      attributes:
+          label: What operating system are you using?
+          options:
+              - macOS
+              - Windows
+              - Linux
+              - Android
+              - iOS
+      validations:
+          required: true
+    - type: input
+      attributes:
+          label: What browser are you using?
+          description: 'For example: Chrome, Safari'
+      validations:
+          required: true
+    - type: input
+      attributes:
+          label: What version of Node.js are you using?
+          description: 'For example: 12.0.0'
+      validations:
+          required: false
+    - type: markdown
+      attributes:
+          value: These steps are used to add integration tests to ensure the same issue does not happen again. Thanks in advance!

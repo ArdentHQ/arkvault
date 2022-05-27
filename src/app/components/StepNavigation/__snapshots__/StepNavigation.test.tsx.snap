@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepNavigation should disable buttons if loading 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1yqe28v"
+      data-testid="StepNavigation__back-button"
+      disabled=""
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      class="css-1yqe28v"
+      data-testid="StepNavigation__send-button"
+      disabled=""
+      type="submit"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="invisible flex items-center space-x-2"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                double-arrow-right.svg
+              </svg>
+            </div>
+            <span>
+              Send
+            </span>
+          </span>
+          <div
+            class="absolute top-0 left-0 flex h-full w-full items-center justify-center"
+          >
+            <div
+              class="css-13oo6ja"
+            />
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should not render back button if on last step 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-to-wallet-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back to Wallet
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should not render back to wallet button if not on last step 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      class="css-1bx0hyc"
+      data-testid="StepNavigation__send-button"
+      type="submit"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        <span>
+          Send
+        </span>
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            double-arrow-right.svg
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should not render continue button if on last two steps 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      class="css-1bx0hyc"
+      data-testid="StepNavigation__send-button"
+      type="submit"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        <span>
+          Send
+        </span>
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            double-arrow-right.svg
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should not render continue button if on last two steps 2`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-to-wallet-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back to Wallet
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should render back button if not on last step 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      class="css-1bx0hyc"
+      data-testid="StepNavigation__send-button"
+      type="submit"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        <span>
+          Send
+        </span>
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            double-arrow-right.svg
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should render back to wallet button if on last step 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-to-wallet-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back to Wallet
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepNavigation should render continue button if not on last two steps 1`] = `
+<DocumentFragment>
+  <div
+    class="css-ppnppl"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="StepNavigation__back-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Back
+      </div>
+    </button>
+    <button
+      class="css-1bx0hyc"
+      data-testid="StepNavigation__continue-button"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Continue
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

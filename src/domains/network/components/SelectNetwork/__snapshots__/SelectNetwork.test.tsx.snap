@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectNetwork should render 1`] = `
+<div>
+  <div>
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-owns="downshift-0-menu"
+      data-testid="SelectNetwork"
+      role="combobox"
+    >
+      <label
+        for="downshift-0-input"
+        id="downshift-0-label"
+      />
+      
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
+          data-testid="SelectNetworkInput__network"
+        />
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="downshift-0-menu"
+            aria-labelledby="downshift-0-label"
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="SelectNetworkInput__input"
+            id="downshift-0-input"
+            placeholder="Enter a cryptoasset name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class=""
+      data-testid="SelectNetwork__options"
+    >
+      <div
+        class="mt-6 hidden"
+      >
+        <ul
+          aria-labelledby="downshift-0-label"
+          class="css-6y29t8"
+          id="downshift-0-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectNetwork should render with hidden options 1`] = `
+<div>
+  <div>
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-owns="downshift-4-menu"
+      data-testid="SelectNetwork"
+      role="combobox"
+    >
+      <label
+        for="downshift-4-input"
+        id="downshift-4-label"
+      />
+      
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
+          data-testid="SelectNetworkInput__network"
+        />
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="downshift-4-menu"
+            aria-labelledby="downshift-4-label"
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="SelectNetworkInput__input"
+            id="downshift-4-input"
+            placeholder="Enter a cryptoasset name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden"
+      data-testid="SelectNetwork__options"
+    >
+      <div
+        class="mt-6"
+      >
+        <div
+          class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+        >
+          PUBLIC NETWORKS
+        </div>
+        <ul
+          aria-labelledby="downshift-4-label"
+          class="css-6y29t8"
+          id="downshift-4-menu"
+          role="listbox"
+        >
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="ARK"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Compendia"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-bind.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  bind.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Qredit"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-xqr.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  xqr.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        type="horizontal"
+      />
+      <div
+        class="mt-6"
+      >
+        <span
+          class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+        >
+          DEVELOPMENT NETWORKS
+        </span>
+        <ul
+          aria-labelledby="downshift-4-label"
+          class="css-6y29t8"
+          id="downshift-4-menu"
+          role="listbox"
+        >
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Compendia Testnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-bind.testnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  bind.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Qredit Testnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-xqr.testnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  xqr.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectNetwork should render with networks 1`] = `
+<div>
+  <div>
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-owns="downshift-2-menu"
+      data-testid="SelectNetwork"
+      role="combobox"
+    >
+      <label
+        for="downshift-2-input"
+        id="downshift-2-label"
+      />
+      
+      <div
+        class="css-1psxlcd"
+      >
+        <div
+          class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
+          data-testid="SelectNetworkInput__network"
+        />
+        <div
+          class="relative flex h-full flex-1"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="downshift-2-menu"
+            aria-labelledby="downshift-2-label"
+            autocomplete="off"
+            class="no-ligatures w-full border-none css-1nupw50"
+            data-testid="SelectNetworkInput__input"
+            id="downshift-2-input"
+            placeholder="Enter a cryptoasset name"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class=""
+      data-testid="SelectNetwork__options"
+    >
+      <div
+        class="mt-6"
+      >
+        <div
+          class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+        >
+          PUBLIC NETWORKS
+        </div>
+        <ul
+          aria-labelledby="downshift-2-label"
+          class="css-6y29t8"
+          id="downshift-2-menu"
+          role="listbox"
+        >
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="ARK"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-ark.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Compendia"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-bind.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  bind.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Qredit"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+              data-testid="NetworkIcon-ARK-xqr.mainnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  xqr.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        type="horizontal"
+      />
+      <div
+        class="mt-6"
+      >
+        <span
+          class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+        >
+          DEVELOPMENT NETWORKS
+        </span>
+        <ul
+          aria-labelledby="downshift-2-label"
+          class="css-6y29t8"
+          id="downshift-2-menu"
+          role="listbox"
+        >
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Compendia Testnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-bind.testnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  bind.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li
+            class="relative flex h-0 cursor-pointer pb-[100%]"
+            data-testid="SelectNetwork__NetworkIcon--container"
+          >
+            <div
+              aria-label="Qredit Testnet"
+              class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-xqr.testnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  xqr.svg
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

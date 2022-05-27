@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CopyOrDownload should render 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 space-y-2 bg-theme-secondary-100 p-6 text-center dark:bg-black sm:mx-0 sm:rounded-xl sm:text-left"
+  >
+    <span
+      class="text-lg font-semibold text-theme-secondary-text"
+    >
+      title
+    </span>
+    <p
+      class="text-sm text-theme-secondary-500"
+    >
+      description
+    </p>
+    <div
+      class="flex items-center justify-center space-x-3 sm:justify-start"
+    >
+      <button
+        class="ring-focus relative focus:outline-none"
+        data-ring-focus-margin="-m-1"
+        data-testid="clipboard-icon__wrapper"
+        type="button"
+      >
+        <div
+          class="link flex items-center space-x-2 font-semibold"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              copy.svg
+            </svg>
+          </div>
+          <span>
+            Copy
+          </span>
+        </div>
+      </button>
+      <div
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+        type="vertical"
+      />
+      <button
+        class="link flex items-center space-x-2 font-semibold"
+        data-testid="CopyOrDownload__download"
+        type="button"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            arrow-down-bracket.svg
+          </svg>
+        </div>
+        <span>
+          Download
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

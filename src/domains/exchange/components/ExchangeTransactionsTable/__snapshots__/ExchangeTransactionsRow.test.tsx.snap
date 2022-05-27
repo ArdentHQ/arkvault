@@ -1,0 +1,1169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeTransactionsRow should render (Expired) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  clock-error.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render (Failed) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render (Finished) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-success-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-check-mark.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render (New) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <div
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                  data-testid="AmountLabel__hint"
+                >
+                  <div
+                    class="dark:text-white css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg>
+                      hint-small.svg
+                    </svg>
+                  </div>
+                </div>
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  clock.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render (Refunded) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-warning-300 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-exclamation-mark.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render (Verifying) 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1hgjfj1"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-1v8ywjx"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-1v8ywjx"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    sent.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-fbeerz"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-1v8ywjx"
+          >
+            <div
+              class="hidden lg:flex"
+            >
+              <div
+                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    received.svg
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="css-1vb1527"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-stretch"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-1v8ywjx"
+          >
+            <span>
+              <div
+                class="text-theme-warning-300 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-exclamation-mark.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1kcio9n"
+          >
+            <button
+              class="css-1cp5yjb"
+              data-testid="TableRemoveButton"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ExchangeTransactionsRow should render compact 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="css-1bqsw5h"
+          >
+            <button
+              class="link"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  magnifying-glass-id.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold css-31so1s"
+          />
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="css-31so1s"
+          >
+            01.01.2021 12:00 AM
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-31so1s"
+          >
+            <span
+              class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  sent.svg
+                </svg>
+              </div>
+            </span>
+            <div
+              class="css-8zppvw"
+              color="danger"
+            >
+              <div
+                class="flex space-x-1 items-center"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  - 1 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="gap-3 css-31so1s"
+          >
+            <span
+              class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  received.svg
+                </svg>
+              </div>
+            </span>
+            <div
+              class="css-1mirnqf"
+              color="success"
+            >
+              <div
+                class="flex space-x-1 items-center"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  + 100 ARK
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-31so1s"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  circle-cross.svg
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-end text-theme-secondary-text css-1bel921"
+          >
+            <button
+              class="css-1b8lzw6"
+              data-testid="TableRemoveButton--compact"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    trash.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

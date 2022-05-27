@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableRemoveButton should render 1`] = `
+<div>
+  <button
+    class="css-1cp5yjb"
+    data-testid="TableRemoveButton"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="css-1i4b0eq"
+        height="20"
+        width="20"
+      >
+        <svg>
+          trash.svg
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`TableRemoveButton should render compact 1`] = `
+<div>
+  <button
+    class="css-1b8lzw6"
+    data-testid="TableRemoveButton--compact"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          trash.svg
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;

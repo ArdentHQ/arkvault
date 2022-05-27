@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectFile should render with json file format 1`] = `
+<div>
+  <div
+    class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+    data-testid="SelectFile"
+  >
+    <div
+      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+      data-testid="SelectFile__drop-zone"
+    >
+      <div
+        class="css-1atxdzc"
+        height="40"
+        width="40"
+      >
+        <svg>
+          extension-json.svg
+        </svg>
+      </div>
+      <div
+        class="mt-8"
+      >
+        <span
+          class="mr-px hidden font-semibold sm:inline"
+        >
+          Drag & Drop or
+           
+        </span>
+        <button
+          class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+          data-ring-focus-margin="-m-1"
+          data-testid="SelectFile__browse-files"
+          title="Click here to upload"
+          type="button"
+        >
+          Browse Files
+        </button>
+      </div>
+      <div
+        class="mt-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Supported format is .json
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectFile should render with wwe file format 1`] = `
+<div>
+  <div
+    class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+    data-testid="SelectFile"
+  >
+    <div
+      class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+      data-testid="SelectFile__drop-zone"
+    >
+      <div
+        class="css-1atxdzc"
+        height="40"
+        width="40"
+      >
+        <svg>
+          extension-wwe.svg
+        </svg>
+      </div>
+      <div
+        class="mt-8"
+      >
+        <span
+          class="mr-px hidden font-semibold sm:inline"
+        >
+          Drag & Drop or
+           
+        </span>
+        <button
+          class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+          data-ring-focus-margin="-m-1"
+          data-testid="SelectFile__browse-files"
+          title="Click here to upload"
+          type="button"
+        >
+          Browse Files
+        </button>
+      </div>
+      <div
+        class="mt-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Supported format is .wwe
+      </div>
+    </div>
+  </div>
+</div>
+`;
