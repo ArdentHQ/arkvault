@@ -308,7 +308,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 	return (
 		<button
 			type="button"
-			data-testid="ListItemSmall"
+			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
 				"w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800",
 				{

@@ -336,12 +336,13 @@ exports[`WalletListItem should disable the send button when wallet has no balanc
 
 exports[`WalletListItem should disable the send button when wallet has no balance on responsive 1`] = `
 <DocumentFragment>
-  <div
-    class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
+  <button
+    class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 dark:bg-theme-secondary-800 dark:ring-2 dark:ring-theme-secondary-800"
     data-testid="ListItemSmall"
+    type="button"
   >
     <div
-      class="flex items-center space-x-4 p-4 pt-2 pr-2"
+      class="flex items-center space-x-4 p-2 pl-4"
     >
       <div
         class="flex shrink-0 items-center"
@@ -438,7 +439,7 @@ exports[`WalletListItem should disable the send button when wallet has no balanc
       </div>
     </div>
     <div
-      class="flex overflow-hidden rounded-xl"
+      class="mt-2 flex overflow-hidden rounded-xl"
     >
       <div
         class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -457,26 +458,25 @@ exports[`WalletListItem should disable the send button when wallet has no balanc
       </div>
       <div
         class="flex"
-      >
-        <button
-          class="cursor-not-allowed opacity-50 flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-          data-testid="ListItemSmall--button"
-          disabled=""
-          type="button"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg>
-              double-arrow-right.svg
-            </svg>
-          </div>
-        </button>
-      </div>
+      />
     </div>
-  </div>
+  </button>
+  <button
+    class="cursor-not-allowed opacity-50 flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
+    data-testid="ListItemSmall--button"
+    disabled=""
+    type="button"
+  >
+    <div
+      class="css-1i4b0eq"
+      height="20"
+      width="20"
+    >
+      <svg>
+        double-arrow-right.svg
+      </svg>
+    </div>
+  </button>
   <table>
     <tbody />
   </table>
@@ -1147,12 +1147,13 @@ exports[`WalletListItem should render when isLargeScreen = false 1`] = `
 <div>
   <table>
     <tbody>
-      <div
-        class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
+      <button
+        class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 dark:bg-theme-secondary-800 dark:ring-2 dark:ring-theme-secondary-800"
         data-testid="ListItemSmall"
+        type="button"
       >
         <div
-          class="flex items-center space-x-4 p-4 pt-2 pr-2"
+          class="flex items-center space-x-4 p-2 pl-4"
         >
           <div
             class="flex shrink-0 items-center"
@@ -1249,7 +1250,7 @@ exports[`WalletListItem should render when isLargeScreen = false 1`] = `
           </div>
         </div>
         <div
-          class="flex overflow-hidden rounded-xl"
+          class="mt-2 flex overflow-hidden rounded-xl"
         >
           <div
             class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -1286,7 +1287,7 @@ exports[`WalletListItem should render when isLargeScreen = false 1`] = `
             </button>
           </div>
         </div>
-      </div>
+      </button>
     </tbody>
   </table>
 </div>
@@ -1296,12 +1297,13 @@ exports[`WalletListItem should render when isLargeScreen = false and wallet is n
 <div>
   <table>
     <tbody>
-      <div
-        class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
+      <button
+        class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 dark:bg-theme-secondary-800 dark:ring-2 dark:ring-theme-secondary-800"
         data-testid="ListItemSmall"
+        type="button"
       >
         <div
-          class="flex items-center space-x-4 p-4 pt-2 pr-2"
+          class="flex items-center space-x-4 p-2 pl-4"
         >
           <div
             class="flex shrink-0 items-center"
@@ -1398,7 +1400,7 @@ exports[`WalletListItem should render when isLargeScreen = false and wallet is n
           </div>
         </div>
         <div
-          class="flex overflow-hidden rounded-xl"
+          class="mt-2 flex overflow-hidden rounded-xl"
         >
           <div
             class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -1443,7 +1445,7 @@ exports[`WalletListItem should render when isLargeScreen = false and wallet is n
             </button>
           </div>
         </div>
-      </div>
+      </button>
     </tbody>
   </table>
 </div>

@@ -304,7 +304,6 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					<SearchWalletListItemResponsive
 						wallet={wallet}
 						alias={alias}
-						disabled={disableAction?.(wallet)}
 						showNetwork={showNetwork}
 						onAction={onSelectWallet}
 						selectedAddress={selectedAddress}
