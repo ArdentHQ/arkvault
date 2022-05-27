@@ -382,7 +382,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -403,7 +403,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -414,7 +414,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -460,7 +460,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -479,7 +479,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -500,7 +500,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -965,7 +965,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -986,7 +986,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -997,7 +997,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -1043,7 +1043,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -1062,7 +1062,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -1083,7 +1083,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -1570,7 +1570,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -1591,7 +1591,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -1602,7 +1602,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -1648,7 +1648,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-success-500"
@@ -1667,7 +1667,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -1688,7 +1688,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -2175,7 +2175,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -2196,7 +2196,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2207,7 +2207,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -2253,7 +2253,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-success-500"
@@ -2272,7 +2272,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -2293,7 +2293,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -2720,7 +2720,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -2741,7 +2741,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -2752,7 +2752,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -2798,7 +2798,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -2817,7 +2817,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-1vb1527"
@@ -2840,7 +2840,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1kcio9n"
+                class="justify-end css-1hhowo0"
               >
                 Waiting...
               </div>
@@ -3192,7 +3192,7 @@ exports[`Signed Transaction Table should render different status should show as 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -3213,7 +3213,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3224,7 +3224,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -3270,7 +3270,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -3289,7 +3289,7 @@ exports[`Signed Transaction Table should render different status should show as 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-1vb1527"
@@ -3312,7 +3312,7 @@ exports[`Signed Transaction Table should render different status should show as 
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1kcio9n"
+                class="justify-end css-1hhowo0"
               >
                 Waiting...
               </div>
@@ -3724,7 +3724,7 @@ exports[`Signed Transaction Table should render different status should show unc
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -3745,7 +3745,7 @@ exports[`Signed Transaction Table should render different status should show unc
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -3756,7 +3756,7 @@ exports[`Signed Transaction Table should render different status should show unc
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -3802,7 +3802,7 @@ exports[`Signed Transaction Table should render different status should show unc
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -3821,7 +3821,7 @@ exports[`Signed Transaction Table should render different status should show unc
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -3842,7 +3842,7 @@ exports[`Signed Transaction Table should render different status should show unc
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -4273,7 +4273,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4294,7 +4294,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -4305,7 +4305,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -4355,7 +4355,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -4374,7 +4374,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-1vb1527"
@@ -4397,7 +4397,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1kcio9n"
+                class="justify-end css-1hhowo0"
               >
                 Waiting...
               </div>
@@ -4573,7 +4573,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
           >
             <td>
               <div
-                class="css-1bqsw5h"
+                class="css-mx19qq"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4594,7 +4594,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-31so1s"
+                class="text-theme-secondary-text css-1rods8x"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -4605,7 +4605,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -4655,7 +4655,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="w-16"
             >
               <div
-                class="justify-center truncate css-31so1s"
+                class="justify-center truncate css-1rods8x"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -4674,7 +4674,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
             </td>
             <td>
               <div
-                class="justify-end css-31so1s"
+                class="justify-end css-1rods8x"
               >
                 <div
                   class="css-1mirnqf"
@@ -4697,7 +4697,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 Waiting...
               </div>
@@ -4873,7 +4873,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4894,7 +4894,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -4905,7 +4905,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -4951,7 +4951,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -4970,7 +4970,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -4991,7 +4991,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -5242,7 +5242,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -5263,7 +5263,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -5274,7 +5274,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -5320,7 +5320,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -5339,7 +5339,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -5360,7 +5360,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -5589,7 +5589,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -5610,7 +5610,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -5621,7 +5621,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -5671,7 +5671,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-warning-300"
@@ -5690,7 +5690,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-1vb1527"
@@ -5713,7 +5713,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
               class="text-theme-secondary-500"
             >
               <div
-                class="justify-end css-1kcio9n"
+                class="justify-end css-1hhowo0"
               >
                 Waiting...
               </div>
@@ -6069,7 +6069,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6090,7 +6090,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-1v8ywjx"
+                class="text-theme-secondary-text css-1d4ra48"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -6101,7 +6101,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="space-x-4 css-1v8ywjx"
+                class="space-x-4 css-1d4ra48"
               >
                 <div
                   class="flex items-center -space-x-1"
@@ -6147,7 +6147,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
               class="w-16"
             >
               <div
-                class="justify-center truncate css-1v8ywjx"
+                class="justify-center truncate css-1d4ra48"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -6166,7 +6166,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="justify-end css-1v8ywjx"
+                class="justify-end css-1d4ra48"
               >
                 <div
                   class="css-fbeerz"
@@ -6187,7 +6187,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1kcio9n"
+                class="justify-end space-x-2 css-1hhowo0"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -6438,7 +6438,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
           >
             <td>
               <div
-                class="css-1bqsw5h"
+                class="css-mx19qq"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6459,7 +6459,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
               class="hidden lg:table-cell"
             >
               <div
-                class="text-theme-secondary-text css-31so1s"
+                class="text-theme-secondary-text css-1rods8x"
               >
                 <span
                   data-testid="TransactionRow__timestamp"
@@ -6470,7 +6470,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <div
                   class="flex items-center space-x-2"
@@ -6516,7 +6516,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
               class="w-16"
             >
               <div
-                class="justify-center truncate css-31so1s"
+                class="justify-center truncate css-1rods8x"
               >
                 <span
                   class="p-1 text-theme-secondary-700"
@@ -6535,7 +6535,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="justify-end css-31so1s"
+                class="justify-end css-1rods8x"
               >
                 <div
                   class="css-8zppvw"
@@ -6556,7 +6556,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
             </td>
             <td>
               <div
-                class="justify-end space-x-2 css-1bel921"
+                class="justify-end space-x-2 css-br23tb"
               >
                 <div
                   class="hidden space-x-3 xl:flex"

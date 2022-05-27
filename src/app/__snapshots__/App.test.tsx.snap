@@ -29,18 +29,13 @@ exports[`App should close splash screen if not e2e 1`] = `
                 class="my-auto flex items-center"
               >
                 <button
-                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                   data-testid="NavigationBarLogo--button"
                   type="button"
                 >
                   <span
                     class="relative"
                   >
-                    <div
-                      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                    >
-                      BETA
-                    </div>
                     <svg
                       height="28"
                     >
@@ -49,9 +44,12 @@ exports[`App should close splash screen if not e2e 1`] = `
                   </span>
                 </button>
                 <span
-                  class="text-lg font-bold"
+                  class="text-lg uppercase"
                 >
-                  Payvo Wallet
+                  <strong>
+                    ARK
+                  </strong>
+                  Vault
                 </span>
               </div>
             </div>
@@ -70,7 +68,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                 class="mx-auto hidden w-96 md:block"
               >
                 <svg>
-                  welcome-banner-light-green.svg
+                  welcome-banner-light.svg
                 </svg>
               </div>
               <div
@@ -96,7 +94,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -107,7 +105,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -164,7 +162,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -175,7 +173,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -246,7 +244,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-10zh490"
                         data-testid="Card"
                         type="button"
                       >
@@ -255,7 +253,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                         >
                           <div>
                             <div
-                              class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -269,7 +267,7 @@ exports[`App should close splash screen if not e2e 1`] = `
                             </div>
                           </div>
                           <span
-                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                           >
                             Create
                           </span>
@@ -339,18 +337,13 @@ exports[`App should not migrate profiles 1`] = `
                 class="my-auto flex items-center"
               >
                 <button
-                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                   data-testid="NavigationBarLogo--button"
                   type="button"
                 >
                   <span
                     class="relative"
                   >
-                    <div
-                      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                    >
-                      BETA
-                    </div>
                     <svg
                       height="28"
                     >
@@ -359,9 +352,12 @@ exports[`App should not migrate profiles 1`] = `
                   </span>
                 </button>
                 <span
-                  class="text-lg font-bold"
+                  class="text-lg uppercase"
                 >
-                  Payvo Wallet
+                  <strong>
+                    ARK
+                  </strong>
+                  Vault
                 </span>
               </div>
             </div>
@@ -380,7 +376,7 @@ exports[`App should not migrate profiles 1`] = `
                 class="mx-auto hidden w-96 md:block"
               >
                 <svg>
-                  welcome-banner-light-green.svg
+                  welcome-banner-light.svg
                 </svg>
               </div>
               <div
@@ -406,7 +402,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -417,7 +413,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -474,7 +470,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -485,7 +481,7 @@ exports[`App should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -556,7 +552,7 @@ exports[`App should not migrate profiles 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-10zh490"
                         data-testid="Card"
                         type="button"
                       >
@@ -565,7 +561,7 @@ exports[`App should not migrate profiles 1`] = `
                         >
                           <div>
                             <div
-                              class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -579,7 +575,7 @@ exports[`App should not migrate profiles 1`] = `
                             </div>
                           </div>
                           <span
-                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                           >
                             Create
                           </span>
@@ -643,18 +639,13 @@ exports[`App should render application error if the app fails to boot 1`] = `
               class="my-auto flex items-center"
             >
               <button
-                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
                 <span
                   class="relative"
                 >
-                  <div
-                    class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                  >
-                    BETA
-                  </div>
                   <svg
                     height="28"
                   >
@@ -679,7 +670,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
               class="mx-auto flex w-full max-w-xs justify-center"
             >
               <svg>
-                generic-error-light-green.svg
+                generic-error-light-navy.svg
               </svg>
             </div>
             <div
@@ -791,18 +782,13 @@ exports[`App should render mock 1`] = `
                 class="my-auto flex items-center"
               >
                 <button
-                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                   data-testid="NavigationBarLogo--button"
                   type="button"
                 >
                   <span
                     class="relative"
                   >
-                    <div
-                      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                    >
-                      BETA
-                    </div>
                     <svg
                       height="28"
                     >
@@ -811,9 +797,12 @@ exports[`App should render mock 1`] = `
                   </span>
                 </button>
                 <span
-                  class="text-lg font-bold"
+                  class="text-lg uppercase"
                 >
-                  Payvo Wallet
+                  <strong>
+                    ARK
+                  </strong>
+                  Vault
                 </span>
               </div>
             </div>
@@ -832,7 +821,7 @@ exports[`App should render mock 1`] = `
                 class="mx-auto hidden w-96 md:block"
               >
                 <svg>
-                  welcome-banner-light-green.svg
+                  welcome-banner-light.svg
                 </svg>
               </div>
               <div
@@ -858,7 +847,7 @@ exports[`App should render mock 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -869,7 +858,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -926,7 +915,7 @@ exports[`App should render mock 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -937,7 +926,7 @@ exports[`App should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -1008,7 +997,7 @@ exports[`App should render mock 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-10zh490"
                         data-testid="Card"
                         type="button"
                       >
@@ -1017,7 +1006,7 @@ exports[`App should render mock 1`] = `
                         >
                           <div>
                             <div
-                              class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -1031,7 +1020,7 @@ exports[`App should render mock 1`] = `
                             </div>
                           </div>
                           <span
-                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                           >
                             Create
                           </span>
@@ -1101,18 +1090,13 @@ exports[`App should render splash screen 1`] = `
                 class="my-auto flex items-center"
               >
                 <button
-                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                   data-testid="NavigationBarLogo--button"
                   type="button"
                 >
                   <span
                     class="relative"
                   >
-                    <div
-                      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                    >
-                      BETA
-                    </div>
                     <svg
                       height="28"
                     >
@@ -1121,9 +1105,12 @@ exports[`App should render splash screen 1`] = `
                   </span>
                 </button>
                 <span
-                  class="text-lg font-bold"
+                  class="text-lg uppercase"
                 >
-                  Payvo Wallet
+                  <strong>
+                    ARK
+                  </strong>
+                  Vault
                 </span>
               </div>
             </div>
@@ -1142,7 +1129,7 @@ exports[`App should render splash screen 1`] = `
                 class="mx-auto hidden w-96 md:block"
               >
                 <svg>
-                  welcome-banner-light-green.svg
+                  welcome-banner-light.svg
                 </svg>
               </div>
               <div
@@ -1168,7 +1155,7 @@ exports[`App should render splash screen 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -1179,7 +1166,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -1236,7 +1223,7 @@ exports[`App should render splash screen 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -1247,7 +1234,7 @@ exports[`App should render splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -1318,7 +1305,7 @@ exports[`App should render splash screen 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-10zh490"
                         data-testid="Card"
                         type="button"
                       >
@@ -1327,7 +1314,7 @@ exports[`App should render splash screen 1`] = `
                         >
                           <div>
                             <div
-                              class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -1341,7 +1328,7 @@ exports[`App should render splash screen 1`] = `
                             </div>
                           </div>
                           <span
-                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                           >
                             Create
                           </span>
@@ -1407,18 +1394,13 @@ exports[`App should render the offline screen if there is no internet connection
               class="my-auto flex items-center"
             >
               <button
-                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                 data-testid="NavigationBarLogo--button"
                 type="button"
               >
                 <span
                   class="relative"
                 >
-                  <div
-                    class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                  >
-                    BETA
-                  </div>
                   <svg
                     height="28"
                   >
@@ -1443,7 +1425,7 @@ exports[`App should render the offline screen if there is no internet connection
               class="mx-auto flex w-full max-w-xs justify-center"
             >
               <svg>
-                connection-error-light-green.svg
+                connection-error-light-navy.svg
               </svg>
             </div>
             <div
@@ -1498,18 +1480,13 @@ exports[`App should render welcome screen after splash screen 1`] = `
                 class="my-auto flex items-center"
               >
                 <button
-                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+                  class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
                   data-testid="NavigationBarLogo--button"
                   type="button"
                 >
                   <span
                     class="relative"
                   >
-                    <div
-                      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                    >
-                      BETA
-                    </div>
                     <svg
                       height="28"
                     >
@@ -1518,9 +1495,12 @@ exports[`App should render welcome screen after splash screen 1`] = `
                   </span>
                 </button>
                 <span
-                  class="text-lg font-bold"
+                  class="text-lg uppercase"
                 >
-                  Payvo Wallet
+                  <strong>
+                    ARK
+                  </strong>
+                  Vault
                 </span>
               </div>
             </div>
@@ -1539,7 +1519,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                 class="mx-auto hidden w-96 md:block"
               >
                 <svg>
-                  welcome-banner-light-green.svg
+                  welcome-banner-light.svg
                 </svg>
               </div>
               <div
@@ -1565,7 +1545,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -1576,7 +1556,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -1633,7 +1613,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-116zvw2"
                         data-testid="Card"
                         type="button"
                       >
@@ -1644,7 +1624,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-1qyktzz"
+                              class="shrink-0 emotion-cache-11ohc3q"
                               data-testid="Avatar"
                             >
                               <div
@@ -1715,7 +1695,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-pqu2un"
+                        class="emotion-cache-10zh490"
                         data-testid="Card"
                         type="button"
                       >
@@ -1724,7 +1704,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                         >
                           <div>
                             <div
-                              class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -1738,7 +1718,7 @@ exports[`App should render welcome screen after splash screen 1`] = `
                             </div>
                           </div>
                           <span
-                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                            class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                           >
                             Create
                           </span>
@@ -1769,155 +1749,6 @@ exports[`App should render welcome screen after splash screen 1`] = `
                     </span>
                   </a>
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</DocumentFragment>
-`;
-
-exports[`App should show the beta notice if the localstorage flag is not set 1`] = `
-<DocumentFragment>
-  <main
-    data-testid="Main"
-  >
-    <div
-      class="Toastify"
-    />
-    <div
-      class="relative flex min-h-screen flex-col"
-    >
-      <nav
-        aria-labelledby="main menu"
-        class="emotion-cache-97i12m"
-      >
-        <div
-          class="relative flex h-21"
-        >
-          <div
-            class="flex flex-1 px-8 sm:ml-12"
-          >
-            <div
-              class="my-auto flex items-center"
-            >
-              <button
-                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
-                data-testid="NavigationBarLogo--button"
-                type="button"
-              >
-                <span
-                  class="relative"
-                >
-                  <div
-                    class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 emotion-cache-85x3m0"
-                  >
-                    BETA
-                  </div>
-                  <svg
-                    height="28"
-                  >
-                    payvo-logo.svg
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div
-        class="flex flex-1 flex-col"
-      >
-        <div
-          class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
-          data-testid="Modal__overlay"
-        >
-          <div
-            class="emotion-cache-1vhnc7q"
-            tabindex="-1"
-          >
-            <div
-              class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pt-10 pb-24 sm:pb-10"
-              data-testid="Modal__inner"
-            >
-              <div
-                class="relative space-y-4"
-              >
-                <h2
-                  class="mb-0 text-2xl font-bold"
-                >
-                  Payvo Beta Testing
-                </h2>
-                <div
-                  class="flex-1"
-                >
-                  <svg
-                    class="my-8 mx-auto max-w-52"
-                  >
-                    info-light.svg
-                  </svg>
-                  <div
-                    class="flex flex-col overflow-hidden rounded-xl whitespace-pre-line"
-                  >
-                    <div
-                      class="emotion-cache-1mvrtw8"
-                    >
-                      <div
-                        class="emotion-cache-v0ob3f"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          circle-info.svg
-                        </svg>
-                      </div>
-                      <span>
-                        Information
-                      </span>
-                    </div>
-                    <div
-                      class="emotion-cache-16kimoc"
-                    >
-                      Payvo is experimental and shall not create any obligation for ARK Ecosystem SCIC to continue to develop, productize, support, repair, offer for sale, or in any other way continue to provide or develop Software either to Licensee or to any other party.
-The Software is provided «AS IS» without any express or implied warranty of any kind including warranties of merchantability or fitness for any particular purpose. In no event shall ARK Ecosystem SCIC or its subsidiaries, partners, or related entities be liable for any damages whatsoever (including, without limitation, damages for loss of profits or funds, business interruption, loss of information arising out of the use or inability to use the software).
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-center justify-between sm:space-x-3"
-                  >
-                    <label
-                      class="mt-8 flex cursor-pointer items-center space-x-3 text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
-                      data-testid="BetaNoticeModal__agree"
-                    >
-                      <input
-                        class="emotion-cache-7i915u"
-                        color="success"
-                        type="checkbox"
-                      />
-                      <span>
-                        I agree, do not show this message again
-                      </span>
-                    </label>
-                    <div
-                      class="emotion-cache-ngzslp"
-                    >
-                      <button
-                        class="emotion-cache-1yqe28v"
-                        data-testid="BetaNoticeModal__submit-button"
-                        disabled=""
-                        type="submit"
-                      >
-                        <div
-                          class="flex items-center space-x-2"
-                        >
-                          Continue
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

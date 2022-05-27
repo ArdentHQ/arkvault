@@ -124,7 +124,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -187,7 +187,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-fbeerz"
@@ -215,7 +215,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -278,7 +278,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -306,7 +306,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -369,7 +369,7 @@ exports[`Notifications should emit transactionClick event 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -548,7 +548,7 @@ exports[`Notifications should render with plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -611,7 +611,7 @@ exports[`Notifications should render with plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -639,7 +639,7 @@ exports[`Notifications should render with plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -702,7 +702,7 @@ exports[`Notifications should render with plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -730,7 +730,7 @@ exports[`Notifications should render with plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -793,7 +793,7 @@ exports[`Notifications should render with plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -946,7 +946,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -1009,7 +1009,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-fbeerz"
@@ -1037,7 +1037,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -1100,7 +1100,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"
@@ -1128,7 +1128,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                   class="w-3/5"
                 >
                   <div
-                    class="flex space-x-3 css-1bqsw5h"
+                    class="flex space-x-3 css-mx19qq"
                   >
                     <div
                       class="flex items-center space-x-2"
@@ -1191,7 +1191,7 @@ exports[`Notifications should render with transactions and plugins 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1bel921"
+                    class="justify-end css-br23tb"
                   >
                     <div
                       class="css-1vb1527"

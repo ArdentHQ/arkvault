@@ -12,7 +12,6 @@ const submitButton = Selector('[data-testid="ProfileForm__submit-button"]');
 const preSteps = {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
-		await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 	},
 	"And she clicks create": async (t: TestController) => {
 		await t
@@ -28,6 +27,7 @@ const formStep = {
 		await t.typeText(Selector("input[name=name]"), "Anne Doe");
 		await t.click('[data-testid="SelectDropdown__input"]');
 		await t.click('[data-testid="SelectDropdown__option--0"]');
+		await t.click(Selector("input[name=disclaimer]"));
 	},
 };
 
@@ -56,6 +56,7 @@ cucumber("@createProfile-withPassword", {
 		await t.typeText(Selector("input[name=confirmPassword]"), "S3cUrePa$sword");
 		await t.click('[data-testid="SelectDropdown__input"]');
 		await t.click('[data-testid="SelectDropdown__option--0"]');
+		await t.click(Selector("input[name=disclaimer]"));
 	},
 	"And she submits the form": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
@@ -105,6 +106,7 @@ cucumber("@createProfile-passwordConfirmFail", {
 		await t.click('[data-testid="SelectDropdown__input"]');
 		await t.click('[data-testid="SelectDropdown__option--0"]');
 		await t.typeText(Selector("input[name=password]"), "S3cUrePa$sword");
+		await t.click(Selector("input[name=disclaimer]"));
 	},
 	"But enters a different password in the confirm password field": async (t: TestController) => {
 		await t.typeText(Selector("input[name=confirmPassword]"), "RubbishPassword!123");
@@ -122,6 +124,7 @@ cucumber("@createProfile-invalidNameLength", {
 	"When she fills out the form excluding name": async (t: TestController) => {
 		await t.click('[data-testid="SelectDropdown__input"]');
 		await t.click('[data-testid="SelectDropdown__option--0"]');
+		await t.click(Selector("input[name=disclaimer]"));
 	},
 	"But enters a profile name that exceeds 42 characters": async (t: TestController) => {
 		await t.typeText(Selector("input[name=name]"), "1234567890123456789012345678901234567890123");

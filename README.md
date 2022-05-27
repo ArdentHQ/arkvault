@@ -1,6 +1,6 @@
-# Payvo Wallet
+# ARKVault
 
-![Payvo Wallet](./banner.png)
+![ARKVault](./banner.png)
 
 [![Build Status](https://badgen.now.sh/github/status/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/actions?query=branch%3Adevelop)
 [![Latest Version](https://badgen.now.sh/github/release/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/releases)
@@ -86,4 +86,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [Payvo](https://payvo.com)
+[MIT](LICENSE) © [Payvo](https://arkvault.io)

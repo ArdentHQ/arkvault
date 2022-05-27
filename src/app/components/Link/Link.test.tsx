@@ -18,7 +18,7 @@ describe("Link", () => {
 
 	it("should render external", () => {
 		render(
-			<Link to="https://payvo.com/" isExternal>
+			<Link to="https://arkvault.io/" isExternal>
 				ARK.io
 			</Link>,
 		);
@@ -29,7 +29,7 @@ describe("Link", () => {
 
 	it("should render disabled", () => {
 		render(
-			<Link to="https://payvo.com/" isExternal isDisabled>
+			<Link to="https://arkvault.io/" isExternal isDisabled>
 				ARK.io
 			</Link>,
 		);
@@ -40,7 +40,7 @@ describe("Link", () => {
 
 	it("should do nothing on click when disabled", () => {
 		const windowSpy = jest.spyOn(window, "open").mockImplementation();
-		const externalLink = "https://payvo.com/";
+		const externalLink = "https://arkvault.io/";
 
 		const { asFragment } = render(
 			<Link to={externalLink} isExternal isDisabled>
@@ -58,7 +58,7 @@ describe("Link", () => {
 	});
 
 	it("should render external without children", () => {
-		const { asFragment } = render(<Link to="https://payvo.com" isExternal />);
+		const { asFragment } = render(<Link to="https://arkvault.io" isExternal />);
 
 		expect(screen.getByTestId("Link__external")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe("Link", () => {
 	it("should open an external link", () => {
 		const windowSpy = jest.spyOn(window, "open").mockImplementation();
 
-		const externalLink = "https://payvo.com/";
+		const externalLink = "https://arkvault.io/";
 
 		const { asFragment } = render(<Link to={externalLink} isExternal />);
 

@@ -10,7 +10,7 @@ exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div
               class="relative flex-1 px-3"
@@ -66,7 +66,7 @@ exports[`DelegateVoteAmount should render when isCompact = true 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1rods8x"
           >
             <div
               class="relative flex-1 px-3"

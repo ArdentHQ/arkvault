@@ -23,7 +23,7 @@ export const Splash = ({ year }: any) => {
 		<Page navbarVariant="logo-only">
 			<Section className="flex flex-1 select-none flex-col justify-center text-center">
 				<div className="mx-auto flex max-w-md justify-center">
-					<Image name="WelcomeBanner" className="max-w-full" />
+					<Image name="WelcomeBanner" className="max-w-full" useAccentColor={false} />
 				</div>
 
 				<div data-testid="Splash__text" className="mt-8">

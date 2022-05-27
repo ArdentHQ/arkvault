@@ -1,6 +1,6 @@
-import { ReactComponent as WaitingLedgerDeviceDarkBlue } from "./waiting-ledger-device-dark-blue.svg";
+import { ReactComponent as WaitingLedgerDeviceDarkNavy } from "./waiting-ledger-device-dark-navy.svg";
 import { ReactComponent as WaitingLedgerDeviceDarkGreen } from "./waiting-ledger-device-dark-green.svg";
-import { ReactComponent as WaitingLedgerDeviceLightBlue } from "./waiting-ledger-device-light-blue.svg";
+import { ReactComponent as WaitingLedgerDeviceLightNavy } from "./waiting-ledger-device-light-navy.svg";
 import { ReactComponent as WaitingLedgerDeviceLightGreen } from "./waiting-ledger-device-light-green.svg";
 import { ReactComponent as AuthLedgerDeviceDark } from "./auth-ledger-device-dark.svg";
 import { ReactComponent as AuthLedgerDeviceLight } from "./auth-ledger-device-light.svg";
@@ -8,8 +8,8 @@ import { ReactComponent as AuthLedgerDeviceLight } from "./auth-ledger-device-li
 export const wallet = {
 	AuthLedgerDeviceDark,
 	AuthLedgerDeviceLight,
-	WaitingLedgerDeviceDarkBlue,
 	WaitingLedgerDeviceDarkGreen,
-	WaitingLedgerDeviceLightBlue,
+	WaitingLedgerDeviceDarkNavy,
 	WaitingLedgerDeviceLightGreen,
+	WaitingLedgerDeviceLightNavy,
 };

@@ -187,7 +187,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                         >
                           <td>
                             <div
-                              class="css-1bqsw5h"
+                              class="css-mx19qq"
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -199,7 +199,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                           </td>
                           <td>
                             <div
-                              class="css-31so1s"
+                              class="css-1rods8x"
                             >
                               <time
                                 class="text-theme-secondary-700"
@@ -211,7 +211,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
                           </td>
                           <td>
                             <div
-                              class="justify-end css-1bel921"
+                              class="justify-end css-br23tb"
                             >
                               <div
                                 class="flex items-center"
@@ -1097,7 +1097,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                         >
                           <td>
                             <div
-                              class="css-1bqsw5h"
+                              class="css-mx19qq"
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -1109,7 +1109,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                           </td>
                           <td>
                             <div
-                              class="css-31so1s"
+                              class="css-1rods8x"
                             >
                               <time
                                 class="text-theme-secondary-700"
@@ -1121,7 +1121,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
                           </td>
                           <td>
                             <div
-                              class="justify-end css-1bel921"
+                              class="justify-end css-br23tb"
                             >
                               <div
                                 class="flex items-center"
@@ -2219,7 +2219,7 @@ exports[`UnlockTokensModal should render 1`] = `
                         >
                           <td>
                             <div
-                              class="css-1bqsw5h"
+                              class="css-mx19qq"
                             >
                               <span
                                 class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -2231,7 +2231,7 @@ exports[`UnlockTokensModal should render 1`] = `
                           </td>
                           <td>
                             <div
-                              class="css-31so1s"
+                              class="css-1rods8x"
                             >
                               <time
                                 class="text-theme-secondary-700"
@@ -2243,7 +2243,7 @@ exports[`UnlockTokensModal should render 1`] = `
                           </td>
                           <td>
                             <div
-                              class="justify-end css-1bel921"
+                              class="justify-end css-br23tb"
                             >
                               <div
                                 class="flex items-center"

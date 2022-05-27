@@ -103,13 +103,23 @@ describe("NavigationBar", () => {
 		scrollSpy.mockRestore();
 	});
 
-	it("should render with title", () => {
-		const title = "Desktop Wallet";
+	it("should render with title if variant is logo-only", () => {
+		const title = "ARKVAULT";
 
-		const { container, asFragment } = render(<NavigationBar title={title} />);
+		const { container, asFragment } = render(<NavigationBar variant="logo-only" title={title} />);
 
 		expect(container).toBeInTheDocument();
 		expect(container).toHaveTextContent(title);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should not render with title if variant is full", () => {
+		const title = "ARKVAULT";
+
+		const { container, asFragment } = render(<NavigationBar variant="full" title={title} />);
+
+		expect(container).toBeInTheDocument();
+		expect(container).not.toHaveTextContent(title);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

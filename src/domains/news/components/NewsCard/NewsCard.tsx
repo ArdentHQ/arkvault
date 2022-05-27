@@ -92,7 +92,7 @@ export const NewsCard: React.VFC<NewsCardProperties> = ({
 
 					{coverImage && (
 						<div className="-mx-10 flex justify-center border-t-2 border-theme-primary-100 p-1 dark:border-theme-secondary-800">
-							<img src={coverImage} alt="Payvo Banner" />
+							<img src={coverImage} alt="ARKVault Banner" />
 						</div>
 					)}
 				</div>

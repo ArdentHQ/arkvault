@@ -6,7 +6,7 @@ exports[`Link should do nothing on click when disabled 1`] = `
     class="ring-focus group inline-block css-1jnqd87"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
-    href="https://payvo.com/"
+    href="https://arkvault.io/"
     rel="noopener noreferrer"
   >
     <span
@@ -34,7 +34,7 @@ exports[`Link should open an external link 1`] = `
     class="ring-focus group inline-block css-15tcy38"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
-    href="https://payvo.com/"
+    href="https://arkvault.io/"
     rel="noopener noreferrer"
   >
     <span
@@ -77,7 +77,7 @@ exports[`Link should render external without children 1`] = `
     class="ring-focus group inline-block css-15tcy38"
     data-ring-focus-margin="-m-1"
     data-testid="Link"
-    href="https://payvo.com"
+    href="https://arkvault.io"
     rel="noopener noreferrer"
   >
     <span

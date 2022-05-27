@@ -103,6 +103,8 @@ describe("Import Profile - Profile Form Step", () => {
 		inputElement.select();
 		userEvent.paste(inputElement, "test profile 1");
 
+		userEvent.click(screen.getByRole("checkbox"));
+
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
@@ -149,6 +151,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		userEvent.paste(passwordInput(), "S3cUrePa$sword.test");
 		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.wrong");

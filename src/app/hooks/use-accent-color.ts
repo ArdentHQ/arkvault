@@ -1,34 +1,41 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
-type AccentColorType = "green" | "blue";
+type AccentColorType = "green" | "navy";
 
-const ACCENT_BLUE_CLASS = "accent-blue"; // defined in variables.css
+const ACCENT_GREEN_CLASS = "accent-green"; // defined in variables.css
+const ACCENT_NAVY_CLASS = "accent-navy"; // defined in variables.css
 
 const getCurrentAccentColor = (): AccentColorType => {
-	if (document.body.classList.contains(ACCENT_BLUE_CLASS)) {
-		return "blue";
+	if (document.body.classList.contains(ACCENT_NAVY_CLASS)) {
+		return "navy";
 	}
 
 	return "green";
 };
 
 const resetAccentColor = () => {
-	document.body.classList.remove(ACCENT_BLUE_CLASS);
+	document.body.classList.remove(ACCENT_GREEN_CLASS);
+	document.body.classList.add(ACCENT_NAVY_CLASS);
 };
 
 const useAccentColor = () => {
 	const setAccentColor = (value: AccentColorType) => {
-		if (value === "blue") {
-			document.body.classList.add(ACCENT_BLUE_CLASS);
+		if (value === "green") {
+			document.body.classList.remove(ACCENT_NAVY_CLASS);
+			document.body.classList.add(ACCENT_GREEN_CLASS);
 		}
 
-		if (value === "green") {
+		if (value === "navy") {
 			resetAccentColor();
 		}
 	};
 
 	const setProfileAccentColor = (profile: Contracts.IProfile) => {
-		const profileAccentColor = profile.settings().get(Contracts.ProfileSetting.AccentColor);
+		let profileAccentColor = profile.settings().get(Contracts.ProfileSetting.AccentColor);
+
+		if (profileAccentColor === "blue") {
+			profileAccentColor = "navy";
+		}
 
 		/* istanbul ignore else */
 		if (getCurrentAccentColor() !== profileAccentColor) {

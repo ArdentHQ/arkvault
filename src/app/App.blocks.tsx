@@ -8,7 +8,7 @@ import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useAccentColor, useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -16,8 +16,6 @@ import { Splash } from "@/domains/splash/pages";
 import { Offline } from "@/domains/error/pages";
 import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
-import { useBetaNotice } from "@/domains/profile/hooks/use-beta-notice";
-import { BetaNotice } from "@/domains/profile/pages/BetaNotice/BetaNotice";
 
 const AppRouter: React.FC = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -83,8 +81,7 @@ const Main: React.VFC = () => {
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
 	const { setTheme } = useTheme();
-
-	const { showBetaNotice, acceptBetaNotice } = useBetaNotice();
+	const { resetAccentColor } = useAccentColor();
 
 	const { t } = useTranslation();
 
@@ -98,7 +95,7 @@ const Main: React.VFC = () => {
 			}),
 		onProfileSignOut: () => {
 			setTheme("system");
-
+			resetAccentColor();
 			toasts.dismiss();
 		},
 		onProfileSyncComplete: async () => {
@@ -167,10 +164,6 @@ const Main: React.VFC = () => {
 
 		if (!isOnline) {
 			return <Offline />;
-		}
-
-		if (showBetaNotice) {
-			return <BetaNotice onContinue={acceptBetaNotice} />;
 		}
 
 		/* istanbul ignore else */

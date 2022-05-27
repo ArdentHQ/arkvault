@@ -151,40 +151,6 @@ describe("App", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show the beta notice if the localstorage flag is not set", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
-
-		const { asFragment } = render(<App />, { history, withProviders: false });
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-		await expect(screen.findByText("Payvo Beta Testing")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should close the beta notice on continue", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
-
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("BetaNoticeModal__agree"));
-		userEvent.click(screen.getByTestId("BetaNoticeModal__submit-button"));
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		expect(localstorageSpy).toHaveBeenCalledWith("hideBetaNotice", "true");
-
-		localstorageSpy.mockRestore();
-	});
-
 	it("should render application error if the app fails to boot", async () => {
 		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
 
