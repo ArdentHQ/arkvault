@@ -4,9 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { SelectCategory } from "./components/SelectCategory";
 import { NewsOptionsProperties, Option } from "./NewsOptions.contracts";
-import { Divider } from "@/app/components/Divider";
-import { FilterNetwork } from "@/app/components/FilterNetwork";
-import { useEnvironmentContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
@@ -16,9 +13,7 @@ const HEADER_HEIGHT = 84;
 const VERTICAL_PADDING = 20 + 32;
 // endregion
 
-export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategories, selectedCoins, onSubmit }) => {
-	const { env } = useEnvironmentContext();
-
+export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategories, onSubmit }) => {
 	const { t } = useTranslation();
 
 	const [categories, setCategories] = useState<Option[]>(
@@ -27,23 +22,6 @@ export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategori
 			name,
 		})),
 	);
-
-	const [coinOptions, setCoinOptions] = useState(() => {
-		const coins: Record<string, { network: Networks.Network; isSelected: boolean }> = {};
-
-		for (const network of env.availableNetworks()) {
-			const coin = network.coin();
-
-			if (!coins[coin]) {
-				coins[coin] = {
-					isSelected: selectedCoins.includes(coin),
-					network,
-				};
-			}
-		}
-
-		return Object.values(coins);
-	});
 
 	const showSelectAllCategories = useMemo(
 		() => categories.some((option: Option) => !option.isSelected),
@@ -87,26 +65,17 @@ export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategori
 			}
 		}
 
-		const coinNames: string[] = [];
-
-		for (const option of coinOptions) {
-			if (option.isSelected) {
-				coinNames.push(option.network.coin());
-			}
-		}
-
 		onSubmit({
 			categories: categoryNames,
-			coins: coinNames,
 		});
-	}, [onSubmit, categories, coinOptions]);
+	}, [onSubmit, categories]);
 
 	useEffect(() => {
 		handleQueryUpdate();
 	}, [handleQueryUpdate]);
 
 	return (
-		<div data-testid="NewsOptions" className="px-10 pt-7 pb-2">
+		<div data-testid="NewsOptions" className="px-10 py-7">
 			<div className="flex flex-col space-y-8">
 				<div className="flex flex-col space-y-3">
 					<div className="flex items-center justify-between">
@@ -136,21 +105,6 @@ export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategori
 							</SelectCategory>
 						))}
 					</div>
-				</div>
-
-				<Divider dashed />
-
-				<div className="flex flex-col space-y-3">
-					<h5 className="font-semibold">{t("NEWS.NEWS_OPTIONS.FILTER_ASSETS")}</h5>
-					<p className="text-sm text-theme-secondary-500">
-						{t("NEWS.NEWS_OPTIONS.YOUR_CURRENT_SELECTIONS")}:
-					</p>
-
-					<FilterNetwork
-						options={coinOptions}
-						hideViewAll
-						onChange={(_, networks) => setCoinOptions(networks)}
-					/>
 				</div>
 			</div>
 		</div>

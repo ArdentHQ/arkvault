@@ -7,7 +7,6 @@ interface Option {
 
 interface NewsOptionsProperties {
 	selectedCategories: AvailableNewsCategories[];
-	selectedCoins: string[];
 	onSubmit: (data: NewsFilters) => void;
 }
 

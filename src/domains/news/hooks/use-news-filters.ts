@@ -21,13 +21,13 @@ export const useNewsFilters = () => {
 
 	const [searchQuery, setSearchQuery] = useState("");
 
-	const [{ categories, coins }, setFilters] = useState<NewsFilters>(() => {
+	const [{ categories }, setFilters] = useState<NewsFilters>(() => {
 		let initialFilters: NewsFilters;
 
 		try {
 			initialFilters = JSON.parse(profile.settings().get(Contracts.ProfileSetting.NewsFilters)!);
 		} catch {
-			initialFilters = { categories: [], coins: ["ARK"] };
+			initialFilters = { categories: [] };
 		}
 
 		return initialFilters;
@@ -35,7 +35,7 @@ export const useNewsFilters = () => {
 
 	const [news, setNews] = useState<FTXSignal[]>([]);
 
-	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage, coins]);
+	useEffect(() => window.scrollTo({ behavior: "smooth", top: 0 }), [currentPage]);
 
 	useEffect(() => {
 		setCurrentPage(1);
@@ -46,9 +46,9 @@ export const useNewsFilters = () => {
 			setIsLoading(true);
 			setNews([]);
 
-			if (categories.length > 0 && coins.length > 0) {
+			if (categories.length > 0) {
 				const query: NewsQuery = {
-					coins,
+					coins: ["ARK"],
 					page: currentPage,
 				};
 
@@ -74,16 +74,16 @@ export const useNewsFilters = () => {
 		};
 
 		fetchNews();
-	}, [ftx, currentPage, categories, coins, searchQuery, t]);
+	}, [ftx, currentPage, categories, searchQuery, t]);
 
 	useEffect(() => {
 		const updateSettings = async () => {
-			profile.settings().set(Contracts.ProfileSetting.NewsFilters, JSON.stringify({ categories, coins }));
+			profile.settings().set(Contracts.ProfileSetting.NewsFilters, JSON.stringify({ categories }));
 			await persist();
 		};
 
 		updateSettings();
-	}, [profile, categories, coins, persist]);
+	}, [profile, categories, persist]);
 
 	const handleSelectPage = useCallback((page: number) => setCurrentPage(page), []);
 
@@ -94,7 +94,6 @@ export const useNewsFilters = () => {
 
 	return {
 		categories,
-		coins,
 		currentPage,
 		handleFilterSubmit,
 		handleSelectPage,

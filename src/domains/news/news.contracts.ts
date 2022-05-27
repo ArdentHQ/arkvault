@@ -2,7 +2,6 @@ import { AVAILABLE_CATEGORIES } from "./news.constants";
 
 interface NewsFilters {
 	categories: AvailableNewsCategories[];
-	coins: string[];
 	searchQuery?: string;
 }
 
@@ -14,7 +13,6 @@ interface NewsQuery {
 }
 
 export interface NewsHeaderFiltersProperties {
-	coins: string[];
 	categories: AvailableNewsCategories[];
 	shouldResetFields: boolean;
 	onSearch?: (query: string) => void;
