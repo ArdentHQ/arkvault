@@ -124,7 +124,7 @@ export const AccordionHeaderSkeletonWrapper: React.VFC<AccordionHeaderSkeletonWr
 	>
 		{children}
 
-		<div className="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700 sm:ml-4 sm:border-l">
+		<div className="flex h-full items-center border-theme-secondary-300 pl-4 dark:border-theme-secondary-800 dark:group-hover:border-theme-secondary-700">
 			<div className="flex h-8 w-8 content-center items-center justify-center rounded-lg bg-theme-background text-theme-secondary-500 ring-1 ring-theme-secondary-300 dark:text-theme-secondary-700 dark:ring-theme-secondary-800">
 				<Icon name="ChevronDownSmall" size="sm" />
 			</div>
