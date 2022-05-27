@@ -18,8 +18,8 @@ describe("Link", () => {
 
 	it("should render external", () => {
 		render(
-			<Link to="https://arkvault.io/" isExternal>
-				ARK.io
+			<Link to="https://app.arkvault.io/" isExternal>
+				app.arkvault.io
 			</Link>,
 		);
 
@@ -29,8 +29,8 @@ describe("Link", () => {
 
 	it("should render disabled", () => {
 		render(
-			<Link to="https://arkvault.io/" isExternal isDisabled>
-				ARK.io
+			<Link to="https://app.arkvault.io/" isExternal isDisabled>
+				app.arkvault.io
 			</Link>,
 		);
 
@@ -40,11 +40,11 @@ describe("Link", () => {
 
 	it("should do nothing on click when disabled", () => {
 		const windowSpy = jest.spyOn(window, "open").mockImplementation();
-		const externalLink = "https://arkvault.io/";
+		const externalLink = "https://app.arkvault.io/";
 
 		const { asFragment } = render(
 			<Link to={externalLink} isExternal isDisabled>
-				ARK.io
+				app.arkvault.io
 			</Link>,
 		);
 
@@ -58,7 +58,7 @@ describe("Link", () => {
 	});
 
 	it("should render external without children", () => {
-		const { asFragment } = render(<Link to="https://arkvault.io" isExternal />);
+		const { asFragment } = render(<Link to="https://app.arkvault.io" isExternal />);
 
 		expect(screen.getByTestId("Link__external")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe("Link", () => {
 	it("should open an external link", () => {
 		const windowSpy = jest.spyOn(window, "open").mockImplementation();
 
-		const externalLink = "https://arkvault.io/";
+		const externalLink = "https://app.arkvault.io/";
 
 		const { asFragment } = render(<Link to={externalLink} isExternal />);
 

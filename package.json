@@ -5,11 +5,11 @@
 	"description": "ARKVault",
 	"homepage": "./",
 	"bugs": {
-		"url": "https://github.com/PayvoHQ/wallet/issues"
+		"url": "https://github.com/ArdentHQ/arkvault/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/PayvoHQ/wallet.git"
+		"url": "git+https://github.com/ArdentHQ/arkvault.git"
 	},
 	"license": "MIT",
 	"author": "ARKVault <info@arkvault.io>",
