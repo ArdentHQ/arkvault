@@ -7,7 +7,7 @@ exports[`Votes should emit action on continue button to unvote/vote 1`] = `<Docu
 exports[`Votes should filter current delegates 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -1168,7 +1168,7 @@ exports[`Votes should filter current delegates 1`] = `
 exports[`Votes should hide testnet wallet if disabled from profile setting 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -2595,7 +2595,7 @@ exports[`Votes should navigate to import wallet page 1`] = `<DocumentFragment />
 exports[`Votes should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -3988,7 +3988,7 @@ exports[`Votes should render 1`] = `
 exports[`Votes should render and handle wallet current voting exception 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -5381,7 +5381,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
 exports[`Votes should render with no wallets 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -5901,7 +5901,7 @@ exports[`Votes should render with no wallets 1`] = `
 exports[`Votes should select a delegate 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -7293,7 +7293,7 @@ exports[`Votes should select an address and delegate 1`] = `<DocumentFragment />
 exports[`Votes should select an address without vote 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -8686,7 +8686,7 @@ exports[`Votes should select an address without vote 1`] = `
 exports[`Votes should select ledger option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -9363,7 +9363,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
 exports[`Votes should select starred option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -10040,7 +10040,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
 exports[`Votes should show resigned delegate notice 1`] = `
 <div>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -11463,7 +11463,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
 exports[`Votes should toggle network selection from network filters 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -12660,7 +12660,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
 exports[`Votes should trigger network connection warning 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"

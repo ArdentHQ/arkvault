@@ -3,7 +3,7 @@
 exports[`ImportProfile should apply theme setting of imported profile regardless of OS preferences 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <nav
       aria-labelledby="main menu"
@@ -691,7 +691,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
 exports[`ImportProfile should apply theme setting of imported profile regardless of OS preferences 2`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <nav
       aria-labelledby="main menu"
@@ -1379,7 +1379,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
 exports[`ImportProfile should render first step 1`] = `
 <div>
   <div
-    class="css-1v4rx69"
+    class="css-lyknmy"
   >
     <nav
       aria-labelledby="main menu"

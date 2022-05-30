@@ -5,7 +5,7 @@ exports[`WalletGroupPage should go to main page if no network 1`] = `<DocumentFr
 exports[`WalletGroupPage should render empty list if no wallets 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"

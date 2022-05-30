@@ -3,7 +3,7 @@
 exports[`Contacts should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -1303,7 +1303,7 @@ exports[`Contacts should render compact on md screen 1`] = `
 exports[`Contacts should render compact on md screen if uses expanded tables 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -2603,7 +2603,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
 exports[`Contacts should render responsive with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -3226,7 +3226,7 @@ exports[`Contacts should render responsive with contacts 1`] = `
 exports[`Contacts should render with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -4526,7 +4526,7 @@ exports[`Contacts should render with contacts 1`] = `
 exports[`Contacts should render without contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
