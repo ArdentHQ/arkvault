@@ -13,7 +13,7 @@ export interface WalletListItemProperties {
 
 export interface StarredProperties {
 	wallet: Contracts.IReadWriteWallet;
-	handleToggleStar: ReturnType<typeof useWalletActions>["handleToggleStar"];
+	onToggleStar: ReturnType<typeof useWalletActions>["handleToggleStar"];
 	isCompact: boolean;
 	isLargeScreen?: boolean;
 }
@@ -47,8 +47,8 @@ export interface CurrencyProperties {
 export interface ButtonsCellProperties {
 	wallet: Contracts.IReadWriteWallet;
 	isCompact: boolean;
-	handleSend: ReturnType<typeof useWalletActions>["handleSend"];
-	handleSelectOption: ReturnType<typeof useWalletActions>["handleSelectOption"];
+	onSend: ReturnType<typeof useWalletActions>["handleSend"];
+	onSelectOption: ReturnType<typeof useWalletActions>["handleSelectOption"];
 }
 
 export interface WalletListItemMobileProperties {

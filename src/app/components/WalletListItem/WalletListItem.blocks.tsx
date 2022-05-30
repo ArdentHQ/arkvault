@@ -31,7 +31,7 @@ const excludedIcons = ["isStarred"];
 
 export const Starred: React.VFC<StarredProperties> = ({
 	wallet,
-	handleToggleStar,
+	onToggleStar,
 	isCompact,
 	isLargeScreen = true,
 }) => {
@@ -41,7 +41,7 @@ export const Starred: React.VFC<StarredProperties> = ({
 		return (
 			<div
 				data-testid="WalletIcon__Starred"
-				onClick={handleToggleStar}
+				onClick={onToggleStar}
 				className="flex shrink-0 items-center justify-center"
 			>
 				<Icon
@@ -76,7 +76,7 @@ export const Starred: React.VFC<StarredProperties> = ({
 				>
 					<div
 						data-testid="WalletIcon__Starred"
-						onClick={handleToggleStar}
+						onClick={onToggleStar}
 						className="flex shrink-0 items-center justify-center"
 					>
 						<Icon
@@ -262,7 +262,7 @@ export const WalletItemExtraDetails = ({
 				isLargeScreen={false}
 			/>
 
-			<Starred handleToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} isLargeScreen={false} />
+			<Starred onToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} isLargeScreen={false} />
 		</>
 	);
 };
@@ -365,8 +365,8 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 	wallet,
 	isCompact,
-	handleSend,
-	handleSelectOption,
+	onSend,
+	onSelectOption,
 }) => {
 	const { t } = useTranslation();
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
@@ -391,7 +391,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 						"my-auto": !isCompact,
 						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
 					})}
-					onClick={handleSend}
+					onClick={onSend}
 				>
 					{t("COMMON.SEND")}
 				</Button>
@@ -411,7 +411,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 							<Icon name="EllipsisVertical" size="lg" />
 						</Button>
 					}
-					onSelect={handleSelectOption}
+					onSelect={onSelectOption}
 					options={[primaryOptions, secondaryOptions]}
 				/>
 			</div>

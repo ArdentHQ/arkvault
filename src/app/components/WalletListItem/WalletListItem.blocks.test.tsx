@@ -13,6 +13,7 @@ import {
 	Starred,
 	Info,
 	Balance,
+	WalletListItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -37,6 +38,38 @@ describe("WalletListItem.blocks", () => {
 		await profile.sync();
 	});
 
+	it("should render WalletListItemMobile", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItemMobile wallet={wallet} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletListItemMobile"));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
+	it("should render WalletListItemMobile when selected", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItemMobile wallet={wallet} selected />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletListItemMobile--selected"));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
 	it("should render StarredCell", () => {
 		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
 
@@ -45,7 +78,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
+							<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -71,7 +104,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
+				<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -92,7 +125,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<WalletCell wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
+							<WalletCell wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -218,8 +251,8 @@ describe("WalletListItem.blocks", () => {
 							<ButtonsCell
 								wallet={wallet}
 								isCompact={true}
-								handleSelectOption={jest.fn()}
-								handleSend={handleSend}
+								onSelectOption={jest.fn()}
+								onSend={handleSend}
 							/>
 						</tr>
 					</tbody>
@@ -245,7 +278,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Info wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
+				<Info wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -269,7 +302,7 @@ describe("WalletListItem.blocks", () => {
 							<td>
 								<Balance
 									wallet={wallet}
-									handleToggleStar={jest.fn()}
+									onToggleStar={jest.fn()}
 									isCompact={true}
 									isLargeScreen={false}
 								/>

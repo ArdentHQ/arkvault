@@ -140,7 +140,7 @@ describe("NavigationBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "md"])("should render in %s", async (breakpoint) => {
+	it.each(["xs", "sm", "md", "lg"])("should render in %s", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(<NavigationBar />, breakpoint);
 
 		Object.defineProperty(window, "innerWidth", { configurable: true, value: 700, writable: true });
