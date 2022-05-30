@@ -237,7 +237,7 @@ exports[`AddRecipient should render 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-g7dob4"
+                class=" css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -489,7 +489,7 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-g7dob4"
+                class=" css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -752,7 +752,7 @@ exports[`AddRecipient should render with single recipient data 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-g7dob4"
+                class=" css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -954,7 +954,7 @@ exports[`AddRecipient should render without the single & multiple switch 1`] = `
               class="inline-flex"
             >
               <button
-                class=" css-g7dob4"
+                class=" css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1206,7 +1206,7 @@ exports[`AddRecipient should set available amount 1`] = `
               class="inline-flex"
             >
               <button
-                class="active css-g7dob4"
+                class="active css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >
@@ -1464,7 +1464,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
               class="inline-flex"
             >
               <button
-                class="active css-g7dob4"
+                class="active css-h5fzq7"
                 data-testid="AddRecipient__send-all"
                 type="button"
               >

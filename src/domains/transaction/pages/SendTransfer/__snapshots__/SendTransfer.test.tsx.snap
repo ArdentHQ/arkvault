@@ -2570,7 +2570,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                   class="inline-flex"
                                 >
                                   <button
-                                    class=" css-g7dob4"
+                                    class=" css-h5fzq7"
                                     data-testid="AddRecipient__send-all"
                                     type="button"
                                   >
@@ -3717,7 +3717,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                   class="inline-flex"
                                 >
                                   <button
-                                    class=" css-g7dob4"
+                                    class=" css-h5fzq7"
                                     data-testid="AddRecipient__send-all"
                                     type="button"
                                   >
@@ -4374,7 +4374,7 @@ exports[`SendTransfer should render form step 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -5046,7 +5046,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -5718,7 +5718,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -6342,7 +6342,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -7090,7 +7090,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
