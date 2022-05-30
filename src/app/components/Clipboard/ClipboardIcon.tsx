@@ -11,7 +11,7 @@ export const ClipboardIcon = ({
 	tooltipDarkTheme,
 	options,
 	children,
-	disabled
+	disabled,
 }: Omit<ClipboardIconProperties, "variant">) => {
 	const { t } = useTranslation();
 
