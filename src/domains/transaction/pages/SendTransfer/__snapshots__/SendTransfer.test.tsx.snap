@@ -9581,7 +9581,7 @@ exports[`SendTransfer should render summary step 1`] = `
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/ead6d214ff34851b6551fdf343e4edd34d9fa44b2a1192a7962662845697983a"
+                  href="https://dexplorer.ark.io/transactions/a68d410876a42b2e793593150688dd25d716ea1720b0ac765a2efd62fb60e386"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -9591,7 +9591,7 @@ exports[`SendTransfer should render summary step 1`] = `
                       class="css-0"
                       data-testid="TruncateMiddle"
                     >
-                      ead6d214ff34851b6551fdf343…4b2a1192a7962662845697983a
+                      a68d410876a42b2e7935931506…1720b0ac765a2efd62fb60e386
                     </span>
                   </span>
                   <div
@@ -9744,7 +9744,7 @@ exports[`SendTransfer should render summary step 1`] = `
                     class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
-                    D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s
+                    DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6
                   </span>
                 </div>
               </div>
@@ -9778,9 +9778,9 @@ exports[`SendTransfer should render summary step 1`] = `
               class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
             >
               <img
-                alt="D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"40\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
-                title="D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s"
+                alt="DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6"
+                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"40\\" fill=\\"rgb(103, 58, 183)\\"/></svg>"
+                title="DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6"
               />
             </div>
           </div>
@@ -9812,7 +9812,7 @@ exports[`SendTransfer should render summary step 1`] = `
                   class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                   data-testid="Address__address"
                 >
-                  D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s
+                  DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6
                 </span>
               </div>
             </div>
@@ -9829,9 +9829,9 @@ exports[`SendTransfer should render summary step 1`] = `
               class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
             >
               <img
-                alt="D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"40\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(205, 220, 57)\\"/></svg>"
-                title="D6xk9HnBvNyLswcwhbpFGgyAVCr4pUke3s"
+                alt="DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6"
+                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"40\\" fill=\\"rgb(103, 58, 183)\\"/></svg>"
+                title="DBxeSN4ZjLf3zCgW9WiD3NDnX1HE3of1P6"
               />
             </div>
           </div>
@@ -10052,9 +10052,9 @@ exports[`SendTransfer should render summary step 1`] = `
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="DEFvUuaWVaJRjsrjn56NpMDqGDvJLMD892"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"40\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                              title="DEFvUuaWVaJRjsrjn56NpMDqGDvJLMD892"
+                              alt="DL4sKJmM87xPmF19KfknkXDJTjzZkZu3nx"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"30\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
+                              title="DL4sKJmM87xPmF19KfknkXDJTjzZkZu3nx"
                             />
                           </div>
                         </div>
@@ -10069,7 +10069,7 @@ exports[`SendTransfer should render summary step 1`] = `
                             class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
-                            DEFvUuaWVaJRjsrjn56NpMDqGDvJLMD892
+                            DL4sKJmM87xPmF19KfknkXDJTjzZkZu3nx
                           </span>
                         </div>
                       </td>
@@ -10084,9 +10084,9 @@ exports[`SendTransfer should render summary step 1`] = `
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="DEFvUuaWVaJRjsrjn56NpMDqGDvJLMD892"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"50\\" cx=\\"40\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                              title="DEFvUuaWVaJRjsrjn56NpMDqGDvJLMD892"
+                              alt="DL4sKJmM87xPmF19KfknkXDJTjzZkZu3nx"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"40\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"30\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
+                              title="DL4sKJmM87xPmF19KfknkXDJTjzZkZu3nx"
                             />
                           </div>
                         </div>
