@@ -10,7 +10,7 @@ exports[`AddressRow should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -57,7 +57,7 @@ exports[`AddressRow should emit action on select button 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -93,7 +93,7 @@ exports[`AddressRow should emit action on select button 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -105,7 +105,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -130,7 +130,7 @@ exports[`AddressRow should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -141,7 +141,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -159,7 +159,7 @@ exports[`AddressRow should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -190,7 +190,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -237,7 +237,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -287,7 +287,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -299,7 +299,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -324,7 +324,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -335,7 +335,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -353,7 +353,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -384,7 +384,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -431,7 +431,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -467,7 +467,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -479,7 +479,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -504,7 +504,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -515,7 +515,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -533,7 +533,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -564,7 +564,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-3 css-1bqsw5h"
+            class="font-bold space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -611,7 +611,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-31so1s"
+            class="justify-center space-x-2 css-1rods8x"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -647,7 +647,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-31so1s"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
           >
             <span
               class="whitespace-nowrap"
@@ -659,7 +659,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-31so1s"
+            class="font-bold space-x-3 css-1rods8x"
           >
             <div
               class="shrink-0 css-jxpwdn"
@@ -684,7 +684,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-31so1s"
+            class="justify-center font-bold text-theme-secondary-text css-1rods8x"
           >
             <span
               class="text-theme-secondary-400"
@@ -695,7 +695,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-31so1s"
+            class="justify-center css-1rods8x"
           >
             <span>
               <div
@@ -713,7 +713,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1bel921"
+            class="justify-end css-br23tb"
           >
             <button
               class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
@@ -744,7 +744,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -791,7 +791,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -827,7 +827,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -839,7 +839,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -864,7 +864,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -875,7 +875,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -893,7 +893,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -915,7 +915,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -962,14 +962,14 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           />
         </td>
         <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -981,7 +981,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-aozgpb"
@@ -997,17 +997,17 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           />
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           />
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -1038,7 +1038,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1085,7 +1085,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1121,7 +1121,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1133,7 +1133,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -1158,7 +1158,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -1169,7 +1169,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -1187,7 +1187,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -1209,7 +1209,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1245,14 +1245,14 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           />
         </td>
         <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1264,7 +1264,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-aozgpb"
@@ -1280,17 +1280,17 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           />
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           />
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1yqe28v"
@@ -1322,7 +1322,7 @@ exports[`AddressRow should render with active delegate 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1369,7 +1369,7 @@ exports[`AddressRow should render with active delegate 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1405,7 +1405,7 @@ exports[`AddressRow should render with active delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1417,7 +1417,7 @@ exports[`AddressRow should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -1442,7 +1442,7 @@ exports[`AddressRow should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span>
               #1
@@ -1451,7 +1451,7 @@ exports[`AddressRow should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -1469,7 +1469,7 @@ exports[`AddressRow should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -1500,7 +1500,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1547,7 +1547,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1583,7 +1583,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1595,7 +1595,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-aozgpb"
@@ -1609,7 +1609,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -1627,7 +1627,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -1658,7 +1658,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1705,7 +1705,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1741,7 +1741,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1753,7 +1753,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="flex items-center -space-x-2"
@@ -1835,7 +1835,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -1853,7 +1853,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -1884,7 +1884,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -1931,7 +1931,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1967,7 +1967,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -1979,7 +1979,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="flex items-center -space-x-2"
@@ -2052,7 +2052,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -2070,7 +2070,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -2101,7 +2101,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
       >
         <td>
           <div
-            class="font-bold space-x-3 css-1bqsw5h"
+            class="font-bold space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -2148,7 +2148,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-31so1s"
+            class="justify-center space-x-2 css-1rods8x"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2184,7 +2184,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-31so1s"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
           >
             <span
               class="whitespace-nowrap"
@@ -2196,7 +2196,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-31so1s"
+            class="font-bold space-x-3 css-1rods8x"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
@@ -2210,7 +2210,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
         </td>
         <td>
           <div
-            class="justify-center css-31so1s"
+            class="justify-center css-1rods8x"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -2228,7 +2228,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
         </td>
         <td>
           <div
-            class="justify-end css-1bel921"
+            class="justify-end css-br23tb"
           >
             <button
               class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
@@ -2259,7 +2259,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
       >
         <td>
           <div
-            class="font-bold space-x-3 css-1bqsw5h"
+            class="font-bold space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -2306,7 +2306,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-31so1s"
+            class="justify-center space-x-2 css-1rods8x"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2342,7 +2342,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-31so1s"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
           >
             <span
               class="whitespace-nowrap"
@@ -2354,7 +2354,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-31so1s"
+            class="font-bold space-x-3 css-1rods8x"
           >
             <div
               class="flex items-center -space-x-1"
@@ -2436,7 +2436,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
         </td>
         <td>
           <div
-            class="justify-center css-31so1s"
+            class="justify-center css-1rods8x"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -2454,7 +2454,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
         </td>
         <td>
           <div
-            class="justify-end css-1bel921"
+            class="justify-end css-br23tb"
           >
             <button
               class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
@@ -2485,7 +2485,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
       >
         <td>
           <div
-            class="font-bold space-x-3 css-1bqsw5h"
+            class="font-bold space-x-3 css-mx19qq"
           >
             <div
               class="shrink-0 shrink-0 css-jxpwdn"
@@ -2532,7 +2532,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-31so1s"
+            class="justify-center space-x-2 css-1rods8x"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2568,7 +2568,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-31so1s"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
           >
             <span
               class="whitespace-nowrap"
@@ -2580,7 +2580,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-31so1s"
+            class="font-bold space-x-3 css-1rods8x"
           >
             <div
               class="flex items-center -space-x-1"
@@ -2653,7 +2653,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
         </td>
         <td>
           <div
-            class="justify-center css-31so1s"
+            class="justify-center css-1rods8x"
           >
             <div
               class="font-bold text-theme-secondary-400"
@@ -2671,7 +2671,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
         </td>
         <td>
           <div
-            class="justify-end css-1bel921"
+            class="justify-end css-br23tb"
           >
             <button
               class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
@@ -2702,7 +2702,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2749,7 +2749,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2785,7 +2785,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -2797,7 +2797,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -2822,7 +2822,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span
               class="text-theme-secondary-400"
@@ -2833,7 +2833,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -2851,7 +2851,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"
@@ -2882,7 +2882,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
       >
         <td>
           <div
-            class="font-bold space-x-4 css-1hgjfj1"
+            class="font-bold space-x-4 css-14huxtf"
           >
             <div
               class="shrink-0 shrink-0 css-tthe5h"
@@ -2929,7 +2929,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
           class="hidden md:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-1v8ywjx"
+            class="justify-center space-x-2 css-1d4ra48"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2965,7 +2965,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
           >
             <span
               class="whitespace-nowrap"
@@ -2977,7 +2977,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-1v8ywjx"
+            class="font-bold space-x-4 css-1d4ra48"
           >
             <div
               class="shrink-0 css-tthe5h"
@@ -3002,7 +3002,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+            class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
           >
             <span>
               #100
@@ -3011,7 +3011,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <div
@@ -3029,7 +3029,7 @@ exports[`AddressRow should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-1kcio9n"
+            class="justify-end css-1hhowo0"
           >
             <button
               class="css-1jhy6v9"

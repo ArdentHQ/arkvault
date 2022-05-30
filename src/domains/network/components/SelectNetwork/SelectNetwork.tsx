@@ -121,7 +121,7 @@ export const SelectNetwork = ({
 				// `network` is the selected item
 
 				if (networkDisplayName(selectedItem) === networkDisplayName(network)) {
-					return "border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200";
+					return "border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200";
 				}
 
 				return;

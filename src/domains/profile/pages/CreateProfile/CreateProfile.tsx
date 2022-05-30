@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import LocaleCurrency from "locale-currency";
 import React, { useLayoutEffect, useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { Header } from "@/app/components/Header";
@@ -75,7 +75,7 @@ export const CreateProfile = () => {
 		<Page
 			pageTitle={t("PROFILE.PAGE_CREATE_PROFILE.TITLE")}
 			navbarVariant="logo-only"
-			title={t("COMMON.PAYVO_WALLET")}
+			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
 			<Section className="flex flex-1 flex-col sm:-mt-5 sm:justify-center">
 				<div className="mx-auto max-w-lg">

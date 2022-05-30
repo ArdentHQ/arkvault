@@ -110,7 +110,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -121,7 +121,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
@@ -166,7 +166,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"
@@ -192,7 +192,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -203,7 +203,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -240,7 +240,7 @@ exports[`Unconfirmed transaction table should not render in lg 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"
@@ -377,7 +377,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -388,7 +388,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
@@ -433,7 +433,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"
@@ -459,7 +459,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -470,7 +470,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -507,7 +507,7 @@ exports[`Unconfirmed transaction table should not render in md 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"
@@ -868,7 +868,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -879,7 +879,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <div
                   class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
@@ -924,7 +924,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"
@@ -950,7 +950,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
           >
             <td>
               <div
-                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
               >
                 <span
                   data-testid="TimeAgo"
@@ -961,7 +961,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="space-x-4 css-31so1s"
+                class="space-x-4 css-1rods8x"
               >
                 <span
                   class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -998,7 +998,7 @@ exports[`Unconfirmed transaction table should not render in xl 1`] = `
             </td>
             <td>
               <div
-                class="justify-end css-1bel921"
+                class="justify-end css-br23tb"
               >
                 <div
                   class="css-8zppvw"

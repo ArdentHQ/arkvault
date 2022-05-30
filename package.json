@@ -1,18 +1,18 @@
 {
-	"name": "payvo-wallet",
+	"name": "arkvault",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Payvo Wallet",
+	"description": "ARKVault",
 	"homepage": "./",
 	"bugs": {
-		"url": "https://github.com/PayvoHQ/wallet/issues"
+		"url": "https://github.com/ArdentHQ/arkvault/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/PayvoHQ/wallet.git"
+		"url": "git+https://github.com/ArdentHQ/arkvault.git"
 	},
-	"license": "MIT",
-	"author": "Payvo <info@payvo.com>",
+	"license": "CC BY-NC-ND 4.0",
+	"author": "ARKVault <info@arkvault.io>",
 	"contributors": [
 		"Alex Barnsley <alex@ark.io>",
 		"Brian Faust <brian@ark.io>",

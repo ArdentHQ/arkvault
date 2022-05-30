@@ -22,7 +22,7 @@ describe("AppearanceAccentColor", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["blue", "green"])("should allow to change the value", (color: string) => {
+	it.each(["navy", "green"])("should allow to change the value", (color: string) => {
 		const watch = jest.fn();
 		const setValue = jest.fn();
 

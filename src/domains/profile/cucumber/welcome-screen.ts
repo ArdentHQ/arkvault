@@ -11,7 +11,8 @@ cucumber("@welcomeScreen", {
 		await visitWelcomeScreen(t);
 	},
 	"Then the welcome screen is displayed": async (t: TestController) => {
-		await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
+		await t.expect(Selector("h2").withText(translations.PROFILE.PAGE_WELCOME.WITH_PROFILES.TITLE).exists).ok();
+		await t.expect(Selector("p").withText(translations.PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION).exists).ok();
 	},
 });
 cucumber("@welcomeScreen-returnWhenIdle", {

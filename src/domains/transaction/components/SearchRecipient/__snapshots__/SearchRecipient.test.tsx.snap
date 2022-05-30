@@ -193,7 +193,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -241,7 +241,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -253,7 +253,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -275,7 +275,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -323,7 +323,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -335,7 +335,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -554,7 +554,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -602,7 +602,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -614,7 +614,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -636,7 +636,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -684,7 +684,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -696,7 +696,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -1118,7 +1118,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -1166,7 +1166,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1178,7 +1178,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
@@ -1200,7 +1200,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -1248,7 +1248,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1260,7 +1260,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -1479,7 +1479,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -1527,7 +1527,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1539,7 +1539,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
@@ -1561,7 +1561,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
                             class="shrink-0 css-1vy2z2u"
@@ -1609,7 +1609,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                       </td>
                       <td>
                         <div
-                          class="css-31so1s"
+                          class="css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1621,7 +1621,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -2113,7 +2113,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
                             class="shrink-0 css-8d0u1i"
@@ -2161,7 +2161,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                       </td>
                       <td>
                         <div
-                          class="css-1v8ywjx"
+                          class="css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -2173,7 +2173,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-reverse-600 css-nxm84j"
@@ -2195,7 +2195,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                     >
                       <td>
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
                             class="shrink-0 css-8d0u1i"
@@ -2243,7 +2243,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                       </td>
                       <td>
                         <div
-                          class="css-1v8ywjx"
+                          class="css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -2255,7 +2255,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"

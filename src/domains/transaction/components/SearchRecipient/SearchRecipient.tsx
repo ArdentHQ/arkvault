@@ -234,7 +234,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 
 				{isEmptyResults && (
 					<EmptyResults
-						className="mt-16"
+						className="mt-10"
 						title={t("COMMON.EMPTY_RESULTS.TITLE")}
 						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 					/>

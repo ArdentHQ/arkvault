@@ -12,7 +12,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       >
         <td>
           <div
-            class="items-center space-x-4 css-1raetv7"
+            class="items-center space-x-4 css-5lky4z"
           >
             <span>
               <span
@@ -65,7 +65,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-center css-1v8ywjx"
+            class="justify-center css-1d4ra48"
           >
             <span>
               <span
@@ -84,7 +84,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end css-1v8ywjx"
+            class="justify-end css-1d4ra48"
           >
             <span>
               <span
@@ -103,7 +103,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end css-1v8ywjx"
+            class="justify-end css-1d4ra48"
           >
             <span>
               <span
@@ -122,7 +122,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-1wedxq0"
+            class="justify-end text-theme-secondary-text css-vs626"
           >
             <button
               class="ml-3 my-auto css-1yqe28v"
@@ -180,7 +180,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       >
         <td>
           <div
-            class="items-center space-x-3 css-g4cpbs"
+            class="items-center space-x-3 css-7ewq14"
           >
             <span>
               <span
@@ -233,7 +233,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-center css-31so1s"
+            class="justify-center css-1rods8x"
           >
             <span>
               <span
@@ -252,7 +252,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end css-31so1s"
+            class="justify-end css-1rods8x"
           >
             <span>
               <span
@@ -271,7 +271,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end css-31so1s"
+            class="justify-end css-1rods8x"
           >
             <span>
               <span
@@ -290,7 +290,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-9rjigo"
+            class="justify-end text-theme-secondary-text css-16k0yyn"
           >
             <button
               class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"

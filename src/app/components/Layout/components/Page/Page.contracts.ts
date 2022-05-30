@@ -4,7 +4,7 @@ import { NavbarVariant } from "@/types";
 
 export interface PageProperties {
 	navbarVariant?: NavbarVariant;
-	title?: string;
+	title?: string | React.ReactNode;
 	pageTitle?: string;
 	isBackDisabled?: boolean;
 	sidebar?: React.ReactNode;

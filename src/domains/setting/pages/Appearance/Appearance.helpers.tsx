@@ -56,7 +56,15 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
 	getValues: (): AppearanceSettingsState => ({
-		accentColor: profile.appearance().get("accentColor") as AccentColorType,
+		accentColor: (() => {
+			let accentColor = profile.appearance().get("accentColor");
+
+			if (accentColor === "blue") {
+				accentColor = "navy";
+			}
+
+			return accentColor as AccentColorType;
+		})(),
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
 		useExpandedTables: profile.appearance().get("useExpandedTables"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),

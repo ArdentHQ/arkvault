@@ -13,8 +13,6 @@ export const getPageURL = () => process.env.E2E_HOST;
 
 export const visitWelcomeScreen = async (t: TestController) => {
 	await t.navigateTo(getPageURL());
-	await t.click(Selector('[data-testid="BetaNoticeModal__agree"] input'));
-	return t.click(Selector('[data-testid="BetaNoticeModal__submit-button"]'));
 };
 
 export const getLocation = ClientFunction(() => document.location.href);

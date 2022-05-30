@@ -191,6 +191,8 @@ describe("ImportProfile", () => {
 
 		expect(screen.queryByTestId("InputPassword")).not.toBeInTheDocument();
 
+		userEvent.click(screen.getByRole("checkbox"));
+
 		await waitFor(() => {
 			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();
 		});
@@ -228,6 +230,8 @@ describe("ImportProfile", () => {
 		await expect(screen.findByTestId("ProfileForm__form")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).toHaveValue("legacy-profile"));
+
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ProfileForm__submit-button")).toBeEnabled();

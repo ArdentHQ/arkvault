@@ -44,7 +44,7 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 		iconClassName: "text-theme-primary-600",
 		isExternal: true,
 		label: t("COMMON.SUPPORT"),
-		mountPath: () => "https://payvo.com/contact",
+		mountPath: () => "https://arkvault.io/contact",
 		title: "support",
 		value: "support",
 	},

@@ -70,13 +70,13 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+				className="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
 				<Logo height={28} />
 			</button>
 
-			{title && <span className="text-lg font-bold">{title}</span>}
+			{title && <span className="text-lg uppercase">{title}</span>}
 		</div>
 	);
 };
@@ -165,7 +165,6 @@ const NavigationBarMobile: React.VFC<{
 );
 
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
-	title,
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
 	const history = useHistory();
@@ -316,7 +315,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					</div>
 
 					<div className="flex flex-1 items-center px-8">
-						<NavigationBarLogo title={title} onClick={homeButtonHandler} />
+						<NavigationBarLogo onClick={homeButtonHandler} />
 
 						{renderNavigationMenu()}
 
