@@ -459,7 +459,7 @@ describe("SendTransfer", () => {
 			wallet,
 		);
 
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<Router history={history}>
 				<Route path="/profiles/:profileId/send-transfer">
 					<StepsProvider activeStep={1} steps={4}>
@@ -480,8 +480,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render network selection without selected wallet", async () => {
