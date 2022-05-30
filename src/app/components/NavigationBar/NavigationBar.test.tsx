@@ -271,34 +271,6 @@ describe("NavigationBar", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
 
-	it.each(["lg", "md", "xs"])("should have modal in different screen sizes", async (breakpoint) => {
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<NavigationBar />
-			</Route>,
-			breakpoint,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		userEvent.click(screen.getByTestId("NavigationBar__buttons--receive"));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
-
-		userEvent.click(screen.getAllByText("Select")[0]);
-
-		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
-		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-
-		userEvent.click(screen.getByTestId("Modal__close-button"));
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-	});
-
 	it("should handle receive funds from mobile menu", async () => {
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
@@ -315,7 +287,7 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		userEvent.click(screen.getAllByText("Select")[0]);
+		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
 		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
