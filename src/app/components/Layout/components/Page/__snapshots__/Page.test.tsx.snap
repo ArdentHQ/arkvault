@@ -3,7 +3,7 @@
 exports[`Page should render with navigation context 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -420,7 +420,7 @@ exports[`Page should render with navigation context 1`] = `
 exports[`Page should render with navigation context 2`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -833,7 +833,7 @@ exports[`Page should render with navigation context 2`] = `
 exports[`Page should render with navigation context 3`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -1246,7 +1246,7 @@ exports[`Page should render with navigation context 3`] = `
 exports[`Page should render with sidebar = false 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -1655,7 +1655,7 @@ exports[`Page should render with sidebar = false 1`] = `
 exports[`Page should render with sidebar = true 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
