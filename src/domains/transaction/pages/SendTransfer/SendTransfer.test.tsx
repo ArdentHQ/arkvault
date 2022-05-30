@@ -132,6 +132,14 @@ describe("SendTransfer", () => {
 		wallet = profile.wallets().first();
 		secondWallet = profile.wallets().last();
 
+		// Profile needs a wallet on the mainnet network to show network selection
+		// step.
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
+
 		firstWalletAddress = wallet.address();
 
 		profile.coins().set("ARK", "ark.devnet");
@@ -479,10 +487,6 @@ describe("SendTransfer", () => {
 	it("should render network selection without selected wallet", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
-		// Emulates a wallet in mainnet network to ensure it loads the network
-		// selection page with a mainnet and devnet networks
-		const walletNetworkSpy = jest.spyOn(wallet, "network").mockReturnValue(profile.availableNetworks()[0]);
-
 		history.push(transferURL);
 
 		const { asFragment } = render(
@@ -500,8 +504,6 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
-
-		walletNetworkSpy.mockRestore();
 	});
 
 	it("should render network selection with sorted network", async () => {
@@ -510,14 +512,14 @@ describe("SendTransfer", () => {
 
 		const { wallet: arkWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.mainnet",
-		});
-		const { wallet: arkDevelopmentWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
 			network: "ark.devnet",
 		});
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
 		profile.wallets().push(arkWallet);
-		profile.wallets().push(arkDevelopmentWallet);
 		await env.wallets().syncByProfile(profile);
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
@@ -1704,10 +1706,6 @@ describe("SendTransfer", () => {
 
 		const replaceSpy = jest.spyOn(history, "replace").mockImplementation();
 
-		// Emulates a wallet in mainnet network to ensure it loads the network
-		// selection page with a mainnet and devnet networks
-		const walletNetworkSpy = jest.spyOn(wallet, "network").mockReturnValue(profile.availableNetworks()[0]);
-
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<LedgerProvider>
@@ -1725,8 +1723,6 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
 
 		replaceSpy.mockRestore();
-
-		walletNetworkSpy.mockRestore();
 	});
 
 	it("should buildTransferData return zero amount for empty multi recipients", async () => {
