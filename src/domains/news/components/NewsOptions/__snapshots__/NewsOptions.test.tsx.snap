@@ -3,7 +3,7 @@
 exports[`NewsOptions should render 1`] = `
 <DocumentFragment>
   <div
-    class="px-10 pt-7 pb-2"
+    class="px-10 py-7"
     data-testid="NewsOptions"
   >
     <div
@@ -95,57 +95,6 @@ exports[`NewsOptions should render 1`] = `
               #Technical
             </div>
           </label>
-        </div>
-      </div>
-      <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
-        type="horizontal"
-      />
-      <div
-        class="flex flex-col space-y-3"
-      >
-        <h5
-          class="font-semibold"
-        >
-          Filter Assets
-        </h5>
-        <p
-          class="text-sm text-theme-secondary-500"
-        >
-          Your current selections:
-        </p>
-        <div
-          data-testid="FilterNetwork"
-        >
-          <ul
-            class="flex flex-wrap"
-            data-testid="NetworkOptions"
-          >
-            <li
-              class="inline-block cursor-pointer pr-5 pb-5"
-              data-testid="NetworkOption__ark.mainnet"
-            >
-              <div
-                class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-              >
-                <div
-                  class="css-v0ob3f"
-                  data-testid="NetworkIcon__icon"
-                  height="16"
-                  width="16"
-                >
-                  <svg>
-                    ark.svg
-                  </svg>
-                </div>
-                <span
-                  class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-                >
-                  <span />
-                </span>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
