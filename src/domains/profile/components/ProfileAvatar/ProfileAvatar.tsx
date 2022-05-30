@@ -11,7 +11,7 @@ interface ProfileAvatarProperties {
 
 export const ProfileAvatar = ({ profile, size = "lg" }: ProfileAvatarProperties) =>
 	profile.avatar().endsWith("</svg>") ? (
-		<Avatar size={size}>
+		<Avatar size={size} noShadow>
 			<img
 				data-testid="ProfileAvatar__svg"
 				src={`data:image/svg+xml;utf8,${profile.avatar()}`}
@@ -21,7 +21,7 @@ export const ProfileAvatar = ({ profile, size = "lg" }: ProfileAvatarProperties)
 			<span className="absolute font-semibold text-white">{profile.name().slice(0, 2).toUpperCase()}</span>
 		</Avatar>
 	) : (
-		<Avatar size={size}>
+		<Avatar size={size} noShadow>
 			<img
 				data-testid="ProfileAvatar__image"
 				src={profile.avatar()}

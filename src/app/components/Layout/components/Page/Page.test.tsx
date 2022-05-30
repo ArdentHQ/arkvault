@@ -21,9 +21,7 @@ describe("Page", () => {
 	it.each([true, false])("should render with sidebar = %s", (sidebar) => {
 		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Page title="Test" sidebar={sidebar}>
-					{}
-				</Page>
+				<Page sidebar={sidebar}>{}</Page>
 			</Route>,
 			{
 				history,
@@ -62,7 +60,7 @@ describe("Page", () => {
 			userEvent.click(await screen.findByText(label));
 
 			if (label === "Support") {
-				expect(windowSpy).toHaveBeenCalledWith("https://payvo.com/contact", "_blank");
+				expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/contact", "_blank");
 			} else {
 				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
 			}

@@ -1,6 +1,6 @@
 export const translations = {
 	CONNECT_LEDGER: {
-		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with Payvo Wallet.",
+		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.",
 		HEADER: "Connect and Authorize Ledger Device",
 		TITLE: "Connect Ledger Device",
 		WAITING_DEVICE: "Waiting for confirmation  ...",
@@ -135,7 +135,7 @@ export const translations = {
 			},
 			TITLE: "Your Passphrase",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. The Payvo Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 
 		PROCESS_COMPLETED_STEP: {

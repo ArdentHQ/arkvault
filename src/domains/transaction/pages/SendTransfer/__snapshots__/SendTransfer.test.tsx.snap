@@ -36,18 +36,13 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -935,7 +930,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -946,7 +941,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-31so1s"
+                                    class="space-x-4 css-1rods8x"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
@@ -991,7 +986,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-1bel921"
+                                    class="justify-end css-br23tb"
                                   >
                                     <div
                                       class="css-8zppvw"
@@ -1168,18 +1163,13 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1760,18 +1750,13 @@ exports[`SendTransfer should render form and use location state 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -2219,7 +2204,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -2923,18 +2908,13 @@ exports[`SendTransfer should render form and use location state without memo 1`]
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -3382,7 +3362,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                                   data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
@@ -6750,7 +6730,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 >
                   <div
                     aria-label="ARK Devnet"
-                    class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                    class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                     data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
@@ -7416,18 +7396,13 @@ exports[`SendTransfer should render network selection without selected wallet 1`
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -10321,18 +10296,13 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -11105,18 +11075,13 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -12004,7 +11969,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -12015,7 +11980,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-31so1s"
+                                    class="space-x-4 css-1rods8x"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
@@ -12060,7 +12025,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-1bel921"
+                                    class="justify-end css-br23tb"
                                   >
                                     <div
                                       class="css-8zppvw"
@@ -12086,7 +12051,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-1bqsw5h"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-mx19qq"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -12097,7 +12062,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-31so1s"
+                                    class="space-x-4 css-1rods8x"
                                   >
                                     <span
                                       class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -12134,7 +12099,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-1bel921"
+                                    class="justify-end css-br23tb"
                                   >
                                     <div
                                       class="css-8zppvw"
@@ -12311,18 +12276,13 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -13173,18 +13133,13 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -14035,18 +13990,13 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -14897,18 +14847,13 @@ exports[`SendTransfer should show error step and go back 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >

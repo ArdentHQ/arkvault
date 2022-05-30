@@ -29,11 +29,6 @@ export const translations = {
 		},
 		TITLE: "Import Profile",
 	},
-	MODAL_BETA_NOTICE: {
-		DESCRIPTION:
-			"Payvo is experimental and shall not create any obligation for ARK Ecosystem SCIC to continue to develop, productize, support, repair, offer for sale, or in any other way continue to provide or develop Software either to Licensee or to any other party.\nThe Software is provided «AS IS» without any express or implied warranty of any kind including warranties of merchantability or fitness for any particular purpose. In no event shall ARK Ecosystem SCIC or its subsidiaries, partners, or related entities be liable for any damages whatsoever (including, without limitation, damages for loss of profits or funds, business interruption, loss of information arising out of the use or inability to use the software).",
-		TITLE: "Payvo Beta Testing",
-	},
 	MODAL_DELETE_PROFILE: {
 		DESCRIPTION: "Do you really want to delete this profile? Once deleted, you will not be able to restore it.",
 		TITLE: "Delete Profile",
@@ -72,8 +67,8 @@ export const translations = {
 		DONT_SHOW_CHECKBOX_LABEL: "Don't show this quick tour again.",
 		STEP_1: {
 			DESCRIPTION:
-				"Start a quick tour to learn how to get the most out of the Payvo Wallet, or skip it to go directly to your profile.",
-			TITLE: "Welcome to Payvo Wallet",
+				"Start a quick tour to learn how to get the most out of ARKVault, or skip it to go directly to your profile.",
+			TITLE: "Welcome to ARKVault",
 		},
 		STEP_2: {
 			DESCRIPTION:
@@ -86,7 +81,7 @@ export const translations = {
 			TITLE: "Fully Customizable",
 		},
 		STEP_4: {
-			DESCRIPTION: "With Payvo, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+			DESCRIPTION: "With ARKVault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
 			TITLE: "Exchange Assets On The Fly",
 		},
 		STEP_5: {

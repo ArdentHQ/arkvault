@@ -21,8 +21,8 @@ export const AppearanceAccentColor: React.FC = () => {
 	const colors: AccentColorItem[] = [
 		{
 			className: "bg-theme-navy-600",
-			key: "blue",
-			tooltipContent: t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.BLUE"),
+			key: "navy",
+			tooltipContent: t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.NAVY"),
 		},
 		{
 			className: "bg-theme-success-600",

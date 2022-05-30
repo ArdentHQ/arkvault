@@ -37,7 +37,7 @@ export const WelcomeModal = ({ environment, profile }: { environment: Environmen
 			isOpen={show}
 			onClose={onClose}
 		>
-			<div className="container">
+			<div className="w-full">
 				<div className="text-base leading-7 text-theme-secondary-text">
 					<p>{t(`PROFILE.MODAL_WELCOME.STEP_${step}.DESCRIPTION`)}</p>
 				</div>

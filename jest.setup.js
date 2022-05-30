@@ -63,13 +63,9 @@ beforeAll(async () => {
 beforeEach(() => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 
-	localstorageSpy = jest.spyOn(Storage.prototype, "getItem").mockImplementation((key) => {
-		if (key === "hideBetaNotice") {
-			return "true";
-		}
-
-		return originalLocalStorageGetItem.call(localStorage, key);
-	});
+	localstorageSpy = jest
+		.spyOn(Storage.prototype, "getItem")
+		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
 
 	tippyMock = jest.spyOn(Tippy, "render").mockImplementation((context) => {
 		if (context?.render?.name === "renderDropdownContent") {

@@ -1,25 +1,29 @@
 import React from "react";
 
-import { CardButton } from "./Card.styles";
+import { styled } from "twin.macro";
+import { getStyles } from "./Card.styles";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
+import { ButtonVariant } from "@/types";
 
 interface CardProperties {
 	as?: React.ElementType;
+	variant?: ButtonVariant;
 	children: React.ReactNode;
 	addonIcons?: React.ReactNode;
 	actions?: DropdownOption[];
 	onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 	onSelect?: (option: DropdownOption) => void;
-	isSelected?: boolean;
 	className?: string;
 }
 
-export const Card = ({ children, addonIcons, actions, onClick, onSelect, isSelected, className }: CardProperties) => (
+const StyledButton = styled.button<{ variant?: ButtonVariant; onClick?: any }>(getStyles);
+
+export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect, className }: CardProperties) => (
 	<div className={className}>
-		<CardButton
+		<StyledButton
 			type="button"
-			isSelected={isSelected}
+			variant={variant}
 			onClick={onClick}
 			data-testid="Card"
 			tabIndex={onClick ? undefined : -1}
@@ -44,6 +48,6 @@ export const Card = ({ children, addonIcons, actions, onClick, onSelect, isSelec
 					/>
 				)}
 			</div>
-		</CardButton>
+		</StyledButton>
 	</div>
 );

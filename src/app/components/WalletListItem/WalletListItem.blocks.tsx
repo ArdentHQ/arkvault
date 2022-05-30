@@ -208,7 +208,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isCo
 		<TableCell
 			data-testid="CurrencyCell"
 			innerClassName="justify-end"
-			className="hidden lg:block"
+			className="hidden lg:table-cell"
 			isCompact={isCompact}
 		>
 			{renderCurrency()}
@@ -439,7 +439,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 					toggleContent={
 						<Button
 							variant={isCompact ? "transparent" : "secondary"}
-							size={isCompact ? "icon" : undefined}
+							size="icon"
 							disabled={isRestoring}
 							className={cn({
 								"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,

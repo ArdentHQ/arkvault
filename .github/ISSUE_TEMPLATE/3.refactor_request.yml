@@ -1,5 +1,5 @@
 name: Refactor Request
-description: Create a refactor request for the Payvo Wallet
+description: Create a refactor request for ARKVault
 labels: ["web", "refactor"]
 body:
     - type: markdown

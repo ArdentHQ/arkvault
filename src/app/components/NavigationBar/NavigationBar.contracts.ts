@@ -1,3 +1,5 @@
+import React from "react";
+
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavbarVariant } from "@/types";
 
@@ -7,7 +9,7 @@ export interface NavigationBarMenuItem {
 }
 
 export interface NavigationBarProperties {
-	title?: string;
+	title?: string | React.ReactNode;
 	isBackDisabled?: boolean;
 	variant?: NavbarVariant;
 }
@@ -19,11 +21,11 @@ export interface UserMenuProperties {
 }
 
 export interface NavigationBarLogoOnlyProperties {
-	title?: string;
+	title?: string | React.ReactNode;
 	onClick?: () => void;
 }
 
 export interface NavigationBarFullProperties {
-	title?: string;
+	title?: string | React.ReactNode;
 	isBackDisabled?: boolean;
 }

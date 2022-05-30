@@ -23,11 +23,4 @@ describe("Card", () => {
 		expect(handleClick).toHaveBeenCalledWith();
 		expect(asFragment()).toMatchSnapshot();
 	});
-
-	it("should selected", () => {
-		const { container, asFragment } = render(<Card isSelected={true} />);
-
-		expect(container).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
 });

@@ -8,13 +8,7 @@ exports[`Image find the image without accent color 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Image should render 1`] = `
-<DocumentFragment>
-  <svg>
-    welcome-banner-light-green.svg
-  </svg>
-</DocumentFragment>
-`;
+exports[`Image should render 1`] = `<DocumentFragment />`;
 
 exports[`Image should render nothing if image can't be found 1`] = `<DocumentFragment />`;
 
