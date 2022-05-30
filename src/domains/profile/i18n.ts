@@ -29,6 +29,9 @@ export const translations = {
 		},
 		TITLE: "Import Profile",
 	},
+	INSTALL_PWA: {
+		MESSAGE: "Get a native user experience by installing the app.",
+	},
 	MODAL_DELETE_PROFILE: {
 		DESCRIPTION: "Do you really want to delete this profile? Once deleted, you will not be able to restore it.",
 		TITLE: "Delete Profile",
