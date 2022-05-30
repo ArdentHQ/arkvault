@@ -546,7 +546,8 @@ describe("General Settings", () => {
 		setTheme("dark");
 
 		expect(getCurrentAccentColor()).toBe("green");
-		expect(document.body.classList.contains("dark")).toBe(true);
+		// expect(document.body.classList.contains("dark")).toBe(true);
+		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
 		render(
 			<Route path="/profiles/:profileId/settings">
