@@ -10,14 +10,14 @@ exports[`DelegateRow should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -76,7 +76,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div>
               <div
@@ -95,7 +95,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -124,7 +124,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -159,14 +159,14 @@ exports[`DelegateRow should render 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -225,7 +225,7 @@ exports[`DelegateRow should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div>
               <div
@@ -244,7 +244,7 @@ exports[`DelegateRow should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -273,7 +273,7 @@ exports[`DelegateRow should render 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -308,14 +308,14 @@ exports[`DelegateRow should render changed style when network requires vote amou
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -374,7 +374,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
           >
             <div>
               <div
@@ -393,7 +393,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -423,7 +423,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
           >
             <div
               class="relative flex-1 px-3"
@@ -467,7 +467,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -502,14 +502,14 @@ exports[`DelegateRow should render the selected delegate 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -568,7 +568,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
           >
             <div>
               <div
@@ -587,7 +587,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -616,7 +616,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -651,14 +651,14 @@ exports[`DelegateRow should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1bqsw5h"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-mx19qq"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-31so1s"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1rods8x"
           >
             <div
               class="-ml-0.5 shrink-0 css-jxpwdn"
@@ -717,7 +717,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
           >
             <div>
               <div
@@ -736,7 +736,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -765,7 +765,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1bel921"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-br23tb"
           >
             <div
               class="-mr-0.5"
@@ -791,14 +791,14 @@ exports[`DelegateRow should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-1bqsw5h"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-31so1s"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-1rods8x"
           >
             <div
               class="-ml-0.5 shrink-0 css-jxpwdn"
@@ -857,7 +857,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
           >
             <div>
               <div
@@ -876,7 +876,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -905,7 +905,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1bel921"
+            class="justify-end border-2 border-l-0 border-transparent css-br23tb"
           >
             <div
               class="-mr-0.5"
@@ -931,14 +931,14 @@ exports[`DelegateRow should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-1bqsw5h"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-31so1s"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-1rods8x"
           >
             <div
               class="-ml-0.5 shrink-0 css-jxpwdn"
@@ -997,7 +997,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
           >
             <div>
               <div
@@ -1016,7 +1016,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-31so1s"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1045,7 +1045,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1bel921"
+            class="justify-end border-2 border-l-0 border-transparent css-br23tb"
           >
             <div
               class="-mr-0.5"
@@ -1083,14 +1083,14 @@ exports[`DelegateRow should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -1149,7 +1149,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
           >
             <div>
               <div
@@ -1168,7 +1168,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1197,7 +1197,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -1223,14 +1223,14 @@ exports[`DelegateRow should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -1289,7 +1289,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div>
               <div
@@ -1308,7 +1308,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1337,7 +1337,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -1363,14 +1363,14 @@ exports[`DelegateRow should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -1429,7 +1429,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div>
               <div
@@ -1448,7 +1448,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1477,7 +1477,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -1515,14 +1515,14 @@ exports[`DelegateRow should render the unselected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -1581,7 +1581,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
           >
             <div>
               <div
@@ -1600,7 +1600,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1629,7 +1629,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1hhowo0"
           >
             <div
               class="-mr-0.5"
@@ -1664,14 +1664,14 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-1hgjfj1"
+            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1v8ywjx"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
           >
             <div
               class="-ml-0.5 shrink-0 css-tthe5h"
@@ -1730,7 +1730,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div>
               <div
@@ -1749,7 +1749,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <a
               class="ring-focus group inline-block css-15tcy38"
@@ -1779,7 +1779,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
           >
             <div
               class="relative flex-1 px-3"
@@ -1825,7 +1825,7 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1kcio9n"
+            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
           >
             <div
               class="-mr-0.5"

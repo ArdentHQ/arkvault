@@ -229,7 +229,7 @@ exports[`AddressTable should render 1`] = `
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1hgjfj1"
+                    class="font-bold space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -276,14 +276,14 @@ exports[`AddressTable should render 1`] = `
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1v8ywjx"
+                    class="justify-center space-x-2 css-1d4ra48"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -295,7 +295,7 @@ exports[`AddressTable should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1v8ywjx"
+                    class="font-bold space-x-4 css-1d4ra48"
                   >
                     <div
                       class="shrink-0 css-tthe5h"
@@ -320,7 +320,7 @@ exports[`AddressTable should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+                    class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -331,7 +331,7 @@ exports[`AddressTable should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1v8ywjx"
+                    class="justify-center css-1d4ra48"
                   >
                     <span>
                       <div
@@ -349,7 +349,7 @@ exports[`AddressTable should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1kcio9n"
+                    class="justify-end css-1hhowo0"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1232,7 +1232,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1hgjfj1"
+                    class="font-bold space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -1279,14 +1279,14 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1v8ywjx"
+                    class="justify-center space-x-2 css-1d4ra48"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1298,7 +1298,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1v8ywjx"
+                    class="font-bold space-x-4 css-1d4ra48"
                   >
                     <div
                       class="flex items-center -space-x-2"
@@ -1326,7 +1326,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1v8ywjx"
+                    class="justify-center css-1d4ra48"
                   >
                     <div
                       class="font-bold text-theme-secondary-400"
@@ -1344,7 +1344,7 @@ exports[`AddressTable should render when the maximum votes is greater than 1 1`]
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1kcio9n"
+                    class="justify-end css-1hhowo0"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1598,7 +1598,7 @@ exports[`AddressTable should render with voting delegates and handle exception 1
               >
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1hgjfj1"
+                    class="font-bold space-x-4 css-14huxtf"
                   >
                     <div
                       class="shrink-0 shrink-0 css-tthe5h"
@@ -1645,14 +1645,14 @@ exports[`AddressTable should render with voting delegates and handle exception 1
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1v8ywjx"
+                    class="justify-center space-x-2 css-1d4ra48"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1v8ywjx"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1664,7 +1664,7 @@ exports[`AddressTable should render with voting delegates and handle exception 1
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1v8ywjx"
+                    class="font-bold space-x-4 css-1d4ra48"
                   >
                     <div
                       class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-aozgpb"
@@ -1680,17 +1680,17 @@ exports[`AddressTable should render with voting delegates and handle exception 1
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-bold text-theme-secondary-text css-1v8ywjx"
+                    class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1v8ywjx"
+                    class="justify-center css-1d4ra48"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1kcio9n"
+                    class="justify-end css-1hhowo0"
                   >
                     <button
                       class="css-1jhy6v9"

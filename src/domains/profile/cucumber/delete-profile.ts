@@ -8,7 +8,6 @@ const translations = buildTranslations();
 cucumber("@deleteProfile-noPassword", {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
-		await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 		await t.expect(Selector('[data-testid="Card"]').count).eql(3);
 	},
 	"When she attempts to delete a profile that isn't password protected": async (t: TestController) => {

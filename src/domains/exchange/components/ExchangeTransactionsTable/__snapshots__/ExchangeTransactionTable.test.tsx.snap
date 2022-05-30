@@ -205,7 +205,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -225,21 +225,21 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -277,7 +277,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -329,7 +329,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -346,7 +346,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -376,7 +376,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -396,21 +396,21 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -448,7 +448,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -500,7 +500,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -517,7 +517,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -547,7 +547,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -567,21 +567,21 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -619,7 +619,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -671,7 +671,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -688,7 +688,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -924,7 +924,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
           >
             <td>
               <div
-                class="css-1bqsw5h"
+                class="css-mx19qq"
               >
                 <button
                   class="link"
@@ -944,21 +944,21 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-31so1s"
+                class="font-semibold css-1rods8x"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-31so1s"
+                class="css-1rods8x"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
@@ -992,7 +992,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
@@ -1040,7 +1040,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-31so1s"
+                class="justify-center css-1rods8x"
               >
                 <span>
                   <div
@@ -1057,7 +1057,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1bel921"
+                class="justify-end text-theme-secondary-text css-br23tb"
               >
                 <button
                   class="css-1b8lzw6"
@@ -1087,7 +1087,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
           >
             <td>
               <div
-                class="css-1bqsw5h"
+                class="css-mx19qq"
               >
                 <button
                   class="link"
@@ -1107,21 +1107,21 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-31so1s"
+                class="font-semibold css-1rods8x"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-31so1s"
+                class="css-1rods8x"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
@@ -1155,7 +1155,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
@@ -1203,7 +1203,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-31so1s"
+                class="justify-center css-1rods8x"
               >
                 <span>
                   <div
@@ -1220,7 +1220,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1bel921"
+                class="justify-end text-theme-secondary-text css-br23tb"
               >
                 <button
                   class="css-1b8lzw6"
@@ -1250,7 +1250,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
           >
             <td>
               <div
-                class="css-1bqsw5h"
+                class="css-mx19qq"
               >
                 <button
                   class="link"
@@ -1270,21 +1270,21 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-31so1s"
+                class="font-semibold css-1rods8x"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-31so1s"
+                class="css-1rods8x"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
@@ -1318,7 +1318,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-31so1s"
+                class="gap-3 css-1rods8x"
               >
                 <span
                   class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
@@ -1366,7 +1366,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-31so1s"
+                class="justify-center css-1rods8x"
               >
                 <span>
                   <div
@@ -1383,7 +1383,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1bel921"
+                class="justify-end text-theme-secondary-text css-br23tb"
               >
                 <button
                   class="css-1b8lzw6"
@@ -1619,7 +1619,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -1639,21 +1639,21 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -1691,7 +1691,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -1743,7 +1743,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -1760,7 +1760,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -1790,7 +1790,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -1810,21 +1810,21 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -1862,7 +1862,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -1914,7 +1914,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -1931,7 +1931,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -1961,7 +1961,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -1981,21 +1981,21 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2033,7 +2033,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2085,7 +2085,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -2102,7 +2102,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -2338,7 +2338,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -2358,21 +2358,21 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2410,7 +2410,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2462,7 +2462,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -2479,7 +2479,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -2509,7 +2509,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -2529,21 +2529,21 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2581,7 +2581,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2633,7 +2633,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -2650,7 +2650,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -2680,7 +2680,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -2700,21 +2700,21 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2752,7 +2752,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -2804,7 +2804,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -2821,7 +2821,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -3057,7 +3057,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -3077,21 +3077,21 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3129,7 +3129,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3181,7 +3181,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -3198,7 +3198,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -3228,7 +3228,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -3248,21 +3248,21 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3300,7 +3300,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3352,7 +3352,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -3369,7 +3369,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"
@@ -3399,7 +3399,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
           >
             <td>
               <div
-                class="css-1hgjfj1"
+                class="css-14huxtf"
               >
                 <button
                   class="link"
@@ -3419,21 +3419,21 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="font-semibold css-1v8ywjx"
+                class="font-semibold css-1d4ra48"
               />
             </td>
             <td
               class="hidden lg:table-cell"
             >
               <div
-                class="css-1v8ywjx"
+                class="css-1d4ra48"
               >
                 01.01.2021 12:00 AM
               </div>
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3471,7 +3471,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="gap-3 css-1v8ywjx"
+                class="gap-3 css-1d4ra48"
               >
                 <div
                   class="hidden lg:flex"
@@ -3523,7 +3523,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-center css-1v8ywjx"
+                class="justify-center css-1d4ra48"
               >
                 <span>
                   <div
@@ -3540,7 +3540,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
             </td>
             <td>
               <div
-                class="justify-end text-theme-secondary-text css-1kcio9n"
+                class="justify-end text-theme-secondary-text css-1hhowo0"
               >
                 <button
                   class="css-1cp5yjb"

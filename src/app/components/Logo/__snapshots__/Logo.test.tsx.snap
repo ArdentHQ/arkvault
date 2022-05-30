@@ -5,11 +5,6 @@ exports[`Logo should render 1`] = `
   <span
     class="relative"
   >
-    <div
-      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-    >
-      BETA
-    </div>
     <svg>
       payvo-logo.svg
     </svg>
@@ -22,11 +17,6 @@ exports[`Logo should render with height 1`] = `
   <span
     class="relative"
   >
-    <div
-      class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-    >
-      BETA
-    </div>
     <svg
       height="20"
     >

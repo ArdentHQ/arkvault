@@ -781,7 +781,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.payvo.com/docs/wallet/transactions/vote"
+            href="https://docs.arkvault.io/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
@@ -919,7 +919,7 @@ exports[`WalletVote should render 1`] = `
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.payvo.com/docs/wallet/transactions/vote"
+            href="https://docs.arkvault.io/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
@@ -1136,7 +1136,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.payvo.com/docs/wallet/transactions/vote"
+            href="https://docs.arkvault.io/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
@@ -1356,7 +1356,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.payvo.com/docs/wallet/transactions/vote"
+            href="https://docs.arkvault.io/transactions/vote"
             rel="noopener noreferrer"
           >
             <span
@@ -1459,7 +1459,7 @@ exports[`WalletVote should render without votes 1`] = `
             class="ring-focus group inline-block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://docs.payvo.com/docs/wallet/transactions/vote"
+            href="https://docs.arkvault.io/transactions/vote"
             rel="noopener noreferrer"
           >
             <span

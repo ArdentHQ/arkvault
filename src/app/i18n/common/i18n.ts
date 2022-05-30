@@ -18,8 +18,7 @@ export const translations = {
 	AMOUNT_PLACEHOLDER: "Enter an amount",
 	AND: "and",
 	APPEARANCE: "Appearance",
-	APP_NAME: "Payvo Wallet",
-	APP_NAME_SHORT: "Payvo Wallet",
+	APP_NAME: "<strong>ARK</strong>Vault",
 	ARK: "ARK",
 	ASSET: "Asset",
 	ASSETS: "Assets",
@@ -237,7 +236,6 @@ export const translations = {
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
-	PAYVO_WALLET: "Payvo Wallet",
 	PEER: "Peer",
 	PERIOD: "Period",
 	PERIODS: {

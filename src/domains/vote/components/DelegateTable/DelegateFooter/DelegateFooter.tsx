@@ -36,7 +36,7 @@ const FooterContent = ({ label, value, iconName, disabled, className }: FooterCo
 			</TextWrapper>
 		</div>
 		<div className="hidden lg:block">
-			<Circle disabled={disabled} size="lg">
+			<Circle disabled={disabled} size="lg" noShadow>
 				<Icon name={iconName} size="lg" />
 			</Circle>
 		</div>

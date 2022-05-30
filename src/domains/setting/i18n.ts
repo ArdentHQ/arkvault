@@ -4,8 +4,8 @@ export const translations = {
 		OPTIONS: {
 			ACCENT_COLOR: {
 				COLORS: {
-					BLUE: "Navy",
 					GREEN: "Green",
+					NAVY: "Navy",
 				},
 				DESCRIPTION: "Choose a color for buttons and other wallet features.",
 				TITLE: "Accent Color",
@@ -192,7 +192,7 @@ export const translations = {
 		PASSWORD_2: "Confirm New Password",
 		REMOVAL: {
 			DESCRIPTION:
-				"Removing your profile password will result in anyone with access to your Payvo Wallet to see all your profile data. Are you sure you wish to remove it?",
+				"Removing your profile password will result in anyone with access to your device to see all your profile data. Are you sure you wish to remove it?",
 			PROFILE_PASSWORD: "Profile Password",
 			SUCCESS: "Password successfully removed.",
 			TITLE: "Remove Profile Password",

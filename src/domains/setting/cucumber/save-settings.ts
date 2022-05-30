@@ -45,7 +45,7 @@ cucumber("@saveSettings-appearance", {
 		await t.expect(Selector("[data-testid=header__title]").textContent).eql(translations.SETTINGS.APPEARANCE.TITLE);
 	},
 	"When she changes her appearance settings": async (t: TestController) => {
-		await t.click(Selector(`[aria-label=${translations.SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.BLUE}]`));
+		await t.click(Selector(`[aria-label=${translations.SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.NAVY}]`));
 		await t.click(
 			Selector("button").withText(translations.SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES.DARK),
 		);

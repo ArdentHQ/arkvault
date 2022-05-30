@@ -1,10 +1,11 @@
 import React from "react";
+import { Trans } from "react-i18next";
 import { Page, Section } from "@/app/components/Layout";
 import { Skeleton } from "@/app/components/Skeleton";
 
 export const PageSkeleton: React.FC = () => (
 	<div data-testid="PageSkeleton">
-		<Page navbarVariant="logo-only" title="Payvo Wallet">
+		<Page navbarVariant="logo-only" title={<Trans i18nKey="COMMON.APP_NAME" />}>
 			<Section className="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center">
 				<div className="mx-auto hidden w-96 md:block">
 					<Skeleton height={230} />

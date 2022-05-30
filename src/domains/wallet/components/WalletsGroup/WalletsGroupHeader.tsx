@@ -68,7 +68,7 @@ export const WalletsGroupHeaderSkeleton: React.VFC<WalletsGroupHeaderSkeletonPro
 			)}
 
 			{!isXs && (
-				<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+				<div className="flex space-x-3">
 					<LabelledText label={t("COMMON.WALLETS")}>
 						<span className={labelClassname}>
 							{isPlaceholder ? labelNotAvailable : <GroupSkeleton width={60} />}

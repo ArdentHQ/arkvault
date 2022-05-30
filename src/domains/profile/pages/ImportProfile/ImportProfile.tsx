@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
@@ -42,7 +42,7 @@ export const ImportProfile = () => {
 		<Page
 			navbarVariant="logo-only"
 			pageTitle={t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE_TITLE")}
-			title={t("COMMON.PAYVO_WALLET")}
+			title={<Trans i18nKey="COMMON.APP_NAME" />}
 		>
 			<Section className="-mt-8">
 				<StepsProvider activeStep={activeTab} steps={3}>

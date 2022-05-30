@@ -25,6 +25,7 @@ export const ProfileCard = ({
 	onSelect,
 }: ProfileCardProperties) => (
 	<Card
+		variant="primary"
 		className={cn("h-40 w-36 leading-tight sm:w-40", className)}
 		onClick={onClick}
 		actions={showSettings ? actions : undefined}
