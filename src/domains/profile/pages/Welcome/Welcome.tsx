@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
 
 import { LocationState } from "router/router.types";
@@ -148,10 +148,10 @@ export const Welcome = () => {
 
 	return (
 		<>
-			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={t("COMMON.PAYVO_WALLET")}>
+			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section className="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center">
 					<div className="mx-auto hidden w-96 md:block">
-						<Image name="WelcomeBanner" />
+						<Image name="WelcomeBanner" useAccentColor={false} />
 					</div>
 
 					<div className="mx-auto md:mt-8">
@@ -188,6 +188,7 @@ export const Welcome = () => {
 								))}
 
 								<Card
+									variant="secondary"
 									className={cn(
 										"group h-40 leading-tight sm:w-40",
 										{ "w-36": hasProfiles },
@@ -199,14 +200,14 @@ export const Welcome = () => {
 										<div>
 											<Circle
 												size="xl"
-												noShadow
-												className="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800"
+												className="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white"
 												durationClassName="duration-200"
+												noShadow
 											>
 												<Icon name="Plus" />
 											</Circle>
 										</div>
-										<span className="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white">
+										<span className="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white">
 											{t("COMMON.CREATE")}
 										</span>
 									</div>

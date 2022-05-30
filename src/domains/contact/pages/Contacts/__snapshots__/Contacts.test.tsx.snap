@@ -110,18 +110,13 @@ exports[`Contacts should render compact on md screen 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -624,7 +619,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -643,7 +638,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -668,7 +663,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -711,7 +706,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -739,7 +734,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -799,7 +794,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -818,7 +813,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -843,7 +838,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -886,7 +881,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -914,7 +909,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -974,14 +969,14 @@ exports[`Contacts should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1006,7 +1001,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -1049,7 +1044,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1077,7 +1072,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1137,14 +1132,14 @@ exports[`Contacts should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1169,7 +1164,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -1212,7 +1207,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -1240,7 +1235,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1415,18 +1410,13 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1929,7 +1919,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -1948,7 +1938,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -1973,7 +1963,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -2016,7 +2006,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2044,7 +2034,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2104,7 +2094,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -2123,7 +2113,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -2148,7 +2138,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -2191,7 +2181,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2219,7 +2209,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2279,14 +2269,14 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -2311,7 +2301,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -2354,7 +2344,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2382,7 +2372,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2442,14 +2432,14 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -2474,7 +2464,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -2517,7 +2507,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -2545,7 +2535,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2720,18 +2710,13 @@ exports[`Contacts should render responsive with contacts 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -3348,18 +3333,13 @@ exports[`Contacts should render with contacts 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -3862,7 +3842,7 @@ exports[`Contacts should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -3881,7 +3861,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -3906,7 +3886,7 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -3949,7 +3929,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -3977,7 +3957,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -4037,7 +4017,7 @@ exports[`Contacts should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       >
                         <span
                           class="font-semibold"
@@ -4056,7 +4036,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -4081,7 +4061,7 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -4124,7 +4104,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -4152,7 +4132,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -4212,14 +4192,14 @@ exports[`Contacts should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -4244,7 +4224,7 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -4287,7 +4267,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -4315,7 +4295,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -4375,14 +4355,14 @@ exports[`Contacts should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="space-x-4 whitespace-nowrap css-1bqsw5h"
+                        class="space-x-4 whitespace-nowrap css-mx19qq"
                       />
                     </td>
                     <td
                       class=""
                     >
                       <div
-                        class="justify-center css-31so1s"
+                        class="justify-center css-1rods8x"
                       >
                         <div
                           aria-label="ARK Devnet"
@@ -4407,7 +4387,7 @@ exports[`Contacts should render with contacts 1`] = `
                       data-testid="ContactListItem__address"
                     >
                       <div
-                        class="space-x-4 css-31so1s"
+                        class="space-x-4 css-1rods8x"
                       >
                         <div
                           class="shrink-0 css-jxpwdn"
@@ -4450,7 +4430,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="space-x-4 justify-center css-31so1s"
+                        class="space-x-4 justify-center css-1rods8x"
                       >
                         <button
                           class="ring-focus relative focus:outline-none"
@@ -4478,7 +4458,7 @@ exports[`Contacts should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-end css-1bel921"
+                        class="justify-end css-br23tb"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -4653,18 +4633,13 @@ exports[`Contacts should render without contacts 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >

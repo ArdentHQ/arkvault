@@ -111,7 +111,7 @@ const SearchWalletAvatar = ({
 }) => {
 	if (isCompact) {
 		return (
-			<div data-testid="SearchWalletAvatar--compact" className="shrink-0 space-x-3">
+			<div data-testid="SearchWalletAvatar--compact" className="flex shrink-0 space-x-3">
 				{showNetwork && (
 					<NetworkIcon
 						size="xs"
@@ -126,7 +126,7 @@ const SearchWalletAvatar = ({
 	}
 
 	return (
-		<div className="shrink-0 -space-x-1">
+		<div className="flex shrink-0 -space-x-1">
 			{showNetwork && (
 				<NetworkIcon
 					size="lg"
@@ -367,7 +367,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 				{isEmptyResults && (
 					<EmptyResults
-						className="mt-16"
+						className="mt-10"
 						title={t("COMMON.EMPTY_RESULTS.TITLE")}
 						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 					/>

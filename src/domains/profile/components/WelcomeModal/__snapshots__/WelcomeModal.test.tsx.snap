@@ -45,7 +45,7 @@ exports[`WelcomeModal should render a modal if user hasnt completed the tutorial
           <h2
             class="mb-0 text-2xl font-bold"
           >
-            Welcome to Payvo Wallet
+            Welcome to ARKVault
           </h2>
           <div
             class="flex-1"
@@ -56,13 +56,13 @@ exports[`WelcomeModal should render a modal if user hasnt completed the tutorial
               welcome-modal-banner-light-green.svg
             </svg>
             <div
-              class="container"
+              class="w-full"
             >
               <div
                 class="text-base leading-7 text-theme-secondary-text"
               >
                 <p>
-                  Start a quick tour to learn how to get the most out of the Payvo Wallet, or skip it to go directly to your profile.
+                  Start a quick tour to learn how to get the most out of ARKVault, or skip it to go directly to your profile.
                 </p>
               </div>
               <div

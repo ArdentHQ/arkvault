@@ -1,7 +1,7 @@
 import { Helpers } from "@payvo/sdk-profiles";
 import React, { useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { ProfileFormState } from "./ProfileForm.contracts";
 import { Button } from "@/app/components/Button";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
@@ -15,6 +15,11 @@ import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
+import { Checkbox } from "@/app/components/Checkbox";
+import { Link } from "@/app/components/Link";
+
+const PRIVACY_POLICY_URL = "privacy";
+const TERMS_URL = "terms";
 
 export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, showPasswordFields }: any) => {
 	const { t } = useTranslation();
@@ -24,13 +29,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 	const form = useForm<ProfileFormState>({
 		defaultValues: {
 			avatarImage: "",
-			// @TODO:
-			// The default value should be `false` but the disclaimer checkbox
-			// was removed temporaly until the beta is over.
-			// See related commit to rollback the checkbox once is needed again.
-			// Consider tests and `disclaimer` rule inside
-			// `src/domains/profile/validations/CreateProfile.ts` file
-			disclaimer: true,
+			disclaimer: "",
 			name: "",
 			...defaultValues,
 		},
@@ -45,7 +44,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 		register("viewingMode", { required: true });
 	}, [register]);
 
-	const { avatarImage, confirmPassword, currency, name, password, viewingMode } = watch();
+	const { avatarImage, confirmPassword, currency, disclaimer, name, password, viewingMode } = watch();
 
 	const { resetTheme, setTheme } = useTheme();
 
@@ -186,8 +185,33 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 					</div>
 				</div>
 
-				<div className="hidden sm:block">
-					<Divider />
+				<Divider />
+
+				<div className="mb-8 pt-1 sm:py-3">
+					<FormField name="disclaimer">
+						<label className="flex cursor-pointer items-center space-x-3">
+							<Checkbox
+								data-testid="ProfileForm__disclaimer-checkbox"
+								name="disclaimer"
+								ref={register(createProfile.disclaimer())}
+								onChange={() =>
+									setValue("disclaimer", !disclaimer, {
+										shouldDirty: true,
+										shouldValidate: true,
+									})
+								}
+							/>
+							<span className="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+								<Trans
+									i18nKey="PROFILE.PAGE_CREATE_PROFILE.DISCLAIMER"
+									components={{
+										linkPrivacyPolicy: <Link to={PRIVACY_POLICY_URL} isExternal />,
+										linkTerms: <Link to={TERMS_URL} isExternal />,
+									}}
+								/>
+							</span>
+						</label>
+					</FormField>
 				</div>
 
 				<FormButtons>

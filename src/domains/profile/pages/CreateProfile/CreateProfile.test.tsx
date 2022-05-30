@@ -150,6 +150,7 @@ describe("CreateProfile", () => {
 		userEvent.paste(nameInput(), "test profile 3");
 		userEvent.paste(passwordInput(), testPassword);
 		userEvent.paste(passwordConfirmationInput(), testPassword);
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -178,6 +179,8 @@ describe("CreateProfile", () => {
 
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
+		userEvent.click(screen.getByRole("checkbox"));
+
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		userEvent.click(submitButton());
@@ -202,6 +205,7 @@ describe("CreateProfile", () => {
 
 		nameInput().select();
 		userEvent.paste(nameInput(), "t");
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -220,6 +224,7 @@ describe("CreateProfile", () => {
 
 		nameInput().select();
 		userEvent.paste(nameInput(), "t");
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -235,6 +240,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		userEvent.paste(nameInput(), "t");
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -257,6 +263,8 @@ describe("CreateProfile", () => {
 
 		passwordInput().select();
 		userEvent.paste(passwordInput(), password);
+
+		userEvent.click(screen.getByRole("checkbox"));
 
 		passwordConfirmationInput().select();
 		userEvent.paste(passwordConfirmationInput(), password);
@@ -349,6 +357,7 @@ describe("CreateProfile", () => {
 		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
 
 		userEvent.paste(nameInput(), "test profile 4");
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -387,6 +396,7 @@ describe("CreateProfile", () => {
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		userEvent.paste(nameInput(), "test profile 5");
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 

@@ -8,5 +8,5 @@ export const NavigationBar: React.FC<NavigationBarProperties> = ({ title, isBack
 		return <NavigationBarLogoOnly title={title} />;
 	}
 
-	return <NavigationBarFull title={title} isBackDisabled={isBackDisabled} />;
+	return <NavigationBarFull isBackDisabled={isBackDisabled} />;
 };

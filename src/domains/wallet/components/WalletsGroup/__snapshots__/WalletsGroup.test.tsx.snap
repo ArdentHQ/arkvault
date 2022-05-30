@@ -2649,7 +2649,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Starred"
                   >
                     <div
-                      class="space-x-3 css-g4cpbs"
+                      class="space-x-3 css-7ewq14"
                     >
                       <div
                         class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -2675,7 +2675,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Wallet"
                   >
                     <div
-                      class="-ml-3 space-x-3 css-31so1s"
+                      class="-ml-3 space-x-3 css-1rods8x"
                     >
                       <div
                         class="flex shrink-0 items-center"
@@ -2724,7 +2724,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-center text-sm font-bold text-center align-middle css-31so1s"
+                      class="justify-center text-sm font-bold text-center align-middle css-1rods8x"
                     >
                       <div
                         class="inline-flex items-center space-x-1"
@@ -2748,7 +2748,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="font-semibold justify-end css-31so1s"
+                      class="font-semibold justify-end css-1rods8x"
                     >
                       <span
                         class="whitespace-nowrap"
@@ -2759,11 +2759,11 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                     </div>
                   </td>
                   <td
-                    class="hidden lg:block"
+                    class="hidden lg:table-cell"
                     data-testid="CurrencyCell"
                   >
                     <div
-                      class="justify-end css-31so1s"
+                      class="justify-end css-1rods8x"
                     >
                       <span>
                         <span
@@ -2782,7 +2782,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-end text-theme-secondary-text css-9rjigo"
+                      class="justify-end text-theme-secondary-text css-16k0yyn"
                     >
                       <div>
                         <button

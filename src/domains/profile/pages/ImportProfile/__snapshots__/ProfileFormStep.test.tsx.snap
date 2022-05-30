@@ -581,12 +581,79 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-1bcidjh"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -1057,12 +1124,79 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-1bcidjh"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -1533,12 +1667,79 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-1bcidjh"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -2033,12 +2234,79 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-1bcidjh"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -2514,12 +2782,79 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-5kz4tk"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -2536,8 +2871,9 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               </div>
             </button>
             <button
-              class="css-1bx0hyc"
+              class="css-1yqe28v"
               data-testid="ProfileForm__submit-button"
+              disabled=""
               type="submit"
             >
               <div
@@ -2995,12 +3331,79 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
             </div>
           </div>
           <div
-            class="hidden sm:block"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
+          <div
+            class="mb-8 pt-1 sm:py-3"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-              type="horizontal"
-            />
+            <fieldset
+              class="flex flex-col css-5kz4tk"
+            >
+              <label
+                class="flex cursor-pointer items-center space-x-3"
+              >
+                <input
+                  class="css-7i915u"
+                  color="success"
+                  data-testid="ProfileForm__disclaimer-checkbox"
+                  name="disclaimer"
+                  type="checkbox"
+                />
+                <span
+                  class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  I accept the 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="terms"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Terms of Service
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                   and 
+                  <a
+                    class="ring-focus group inline-block css-15tcy38"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="Link"
+                    href="privacy"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      class="css-1y2194z"
+                    >
+                      Privacy Policy
+                    </span>
+                    <div
+                      class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                      data-testid="Link__external"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-external.svg
+                      </svg>
+                    </div>
+                  </a>
+                </span>
+              </label>
+            </fieldset>
           </div>
           <div
             class="css-1rsixno"
@@ -3017,8 +3420,9 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
               </div>
             </button>
             <button
-              class="css-1bx0hyc"
+              class="css-1yqe28v"
               data-testid="ProfileForm__submit-button"
+              disabled=""
               type="submit"
             >
               <div

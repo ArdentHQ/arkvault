@@ -50,7 +50,7 @@ exports[`AppearanceForm should render 1`] = `
                 role="radiogroup"
               >
                 <button
-                  aria-checked="false"
+                  aria-checked="true"
                   aria-label="Navy"
                   class="css-12yryft"
                   data-testid="ButtonGroupOption"

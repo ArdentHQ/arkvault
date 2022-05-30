@@ -8,7 +8,6 @@ const translations = buildTranslations();
 cucumber("@createProfileRouting", {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
-		await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
 		await t.expect(Selector('[data-testid="Card"]').count).eql(3);
 	},
 	"When she selects create profile": async (t: TestController) => {
@@ -25,6 +24,7 @@ cucumber("@createProfileRouting", {
 		await t.click(Selector("button").withExactText(translations.COMMON.BACK));
 	},
 	"Then she is back on the welcome page": async (t: TestController) => {
-		await t.expect(Selector("span").withText(translations.COMMON.PAYVO_WALLET).exists).ok();
+		await t.expect(Selector("h2").withText(translations.PROFILE.PAGE_WELCOME.WITH_PROFILES.TITLE).exists).ok();
+		await t.expect(Selector("p").withText(translations.PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION).exists).ok();
 	},
 });

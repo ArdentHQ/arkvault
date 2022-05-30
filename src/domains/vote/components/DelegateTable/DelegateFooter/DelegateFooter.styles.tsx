@@ -22,8 +22,6 @@ export const TextWrapper = styled.div<{ disabled?: boolean }>`
 `;
 
 export const StyledCircle = styled(Circle)<{ disabled?: boolean }>`
-	${tw`bg-theme-background`};
-
 	${({ disabled }) => {
 		if (disabled) {
 			return [tw`border-theme-secondary-500 dark:border-theme-secondary-700`, disabledColor];

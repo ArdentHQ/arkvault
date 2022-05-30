@@ -19,18 +19,13 @@ exports[`CreateProfile should render 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -39,9 +34,12 @@ exports[`CreateProfile should render 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -481,12 +479,79 @@ exports[`CreateProfile should render 1`] = `
                     </div>
                   </div>
                   <div
-                    class="hidden sm:block"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                    type="horizontal"
+                  />
+                  <div
+                    class="mb-8 pt-1 sm:py-3"
                   >
-                    <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-                      type="horizontal"
-                    />
+                    <fieldset
+                      class="flex flex-col css-1bcidjh"
+                    >
+                      <label
+                        class="flex cursor-pointer items-center space-x-3"
+                      >
+                        <input
+                          class="css-7i915u"
+                          color="success"
+                          data-testid="ProfileForm__disclaimer-checkbox"
+                          name="disclaimer"
+                          type="checkbox"
+                        />
+                        <span
+                          class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          I accept the 
+                          <a
+                            class="ring-focus group inline-block css-15tcy38"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="terms"
+                            rel="noopener noreferrer"
+                          >
+                            <span
+                              class="css-1y2194z"
+                            >
+                              Terms of Service
+                            </span>
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                arrow-external.svg
+                              </svg>
+                            </div>
+                          </a>
+                           and 
+                          <a
+                            class="ring-focus group inline-block css-15tcy38"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="Link"
+                            href="privacy"
+                            rel="noopener noreferrer"
+                          >
+                            <span
+                              class="css-1y2194z"
+                            >
+                              Privacy Policy
+                            </span>
+                            <div
+                              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                arrow-external.svg
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                      </label>
+                    </fieldset>
                   </div>
                   <div
                     class="css-1rsixno"

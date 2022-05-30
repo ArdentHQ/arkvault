@@ -539,14 +539,14 @@ describe("General Settings", () => {
 		const { setAccentColor, getCurrentAccentColor } = useAccentColor();
 		const { setTheme, theme } = useTheme();
 
-		expect(getCurrentAccentColor()).toBe("green");
-		expect(document.querySelector("html").classList.contains("dark")).toBe(false);
+		expect(getCurrentAccentColor()).toBe("navy");
+		expect(document.body.classList.contains("dark")).toBe(false);
 
-		setAccentColor("blue");
+		setAccentColor("green");
 		setTheme("dark");
 
-		expect(getCurrentAccentColor()).toBe("blue");
-		expect(document.querySelector("html").classList.contains("dark")).toBe(true);
+		expect(getCurrentAccentColor()).toBe("green");
+		expect(document.body.classList.contains("dark")).toBe(true);
 
 		render(
 			<Route path="/profiles/:profileId/settings">
@@ -584,7 +584,7 @@ describe("General Settings", () => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.PROFILE.MODAL_RESET_PROFILE.SUCCESS);
 		});
 
-		expect(getCurrentAccentColor()).toBe("green");
+		expect(getCurrentAccentColor()).toBe("navy");
 		expect(theme).toBe("light");
 
 		toastSpy.mockRestore();

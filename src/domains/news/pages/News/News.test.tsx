@@ -214,15 +214,4 @@ describe("News", () => {
 
 		toastSpy.mockRestore();
 	});
-
-	it("should show not found with empty coins", async () => {
-		renderPage();
-
-		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(1));
-
-		userEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
-
-		await waitFor(() => expect(screen.queryAllByTestId("NewsCard")).toHaveLength(0));
-		await waitFor(() => expect(screen.queryAllByTestId("EmptyResults")).toHaveLength(1));
-	});
 });

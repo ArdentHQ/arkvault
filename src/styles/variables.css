@@ -112,29 +112,6 @@
 	--theme-color-navy-700: #154a82;
 	--theme-color-navy-800: #073769;
 	--theme-color-navy-900: #062a50;
-
-	--theme-color-primary-rgb: var(--theme-color-success-rgb);
-	--theme-color-primary-50: var(--theme-color-success-50);
-	--theme-color-primary-100: var(--theme-color-success-100);
-	--theme-color-primary-200: var(--theme-color-success-200);
-	--theme-color-primary-300: var(--theme-color-success-300);
-	--theme-color-primary-400: var(--theme-color-success-400);
-	--theme-color-primary-500: var(--theme-color-success-500);
-	--theme-color-primary-600: var(--theme-color-success-600);
-	--theme-color-primary-700: var(--theme-color-success-700);
-	--theme-color-primary-800: var(--theme-color-success-800);
-	--theme-color-primary-900: var(--theme-color-success-900);
-
-	--theme-color-primary-reverse-50: var(--theme-color-navy-50);
-	--theme-color-primary-reverse-100: var(--theme-color-navy-100);
-	--theme-color-primary-reverse-200: var(--theme-color-navy-200);
-	--theme-color-primary-reverse-300: var(--theme-color-navy-300);
-	--theme-color-primary-reverse-400: var(--theme-color-navy-400);
-	--theme-color-primary-reverse-500: var(--theme-color-navy-500);
-	--theme-color-primary-reverse-600: var(--theme-color-navy-600);
-	--theme-color-primary-reverse-700: var(--theme-color-navy-700);
-	--theme-color-primary-reverse-800: var(--theme-color-navy-800);
-	--theme-color-primary-reverse-900: var(--theme-color-navy-900);
 }
 
 .dark {
@@ -173,32 +150,9 @@
 	--theme-color-navy-700: #0e6cb5;
 	--theme-color-navy-800: #0e5790;
 	--theme-color-navy-900: #1a486B;
-
-	--theme-color-primary-rgb: var(--theme-color-success-rgb);
-	--theme-color-primary-50: var(--theme-color-success-50);
-	--theme-color-primary-100: var(--theme-color-success-100);
-	--theme-color-primary-200: var(--theme-color-success-200);
-	--theme-color-primary-300: var(--theme-color-success-300);
-	--theme-color-primary-400: var(--theme-color-success-400);
-	--theme-color-primary-500: var(--theme-color-success-500);
-	--theme-color-primary-600: var(--theme-color-success-600);
-	--theme-color-primary-700: var(--theme-color-success-700);
-	--theme-color-primary-800: var(--theme-color-success-800);
-	--theme-color-primary-900: var(--theme-color-success-900);
-
-	--theme-color-primary-reverse-50: var(--theme-color-navy-50);
-	--theme-color-primary-reverse-100: var(--theme-color-navy-100);
-	--theme-color-primary-reverse-200: var(--theme-color-navy-200);
-	--theme-color-primary-reverse-300: var(--theme-color-navy-300);
-	--theme-color-primary-reverse-400: var(--theme-color-navy-400);
-	--theme-color-primary-reverse-500: var(--theme-color-navy-500);
-	--theme-color-primary-reverse-600: var(--theme-color-navy-600);
-	--theme-color-primary-reverse-700: var(--theme-color-navy-700);
-	--theme-color-primary-reverse-800: var(--theme-color-navy-800);
-	--theme-color-primary-reverse-900: var(--theme-color-navy-900);
 }
 
-.accent-blue {
+.accent-navy {
 	--theme-color-primary-rgb: var(--theme-color-navy-rgb);
 	--theme-color-primary-50: var(--theme-color-navy-50);
 	--theme-color-primary-100: var(--theme-color-navy-100);
@@ -221,4 +175,29 @@
 	--theme-color-primary-reverse-700: var(--theme-color-success-700);
 	--theme-color-primary-reverse-800: var(--theme-color-success-800);
 	--theme-color-primary-reverse-900: var(--theme-color-success-900);
+}
+
+.accent-green {
+	--theme-color-primary-rgb: var(--theme-color-success-rgb);
+	--theme-color-primary-50: var(--theme-color-success-50);
+	--theme-color-primary-100: var(--theme-color-success-100);
+	--theme-color-primary-200: var(--theme-color-success-200);
+	--theme-color-primary-300: var(--theme-color-success-300);
+	--theme-color-primary-400: var(--theme-color-success-400);
+	--theme-color-primary-500: var(--theme-color-success-500);
+	--theme-color-primary-600: var(--theme-color-success-600);
+	--theme-color-primary-700: var(--theme-color-success-700);
+	--theme-color-primary-800: var(--theme-color-success-800);
+	--theme-color-primary-900: var(--theme-color-success-900);
+
+	--theme-color-primary-reverse-50: var(--theme-color-navy-50);
+	--theme-color-primary-reverse-100: var(--theme-color-navy-100);
+	--theme-color-primary-reverse-200: var(--theme-color-navy-200);
+	--theme-color-primary-reverse-300: var(--theme-color-navy-300);
+	--theme-color-primary-reverse-400: var(--theme-color-navy-400);
+	--theme-color-primary-reverse-500: var(--theme-color-navy-500);
+	--theme-color-primary-reverse-600: var(--theme-color-navy-600);
+	--theme-color-primary-reverse-700: var(--theme-color-navy-700);
+	--theme-color-primary-reverse-800: var(--theme-color-navy-800);
+	--theme-color-primary-reverse-900: var(--theme-color-navy-900);
 }

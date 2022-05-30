@@ -8,7 +8,7 @@ export const ProfilePageSkeleton: React.FC = () => (
 		<div className="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800">
 			<div className="relative flex h-21">
 				<div className="flex flex-1 justify-between px-8 sm:ml-12">
-					<div className="my-auto mr-4 flex h-11 w-11 items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white">
+					<div className="my-auto mr-4 flex h-11 w-11 items-center justify-center rounded-xl bg-theme-primary-600 text-white">
 						<Logo height={28} />
 					</div>
 

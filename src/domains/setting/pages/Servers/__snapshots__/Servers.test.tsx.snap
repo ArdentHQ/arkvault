@@ -114,18 +114,13 @@ exports[`Servers Settings should render servers settings 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1389,18 +1384,13 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -2632,7 +2622,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -2676,7 +2666,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2689,7 +2679,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2712,7 +2702,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2739,7 +2729,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2801,7 +2791,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -2858,7 +2848,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2873,7 +2863,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2896,7 +2886,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2923,7 +2913,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2985,7 +2975,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3029,7 +3019,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3044,7 +3034,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3067,7 +3057,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3094,7 +3084,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3309,18 +3299,13 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -4524,7 +4509,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -4568,7 +4553,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4581,7 +4566,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4604,7 +4589,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4626,7 +4611,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4688,7 +4673,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -4745,7 +4730,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4760,7 +4745,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4783,7 +4768,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4805,7 +4790,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4867,7 +4852,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -4911,7 +4896,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4926,7 +4911,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4949,7 +4934,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4971,7 +4956,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5186,18 +5171,13 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -6774,18 +6754,13 @@ exports[`Servers Settings with servers should show status ok after ping the serv
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -8017,7 +7992,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -8061,7 +8036,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8074,7 +8049,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8097,7 +8072,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8124,7 +8099,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8186,7 +8161,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -8243,7 +8218,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8258,7 +8233,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8281,7 +8256,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8308,7 +8283,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8370,7 +8345,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -8414,7 +8389,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8429,7 +8404,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8452,7 +8427,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8479,7 +8454,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8694,18 +8669,13 @@ exports[`Servers Settings with servers should show status ok after ping the serv
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -10325,18 +10295,13 @@ exports[`Servers Settings with servers should show status ok after ping the serv
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -12133,18 +12098,13 @@ exports[`Servers Settings with unreachable servers should show status error if r
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -13376,7 +13336,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13420,7 +13380,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13433,7 +13393,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13456,7 +13416,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13483,7 +13443,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13545,7 +13505,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13602,7 +13562,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13617,7 +13577,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13640,7 +13600,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13667,7 +13627,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13729,7 +13689,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-1hgjfj1"
+                                      class="py-3 border-2 border-r-0 border-transparent css-14huxtf"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13773,7 +13733,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                     class="hidden md:table-cell"
                                   >
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13788,7 +13748,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13811,7 +13771,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1v8ywjx"
+                                      class="py-3 justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13838,7 +13798,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-1kcio9n"
+                                      class="py-3 border-2 border-l-0 border-transparent css-1hhowo0"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -14053,18 +14013,13 @@ exports[`Servers Settings with unreachable servers should show status error if r
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -15684,18 +15639,13 @@ exports[`Servers Settings with unreachable servers should show status error if r
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >

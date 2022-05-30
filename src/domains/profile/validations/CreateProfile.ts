@@ -8,10 +8,9 @@ export const createProfile = (t: any, environment: Environment) => ({
 			field: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 		}).toString(),
 	}),
-	// @TODO: Rollback once beta version is over
-	// disclaimer: () => ({
-	// 	validate: (value: boolean) => !!value,
-	// }),
+	disclaimer: () => ({
+		validate: (value: boolean) => !!value,
+	}),
 	name: () => ({
 		validate: {
 			maxLength: (name: string) =>

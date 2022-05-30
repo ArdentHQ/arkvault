@@ -19,18 +19,13 @@ exports[`Welcome should change route to create profile 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -39,9 +34,12 @@ exports[`Welcome should change route to create profile 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -60,7 +58,7 @@ exports[`Welcome should change route to create profile 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -86,7 +84,7 @@ exports[`Welcome should change route to create profile 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -97,7 +95,7 @@ exports[`Welcome should change route to create profile 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -168,7 +166,7 @@ exports[`Welcome should change route to create profile 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -177,7 +175,7 @@ exports[`Welcome should change route to create profile 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -191,7 +189,7 @@ exports[`Welcome should change route to create profile 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -249,18 +247,13 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -269,9 +262,12 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -290,7 +286,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -316,7 +312,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -327,7 +323,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -384,7 +380,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -395,7 +391,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -466,7 +462,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -475,7 +471,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -489,7 +485,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -547,18 +543,13 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -567,9 +558,12 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -588,7 +582,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -614,7 +608,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -625,7 +619,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -682,7 +676,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -693,7 +687,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -764,7 +758,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -773,7 +767,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -787,7 +781,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -845,18 +839,13 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -865,9 +854,12 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -886,7 +878,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -912,7 +904,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -923,7 +915,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -980,7 +972,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -991,7 +983,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1062,7 +1054,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -1071,7 +1063,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1085,7 +1077,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -1143,18 +1135,13 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1163,9 +1150,12 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -1184,7 +1174,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -1210,7 +1200,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -1221,7 +1211,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1278,7 +1268,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -1289,7 +1279,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1360,7 +1350,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -1369,7 +1359,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1383,7 +1373,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -1441,18 +1431,13 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1461,9 +1446,12 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -1482,7 +1470,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -1508,7 +1496,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -1519,7 +1507,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1576,7 +1564,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -1587,7 +1575,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1658,7 +1646,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -1667,7 +1655,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1681,7 +1669,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -1739,18 +1727,13 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1759,9 +1742,12 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -1780,7 +1766,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -1806,7 +1792,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -1817,7 +1803,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -1888,7 +1874,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -1897,7 +1883,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -1911,7 +1897,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -1969,18 +1955,13 @@ exports[`Welcome should render with profiles 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -1989,9 +1970,12 @@ exports[`Welcome should render with profiles 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -2010,7 +1994,7 @@ exports[`Welcome should render with profiles 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -2036,7 +2020,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -2047,7 +2031,7 @@ exports[`Welcome should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -2104,7 +2088,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="h-40 w-36 leading-tight sm:w-40"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-116zvw2"
                     data-testid="Card"
                     type="button"
                   >
@@ -2115,7 +2099,7 @@ exports[`Welcome should render with profiles 1`] = `
                         class="relative"
                       >
                         <div
-                          class="shrink-0 css-1qyktzz"
+                          class="shrink-0 css-11ohc3q"
                           data-testid="Avatar"
                         >
                           <div
@@ -2186,7 +2170,7 @@ exports[`Welcome should render with profiles 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-36"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -2195,7 +2179,7 @@ exports[`Welcome should render with profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2209,7 +2193,7 @@ exports[`Welcome should render with profiles 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>
@@ -2267,18 +2251,13 @@ exports[`Welcome should render without profiles 1`] = `
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-success-600 pl-0.5 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-success-400"
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
               <span
                 class="relative"
               >
-                <div
-                  class="absolute -top-4 -right-7 rounded-md border-2 border-white bg-theme-secondary-800 px-0.5 font-bold text-white dark:border-theme-secondary-900 css-85x3m0"
-                >
-                  BETA
-                </div>
                 <svg
                   height="28"
                 >
@@ -2287,9 +2266,12 @@ exports[`Welcome should render without profiles 1`] = `
               </span>
             </button>
             <span
-              class="text-lg font-bold"
+              class="text-lg uppercase"
             >
-              Payvo Wallet
+              <strong>
+                ARK
+              </strong>
+              Vault
             </span>
           </div>
         </div>
@@ -2308,7 +2290,7 @@ exports[`Welcome should render without profiles 1`] = `
             class="mx-auto hidden w-96 md:block"
           >
             <svg>
-              welcome-banner-light-green.svg
+              welcome-banner-light.svg
             </svg>
           </div>
           <div
@@ -2334,7 +2316,7 @@ exports[`Welcome should render without profiles 1`] = `
                   class="group h-40 leading-tight sm:w-40 w-full"
                 >
                   <button
-                    class="css-pqu2un"
+                    class="css-10zh490"
                     data-testid="Card"
                     type="button"
                   >
@@ -2343,7 +2325,7 @@ exports[`Welcome should render without profiles 1`] = `
                     >
                       <div>
                         <div
-                          class="text-theme-primary-600 group-hover:bg-theme-primary-700 group-hover:text-white dark:text-white dark:group-hover:border-theme-secondary-800 dark:group-hover:bg-theme-secondary-800 ring-theme-background duration-200 css-3q6q5z"
+                          class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 css-3q6q5z"
                         >
                           <div
                             class="css-v0ob3f"
@@ -2357,7 +2339,7 @@ exports[`Welcome should render without profiles 1`] = `
                         </div>
                       </div>
                       <span
-                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 group-hover:text-theme-primary-700 dark:text-white dark:group-hover:text-white"
+                        class="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white"
                       >
                         Create
                       </span>

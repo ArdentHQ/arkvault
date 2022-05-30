@@ -4,7 +4,7 @@ Feature: News Page
 	Scenario: Successfully display News Feed
 	Given Alice is on the news page
 	Then the news feed should be displayed
-	
+
 	@news-paginateNews
 	Scenario: Use pagination on the news page
 		Given Alice is on the news page
@@ -20,9 +20,8 @@ Feature: News Page
 		And searches for a specifc term
 		Then the results should be filtered by category
 		And the results should be filtered by the search term
-		When she deselects a network
-		Then the page should display that no results have been found
-	
+		Then the page should display only one news card
+
 	@news-searchNoResults
 	Scenario: Display no results page from search
 		Given Alice is on the news page

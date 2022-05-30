@@ -64,27 +64,27 @@ describe("Appearance Settings", () => {
 
 		renderPage();
 
-		const blueRadioButton = screen.getByLabelText(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.BLUE);
+		const navyRadioButton = screen.getByLabelText(translations.APPEARANCE.OPTIONS.ACCENT_COLOR.COLORS.NAVY);
 
-		expect(blueRadioButton).not.toBeChecked();
-		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
+		expect(navyRadioButton).not.toBeChecked();
+		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("navy");
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeDisabled();
 
-		userEvent.click(blueRadioButton);
+		userEvent.click(navyRadioButton);
 
 		await waitFor(() => {
-			expect(blueRadioButton).toBeChecked();
+			expect(navyRadioButton).toBeChecked();
 		});
 
-		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
+		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("navy");
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
-			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("blue");
+			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("navy");
 		});
 
 		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);

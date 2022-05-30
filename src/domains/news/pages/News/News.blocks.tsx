@@ -26,7 +26,6 @@ export const NewsSubtitle = () => {
 
 export const NewsHeaderFilters = ({
 	categories,
-	coins,
 	onFilterChange,
 	onSearch,
 	shouldResetFields,
@@ -59,7 +58,7 @@ export const NewsHeaderFilters = ({
 					}
 				>
 					<div className="w-full sm:w-96">
-						<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onFilterChange} />
+						<NewsOptions selectedCategories={categories} onSubmit={onFilterChange} />
 					</div>
 				</Dropdown>
 			</div>

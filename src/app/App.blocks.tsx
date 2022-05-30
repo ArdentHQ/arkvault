@@ -8,16 +8,14 @@ import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useAccentColor, useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
-import { Splash } from "@/domains/splash/pages";
 import { Offline } from "@/domains/error/pages";
 import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
-import { useBetaNotice } from "@/domains/profile/hooks/use-beta-notice";
-import { BetaNotice } from "@/domains/profile/pages/BetaNotice/BetaNotice";
+import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 
 const AppRouter: React.FC = ({ children }) => {
@@ -79,13 +77,12 @@ const GlobalStyles: React.VFC = () => (
 );
 
 const Main: React.VFC = () => {
-	const [showSplash, setShowSplash] = useState(true);
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
 	const { setTheme } = useTheme();
 	const { setShowMobileNavigation } = useNavigationContext();
-	const { showBetaNotice, acceptBetaNotice } = useBetaNotice();
+	const { resetAccentColor } = useAccentColor();
 
 	const { t } = useTranslation();
 
@@ -99,7 +96,7 @@ const Main: React.VFC = () => {
 			}),
 		onProfileSignOut: () => {
 			setTheme("system");
-
+			resetAccentColor();
 			toasts.dismiss();
 
 			setShowMobileNavigation(false);
@@ -142,7 +139,6 @@ const Main: React.VFC = () => {
 					await persist();
 
 					setIsEnvironmentBooted(true);
-					setShowSplash(false);
 					return;
 				}
 
@@ -156,30 +152,24 @@ const Main: React.VFC = () => {
 			} catch (error) {
 				handleError(error);
 			}
-
-			setShowSplash(false);
 		};
 
 		boot();
 	}, [env, handleError]);
 
-	const renderContent = () => {
-		if (showSplash) {
-			return <Splash />;
-		}
+	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
+	const renderContent = () => {
 		if (!isOnline) {
 			return <Offline />;
-		}
-
-		if (showBetaNotice) {
-			return <BetaNotice onContinue={acceptBetaNotice} />;
 		}
 
 		/* istanbul ignore else */
 		if (isEnvironmentBooted) {
 			return <RouterView routes={routes} middlewares={middlewares} />;
 		}
+
+		return <Skeleton />;
 	};
 
 	return (

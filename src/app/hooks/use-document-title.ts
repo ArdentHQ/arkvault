@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-const BASE_TITLE = "Payvo Wallet (beta)";
+const BASE_TITLE = "ARKVault";
 
 const setTitle = (title: string) => {
 	document.title = title;

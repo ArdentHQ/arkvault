@@ -1,24 +1,16 @@
-# Payvo Wallet
+# ARKVault
 
-![Payvo Wallet](./banner.png)
+![ARKVault](./banner.png)
 
-[![Build Status](https://badgen.now.sh/github/status/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/actions?query=branch%3Adevelop)
-[![Latest Version](https://badgen.now.sh/github/release/PayvoHQ/wallet)](https://github.com/PayvoHQ/wallet/releases)
-[![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
+[![Build Status](https://badgen.now.sh/github/status/ArdentHQ/arkvault)](https://github.com/ArdentHQ/arkvault/actions?query=branch%3Adevelop)
+[![Latest Version](https://badgen.now.sh/github/release/ArdentHQ/arkvault)](https://github.com/ArdentHQ/arkvault/releases)
+[![License: MIT](https://badgen.now.sh/github/license/ArdentHQ/arkvault)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 > Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
 
 ## Development
 
 ### Requirements
-
-#### Ubuntu
-
-In Ubuntu the development files of `libudev` are necessary:
-
-```
-sudo apt-get install libudev-dev libusb-1.0-0-dev
-```
 
 #### Node 16
 
@@ -78,7 +70,7 @@ pnpm test:coverage
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@ardenthq.com. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -86,4 +78,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [Payvo](https://payvo.com)
+[CC BY-NC-ND 4.0](LICENSE) © [Ardent](https://ardenthq.com)

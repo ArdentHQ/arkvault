@@ -193,10 +193,10 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -261,7 +261,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -273,7 +273,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -297,10 +297,10 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -365,7 +365,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -377,7 +377,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -598,10 +598,10 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -667,7 +667,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -679,7 +679,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -703,10 +703,10 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -772,7 +772,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -784,7 +784,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -1005,10 +1005,10 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -1074,7 +1074,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1086,7 +1086,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
@@ -1110,10 +1110,10 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -1179,7 +1179,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1191,7 +1191,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -1412,10 +1412,10 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1480,7 +1480,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1492,7 +1492,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -1516,10 +1516,10 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -1584,7 +1584,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -1596,7 +1596,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -1762,7 +1762,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -1871,7 +1871,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -2113,7 +2113,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -2222,7 +2222,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -2464,7 +2464,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -2573,7 +2573,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -2870,10 +2870,10 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -2938,7 +2938,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -2950,7 +2950,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-reverse-600 css-nxm84j"
@@ -2974,10 +2974,10 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -3042,7 +3042,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3054,7 +3054,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -3275,10 +3275,10 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -3343,7 +3343,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3355,7 +3355,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -3379,10 +3379,10 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -3447,7 +3447,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3459,7 +3459,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -3712,10 +3712,10 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -3781,7 +3781,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3795,7 +3795,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3807,7 +3807,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -3831,10 +3831,10 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -3900,7 +3900,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3914,7 +3914,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -3926,7 +3926,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -4179,10 +4179,10 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -4248,7 +4248,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4262,7 +4262,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4274,7 +4274,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -4298,10 +4298,10 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -4367,7 +4367,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4381,7 +4381,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4393,7 +4393,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -4646,10 +4646,10 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -4715,7 +4715,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4729,7 +4729,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4741,7 +4741,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
@@ -4765,10 +4765,10 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1bqsw5h"
+                          class="space-x-4 css-mx19qq"
                         >
                           <div
-                            class="shrink-0 space-x-3"
+                            class="flex shrink-0 space-x-3"
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
@@ -4834,7 +4834,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-31so1s"
+                          class="font-semibold justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4848,7 +4848,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-31so1s"
+                          class="text-theme-secondary-text justify-end css-1rods8x"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -4860,7 +4860,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1bel921"
+                          class="justify-end css-br23tb"
                         >
                           <button
                             class="text-theme-primary-600 -mr-3 css-d937d6"
@@ -5113,10 +5113,10 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -5181,7 +5181,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -5195,7 +5195,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -5207,7 +5207,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -5231,10 +5231,10 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -5299,7 +5299,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -5313,7 +5313,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -5325,7 +5325,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -5491,7 +5491,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -5600,7 +5600,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -5842,7 +5842,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -5951,7 +5951,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -6193,7 +6193,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -6302,7 +6302,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                               class="flex shrink-0 items-center"
                             >
                               <div
-                                class="shrink-0 -space-x-1"
+                                class="flex shrink-0 -space-x-1"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -6631,10 +6631,10 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -6699,7 +6699,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -6713,7 +6713,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -6725,7 +6725,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-reverse-600 css-nxm84j"
@@ -6749,10 +6749,10 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -6817,7 +6817,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -6831,7 +6831,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -6843,7 +6843,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -7096,10 +7096,10 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -7164,7 +7164,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -7178,7 +7178,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -7190,7 +7190,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"
@@ -7214,10 +7214,10 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-1hgjfj1"
+                          class="space-x-4 css-14huxtf"
                         >
                           <div
-                            class="shrink-0 -space-x-1"
+                            class="flex shrink-0 -space-x-1"
                           >
                             <div
                               aria-label="ARK Devnet"
@@ -7282,7 +7282,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="font-semibold justify-end css-1v8ywjx"
+                          class="font-semibold justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -7296,7 +7296,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                         class="hidden xl:table-cell"
                       >
                         <div
-                          class="text-theme-secondary-text justify-end css-1v8ywjx"
+                          class="text-theme-secondary-text justify-end css-1d4ra48"
                         >
                           <span
                             class="whitespace-nowrap"
@@ -7308,7 +7308,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                       </td>
                       <td>
                         <div
-                          class="justify-end css-1kcio9n"
+                          class="justify-end css-1hhowo0"
                         >
                           <button
                             class="text-theme-primary-600 css-1jhy6v9"

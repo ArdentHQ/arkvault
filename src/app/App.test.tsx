@@ -73,7 +73,7 @@ describe("App", () => {
 		env.reset();
 	});
 
-	it("should render splash screen", async () => {
+	it("should render page skeleton", async () => {
 		const toastSuccessMock = jest.spyOn(toasts, "success").mockImplementation(jest.fn());
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.REACT_APP_IS_E2E = undefined;
@@ -83,9 +83,9 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -100,34 +100,34 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		await expect(
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
 		).resolves.toBeVisible();
 	});
 
-	it("should close splash screen if not e2e", async () => {
+	it("should close page skeleton if not e2e", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		const { container, asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render welcome screen after splash screen", async () => {
+	it("should render welcome screen after page skeleton", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
@@ -141,48 +141,12 @@ describe("App", () => {
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
-
 		await waitFor(() => {
 			expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.TITLE);
 		});
 
 		expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show the beta notice if the localstorage flag is not set", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
-
-		const { asFragment } = render(<App />, { history, withProviders: false });
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-		await expect(screen.findByText("Payvo Beta Testing")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should close the beta notice on continue", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
-
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("BetaNoticeModal__agree"));
-		userEvent.click(screen.getByTestId("BetaNoticeModal__submit-button"));
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		expect(localstorageSpy).toHaveBeenCalledWith("hideBetaNotice", "true");
-
-		localstorageSpy.mockRestore();
 	});
 
 	it("should render application error if the app fails to boot", async () => {
@@ -216,7 +180,7 @@ describe("App", () => {
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
@@ -229,7 +193,7 @@ describe("App", () => {
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
