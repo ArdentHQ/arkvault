@@ -311,8 +311,8 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			className={cn(
 				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400",
 				{
-					"ring-2 ring-theme-primary-600": selected,
 					"dark:ring-2 dark:ring-theme-secondary-800": !selected,
+					"ring-2 ring-theme-primary-600": selected,
 				},
 			)}
 			tabIndex={onClick ? 0 : -1}

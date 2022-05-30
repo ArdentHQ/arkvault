@@ -49,9 +49,7 @@ describe("WalletListItem", () => {
 
 	const TableWrapper = ({ children }) => (
 		<table>
-			<tbody>
-				{children}
-			</tbody>
+			<tbody>{children}</tbody>
 		</table>
 	);
 

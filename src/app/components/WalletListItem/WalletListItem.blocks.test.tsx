@@ -71,12 +71,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Starred
-					wallet={wallet}
-					handleToggleStar={jest.fn()}
-					isCompact={true}
-					isLargeScreen={false}
-				/>
+				<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -250,12 +245,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Info
-					wallet={wallet}
-					handleToggleStar={jest.fn()}
-					isCompact={true}
-					isLargeScreen={false}
-				/>
+				<Info wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
