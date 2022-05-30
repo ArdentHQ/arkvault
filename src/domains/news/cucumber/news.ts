@@ -82,21 +82,13 @@ cucumber(
 		"And the results should be filtered by the search term": async (t: TestController) => {
 			await t.expect(Selector('[data-testid="NewsCard__content"]').withText(/major league hacking/i).exists).ok();
 		},
-		"When she deselects a network": async (t: TestController) => {
-			const ark = "NetworkOption__ark.mainnet";
-			await t.click(Selector(`[data-testid="${ark}"]`));
-		},
-		"Then the page should display that no results have been found": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="EmptyResults"]').exists).ok();
+		"Then the page should display only one news card": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=NewsCard]").count).eql(1);
 		},
 	},
 	[
 		mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1"),
 		mockRequest("https://news.payvo.com/api?coins=ARK&page=2", "news/page-2"),
-		mockRequest(
-			"https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical&query=major+league+hacking",
-			filteredNews,
-		),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
 			filteredNews,
@@ -112,7 +104,6 @@ cucumber(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
 			filteredNews,
 		),
-		mockRequest("https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical", filteredNews),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
 			filteredNews,

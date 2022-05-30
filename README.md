@@ -4,7 +4,7 @@
 
 [![Build Status](https://badgen.now.sh/github/status/ArdentHQ/arkvault)](https://github.com/ArdentHQ/arkvault/actions?query=branch%3Adevelop)
 [![Latest Version](https://badgen.now.sh/github/release/ArdentHQ/arkvault)](https://github.com/ArdentHQ/arkvault/releases)
-[![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://badgen.now.sh/github/license/ArdentHQ/arkvault)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 > Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
 

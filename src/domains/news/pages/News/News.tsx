@@ -18,7 +18,6 @@ export const News: React.FC = () => {
 		news,
 		currentPage,
 		categories,
-		coins,
 		handleSelectPage,
 		handleFilterSubmit,
 		setSearchQuery,
@@ -33,7 +32,6 @@ export const News: React.FC = () => {
 					subtitle={<NewsSubtitle />}
 					extra={
 						<NewsHeaderFilters
-							coins={coins}
 							categories={categories}
 							onSearch={(query) => setSearchQuery(query)}
 							shouldResetFields={searchQuery === ""}
@@ -59,11 +57,7 @@ export const News: React.FC = () => {
 
 						<div className="relative hidden xl:block xl:w-1/3">
 							<NewsOptionsSticky>
-								<NewsOptions
-									selectedCategories={categories}
-									selectedCoins={coins}
-									onSubmit={handleFilterSubmit}
-								/>
+								<NewsOptions selectedCategories={categories} onSubmit={handleFilterSubmit} />
 							</NewsOptionsSticky>
 						</div>
 					</div>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should close splash screen if not e2e 1`] = `
+exports[`App should close page skeleton if not e2e 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"
@@ -1061,7 +1061,7 @@ exports[`App should render mock 1`] = `
 </DocumentFragment>
 `;
 
-exports[`App should render splash screen 1`] = `
+exports[`App should render page skeleton 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"
@@ -1451,7 +1451,7 @@ exports[`App should render the offline screen if there is no internet connection
 </DocumentFragment>
 `;
 
-exports[`App should render welcome screen after splash screen 1`] = `
+exports[`App should render welcome screen after page skeleton 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"

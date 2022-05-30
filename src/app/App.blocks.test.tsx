@@ -133,9 +133,9 @@ describe("App Main", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 	});
 
 	it("should fail to sync and retry", async () => {
