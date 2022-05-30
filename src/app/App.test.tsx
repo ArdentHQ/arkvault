@@ -73,7 +73,7 @@ describe("App", () => {
 		env.reset();
 	});
 
-	it("should render splash screen", async () => {
+	it("should render page skeleton", async () => {
 		const toastSuccessMock = jest.spyOn(toasts, "success").mockImplementation(jest.fn());
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.REACT_APP_IS_E2E = undefined;
@@ -83,9 +83,9 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -100,34 +100,34 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		await expect(
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
 		).resolves.toBeVisible();
 	});
 
-	it("should close splash screen if not e2e", async () => {
+	it("should close page skeleton if not e2e", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		const { container, asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeVisible();
+		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
-		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render welcome screen after splash screen", async () => {
+	it("should render welcome screen after page skeleton", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
@@ -140,8 +140,6 @@ describe("App", () => {
 		jest.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
-
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.TITLE);
@@ -216,7 +214,7 @@ describe("App", () => {
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
@@ -229,7 +227,7 @@ describe("App", () => {
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
-		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
+		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 

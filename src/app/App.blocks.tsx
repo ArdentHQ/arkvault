@@ -12,12 +12,12 @@ import { useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from 
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
-import { Splash } from "@/domains/splash/pages";
 import { Offline } from "@/domains/error/pages";
 import { middlewares, RouterView, routes } from "@/router";
 import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { useBetaNotice } from "@/domains/profile/hooks/use-beta-notice";
 import { BetaNotice } from "@/domains/profile/pages/BetaNotice/BetaNotice";
+import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 
 const AppRouter: React.FC = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +78,6 @@ const GlobalStyles: React.VFC = () => (
 );
 
 const Main: React.VFC = () => {
-	const [showSplash, setShowSplash] = useState(true);
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
@@ -139,7 +138,6 @@ const Main: React.VFC = () => {
 					await persist();
 
 					setIsEnvironmentBooted(true);
-					setShowSplash(false);
 					return;
 				}
 
@@ -153,18 +151,14 @@ const Main: React.VFC = () => {
 			} catch (error) {
 				handleError(error);
 			}
-
-			setShowSplash(false);
 		};
 
 		boot();
 	}, [env, handleError]);
 
-	const renderContent = () => {
-		if (showSplash) {
-			return <Splash />;
-		}
+	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 
+	const renderContent = () => {
 		if (!isOnline) {
 			return <Offline />;
 		}
@@ -177,6 +171,8 @@ const Main: React.VFC = () => {
 		if (isEnvironmentBooted) {
 			return <RouterView routes={routes} middlewares={middlewares} />;
 		}
+
+		return <Skeleton />;
 	};
 
 	return (

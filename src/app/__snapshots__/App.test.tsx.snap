@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should close splash screen if not e2e 1`] = `
+exports[`App should close page skeleton if not e2e 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"
@@ -1072,7 +1072,7 @@ exports[`App should render mock 1`] = `
 </DocumentFragment>
 `;
 
-exports[`App should render splash screen 1`] = `
+exports[`App should render page skeleton 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"
@@ -1469,7 +1469,7 @@ exports[`App should render the offline screen if there is no internet connection
 </DocumentFragment>
 `;
 
-exports[`App should render welcome screen after splash screen 1`] = `
+exports[`App should render welcome screen after page skeleton 1`] = `
 <DocumentFragment>
   <main
     data-testid="Main"
@@ -1788,7 +1788,7 @@ exports[`App should show the beta notice if the localstorage flag is not set 1`]
       class="Toastify"
     />
     <div
-      class="relative flex min-h-screen flex-col"
+      class="relative flex min-h-screen flex-col pb-32 sm:pb-0"
     >
       <nav
         aria-labelledby="main menu"
@@ -1901,7 +1901,7 @@ The Software is provided «AS IS» without any express or implied warranty of an
                       </span>
                     </label>
                     <div
-                      class="emotion-cache-ngzslp"
+                      class="emotion-cache-ppnppl"
                     >
                       <button
                         class="emotion-cache-1yqe28v"
