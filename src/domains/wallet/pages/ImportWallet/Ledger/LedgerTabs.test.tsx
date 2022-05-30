@@ -18,6 +18,7 @@ import {
 	mockNanoXTransport,
 	mockLedgerTransportError,
 	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
@@ -373,6 +374,34 @@ describe("LedgerTabs", () => {
 		});
 
 		await expect(screen.findByTestId("LedgerScanStep__error")).resolves.toBeVisible();
+
+		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should skip network step if only one available network", async () => {
+		resetProfileNetworksMock();
+
+		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		const { history } = render(<Component activeIndex={1} />, {
+			route: `/profiles/${profile.id()}`,
+			withProviders: true,
+		});
+
+		await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
+
+		await waitFor(() => expect(backSelector()).toBeEnabled());
+
+		userEvent.click(backSelector());
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
