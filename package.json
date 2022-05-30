@@ -5,13 +5,13 @@
 	"description": "Payvo Wallet",
 	"homepage": "./",
 	"bugs": {
-		"url": "https://github.com/PayvoHQ/wallet/issues"
+		"url": "https://github.com/ArdentHQ/arkvault/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/PayvoHQ/wallet.git"
+		"url": "git+https://github.com/ArdentHQ/arkvault.git"
 	},
-	"license": "MIT",
+	"license": "CC-BY-NC-ND-4.0",
 	"author": "Payvo <info@payvo.com>",
 	"contributors": [
 		"Alex Barnsley <alex@ark.io>",
