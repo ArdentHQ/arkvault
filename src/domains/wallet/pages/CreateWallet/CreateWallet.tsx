@@ -21,6 +21,7 @@ import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
+import { defaultNetworks } from "@/utils/server-utils";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
 
 enum Step {
@@ -32,22 +33,28 @@ enum Step {
 }
 
 export const CreateWallet = () => {
-	const { persist } = useEnvironmentContext();
+	const { persist, env } = useEnvironmentContext();
 	const history = useHistory();
 	const { t } = useTranslation();
-
-	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const activeProfile = useActiveProfile();
+	const availableNetworks = defaultNetworks(env, activeProfile);
+	const onlyHasOneNetwork = availableNetworks.length === 1;
+	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
 
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
 
-	const form = useForm({ mode: "onChange" });
+	const form = useForm<any>({
+		defaultValues: {
+			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+		},
+		mode: "onChange",
+	});
 	const { getValues, formState, register, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const { useEncryption, encryptionPassword, confirmEncryptionPassword } = watch();
+	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
-	const [isGeneratingWallet, setIsGeneratingWallet] = useState(false);
+	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
 	const [generationError, setGenerationError] = useState("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
@@ -58,31 +65,57 @@ export const CreateWallet = () => {
 		register("useEncryption");
 	}, [register]);
 
+	useEffect(() => {
+		if (wallet && mnemonic) {
+			setIsGeneratingWallet(false);
+		}
+	}, [wallet, mnemonic]);
+
+	useEffect(() => {
+		if (onlyHasOneNetwork) {
+			handleGenerateWallet();
+		}
+	}, []);
+
 	const handleFinish = () => {
 		const wallet = getValues("wallet");
+
 		assertWallet(wallet);
 
 		history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 	};
 
-	const generateWallet = async () => {
+	const generateWallet = () => {
 		const network = getValues("network");
+
 		assertNetwork(network);
 
 		const locale = activeProfile.settings().get<string>(Contracts.ProfileSetting.Bip39Locale, "english");
-		const { mnemonic, wallet } = await activeProfile.walletFactory().generate({
+
+		return activeProfile.walletFactory().generate({
 			coin: network.coin(),
 			locale,
 			network: network.id(),
 			wordCount: network.wordCount(),
 		});
+	};
 
-		setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
-		setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
+	const handleGenerateWallet = async () => {
+		setGenerationError("");
+		setIsGeneratingWallet(true);
+
+		try {
+			const { mnemonic, wallet } = await generateWallet();
+			setValue("wallet", wallet, { shouldDirty: true, shouldValidate: true });
+			setValue("mnemonic", mnemonic, { shouldDirty: true, shouldValidate: true });
+			setActiveTab(Step.WalletOverviewStep);
+		} catch {
+			setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
+		}
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep) {
+		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHasOneNetwork)) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -97,17 +130,7 @@ export const CreateWallet = () => {
 		}
 
 		if (newIndex === Step.WalletOverviewStep) {
-			setGenerationError("");
-			setIsGeneratingWallet(true);
-
-			try {
-				await generateWallet();
-				setActiveTab(newIndex);
-			} catch {
-				setGenerationError(t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR"));
-			} finally {
-				setIsGeneratingWallet(false);
-			}
+			handleGenerateWallet();
 
 			return;
 		}
@@ -180,26 +203,41 @@ export const CreateWallet = () => {
 	};
 
 	const allSteps = useMemo(() => {
-		const steps = [
-			t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"),
+		const steps: string[] = [];
+
+		if (!onlyHasOneNetwork) {
+			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
+		}
+
+		steps.push(
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE"),
 			t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE"),
-			t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE"),
-		];
+		);
 
 		if (useEncryption) {
-			steps.splice(3, 0, t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"));
+			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"));
 		}
+
+		steps.push(t("WALLETS.PAGE_CREATE_WALLET.PROCESS_COMPLETED_STEP.TITLE"));
 
 		return steps;
 	}, [useEncryption, activeTab]);
+
+	const activeTabIndex = useMemo(() => {
+		// Since it removes the select network step
+		if (onlyHasOneNetwork) {
+			return activeTab - 1;
+		}
+
+		return activeTab;
+	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_CREATE_WALLET.TITLE")}>
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={handleFinish}>
 					<Tabs activeId={activeTab}>
-						<StepIndicator steps={allSteps} activeIndex={activeTab} />
+						<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
 
 						<div className="mt-8">
 							<TabPanel tabId={Step.NetworkStep}>
@@ -216,7 +254,7 @@ export const CreateWallet = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.WalletOverviewStep}>
-								<WalletOverviewStep />
+								<WalletOverviewStep isGeneratingWallet={isGeneratingWallet} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.ConfirmPassphraseStep}>
@@ -247,7 +285,7 @@ export const CreateWallet = () => {
 									<Button
 										data-testid="CreateWallet__continue-button"
 										disabled={isDirty ? !isValid || isGeneratingWallet : true}
-										isLoading={isGeneratingWallet}
+										isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
 										onClick={() => handleNext()}
 									>
 										{t("COMMON.CONTINUE")}

@@ -14,6 +14,7 @@ import { delay } from "@/utils/delay";
 import { getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { defaultNetworks } from "@/utils/server-utils";
 
 enum Intervals {
 	VeryShort = 15_000,
@@ -386,7 +387,18 @@ export const useProfileSynchronizer = ({
 			}
 
 			try {
-				await profile.sync();
+				// If the user only has one network, we skip the network selection
+				// step when creating or importing a wallet, which means we also
+				// skip that part of syncing network coin. The issues caused by that
+				// are solved by syncing the coin initially.
+				const availableNetworks = defaultNetworks(env, profile);
+				if (availableNetworks.length === 1) {
+					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
+					await Promise.all([coin.__construct(), profile.sync()]);
+				} else {
+					await profile.sync();
+				}
+
 				await persist();
 				setStatus("synced");
 			} catch {

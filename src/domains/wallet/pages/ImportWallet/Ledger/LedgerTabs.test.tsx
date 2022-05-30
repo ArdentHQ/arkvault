@@ -164,6 +164,32 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
+	it("should filter unallowed network", async () => {
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const mainNetwork = profile.availableNetworks()[0];
+		const developmentNetwork = profile.availableNetworks()[1];
+		const networkAllowsSpy = jest.spyOn(mainNetwork, "allows").mockReturnValue(false);
+		const profileAvailableNetworksMock = jest
+			.spyOn(profile, "availableNetworks")
+			.mockReturnValue([mainNetwork, developmentNetwork]);
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(1);
+
+		getPublicKeySpy.mockReset();
+		ledgerTransportMock.mockRestore();
+		networkAllowsSpy.mockRestore();
+		profileAvailableNetworksMock.mockRestore();
+	});
+
 	it("should render connection step", async () => {
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")

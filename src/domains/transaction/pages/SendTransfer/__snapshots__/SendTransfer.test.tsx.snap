@@ -8031,69 +8031,6 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   </div>
                 </div>
               </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Blockpool"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-bpl.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      bpl.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Compendia"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-bind.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      bind.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Qredit"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-xqr.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      xqr.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
         </div>

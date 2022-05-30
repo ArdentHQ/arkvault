@@ -148,8 +148,7 @@ export const translations = {
 		},
 		MENU_ITEM: "Networks",
 		MESSAGES: {
-			AT_LEAST_ONE_PUBLIC_NETWORK: "At least 1 public network required.",
-			AT_LEAST_ONE_TEST_NETWORK: "At least 1 development or test network required",
+			AT_LEAST_ONE_DEFAULT_NETWORK: "At least 1 default network required.",
 			CUSTOM_NETWORK_ADDED: "Custom network <strong>{{- networkName}}</strong> was successfully added.",
 			CUSTOM_NETWORK_DELETED:
 				"<strong>{{- networkName}}</strong> has been successfully deleted from your profile.",
@@ -159,13 +158,9 @@ export const translations = {
 				DESCRIPTION: "Add and manage Custom Networks for your Profile.",
 				TITLE: "Custom Networks",
 			},
-			DEVELOPMENT_AND_TEST_NETWORKS: {
-				DESCRIPTION: "Manage the Development and Test Networks for your Profile.",
-				TITLE: "Development and Test Networks",
-			},
-			PUBLIC_NETWORKS: {
-				DESCRIPTION: "Manage Public Networks for your Profile.",
-				TITLE: "Public Networks",
+			DEFAULT_NETWORKS: {
+				DESCRIPTION: "Manage the default networks that are active for your Profile",
+				TITLE: "Default Networks",
 			},
 		},
 		SUBTITLE: "Customize and manage networks. Enabled and selected networks will be visible in your Profile.",
