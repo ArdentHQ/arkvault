@@ -29,12 +29,7 @@ import { useWalletActions } from "@/domains/wallet/hooks";
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
 
-export const Starred: React.VFC<StarredProperties> = ({
-	wallet,
-	onToggleStar,
-	isCompact,
-	isLargeScreen = true,
-}) => {
+export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, isCompact, isLargeScreen = true }) => {
 	const { t } = useTranslation();
 
 	if (!isLargeScreen) {
@@ -362,12 +357,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 	);
 };
 
-export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
-	wallet,
-	isCompact,
-	onSend,
-	onSelectOption,
-}) => {
+export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
 
