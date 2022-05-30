@@ -12,6 +12,7 @@ import {
 	screen,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
 const onSave = jest.fn();
@@ -331,6 +332,25 @@ describe("ContactForm", () => {
 				],
 				name: expect.any(String),
 			});
+		});
+	});
+
+	it("should select the network if only one is available", async () => {
+		resetProfileNetworksMock();
+		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
+
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+
+		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
+
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK"));
+
+		userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+
+		await waitFor(() => {
+			expect(addressInput()).toHaveValue("AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 		});
 	});
 
