@@ -306,16 +306,16 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 	}, []);
 
 	return (
-		<button
-			type="button"
+		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
 			className={cn(
-				"w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800",
+				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400",
 				{
-					"bg-theme-primary-600 ring-2 ring-theme-primary-600": selected,
-					"dark:bg-theme-secondary-800 dark:ring-2 dark:ring-theme-secondary-800": !selected,
+					"ring-2 ring-theme-primary-600": selected,
+					"dark:ring-2 dark:ring-theme-secondary-800": !selected,
 				},
 			)}
+			tabIndex={onClick ? 0 : -1}
 			onClick={onClick}
 		>
 			<div className="flex items-center space-x-4 p-2 pl-4">
@@ -342,7 +342,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 							onClick={handleStopPropagation}
 						>
 							<button
-								data-testid="ListItemSmall--button"
+								data-testid="WalletListItemMobile--button"
 								className={cn({
 									"cursor-not-allowed opacity-50": isButtonDisabled,
 									"flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white":
@@ -358,7 +358,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 					)}
 				</div>
 			)}
-		</button>
+		</div>
 	);
 };
 

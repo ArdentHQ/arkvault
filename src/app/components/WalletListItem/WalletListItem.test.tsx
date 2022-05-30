@@ -47,15 +47,23 @@ describe("WalletListItem", () => {
 		handleSend.mockRestore();
 	});
 
+	const TableWrapper = ({ children }) => (
+		<table>
+			<tbody>
+				{children}
+			</tbody>
+		</table>
+	);
+
 	it.each([true, false])("should render when isLargeScreen = %s", (isLargeScreen: boolean) => {
+		const Wrapper = isLargeScreen ? TableWrapper : React.Fragment;
+
 		const { container } = render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} isLargeScreen={isLargeScreen} />
-					</Route>
-				</tbody>
-			</table>,
+			<Wrapper>
+				<Route path="/profiles/:profileId/dashboard">
+					<WalletListItem wallet={wallet} isLargeScreen={isLargeScreen} />
+				</Route>
+			</Wrapper>,
 			{
 				history,
 				route: dashboardURL,
@@ -65,7 +73,7 @@ describe("WalletListItem", () => {
 		expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 
 		if (!isLargeScreen) {
-			userEvent.click(screen.getByTestId("ListItemSmall"));
+			userEvent.click(screen.getByTestId("WalletListItemMobile"));
 		}
 
 		expect(container).toMatchSnapshot();
@@ -74,16 +82,16 @@ describe("WalletListItem", () => {
 	it.each([true, false])(
 		"should render when isLargeScreen = %s and wallet is not fully synced",
 		(isLargeScreen: boolean) => {
+			const Wrapper = isLargeScreen ? TableWrapper : React.Fragment;
+
 			const syncMock = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
 			const { container } = render(
-				<table>
-					<tbody>
-						<Route path="/profiles/:profileId/dashboard">
-							<WalletListItem wallet={wallet} isLargeScreen={isLargeScreen} />
-						</Route>
-					</tbody>
-				</table>,
+				<Wrapper>
+					<Route path="/profiles/:profileId/dashboard">
+						<WalletListItem wallet={wallet} isLargeScreen={isLargeScreen} />
+					</Route>
+				</Wrapper>,
 				{
 					history,
 					route: dashboardURL,
@@ -93,7 +101,7 @@ describe("WalletListItem", () => {
 			expect(screen.getByText(wallet.alias()!)).toBeInTheDocument();
 
 			if (!isLargeScreen) {
-				userEvent.click(screen.getByTestId("ListItemSmall"));
+				userEvent.click(screen.getByTestId("WalletListItemMobile"));
 			}
 
 			expect(container).toMatchSnapshot();
@@ -239,9 +247,9 @@ describe("WalletListItem", () => {
 
 		expect(asFragment).toMatchSnapshot();
 
-		expect(screen.getByTestId("ListItemSmall")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletListItemMobile")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ListItemSmall"));
+		userEvent.click(screen.getByTestId("WalletListItemMobile"));
 
 		expect(useWalletActionsReturn.handleOpen).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -269,9 +277,9 @@ describe("WalletListItem", () => {
 
 		expect(asFragment).toMatchSnapshot();
 
-		expect(screen.getByTestId("ListItemSmall")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletListItemMobile")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ListItemSmall"));
+		userEvent.click(screen.getByTestId("WalletListItemMobile"));
 
 		expect(useWalletActionsReturn.handleOpen).not.toHaveBeenCalled();
 
@@ -295,7 +303,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(screen.getByTestId("ListItemSmall--button")).toBeDisabled();
+		expect(screen.getByTestId("WalletListItemMobile--button")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -349,7 +357,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		const button = screen.getByTestId("ListItemSmall--button");
+		const button = screen.getByTestId("WalletListItemMobile--button");
 
 		expect(button).toBeInTheDocument();
 

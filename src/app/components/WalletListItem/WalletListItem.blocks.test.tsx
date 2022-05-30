@@ -45,9 +45,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<td>
-								<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
-							</td>
+							<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -73,20 +71,12 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<Starred
-									wallet={wallet}
-									handleToggleStar={jest.fn()}
-									isCompact={true}
-									isLargeScreen={false}
-								/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<Starred
+					wallet={wallet}
+					handleToggleStar={jest.fn()}
+					isCompact={true}
+					isLargeScreen={false}
+				/>
 			</Route>,
 			{
 				history,
@@ -123,7 +113,7 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render CurrencyCell", () => {
+	it("should render Currency", () => {
 		const useConfigurationReturn = { profileIsSyncingExchangeRates: true };
 		const useConfigurationSpy = jest
 			.spyOn(useConfigurationModule, "useConfiguration")
@@ -207,16 +197,10 @@ describe("WalletListItem.blocks", () => {
 		useConfigurationSpy.mockRestore();
 	});
 
-	it("should render CurrencyCell in small screen", () => {
+	it("should render Currency in small screen", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<Currency wallet={wallet} isSynced={true} isCompact={true} isLargeScreen={false} />
-						</tr>
-					</tbody>
-				</table>
+				<Currency wallet={wallet} isSynced={true} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -266,20 +250,12 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<Info
-									wallet={wallet}
-									handleToggleStar={jest.fn()}
-									isCompact={true}
-									isLargeScreen={false}
-								/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<Info
+					wallet={wallet}
+					handleToggleStar={jest.fn()}
+					isCompact={true}
+					isLargeScreen={false}
+				/>
 			</Route>,
 			{
 				history,

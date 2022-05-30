@@ -2,13 +2,13 @@
 
 exports[`WalletListItem.blocks should render Balance in small screen 1`] = `[Function]`;
 
-exports[`WalletListItem.blocks should render CurrencyCell 1`] = `[Function]`;
+exports[`WalletListItem.blocks should render Currency 1`] = `[Function]`;
 
-exports[`WalletListItem.blocks should render CurrencyCell 2`] = `[Function]`;
+exports[`WalletListItem.blocks should render Currency 2`] = `[Function]`;
 
-exports[`WalletListItem.blocks should render CurrencyCell 3`] = `[Function]`;
+exports[`WalletListItem.blocks should render Currency 3`] = `[Function]`;
 
-exports[`WalletListItem.blocks should render CurrencyCell in small screen 1`] = `[Function]`;
+exports[`WalletListItem.blocks should render Currency in small screen 1`] = `[Function]`;
 
 exports[`WalletListItem.blocks should render Info in small screen 1`] = `[Function]`;
 

@@ -851,10 +851,10 @@ exports[`SearchRecipient should render with contact on mobile 1`] = `
                       <td
                         class="pt-3"
                       >
-                        <button
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 bg-theme-primary-600 ring-2 ring-theme-primary-600"
+                        <div
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 ring-2 ring-theme-primary-600"
                           data-testid="WalletListItemMobile--selected"
-                          type="button"
+                          tabindex="0"
                         >
                           <div
                             class="flex items-center space-x-4 p-2 pl-4"
@@ -912,7 +912,7 @@ exports[`SearchRecipient should render with contact on mobile 1`] = `
                               </span>
                             </div>
                           </div>
-                        </button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -1776,10 +1776,10 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
                       <td
                         class="pt-3"
                       >
-                        <button
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 bg-theme-primary-600 ring-2 ring-theme-primary-600"
+                        <div
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 ring-2 ring-theme-primary-600"
                           data-testid="WalletListItemMobile--selected"
-                          type="button"
+                          tabindex="0"
                         >
                           <div
                             class="flex items-center space-x-4 p-2 pl-4"
@@ -1837,7 +1837,7 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
                               </span>
                             </div>
                           </div>
-                        </button>
+                        </div>
                       </td>
                     </tr>
                     <tr
@@ -1846,10 +1846,10 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
                       <td
                         class="pt-3"
                       >
-                        <button
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left dark:bg-transparent dark:ring-2 dark:ring-theme-secondary-800 dark:bg-theme-secondary-800 dark:ring-2 dark:ring-theme-secondary-800"
+                        <div
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
                           data-testid="WalletListItemMobile"
-                          type="button"
+                          tabindex="0"
                         >
                           <div
                             class="flex items-center space-x-4 p-2 pl-4"
@@ -1907,7 +1907,7 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
                               </span>
                             </div>
                           </div>
-                        </button>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
