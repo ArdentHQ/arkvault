@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 import { Skeleton } from "@/app/components/Skeleton";
 
-interface Properties {
+interface MnemonicListProperties {
 	mnemonic: string;
 }
 
-export const MnemonicList: React.VFC<Properties> = ({ mnemonic }) => {
+export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) => {
 	let mnemonicWords: string[];
 
 	// Check for Japanese "space"
@@ -30,7 +30,7 @@ export const MnemonicList: React.VFC<Properties> = ({ mnemonic }) => {
 	);
 }
 
-export const MnemonicListSkeleton: React.VFC<Properties> = ({ mnemonic }) => {
+export const MnemonicListSkeleton: React.VFC = () => {
 	const skeletons = useMemo(() => [...Array.from({ length: 24 })].map(() => {
 		const [min, max] = [50, 70];
 
