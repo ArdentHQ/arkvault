@@ -6,9 +6,8 @@ interface Properties {
 }
 
 const skeletons = [...Array.from({ length: 24 }).keys()].map((index) => {
-	const min = 50;
-	const max = 70;
-	return [index + 1, Math.floor(Math.random() * (max - min + 1) + min)];
+	const [min, max] = [50, 70];
+	return Math.floor(Math.random() * (max - min + 1) + min);
 });
 
 export function MnemonicList({ mnemonic }: Properties) {
@@ -39,18 +38,16 @@ export function MnemonicList({ mnemonic }: Properties) {
 export function MnemonicListSkeleton() {
 	return (
 		<ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4">
-			{skeletons.map(([index, width]) => (
+			{skeletons.map((width, index) => (
 				<li
 					data-testid="MnemonicList__item_skeleton"
 					key={index}
 					className="relative flex items-center rounded border border-theme-secondary-300 p-2 dark:border-theme-secondary-700 sm:p-4"
 				>
 					<span className="absolute top-0 left-0 hidden translate-x-2 -translate-y-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block">
-						{index}
+						{index + 1}
 					</span>
-					<div className="mr-4 block text-xs sm:hidden">
-						<Skeleton width={20} height={20} />
-					</div>
+					<div className="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden">{index + 1}</div>
 					<div>
 						<Skeleton width={width} height={20} />
 					</div>
