@@ -20,7 +20,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks(activeProfile);
-	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
+	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const transactionBuilder = useTransactionBuilder();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
@@ -129,7 +129,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		register("suppressWarning");
 
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);

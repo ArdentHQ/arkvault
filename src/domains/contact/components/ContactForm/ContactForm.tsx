@@ -43,13 +43,13 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { isXs } = useBreakpoint();
 
 	const { networks } = useNetworkOptions({ profile });
-	const onlyHaveOneNetwork = enabledNetworksCount(profile) === 1;
+	const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
 			name: contact?.name() ?? "",
-			network: onlyHaveOneNetwork ? networks[0] : undefined,
+			network: onlyHasOneNetwork ? networks[0] : undefined,
 		},
 		mode: "onChange",
 	});

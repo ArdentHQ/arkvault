@@ -392,8 +392,8 @@ export const useProfileSynchronizer = ({
 				// skip that part of syncing network coin. The issues caused by that
 				// are solved by syncing the coin initially.
 				const availableNetworks = defaultNetworks(env, profile);
-				const onlyHaveOneNetwork = enabledNetworksCount(profile) === 1;
-				if (onlyHaveOneNetwork) {
+				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
+				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
 					await Promise.all([coin.__construct(), profile.sync()]);
 				} else {

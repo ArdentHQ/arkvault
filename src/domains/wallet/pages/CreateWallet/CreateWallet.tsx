@@ -38,14 +38,14 @@ export const CreateWallet = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const availableNetworks = defaultNetworks(env, activeProfile);
-	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
-	const [activeTab, setActiveTab] = useState<Step>(onlyHaveOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
+	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
+	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
 
 	const { selectedNetworkIds, setValue: setConfiguration } = useWalletConfig({ profile: activeProfile });
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHaveOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -54,7 +54,7 @@ export const CreateWallet = () => {
 
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
-	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHaveOneNetwork);
+	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
 	const [generationError, setGenerationError] = useState("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
@@ -72,7 +72,7 @@ export const CreateWallet = () => {
 	}, [wallet, mnemonic]);
 
 	useEffect(() => {
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			handleGenerateWallet();
 		}
 	}, []);
@@ -115,7 +115,7 @@ export const CreateWallet = () => {
 	};
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHaveOneNetwork)) {
+		if (activeTab === Step.NetworkStep || (activeTab === Step.WalletOverviewStep && onlyHasOneNetwork)) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -205,7 +205,7 @@ export const CreateWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHaveOneNetwork) {
+		if (!onlyHasOneNetwork) {
 			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
 		}
 
@@ -225,12 +225,12 @@ export const CreateWallet = () => {
 
 	const activeTabIndex = useMemo(() => {
 		// Since it removes the select network step
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			return activeTab - 1;
 		}
 
 		return activeTab;
-	}, [onlyHaveOneNetwork, activeTab]);
+	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_CREATE_WALLET.TITLE")}>

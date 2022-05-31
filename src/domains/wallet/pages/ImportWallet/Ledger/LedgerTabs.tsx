@@ -111,7 +111,7 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 
-	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
+	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 
 	const history = useHistory();
 	const {
@@ -185,7 +185,7 @@ export const LedgerTabs = ({
 	}, [activeProfile, history]);
 
 	const handleBack = useCallback(() => {
-		if (activeTab === LedgerTabStep.NetworkStep || onlyHaveOneNetwork) {
+		if (activeTab === LedgerTabStep.NetworkStep || onlyHasOneNetwork) {
 			return returnToDashboard();
 		}
 
@@ -203,7 +203,7 @@ export const LedgerTabs = ({
 		const cancel = async () => {
 			await disconnect();
 
-			if (onlyHaveOneNetwork) {
+			if (onlyHasOneNetwork) {
 				return returnToDashboard();
 			}
 
@@ -244,13 +244,13 @@ export const LedgerTabs = ({
 	}, [history, activeProfile]);
 
 	const handleDeviceAvailable = useCallback(() => {
-		setActiveTab(onlyHaveOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
+		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
 	}, [setActiveTab]);
 
-	const steps: string[] = Array.from({ length: onlyHaveOneNetwork ? 4 : 5 });
+	const steps: string[] = Array.from({ length: onlyHasOneNetwork ? 4 : 5 });
 
 	const activeTabIndex = useMemo(() => {
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			return activeTab - 1;
 		}
 

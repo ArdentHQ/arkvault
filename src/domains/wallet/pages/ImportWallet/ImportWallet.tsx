@@ -42,7 +42,7 @@ export const ImportWallet = () => {
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
 	const availableNetworks = defaultNetworks(env, activeProfile);
-	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
+	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
@@ -61,7 +61,7 @@ export const ImportWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHaveOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -97,7 +97,7 @@ export const ImportWallet = () => {
 	});
 
 	useEffect(() => {
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			handleNext();
 		}
 	}, []);
@@ -167,7 +167,7 @@ export const ImportWallet = () => {
 		}[activeTab as Exclude<Step, Step.SummaryStep>]());
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHaveOneNetwork)) {
+		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -251,7 +251,7 @@ export const ImportWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHaveOneNetwork) {
+		if (!onlyHasOneNetwork) {
 			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
 		}
 
@@ -268,12 +268,12 @@ export const ImportWallet = () => {
 
 	const activeTabIndex = useMemo(() => {
 		// Since it removes the select network step
-		if (onlyHaveOneNetwork) {
+		if (onlyHasOneNetwork) {
 			return activeTab - 1;
 		}
 
 		return activeTab;
-	}, [onlyHaveOneNetwork, activeTab]);
+	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
