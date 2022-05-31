@@ -27,7 +27,7 @@ import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
 import { defaultNetworks } from "@/utils/server-utils";
-import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { enabledNetworksCount, networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 
 enum Step {
 	NetworkStep = 1,
@@ -42,7 +42,7 @@ export const ImportWallet = () => {
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
 	const availableNetworks = defaultNetworks(env, activeProfile);
-	const onlyHasOneNetwork = availableNetworks.length === 1;
+	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
@@ -61,7 +61,7 @@ export const ImportWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHaveOneNetwork ? availableNetworks[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -97,7 +97,7 @@ export const ImportWallet = () => {
 	});
 
 	useEffect(() => {
-		if (onlyHasOneNetwork) {
+		if (onlyHaveOneNetwork) {
 			handleNext();
 		}
 	}, []);
@@ -167,7 +167,7 @@ export const ImportWallet = () => {
 		}[activeTab as Exclude<Step, Step.SummaryStep>]());
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
+		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHaveOneNetwork)) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -251,7 +251,7 @@ export const ImportWallet = () => {
 	const allSteps = useMemo(() => {
 		const steps: string[] = [];
 
-		if (!onlyHasOneNetwork) {
+		if (!onlyHaveOneNetwork) {
 			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
 		}
 
@@ -268,12 +268,12 @@ export const ImportWallet = () => {
 
 	const activeTabIndex = useMemo(() => {
 		// Since it removes the select network step
-		if (onlyHasOneNetwork) {
+		if (onlyHaveOneNetwork) {
 			return activeTab - 1;
 		}
 
 		return activeTab;
-	}, [onlyHasOneNetwork, activeTab]);
+	}, [onlyHaveOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>

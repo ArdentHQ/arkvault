@@ -14,6 +14,7 @@ import { useBreakpoint, useNetworkOptions } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
 import { assertNetwork } from "@/utils/assertions";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown";
+import { enabledNetworksCount } from "@/utils/network-utils";
 
 export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
@@ -42,12 +43,13 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { isXs } = useBreakpoint();
 
 	const { networks } = useNetworkOptions({ profile });
+	const onlyHaveOneNetwork = enabledNetworksCount(profile) === 1;
 
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
 			name: contact?.name() ?? "",
-			network: networks.length === 1 ? networks[0] : undefined,
+			network: onlyHaveOneNetwork ? networks[0] : undefined,
 		},
 		mode: "onChange",
 	});

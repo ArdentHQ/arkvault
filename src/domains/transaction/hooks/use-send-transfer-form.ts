@@ -13,13 +13,14 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { handleBroadcastError } from "@/domains/transaction/utils";
 
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
+import { enabledNetworksCount } from "@/utils/network-utils";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks(activeProfile);
-	const onlyHasOneNetwork = networks.length === 1;
+	const onlyHaveOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const transactionBuilder = useTransactionBuilder();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
@@ -128,7 +129,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		register("suppressWarning");
 
-		if (onlyHasOneNetwork) {
+		if (onlyHaveOneNetwork) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);

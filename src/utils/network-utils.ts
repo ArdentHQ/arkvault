@@ -131,3 +131,6 @@ export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 			.filter((wallet) => profileAllEnabledNetworkIds(profile).includes(wallet.network().id()))
 			.map((wallet) => wallet.network().id()),
 	);
+
+export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
+
