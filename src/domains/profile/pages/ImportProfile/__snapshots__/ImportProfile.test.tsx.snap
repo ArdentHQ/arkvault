@@ -601,7 +601,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="ring-focus group inline-block css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="terms"
+                                href="http://arkvault.io/terms-of-service"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -625,7 +625,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="ring-focus group inline-block css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="privacy"
+                                href="https://arkvault.io/privacy-policy"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -1289,7 +1289,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="ring-focus group inline-block css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="terms"
+                                href="http://arkvault.io/terms-of-service"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -1313,7 +1313,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                                 class="ring-focus group inline-block css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="privacy"
+                                href="https://arkvault.io/privacy-policy"
                                 rel="noopener noreferrer"
                               >
                                 <span
