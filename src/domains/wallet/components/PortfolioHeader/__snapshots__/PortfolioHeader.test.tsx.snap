@@ -270,6 +270,9 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
             class="hidden flex-initial space-x-4 sm:flex"
             css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
           >
+            <span
+              class="hidden"
+            />
             <div
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
@@ -279,7 +282,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
                 Wallets
               </span>
               <span
-                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
               >
                 <div
                   class="flex items-center justify-end sm:h-6"
@@ -501,6 +504,9 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
             class="hidden flex-initial space-x-4 sm:flex"
             css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
           >
+            <span
+              class="hidden"
+            />
             <div
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
@@ -510,7 +516,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
                 Wallets
               </span>
               <span
-                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
               >
                 <div
                   class="flex items-center justify-end sm:h-6"
@@ -876,6 +882,9 @@ exports[`Portfolio grouped networks should render list 1`] = `
             class="hidden flex-initial space-x-4 sm:flex"
             css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
           >
+            <span
+              class="hidden"
+            />
             <div
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
@@ -885,7 +894,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
                 Wallets
               </span>
               <span
-                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
               >
                 <div
                   class="flex items-center justify-end sm:h-6"
@@ -1107,6 +1116,9 @@ exports[`Portfolio grouped networks should render list 1`] = `
             class="hidden flex-initial space-x-4 sm:flex"
             css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
           >
+            <span
+              class="hidden"
+            />
             <div
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
@@ -1116,7 +1128,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
                 Wallets
               </span>
               <span
-                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
               >
                 <div
                   class="flex items-center justify-end sm:h-6"
@@ -1482,6 +1494,9 @@ exports[`Portfolio grouped networks should render without testnet wallets 1`] = 
             class="hidden flex-initial space-x-4 sm:flex"
             css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
           >
+            <span
+              class="hidden"
+            />
             <div
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
@@ -1491,7 +1506,7 @@ exports[`Portfolio grouped networks should render without testnet wallets 1`] = 
                 Wallets
               </span>
               <span
-                class="text-base text-theme-secondary-600 dark:text-theme-secondary-200"
+                class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
               >
                 <div
                   class="flex items-center justify-end sm:h-6"
