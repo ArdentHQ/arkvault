@@ -69,7 +69,7 @@ const InputButtonStyled = styled.button(() => [
 	)`,
 	css`
 		&.active {
-			${tw`border-theme-success-600 bg-theme-success-50 dark:bg-theme-success-900`}
+			${tw`border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900`}
 		}
 	`,
 ]);
