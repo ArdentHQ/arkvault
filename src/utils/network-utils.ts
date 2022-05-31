@@ -133,4 +133,3 @@ export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	);
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
-
