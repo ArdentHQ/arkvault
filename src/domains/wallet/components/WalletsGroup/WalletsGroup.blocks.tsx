@@ -139,6 +139,14 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		return [totalNetworkBalance, totalConvertedNetworkBalance];
 	}, [wallets]);
 
+	const renderWallets = () => {
+		if (profileIsSyncing) {
+			return <GroupSkeleton width={60} />;
+		}
+
+		return wallets.length;
+	};
+
 	const renderBalance = () => {
 		if (profileIsSyncing) {
 			return <GroupSkeleton width={140} className="h-5" innerClassName="h-4" />;
@@ -182,10 +190,11 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 					}
 				`}
 			>
+				{/* needed for the border color on the first LabelledText element */}
+				<span className="hidden" />
+
 				<LabelledText label={t("COMMON.WALLETS")}>
-					<span className="text-base text-theme-secondary-600 dark:text-theme-secondary-200">
-						{profileIsSyncing ? <GroupSkeleton width={60} /> : wallets.length}
-					</span>
+					{(className) => <span className={className}>{renderWallets()}</span>}
 				</LabelledText>
 
 				<LabelledText label={t("COMMON.TOTAL_BALANCE")} maxWidthReference={maxWidthReferences?.balance}>
