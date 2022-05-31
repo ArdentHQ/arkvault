@@ -28,14 +28,18 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 			))}
 		</ul>
 	);
-}
+};
 
 export const MnemonicListSkeleton: React.VFC = () => {
-	const skeletons = useMemo(() => [...Array.from({ length: 24 })].map(() => {
-		const [min, max] = [50, 70];
+	const skeletons = useMemo(
+		() =>
+			[...Array.from({ length: 24 })].map(() => {
+				const [min, max] = [50, 70];
 
-		return Math.floor(Math.random() * (max - min + 1) + min);
-	}), []);
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}),
+		[],
+	);
 
 	return (
 		<ul className="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4">
@@ -56,4 +60,4 @@ export const MnemonicListSkeleton: React.VFC = () => {
 			))}
 		</ul>
 	);
-}
+};
