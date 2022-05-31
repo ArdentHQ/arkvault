@@ -20,7 +20,6 @@ import { toasts } from "@/app/services";
 let profile: Contracts.IProfile;
 
 const networkListItemCheckboxTestId = "NetworksListNetwork-checkbox";
-const toggleDevelopmentNetworksTestId = "Plugin-settings__networks--useDevelopmentAndTestNetworks";
 const customNetworkItemToggleTestId = "CustomNetworksListNetwork-checkbox";
 const networkFormModalAlertTestId = "NetworkFormModal-alert";
 const removeCustomNetworkOptionTestId = "dropdown__option--2";
@@ -83,14 +82,14 @@ describe("Network Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(screen.getAllByTestId("list-divided-item__wrapper")).toHaveLength(3);
+		expect(screen.getAllByTestId("list-divided-item__wrapper")).toHaveLength(2);
 
 		expect(submitButton()).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should list the public networks selected", () => {
+	it("should check the main network by default", () => {
 		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/settings/networks">
 				<NetworksSettings />
@@ -104,16 +103,14 @@ describe("Network Settings", () => {
 
 		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
 
-		expect(screen.getAllByTestId("NetworksListNetwork")).toHaveLength(4);
+		expect(screen.getAllByTestId("NetworksListNetwork")).toHaveLength(2);
 
 		const checkboxes = screen.getAllByTestId(networkListItemCheckboxTestId);
 
-		expect(checkboxes).toHaveLength(4);
+		expect(checkboxes).toHaveLength(2);
 
 		expect(checkboxes[0]).toBeChecked();
-		expect(checkboxes[1]).toBeChecked();
-		expect(checkboxes[2]).toBeChecked();
-		expect(checkboxes[3]).toBeChecked();
+		expect(checkboxes[1]).not.toBeChecked();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -135,13 +132,11 @@ describe("Network Settings", () => {
 		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
 
 		expect(checkboxes[0]).toBeChecked();
-		expect(checkboxes[1]).not.toBeChecked();
-		expect(checkboxes[2]).toBeChecked();
-		expect(checkboxes[3]).toBeChecked();
+		expect(checkboxes[1]).toBeChecked();
 
 		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
 
-		expect(checkboxes[1]).toBeChecked();
+		expect(checkboxes[1]).not.toBeChecked();
 	});
 
 	it("shows a warning if user tries to unselect all items", () => {
@@ -158,118 +153,11 @@ describe("Network Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const checkboxes = screen.getAllByTestId(networkListItemCheckboxTestId);
-
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[0]);
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[1]);
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[3]);
-
-		expect(checkboxes[0]).not.toBeChecked();
-		expect(checkboxes[1]).not.toBeChecked();
-		expect(checkboxes[2]).toBeChecked();
-		expect(checkboxes[3]).not.toBeChecked();
-
 		expect(toastSpy).not.toHaveBeenCalled();
 
-		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[2]);
-
-		expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.NETWORKS.MESSAGES.AT_LEAST_ONE_PUBLIC_NETWORK);
-
-		toastSpy.mockRestore();
-	});
-
-	it("enables and disables the test networks", () => {
-		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/settings/networks`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
-
-		userEvent.click(screen.getByTestId(toggleDevelopmentNetworksTestId));
-
-		expect(screen.getAllByTestId("NetworksList")).toHaveLength(2);
-
-		userEvent.click(screen.getByTestId(toggleDevelopmentNetworksTestId));
-
-		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
-	});
-
-	it("selects the equivalent dev networks from public networks when dev is enabled", () => {
-		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/settings/networks`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
-
-		// Unselect "Ark mainet"
 		userEvent.click(screen.getAllByTestId("NetworksListNetwork")[0]);
 
-		userEvent.click(screen.getByTestId(toggleDevelopmentNetworksTestId));
-
-		const devnetworkListWrapper = within(screen.getByTestId("NetworksList--development"));
-
-		expect(devnetworkListWrapper.getAllByTestId("NetworksListNetwork")).toHaveLength(3);
-
-		const checkboxes = devnetworkListWrapper.getAllByTestId(networkListItemCheckboxTestId);
-
-		// Ark devnet remains unchecked
-		expect(checkboxes[0]).not.toBeChecked();
-
-		expect(checkboxes[1]).toBeChecked();
-		expect(checkboxes[2]).toBeChecked();
-	});
-
-	it("shows a warning if user tries to unselect all dev networks", () => {
-		const toastSpy = jest.spyOn(toasts, "warning");
-		const { container } = render(
-			<Route path="/profiles/:profileId/settings/networks">
-				<NetworksSettings />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}/settings/networks`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
-
-		userEvent.click(screen.getByTestId(toggleDevelopmentNetworksTestId));
-
-		const devnetworkListWrapper = within(screen.getByTestId("NetworksList--development"));
-
-		expect(devnetworkListWrapper.getAllByTestId("NetworksListNetwork")).toHaveLength(3);
-
-		const developmentNetworks = devnetworkListWrapper.getAllByTestId("NetworksListNetwork");
-
-		userEvent.click(developmentNetworks[0]);
-		userEvent.click(developmentNetworks[1]);
-
-		const checkboxes = devnetworkListWrapper.getAllByTestId(networkListItemCheckboxTestId);
-
-		expect(checkboxes[0]).not.toBeChecked();
-		expect(checkboxes[1]).not.toBeChecked();
-		expect(checkboxes[2]).toBeChecked();
-
-		expect(toastSpy).not.toHaveBeenCalled();
-
-		userEvent.click(developmentNetworks[2]);
-
-		expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.NETWORKS.MESSAGES.AT_LEAST_ONE_TEST_NETWORK);
+		expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.NETWORKS.MESSAGES.AT_LEAST_ONE_DEFAULT_NETWORK);
 
 		toastSpy.mockRestore();
 	});
@@ -292,21 +180,15 @@ describe("Network Settings", () => {
 
 		expect(screen.getAllByTestId("NetworksList")).toHaveLength(1);
 
-		userEvent.click(screen.getByTestId(toggleDevelopmentNetworksTestId));
-
 		const mainListWrapper = within(screen.getByTestId("NetworksList--main"));
-		const devnetworkListWrapper = within(screen.getByTestId("NetworksList--development"));
-
-		expect(devnetworkListWrapper.getAllByTestId("NetworksListNetwork")).toHaveLength(3);
 
 		const publicNetworks = mainListWrapper.getAllByTestId("NetworksListNetwork");
-		const developmentNetworks = devnetworkListWrapper.getAllByTestId("NetworksListNetwork");
 
-		// Unselect "blockpool"
+		// select "Ark devnet"
 		userEvent.click(publicNetworks[1]);
 
-		// Unselect "Ark devnet"
-		userEvent.click(developmentNetworks[0]);
+		// Unselect "ark mainnet"
+		userEvent.click(publicNetworks[0]);
 
 		expect(submitButton()).toBeEnabled();
 
@@ -314,15 +196,11 @@ describe("Network Settings", () => {
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
 
-		expect(networksForgetSpy).toHaveBeenCalledTimes(4);
+		expect(networksForgetSpy).toHaveBeenCalledTimes(1);
 
 		expect(networksFillSpy).toHaveBeenCalledWith(
 			expect.objectContaining({
-				"ark.mainnet": expect.any(Object),
-				"bind.mainnet": expect.any(Object),
-				"bind.testnet": expect.any(Object),
-				"xqr.mainnet": expect.any(Object),
-				"xqr.testnet": expect.any(Object),
+				"ark.devnet": expect.any(Object),
 			}),
 		);
 
@@ -563,8 +441,6 @@ describe("Network Settings", () => {
 				userEvent.click(submitButton());
 
 				await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(settingsTranslations.GENERAL.SUCCESS));
-
-				expect(networksForgetSpy).toHaveBeenCalledTimes(4);
 
 				expect(networksFillSpy).toHaveBeenCalledWith(
 					expect.objectContaining({
@@ -1389,8 +1265,11 @@ describe("Network Settings", () => {
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				customNetworkFormModalNameField().select();
-				userEvent.paste(customNetworkFormModalNameField(), customNetworkFormModalNameField().value);
+				userEvent.clear(customNetworkFormModalNameField());
+
+				userEvent.paste(customNetworkFormModalNameField(), "New name");
+
+				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
@@ -1426,8 +1305,11 @@ describe("Network Settings", () => {
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				customNetworkFormModalNameField().select();
-				userEvent.paste(customNetworkFormModalNameField(), customNetworkFormModalNameField().value);
+				userEvent.clear(customNetworkFormModalNameField());
+
+				userEvent.paste(customNetworkFormModalNameField(), "New name");
+
+				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 
@@ -1458,8 +1340,11 @@ describe("Network Settings", () => {
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
-				customNetworkFormModalNameField().select();
-				userEvent.paste(customNetworkFormModalNameField(), customNetworkFormModalNameField().value);
+				userEvent.clear(customNetworkFormModalNameField());
+
+				userEvent.paste(customNetworkFormModalNameField(), "New name");
+
+				expect(customNetworkFormModalNameField()).toHaveValue("New name");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
 

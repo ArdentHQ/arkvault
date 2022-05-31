@@ -26,6 +26,7 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
+import { defaultNetworks } from "@/utils/server-utils";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
 
 enum Step {
@@ -38,6 +39,10 @@ enum Step {
 export const ImportWallet = () => {
 	const history = useHistory();
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
+	const activeProfile = useActiveProfile();
+	const { env, persist } = useEnvironmentContext();
+	const availableNetworks = defaultNetworks(env, activeProfile);
+	const onlyHasOneNetwork = availableNetworks.length === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
@@ -48,17 +53,18 @@ export const ImportWallet = () => {
 	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const { env, persist } = useEnvironmentContext();
-
-	const activeProfile = useActiveProfile();
-
 	const { selectedNetworkIds, setValue } = useWalletConfig({ profile: activeProfile });
 
 	const { t } = useTranslation();
 	const { importWalletByType } = useWalletImport({ profile: activeProfile });
 	const { syncAll } = useWalletSync({ env, profile: activeProfile });
 
-	const form = useForm<any>({ mode: "onChange" });
+	const form = useForm<any>({
+		defaultValues: {
+			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+		},
+		mode: "onChange",
+	});
 
 	const { getValues, formState, register, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
@@ -89,6 +95,12 @@ export const ImportWallet = () => {
 			handleNext();
 		}
 	});
+
+	useEffect(() => {
+		if (onlyHasOneNetwork) {
+			handleNext();
+		}
+	}, []);
 
 	const handleNext = () =>
 		({
@@ -155,7 +167,7 @@ export const ImportWallet = () => {
 		}[activeTab as Exclude<Step, Step.SummaryStep>]());
 
 	const handleBack = () => {
-		if (activeTab === Step.NetworkStep) {
+		if (activeTab === Step.NetworkStep || (activeTab === Step.MethodStep && onlyHasOneNetwork)) {
 			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
 		}
 
@@ -237,18 +249,31 @@ export const ImportWallet = () => {
 	}, [activeTab, confirmEncryptionPassword, encryptionPassword, isDirty, isEncrypting, isImporting, isValid]);
 
 	const allSteps = useMemo(() => {
-		const steps = [
-			t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"),
-			t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"),
-			t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE"),
-		];
+		const steps: string[] = [];
+
+		if (!onlyHasOneNetwork) {
+			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"));
+		}
+
+		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.METHOD_STEP.TITLE"));
 
 		if (useEncryption) {
-			steps.splice(2, 0, t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"));
+			steps.push(t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE"));
 		}
+
+		steps.push(t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE"));
 
 		return steps;
 	}, [useEncryption, activeTab]);
+
+	const activeTabIndex = useMemo(() => {
+		// Since it removes the select network step
+		if (onlyHasOneNetwork) {
+			return activeTab - 1;
+		}
+
+		return activeTab;
+	}, [onlyHasOneNetwork, activeTab]);
 
 	return (
 		<Page pageTitle={t("WALLETS.PAGE_IMPORT_WALLET.TITLE")}>
@@ -270,7 +295,7 @@ export const ImportWallet = () => {
 						/>
 					) : (
 						<Tabs activeId={activeTab}>
-							<StepIndicator steps={allSteps} activeIndex={activeTab} />
+							<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />
 
 							<div className="mt-8">
 								<TabPanel tabId={Step.NetworkStep}>

@@ -17,9 +17,9 @@ export const goToTransferPage = async (t: any) => {
 
 export const goToTransferPageThroughNavbar = async (t: any) => {
 	await t.click(Selector("[data-testid=NavigationBar__buttons--send]"));
-	await t.expect(Selector("[data-testid=SendTransfer__network-step]").exists).ok();
+	await t.expect(Selector("[data-testid=SendTransfer__form-step]").exists).ok();
 	await t
-		.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
+		.expect(Selector("div").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION).exists)
 		.ok();
 };
 

@@ -26,16 +26,15 @@ export const initializeEnvironment = (): Environment => {
 					return;
 				}
 
-				const initialNetworks = {};
-				const networksIds = Object.keys(ARK.manifest.networks).filter(
-					(networkId) => isE2E() || networkId.endsWith(".mainnet"),
-				);
+				// Assign default networks to profile
+				const initialNetworks = {
+					"ark.mainnet": ARK.manifest.networks["ark.mainnet"],
+				};
 
-				for (const networkId of networksIds) {
-					initialNetworks[networkId] = ARK.manifest.networks[networkId];
+				if (isE2E()) {
+					initialNetworks["ark.devnet"] = ARK.manifest.networks["ark.devnet"];
 				}
 
-				// Assign default networks to profile
 				profile.networks().fill(initialNetworks);
 
 				await env.persist();

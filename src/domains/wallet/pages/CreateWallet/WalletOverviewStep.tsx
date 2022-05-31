@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -6,19 +6,15 @@ import { Alert } from "@/app/components/Alert";
 import { Header } from "@/app/components/Header";
 import { Toggle } from "@/app/components/Toggle";
 import { toasts } from "@/app/services";
-import { MnemonicList } from "@/domains/wallet/components/MnemonicList";
+import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 
-export const WalletOverviewStep = () => {
+export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
 	const { getValues, setValue, unregister, watch } = useFormContext();
 
-	// getValues does not get the value of `defaultValues` on first render
-	const [defaultMnemonic] = useState(() => watch("mnemonic"));
-	const mnemonic = getValues("mnemonic") || defaultMnemonic;
+	const { wallet, mnemonic } = watch();
 
-	const [defaultWallet] = useState(() => watch("wallet"));
-	const wallet = getValues("wallet") || defaultWallet;
 	const { isLegacy, showSaveDialog } = useFiles();
 
 	const { t } = useTranslation();
@@ -49,16 +45,17 @@ export const WalletOverviewStep = () => {
 		<section data-testid="CreateWallet__WalletOverviewStep">
 			<Header title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")} className="hidden sm:block" />
 
-			<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
-
 			<div className="mt-8 space-y-8">
-				<MnemonicList mnemonic={mnemonic} />
+				<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
+
+				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
 
 				<CopyOrDownload
 					title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.TITLE")}
 					description={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.COPY_OR_DOWNLOAD.DESCRIPTION")}
 					copyData={mnemonic}
 					onClickDownload={() => handleDownload()}
+					disabled={isGeneratingWallet}
 				/>
 
 				<div className="flex w-full flex-col space-y-2">
@@ -72,6 +69,7 @@ export const WalletOverviewStep = () => {
 								data-testid="CreateWallet__encryption-toggle"
 								defaultChecked={getValues("useEncryption")}
 								onChange={handleToggleEncryption}
+								disabled={isGeneratingWallet}
 							/>
 						</span>
 					</div>

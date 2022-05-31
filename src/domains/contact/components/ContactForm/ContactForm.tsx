@@ -41,11 +41,13 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
 
+	const { networks } = useNetworkOptions({ profile });
+
 	const form = useForm<ContactFormState>({
 		defaultValues: {
 			address: "",
 			name: contact?.name() ?? "",
-			network: undefined,
+			network: networks.length === 1 ? networks[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -66,8 +68,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 			setError(field, { message, type: "manual" });
 		}
 	}, [errors, setError]);
-
-	const { networks } = useNetworkOptions({ profile });
 
 	const filteredNetworks = useMemo(() => {
 		const usedNetworks = new Set(addresses.map((address) => address.network));
