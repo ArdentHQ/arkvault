@@ -46,7 +46,7 @@ export const SendTransfer: React.VFC = () => {
 
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const showNetworkStep = !hasDeepLinkParameters && !activeWallet;
+	const showNetworkStep = !hasDeepLinkParameters && !activeWallet && networks.length > 1;
 	const firstTabIndex = showNetworkStep ? SendTransferStep.NetworkStep : SendTransferStep.FormStep;
 	const [activeTab, setActiveTab] = useState<SendTransferStep>(firstTabIndex);
 

@@ -329,67 +329,6 @@ const publicNetworksStub: any = {
 			type: "live",
 		},
 	},
-	bind: {
-		mainnet: {
-			...DefaultManifest,
-			coin: "Compendia",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "bind.mainnet",
-			name: "Mainnet",
-			type: "live",
-		},
-	},
-	bpl: {
-		mainnet: {
-			...DefaultManifest,
-			coin: "Blockpool",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "bpl.mainnet",
-			name: "Mainnet",
-			type: "live",
-		},
-	},
-	xqr: {
-		mainnet: {
-			...DefaultManifest,
-			coin: "Qredit",
-			currency: {
-				ticker: "ARK",
-			},
-			featureFlags: {
-				...DefaultManifest.featureFlags,
-				Transaction: [
-					"delegateRegistration",
-					"delegateResignation",
-					"estimateExpiration",
-					"ipfs.ledgerS",
-					"ipfs.ledgerX",
-					"ipfs.musig",
-					"ipfs",
-					"multiPayment.musig",
-					"multiPayment",
-					"multiSignature.ledgerX",
-					"multiSignature.musig",
-					"multiSignature",
-					"secondSignature",
-					"transfer.musig",
-					"transfer",
-					"vote.ledgerS",
-					"vote.ledgerX",
-					"vote.musig",
-					"vote",
-				],
-			},
-			id: "xqr.mainnet",
-			name: "Mainnet",
-
-			type: "live",
-		},
-	},
 };
 
 const testNetworksStub: any = {
@@ -402,30 +341,6 @@ const testNetworksStub: any = {
 			},
 			id: "ark.devnet",
 			name: "Devnet",
-			type: "test",
-		},
-	},
-	bind: {
-		testnet: {
-			...DefaultManifest,
-			coin: "Compendia",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "bind.testnet",
-			name: "Testnet",
-			type: "test",
-		},
-	},
-	xqr: {
-		testnet: {
-			...DefaultManifest,
-			coin: "Qredit",
-			currency: {
-				ticker: "ARK",
-			},
-			id: "xqr.testnet",
-			name: "Testnet",
 			type: "test",
 		},
 	},
@@ -478,18 +393,9 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
 		},
-		bind: {
-			...publicNetworksStub["bind"],
-			...testNetworksStub["bind"],
-		},
-		bpl: publicNetworksStub["bpl"],
 		ramdom: {
 			...customNetworksStub["random-enabled"],
 			...customNetworksStub["random"],
-		},
-		xqr: {
-			...publicNetworksStub["xqr"],
-			...testNetworksStub["xqr"],
 		},
 	});
 

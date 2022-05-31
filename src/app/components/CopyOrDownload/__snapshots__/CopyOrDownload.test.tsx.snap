@@ -25,7 +25,7 @@ exports[`CopyOrDownload should render 1`] = `
         type="button"
       >
         <div
-          class="link flex items-center space-x-2 font-semibold"
+          class="flex items-center space-x-2 font-semibold link "
         >
           <div
             class="css-v0ob3f"
@@ -46,7 +46,7 @@ exports[`CopyOrDownload should render 1`] = `
         type="vertical"
       />
       <button
-        class="link flex items-center space-x-2 font-semibold"
+        class="flex items-center space-x-2 font-semibold link"
         data-testid="CopyOrDownload__download"
         type="button"
       >

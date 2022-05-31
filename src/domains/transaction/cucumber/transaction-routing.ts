@@ -26,13 +26,6 @@ const transferPageStep = {
 			.ok({ timeout: 60_000 });
 	},
 };
-const selectCryptoStep = {
-	"Then she is on the select crypto asset page": async (t: TestController) => {
-		await t
-			.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
-			.ok();
-	},
-};
 
 cucumber("@transactionRouting-transferPage", {
 	...preSteps,
@@ -46,7 +39,6 @@ cucumber("@transactionRouting-transferPageNavbar", {
 	"When she navigates to the transfer page via the navbar": async (t: TestController) => {
 		await goToTransferPageThroughNavbar(t);
 	},
-	...selectCryptoStep,
 });
 cucumber("@transactionRouting-reloadTransfer", {
 	...preSteps,
@@ -57,7 +49,6 @@ cucumber("@transactionRouting-reloadTransfer", {
 	"When she navigates to the transfer page via the navbar": async (t: TestController) => {
 		await goToTransferPageThroughNavbar(t);
 	},
-	...selectCryptoStep,
 });
 cucumber(
 	"@transactionRouting-delegateResignation",
