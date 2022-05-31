@@ -63,6 +63,16 @@ const TooltipWrapper = styled.div`
 		left: calc(50% - 8px);
 	}
 
+	&.left:after {
+		right: auto;
+		left: 20px;
+	}
+
+	&.right:after {
+		left: auto;
+		right: 20px;
+	}
+
 	&[data-theme~="light"]:after {
 		border-top: 8px solid var(--theme-color-secondary-900);
 	}

@@ -84,7 +84,24 @@ const useGraphTooltip: UseGraphTooltipHook = (renderFunction, type) => {
 			const targetRect = (event.target as SVGElement).getBoundingClientRect();
 
 			if (type === "line") {
-				tooltipElement.style.left = `${event.pageX - Math.floor(tooltipElement.clientWidth / 2)}px`;
+				const tooltipClassList = tooltipElement.querySelector("[data-testid='PortfolioBreakdown__tooltip']")?.classList;
+
+				let leftOffset: number;
+
+				if (event.pageX < document.body.scrollWidth / 4) {
+					tooltipClassList?.remove("right")
+					tooltipClassList?.add("left")
+					leftOffset = Math.floor(20 + 8);
+				} else if (event.pageX > document.body.scrollWidth / 4 * 3) {
+					tooltipClassList?.remove("left")
+					tooltipClassList?.add("right")
+					leftOffset = Math.floor(tooltipElement.clientWidth - 20 - 8);
+				} else {
+					tooltipClassList?.remove("left", "right");
+					leftOffset = Math.floor(tooltipElement.clientWidth / 2);
+				};
+
+				tooltipElement.style.left = `${event.pageX - leftOffset}px`;
 				tooltipElement.style.top = `${targetRect.top + document.documentElement.scrollTop - 48}px`;
 			}
 
