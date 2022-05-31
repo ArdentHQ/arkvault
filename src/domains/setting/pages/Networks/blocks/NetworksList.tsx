@@ -38,7 +38,8 @@ const NetworksListNetwork: React.VFC<{
 				</div>
 				<div className="font-semibold">{networkDisplayName(network)}</div>
 			</div>
-			<div>
+
+			<div className="flex items-center">
 				<Checkbox
 					data-testid="NetworksListNetwork-checkbox"
 					id={`NetworksListNetwork-${network.id()}`}

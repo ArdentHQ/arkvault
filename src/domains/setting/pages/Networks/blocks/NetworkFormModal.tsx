@@ -47,17 +47,13 @@ const NetworkFormModal: React.VFC<{
 		let configurationResponse: NodeConfigurationResponse;
 		let configurationCryptoResponse: any;
 
-		console.log("Sfdsgadshgkldasghkladsghdaskghjadslkghadsklghadsklghjlads");
-
 		try {
 			const response = await client.get(`${baseUrl}/api/node/configuration`);
 			const cryptoResponse = await client.get(`${baseUrl}/api/node/configuration/crypto`);
 
-			console.log({ cryptoResponse, response });
 			configurationResponse = JSON.parse(response.body()).data as NodeConfigurationResponse;
 			configurationCryptoResponse = JSON.parse(cryptoResponse.body()).data;
 		} catch {
-			console.log(":D");
 			setFetchingError(true);
 			setFetchingDetails(false);
 			return;
