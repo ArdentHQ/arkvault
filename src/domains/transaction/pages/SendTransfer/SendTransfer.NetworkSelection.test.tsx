@@ -38,8 +38,16 @@ const history = createHashHistory();
 jest.setTimeout(10_000);
 
 describe("SendTransfer Network Selection", () => {
-	beforeAll(() => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		// Profile needs a wallet on the mainnet network to show network selection
+		// step.
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
 
 		nock("https://ark-test.payvo.com")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")

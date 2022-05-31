@@ -4,6 +4,7 @@ interface ClipboardCommonProperties {
 	data: string | object;
 	options?: Record<string, any>;
 	children: React.ReactNode;
+	disabled?: boolean;
 }
 
 export type ClipboardButtonProperties = ClipboardCommonProperties & {

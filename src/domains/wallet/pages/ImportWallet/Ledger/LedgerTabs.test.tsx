@@ -18,6 +18,7 @@ import {
 	mockNanoXTransport,
 	mockLedgerTransportError,
 	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
@@ -162,6 +163,32 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
+	});
+
+	it("should filter unallowed network", async () => {
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const mainNetwork = profile.availableNetworks()[0];
+		const developmentNetwork = profile.availableNetworks()[1];
+		const networkAllowsSpy = jest.spyOn(mainNetwork, "allows").mockReturnValue(false);
+		const profileAvailableNetworksMock = jest
+			.spyOn(profile, "availableNetworks")
+			.mockReturnValue([mainNetwork, developmentNetwork]);
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(1);
+
+		getPublicKeySpy.mockReset();
+		ledgerTransportMock.mockRestore();
+		networkAllowsSpy.mockRestore();
+		profileAvailableNetworksMock.mockRestore();
 	});
 
 	it("should render connection step", async () => {
@@ -347,6 +374,34 @@ describe("LedgerTabs", () => {
 		});
 
 		await expect(screen.findByTestId("LedgerScanStep__error")).resolves.toBeVisible();
+
+		getPublicKeySpy.mockRestore();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should skip network step if only one available network", async () => {
+		resetProfileNetworksMock();
+
+		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		const { history } = render(<Component activeIndex={1} />, {
+			route: `/profiles/${profile.id()}`,
+			withProviders: true,
+		});
+
+		await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
+
+		await waitFor(() => expect(backSelector()).toBeEnabled());
+
+		userEvent.click(backSelector());
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();

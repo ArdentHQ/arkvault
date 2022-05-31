@@ -15,7 +15,7 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { LedgerData, useLedgerContext } from "@/app/contexts";
+import { LedgerData, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { useWalletConfig } from "@/domains/wallet/hooks";
@@ -23,6 +23,7 @@ import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { defaultNetworks } from "@/utils/server-utils";
 
 const Paginator = ({
 	activeIndex,
@@ -111,6 +112,12 @@ export const LedgerTabs = ({
 }: LedgerTabsProperties) => {
 	const activeProfile = useActiveProfile();
 
+	const { env } = useEnvironmentContext();
+
+	const availableNetworks = defaultNetworks(env, activeProfile);
+
+	const onlyHasOneNetwork = availableNetworks.length === 1;
+
 	const history = useHistory();
 	const {
 		importLedgerWallets,
@@ -178,9 +185,13 @@ export const LedgerTabs = ({
 		setActiveTab(activeTab + 1);
 	}, [activeTab, handleSubmit, importWallets]);
 
+	const returnToDashboard = useCallback(() => {
+		history.push(`/profiles/${activeProfile.id()}/dashboard`);
+	}, [activeProfile, history]);
+
 	const handleBack = useCallback(() => {
-		if (activeTab === LedgerTabStep.NetworkStep) {
-			return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+		if (activeTab === LedgerTabStep.NetworkStep || onlyHasOneNetwork) {
+			return returnToDashboard();
 		}
 
 		listenDevice();
@@ -196,6 +207,10 @@ export const LedgerTabs = ({
 	useEffect(() => {
 		const cancel = async () => {
 			await disconnect();
+
+			if (onlyHasOneNetwork) {
+				return returnToDashboard();
+			}
 
 			setActiveTab(LedgerTabStep.ListenLedgerStep);
 		};
@@ -234,12 +249,22 @@ export const LedgerTabs = ({
 	}, [history, activeProfile]);
 
 	const handleDeviceAvailable = useCallback(() => {
-		setActiveTab(LedgerTabStep.NetworkStep);
+		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
 	}, [setActiveTab]);
+
+	const steps: string[] = Array.from({ length: onlyHasOneNetwork ? 4 : 5 });
+
+	const activeTabIndex = useMemo(() => {
+		if (onlyHasOneNetwork) {
+			return activeTab - 1;
+		}
+
+		return activeTab;
+	}, [activeTab]);
 
 	return (
 		<Tabs id="ledgerTabs" activeId={activeTab}>
-			<StepIndicator steps={Array.from({ length: 5 })} activeIndex={activeTab} />
+			<StepIndicator steps={steps} activeIndex={activeTabIndex} />
 
 			<div data-testid="LedgerTabs" className="mt-8">
 				<TabPanel tabId={LedgerTabStep.ListenLedgerStep}>

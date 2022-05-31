@@ -73,6 +73,14 @@ describe("SendTransfer Fee Handling", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
+		// Profile needs a wallet on the mainnet network to show network selection
+		// step.
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
+
 		profile.coins().set("ARK", "ark.devnet");
 
 		nock("https://ark-test.payvo.com")
