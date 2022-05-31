@@ -310,6 +310,35 @@ describe("ImportWallet", () => {
 		historySpy.mockRestore();
 	});
 
+	it("should skip network step if only one network", async () => {
+		const history = createHashHistory();
+
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		resetProfileNetworksMock();
+
+		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				history,
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
+
+		await waitFor(() => expect(backButton()).toBeEnabled());
+		userEvent.click(backButton());
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+
+		historySpy.mockRestore();
+	});
+
 	it("should go to previous step", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">

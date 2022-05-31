@@ -250,7 +250,7 @@ describe("Servers Settings", () => {
 
 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(7);
+			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 		});
 
 		it("should render only live nodes if doesnt use test networks", async () => {
@@ -269,7 +269,7 @@ describe("Servers Settings", () => {
 
 			expect(screen.getByTestId("NodesStatus")).toBeInTheDocument();
 
-			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(4);
+			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(1);
 
 			resetProfileNetworksMock();
 		});

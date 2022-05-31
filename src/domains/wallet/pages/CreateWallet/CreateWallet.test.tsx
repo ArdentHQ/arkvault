@@ -16,6 +16,7 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
 jest.setTimeout(30_000);
@@ -180,6 +181,42 @@ describe("CreateWallet", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		historySpy.mockRestore();
+	});
+
+	it("should skip the network selection step if only one network", async () => {
+		resetProfileNetworksMock();
+
+		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const history = createHashHistory();
+		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
+		history.push(createURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/create">
+				<CreateWallet />
+			</Route>,
+			{
+				history,
+				route: createURL,
+			},
+		);
+
+		const backButton = screen.getByTestId("CreateWallet__back-button");
+
+		const historySpy = jest.spyOn(history, "push").mockImplementation();
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		await waitFor(() => expect(backButton).toBeEnabled());
+
+		userEvent.click(backButton);
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+
+		historySpy.mockRestore();
+
+		resetProfileNetworksMock();
 	});
 
 	it("should create a wallet with encryption", async () => {

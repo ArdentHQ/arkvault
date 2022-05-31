@@ -20,33 +20,33 @@ exports[`WalletOverviewStep Render step should render 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl mt-6"
-    >
-      <div
-        class="css-pra96q"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg>
-            circle-exclamation-mark.svg
-          </svg>
-        </div>
-        <span>
-          Warning
-        </span>
-      </div>
-      <div
-        class="css-1pvpof3"
-      >
-        You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
-      </div>
-    </div>
-    <div
       class="mt-8 space-y-8"
     >
+      <div
+        class="flex flex-col overflow-hidden rounded-xl mt-6"
+      >
+        <div
+          class="css-pra96q"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+          <span>
+            Warning
+          </span>
+        </div>
+        <div
+          class="css-1pvpof3"
+        >
+          You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
+        </div>
+      </div>
       <ul
         class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"
       >
@@ -554,7 +554,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
             type="button"
           >
             <div
-              class="link flex items-center space-x-2 font-semibold"
+              class="flex items-center space-x-2 font-semibold link "
             >
               <div
                 class="css-v0ob3f"
@@ -575,7 +575,7 @@ exports[`WalletOverviewStep Render step should render 1`] = `
             type="vertical"
           />
           <button
-            class="link flex items-center space-x-2 font-semibold"
+            class="flex items-center space-x-2 font-semibold link"
             data-testid="CopyOrDownload__download"
             type="button"
           >

@@ -53,7 +53,7 @@ cucumber("@routeToSend", {
 	},
 	"Then she is routed to the send page": async (t: TestController) => {
 		await t.click(
-			Selector("div").withExactText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.SUBTITLE),
+			Selector("div").withExactText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION),
 		);
 		await t.expect(getLocation()).contains("/send-transfer");
 	},

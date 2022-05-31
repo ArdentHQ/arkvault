@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Network Settings should list the public networks selected 1`] = `
+exports[`Network Settings should check the main network by default 1`] = `
 <DocumentFragment>
   <div
     class="css-mro1qh"
@@ -654,11 +654,11 @@ exports[`Network Settings should list the public networks selected 1`] = `
                   id="Networks--form"
                 >
                   <ul
-                    class="css-14npy8n"
+                    class="css-slpw39"
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-6"
+                      class="flex w-full flex-col pt-4 pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -675,14 +675,14 @@ exports[`Network Settings should list the public networks selected 1`] = `
                               class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
                               data-testid="list-divided-item__label"
                             >
-                              Public Networks
+                              Default Networks
                             </span>
                           </div>
                           <span
                             class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="list-divided-item__label--description"
                           >
-                            Manage Public Networks for your Profile.
+                            Manage the default networks that are active for your Profile
                           </span>
                         </div>
                       </div>
@@ -737,9 +737,9 @@ exports[`Network Settings should list the public networks selected 1`] = `
                               </div>
                             </label>
                             <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
+                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-100 hover:border-theme-primary-400 dark:border-theme-secondary-800 dark:hover:border-theme-primary-400"
                               data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-bpl.mainnet"
+                              for="NetworksListNetwork-ark.devnet"
                             >
                               <div
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
@@ -748,106 +748,27 @@ exports[`Network Settings should list the public networks selected 1`] = `
                                   class="shrink-0"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
+                                    class="dark:text-theme-secondary-600 css-v0ob3f"
                                     height="16"
                                     width="16"
                                   >
                                     <svg>
-                                      bpl.svg
+                                      ark.svg
                                     </svg>
                                   </div>
                                 </div>
                                 <div
                                   class="font-semibold"
                                 >
-                                  Blockpool
+                                  ARK Devnet
                                 </div>
                               </div>
                               <div>
                                 <input
-                                  checked=""
                                   class="css-7i915u"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-bpl.mainnet"
-                                  readonly=""
-                                  type="checkbox"
-                                />
-                              </div>
-                            </label>
-                            <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
-                              data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-bind.mainnet"
-                            >
-                              <div
-                                class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              >
-                                <div
-                                  class="shrink-0"
-                                >
-                                  <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
-                                  >
-                                    <svg>
-                                      bind.svg
-                                    </svg>
-                                  </div>
-                                </div>
-                                <div
-                                  class="font-semibold"
-                                >
-                                  Compendia
-                                </div>
-                              </div>
-                              <div>
-                                <input
-                                  checked=""
-                                  class="css-7i915u"
-                                  color="success"
-                                  data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-bind.mainnet"
-                                  readonly=""
-                                  type="checkbox"
-                                />
-                              </div>
-                            </label>
-                            <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
-                              data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-xqr.mainnet"
-                            >
-                              <div
-                                class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              >
-                                <div
-                                  class="shrink-0"
-                                >
-                                  <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
-                                  >
-                                    <svg>
-                                      xqr.svg
-                                    </svg>
-                                  </div>
-                                </div>
-                                <div
-                                  class="font-semibold"
-                                >
-                                  Qredit
-                                </div>
-                              </div>
-                              <div>
-                                <input
-                                  checked=""
-                                  class="css-7i915u"
-                                  color="success"
-                                  data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-xqr.mainnet"
+                                  id="NetworksListNetwork-ark.devnet"
                                   readonly=""
                                   type="checkbox"
                                 />
@@ -858,56 +779,7 @@ exports[`Network Settings should list the public networks selected 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col py-6"
-                      data-testid="list-divided-item__wrapper"
-                    >
-                      <div
-                        class="flex justify-between items-center"
-                        data-testid="list-divided-item__inner-wrapper"
-                      >
-                        <div
-                          class="flex w-full flex-col space-y-2"
-                        >
-                          <div
-                            class="flex items-center justify-between space-x-5"
-                          >
-                            <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                              data-testid="list-divided-item__label"
-                            >
-                              Development and Test Networks
-                            </span>
-                            <span>
-                              <label
-                                class="css-xklln0"
-                              >
-                                <input
-                                  class="css-1r71f0z toggle-input"
-                                  data-testid="Plugin-settings__networks--useDevelopmentAndTestNetworks"
-                                  name="useDevelopmentAndTestNetworks"
-                                  type="checkbox"
-                                />
-                                <div
-                                  class="css-7lwhds toggle-handle"
-                                >
-                                  <span
-                                    class="css-1fmiyrr"
-                                  />
-                                </div>
-                              </label>
-                            </span>
-                          </div>
-                          <span
-                            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                            data-testid="list-divided-item__label--description"
-                          >
-                            Manage the Development and Test Networks for your Profile.
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      class="flex w-full flex-col pt-6 sm:pb-6"
+                      class="flex w-full flex-col pt-4 pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1637,11 +1509,11 @@ exports[`Network Settings should render networks settings section 1`] = `
                   id="Networks--form"
                 >
                   <ul
-                    class="css-14npy8n"
+                    class="css-slpw39"
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-6"
+                      class="flex w-full flex-col pt-4 pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1658,14 +1530,14 @@ exports[`Network Settings should render networks settings section 1`] = `
                               class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
                               data-testid="list-divided-item__label"
                             >
-                              Public Networks
+                              Default Networks
                             </span>
                           </div>
                           <span
                             class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="list-divided-item__label--description"
                           >
-                            Manage Public Networks for your Profile.
+                            Manage the default networks that are active for your Profile
                           </span>
                         </div>
                       </div>
@@ -1720,9 +1592,9 @@ exports[`Network Settings should render networks settings section 1`] = `
                               </div>
                             </label>
                             <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
+                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-100 hover:border-theme-primary-400 dark:border-theme-secondary-800 dark:hover:border-theme-primary-400"
                               data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-bpl.mainnet"
+                              for="NetworksListNetwork-ark.devnet"
                             >
                               <div
                                 class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
@@ -1731,106 +1603,27 @@ exports[`Network Settings should render networks settings section 1`] = `
                                   class="shrink-0"
                                 >
                                   <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
+                                    class="dark:text-theme-secondary-600 css-v0ob3f"
                                     height="16"
                                     width="16"
                                   >
                                     <svg>
-                                      bpl.svg
+                                      ark.svg
                                     </svg>
                                   </div>
                                 </div>
                                 <div
                                   class="font-semibold"
                                 >
-                                  Blockpool
+                                  ARK Devnet
                                 </div>
                               </div>
                               <div>
                                 <input
-                                  checked=""
                                   class="css-7i915u"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-bpl.mainnet"
-                                  readonly=""
-                                  type="checkbox"
-                                />
-                              </div>
-                            </label>
-                            <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
-                              data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-bind.mainnet"
-                            >
-                              <div
-                                class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              >
-                                <div
-                                  class="shrink-0"
-                                >
-                                  <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
-                                  >
-                                    <svg>
-                                      bind.svg
-                                    </svg>
-                                  </div>
-                                </div>
-                                <div
-                                  class="font-semibold"
-                                >
-                                  Compendia
-                                </div>
-                              </div>
-                              <div>
-                                <input
-                                  checked=""
-                                  class="css-7i915u"
-                                  color="success"
-                                  data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-bind.mainnet"
-                                  readonly=""
-                                  type="checkbox"
-                                />
-                              </div>
-                            </label>
-                            <label
-                              class="transition-color flex cursor-pointer justify-between space-x-4 rounded-xl border-2 px-4 py-3 duration-100 border-theme-primary-600 bg-theme-primary-50 dark:bg-theme-primary-900"
-                              data-testid="NetworksListNetwork"
-                              for="NetworksListNetwork-xqr.mainnet"
-                            >
-                              <div
-                                class="flex items-center space-x-3 text-theme-secondary-700 dark:text-theme-secondary-200"
-                              >
-                                <div
-                                  class="shrink-0"
-                                >
-                                  <div
-                                    class="dark:text-theme-secondary-200 css-v0ob3f"
-                                    height="16"
-                                    width="16"
-                                  >
-                                    <svg>
-                                      xqr.svg
-                                    </svg>
-                                  </div>
-                                </div>
-                                <div
-                                  class="font-semibold"
-                                >
-                                  Qredit
-                                </div>
-                              </div>
-                              <div>
-                                <input
-                                  checked=""
-                                  class="css-7i915u"
-                                  color="success"
-                                  data-testid="NetworksListNetwork-checkbox"
-                                  id="NetworksListNetwork-xqr.mainnet"
+                                  id="NetworksListNetwork-ark.devnet"
                                   readonly=""
                                   type="checkbox"
                                 />
@@ -1841,56 +1634,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col py-6"
-                      data-testid="list-divided-item__wrapper"
-                    >
-                      <div
-                        class="flex justify-between items-center"
-                        data-testid="list-divided-item__inner-wrapper"
-                      >
-                        <div
-                          class="flex w-full flex-col space-y-2"
-                        >
-                          <div
-                            class="flex items-center justify-between space-x-5"
-                          >
-                            <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                              data-testid="list-divided-item__label"
-                            >
-                              Development and Test Networks
-                            </span>
-                            <span>
-                              <label
-                                class="css-xklln0"
-                              >
-                                <input
-                                  class="css-1r71f0z toggle-input"
-                                  data-testid="Plugin-settings__networks--useDevelopmentAndTestNetworks"
-                                  name="useDevelopmentAndTestNetworks"
-                                  type="checkbox"
-                                />
-                                <div
-                                  class="css-7lwhds toggle-handle"
-                                >
-                                  <span
-                                    class="css-1fmiyrr"
-                                  />
-                                </div>
-                              </label>
-                            </span>
-                          </div>
-                          <span
-                            class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-                            data-testid="list-divided-item__label--description"
-                          >
-                            Manage the Development and Test Networks for your Profile.
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      class="flex w-full flex-col pt-6 sm:pb-6"
+                      class="flex w-full flex-col pt-4 pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div

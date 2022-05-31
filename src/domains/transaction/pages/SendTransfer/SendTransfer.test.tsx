@@ -132,6 +132,14 @@ describe("SendTransfer", () => {
 		wallet = profile.wallets().first();
 		secondWallet = profile.wallets().last();
 
+		// Profile needs a wallet on the mainnet network to show network selection
+		// step.
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
+
 		firstWalletAddress = wallet.address();
 
 		profile.coins().set("ARK", "ark.devnet");
@@ -451,7 +459,7 @@ describe("SendTransfer", () => {
 			wallet,
 		);
 
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<Router history={history}>
 				<Route path="/profiles/:profileId/send-transfer">
 					<StepsProvider activeStep={1} steps={4}>
@@ -472,8 +480,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render network selection without selected wallet", async () => {
@@ -506,6 +512,11 @@ describe("SendTransfer", () => {
 			coin: "ARK",
 			network: "ark.devnet",
 		});
+		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(arkMainnetWallet);
 		profile.wallets().push(arkWallet);
 		await env.wallets().syncByProfile(profile);
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
@@ -528,7 +539,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("SelectNetwork__NetworkIcon--container")).toHaveTextContent("ark.svg");
+		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[0]).toHaveTextContent("ark.svg");
 
 		resetProfileNetworksMock();
 	});
