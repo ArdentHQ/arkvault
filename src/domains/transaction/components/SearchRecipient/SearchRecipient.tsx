@@ -35,6 +35,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 			return (
 				<Button
 					data-testid={`RecipientListItem__selected-button-${index}`}
+					size={isCompact ? "icon" : undefined}
 					variant={isCompact ? "transparent" : "reverse"}
 					onClick={() => onAction(recipient.address)}
 					className={cn("text-theme-primary-reverse-600", { "-mr-3": isCompact })}
@@ -47,6 +48,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 		return (
 			<Button
 				data-testid={`RecipientListItem__select-button-${index}`}
+				size={isCompact ? "icon" : undefined}
 				variant={isCompact ? "transparent" : "secondary"}
 				onClick={() => onAction(recipient.address)}
 				className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
