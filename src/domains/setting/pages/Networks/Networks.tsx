@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -55,13 +55,8 @@ export const NetworksSettings = () => {
 	const [networkToShowDetails, setNetworkToShowDetails] = useState<Networks.NetworkManifest | undefined>(undefined);
 	const { setValue: setWalletConfig } = useWalletConfig({ profile });
 
-	const publicNetworks = useMemo(
-		() => env.availableNetworks().filter((item) => item.isLive() && !isCustomNetwork(item)),
-		[env, profile],
-	);
-
-	const developmentNetworks = useMemo(
-		() => env.availableNetworks().filter((item) => !item.isLive() && !isCustomNetwork(item)),
+	const defaultNetworks = useMemo(
+		() => env.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id())),
 		[env, profile],
 	);
 
@@ -74,13 +69,11 @@ export const NetworksSettings = () => {
 			customNetworks: customNetworks,
 			selectedNetworks: selectedNetworks,
 			useCustomNetworks: customNetworks.some((customNetwork) => customNetwork.meta.enabled),
-			useDevelopmentAndTestNetworks: developmentNetworks.some((item) => selectedNetworks.includes(item.id())),
 		};
 	};
 
 	const form = useForm<{
 		useCustomNetworks: boolean;
-		useDevelopmentAndTestNetworks: boolean;
 		selectedNetworks: string[];
 		customNetworks: Networks.NetworkManifest[];
 	}>({
@@ -98,11 +91,10 @@ export const NetworksSettings = () => {
 
 	useEffect(() => {
 		register("selectedNetworks");
-		register("useDevelopmentAndTestNetworks");
 		register("customNetworks");
 	}, [register]);
 
-	const { useDevelopmentAndTestNetworks, customNetworks, useCustomNetworks } = watch();
+	const { customNetworks, useCustomNetworks } = watch();
 
 	const isProfileRestored = useMemo(() => profile.status().isRestored(), [profile]);
 
@@ -111,14 +103,9 @@ export const NetworksSettings = () => {
 		[isSubmitting, isProfileRestored, isDirty, isValid],
 	);
 
-	const hasMoreThanOnePublicNetworkSelected = useMemo(
-		() => publicNetworks.filter((item) => selectedNetworks.includes(item.id())).length > 1,
-		[publicNetworks, selectedNetworks],
-	);
-
-	const hasMoreThanOneDevelopmentNetworkSelected = useMemo(
-		() => developmentNetworks.filter((item) => selectedNetworks.includes(item.id())).length > 1,
-		[publicNetworks, selectedNetworks],
+	const hasMoreThanOneDefaultNetworkSelected = useMemo(
+		() => defaultNetworks.filter((item) => selectedNetworks.includes(item.id())).length > 1,
+		[defaultNetworks, selectedNetworks],
 	);
 
 	const selectNetwork = (networkId: string) => {
@@ -189,25 +176,14 @@ export const NetworksSettings = () => {
 
 	const onToggleNetwork = (event: React.ChangeEvent<HTMLInputElement>, networkId: string) => {
 		const isCustomNetwork = customNetworks.some((item) => item.id === networkId);
-		const isDevelopmentNetwork = !isCustomNetwork && developmentNetworks.some((item) => item.id() === networkId);
 
 		if (selectedNetworks.includes(networkId)) {
-			if (!isCustomNetwork) {
-				if (isDevelopmentNetwork && !hasMoreThanOneDevelopmentNetworkSelected) {
-					toasts.warning(t("SETTINGS.NETWORKS.MESSAGES.AT_LEAST_ONE_TEST_NETWORK"));
+			if (!isCustomNetwork && !hasMoreThanOneDefaultNetworkSelected) {
+				toasts.warning(t("SETTINGS.NETWORKS.MESSAGES.AT_LEAST_ONE_DEFAULT_NETWORK"));
 
-					event.target.checked = true;
-					event.preventDefault();
-					return;
-				}
-
-				if (!isDevelopmentNetwork && !hasMoreThanOnePublicNetworkSelected) {
-					event.target.checked = true;
-					event.preventDefault();
-
-					toasts.warning(t("SETTINGS.NETWORKS.MESSAGES.AT_LEAST_ONE_PUBLIC_NETWORK"));
-					return;
-				}
+				event.target.checked = true;
+				event.preventDefault();
+				return;
 			}
 
 			unselectNetwork(networkId);
@@ -258,31 +234,6 @@ export const NetworksSettings = () => {
 		setNetworkToShowDetails(customNetworks.find((network) => network.id === networkId));
 	};
 
-	const syncPublicAndDevelopmentNetworks = useCallback(
-		(event) => {
-			if (event.target.checked) {
-				const publicNetworksName = selectedNetworks
-					.filter((networkId) => networkId.endsWith(".mainnet"))
-					.map((networkId) => networkId.split(".")[0]);
-
-				for (const networkIdName of publicNetworksName) {
-					const equivalentDevelopmentNetwork = developmentNetworks.find((item) =>
-						item.id().startsWith(networkIdName),
-					);
-
-					if (equivalentDevelopmentNetwork !== undefined) {
-						selectNetwork(equivalentDevelopmentNetwork.id());
-					}
-				}
-			} else {
-				for (const network of developmentNetworks) {
-					unselectNetwork(network.id());
-				}
-			}
-		},
-		[selectedNetworks, developmentNetworks],
-	);
-
 	const networkCreateHandler = (network: Networks.NetworkManifest) => {
 		setValue("customNetworks", [...customNetworks, network], { shouldDirty: true, shouldValidate: true });
 
@@ -302,37 +253,14 @@ export const NetworksSettings = () => {
 					<div data-testid="NetworksList--main">
 						<NetworksList
 							selectedNetworks={selectedNetworks}
-							networks={publicNetworks}
+							networks={defaultNetworks}
 							onToggleNetwork={onToggleNetwork}
 						/>
 					</div>
 				),
-				label: t("SETTINGS.NETWORKS.OPTIONS.PUBLIC_NETWORKS.TITLE"),
-				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.PUBLIC_NETWORKS.DESCRIPTION"),
-				wrapperClass: "py-6",
-			},
-			{
-				content: useDevelopmentAndTestNetworks && (
-					<div data-testid="NetworksList--development">
-						<NetworksList
-							selectedNetworks={selectedNetworks}
-							networks={developmentNetworks}
-							onToggleNetwork={onToggleNetwork}
-						/>
-					</div>
-				),
-				label: t("SETTINGS.NETWORKS.OPTIONS.DEVELOPMENT_AND_TEST_NETWORKS.TITLE"),
-				labelAddon: (
-					<Toggle
-						ref={register}
-						name="useDevelopmentAndTestNetworks"
-						defaultChecked={useDevelopmentAndTestNetworks}
-						onChange={syncPublicAndDevelopmentNetworks}
-						data-testid="Plugin-settings__networks--useDevelopmentAndTestNetworks"
-					/>
-				),
-				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.DEVELOPMENT_AND_TEST_NETWORKS.DESCRIPTION"),
-				wrapperClass: "py-6",
+				label: t("SETTINGS.NETWORKS.OPTIONS.DEFAULT_NETWORKS.TITLE"),
+				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.DEFAULT_NETWORKS.DESCRIPTION"),
+				wrapperClass: "pt-4 pb-6",
 			},
 			{
 				content: useCustomNetworks && (
@@ -365,10 +293,10 @@ export const NetworksSettings = () => {
 					/>
 				),
 				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.CUSTOM_NETWORKS.DESCRIPTION"),
-				wrapperClass: "pt-6 sm:pb-6",
+				wrapperClass: "pt-4 pb-6",
 			},
 		],
-		[selectedNetworks, useDevelopmentAndTestNetworks, useCustomNetworks, customNetworks],
+		[selectedNetworks, useCustomNetworks, customNetworks],
 	);
 
 	const deleteUnsupportedWallets = (profile: Contracts.IProfile) => {
@@ -459,7 +387,7 @@ export const NetworksSettings = () => {
 			<Header title={t("SETTINGS.NETWORKS.TITLE")} subtitle={t("SETTINGS.NETWORKS.SUBTITLE")} />
 
 			<Form id="Networks--form" context={form} onSubmit={handleSubmit} className="mt-4">
-				<ListDivided items={networksOptions} noBorder={false} />
+				<ListDivided items={networksOptions} />
 
 				<FormButtons>
 					<Button disabled={isSaveButtonDisabled} data-testid="Networks--submit-button" type="submit">

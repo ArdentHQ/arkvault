@@ -682,7 +682,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -787,7 +787,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -1089,7 +1089,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__selected-0"
                             type="button"
                           >
@@ -1194,7 +1194,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -3726,7 +3726,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -3845,7 +3845,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -4193,7 +4193,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-0"
                             type="button"
                           >
@@ -4312,7 +4312,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >
@@ -4660,7 +4660,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__selected-0"
                             type="button"
                           >
@@ -4779,7 +4779,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="SearchWalletListItem__select-1"
                             type="button"
                           >

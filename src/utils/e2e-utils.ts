@@ -188,6 +188,10 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 		.respond(
 			(request: any, res: any) => {
 				const getBody = () => {
+					if (request.url.endsWith("known-wallets-extended.json")) {
+						return require(`../tests/fixtures/wallets/known-wallets.json`);
+					}
+
 					if (pingServerUrls.has(request.url)) {
 						return require(`../tests/fixtures/${PING_RESPONSE_PATH}.json`);
 					}

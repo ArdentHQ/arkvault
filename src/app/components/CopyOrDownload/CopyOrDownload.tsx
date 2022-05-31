@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import cn from "classnames";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { Divider } from "@/app/components/Divider";
@@ -8,10 +9,11 @@ interface Properties {
 	title: string;
 	description: string;
 	copyData: string;
+	disabled?: boolean;
 	onClickDownload: () => void;
 }
 
-export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copyData, onClickDownload }) => {
+export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copyData, onClickDownload, disabled }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -22,7 +24,12 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 
 			<div className="flex items-center justify-center space-x-3 sm:justify-start">
 				<Clipboard data={copyData} data-testid="CopyOrDownload__copy" variant="icon">
-					<div className="link flex items-center space-x-2 font-semibold">
+					<div
+						className={cn("flex items-center space-x-2 font-semibold", {
+							"cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800": disabled,
+							"link ": !disabled,
+						})}
+					>
 						<Icon name="Copy" />
 						<span>{t("COMMON.COPY")}</span>
 					</div>
@@ -33,8 +40,12 @@ export const CopyOrDownload: React.VFC<Properties> = ({ title, description, copy
 				<button
 					type="button"
 					data-testid="CopyOrDownload__download"
-					className="link flex items-center space-x-2 font-semibold"
+					className={cn("flex items-center space-x-2 font-semibold", {
+						"cursor-not-allowed text-theme-secondary-500 dark:text-theme-secondary-800": disabled,
+						link: !disabled,
+					})}
 					onClick={() => onClickDownload()}
+					disabled={disabled}
 				>
 					<Icon name="ArrowDownBracket" />
 					<span>{t("COMMON.DOWNLOAD")}</span>

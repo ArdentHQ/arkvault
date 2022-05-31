@@ -256,7 +256,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-0"
                             type="button"
                           >
@@ -338,7 +338,7 @@ exports[`SearchRecipient should render a modal 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >
@@ -617,7 +617,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-0"
                             type="button"
                           >
@@ -699,7 +699,7 @@ exports[`SearchRecipient should render a modal with custom title and description
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >
@@ -1181,7 +1181,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__selected-button-0"
                             type="button"
                           >
@@ -1263,7 +1263,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >
@@ -1542,7 +1542,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-reverse-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-reverse-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__selected-button-0"
                             type="button"
                           >
@@ -1624,7 +1624,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
                           class="justify-end css-br23tb"
                         >
                           <button
-                            class="text-theme-primary-600 -mr-3 css-d937d6"
+                            class="text-theme-primary-600 -mr-3 css-12xyeiw"
                             data-testid="RecipientListItem__select-button-1"
                             type="button"
                           >

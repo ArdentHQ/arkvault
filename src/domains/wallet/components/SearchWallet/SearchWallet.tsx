@@ -46,6 +46,7 @@ const SearchWalletListItem = ({
 			return (
 				<Button
 					data-testid={`SearchWalletListItem__selected-${index}`}
+					size={isCompact ? "icon" : undefined}
 					variant={isCompact ? "transparent" : "reverse"}
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					className={cn("text-theme-primary-reverse-600", { "-mr-3": isCompact })}
@@ -59,6 +60,7 @@ const SearchWalletListItem = ({
 			<Button
 				data-testid={`SearchWalletListItem__select-${index}`}
 				disabled={disabled}
+				size={isCompact ? "icon" : undefined}
 				variant={isCompact ? "transparent" : "secondary"}
 				className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
 				onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}

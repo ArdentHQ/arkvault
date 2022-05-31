@@ -2175,7 +2175,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           data-testid="SelectNetwork__options"
                         >
                           <div
-                            class="mt-6 hidden"
+                            class="mt-6"
                           >
                             <div
                               class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
@@ -2187,11 +2187,42 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               class="css-6y29t8"
                               id="SendTransfer__network-menu"
                               role="listbox"
-                            />
+                            >
+                              <li
+                                class="relative flex h-0 cursor-pointer pb-[100%] cursor-not-allowed"
+                                data-testid="SelectNetwork__NetworkIcon--container"
+                              >
+                                <div
+                                  aria-label="ARK"
+                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
+                                >
+                                  <div
+                                    class="css-1i4b0eq"
+                                    data-testid="NetworkIcon__icon"
+                                    height="20"
+                                    width="20"
+                                  >
+                                    <svg>
+                                      ark.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
+                          <div
+                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+                            type="horizontal"
+                          />
                           <div
                             class="mt-6"
                           >
+                            <span
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              DEVELOPMENT NETWORKS
+                            </span>
                             <ul
                               aria-labelledby="SendTransfer__network-label"
                               class="css-6y29t8"
@@ -2570,7 +2601,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                   class="inline-flex"
                                 >
                                   <button
-                                    class=" css-g7dob4"
+                                    class=" css-h5fzq7"
                                     data-testid="AddRecipient__send-all"
                                     type="button"
                                   >
@@ -3333,7 +3364,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           data-testid="SelectNetwork__options"
                         >
                           <div
-                            class="mt-6 hidden"
+                            class="mt-6"
                           >
                             <div
                               class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
@@ -3345,11 +3376,42 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               class="css-6y29t8"
                               id="SendTransfer__network-menu"
                               role="listbox"
-                            />
+                            >
+                              <li
+                                class="relative flex h-0 cursor-pointer pb-[100%] cursor-not-allowed"
+                                data-testid="SelectNetwork__NetworkIcon--container"
+                              >
+                                <div
+                                  aria-label="ARK"
+                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
+                                >
+                                  <div
+                                    class="css-1i4b0eq"
+                                    data-testid="NetworkIcon__icon"
+                                    height="20"
+                                    width="20"
+                                  >
+                                    <svg>
+                                      ark.svg
+                                    </svg>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
+                          <div
+                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+                            type="horizontal"
+                          />
                           <div
                             class="mt-6"
                           >
+                            <span
+                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                            >
+                              DEVELOPMENT NETWORKS
+                            </span>
                             <ul
                               aria-labelledby="SendTransfer__network-label"
                               class="css-6y29t8"
@@ -3717,7 +3779,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                   class="inline-flex"
                                 >
                                   <button
-                                    class=" css-g7dob4"
+                                    class=" css-h5fzq7"
                                     data-testid="AddRecipient__send-all"
                                     type="button"
                                   >
@@ -4374,7 +4436,7 @@ exports[`SendTransfer should render form step 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -5046,7 +5108,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -5718,7 +5780,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       type="button"
                     >
@@ -6342,7 +6404,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -7090,7 +7152,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-g7dob4"
+                      class=" css-h5fzq7"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -7808,7 +7870,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                         data-testid="SelectNetwork__options"
                       >
                         <div
-                          class="mt-6 hidden"
+                          class="mt-6"
                         >
                           <div
                             class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
@@ -7820,11 +7882,42 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                             class="css-6y29t8"
                             id="SendTransfer__network-step__select-menu"
                             role="listbox"
-                          />
+                          >
+                            <li
+                              class="relative flex h-0 cursor-pointer pb-[100%]"
+                              data-testid="SelectNetwork__NetworkIcon--container"
+                            >
+                              <div
+                                aria-label="ARK"
+                                class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
+                              >
+                                <div
+                                  class="css-1i4b0eq"
+                                  data-testid="NetworkIcon__icon"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <svg>
+                                    ark.svg
+                                  </svg>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
+                        <div
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+                          type="horizontal"
+                        />
                         <div
                           class="mt-6"
                         >
+                          <span
+                            class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                          >
+                            DEVELOPMENT NETWORKS
+                          </span>
                           <ul
                             aria-labelledby="SendTransfer__network-step__select-label"
                             class="css-6y29t8"
@@ -8027,69 +8120,6 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                   >
                     <svg>
                       ark.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Blockpool"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-bpl.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      bpl.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Compendia"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-bind.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      bind.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="Qredit"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-xqr.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      xqr.svg
                     </svg>
                   </div>
                 </div>
@@ -9433,748 +9463,6 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         >
           3 DARK
         </span>
-      </div>
-    </div>
-  </section>
-  ,
-</DocumentFragment>
-`;
-
-exports[`SendTransfer should render summary step 1`] = `
-<DocumentFragment>
-  <section
-    class="space-y-8"
-    data-testid="TransactionSuccessful"
-  >
-    <div
-      class="sm:mt-8"
-    >
-      <div
-        class="flex flex-col"
-      >
-        <span
-          class="css-3qwsx5"
-        >
-          Transaction Created
-        </span>
-        <ul
-          class="css-xa5o6q"
-        >
-          <li
-            class="css-47028"
-          />
-          <li
-            class="css-3ldhk3"
-          />
-          <li
-            class="css-3ldhk3"
-          />
-          <li
-            class="css-3ldhk3"
-          />
-        </ul>
-      </div>
-      <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
-      >
-        <div
-          class="space-y-4"
-        >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Transaction Created
-          </h1>
-        </div>
-      </div>
-    </div>
-    <svg
-      class="hidden w-full md:block"
-    >
-      transaction-signed-banner-light-green.svg
-    </svg>
-    <p
-      class="hidden text-theme-secondary-text md:block"
-    >
-      Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
-    </p>
-    <div
-      class="flex flex-col overflow-hidden rounded-xl md:hidden"
-    >
-      <div
-        class="css-1dwg83m"
-      >
-        <div
-          class="css-v0ob3f"
-          height="16"
-          width="16"
-        >
-          <svg>
-            circle-check-mark.svg
-          </svg>
-        </div>
-        <span>
-          Success
-        </span>
-      </div>
-      <div
-        class="css-k5jr4t"
-      >
-        Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
-      </div>
-    </div>
-    <div>
-      <div
-        class="no-ligatures css-9iovq0"
-        data-testid="TransactionDetail"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            ID
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="flex w-full items-center space-x-3 overflow-hidden"
-            >
-              <span
-                class="overflow-hidden"
-              >
-                <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4"
-                  rel="noopener noreferrer"
-                >
-                  <span
-                    class="css-1lmkmoz"
-                  >
-                    <span
-                      class="css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      6c38de343321f7d853ff98c166…1c13a473f6d39e3037d6685da4
-                    </span>
-                  </span>
-                  <div
-                    class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                    data-testid="Link__external"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      arrow-external.svg
-                    </svg>
-                  </div>
-                </a>
-              </span>
-              <span
-                class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-              >
-                <button
-                  class="ring-focus relative focus:outline-none"
-                  data-ring-focus-margin="-m-1"
-                  data-testid="clipboard-icon__wrapper"
-                  type="button"
-                >
-                  <div
-                    class="css-v0ob3f"
-                    height="16"
-                    width="16"
-                  >
-                    <svg>
-                      copy.svg
-                    </svg>
-                  </div>
-                </button>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionType"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Transaction Type
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            Transfer
-          </div>
-        </div>
-        <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg>
-              transfer.svg
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionNetwork"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Cryptoasset
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            ARK Devnet
-          </div>
-        </div>
-        <div
-          aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg>
-              ark.svg
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionSuccessful__musig-address"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <span>
-                Multisignature Address
-              </span>
-               
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg>
-                  multisignature.svg
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="flex grow items-center space-x-2 text-theme-primary-300 dark:text-theme-secondary-600"
-            >
-              <div
-                class="w-0 flex-1 text-right md:text-left"
-              >
-                <div
-                  class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                >
-                  <span
-                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                  </span>
-                </div>
-              </div>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
-                >
-                  <svg>
-                    copy.svg
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <div
-            class="shrink-0 css-8d0u1i"
-            data-testid="Avatar"
-          >
-            <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-            >
-              <img
-                alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionSender"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Sender
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="w-0 flex-1 overflow-auto text-right md:text-left"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex items-center -space-x-1"
-        >
-          <div
-            class="shrink-0 css-8d0u1i"
-            data-testid="Avatar"
-          >
-            <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-            >
-              <img
-                alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionRecipients"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Recipient
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="w-0 flex-1 text-right md:text-left"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex items-center -space-x-1"
-        >
-          <div
-            class="shrink-0 css-8d0u1i"
-            data-testid="Avatar"
-          >
-            <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-            >
-              <img
-                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionRecipients"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Multisignature Participants (2)
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="css-1sfei0c"
-            >
-              <div
-                class="-mt-3 css-1m6rt2i"
-                role="table"
-              >
-                <table
-                  cellpadding="0"
-                  class="table-auto"
-                >
-                  <thead>
-                    <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
-                      role="row"
-                    >
-                      <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                        colspan="1"
-                        data-testid="table__th--0"
-                        role="columnheader"
-                      >
-                        <div
-                          class="flex flex-inline align-top hidden"
-                        >
-                          <div
-                            class=""
-                          >
-                            Avatar
-                          </div>
-                        </div>
-                      </th>
-                      <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                        colspan="1"
-                        data-testid="table__th--1"
-                        role="columnheader"
-                      >
-                        <div
-                          class="flex flex-inline align-top hidden"
-                        >
-                          <div
-                            class=""
-                          >
-                            Address
-                          </div>
-                        </div>
-                      </th>
-                      <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                        colspan="1"
-                        data-testid="table__th--2"
-                        role="columnheader"
-                      >
-                        <div
-                          class="flex flex-inline align-top hidden"
-                        >
-                          <div
-                            class=""
-                          >
-                            Amount
-                          </div>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody
-                    role="rowgroup"
-                  >
-                    <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                      data-testid="recipient-list__recipient-list-item"
-                    >
-                      <td
-                        class="mr-3 table-cell md:hidden"
-                      />
-                      <td
-                        class="hidden md:table-cell"
-                      >
-                        <div
-                          class="shrink-0 css-y5oe37"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="w-28 flex-1 justify-end md:ml-4"
-                      >
-                        <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="ml-2 table-cell md:hidden"
-                      >
-                        <div
-                          class="shrink-0 css-1vy2z2u"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
-                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="hidden md:table-cell"
-                      />
-                    </tr>
-                    <tr
-                      class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                      data-testid="recipient-list__recipient-list-item"
-                    >
-                      <td
-                        class="mr-3 table-cell md:hidden"
-                      />
-                      <td
-                        class="hidden md:table-cell"
-                      >
-                        <div
-                          class="shrink-0 css-y5oe37"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                              title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="w-28 flex-1 justify-end md:ml-4"
-                      >
-                        <div
-                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                          </span>
-                        </div>
-                      </td>
-                      <td
-                        class="ml-2 table-cell md:hidden"
-                      >
-                        <div
-                          class="shrink-0 css-1vy2z2u"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                              title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                      <td
-                        class="hidden md:table-cell"
-                      />
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionDetail"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Minimum Required Signatures
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="whitespace-nowrap"
-            >
-              <span>
-                2 
-              </span>
-              <span
-                class="whitespace text-theme-secondary-700"
-                data-testid="MultiSignatureSuccessful__publicKeys"
-              >
-                out of 2
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19rivvh"
-        data-testid="TransactionAmount"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Amount
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <div
-              class="css-fbeerz"
-              color="danger"
-            >
-              <div
-                class="flex space-x-1 items-stretch"
-              >
-                <span
-                  class="whitespace-nowrap"
-                  data-testid="Amount"
-                >
-                  - 1 DARK
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-1i4b0eq"
-            height="20"
-            width="20"
-          >
-            <svg>
-              sent.svg
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="no-ligatures css-19d5ufe"
-        data-testid="TransactionFee"
-      >
-        <div
-          class="w-40 flex-1 space-y-2 whitespace-nowrap"
-          data-testid="TransactionDetail--desktop"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Transaction Fee
-          </div>
-          <div
-            class="flex items-center font-semibold"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              1 DARK
-            </span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
