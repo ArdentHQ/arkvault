@@ -7,7 +7,7 @@ exports[`Registration should register delegate without keyboard 1`] = `<Document
 exports[`Registration should register second signature 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -589,7 +589,7 @@ exports[`Registration should register second signature 1`] = `
 exports[`Registration should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -1197,7 +1197,7 @@ exports[`Registration should show error step and go back 1`] = `
 exports[`Registration should show mnemonic error 1`] = `
 <div>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"

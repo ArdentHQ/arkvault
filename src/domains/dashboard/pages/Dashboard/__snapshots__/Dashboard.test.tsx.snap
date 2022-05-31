@@ -3,7 +3,7 @@
 exports[`Dashboard should display empty block when there are no transactions 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -1059,7 +1059,7 @@ exports[`Dashboard should navigate to import wallet page 1`] = `<DocumentFragmen
 exports[`Dashboard should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"
@@ -2925,7 +2925,7 @@ exports[`Dashboard should render 1`] = `
 exports[`Dashboard should render loading state when profile is syncing 1`] = `
 <DocumentFragment>
   <div
-    class="css-34yj9a"
+    class="css-wsh4oq"
   >
     <div
       class="css-1mnbipv"

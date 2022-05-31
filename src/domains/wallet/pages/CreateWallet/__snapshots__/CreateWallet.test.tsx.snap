@@ -3,7 +3,7 @@
 exports[`CreateWallet should create a wallet 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -752,7 +752,7 @@ exports[`CreateWallet should create a wallet 1`] = `
 exports[`CreateWallet should create a wallet 2`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -1476,7 +1476,7 @@ exports[`CreateWallet should create a wallet 2`] = `
 exports[`CreateWallet should create a wallet with encryption 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -2225,7 +2225,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
 exports[`CreateWallet should create a wallet with encryption 2`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -2954,7 +2954,7 @@ exports[`CreateWallet should not have a pending wallet if leaving on step 1 1`] 
 exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -3705,7 +3705,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 2`] = `<Docu
 exports[`CreateWallet should show an error message for duplicate name 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"
@@ -4450,7 +4450,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
 exports[`CreateWallet should show an error message if wallet generation failed 1`] = `
 <DocumentFragment>
   <div
-    class="css-i3vi18"
+    class="css-mro1qh"
   >
     <div
       class="css-tbczne"

@@ -7,15 +7,14 @@ import { useDocumentTitle } from "@/app/hooks/use-document-title";
 import { useNavigationContext } from "@/app/contexts";
 
 export const PageWrapper = styled.div<{ showMobileNavigation: boolean; hasFixedFormButtons: boolean }>`
-	${tw`relative flex flex-col`}
-
-	${({ showMobileNavigation, hasFixedFormButtons }) =>
-		showMobileNavigation && !hasFixedFormButtons && tw`pb-14 sm:pb-0`}
-	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && hasFixedFormButtons && tw`pb-32 sm:pb-0`}
 	${css`
-		min-height: 100vh;
 		min-height: -webkit-fill-available;
 	`}
+
+	${tw`relative flex flex-col md:min-h-screen`}
+
+	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && !hasFixedFormButtons && tw`pb-14 sm:pb-0`}
+	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && hasFixedFormButtons && tw`pb-32 sm:pb-0`}
 `;
 
 export const Page: FC<PageProperties> = ({
