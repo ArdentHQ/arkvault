@@ -39,7 +39,7 @@ export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailPr
 						</div>
 					)}
 
-					<div className="hidden items-center font-semibold sm:block">{children}</div>
+					<div className="hidden items-center font-semibold sm:flex">{children}</div>
 				</div>
 
 				<div className="flex w-full items-center justify-end overflow-auto sm:w-auto">

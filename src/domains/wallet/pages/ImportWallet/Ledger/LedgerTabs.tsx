@@ -57,7 +57,7 @@ const Paginator = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className="mt-10 flex justify-between">
+		<div className="mt-8 flex justify-between">
 			<div>
 				{showRetry && (
 					<Button variant="secondary" onClick={onRetry} data-testid="Paginator__retry-button">
@@ -273,6 +273,7 @@ export const LedgerTabs = ({
 						onDeviceNotAvailable={handleDeviceNotAvailable}
 					/>
 				</TabPanel>
+
 				<TabPanel tabId={LedgerTabStep.NetworkStep}>
 					<NetworkStep
 						profile={activeProfile}
@@ -290,15 +291,18 @@ export const LedgerTabs = ({
 						subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
 					/>
 				</TabPanel>
+
 				<TabPanel tabId={LedgerTabStep.LedgerConnectionStep}>
 					<LedgerConnectionStep
 						cancelling={cancelling}
 						onConnect={() => setActiveTab(LedgerTabStep.LedgerScanStep)}
 					/>
 				</TabPanel>
+
 				<TabPanel tabId={LedgerTabStep.LedgerScanStep}>
 					<LedgerScanStep cancelling={cancelling} profile={activeProfile} setRetryFn={handleRetry} />
 				</TabPanel>
+
 				<TabPanel tabId={LedgerTabStep.LedgerImportStep}>
 					<LedgerImportStep
 						wallets={importedWallets}

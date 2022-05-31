@@ -7,7 +7,7 @@ describe("WalletDetailAddress", () => {
 	it("should render", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		const { container } = render(<WalletDetailAddress wallet={profile.wallets().first()} />);
+		const { container } = render(<WalletDetailAddress address={profile.wallets().first().address()} />);
 
 		expect(container).toMatchSnapshot();
 	});
