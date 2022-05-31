@@ -1761,7 +1761,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="mt-10 flex justify-between"
+                class="mt-8 flex justify-between"
               >
                 <div />
                 <div
@@ -2379,7 +2379,7 @@ exports[`ImportWallet should render success step 1`] = `
             Cryptoasset
           </div>
           <div
-            class="hidden items-center font-semibold sm:block"
+            class="hidden items-center font-semibold sm:flex"
           >
             ARK Devnet
           </div>
@@ -2455,7 +2455,7 @@ exports[`ImportWallet should render success step 1`] = `
             Address
           </div>
           <div
-            class="hidden items-center font-semibold sm:block"
+            class="hidden items-center font-semibold sm:flex"
           >
             <div
               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2545,7 +2545,7 @@ exports[`ImportWallet should render success step 1`] = `
             Balance
           </div>
           <div
-            class="hidden items-center font-semibold sm:block"
+            class="hidden items-center font-semibold sm:flex"
           >
             <span
               class="whitespace-nowrap"
@@ -2576,7 +2576,7 @@ exports[`ImportWallet should render success step 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19d5ufe"
+      class="no-ligatures css-wr7004"
       data-testid="TransactionDetail"
     >
       <div
@@ -2591,7 +2591,7 @@ exports[`ImportWallet should render success step 1`] = `
             Wallet Name
           </div>
           <div
-            class="hidden items-center font-semibold sm:block"
+            class="hidden items-center font-semibold sm:flex"
           >
             ARK Wallet 1
           </div>

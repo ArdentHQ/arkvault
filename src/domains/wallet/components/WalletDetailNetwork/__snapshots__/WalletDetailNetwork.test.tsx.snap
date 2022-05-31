@@ -18,7 +18,7 @@ exports[`WalletDetailNetwork should render 1`] = `
           Cryptoasset
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           ARK Devnet
         </div>
