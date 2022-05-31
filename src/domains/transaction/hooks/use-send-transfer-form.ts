@@ -129,7 +129,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("suppressWarning");
 
 		if (onlyHasOneNetwork) {
-			console.log(":D")
+			console.log(":D");
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);
