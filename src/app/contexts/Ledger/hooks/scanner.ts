@@ -28,7 +28,6 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	const abortRetryReference = useRef<boolean>(false);
 
 	const onProgress = (wallet: Contracts.WalletData) => {
-		console.log({wallet: wallet.data.address})
 		setLoadedWallets((wallets) => uniqBy([...wallets, wallet], (wallet) => wallet.data.address));
 	};
 
