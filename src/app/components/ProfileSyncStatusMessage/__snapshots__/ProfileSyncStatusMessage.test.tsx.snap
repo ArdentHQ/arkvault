@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyncErrorMessage should handle retry 1`] = `
+<div>
+  There has been a network problem on 
+  <span>
+    <strong>
+      ARK Devnet
+    </strong>
+    , 
+  </span>
+  <span>
+    <strong>
+      ARK Mainnet
+    </strong>
+    , 
+  </span>
+  <span>
+    <span>
+       
+      and
+       
+    </span>
+    <strong>
+      Lisk Devnet
+    </strong>
+  </span>
+   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+  <span
+    data-testid="SyncErrorMessage__retry"
+  >
+    <a
+      class="ring-focus group inline-block css-15tcy38"
+      data-ring-focus-margin="-m-1"
+      data-testid="Link"
+      href="#/"
+    >
+      <span
+        class="css-1y2194z"
+      >
+        here
+      </span>
+    </a>
+  </span>
+   to retry.
+</div>
+`;
+
+exports[`SyncErrorMessage should render multiple failed networks 1`] = `
+<div>
+  There has been a network problem on 
+  <span>
+    <strong>
+      ARK Devnet
+    </strong>
+    , 
+  </span>
+  <span>
+    <strong>
+      ARK Mainnet
+    </strong>
+    , 
+  </span>
+  <span>
+    <span>
+       
+      and
+       
+    </span>
+    <strong>
+      Lisk Devnet
+    </strong>
+  </span>
+   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+  <span
+    data-testid="SyncErrorMessage__retry"
+  >
+    <a
+      class="ring-focus group inline-block css-15tcy38"
+      data-ring-focus-margin="-m-1"
+      data-testid="Link"
+      href="#/"
+    >
+      <span
+        class="css-1y2194z"
+      >
+        here
+      </span>
+    </a>
+  </span>
+   to retry.
+</div>
+`;
+
+exports[`SyncErrorMessage should render one failed network 1`] = `
+<div>
+  There has been a network problem on 
+  <span>
+    <strong>
+      ARK Devnet
+    </strong>
+  </span>
+   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+  <span
+    data-testid="SyncErrorMessage__retry"
+  >
+    <a
+      class="ring-focus group inline-block css-15tcy38"
+      data-ring-focus-margin="-m-1"
+      data-testid="Link"
+      href="#/"
+    >
+      <span
+        class="css-1y2194z"
+      >
+        here
+      </span>
+    </a>
+  </span>
+   to retry.
+</div>
+`;
+
+exports[`SyncErrorMessage should render two failed networks 1`] = `
+<div>
+  There has been a network problem on 
+  <span>
+    <strong>
+      ARK Devnet
+    </strong>
+    , 
+  </span>
+  <span>
+    <span>
+       
+      and
+       
+    </span>
+    <strong>
+      ARK Mainnet
+    </strong>
+  </span>
+   while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click 
+  <span
+    data-testid="SyncErrorMessage__retry"
+  >
+    <a
+      class="ring-focus group inline-block css-15tcy38"
+      data-ring-focus-margin="-m-1"
+      data-testid="Link"
+      href="#/"
+    >
+      <span
+        class="css-1y2194z"
+      >
+        here
+      </span>
+    </a>
+  </span>
+   to retry.
+</div>
+`;

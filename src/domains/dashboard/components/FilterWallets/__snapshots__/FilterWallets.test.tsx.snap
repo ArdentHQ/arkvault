@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterWallets should render 1`] = `
+<div>
+  <div
+    class="flex flex-col text-left"
+    data-testid="FilterWallets"
+  >
+    <div
+      class="mb-5"
+    >
+      <div
+        class="font-semibold text-theme-secondary-text"
+      >
+        Filter Networks
+      </div>
+      <div
+        class="mt-1 text-sm text-theme-secondary-500"
+      >
+        Select the networks to show.
+      </div>
+    </div>
+    <div
+      class="space-y-4"
+    />
+    <div
+      class="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+    />
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="font-semibold text-theme-secondary-text"
+        >
+          Your Wallets
+        </div>
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <div
+              class="flex cursor-pointer items-center justify-end text-theme-secondary-text"
+              data-testid="filter-wallets__wallets"
+            >
+              <span
+                class="mr-2 inline-block font-semibold"
+              />
+              <div
+                class="transition-transform css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  chevron-down-small.svg
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="mt-1 pr-12 text-sm text-theme-secondary-500"
+      >
+        Select which wallets to view.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilterWallets should render with networks selection 1`] = `
+<div>
+  <div
+    class="flex flex-col text-left"
+    data-testid="FilterWallets"
+  >
+    <div
+      class="mb-5"
+    >
+      <div
+        class="font-semibold text-theme-secondary-text"
+      >
+        Filter Networks
+      </div>
+      <div
+        class="mt-1 text-sm text-theme-secondary-500"
+      >
+        Select the networks to show.
+      </div>
+    </div>
+    <div
+      class="space-y-4"
+    >
+      <div
+        data-testid="FilterNetwork"
+      >
+        <div
+          class="mb-3 text-sm font-bold text-theme-secondary-400"
+        >
+          Development Networks
+        </div>
+        <ul
+          class="flex flex-wrap"
+          data-testid="NetworkOptions"
+        >
+          <li
+            class="inline-block cursor-pointer pr-5 pb-5"
+            data-testid="NetworkOption__ark.devnet"
+          >
+            <div
+              class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
+            >
+              <div
+                class="css-v0ob3f"
+                data-testid="NetworkIcon__icon"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+              <span
+                class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              >
+                <span />
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="mt-6 mb-8 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+    />
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="font-semibold text-theme-secondary-text"
+        >
+          Your Wallets
+        </div>
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <div
+              class="flex cursor-pointer items-center justify-end text-theme-secondary-text"
+              data-testid="filter-wallets__wallets"
+            >
+              <span
+                class="mr-2 inline-block font-semibold"
+              />
+              <div
+                class="transition-transform css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  chevron-down-small.svg
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="mt-1 pr-12 text-sm text-theme-secondary-500"
+      >
+        Select which wallets to view.
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionStatus should render when confirmed 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Status
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex flex-row-reverse items-center gap-4 md:flex-row md:gap-2"
+        >
+          <div
+            class="text-theme-success-600 css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-check-mark.svg
+            </svg>
+          </div>
+          <span>
+            Confirmed
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionStatus should render when not confirmed 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Status
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex flex-row-reverse items-center gap-4 md:flex-row md:gap-2"
+        >
+          <div
+            class="text-theme-warning-300 css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              clock.svg
+            </svg>
+          </div>
+          <span>
+            Not yet confirmed
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

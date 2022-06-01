@@ -1,0 +1,30 @@
+{
+	"data": [
+		{
+			"name": "ChangeNOW",
+			"slug": "changenow",
+			"terms_of_service": "https://changenow.io/terms-of-use",
+			"privacy_policy": "https://changenow.io/privacy-policy",
+			"email_address": "support@changenow.io",
+			"is_active": true,
+			"logo": {
+				"dark": "https://exchanges.payvo.com/images/changenow/dark.png",
+				"light": "https://exchanges.payvo.com/images/changenow/light.png",
+				"thumbnail": "https://exchanges.payvo.com/images/changenow/thumbnail.png"
+			}
+		},
+		{
+			"name": "Changelly",
+			"slug": "changelly",
+			"terms_of_service": "https://changelly.com/terms-of-use",
+			"privacy_policy": "https://changelly.com/privacy-policy",
+			"email_address": "support@changelly.com",
+			"is_active": true,
+			"logo": {
+				"dark": "https://exchanges.payvo.com/images/changelly/dark.png",
+				"light": "https://exchanges.payvo.com/images/changelly/light.png",
+				"thumbnail": "https://exchanges.payvo.com/images/changelly/thumbnail.png"
+			}
+		}
+	]
+}

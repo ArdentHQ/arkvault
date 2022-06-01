@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionExplorerLink should render a transaction link 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        ID
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex w-full items-center space-x-3 overflow-hidden"
+        >
+          <span
+            class="overflow-hidden"
+          >
+            <a
+              class="ring-focus group inline-block flex items-center css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="transaction-link"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <span
+                  class="css-0"
+                  data-testid="TruncateMiddle"
+                >
+                  test-id
+                </span>
+              </span>
+              <div
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                data-testid="Link__external"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  arrow-external.svg
+                </svg>
+              </div>
+            </a>
+          </span>
+          <span
+            class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionExplorerLink should render a transaction link responsive after the width has calculated 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        ID
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex w-full items-center space-x-3 overflow-hidden"
+        >
+          <span
+            class="overflow-hidden"
+          >
+            <a
+              class="ring-focus group inline-block flex items-center css-15tcy38"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="transaction-link"
+              rel="noopener noreferrer"
+            >
+              <span
+                class="css-1y2194z"
+              >
+                <span
+                  class="css-0"
+                  data-testid="TruncateMiddle"
+                >
+                  test-id
+                </span>
+              </span>
+              <div
+                class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                data-testid="Link__external"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  arrow-external.svg
+                </svg>
+              </div>
+            </a>
+          </span>
+          <span
+            class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

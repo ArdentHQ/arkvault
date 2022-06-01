@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="w-68"
+          data-testid="DelegateVoteAmount"
+        >
+          <div
+            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+          >
+            <div
+              class="relative flex-1 px-3"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="css-a6wl22"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-invalid="false"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1nupw50"
+                      data-testid="InputCurrency"
+                      name="amount"
+                      placeholder="0"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="absolute inset-y-0 flex items-center space-x-3 right-7"
+                data-testid="DelegateVoteAmount__ticker"
+              >
+                <span
+                  class="text-theme-secondary-400 dark:text-theme-secondary-700"
+                >
+                  ARK
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`DelegateVoteAmount should render when isCompact = true 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="w-68"
+          data-testid="DelegateVoteAmount"
+        >
+          <div
+            class="justify-center border-t-2 border-b-2 border-transparent css-1rods8x"
+          >
+            <div
+              class="relative flex-1 px-3"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="css-xvbcvx"
+                >
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-invalid="false"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1nupw50"
+                      data-testid="InputCurrency"
+                      name="amount"
+                      placeholder="0"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <span
+                class="absolute inset-y-0 flex items-center space-x-3 right-7"
+                data-testid="DelegateVoteAmount__ticker"
+              >
+                <span
+                  class="text-theme-secondary-400 dark:text-theme-secondary-700"
+                >
+                  ARK
+                </span>
+              </span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

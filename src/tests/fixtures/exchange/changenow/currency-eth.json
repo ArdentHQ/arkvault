@@ -1,0 +1,14 @@
+{
+	"data": {
+		"coin": "eth",
+		"name": "Ethereum",
+		"warnings": {
+			"to": "Please be careful not to provide a smart contract as your ETH payout address.",
+			"from": "Please be careful not to deposit your ETH from a smart contract. "
+		},
+		"hasExternalId": false,
+		"externalIdName": null,
+		"addressExplorerMask": "https://etherscan.io/address/{}",
+		"transactionExplorerMask": "https://etherscan.io/tx/{}"
+	}
+}

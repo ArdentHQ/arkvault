@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletDetail should render 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletDetail should render with bottom border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-s5w13h"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletDetail should render with extra children 1`] = `
+<div>
+  <div
+    class="no-ligatures css-tnqofj"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+        <div
+          data-testid="TEST_CHILD"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletDetail should render with top border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletDetail should render without border 1`] = `
+<div>
+  <div
+    class="no-ligatures css-1iw2tte"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletDetail should render without padding 1`] = `
+<div>
+  <div
+    class="no-ligatures css-tnqofj"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex w-full items-center justify-between space-x-4"
+    >
+      <div
+        class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Test
+        </div>
+        <div
+          class="hidden items-center font-semibold sm:flex"
+        >
+          test
+        </div>
+      </div>
+      <div
+        class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+      >
+        <div
+          class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+        >
+          <div
+            class="w-full truncate"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

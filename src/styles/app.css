@@ -1,0 +1,19 @@
+/** Tailwind **/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./variables.css";
+@import "./headings.css";
+@import "./base.css";
+@import "./pwa.css";
+@import "./forms.css";
+@import "./fonts.css";
+@import "./scrollbars.css";
+@import "./skeletons.css";
+@import "./slider.css";
+@import "./toasts.css";
+@import "./tooltips.css";
+
+@import "./coins.css";
+@import "./focus-visible.css";

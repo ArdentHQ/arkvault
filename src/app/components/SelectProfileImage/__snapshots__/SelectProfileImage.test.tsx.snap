@@ -1,0 +1,474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectProfileImage should handle upload file 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-image"
+            src="test"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="absolute -top-2 -right-2 z-20"
+        >
+          <button
+            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            data-testid="SelectProfileImage__remove-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should not allow to upload an invalid file image 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-image"
+            src="test"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="absolute -top-2 -right-2 z-20"
+        >
+          <button
+            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            data-testid="SelectProfileImage__remove-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should not allow to upload when user aborted a request 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-image"
+            src="test"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="absolute -top-2 -right-2 z-20"
+        >
+          <button
+            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            data-testid="SelectProfileImage__remove-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should not handle upload file 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-image"
+            src="test"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="absolute -top-2 -right-2 z-20"
+        >
+          <button
+            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            data-testid="SelectProfileImage__remove-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should render 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="h-20 w-20 rounded-md border-2 border-dashed border-theme-secondary-400 p-1 focus-within:border-solid focus-within:border-theme-primary-400 dark:border-theme-secondary-700"
+      >
+        <div
+          class="h-full overflow-hidden rounded-full"
+        >
+          <div
+            class="css-5aibro"
+          >
+            <button
+              class="css-1jhy6v9"
+              data-testid="SelectProfileImage__upload-button"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="text-theme-primary-600 dark:text-theme-secondary-200 css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    arrow-up-bracket.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should render with value svg 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-identicon"
+            src="data:image/svg+xml;utf8,<svg>test</svg>"
+          />
+          <span
+            class="absolute text-2xl font-semibold text-white"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectProfileImage should render without value svg 1`] = `
+<DocumentFragment>
+  <div
+    class="group space-y-2"
+  >
+    <span
+      class="cursor-default text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600"
+    >
+      Profile Image
+    </span>
+    <div
+      class="flex flex-row"
+    >
+      <div
+        class="relative z-0 h-20 w-20"
+      >
+        <div
+          class="css-ikig5u"
+        >
+          <img
+            alt="Avatar"
+            class="min-h-full object-cover"
+            data-testid="SelectProfileImage__avatar-image"
+            src="test"
+          />
+          <button
+            class="upload-button-overlay absolute z-10 h-full w-full overflow-hidden p-1 opacity-0 transition-opacity duration-200 focus:outline-none"
+            data-testid="SelectProfileImage__upload-button"
+            type="button"
+          >
+            <div
+              class="flex h-full items-center justify-center rounded-full bg-theme-secondary-900 opacity-85 dark:bg-black"
+            >
+              <div
+                class="text-white dark:text-theme-secondary-200 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  arrow-up-bracket.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="absolute -top-2 -right-2 z-20"
+        >
+          <button
+            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            data-testid="SelectProfileImage__remove-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-15txs7d"
+                height="10"
+                width="10"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

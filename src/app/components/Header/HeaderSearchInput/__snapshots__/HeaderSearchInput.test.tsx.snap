@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderSearchInput should render 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="HeaderSearchInput"
+  >
+    <div
+      class="flex items-center overflow-hidden rounded-lg border border-theme-secondary-400 bg-theme-background px-4 text-base dark:border-theme-secondary-700 css-1h4jdfq"
+      data-testid="HeaderSearchInput__input"
+    >
+      <button
+        class="transition-all duration-300 focus:outline-none"
+        data-testid="HeaderSearchInput__input__reset"
+        type="button"
+      >
+        <div
+          class="text-theme-text transition-all duration-300 w-0 css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            cross.svg
+          </svg>
+        </div>
+      </button>
+      <div
+        class="flex-1"
+      >
+        <div
+          class="-ml-4 css-7km7kr"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              autocomplete="off"
+              class="no-ligatures w-full border-none css-1nupw50"
+              data-testid="HeaderSearchInput__input__input"
+              placeholder="Search..."
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+        height="20"
+        width="20"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionFee should render 1`] = `
+<div>
+  <div
+    class="no-ligatures css-19rivvh"
+    data-testid="TransactionFee"
+  >
+    <div
+      class="w-40 flex-1 space-y-2 whitespace-nowrap"
+      data-testid="TransactionDetail--desktop"
+    >
+      <div
+        class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+      >
+        Transaction Fee
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <span
+          class="whitespace-nowrap"
+          data-testid="Amount"
+        >
+          1 DARK
+        </span>
+        <span
+          class="whitespace-nowrap ml-2 text-theme-secondary-400"
+          data-testid="Amount"
+        >
+          €1.50
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

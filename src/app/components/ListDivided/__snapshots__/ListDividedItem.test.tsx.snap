@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListDividedItem should render an ListDividedItem 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  />
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render as floating label 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class="flex justify-between flex-col items-start"
+      data-testid="list-divided-item__inner-wrapper"
+    >
+      <div
+        class="flex w-full flex-col space-y-2"
+      >
+        <div
+          class="flex items-center justify-between space-x-5"
+        >
+          <span
+            class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+            data-testid="list-divided-item__label"
+          >
+            Label
+          </span>
+        </div>
+      </div>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render the content 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class=""
+      data-testid="list-divided-item__content"
+    >
+      Content
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render the label 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class="flex justify-between items-center"
+      data-testid="list-divided-item__inner-wrapper"
+    >
+      <div
+        class="flex w-full flex-col space-y-2"
+      >
+        <div
+          class="flex items-center justify-between space-x-5"
+        >
+          <span
+            class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+            data-testid="list-divided-item__label"
+          >
+            Label
+          </span>
+        </div>
+      </div>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render the labelDescription 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class="flex justify-between items-center"
+      data-testid="list-divided-item__inner-wrapper"
+    >
+      <div
+        class="flex w-full flex-col space-y-2"
+      >
+        <div
+          class="flex items-center justify-between space-x-5"
+        >
+          <span
+            class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+            data-testid="list-divided-item__label"
+          >
+            Label
+          </span>
+        </div>
+        <span
+          class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
+          data-testid="list-divided-item__label--description"
+        >
+          Label Desc
+        </span>
+      </div>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render the value 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class="flex justify-between items-center"
+      data-testid="list-divided-item__inner-wrapper"
+    >
+      <div
+        class="flex w-full flex-col space-y-2"
+      >
+        <div
+          class="flex items-center justify-between space-x-5"
+        >
+          <span
+            class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+            data-testid="list-divided-item__label"
+          >
+            Label
+          </span>
+        </div>
+      </div>
+      <div>
+        <span
+          data-testid="list-divided-item__value"
+        >
+          Value
+        </span>
+      </div>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ListDividedItem should render with labelAddon 1`] = `
+<DocumentFragment>
+  <li
+    class="flex w-full flex-col "
+    data-testid="list-divided-item__wrapper"
+  >
+    <div
+      class="flex justify-between items-center"
+      data-testid="list-divided-item__inner-wrapper"
+    >
+      <div
+        class="flex w-full flex-col space-y-2"
+      >
+        <div
+          class="flex items-center justify-between space-x-5"
+        >
+          <span
+            class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+            data-testid="list-divided-item__label"
+          >
+            Label
+          </span>
+          <span>
+            <span>
+              Test
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class=""
+      data-testid="list-divided-item__content"
+    >
+      Content
+    </div>
+  </li>
+</DocumentFragment>
+`;

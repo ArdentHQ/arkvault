@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row should render 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between space-x-4"
+  >
+    <div
+      class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+    >
+      Hello World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Row should render responsive wrapper 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between space-x-4"
+  >
+    <div
+      class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+    >
+      Hello World
+    </div>
+    <div
+      class="flex w-full text-right"
+    >
+      <div
+        class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+      >
+        The address
+      </div>
+    </div>
+  </div>
+</div>
+`;

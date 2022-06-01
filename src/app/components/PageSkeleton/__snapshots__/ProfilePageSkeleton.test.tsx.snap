@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePageSkeleton should render without profile 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex min-h-screen flex-col"
+    data-testid="ProfilePageSkeleton"
+  >
+    <div
+      class="sticky inset-x-0 top-0 border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative flex h-21"
+      >
+        <div
+          class="flex flex-1 justify-between px-8 sm:ml-12"
+        >
+          <div
+            class="my-auto mr-4 flex h-11 w-11 items-center justify-center rounded-xl bg-theme-primary-600 text-white"
+          >
+            <span
+              class="relative"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </span>
+          </div>
+          <div
+            class="flex"
+          >
+            <div
+              class="my-auto flex items-center space-x-4"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 40px; height: 40px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+            </div>
+            <div
+              class="my-auto ml-4 hidden items-center space-x-4 sm:flex"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 40px; height: 40px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 40px; height: 40px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+            </div>
+            <div
+              class="my-auto ml-4 flex items-center"
+            >
+              <div
+                class="mx-4 hidden space-y-2 md:block"
+              >
+                <p>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 80px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </p>
+                <p>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 80px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 44px; height: 44px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-1 flex-col"
+    >
+      <div
+        class=" css-ycib48"
+      >
+        <div
+          class="mx-auto px-8 md:px-10 lg:container"
+        >
+          <div
+            class="w-full"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="height: 24px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+          <div
+            class="my-4 w-2/3"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="height: 24px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+          <div
+            class="w-1/4"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="height: 24px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Balance should render 1`] = `
+<div>
+  <div
+    class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+  >
+    <div
+      class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
+    >
+      Your Balance
+    </div>
+    <div
+      class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 md:text-theme-secondary-text md:dark:text-theme-text"
+      data-testid="Balance__value"
+    >
+      <span
+        class="whitespace-nowrap"
+        data-testid="Amount"
+      >
+        0 BTC
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Balance should render loading state 1`] = `
+<div>
+  <div
+    class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+  >
+    <div
+      class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
+    >
+      Your Balance
+    </div>
+    <div
+      class="py-1"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 60px; height: 16px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Use Ledger Scanner should abort scanner 1`] = `
+<div>
+  <div>
+    <p>
+      Idle
+    </p>
+    <button
+      data-testid="scan"
+    >
+      Scan
+    </button>
+    <button
+      data-testid="abort"
+    >
+      Abort
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Use Ledger Scanner should dispatch failed 1`] = `
+<div>
+  <div>
+    <ul />
+    <button>
+      Scan
+    </button>
+    <button>
+      Retry
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Use Ledger Scanner should render 1`] = `
+<div>
+  <div>
+    <ul>
+      <li>
+        <p>
+          Path: m/44'/1'/0'/0/0
+        </p>
+        <p>
+          Address: DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG
+        </p>
+        <p>
+          Selected: true
+        </p>
+      </li>
+    </ul>
+    <button>
+      Scan
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Use Ledger Scanner should render with toggleSelect 1`] = `
+<div>
+  <div>
+    <ul>
+      <li>
+        <p>
+          Path: m/44'/1'/0'/0/0
+        </p>
+        <p>
+          Address: DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG
+        </p>
+        <p>
+          Selected: false
+        </p>
+        <input
+          data-testid="input--0"
+          type="checkbox"
+        />
+      </li>
+    </ul>
+    <button
+      data-testid="scan"
+    >
+      Scan
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Use Ledger Scanner should render with toggleSelectAll 1`] = `
+<div>
+  <div>
+    <ul>
+      <li>
+        <p>
+          Path: m/44'/1'/0'/0/0
+        </p>
+        <p>
+          Address: DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG
+        </p>
+        <p>
+          Selected: false
+        </p>
+      </li>
+    </ul>
+    <button>
+      Scan
+    </button>
+    <button>
+      Toggle All
+    </button>
+  </div>
+</div>
+`;

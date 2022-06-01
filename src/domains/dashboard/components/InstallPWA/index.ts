@@ -1,0 +1,1 @@
+export { InstallPWA } from "./InstallPWA";

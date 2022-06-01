@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should render 1`] = `
+<div>
+  <span
+    class="relative"
+  >
+    <svg>
+      payvo-logo.svg
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Logo should render with height 1`] = `
+<div>
+  <span
+    class="relative"
+  >
+    <svg
+      height="20"
+    >
+      payvo-logo.svg
+    </svg>
+  </span>
+</div>
+`;

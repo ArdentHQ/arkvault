@@ -1,0 +1,636 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorStep should display error details 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ErrorStep"
+  >
+    <div
+      class="space-y-8"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Error
+          </h1>
+        </div>
+      </div>
+      <svg
+        class="hidden w-full md:block"
+      >
+        transaction-error-banner-light-green.svg
+      </svg>
+      <div
+        class="space-y-6"
+      >
+        <p
+          class="hidden text-theme-secondary-text md:block"
+        >
+          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+        </p>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          </div>
+        </div>
+        <div
+          class="py-4 css-qner8f"
+          disabled=""
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <textarea
+              autocomplete="off"
+              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+              data-testid="ErrorStep__errorMessage"
+              disabled=""
+              style="height: 4px;"
+              type="text"
+            >
+              Display error details
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1rsixno"
+    >
+      <div
+        class="mr-auto"
+      >
+        <div
+          class="relative"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="clipboard-button__wrapper"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span
+                class="hidden sm:block"
+              >
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ErrorStep should emit onBack 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ErrorStep"
+  >
+    <div
+      class="space-y-8"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Custom error title
+          </h1>
+        </div>
+      </div>
+      <svg
+        class="hidden w-full md:block"
+      >
+        transaction-error-banner-light-green.svg
+      </svg>
+      <div
+        class="space-y-6"
+      >
+        <p
+          class="hidden text-theme-secondary-text md:block"
+        >
+          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+        </p>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          </div>
+        </div>
+        <div
+          class="py-4 css-qner8f"
+          disabled=""
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <textarea
+              autocomplete="off"
+              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+              data-testid="ErrorStep__errorMessage"
+              disabled=""
+              style="height: 4px;"
+              type="text"
+            >
+              test
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1rsixno"
+    >
+      <div
+        class="mr-auto"
+      >
+        <div
+          class="relative"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="clipboard-button__wrapper"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span
+                class="hidden sm:block"
+              >
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <button
+        class="css-1jhy6v9"
+        data-testid="ErrorStep__wallet-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="whitespace-nowrap"
+          >
+            Back to Wallet
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ErrorStep should emit onRepeat 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ErrorStep"
+  >
+    <div
+      class="space-y-8"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Custom error title
+          </h1>
+        </div>
+      </div>
+      <svg
+        class="hidden w-full md:block"
+      >
+        transaction-error-banner-light-green.svg
+      </svg>
+      <div
+        class="space-y-6"
+      >
+        <p
+          class="hidden text-theme-secondary-text md:block"
+        >
+          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+        </p>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          </div>
+        </div>
+        <div
+          class="py-4 css-qner8f"
+          disabled=""
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <textarea
+              autocomplete="off"
+              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+              data-testid="ErrorStep__errorMessage"
+              disabled=""
+              style="height: 4px;"
+              type="text"
+            >
+              test
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1rsixno"
+    >
+      <div
+        class="mr-auto"
+      >
+        <div
+          class="relative"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="clipboard-button__wrapper"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span
+                class="hidden sm:block"
+              >
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <button
+        class="css-1bx0hyc"
+        data-testid="ErrorStep__repeat-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="whitespace-nowrap"
+          >
+            Retry
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ErrorStep should render with custom title 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ErrorStep"
+  >
+    <div
+      class="space-y-8"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Custom error title
+          </h1>
+        </div>
+      </div>
+      <svg
+        class="hidden w-full md:block"
+      >
+        transaction-error-banner-light-green.svg
+      </svg>
+      <div
+        class="space-y-6"
+      >
+        <p
+          class="hidden text-theme-secondary-text md:block"
+        >
+          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+        </p>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          </div>
+        </div>
+        <div
+          class="py-4 css-qner8f"
+          disabled=""
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <textarea
+              autocomplete="off"
+              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+              data-testid="ErrorStep__errorMessage"
+              disabled=""
+              style="height: 4px;"
+              type="text"
+            >
+              test
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1rsixno"
+    >
+      <div
+        class="mr-auto"
+      >
+        <div
+          class="relative"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="clipboard-button__wrapper"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span
+                class="hidden sm:block"
+              >
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ErrorStep should render with default texts 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ErrorStep"
+  >
+    <div
+      class="space-y-8"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Transaction Error
+          </h1>
+        </div>
+      </div>
+      <svg
+        class="hidden w-full md:block"
+      >
+        transaction-error-banner-light-green.svg
+      </svg>
+      <div
+        class="space-y-6"
+      >
+        <p
+          class="hidden text-theme-secondary-text md:block"
+        >
+          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+        </p>
+        <div
+          class="flex flex-col overflow-hidden rounded-xl md:hidden"
+        >
+          <div
+            class="css-ic0qlc"
+          >
+            <div
+              class="css-v0ob3f"
+              height="16"
+              width="16"
+            >
+              <svg>
+                circle-cross.svg
+              </svg>
+            </div>
+            <span>
+              Error
+            </span>
+          </div>
+          <div
+            class="css-6o9bco"
+          >
+            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          </div>
+        </div>
+        <div
+          class="py-4 css-qner8f"
+          disabled=""
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <textarea
+              autocomplete="off"
+              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+              data-testid="ErrorStep__errorMessage"
+              disabled=""
+              style="height: 4px;"
+              type="text"
+            >
+              test
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1rsixno"
+    >
+      <div
+        class="mr-auto"
+      >
+        <div
+          class="relative"
+        >
+          <button
+            class="css-1jhy6v9"
+            data-testid="clipboard-button__wrapper"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+              <span
+                class="hidden sm:block"
+              >
+                Copy
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

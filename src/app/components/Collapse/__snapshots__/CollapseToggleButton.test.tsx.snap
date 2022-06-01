@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollapseToggleButton should render disabled 1`] = `
+<div>
+  <button
+    class="flex items-center space-x-2 font-semibold focus:outline-none rounded text-theme-secondary-500"
+    data-testid="CollapseToggleButton"
+    disabled=""
+  >
+    <span
+      class="flex items-center space-x-1"
+    >
+      Hide
+    </span>
+    <span
+      class="css-145dqyl"
+    >
+      <div
+        class="p-1 css-15txs7d"
+        height="10"
+        width="10"
+      >
+        <svg>
+          chevron-down-small.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</div>
+`;

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should render 1`] = `
+<div>
+  <div
+    class="css-1fqo6lu"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render a large one 1`] = `
+<div>
+  <div
+    class="css-jpdazw"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render a small one 1`] = `
+<div>
+  <div
+    class="css-1fqo6lu"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render as solid 1`] = `
+<div>
+  <div
+    class="css-lcszx2"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render as solid and danger 1`] = `
+<div>
+  <div
+    class="css-yqrcc3"
+    color="danger"
+  />
+</div>
+`;
+
+exports[`Label should render as solid and default 1`] = `
+<div>
+  <div
+    class="css-dxblop"
+    color="neutral"
+  />
+</div>
+`;
+
+exports[`Label should render as solid and primary 1`] = `
+<div>
+  <div
+    class="css-lcszx2"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render as solid and success 1`] = `
+<div>
+  <div
+    class="css-1iy51i0"
+    color="success"
+  />
+</div>
+`;
+
+exports[`Label should render danger color 1`] = `
+<div>
+  <div
+    class="css-fbeerz"
+    color="danger"
+  />
+</div>
+`;
+
+exports[`Label should render neutral color 1`] = `
+<div>
+  <div
+    class="css-hp3hbt"
+    color="neutral"
+  />
+</div>
+`;
+
+exports[`Label should render primary color 1`] = `
+<div>
+  <div
+    class="css-1fqo6lu"
+    color="primary"
+  />
+</div>
+`;
+
+exports[`Label should render success color 1`] = `
+<div>
+  <div
+    class="css-1vb1527"
+    color="success"
+  />
+</div>
+`;
+
+exports[`Label should render warning color 1`] = `
+<div>
+  <div
+    class="css-e4b6xp"
+    color="warning"
+  />
+</div>
+`;

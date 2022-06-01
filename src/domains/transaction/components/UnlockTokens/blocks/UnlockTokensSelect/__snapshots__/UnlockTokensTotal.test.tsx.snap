@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnlockTokensTotal should render 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-4 flex items-center justify-between"
+  >
+    <div
+      class="flex flex-col items-start"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Total Amount
+      </p>
+      <div
+        class="css-1vb1527"
+        color="success"
+      >
+        <div
+          class="flex space-x-1 items-stretch"
+        >
+          <span
+            class="whitespace-nowrap"
+            data-testid="Amount"
+          >
+            + 10 LSK
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-end"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Transaction Fee
+      </p>
+      <div
+        class="css-fbeerz"
+        color="danger"
+      >
+        <div
+          class="flex space-x-1 items-stretch"
+        >
+          <span
+            class="whitespace-nowrap"
+            data-testid="Amount"
+          >
+            - 8 LSK
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UnlockTokensTotal should render loading 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-4 flex items-center justify-between"
+  >
+    <div
+      class="flex flex-col items-start"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Total Amount
+      </p>
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 60px; height: 28px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+    <div
+      class="flex flex-col items-end"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Transaction Fee
+      </p>
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 60px; height: 28px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UnlockTokensTotal should render loading fee 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-4 flex items-center justify-between"
+  >
+    <div
+      class="flex flex-col items-start"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Total Amount
+      </p>
+      <div
+        class="css-1vb1527"
+        color="success"
+      >
+        <div
+          class="flex space-x-1 items-stretch"
+        >
+          <span
+            class="whitespace-nowrap"
+            data-testid="Amount"
+          >
+            + 10 LSK
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-end"
+      data-testid="UnlockTokensTotal"
+    >
+      <p
+        class="mb-2 text-sm font-semibold text-theme-secondary-500"
+      >
+        Transaction Fee
+      </p>
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="width: 60px; height: 28px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

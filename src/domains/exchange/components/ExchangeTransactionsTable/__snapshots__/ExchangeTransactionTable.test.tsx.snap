@@ -1,0 +1,4590 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeTransactionsTable should render 1`] = `
+<div>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Exchange
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  From
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  To
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Actions
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeTransactionsTable should render compact 1`] = `
+<div>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Exchange
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  From
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  To
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Actions
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-mx19qq"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1rods8x"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1rods8x"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sent.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-8zppvw"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      received.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-1mirnqf"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1rods8x"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-br23tb"
+              >
+                <button
+                  class="css-1b8lzw6"
+                  data-testid="TableRemoveButton--compact"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-mx19qq"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1rods8x"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1rods8x"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sent.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-8zppvw"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      received.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-1mirnqf"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1rods8x"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-br23tb"
+              >
+                <button
+                  class="css-1b8lzw6"
+                  data-testid="TableRemoveButton--compact"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-mx19qq"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1rods8x"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1rods8x"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      sent.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-8zppvw"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1rods8x"
+              >
+                <span
+                  class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      received.svg
+                    </svg>
+                  </div>
+                </span>
+                <div
+                  class="css-1mirnqf"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-center"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1rods8x"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-br23tb"
+              >
+                <button
+                  class="css-1b8lzw6"
+                  data-testid="TableRemoveButton--compact"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeTransactionsTable should render desktop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Exchange
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  From
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  To
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Actions
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExchangeTransactionsTable should render desktop 2`] = `
+<DocumentFragment>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Exchange
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  From
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  To
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Actions
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExchangeTransactionsTable should render desktop 3`] = `
+<DocumentFragment>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class="-mt-3 css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+            role="row"
+          >
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+              colspan="1"
+              data-testid="table__th--0"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  ID
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Exchange
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell"
+              colspan="1"
+              data-testid="table__th--2"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  Date
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--3"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  From
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              colspan="1"
+              data-testid="table__th--4"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  class=""
+                >
+                  To
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="transition-transform rotate-180 css-15txs7d"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <svg>
+                      chevron-down-small.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-24 min-w-24"
+              colspan="1"
+              data-testid="table__th--5"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top justify-center"
+              >
+                <div
+                  class=""
+                >
+                  Status
+                </div>
+              </div>
+            </th>
+            <th
+              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+              colspan="1"
+              data-testid="table__th--6"
+              role="columnheader"
+            >
+              <div
+                class="flex flex-inline align-top hidden"
+              >
+                <div
+                  class=""
+                >
+                  Actions
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class=" css-1li86da"
+            data-testid="TableRow"
+          >
+            <td>
+              <div
+                class="css-14huxtf"
+              >
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      magnifying-glass-id.svg
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div
+                class="font-semibold css-1d4ra48"
+              />
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="css-1d4ra48"
+              >
+                01.01.2021 12:00 AM
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        sent.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="gap-3 css-1d4ra48"
+              >
+                <div
+                  class="hidden lg:flex"
+                >
+                  <div
+                    class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        received.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-center css-1d4ra48"
+              >
+                <span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+            </td>
+            <td>
+              <div
+                class="justify-end text-theme-secondary-text css-1hhowo0"
+              >
+                <button
+                  class="css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExchangeTransactionsTable should render mobile 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class=" css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    3
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    2
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    1
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExchangeTransactionsTable should render mobile 2`] = `
+<DocumentFragment>
+  <div
+    data-testid="ExchangeTransactionsTable"
+  >
+    <div
+      class=" css-1m6rt2i"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    3
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    2
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group css-1gk67vk"
+            data-testid="TableRow"
+          >
+            <td
+              class="flex-col space-y-4 py-4"
+              data-testid="TableRow__mobile"
+            >
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  ID
+                </div>
+                <button
+                  class="link"
+                  type="button"
+                >
+                  <span
+                    class="css-0"
+                    data-testid="TruncateMiddle"
+                  >
+                    1
+                  </span>
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Recipient
+                </div>
+                <span
+                  class="font-semibold"
+                />
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Timestamp
+                </div>
+                01.01.2021 12:00 AM
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  From
+                </div>
+                <div
+                  class="css-fbeerz"
+                  color="danger"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      - 1 BTC
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  To
+                </div>
+                <div
+                  class="css-1vb1527"
+                  color="success"
+                >
+                  <div
+                    class="flex space-x-1 items-stretch"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                      data-testid="AmountLabel__hint"
+                    >
+                      <div
+                        class="dark:text-white css-15txs7d"
+                        height="10"
+                        width="10"
+                      >
+                        <svg>
+                          hint-small.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      + 100 ARK
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <div
+                  class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                >
+                  Status
+                </div>
+                <span
+                  class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  <span>
+                    New
+                  </span>
+                  <div
+                    class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      clock.svg
+                    </svg>
+                  </div>
+                </span>
+              </div>
+              <div
+                class="flex items-center justify-between space-x-4"
+              >
+                <button
+                  class="w-full sm:ml-auto sm:w-auto css-1cp5yjb"
+                  data-testid="TableRemoveButton"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        trash.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

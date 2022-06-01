@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationSearch should close search input if clicked outside 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="p-4"
+      data-testid="somewhere-outside"
+    >
+      sample text
+    </div>
+    <button
+      class="group css-1g6oieb"
+      data-testid="PaginationSearchButton"
+      type="button"
+    >
+      <span
+        class="group-hover:invisible"
+      >
+        <span
+          data-testid="PaginationSearchToggle"
+        >
+          ...
+        </span>
+      </span>
+      <span
+        class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+        data-testid="PaginationSearchButton__search"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            magnifying-glass.svg
+          </svg>
+        </div>
+      </span>
+    </button>
+    ,
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should not allow typing number greater than total pages 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should not emit onSelect if nothing is typed 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should not emit onSelect if zero is typed 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should not limit total page if not provided 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should render 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should show pagination search input 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should show search input and close 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`PaginationSearch should type page and emit onSelectPage event 1`] = `
+<DocumentFragment>
+  <button
+    class="group css-1g6oieb"
+    data-testid="PaginationSearchButton"
+    type="button"
+  >
+    <span
+      class="group-hover:invisible"
+    >
+      <span
+        data-testid="PaginationSearchToggle"
+      >
+        ...
+      </span>
+    </span>
+    <span
+      class="invisible absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center group-hover:visible"
+      data-testid="PaginationSearchButton__search"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;

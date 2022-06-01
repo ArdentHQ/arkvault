@@ -1,0 +1,2383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectDropdown should render disabled option base 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-32-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-32-input"
+            id="downshift-32-label"
+          />
+          <div
+            class="css-n29l73"
+            disabled=""
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-32-menu"
+                aria-labelledby="downshift-32-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                data-testid="SelectDropdown__input"
+                disabled=""
+                id="downshift-32-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-32-label"
+          id="downshift-32-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render disabled option group 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-34-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-34-input"
+            id="downshift-34-label"
+          />
+          <div
+            class="css-n29l73"
+            disabled=""
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-34-menu"
+                aria-labelledby="downshift-34-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
+                data-testid="SelectDropdown__input"
+                disabled=""
+                id="downshift-34-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-34-label"
+          id="downshift-34-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render invalid option base 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-px3dod"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          aria-invalid="true"
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+        data-testid="Input__addon-end"
+      >
+        <span
+          data-testid="Input__error"
+        >
+          <div
+            class="text-theme-danger-500 css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-28-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-28-input"
+            id="downshift-28-label"
+          />
+          <div
+            class="css-px3dod"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-28-menu"
+                aria-invalid="true"
+                aria-labelledby="downshift-28-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-28-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+              data-testid="Input__addon-end"
+            >
+              <span
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500 css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="pl-3"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-danger-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-28-label"
+          id="downshift-28-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render invalid option group 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-px3dod"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          aria-invalid="true"
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+        data-testid="Input__addon-end"
+      >
+        <span
+          data-testid="Input__error"
+        >
+          <div
+            class="text-theme-danger-500 css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-30-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-30-input"
+            id="downshift-30-label"
+          />
+          <div
+            class="css-px3dod"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-30-menu"
+                aria-invalid="true"
+                aria-labelledby="downshift-30-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-30-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+              data-testid="Input__addon-end"
+            >
+              <span
+                data-testid="Input__error"
+              >
+                <div
+                  class="text-theme-danger-500 css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </span>
+              <div
+                class="pl-3"
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-danger-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-30-label"
+          id="downshift-30-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-0-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-0-input"
+            id="downshift-0-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-0-menu"
+                aria-labelledby="downshift-0-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-0-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-0-label"
+          id="downshift-0-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base with custom label 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        aria-owns="downshift-4-menu"
+        role="combobox"
+      >
+        <div
+          aria-expanded="true"
+        >
+          <label
+            for="downshift-4-input"
+            id="downshift-4-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Opt
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-4-menu"
+                aria-labelledby="downshift-4-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-4-input"
+                placeholder="Select option"
+                type="text"
+                value="Opt"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Option 1
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 rotate-180 transform css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-4-label"
+          id="downshift-4-menu"
+          role="listbox"
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-1"
+            style="z-index: 9999; transition: none; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="css-8h6uxg"
+              >
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--0"
+                  id="downshift-4-item-0"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--1"
+                  id="downshift-4-item-1"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 2
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--2"
+                  id="downshift-4-item-2"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 3
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base with custom label and allowed overflow 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        aria-owns="downshift-16-menu"
+        role="combobox"
+      >
+        <div
+          aria-expanded="true"
+        >
+          <label
+            for="downshift-16-input"
+            id="downshift-16-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Opt
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-16-menu"
+                aria-labelledby="downshift-16-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-16-input"
+                placeholder="Select option"
+                type="text"
+                value="Opt"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Option 1
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 rotate-180 transform css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-16-label"
+          id="downshift-16-menu"
+          role="listbox"
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-3"
+            style="z-index: 9999; transition: none; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 5px); min-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="css-8h6uxg"
+              >
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--0"
+                  id="downshift-16-item-0"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--1"
+                  id="downshift-16-item-1"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 2
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected="false"
+                  class="select-list-option"
+                  data-testid="SelectDropdown__option--2"
+                  id="downshift-16-item-2"
+                  role="option"
+                >
+                  <div
+                    class="select-list-option__label"
+                  >
+                    <span>
+                      Label Option 3
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base with default value when free text is allowed 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="3"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-403-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-403-input"
+            id="downshift-403-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-403-menu"
+                aria-labelledby="downshift-403-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-403-input"
+                placeholder="Select option"
+                type="text"
+                value="3"
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-403-label"
+          id="downshift-403-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base with initial default value 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="3"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-48-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-48-input"
+            id="downshift-48-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Option 3
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-48-menu"
+                aria-labelledby="downshift-48-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-48-input"
+                placeholder="Select option"
+                type="text"
+                value="Option 3"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Option 3
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-48-label"
+          id="downshift-48-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base with wrong default value 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-54-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-54-input"
+            id="downshift-54-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-54-menu"
+                aria-labelledby="downshift-54-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-54-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-54-label"
+          id="downshift-54-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option base without caret 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-36-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-36-input"
+            id="downshift-36-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-36-menu"
+                aria-labelledby="downshift-36-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-36-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-36-label"
+          id="downshift-36-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-2-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-2-input"
+            id="downshift-2-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-2-menu"
+                aria-labelledby="downshift-2-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-2-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-2-label"
+          id="downshift-2-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group with custom label 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        aria-owns="downshift-10-menu"
+        role="combobox"
+      >
+        <div
+          aria-expanded="true"
+        >
+          <label
+            for="downshift-10-input"
+            id="downshift-10-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Opt
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-10-menu"
+                aria-labelledby="downshift-10-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-10-input"
+                placeholder="Select option"
+                type="text"
+                value="Opt"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Option 1
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 rotate-180 transform css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-10-label"
+          id="downshift-10-menu"
+          role="listbox"
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-2"
+            style="z-index: 9999; transition: none; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 5px); min-width: 100%; max-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="css-8h6uxg"
+              >
+                <ul
+                  class="select-list-option-group"
+                  data-testid="SelectDropdown__option-group--0"
+                >
+                  <li
+                    class="select-list-option-head"
+                  >
+                    <div
+                      class="select-list-option-head__label"
+                    >
+                      Group1
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--0"
+                    id="downshift-10-item-0"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 1
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--1"
+                    id="downshift-10-item-1"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 2
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group with custom label and allowed overflow 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="true"
+        aria-haspopup="listbox"
+        aria-owns="downshift-22-menu"
+        role="combobox"
+      >
+        <div
+          aria-expanded="true"
+        >
+          <label
+            for="downshift-22-input"
+            id="downshift-22-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Opt
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-22-menu"
+                aria-labelledby="downshift-22-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-22-input"
+                placeholder="Select option"
+                type="text"
+                value="Opt"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Option 1
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 rotate-180 transform css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-22-label"
+          id="downshift-22-menu"
+          role="listbox"
+        >
+          <div
+            data-tippy-root=""
+            id="tippy-4"
+            style="z-index: 9999; transition: none; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 5px); min-width: 100%;"
+          >
+            <div
+              data-escaped=""
+              data-placement="bottom-start"
+              data-reference-hidden=""
+            >
+              <ul
+                class="css-8h6uxg"
+              >
+                <ul
+                  class="select-list-option-group"
+                  data-testid="SelectDropdown__option-group--0"
+                >
+                  <li
+                    class="select-list-option-head"
+                  >
+                    <div
+                      class="select-list-option-head__label"
+                    >
+                      Group1
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--0"
+                    id="downshift-22-item-0"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 1
+                      </span>
+                    </div>
+                  </li>
+                  <li
+                    aria-selected="false"
+                    class="select-list-option"
+                    data-testid="SelectDropdown__option--1"
+                    id="downshift-22-item-1"
+                    role="option"
+                  >
+                    <div
+                      class="select-list-option__label"
+                    >
+                      <span>
+                        Label Option 2
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group with default value when free text is allowed 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="3"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-406-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-406-input"
+            id="downshift-406-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-406-menu"
+                aria-labelledby="downshift-406-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-406-input"
+                placeholder="Select option"
+                type="text"
+                value="3"
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-406-label"
+          id="downshift-406-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group with initial default value 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="3"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-51-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-51-input"
+            id="downshift-51-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            Item 1
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-51-menu"
+                aria-labelledby="downshift-51-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-51-input"
+                placeholder="Select option"
+                type="text"
+                value="Item 1"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  Item 1
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-51-label"
+          id="downshift-51-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group with wrong default value 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-56-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-56-input"
+            id="downshift-56-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-56-menu"
+                aria-labelledby="downshift-56-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-56-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-56-label"
+          id="downshift-56-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render option group without caret 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-38-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-38-input"
+            id="downshift-38-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-38-menu"
+                aria-labelledby="downshift-38-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-38-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-38-label"
+          id="downshift-38-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render while allowing horizontal overflow 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-62-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-62-input"
+            id="downshift-62-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-62-menu"
+                aria-labelledby="downshift-62-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-62-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-62-label"
+          id="downshift-62-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render with empty options 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-58-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-58-input"
+            id="downshift-58-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-58-menu"
+                aria-labelledby="downshift-58-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-58-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-58-label"
+          id="downshift-58-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render with options values as numbers 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-60-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-60-input"
+            id="downshift-60-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-60-menu"
+                aria-labelledby="downshift-60-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-60-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-60-label"
+          id="downshift-60-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

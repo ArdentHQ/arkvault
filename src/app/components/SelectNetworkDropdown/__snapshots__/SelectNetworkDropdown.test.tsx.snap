@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectNetworkDropdown should change network 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="ark.mainnet"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-5-menu"
+        role="combobox"
+      >
+        <div
+          aria-expanded="false"
+        >
+          <label
+            for="downshift-5-input"
+            id="downshift-5-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            ARK
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              aria-label="ARK"
+              class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+            >
+              <div
+                class="css-v0ob3f"
+                data-testid="NetworkIcon__icon"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-5-menu"
+                aria-labelledby="downshift-5-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-5-input"
+                placeholder="Select option"
+                type="text"
+                value="ARK"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  ARK
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-5-label"
+          id="downshift-5-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectNetworkDropdown should not render network option label if network is not defined 1`] = `<div />`;
+
+exports[`SelectNetworkDropdown should render 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-0-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-0-input"
+            id="downshift-0-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-0-menu"
+                aria-labelledby="downshift-0-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-0-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-0-label"
+          id="downshift-0-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectNetworkDropdown should render with default network 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value="ark.mainnet"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-owns="downshift-2-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-2-input"
+            id="downshift-2-label"
+          />
+          <div
+            class="invisible fixed w-auto whitespace-nowrap"
+          >
+            ARK
+            …
+          </div>
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              aria-label="ARK"
+              class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+            >
+              <div
+                class="css-v0ob3f"
+                data-testid="NetworkIcon__icon"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-2-menu"
+                aria-labelledby="downshift-2-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-2-input"
+                placeholder="Select option"
+                type="text"
+                value="ARK"
+              />
+              <span
+                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                data-testid="Input__suggestion"
+              >
+                <span
+                  class="truncate"
+                >
+                  ARK
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-2-label"
+          id="downshift-2-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,14 @@
+{
+	"data": {
+		"coin": "btc",
+		"name": "Bitcoin",
+		"warnings": {
+			"to": "",
+			"from": ""
+		},
+		"hasExternalId": false,
+		"externalIdName": null,
+		"addressExplorerMask": "https://blockchair.com/bitcoin/address/{}?from=changenow",
+		"transactionExplorerMask": "https://blockchair.com/bitcoin/transaction/{}?from=changenow"
+	}
+}

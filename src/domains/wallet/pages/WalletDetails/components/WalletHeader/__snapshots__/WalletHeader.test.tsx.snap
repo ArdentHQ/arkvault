@@ -1,0 +1,1927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletHeader should handle locked balance 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            10 DARK
+          </span>
+          <div
+            class="ml-1 flex items-baseline space-x-1 text-theme-secondary-700"
+          >
+            <span
+              class="text-lg font-semibold"
+            >
+              /
+            </span>
+            <div
+              class="flex items-center space-x-2"
+              data-testid="WalletHeader__balance-locked"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                10 DARK
+              </span>
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  lock.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <button
+        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+        data-testid="WalletHeader__locked-balance-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              lock.svg
+            </svg>
+          </div>
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should handle locked balance when is ledger 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  ledger.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            10 DARK
+          </span>
+          <div
+            class="ml-1 flex items-baseline space-x-1 text-theme-secondary-700"
+          >
+            <span
+              class="text-lg font-semibold"
+            >
+              /
+            </span>
+            <div
+              class="flex items-center space-x-2"
+              data-testid="WalletHeader__balance-locked"
+            >
+              <span
+                class="whitespace-nowrap text-sm font-semibold"
+                data-testid="Amount"
+              >
+                10 DARK
+              </span>
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  lock.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <button
+        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+        data-testid="WalletHeader__locked-balance-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              lock.svg
+            </svg>
+          </div>
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should render 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should render amount for wallet in live network 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+          <span
+            class="whitespace-nowrap ml-1"
+            data-testid="Amount"
+          >
+            0 BTC
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should show currency delta (-5%) 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+          <span
+            class="ml-2 inline-flex items-center text-theme-danger-500"
+          >
+            <div
+              class="css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-down-small.svg
+              </svg>
+            </div>
+            <span
+              class="ml-1"
+            >
+              -5%
+            </span>
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should show currency delta (5%) 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+          <span
+            class="ml-2 inline-flex items-center text-theme-success-600"
+          >
+            <div
+              class="css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg>
+                chevron-up-small.svg
+              </svg>
+            </div>
+            <span
+              class="ml-1"
+            >
+              5%
+            </span>
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should show modifiers 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  ledger.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-secondary-text"
+              data-testid="WalletIcon__Multisignature"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  multisignature.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy-key.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`WalletHeader should use empty string in clipboard copy if publickey is undefined 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-col items-center lg:flex-row"
+    data-testid="WalletHeader"
+  >
+    <div
+      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+    >
+      <div
+        class="flex -space-x-1"
+      >
+        <div
+          aria-label="ARK Devnet"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          data-testid="NetworkIcon-ARK-ark.devnet"
+        >
+          <div
+            class="css-1i4b0eq"
+            data-testid="NetworkIcon__icon"
+            height="20"
+            width="20"
+          >
+            <svg>
+              ark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          data-testid="Avatar"
+        >
+          <div
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          >
+            <img
+              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
+      >
+        <div
+          class="flex items-center space-x-2 text-theme-secondary-text"
+        >
+          <span
+            class="text-sm font-semibold"
+            data-testid="WalletHeader__name"
+          >
+            ARK Wallet 1
+          </span>
+          <div
+            class="flex items-center space-x-1"
+          />
+        </div>
+        <div
+          class="flex w-full items-center space-x-5"
+        >
+          <span
+            class="min-w-0"
+          >
+            <span
+              class="min-w-0 overflow-hidden no-ligatures whitespace-nowrap text-lg font-semibold text-white"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </span>
+          <div
+            class="mb-1 flex items-end space-x-3 text-theme-secondary-text"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="hover:text-theme-secondary-500 css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
+    />
+    <div
+      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+    >
+      <div
+        class="mr-auto flex flex-col"
+      >
+        <div
+          class="flex items-center text-sm font-semibold text-theme-secondary-text"
+        >
+          <span>
+            Balance:
+          </span>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <span
+            class="whitespace-nowrap text-lg font-semibold text-white"
+            data-testid="Amount"
+          >
+            33.75089801 DARK
+          </span>
+        </div>
+      </div>
+      <div
+        class="my-auto flex items-center space-x-3"
+      >
+        <button
+          aria-busy="false"
+          class="css-t49sba"
+          data-testid="WalletHeader__refresh"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            style="animation-direction: reverse;"
+            width="16"
+          >
+            <svg>
+              arrow-rotate-left.svg
+            </svg>
+          </div>
+        </button>
+        <button
+          class="css-t49sba"
+          data-testid="WalletHeader__star-button"
+          type="button"
+        >
+          <div
+            class=" css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              star.svg
+            </svg>
+          </div>
+        </button>
+      </div>
+      <button
+        class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+        data-testid="WalletHeader__send-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Send
+        </div>
+      </button>
+      <div
+        class="my-auto ml-3"
+        data-testid="WalletHeader__more-button"
+      >
+        <div
+          class="static sm:relative"
+        >
+          <span
+            data-testid="dropdown__toggle"
+          >
+            <button
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                <div
+                  class="css-1i4b0eq"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ellipsis-vertical.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeModal should not render if user completed the tutorial 1`] = `<DocumentFragment />`;
+
+exports[`WelcomeModal should render a modal if user hasnt completed the tutorial 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-1nvh1sc"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pt-10 pb-24 sm:pb-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Welcome to ARKVault
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <svg
+              class="my-8"
+            >
+              welcome-modal-banner-light-green.svg
+            </svg>
+            <div
+              class="w-full"
+            >
+              <div
+                class="text-base leading-7 text-theme-secondary-text"
+              >
+                <p>
+                  Start a quick tour to learn how to get the most out of ARKVault, or skip it to go directly to your profile.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-between sm:space-x-3"
+              >
+                <label
+                  class="mt-8 inline-flex cursor-pointer items-center space-x-3 text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  <input
+                    class="css-7i915u"
+                    color="success"
+                    type="checkbox"
+                  />
+                  <span>
+                    Don't show this quick tour again.
+                  </span>
+                </label>
+                <div
+                  class="css-v3xgej"
+                >
+                  <button
+                    class="css-1jhy6v9"
+                    data-testid="WelcomeModal-skip"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Skip
+                    </div>
+                  </button>
+                  <button
+                    class="css-1bx0hyc"
+                    data-testid="WelcomeModal-next"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Start
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

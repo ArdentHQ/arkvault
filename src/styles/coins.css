@@ -1,0 +1,23 @@
+[class*="text-ark-"] {
+	@apply text-theme-success-600;
+}
+
+[class*="border-ark-"] {
+	@apply border-theme-danger-200;
+}
+
+[class*="text-bitcoin-"] {
+	@apply text-theme-warning-400;
+}
+
+[class*="border-bitcoin-"] {
+	@apply border-theme-warning-200;
+}
+
+[class*="text-ethereum-"] {
+	@apply text-theme-secondary-900;
+}
+
+[class*="border-ethereum-"] {
+	@apply border-theme-secondary-300;
+}

@@ -1,0 +1,19 @@
+[data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+	outline: none;
+	box-shadow: none;
+}
+
+[data-js-focus-visible] [data-focus-visible-added].ring-focus::after {
+	content: '';
+	@apply absolute inset-0 ring-2 ring-theme-primary-400 rounded;
+}
+
+.ring-focus[data-ring-focus-margin="-m-1"]::after {
+	@apply -m-1;
+ }
+.ring-focus[data-ring-focus-margin="-mx-2"]::after {
+	@apply -mx-2;
+}
+.ring-focus[data-ring-focus-margin="-mx-3"]::after {
+	@apply -mx-3;
+}

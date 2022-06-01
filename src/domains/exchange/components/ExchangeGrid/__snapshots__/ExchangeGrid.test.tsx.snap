@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeGrid should render 1`] = `
+<DocumentFragment>
+  <div
+    class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"
+    data-testid="ExchangeGrid"
+  >
+    <div
+      data-testid="ExchangeCard--changenow"
+    >
+      <div>
+        <button
+          class="css-116zvw2"
+          data-testid="Card"
+          type="button"
+        >
+          <div
+            class="flex flex-col items-center space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+          >
+            <div
+              class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
+            >
+              <img
+                alt="ChangeNOW Logo"
+                class="h-full w-full object-cover"
+                src="https://exchanges.payvo.com/images/changenow/thumbnail.png"
+              />
+            </div>
+            <div
+              class="flex flex-col truncate"
+            >
+              <div
+                class="truncate text-lg font-semibold link"
+              >
+                ChangeNOW
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute -top-1 -right-1 m-4 flex items-center space-x-1"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ExchangeGrid should render empty 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+    data-testid="ExchangeGrid__empty-message"
+  >
+    <div>
+      There are currently no exchange providers available, please try again at a later time.
+    </div>
+  </div>
+</DocumentFragment>
+`;

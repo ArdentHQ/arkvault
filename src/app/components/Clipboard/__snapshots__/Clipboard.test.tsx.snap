@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clipboard should not render without children in variant type 'button' 1`] = `<DocumentFragment />`;
+
+exports[`Clipboard should not render without children in variant type 'icon' 1`] = `<DocumentFragment />`;
+
+exports[`Clipboard should render with children in variant type 'button' 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <button
+      class="css-1jhy6v9"
+      data-testid="clipboard-button__wrapper"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        <span>
+          Hello!
+        </span>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Clipboard should render with children in variant type 'icon' 1`] = `
+<DocumentFragment>
+  <button
+    class="ring-focus relative focus:outline-none"
+    data-ring-focus-margin="-m-1"
+    data-testid="clipboard-icon__wrapper"
+    type="button"
+  >
+    <span>
+      Hello!
+    </span>
+  </button>
+</DocumentFragment>
+`;

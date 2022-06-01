@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "src",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "react-jsx",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"jsxImportSource": "@emotion/react",
+		"strict": true,
+		"target": "es2019",
+		"useUnknownInCatchVariables": false,
+		"noImplicitAny": false,
+		"noFallthroughCasesInSwitch": true,
+		"types": ["vite-plugin-pwa/client"]
+	},
+	"exclude": [
+		"**/*.test.ts",
+		"**/*.test.tsx",
+		"**/tests/**",
+		"**/e2e/**",
+		"**/cucumber/**",
+		"src/utils/testing-library.tsx",
+		"src/utils/e2e-utils.ts",
+		"src/utils/e2e-interfaces.ts",
+		"src/setupTests.ts",
+		"dist/**/*"
+	],
+	"include": ["src", "public", "custom.d.ts", "global.d.ts"],
+	"extends": "./tsconfig.paths.json"
+}

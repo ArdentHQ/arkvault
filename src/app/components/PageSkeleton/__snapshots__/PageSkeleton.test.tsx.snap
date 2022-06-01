@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSkeleton should render without profile 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="PageSkeleton"
+  >
+    <div
+      class="css-wsh4oq"
+    >
+      <nav
+        aria-labelledby="main menu"
+        class="css-97i12m"
+      >
+        <div
+          class="relative flex h-21"
+        >
+          <div
+            class="flex flex-1 px-8 sm:ml-12"
+          >
+            <div
+              class="my-auto flex items-center"
+            >
+              <button
+                class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                data-testid="NavigationBarLogo--button"
+                type="button"
+              >
+                <span
+                  class="relative"
+                >
+                  <svg
+                    height="28"
+                  >
+                    payvo-logo.svg
+                  </svg>
+                </span>
+              </button>
+              <span
+                class="text-lg uppercase"
+              >
+                <strong>
+                  ARK
+                </strong>
+                Vault
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="flex flex-1 flex-col"
+      >
+        <div
+          class="-mt-5 flex flex-1 flex-col text-center md:mt-0 md:justify-center css-ycib48"
+        >
+          <div
+            class="mx-auto px-8 md:px-10 lg:container"
+          >
+            <div
+              class="mx-auto hidden w-96 md:block"
+            >
+              <span>
+                <span
+                  class="flex max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="height: 230px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center md:mt-8"
+            >
+              <h2>
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 100px; height: 32px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </h2>
+              <p>
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 240px; height: 24px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </p>
+              <div
+                class="mt-6 w-full sm:w-40 md:mt-8"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="height: 160px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <p
+                class="mt-8 md:mt-16"
+              >
+                <span>
+                  <span
+                    class="flex max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 280px; height: 24px;"
+                    >
+                      ‌
+                    </span>
+                    ‌
+                  </span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

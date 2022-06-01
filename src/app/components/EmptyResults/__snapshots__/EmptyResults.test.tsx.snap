@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyResults should render with custom title and subtitle 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-full flex-col justify-center bg-theme-background text-center"
+    data-testid="EmptyResults"
+  >
+    <div>
+      <div
+        class="mb-4 text-lg font-bold"
+      >
+        No results
+      </div>
+      <div
+        class="text-md mb-8"
+      >
+        No results found. Refine your search and try again.
+      </div>
+      <div
+        class="mx-auto w-full max-w-lg"
+      >
+        <svg>
+          no-results-light-green.svg
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EmptyResults should render with no texts 1`] = `
+<DocumentFragment>
+  <div
+    class="flex h-full flex-col justify-center bg-theme-background text-center"
+    data-testid="EmptyResults"
+  >
+    <div>
+      <div
+        class="mx-auto w-full max-w-lg"
+      >
+        <svg>
+          no-results-light-green.svg
+        </svg>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

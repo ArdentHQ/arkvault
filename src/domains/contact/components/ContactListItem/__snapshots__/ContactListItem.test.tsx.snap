@@ -1,0 +1,1465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactListItem should render 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="Brian"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  title="Brian"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background"
+                >
+                  BR
+                </span>
+              </div>
+            </div>
+            <span
+              class="font-semibold"
+              data-testid="ContactListItem__name"
+            >
+              <span
+                class="css-u3jrna"
+                data-testid="TruncateEnd"
+              >
+                Brian
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="visible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`ContactListItem should render as delegate 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="Caio"
+                  src="data:image/svg+xml;utf8,data:image/png;base64,avatarImage"
+                  title="Caio"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background"
+                >
+                  CA
+                </span>
+              </div>
+            </div>
+            <span
+              class="font-semibold"
+              data-testid="ContactListItem__name"
+            >
+              <span
+                class="css-u3jrna"
+                data-testid="TruncateEnd"
+              >
+                Caio
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(139, 195, 74)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"55\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  title="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="visible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`ContactListItem should render options 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-f3v5yv"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="Brian"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  title="Brian"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background"
+                >
+                  BR
+                </span>
+              </div>
+            </div>
+            <span
+              class="font-semibold"
+              data-testid="ContactListItem__name"
+            >
+              <span
+                class="css-u3jrna"
+                data-testid="TruncateEnd"
+              >
+                Brian
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="visible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class=" css-f3v5yv"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          />
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="invisible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          />
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"50\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="invisible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`ContactListItem should render with multiple addresses 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class=" css-f3v5yv"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="Brian"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  title="Brian"
+                />
+                <span
+                  class="absolute text-sm font-semibold text-theme-background"
+                >
+                  BR
+                </span>
+              </div>
+            </div>
+            <span
+              class="font-semibold"
+              data-testid="ContactListItem__name"
+            >
+              <span
+                class="css-u3jrna"
+                data-testid="TruncateEnd"
+              >
+                Brian
+              </span>
+            </span>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="visible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class=" css-f3v5yv"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          />
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="invisible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class=" css-1li86da"
+        data-testid="TableRow"
+      >
+        <td>
+          <div
+            class="space-x-4 whitespace-nowrap css-14huxtf"
+          />
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-center css-1d4ra48"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+          data-testid="ContactListItem__address"
+        >
+          <div
+            class="space-x-4 css-1d4ra48"
+          >
+            <div
+              class="shrink-0 css-tthe5h"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"50\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                />
+              </div>
+            </div>
+            <div
+              class="w-0 flex-1"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <div
+                  class="relative grow text-left"
+                >
+                  <span
+                    class="min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
+                  >
+                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="space-x-4 justify-center css-1d4ra48"
+          >
+            <button
+              class="ring-focus relative focus:outline-none"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="text-theme-primary-300 dark:text-theme-secondary-700"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg>
+                    copy.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </td>
+        <td
+          class=""
+        >
+          <div
+            class="justify-end css-1hhowo0"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                data-testid="ContactListItem__send-button-wrapper"
+              >
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="ContactListItem__send-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Send
+                  </div>
+                </button>
+              </div>
+              <div
+                class="invisible"
+              >
+                <div
+                  class="static sm:relative"
+                >
+                  <span
+                    data-testid="dropdown__toggle"
+                  >
+                    <button
+                      class="flex-1 css-wlb9q7"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            ellipsis-vertical.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

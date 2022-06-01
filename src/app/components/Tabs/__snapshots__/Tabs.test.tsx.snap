@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should react to use effect call 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-eqdmob"
+    >
+      <button
+        aria-selected="true"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-1"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        <span>
+          First
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Second
+        </span>
+      </button>
+    </div>
+    <div
+      data-testid="tab-pabel__active-panel"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs should render 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-eqdmob"
+    >
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-1"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          First
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Second
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-3"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Third
+        </span>
+      </button>
+    </div>
+    <div
+      class="mt-5"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs should render wit counts 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-6pza4g"
+    >
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-1"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          First
+        </span>
+        <span
+          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          data-testid="tabs__tab-button-1-count"
+        >
+          1
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Second
+        </span>
+        <span
+          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          data-testid="tabs__tab-button-2-count"
+        >
+          2
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-3"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Third
+        </span>
+        <span
+          class="ml-2 rounded bg-theme-primary-100 py-0.5 px-1.5 text-sm font-semibold dark:bg-theme-secondary-900"
+          data-testid="tabs__tab-button-3-count"
+        >
+          3
+        </span>
+      </button>
+    </div>
+    <div
+      class="mt-5"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs should render with scroll 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="relative"
+      data-testid="TabScroll"
+    >
+      <span
+        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+      />
+      <div
+        class="bg-theme-secondary-100 dark:bg-black"
+      >
+        <div
+          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+        >
+          <div
+            class="css-6pza4g"
+          >
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-1"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                First
+              </span>
+            </button>
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-2"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Second
+              </span>
+            </button>
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-3"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Third
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <span
+        class="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs should render with scroll in dark mode 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="relative"
+      data-testid="TabScroll"
+    >
+      <span
+        class="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+      />
+      <div
+        class="bg-theme-secondary-100 dark:bg-black"
+      >
+        <div
+          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+        >
+          <div
+            class="css-6pza4g"
+          >
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-1"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                First
+              </span>
+            </button>
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-2"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Second
+              </span>
+            </button>
+            <button
+              aria-selected="false"
+              class="ring-focus css-0 tab-button"
+              data-ring-focus-margin="-mx-3"
+              data-testid="tabs__tab-button-3"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>
+                Third
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <span
+        class="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs should render without background 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="css-6pza4g"
+    >
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-1"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          First
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Second
+        </span>
+      </button>
+      <button
+        aria-selected="false"
+        class="ring-focus css-0 tab-button"
+        data-ring-focus-margin="-mx-3"
+        data-testid="tabs__tab-button-3"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <span>
+          Third
+        </span>
+      </button>
+    </div>
+    <div
+      class="mt-5"
+    />
+  </div>
+</DocumentFragment>
+`;

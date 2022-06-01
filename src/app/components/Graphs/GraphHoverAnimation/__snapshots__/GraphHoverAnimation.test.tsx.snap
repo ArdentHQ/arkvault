@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphHoverAnimation should allow passing a target element 1`] = `
+<DocumentFragment>
+  <svg
+    height="16"
+    width="16"
+  >
+    <rect
+      height="16"
+      id="rectToHoverOn"
+      width="8"
+      x="0"
+      y="0"
+    />
+    <rect
+      height="16"
+      width="0"
+      x="8"
+      y="0"
+    >
+      <animate
+        attributeName="width"
+        begin="rectToHoverOn.mouseover"
+        dur="0.1s"
+        fill="freeze"
+        from="0"
+        to="8"
+      />
+      <animate
+        attributeName="width"
+        begin="rectToHoverOn.mouseleave"
+        dur="0.15s"
+        fill="freeze"
+        from="8"
+        to="0"
+      />
+    </rect>
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`GraphHoverAnimation should render SMIL hover animations for svg elements 1`] = `
+<DocumentFragment>
+  <svg
+    height="16"
+    width="16"
+  >
+    <rect
+      height="16"
+      width="0"
+      x="0"
+      y="0"
+    >
+      <animate
+        attributeName="width"
+        begin="mouseover"
+        dur="0.1s"
+        fill="freeze"
+        from="0"
+        to="16"
+      />
+      <animate
+        attributeName="width"
+        begin="mouseleave"
+        dur="0.15s"
+        fill="freeze"
+        from="16"
+        to="0"
+      />
+    </rect>
+  </svg>
+</DocumentFragment>
+`;

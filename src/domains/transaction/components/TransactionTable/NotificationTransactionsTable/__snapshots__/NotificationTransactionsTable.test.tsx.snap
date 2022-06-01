@@ -1,0 +1,2051 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationsTransactionTable should render compact skeleton 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Transactions
+      </div>
+      <div
+        class=" css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="space-x-4 css-14huxtf"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                    >
+                      <span>
+                        <span
+                          class="flex max-w-full items-center overflow-hidden leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="justify-end css-1hhowo0"
+                >
+                  <span
+                    class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NotificationsTransactionTable should render skeleton for small screens 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Transactions
+      </div>
+      <div
+        class=" css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class=" css-1li86da"
+              data-testid="TableRow"
+            >
+              <td
+                class="flex-col space-y-4 py-4"
+                data-testid="TransactionRow__skeleton__mobile"
+              >
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Sender
+                  </div>
+                  <div
+                    class="mr-4 flex items-center space-x-2"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 20px; height: 20px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between space-x-4"
+                >
+                  <div
+                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+                  >
+                    Amount
+                  </div>
+                  <div
+                    class="flex h-7 items-center space-x-1"
+                  >
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex max-w-full items-center overflow-hidden leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 25px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

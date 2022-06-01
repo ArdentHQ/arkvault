@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render an header 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-end justify-between bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Header test
+      </h1>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header should render an header with a subtitle 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-end justify-between bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Header test
+      </h1>
+      <div
+        class="flex items-center text-theme-secondary-text"
+        data-testid="header__subtitle"
+      >
+        Subtitle test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header should render an header with extra 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-end justify-between bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Header test
+      </h1>
+      <div
+        class="flex items-center text-theme-secondary-text"
+        data-testid="header__subtitle"
+      >
+        Subtitle test
+      </div>
+    </div>
+    <div>
+      <div
+        class="flex justify-end space-x-3"
+      >
+        <button
+          class="css-1bx0hyc"
+          data-testid="header__extra"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            Extra 1
+          </div>
+        </button>
+        <button
+          class="css-1bx0hyc"
+          data-testid="header__extra"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            Extra 2
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header should render with title suffix 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-end justify-between bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Header test
+        <span>
+           suffix
+        </span>
+      </h1>
+      <div
+        class="flex items-center text-theme-secondary-text"
+        data-testid="header__subtitle"
+      >
+        Subtitle test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PageHeader should render responsive (md) 1`] = `
+<DocumentFragment>
+  <div
+    class=" css-ycib48"
+  >
+    <div
+      class="mx-auto px-8 md:px-10 lg:container"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Header test
+            <span>
+               suffix
+            </span>
+          </h1>
+          <div
+            class="flex items-center text-theme-secondary-text"
+            data-testid="header__subtitle"
+          >
+            Subtitle test
+          </div>
+        </div>
+        <div>
+          extra
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PageHeader should render responsive (xs) 1`] = `
+<DocumentFragment>
+  <section
+    class="flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+  >
+    <h1
+      class="mb-0 text-lg"
+    >
+      Header test
+    </h1>
+    extra
+  </section>
+</DocumentFragment>
+`;

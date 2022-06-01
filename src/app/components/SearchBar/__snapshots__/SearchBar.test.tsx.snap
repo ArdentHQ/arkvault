@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should render 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-theme-secondary-100 px-10 pt-8 pb-8"
+    data-testid="SearchBar"
+  >
+    <div
+      class="flex items-center rounded bg-theme-background py-6 px-10 shadow-xl"
+    >
+      <div
+        class="mr-8 w-4 text-theme-secondary-300 css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          magnifying-glass.svg
+        </svg>
+      </div>
+      <div
+        class="mr-4 flex-1 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
+      >
+        <div
+          class="css-7km7kr"
+        >
+          <div
+            class="relative flex h-full flex-1"
+          >
+            <input
+              autocomplete="off"
+              class="no-ligatures w-full border-none css-1nupw50"
+              data-testid="Input"
+              placeholder="What would you like to search for?"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        class="my-1 css-1bx0hyc"
+        data-testid="SearchBar__button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <span
+            class="text-md px-2"
+          >
+            Find it
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

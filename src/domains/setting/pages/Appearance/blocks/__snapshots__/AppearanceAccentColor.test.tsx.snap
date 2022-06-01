@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppearanceAccentColor should render 1`] = `
+<DocumentFragment>
+  <div
+    class="inline-flex w-full items-center space-x-3"
+    data-testid="ButtonGroup"
+    role="radiogroup"
+  >
+    <button
+      aria-checked="false"
+      aria-label="Navy"
+      class="css-12yryft"
+      data-testid="ButtonGroupOption"
+      role="radio"
+      type="button"
+    >
+      <div
+        class="mx-1 h-5 w-5 rounded bg-theme-navy-600"
+      />
+    </button>
+    <button
+      aria-checked="false"
+      aria-label="Green"
+      class="css-12yryft"
+      data-testid="ButtonGroupOption"
+      role="radio"
+      type="button"
+    >
+      <div
+        class="mx-1 h-5 w-5 rounded bg-theme-success-600"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

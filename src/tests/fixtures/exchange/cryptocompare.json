@@ -1,0 +1,7 @@
+{
+	"BTC": 0.001,
+	"ConversionType": {
+		"type": "multiply",
+		"conversionSymbol": "ETH"
+	}
+}

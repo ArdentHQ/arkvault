@@ -1,0 +1,545 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Import Profile Select File Step should change back from json to wwe 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .json file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+      data-testid="SelectFile"
+    >
+      <div
+        class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="css-1atxdzc"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-json.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <span
+            class="mr-px hidden font-semibold sm:inline"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .json
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="flex flex-col overflow-hidden rounded-xl"
+      >
+        <div
+          class="css-pra96q"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+          <span>
+            Warning
+          </span>
+        </div>
+        <div
+          class="css-1pvpof3"
+        >
+          Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .wwe format.
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-v3xgej"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should handle back event 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .wwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+      data-testid="SelectFile"
+    >
+      <div
+        class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="css-1atxdzc"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-wwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <span
+            class="mr-px hidden font-semibold sm:inline"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .wwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-center text-base text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="css-v3xgej"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render file selection for wwe and switch to json 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .wwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+      data-testid="SelectFile"
+    >
+      <div
+        class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="css-1atxdzc"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-wwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <span
+            class="mr-px hidden font-semibold sm:inline"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .wwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-center text-base text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="css-v3xgej"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render with json fileFormat selected 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .json file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+      data-testid="SelectFile"
+    >
+      <div
+        class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="css-1atxdzc"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-json.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <span
+            class="mr-px hidden font-semibold sm:inline"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .json
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="flex flex-col overflow-hidden rounded-xl"
+      >
+        <div
+          class="css-pra96q"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+          <span>
+            Warning
+          </span>
+        </div>
+        <div
+          class="css-1pvpof3"
+        >
+          Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .wwe format.
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-v3xgej"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render with wwe fileFormat selected 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .wwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+      data-testid="SelectFile"
+    >
+      <div
+        class="flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="css-1atxdzc"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-wwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8"
+        >
+          <span
+            class="mr-px hidden font-semibold sm:inline"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .wwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-center text-base text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="css-v3xgej"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

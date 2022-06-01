@@ -1,0 +1,186 @@
+{
+	"meta": {
+		"count": 2,
+		"pageCount": 1,
+		"totalCount": 2,
+		"next": null,
+		"previous": null,
+		"self": "/delegates?page=1&limit=100",
+		"first": "/delegates?page=1&limit=100",
+		"last": "/delegates?page=1&limit=100"
+	},
+	"data": [
+		{
+			"address": "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
+			"publicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+			"nonce": "111932",
+			"balance": "55827093444556",
+			"attributes": {
+				"delegate": {
+					"username": "arkx",
+					"voteBalance": "57037342430760",
+					"forgedFees": "124364463486",
+					"forgedRewards": "16899000000000",
+					"producedBlocks": 84709,
+					"lastBlock": {
+						"id": "682a1c53eb9e6fcf285d1b6819de08f88bd15b083a612c3fe32aa870001dbf22",
+						"height": 4269235,
+						"timestamp": 91907944,
+						"generatorPublicKey": "03bbfb43ecb5a54a1e227bb37b5812b5321213838d376e2b455b6af78442621dec"
+					},
+					"resigned": true
+				},
+				"vote": "03bbfb43ecb5a54a1e227bb37b5812b5321213838d376e2b455b6af78442621dec"
+			},
+			"isDelegate": true,
+			"isResigned": true,
+			"vote": "03bbfb43ecb5a54a1e227bb37b5812b5321213838d376e2b455b6af78442621dec",
+			"username": "arkx"
+		},
+		{
+			"username": "genesis_42",
+			"address": "D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr",
+			"publicKey": "0346e1a1b5cb0720e863e8cf8a91dc8ed827e09fb4a4812f9f4d51f606e5359516",
+			"votes": "53411673185151",
+			"rank": 2,
+			"isResigned": false,
+			"blocks": {
+				"produced": 84472,
+				"last": {
+					"id": "3213d10a2c96f9f0a9aeddb0c2056e92f8b835c3c7e8a3e3575f2e4d7d47fe57",
+					"height": 5856920,
+					"timestamp": {
+						"epoch": 105497320,
+						"unix": 1595598520,
+						"human": "2020-07-24T13:48:40.000Z"
+					}
+				}
+			},
+			"production": {
+				"approval": 0.39
+			},
+			"forged": {
+				"fees": "169109715418",
+				"rewards": "16851800000000",
+				"total": "17020909715418"
+			}
+		},
+		{
+			"username": "genesis_17",
+			"address": "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES",
+			"publicKey": "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1",
+			"votes": "53413395494109",
+			"rank": 3,
+			"isResigned": false,
+			"blocks": {
+				"produced": 24005,
+				"last": {
+					"id": "d6254bcb8264d877eab5c8800765255eec18c79de523809c4437e834418ca8b4",
+					"height": 6176935,
+					"timestamp": {
+						"epoch": 108090928,
+						"unix": 1598192128,
+						"human": "2020-08-23T14:15:28.000Z"
+					}
+				}
+			},
+			"production": {
+				"approval": 0.39
+			},
+			"forged": {
+				"fees": "120567507723",
+				"rewards": "4797600000000",
+				"total": "4918167507723"
+			}
+		},
+		{
+			"address": "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"publicKey": "03af2feb4fc97301e16d6a877d5b135417e8f284d40fac0f84c09ca37f82886c51",
+			"nonce": "12",
+			"balance": "5768000000",
+			"attributes": {
+				"secondPublicKey": "03c05c3520f4a459143779b97e8081798f550fcc20c1e02600845cea92bb15947b",
+				"delegate": {
+					"username": "testwallet2",
+					"voteBalance": "0",
+					"forgedFees": "0",
+					"forgedRewards": "0",
+					"producedBlocks": 0,
+					"resigned": true
+				},
+				"ipfs": {
+					"hashes": {
+						"QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68": true
+					}
+				},
+				"entities": {
+					"df520b0a278314e998dc93be1e20c72b8313950c19da23967a9db60eb4e990da": {
+						"type": 0,
+						"subType": 0,
+						"data": {
+							"name": "business2reg",
+							"ipfsData": "QmRwgWaaEyYgGqp55196TsFDQLW4NZkyTnPwiSVhJ7NPRV"
+						}
+					},
+					"9d25ddf8e59d8595a74d7fe74fdee3380660d60333c453b1a352326d80ba4b43": {
+						"type": 3,
+						"subType": 1,
+						"data": {
+							"name": "coreplugin2",
+							"ipfsData": "QmXCuXaBuWZGqES7tDW6AHFCGj8zEzFG48P1BHWSU1fqq3"
+						}
+					},
+					"03e44853b26f450d5aba78e3fad390faa8ae9aa6995b1fa80b8d191516b52f1e": {
+						"type": 3,
+						"subType": 2,
+						"data": {
+							"name": "desktopplugin2",
+							"ipfsData": "QmNgvK9AAh7XVHubzJE3F33K4GJubFcQm9AUPBy1vFCEsV"
+						}
+					}
+				}
+			},
+			"isDelegate": true,
+			"isResigned": true,
+			"username": "testwallet2",
+			"secondPublicKey": "03c05c3520f4a459143779b97e8081798f550fcc20c1e02600845cea92bb15947b"
+		},
+		{
+			"address": "DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
+			"publicKey": "0236d5232cdbd1e7ab87fad10ebe689c4557bc9d0c408b6773be964c837231d5f0",
+			"balance": "46992652396499",
+			"nonce": "3464",
+			"username": "itsanametoo",
+			"attributes": {
+				"secondPublicKey": "03e7cfaa3ae06e89c217df2057e92cae2bc40164aeaa5ab955645690141b1b7be6",
+				"delegate": {
+					"username": "itsanametoo",
+					"voteBalance": "52126943777673",
+					"forgedFees": "91416779455",
+					"forgedRewards": "23741000000000",
+					"producedBlocks": 118911,
+					"rank": 12,
+					"lastBlock": {
+						"version": 0,
+						"timestamp": 114844624,
+						"height": 5862568,
+						"previousBlockHex": "e5f9036dd8d2176dad130e7f0f2b50d21ec0ce16d3ec1fc9154ff0642e2cece5",
+						"previousBlock": "e5f9036dd8d2176dad130e7f0f2b50d21ec0ce16d3ec1fc9154ff0642e2cece5",
+						"numberOfTransactions": 0,
+						"totalAmount": "0",
+						"totalFee": "0",
+						"reward": "200000000",
+						"payloadLength": 0,
+						"payloadHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+						"generatorPublicKey": "0236d5232cdbd1e7ab87fad10ebe689c4557bc9d0c408b6773be964c837231d5f0",
+						"blockSignature": "30440220726ec82fbd9ded4cc025e6fa8ff7e22f9d7f1de0b0dfa02445d550e15a74fcee022049e258138c33c4029d8785e5214ecfbab69d4e87f857cf94efbd5912f07ba492",
+						"idHex": "815c59d8ba35c38fdbfaaab221879c50b5ac5ee1fc23703f65172d95d5b3d5a9",
+						"id": "815c59d8ba35c38fdbfaaab221879c50b5ac5ee1fc23703f65172d95d5b3d5a9"
+					},
+					"round": 114954
+				},
+				"vote": "0236d5232cdbd1e7ab87fad10ebe689c4557bc9d0c408b6773be964c837231d5f0"
+			}
+		}
+	]
+}

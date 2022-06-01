@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionRowRecipient should render 1`] = `
+<DocumentFragment>
+  <div
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
+    data-testid="Avatar"
+  >
+    <div
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+    >
+      <img
+        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+      />
+    </div>
+  </div>
+  <div
+    class="w-0 flex-1"
+  >
+    <div
+      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    >
+      <span
+        class="font-semibold text-base text-theme-text"
+        data-testid="Address__alias"
+      >
+        <span
+          class="css-u3jrna"
+          data-testid="TruncateEnd"
+        >
+          ARK Wallet 1
+        </span>
+      </span>
+      <span
+        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        data-testid="Address__address"
+      >
+        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionRowRecipient should render compact 1`] = `
+<DocumentFragment>
+  <div
+    class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+    data-testid="Avatar"
+  >
+    <div
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+    >
+      <img
+        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+      />
+    </div>
+  </div>
+  <div
+    class="w-0 flex-1"
+  >
+    <div
+      class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+    >
+      <span
+        class="font-semibold text-base text-theme-text"
+        data-testid="Address__alias"
+      >
+        <span
+          class="css-u3jrna"
+          data-testid="TruncateEnd"
+        >
+          ARK Wallet 1
+        </span>
+      </span>
+      <span
+        class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        data-testid="Address__address"
+      >
+        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

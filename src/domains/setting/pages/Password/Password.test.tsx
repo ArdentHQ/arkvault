@@ -1,0 +1,361 @@
+/* eslint-disable @typescript-eslint/require-await */
+import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
+import React from "react";
+import { Route } from "react-router-dom";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import PasswordSettings from "@/domains/setting/pages/Password";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+const translations = buildTranslations();
+const history = createHashHistory();
+
+let profile: Contracts.IProfile;
+
+const passwordInputID = "PasswordValidation__password";
+const confirmPasswordInputID = "PasswordValidation__confirmPassword";
+const passwordInput = () => screen.getByTestId(passwordInputID);
+const confirmPasswordInput = () => screen.getByTestId(confirmPasswordInputID);
+
+const removeButton = () => screen.getByTestId("Password-settings__remove-button");
+
+const currentPasswordInputID = "Password-settings__input--currentPassword";
+const confirmModalInputID = "PasswordRemovalConfirmModal__input-password";
+const submitID = "Password-settings__submit-button";
+const menuItemID = "side-menu__item--password";
+const password = "S3cUrePa$sword";
+const secondaryPassword = "S3cUrePa$sword2different";
+
+describe("Password Settings", () => {
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await profile.sync();
+
+		history.push(`/profiles/${profile.id()}/settings/password`);
+	});
+
+	it("should render password settings", async () => {
+		const { container, asFragment } = render(
+			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await expect(screen.findByTestId(passwordInputID)).resolves.toBeVisible();
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should set a password", async () => {
+		const { container, asFragment } = render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		expect(screen.queryByTestId(currentPasswordInputID)).not.toBeInTheDocument();
+
+		userEvent.paste(passwordInput(), password);
+
+		userEvent.paste(confirmPasswordInput(), password);
+
+		// wait for formState.isValid to be updated
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(submitID));
+
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show an error toast if the current password does not match", async () => {
+		profile.auth().setPassword(password);
+		const toastSpy = jest.spyOn(toasts, "error");
+		const authMock = jest.spyOn(profile, "auth").mockImplementation(() => {
+			throw new Error("mismatch");
+		});
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
+		});
+
+		userEvent.click(await screen.findByTestId(menuItemID));
+
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), "wrong!");
+
+		await waitFor(() => {
+			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue("wrong!");
+		});
+
+		userEvent.paste(passwordInput(), "AnotherS3cUrePa$swordNew");
+
+		userEvent.paste(confirmPasswordInput(), "AnotherS3cUrePa$swordNew");
+
+		await waitFor(() => {
+			expect(screen.getByTestId(submitID)).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId(submitID));
+
+		await waitFor(() => {
+			expect(screen.getByTestId(submitID)).toBeEnabled();
+		});
+
+		expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		authMock.mockRestore();
+	});
+
+	it("should trigger password confirmation mismatch error", async () => {
+		profile.auth().setPassword(password);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId(menuItemID));
+
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), password);
+
+		await waitFor(() => {
+			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password);
+		});
+
+		userEvent.paste(passwordInput(), secondaryPassword);
+
+		await waitFor(() => expect(passwordInput()).toHaveValue(secondaryPassword));
+
+		userEvent.paste(confirmPasswordInput(), "S3cUrePa$sword2different1");
+
+		await waitFor(() => expect(confirmPasswordInput()).toHaveValue("S3cUrePa$sword2different1"));
+
+		userEvent.paste(passwordInput(), "new password 2");
+
+		await waitFor(() => expect(confirmPasswordInput()).toHaveAttribute("aria-invalid"));
+		// wait for formState.isValid to be updated
+		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should disable submit button if no password", async () => {
+		render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId(menuItemID));
+
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId(submitID)).toBeDisabled();
+	});
+
+	it("should not allow setting the current password as the new password", async () => {
+		profile.auth().setPassword(password);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
+		});
+
+		userEvent.click(screen.getByTestId(menuItemID));
+
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), password);
+
+		await waitFor(() => expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password));
+
+		userEvent.paste(passwordInput(), password);
+
+		await waitFor(() => expect(passwordInput()).toHaveValue(password));
+
+		await waitFor(() => expect(passwordInput()).toHaveAttribute("aria-invalid"));
+
+		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should allow to remove the password", async () => {
+		profile.auth().setPassword(password);
+
+		const toastSpy = jest.spyOn(toasts, "success");
+		const forgetPasswordSpy = jest.spyOn(profile.auth(), "forgetPassword").mockImplementation();
+
+		render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		userEvent.click(screen.getByTestId(menuItemID));
+
+		expect(removeButton()).toBeInTheDocument();
+
+		userEvent.click(removeButton());
+
+		expect(screen.getByTestId(confirmModalInputID)).toBeInTheDocument();
+
+		// Close modal and re-open it.
+
+		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
+
+		expect(screen.queryByTestId(confirmModalInputID)).not.toBeInTheDocument();
+
+		userEvent.click(removeButton());
+
+		await expect(screen.findByTestId(confirmModalInputID)).resolves.toBeVisible();
+
+		// Fill in current password and confirm.
+
+		userEvent.paste(screen.getByTestId(confirmModalInputID), password);
+
+		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
+
+		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
+
+		await waitFor(() => expect(screen.queryByTestId(confirmModalInputID)).not.toBeInTheDocument());
+
+		expect(forgetPasswordSpy).toHaveBeenCalledWith(password);
+		expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.PASSWORD.REMOVAL.SUCCESS);
+
+		forgetPasswordSpy.mockRestore();
+		toastSpy.mockRestore();
+	});
+
+	it("should not allow password removal if current password does not match", async () => {
+		profile.auth().setPassword(password);
+
+		const toastSpy = jest.spyOn(toasts, "error");
+
+		jest.spyOn(profile.auth(), "forgetPassword").mockImplementationOnce(() => {
+			throw new Error("password mismatch");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		userEvent.click(screen.getByTestId(menuItemID));
+
+		expect(removeButton()).toBeInTheDocument();
+
+		userEvent.click(removeButton());
+
+		expect(screen.getByTestId(confirmModalInputID)).toBeInTheDocument();
+
+		// Fill in wrong current password and confirm.
+
+		userEvent.paste(screen.getByTestId(confirmModalInputID), "S3cUrePa$swordWrong");
+
+		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
+
+		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`));
+
+		toastSpy.mockRestore();
+	});
+
+	it("should change a password", async () => {
+		profile.auth().setPassword(password);
+
+		render(
+			<Route path="/profiles/:profileId/settings/:activeSetting">
+				<PasswordSettings />
+			</Route>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/settings/password`,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
+		});
+
+		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
+
+		userEvent.paste(passwordInput(), secondaryPassword);
+
+		userEvent.paste(confirmPasswordInput(), secondaryPassword);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
+
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
+
+		profile.auth().forgetPassword(secondaryPassword);
+	});
+});

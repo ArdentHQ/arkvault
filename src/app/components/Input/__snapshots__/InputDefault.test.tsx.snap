@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputDefault should render a default input 1`] = `
+<DocumentFragment>
+  <div
+    class=" css-1psxlcd"
+  >
+    <div
+      class="relative flex h-full flex-1"
+    >
+      <input
+        autocomplete="off"
+        class="no-ligatures w-full border-none css-1nupw50"
+        data-testid="Input"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
