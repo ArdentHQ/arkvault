@@ -160,7 +160,7 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		expect(within(screen.getByTestId("RecipientListItem__type")).getByText("(Contact)")).toBeInTheDocument();
+		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("Contact")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -180,16 +180,16 @@ describe("SearchRecipient", () => {
 		);
 
 		const selected = within(screen.getByTestId("SearchRecipientListItemResponsive--item-0")).getByTestId(
-			"ListItemSmall--selected",
+			"WalletListItemMobile--selected",
 		);
 
 		expect(selected).toBeInTheDocument();
 
 		userEvent.click(
-			within(screen.getByTestId("SearchRecipientListItemResponsive--item-0")).getByTestId("ListItemSmall"),
+			within(screen.getByTestId("SearchRecipientListItemResponsive--item-1")).getByTestId("WalletListItemMobile"),
 		);
 
-		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
+		expect(onAction).toHaveBeenCalledWith(recipients[1].address);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

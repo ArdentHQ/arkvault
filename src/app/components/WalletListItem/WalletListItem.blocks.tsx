@@ -2,7 +2,7 @@ import cn from "classnames";
 import React, { useCallback } from "react";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { MobileLayoutProperties, MobileRecipientProperties } from ".";
+import { WalletListItemMobileProperties } from ".";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -29,19 +29,14 @@ import { useWalletActions } from "@/domains/wallet/hooks";
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
 
-export const Starred: React.VFC<StarredProperties> = ({
-	wallet,
-	handleToggleStar,
-	isCompact,
-	isLargeScreen = true,
-}) => {
+export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, isCompact, isLargeScreen = true }) => {
 	const { t } = useTranslation();
 
 	if (!isLargeScreen) {
 		return (
 			<div
 				data-testid="WalletIcon__Starred"
-				onClick={handleToggleStar}
+				onClick={onToggleStar}
 				className="flex shrink-0 items-center justify-center"
 			>
 				<Icon
@@ -76,7 +71,7 @@ export const Starred: React.VFC<StarredProperties> = ({
 				>
 					<div
 						data-testid="WalletIcon__Starred"
-						onClick={handleToggleStar}
+						onClick={onToggleStar}
 						className="flex shrink-0 items-center justify-center"
 					>
 						<Icon
@@ -262,7 +257,7 @@ export const WalletItemExtraDetails = ({
 				isLargeScreen={false}
 			/>
 
-			<Starred handleToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} isLargeScreen={false} />
+			<Starred onToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} isLargeScreen={false} />
 		</>
 	);
 };
@@ -289,65 +284,16 @@ export const WalletItemBalance = ({
 	</>
 );
 
-export const MobileRecipient: React.VFC<MobileRecipientProperties> = ({ clickHandler, recipient, selected }) => {
-	const { t } = useTranslation();
-
-	return (
-		<div
-			data-testid="ListItemSmall"
-			className={cn("flex w-full overflow-hidden rounded-xl", {
-				"border-2 border-theme-primary-600 bg-theme-primary-600": selected,
-				"dark:border-2 dark:border-theme-secondary-800 dark:bg-theme-secondary-800": !selected,
-			})}
-			onClick={clickHandler}
-		>
-			<div className="flex flex-grow items-center space-x-4 bg-theme-primary-100 px-6 py-4 dark:bg-theme-secondary-900">
-				<div className="flex shrink-0 items-center">
-					<Avatar
-						shadowClassName="ring-transparent dark:ring-transparent"
-						size="lg"
-						address={recipient.address}
-					/>
-				</div>
-
-				<div className="flex w-20 flex-1 flex-col font-semibold">
-					<div className="flex flex-col space-y-2 overflow-auto text-sm">
-						<div className="flex flex-row space-x-1 overflow-auto">
-							<div className="overflow-auto">
-								<div className="truncate">{recipient.alias}</div>
-							</div>
-							<div
-								data-testid="RecipientListItem__type"
-								className="whitespace-nowrap font-normal text-theme-secondary-500"
-							>
-								({recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")})
-							</div>
-						</div>
-						<div className="font-normal">
-							<Address addressClass="text-theme-secondary-500 text-xs" address={recipient.address} />
-						</div>
-					</div>
-				</div>
-			</div>
-
-			{selected && (
-				<div data-testid="ListItemSmall--selected" className="flex items-center justify-center px-3">
-					<Icon name="StatusOk" className="text-white" size="lg" />
-				</div>
-			)}
-		</div>
-	);
-};
-
-export const MobileLayout: React.VFC<MobileLayoutProperties> = ({
-	clickHandler,
-	buttonClickHandler,
+export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = ({
+	onClick,
+	onButtonClick,
 	buttonLabel,
 	isButtonDisabled,
 	avatar,
 	details,
 	balance,
 	extraDetails,
+	selected = false,
 }) => {
 	const handleStopPropagation = useCallback((event: React.MouseEvent) => {
 		event.preventDefault();
@@ -356,11 +302,18 @@ export const MobileLayout: React.VFC<MobileLayoutProperties> = ({
 
 	return (
 		<div
-			data-testid="ListItemSmall"
-			className="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-			onClick={clickHandler}
+			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+			className={cn(
+				"w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400",
+				{
+					"dark:ring-2 dark:ring-theme-secondary-800": !selected,
+					"ring-2 ring-theme-primary-600": selected,
+				},
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
 		>
-			<div className="flex items-center space-x-4 p-4 pt-2 pr-2">
+			<div className="flex items-center space-x-4 p-2 pl-4">
 				<div className="flex shrink-0 items-center">{avatar}</div>
 
 				<div className="flex w-20 flex-1 flex-col font-semibold">{details}</div>
@@ -368,44 +321,43 @@ export const MobileLayout: React.VFC<MobileLayoutProperties> = ({
 				{extraDetails && <div className="flex items-center space-x-2 self-start">{extraDetails}</div>}
 			</div>
 
-			<div className="flex overflow-hidden rounded-xl">
-				{balance !== undefined && (
-					<div className="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold">
-						{balance}
-					</div>
-				)}
+			{(balance !== undefined || onButtonClick !== undefined) && (
+				<div className="mt-2 flex overflow-hidden rounded-xl">
+					{balance !== undefined && (
+						<div className="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold">
+							{balance}
+						</div>
+					)}
 
-				<div
-					className={cn("flex", {
-						"flex-grow": balance === undefined,
-					})}
-					onClick={handleStopPropagation}
-				>
-					<button
-						data-testid="ListItemSmall--button"
-						className={cn({
-							"cursor-not-allowed opacity-50": isButtonDisabled,
-							"flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white":
-								true,
-						})}
-						type="button"
-						disabled={isButtonDisabled}
-						onClick={(event) => buttonClickHandler?.(event)}
-					>
-						{buttonLabel || <Icon name="DoubleArrowRight" size="lg" />}
-					</button>
+					{onButtonClick !== undefined && (
+						<div
+							className={cn("flex", {
+								"flex-grow": balance === undefined,
+							})}
+							onClick={handleStopPropagation}
+						>
+							<button
+								data-testid="WalletListItemMobile--button"
+								className={cn({
+									"cursor-not-allowed opacity-50": isButtonDisabled,
+									"flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white":
+										true,
+								})}
+								type="button"
+								disabled={isButtonDisabled}
+								onClick={(event) => onButtonClick(event)}
+							>
+								{buttonLabel || <Icon name="DoubleArrowRight" size="lg" />}
+							</button>
+						</div>
+					)}
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };
 
-export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
-	wallet,
-	isCompact,
-	handleSend,
-	handleSelectOption,
-}) => {
+export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
 
@@ -429,7 +381,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 						"my-auto": !isCompact,
 						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
 					})}
-					onClick={handleSend}
+					onClick={onSend}
 				>
 					{t("COMMON.SEND")}
 				</Button>
@@ -449,7 +401,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 							<Icon name="EllipsisVertical" size="lg" />
 						</Button>
 					}
-					onSelect={handleSelectOption}
+					onSelect={onSelectOption}
 					options={[primaryOptions, secondaryOptions]}
 				/>
 			</div>

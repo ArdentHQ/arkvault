@@ -1752,11 +1752,12 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -1823,7 +1824,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -1834,21 +1835,6 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -1861,11 +1847,12 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -1932,7 +1919,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -1943,21 +1930,6 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -2103,11 +2075,12 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -2174,7 +2147,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -2185,21 +2158,6 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -2212,11 +2170,12 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -2283,7 +2242,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -2294,21 +2253,6 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -2454,11 +2398,12 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 ring-2 ring-theme-primary-600"
+                          data-testid="WalletListItemMobile--selected"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -2525,7 +2470,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -2536,21 +2481,6 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Selected
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -2563,11 +2493,12 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -2634,7 +2565,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -2645,21 +2576,6 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -5481,11 +5397,12 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -5552,7 +5469,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -5563,21 +5480,6 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -5590,11 +5492,12 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -5661,7 +5564,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -5672,21 +5575,6 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -5832,11 +5720,12 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -5903,7 +5792,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -5914,21 +5803,6 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -5941,11 +5815,12 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -6012,7 +5887,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -6023,21 +5898,6 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -6183,11 +6043,12 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 ring-2 ring-theme-primary-600"
+                          data-testid="WalletListItemMobile--selected"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -6254,7 +6115,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -6265,21 +6126,6 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                               >
                                 33.75089801 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Selected
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>
@@ -6292,11 +6138,12 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                         class="pt-3"
                       >
                         <div
-                          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-                          data-testid="ListItemSmall"
+                          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+                          data-testid="WalletListItemMobile"
+                          tabindex="0"
                         >
                           <div
-                            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+                            class="flex items-center space-x-4 p-2 pl-4"
                           >
                             <div
                               class="flex shrink-0 items-center"
@@ -6363,7 +6210,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                             </div>
                           </div>
                           <div
-                            class="flex overflow-hidden rounded-xl"
+                            class="mt-2 flex overflow-hidden rounded-xl"
                           >
                             <div
                               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -6374,21 +6221,6 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                               >
                                 57.68 DARK
                               </span>
-                            </div>
-                            <div
-                              class="flex"
-                            >
-                              <button
-                                class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                                data-testid="ListItemSmall--button"
-                                type="button"
-                              >
-                                <span
-                                  class="px-2"
-                                >
-                                  Select
-                                </span>
-                              </button>
                             </div>
                           </div>
                         </div>

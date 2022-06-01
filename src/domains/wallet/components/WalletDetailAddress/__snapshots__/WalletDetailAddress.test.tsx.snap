@@ -18,7 +18,7 @@ exports[`WalletDetailAddress should render 1`] = `
           Address
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           <div
             class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

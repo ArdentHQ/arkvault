@@ -207,7 +207,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("ListItemSmall--button")[0]);
+		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
 		expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
 

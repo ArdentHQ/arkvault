@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import React, { useState } from "react";
@@ -12,8 +13,10 @@ import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { LedgerData } from "@/app/contexts/Ledger";
-import { TransactionDetail, TransactionNetwork } from "@/domains/transaction/components/TransactionDetail";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
+import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
+import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
+import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 
 const MultipleImport = ({
 	network,
@@ -31,16 +34,19 @@ const MultipleImport = ({
 	return (
 		<div>
 			<ul>
-				{wallets.map((wallet) => {
+				{wallets.map((wallet, index) => {
 					const importedWallet = profile.wallets().findByAddressWithNetwork(wallet.address, network.id());
 					assertWallet(importedWallet);
 
 					return (
 						<li key={wallet.address}>
-							<TransactionDetail
-								className="py-4"
+							<WalletDetail
+								className={cn("py-4", {
+									"pb-6": index === wallets.length - 1,
+									"pt-6": index === 0,
+								})}
 								paddingPosition="none"
-								borderPosition="bottom"
+								borderPosition={index === wallets.length - 1 ? "both" : "top"}
 								extra={
 									<Tooltip content={t("WALLETS.WALLET_NAME")}>
 										<Button
@@ -64,7 +70,7 @@ const MultipleImport = ({
 										</p>
 									</div>
 								</div>
-							</TransactionDetail>
+							</WalletDetail>
 						</li>
 					);
 				})}
@@ -93,25 +99,18 @@ const SingleImport = ({
 
 	return (
 		<>
-			<TransactionDetail
-				label={t("COMMON.ADDRESS")}
-				extra={<Avatar size="lg" address={ledgerWallet.address} />}
-				borderPosition="bottom"
-				paddingPosition="bottom"
-			>
-				<Address address={ledgerWallet.address} />
-			</TransactionDetail>
+			<WalletDetailAddress address={ledgerWallet.address} />
 
-			<TransactionDetail label={t("COMMON.BALANCE")} borderPosition="bottom" paddingPosition="bottom">
+			<WalletDetail label={t("COMMON.BALANCE")}>
 				<Amount value={ledgerWallet.balance ?? 0} ticker={network.ticker()} />
-			</TransactionDetail>
+			</WalletDetail>
 
-			<TransactionDetail
+			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}
-				padding={false}
-				border={false}
+				paddingPosition="top"
 				extra={
 					<Button
+						size="xs"
 						data-testid="LedgerImportStep__edit-alias"
 						type="button"
 						variant="secondary"
@@ -122,7 +121,7 @@ const SingleImport = ({
 				}
 			>
 				{wallet.alias()}
-			</TransactionDetail>
+			</WalletDetail>
 		</>
 	);
 };
@@ -144,13 +143,13 @@ export const LedgerImportStep = ({
 	assertNetwork(network);
 
 	return (
-		<section data-testid="LedgerImportStep" className="space-y-6">
+		<section data-testid="LedgerImportStep">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE")}
 			/>
 
-			<TransactionNetwork network={network} borderPosition="bottom" paddingPosition="bottom" />
+			<WalletDetailNetwork network={network} className="mt-2" border={false} />
 
 			{wallets.length > 1 ? (
 				<MultipleImport

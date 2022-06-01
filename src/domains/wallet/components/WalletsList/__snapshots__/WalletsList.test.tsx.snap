@@ -1840,11 +1840,12 @@ exports[`WalletsList should render responsive 1`] = `
         class="space-y-3"
       >
         <div
-          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-          data-testid="ListItemSmall"
+          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+          data-testid="WalletListItemMobile"
+          tabindex="0"
         >
           <div
-            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+            class="flex items-center space-x-4 p-2 pl-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -1927,7 +1928,7 @@ exports[`WalletsList should render responsive 1`] = `
             </div>
           </div>
           <div
-            class="flex overflow-hidden rounded-xl"
+            class="mt-2 flex overflow-hidden rounded-xl"
           >
             <div
               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -1949,7 +1950,7 @@ exports[`WalletsList should render responsive 1`] = `
             >
               <button
                 class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                data-testid="ListItemSmall--button"
+                data-testid="WalletListItemMobile--button"
                 type="button"
               >
                 <div
@@ -1966,11 +1967,12 @@ exports[`WalletsList should render responsive 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-xl bg-theme-primary-100 p-2 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
-          data-testid="ListItemSmall"
+          class="w-full rounded-xl bg-theme-primary-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-theme-primary-400 dark:bg-theme-background focus:dark:ring-theme-primary-400 dark:ring-2 dark:ring-theme-secondary-800"
+          data-testid="WalletListItemMobile"
+          tabindex="0"
         >
           <div
-            class="flex items-center space-x-4 p-4 pt-2 pr-2"
+            class="flex items-center space-x-4 p-2 pl-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -2067,7 +2069,7 @@ exports[`WalletsList should render responsive 1`] = `
             </div>
           </div>
           <div
-            class="flex overflow-hidden rounded-xl"
+            class="mt-2 flex overflow-hidden rounded-xl"
           >
             <div
               class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
@@ -2089,7 +2091,7 @@ exports[`WalletsList should render responsive 1`] = `
             >
               <button
                 class="flex flex-grow items-center justify-center bg-theme-primary-600 py-3 px-3 font-semibold text-white"
-                data-testid="ListItemSmall--button"
+                data-testid="WalletListItemMobile--button"
                 type="button"
               >
                 <div

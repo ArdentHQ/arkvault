@@ -21,7 +21,11 @@ import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import { Balance, MobileLayout, WalletItemDetails } from "@/app/components/WalletListItem/WalletListItem.blocks";
+import {
+	Balance,
+	WalletListItemMobile,
+	WalletItemDetails,
+} from "@/app/components/WalletListItem/WalletListItem.blocks";
 
 const SearchWalletListItem = ({
 	index,
@@ -143,28 +147,25 @@ const SearchWalletAvatar = ({
 };
 
 const SearchWalletListItemResponsive = ({
-	disabled,
 	alias,
 	wallet,
 	onAction,
 	selectedAddress,
 	showNetwork,
 }: SearchWalletListItemResponsiveProperties) => {
-	const { t } = useTranslation();
-
-	const buttonClickHandler = useCallback(
+	const handleButtonClick = useCallback(
 		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
 		[alias, wallet],
 	);
 
-	const buttonIsSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
+	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
 
 	const isSynced = isFullySynced(wallet);
 
 	return (
 		<tr data-testid="SearchWalletListItemResponsive--item">
 			<td className="pt-3">
-				<MobileLayout
+				<WalletListItemMobile
 					avatar={
 						<SearchWalletAvatar
 							wallet={wallet}
@@ -175,8 +176,6 @@ const SearchWalletListItemResponsive = ({
 							networkIconShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
 						/>
 					}
-					buttonClickHandler={buttonClickHandler}
-					clickHandler={buttonClickHandler}
 					details={<WalletItemDetails wallet={wallet} />}
 					balance={
 						<Balance
@@ -187,10 +186,8 @@ const SearchWalletListItemResponsive = ({
 							isLargeScreen={false}
 						/>
 					}
-					isButtonDisabled={!buttonIsSelected && disabled}
-					buttonLabel={
-						<span className="px-2">{buttonIsSelected ? t("COMMON.SELECTED") : t("COMMON.SELECT")}</span>
-					}
+					selected={isSelected}
+					onClick={handleButtonClick}
 				/>
 			</td>
 		</tr>
@@ -309,7 +306,6 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					<SearchWalletListItemResponsive
 						wallet={wallet}
 						alias={alias}
-						disabled={disableAction?.(wallet)}
 						showNetwork={showNetwork}
 						onAction={onSelectWallet}
 						selectedAddress={selectedAddress}

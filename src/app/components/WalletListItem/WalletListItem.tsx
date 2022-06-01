@@ -6,7 +6,7 @@ import {
 	Info,
 	WalletCell,
 	Starred,
-	MobileLayout,
+	WalletListItemMobile,
 	WalletItemAvatar,
 	WalletItemDetails,
 	WalletItemExtraDetails,
@@ -31,7 +31,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 		return (
 			<>
 				<TableRow onClick={isSynced ? handleOpen : undefined}>
-					<Starred handleToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} />
+					<Starred onToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} />
 					<WalletCell isCompact={isCompact} wallet={wallet} />
 					<Info isCompact={isCompact} wallet={wallet} />
 					<Balance wallet={wallet} isCompact={isCompact} isSynced={isSynced} />
@@ -39,8 +39,8 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 					<ButtonsCell
 						wallet={wallet}
 						isCompact={isCompact}
-						handleSelectOption={handleSelectOption}
-						handleSend={handleSend}
+						onSelectOption={handleSelectOption}
+						onSend={handleSend}
 					/>
 				</TableRow>
 				{activeModal && (
@@ -59,10 +59,10 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 	}
 
 	return (
-		<MobileLayout
+		<WalletListItemMobile
 			isButtonDisabled={isButtonDisabled}
-			buttonClickHandler={handleSend}
-			clickHandler={isSynced ? handleOpen : undefined}
+			onClick={isSynced ? handleOpen : undefined}
+			onButtonClick={handleSend}
 			avatar={<WalletItemAvatar wallet={wallet} />}
 			details={<WalletItemDetails wallet={wallet} />}
 			extraDetails={<WalletItemExtraDetails wallet={wallet} isCompact={isCompact} />}

@@ -13,7 +13,7 @@ import {
 	Starred,
 	Info,
 	Balance,
-	MobileRecipient,
+	WalletListItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -38,6 +38,38 @@ describe("WalletListItem.blocks", () => {
 		await profile.sync();
 	});
 
+	it("should render WalletListItemMobile", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItemMobile wallet={wallet} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletListItemMobile"));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
+	it("should render WalletListItemMobile when selected", () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItemMobile wallet={wallet} selected />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.hover(screen.getByTestId("WalletListItemMobile--selected"));
+
+		expect(asFragment).toMatchSnapshot();
+	});
+
 	it("should render StarredCell", () => {
 		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
 
@@ -46,9 +78,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<td>
-								<Starred wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
-							</td>
+							<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -74,20 +104,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<Starred
-									wallet={wallet}
-									handleToggleStar={jest.fn()}
-									isCompact={true}
-									isLargeScreen={false}
-								/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -108,7 +125,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<WalletCell wallet={wallet} handleToggleStar={jest.fn()} isCompact={true} />
+							<WalletCell wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -124,7 +141,7 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should render CurrencyCell", () => {
+	it("should render Currency", () => {
 		const useConfigurationReturn = { profileIsSyncingExchangeRates: true };
 		const useConfigurationSpy = jest
 			.spyOn(useConfigurationModule, "useConfiguration")
@@ -208,16 +225,10 @@ describe("WalletListItem.blocks", () => {
 		useConfigurationSpy.mockRestore();
 	});
 
-	it("should render CurrencyCell in small screen", () => {
+	it("should render Currency in small screen", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<Currency wallet={wallet} isSynced={true} isCompact={true} isLargeScreen={false} />
-						</tr>
-					</tbody>
-				</table>
+				<Currency wallet={wallet} isSynced={true} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -240,8 +251,8 @@ describe("WalletListItem.blocks", () => {
 							<ButtonsCell
 								wallet={wallet}
 								isCompact={true}
-								handleSelectOption={jest.fn()}
-								handleSend={handleSend}
+								onSelectOption={jest.fn()}
+								onSend={handleSend}
 							/>
 						</tr>
 					</tbody>
@@ -267,20 +278,7 @@ describe("WalletListItem.blocks", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<Info
-									wallet={wallet}
-									handleToggleStar={jest.fn()}
-									isCompact={true}
-									isLargeScreen={false}
-								/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<Info wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -304,7 +302,7 @@ describe("WalletListItem.blocks", () => {
 							<td>
 								<Balance
 									wallet={wallet}
-									handleToggleStar={jest.fn()}
+									onToggleStar={jest.fn()}
 									isCompact={true}
 									isLargeScreen={false}
 								/>
@@ -322,75 +320,5 @@ describe("WalletListItem.blocks", () => {
 		expect(asFragment).toMatchSnapshot();
 
 		walletSpy.mockRestore();
-	});
-
-	it.each(["wallet", "contact"])("should render MobileRecipient", (type) => {
-		const clickHandler = jest.fn();
-
-		const recipient: MobileRecipient = {
-			address: "address",
-			avatar: "avatar",
-			id: "id",
-			type: type,
-		};
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={false} />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		userEvent.click(screen.getByTestId("ListItemSmall"));
-
-		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-
-		expect(asFragment).toMatchSnapshot();
-	});
-
-	it.each(["wallet", "contact"])("should render selected MobileRecipient", (type) => {
-		const clickHandler = jest.fn();
-
-		const recipient: MobileRecipient = {
-			address: "address",
-			avatar: "avatar",
-			id: "id",
-			type: type,
-		};
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<MobileRecipient recipient={recipient} clickHandler={clickHandler} selected={true} />
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		userEvent.click(screen.getByTestId("ListItemSmall"));
-
-		expect(clickHandler).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-
-		expect(asFragment).toMatchSnapshot();
 	});
 });

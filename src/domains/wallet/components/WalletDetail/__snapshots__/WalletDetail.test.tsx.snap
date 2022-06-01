@@ -18,7 +18,7 @@ exports[`WalletDetail should render 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>
@@ -59,7 +59,7 @@ exports[`WalletDetail should render with bottom border 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>
@@ -100,7 +100,7 @@ exports[`WalletDetail should render with extra children 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>
@@ -144,7 +144,7 @@ exports[`WalletDetail should render with top border 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>
@@ -185,7 +185,7 @@ exports[`WalletDetail should render without border 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>
@@ -226,7 +226,7 @@ exports[`WalletDetail should render without padding 1`] = `
           Test
         </div>
         <div
-          class="hidden items-center font-semibold sm:block"
+          class="hidden items-center font-semibold sm:flex"
         >
           test
         </div>

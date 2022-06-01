@@ -34,7 +34,7 @@ export const SuccessStep = ({
 
 			<WalletDetailNetwork network={network} className="mt-2" border={false} />
 
-			<WalletDetailAddress wallet={importedWallet} />
+			<WalletDetailAddress address={importedWallet.address()} />
 
 			<WalletDetail label={t("COMMON.BALANCE")}>
 				<Amount value={importedWallet.balance()} ticker={network.ticker()} />
@@ -42,7 +42,7 @@ export const SuccessStep = ({
 
 			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}
-				paddingPosition="top"
+				borderPosition="both"
 				extra={
 					<Button
 						size="xs"

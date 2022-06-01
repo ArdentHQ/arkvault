@@ -21,7 +21,6 @@ export interface SearchWalletListItemProperties {
 	onAction: (wallet: SelectedWallet) => void;
 }
 export interface SearchWalletListItemResponsiveProperties {
-	disabled?: boolean;
 	selectedAddress?: string;
 	wallet: Contracts.IReadWriteWallet;
 	alias?: string;
