@@ -2,7 +2,7 @@ import { uniqBy } from "@payvo/sdk-helpers";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { Contracts } from "@payvo/sdk";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
-
+import { BIP44 } from "@payvo/sdk-cryptography";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
@@ -28,6 +28,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	const abortRetryReference = useRef<boolean>(false);
 
 	const onProgress = (wallet: Contracts.WalletData) => {
+		console.log({wallet: wallet.data.address})
 		setLoadedWallets((wallets) => uniqBy([...wallets, wallet], (wallet) => wallet.data.address));
 	};
 
@@ -47,8 +48,11 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					.values()
 					.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
 					.filter(Boolean)
-					.sort()
-					.reverse()[0];
+					.sort((path1, path2) => {
+						const  { addressIndex } = BIP44.parse(path1!);
+						const  { addressIndex: addressIndex2 } = BIP44.parse(path2!);
+						return addressIndex > addressIndex2 ? -1 : 1;
+					})[0];
 
 				// @ts-ignore
 				const wallets = await instance.ledger().scan({ onProgress, startPath: lastImportedPath });
