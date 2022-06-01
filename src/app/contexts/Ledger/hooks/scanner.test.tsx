@@ -237,7 +237,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
+		render(
 			<LedgerProvider>
 				<Component />
 			</LedgerProvider>,
