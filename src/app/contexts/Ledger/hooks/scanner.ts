@@ -48,8 +48,8 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
 					.filter(Boolean)
 					.sort((path1, path2) => {
-						const  { addressIndex } = BIP44.parse(path1!);
-						const  { addressIndex: addressIndex2 } = BIP44.parse(path2!);
+						const { addressIndex } = BIP44.parse(path1!);
+						const { addressIndex: addressIndex2 } = BIP44.parse(path2!);
 						return addressIndex > addressIndex2 ? -1 : 1;
 					})[0];
 
