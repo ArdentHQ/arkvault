@@ -1133,7 +1133,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             ARK Devnet
                           </div>
@@ -1209,7 +1209,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                             Address
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1299,7 +1299,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                             Wallet Name
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             test alias
                           </div>
@@ -2504,7 +2504,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                             Cryptoasset
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             ARK Devnet
                           </div>
@@ -2580,7 +2580,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                             Address
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2670,7 +2670,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                             Wallet Name
                           </div>
                           <div
-                            class="hidden items-center font-semibold sm:block"
+                            class="hidden items-center font-semibold sm:flex"
                           >
                             ARK Devnet #1
                           </div>

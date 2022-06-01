@@ -35,7 +35,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 
 			<WalletDetailNetwork network={network} className="mt-2" border={false} />
 
-			<WalletDetailAddress wallet={wallet} />
+			<WalletDetailAddress address={wallet.address()} />
 
 			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}

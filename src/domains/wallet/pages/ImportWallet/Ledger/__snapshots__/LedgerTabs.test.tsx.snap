@@ -198,7 +198,7 @@ exports[`LedgerTabs should render connection step 1`] = `
       </div>
     </div>
     <div
-      class="mt-10 flex justify-between"
+      class="mt-8 flex justify-between"
     >
       <div />
       <div
