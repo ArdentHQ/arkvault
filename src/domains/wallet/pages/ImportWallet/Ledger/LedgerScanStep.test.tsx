@@ -7,7 +7,7 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Networks } from "@payvo/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
@@ -121,8 +121,8 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
-	it("should render", async () => {
-		const { container } = render(<Component />);
+	it.each(["xs", "lg"])("should render responsive (%s)", async (breakpoint) => {
+		const { container } = renderResponsive(<Component />, breakpoint);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
