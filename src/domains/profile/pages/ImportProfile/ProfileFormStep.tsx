@@ -64,20 +64,22 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 
 				<Divider />
 
-				<ProfileForm
-					defaultValues={{
-						avatarImage: profile.settings().get(Contracts.ProfileSetting.Avatar, ""),
-						confirmPassword: password,
-						currency: profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency),
-						name: profile.name(),
-						password,
-						viewingMode: profile.settings().get(Contracts.ProfileSetting.Theme),
-					}}
-					onBack={onBack}
-					onSubmit={handleSubmit}
-					shouldValidate={shouldValidate}
-					showPasswordFields={!profile.usesPassword()}
-				/>
+				<div className="mb-16 sm:mb-0">
+					<ProfileForm
+						defaultValues={{
+							avatarImage: profile.settings().get(Contracts.ProfileSetting.Avatar, ""),
+							confirmPassword: password,
+							currency: profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency),
+							name: profile.name(),
+							password,
+							viewingMode: profile.settings().get(Contracts.ProfileSetting.Theme),
+						}}
+						onBack={onBack}
+						onSubmit={handleSubmit}
+						shouldValidate={shouldValidate}
+						showPasswordFields={!profile.usesPassword()}
+					/>
+				</div>
 			</div>
 		</div>
 	);
