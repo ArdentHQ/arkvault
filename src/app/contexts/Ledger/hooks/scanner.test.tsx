@@ -227,11 +227,10 @@ describe("Use Ledger Scanner", () => {
 		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => "m/44'/1'/0'/0/1");
 
 		const Component = () => {
-			const { scan, wallets, isSelected } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
 
 			return (
 				<div>
-					{walletsList(wallets, isSelected)}
 					<button onClick={() => scan(profile)}>Scan</button>
 				</div>
 			);
