@@ -13,7 +13,6 @@ import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Circle } from "@/app/components/Circle";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Skeleton } from "@/app/components/Skeleton";
