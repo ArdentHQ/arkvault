@@ -85,7 +85,7 @@ export const CreateProfile = () => {
 						className="hidden sm:block"
 					/>
 
-					<div className="-mt-8 mb-16 rounded-lg border-theme-secondary-300 bg-theme-background pt-1 dark:border-theme-secondary-800 sm:mt-6 sm:border sm:p-10 sm:mb-0">
+					<div className="-mt-8 mb-16 rounded-lg border-theme-secondary-300 bg-theme-background pt-1 dark:border-theme-secondary-800 sm:mt-6 sm:mb-0 sm:border sm:p-10">
 						<ProfileForm
 							defaultValues={{
 								currency: defaultCurrency,
