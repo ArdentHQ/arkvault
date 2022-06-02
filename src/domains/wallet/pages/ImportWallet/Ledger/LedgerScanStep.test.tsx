@@ -167,6 +167,56 @@ describe("LedgerScanStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render compact table", async () => {
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+
+		const { container } = render(<Component />);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
+
+		await waitFor(() =>
+			expect(formReference.getValues("wallets")).toMatchObject([
+				{
+					address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG",
+					balance: 0,
+					path: "m/44'/1'/0'/0/0",
+				},
+			]),
+		);
+
+		const checkboxSelectAll = screen.getAllByRole("checkbox")[0];
+		const checkboxFirstItem = screen.getAllByRole("checkbox")[1];
+
+		userEvent.click(checkboxSelectAll);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
+
+		userEvent.click(checkboxSelectAll);
+
+		const validLedgerWallet = () =>
+			expect(formReference.getValues("wallets")).toMatchObject([
+				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
+			]);
+
+		await waitFor(validLedgerWallet);
+
+		userEvent.click(checkboxFirstItem);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
+
+		userEvent.click(checkboxFirstItem);
+
+		await waitFor(validLedgerWallet);
+
+		expect(container).toMatchSnapshot();
+
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+	});
+
 	it("should update the toast messages if already added", async () => {
 		const toastUpdateSpy = jest.spyOn(toasts, "update");
 
