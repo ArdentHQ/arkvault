@@ -90,10 +90,12 @@ const useGraphTooltip: UseGraphTooltipHook = (renderFunction, type) => {
 
 				let leftOffset: number;
 
+				/* istanbul ignore next */
 				if (event.pageX < document.body.scrollWidth / 4) {
 					tooltipClassList?.remove("right");
 					tooltipClassList?.add("left");
 					leftOffset = Math.floor(20 + 8);
+					/* istanbul ignore next */
 				} else if (event.pageX > (document.body.scrollWidth / 4) * 3) {
 					tooltipClassList?.remove("left");
 					tooltipClassList?.add("right");
