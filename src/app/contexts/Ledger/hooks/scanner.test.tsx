@@ -215,7 +215,10 @@ describe("Use Ledger Scanner", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should load with last import path", async () => {
+	it.each([
+		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
+		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
+	])("should load with last import path", async (path1, path2) => {
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(legacyPublicKeyPaths.get(path)!),
 		);
@@ -223,8 +226,8 @@ describe("Use Ledger Scanner", () => {
 		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
 
 		const profileWallets = profile.wallets().values();
-		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => "m/44'/1'/0'/0/3");
-		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => "m/44'/1'/0'/0/1");
+		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
 
 		const Component = () => {
 			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
