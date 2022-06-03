@@ -54,7 +54,11 @@ const FormDivider = ({
 
 	const renderExchangeRate = () => {
 		if (isLoading) {
-			return <Skeleton width={200} height={14} />;
+			return (
+				<div className="flex h-5 items-center">
+					<Skeleton width={200} height={14} />
+				</div>
+			);
 		}
 
 		if (hasRate) {
@@ -77,7 +81,7 @@ const FormDivider = ({
 
 			<div className="flex flex-1 items-center">
 				<div className="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0">
-					<span className="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600">
+					<span className="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600">
 						{t("EXCHANGE.EXCHANGE_FORM.ESTIMATED_RATE")}:
 					</span>
 					{renderExchangeRate()}
