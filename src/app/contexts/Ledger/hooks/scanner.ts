@@ -2,7 +2,7 @@ import { uniqBy } from "@payvo/sdk-helpers";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { Contracts } from "@payvo/sdk";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
-
+import { BIP44 } from "@payvo/sdk-cryptography";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
@@ -47,8 +47,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					.values()
 					.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
 					.filter(Boolean)
-					.sort()
-					.reverse()[0];
+					.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
 
 				// @ts-ignore
 				const wallets = await instance.ledger().scan({ onProgress, startPath: lastImportedPath });
