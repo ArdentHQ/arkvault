@@ -10,8 +10,8 @@ import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { Exchange } from "@/domains/exchange/exchange.contracts";
 import { shouldUseDarkColors } from "@/utils/theme";
 
-const WorldMapWrapper = styled.div`
-	${tw`absolute inset-0 flex items-center sm:p-32`}
+const ExchangePageWrapper = styled.div`
+	${tw`min-h-screen`}
 	${css`
 		@media (min-width: 640px) {
 			background-color: #3f4455;
@@ -80,23 +80,25 @@ export const ExchangeView = () => {
 	);
 
 	return (
-		<Page pageTitle={exchangeProvider?.name}>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20">
-				<WorldMapWrapper>
-					<Image name="WorldMap" className="h-full w-full" />
-				</WorldMapWrapper>
+		<ExchangePageWrapper>
+			<Page pageTitle={exchangeProvider?.name}>
+				<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20">
+					<div className="absolute inset-0 flex items-center sm:p-32">
+						<Image name="WorldMap" className="h-full w-full" />
+					</div>
 
-				{renderSpinner()}
+					{renderSpinner()}
 
-				<div
-					className={cn(
-						"relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl",
-						isReady ? "flex" : "hidden",
-					)}
-				>
-					{renderExchange()}
+					<div
+						className={cn(
+							"relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl",
+							isReady ? "flex" : "hidden",
+						)}
+					>
+						{renderExchange()}
+					</div>
 				</div>
-			</div>
-		</Page>
+			</Page>
+		</ExchangePageWrapper>
 	);
 };
