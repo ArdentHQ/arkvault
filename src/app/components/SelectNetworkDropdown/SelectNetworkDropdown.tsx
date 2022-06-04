@@ -15,17 +15,16 @@ interface SelectNetworkDropdownProperties {
 
 export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNetworkDropdownProperties>(
 	({ profile, networks, selectedNetwork, placeholder, onChange }: SelectNetworkDropdownProperties, reference) => {
-		const { networkOptions, networkById } = useNetworkOptions({ profile });
+		const { networkOptions } = useNetworkOptions({ profile });
+		const findById = (networkId?: string | number) => networks?.find((network) => network.id() === networkId);
 
 		return (
 			<Select
 				defaultValue={selectedNetwork?.id()}
 				options={networkOptions(networks)}
 				placeholder={placeholder}
-				renderLabel={(properties) => <NetworkOptionLabel {...properties} networkById={networkById} />}
-				onChange={(option?: OptionProperties) => {
-					onChange?.(networkById(option?.value as string));
-				}}
+				renderLabel={(properties) => <NetworkOptionLabel network={findById(properties.value)} />}
+				onChange={(option?: OptionProperties) => onChange?.(findById(option?.value))}
 				ref={reference}
 				addons={{
 					start: {

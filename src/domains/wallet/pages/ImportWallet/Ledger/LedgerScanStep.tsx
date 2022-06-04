@@ -250,7 +250,13 @@ export const LedgerScanStep = ({
 
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork id="ImportWallet__network" networks={[]} selected={network} disabled />
+				<SelectNetwork
+					id="ImportWallet__network"
+					networks={[]}
+					selectedNetwork={network}
+					isDisabled
+					profile={profile}
+				/>
 			</FormField>
 
 			{error ? (
