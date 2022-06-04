@@ -10,7 +10,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { useAvailableNetworks } from "@/domains/wallet/hooks";
 
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
-	const { setValue, setError, clearErrors, watch } = useFormContext();
+	const { setValue, watch } = useFormContext();
 
 	const profileAvailableNetworks = useAvailableNetworks({ profile });
 
@@ -28,28 +28,6 @@ export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile
 
 	const handleSelect = (network?: Networks.Network | null) => {
 		setValue("network", network, { shouldDirty: true, shouldValidate: true });
-	};
-
-	const handleInputChange = (value?: string, suggestion?: string) => {
-		if (suggestion) {
-			clearErrors("network");
-		}
-
-		if (!value) {
-			return setError("network", {
-				message: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-					field: t("COMMON.CRYPTOASSET"),
-				}),
-				type: "manual",
-			});
-		}
-
-		if (!suggestion) {
-			return setError("network", {
-				message: t("COMMON.INPUT_NETWORK.VALIDATION.NETWORK_NOT_FOUND"),
-				type: "manual",
-			});
-		}
 	};
 
 	return (

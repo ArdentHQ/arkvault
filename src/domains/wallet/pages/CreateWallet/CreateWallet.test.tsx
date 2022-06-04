@@ -29,8 +29,6 @@ const passphrase = "power return attend drink piece found tragic fire liar page 
 
 const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
 
-const ARKDevnet = "ARK Devnet";
-
 describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 

@@ -1,22 +1,15 @@
-import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { SelectNetwork } from "./SelectNetwork";
 import {
 	env,
 	getDefaultProfileId,
-	MNEMONICS,
 	render,
 	screen,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
-let network: Networks.Network;
-let customNetwork: Networks.Network;
-let networkTestnet: Networks.Network;
 let profile: Contracts.IProfile;
 
 describe("SelectNetwork", () => {

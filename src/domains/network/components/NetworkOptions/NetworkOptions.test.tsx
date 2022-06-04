@@ -83,7 +83,7 @@ describe("NetworkOption", () => {
 
 		userEvent.click(screen.getByTestId("NetworkOption"));
 
-		expect(onSelect).not.toHaveBeenCalled();
+		expect(onSelect).not.toHaveBeenCalledWith();
 	});
 
 	it("should call onDeselect callback if is already selected", () => {
@@ -99,7 +99,7 @@ describe("NetworkOption", () => {
 
 		userEvent.click(screen.getByTestId("NetworkOption"));
 
-		expect(onDeselect).toHaveBeenCalled();
+		expect(onDeselect).toHaveBeenCalledWith();
 	});
 
 	it("should not render different class for testnet network", () => {

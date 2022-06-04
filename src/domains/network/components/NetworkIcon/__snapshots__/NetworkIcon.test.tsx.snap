@@ -41,3 +41,12 @@ exports[`NetworkIcon should render when isCompact = true 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`NetworkIcon should render with placeholder 1`] = `
+<DocumentFragment>
+  <div
+    class="ring-theme-background duration-100 css-14jhlj1"
+    data-testid="NetworkIcon__placeholder"
+  />
+</DocumentFragment>
+`;

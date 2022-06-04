@@ -17,7 +17,6 @@ import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 
 export const FormStep = ({
-	networks,
 	profile,
 	deeplinkProps,
 }: {
