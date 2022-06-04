@@ -3,11 +3,11 @@ import React from "react";
 import { useFormContext } from "react-hook-form";
 
 import { Contracts } from "@payvo/sdk-profiles";
+import { useTranslation } from "react-i18next";
 import { useAvailableNetworks } from "@/domains/wallet/hooks";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
-import { useTranslation } from "react-i18next";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 interface NetworkStepProperties {

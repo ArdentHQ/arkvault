@@ -142,6 +142,7 @@ describe("NetworkOption", () => {
 		expect(asFragment).toMatchSnapshot();
 
 		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
+
 		expect(onSelect).toHaveBeenCalledWith(networkTestnet);
 	});
 
@@ -157,6 +158,7 @@ describe("NetworkOption", () => {
 		expect(asFragment).toMatchSnapshot();
 
 		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
+
 		expect(onSelect).toHaveBeenCalledWith();
 	});
 });

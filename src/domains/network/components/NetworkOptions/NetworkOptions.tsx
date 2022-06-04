@@ -1,13 +1,13 @@
 import { Networks } from "@payvo/sdk";
 import React, { memo } from "react";
 
+import { wrapperClasses, optionClasses } from "./NetworkOptions.styles";
+import { NetworkOptionsProperties, NetworkOptionProperties } from "./NetworkOptions.contracts";
 import { networkDisplayName } from "@/utils/network-utils";
 import {
 	NetworkTestnetCodeIcon,
 	NetworkIcon,
 } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown.blocks";
-import { wrapperClasses, optionClasses } from "./NetworkOptions.styles";
-import { NetworkOptionsProperties, NetworkOptionProperties } from "./NetworkOptions.contracts";
 
 export const NetworkOption = memo(
 	({ disabled, network, iconSize = "lg", isSelected, onSelect, onDeselect }: NetworkOptionProperties) => {

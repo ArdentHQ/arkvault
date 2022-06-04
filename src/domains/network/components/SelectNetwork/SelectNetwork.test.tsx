@@ -24,6 +24,7 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork profile={profile} networks={profile.availableNetworks()} />, {});
 
 		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
+
 		resetProfileNetworksMock();
 	});
 
@@ -33,6 +34,7 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork profile={profile} networks={[network1, network2]} />, {});
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
+
 		resetProfileNetworksMock();
 	});
 });
