@@ -108,7 +108,13 @@ export const LedgerConnectionStep = ({
 
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork id="ImportWallet__network" networks={[]} selected={network} disabled />
+				<SelectNetwork
+					id="ImportWallet__network"
+					networks={[network, network, network]}
+					selectedNetwork={network}
+					isDisabled
+					profile={activeProfile}
+				/>
 			</FormField>
 
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
