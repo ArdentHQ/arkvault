@@ -11,15 +11,20 @@ interface SelectNetworkDropdownProperties {
 	placeholder?: string;
 	profile: Contracts.IProfile;
 	onChange?: (network?: Networks.Network) => void;
+	isDisabled?: boolean;
 }
 
 export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNetworkDropdownProperties>(
-	({ profile, networks, selectedNetwork, placeholder, onChange }: SelectNetworkDropdownProperties, reference) => {
+	(
+		{ profile, networks, selectedNetwork, placeholder, isDisabled, onChange }: SelectNetworkDropdownProperties,
+		reference,
+	) => {
 		const { networkOptions } = useNetworkOptions({ profile });
 		const findById = (networkId?: string | number) => networks?.find((network) => network.id() === networkId);
 
 		return (
 			<Select
+				disabled={isDisabled}
 				defaultValue={selectedNetwork?.id()}
 				options={networkOptions(networks)}
 				placeholder={placeholder}

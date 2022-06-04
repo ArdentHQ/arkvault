@@ -135,10 +135,10 @@ export const FormStep = ({
 					<FormLabel label={t("COMMON.CRYPTOASSET")} />
 					<SelectNetwork
 						id="SendTransfer__network"
-						networks={networks}
-						selected={network}
-						disabled
-						hideOptions
+						profile={profile}
+						networks={[network, network, network]}
+						selectedNetwork={network}
+						isDisabled
 					/>
 				</FormField>
 

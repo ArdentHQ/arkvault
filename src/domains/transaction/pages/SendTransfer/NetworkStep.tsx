@@ -62,10 +62,10 @@ export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
 				<SelectNetwork
+					profile={profile}
 					id="SendTransfer__network-step__select"
 					networks={availableNetworks}
-					selected={selectedNetwork}
-					onInputChange={handleInputChange}
+					selectedNetwork={selectedNetwork}
 					onSelect={handleSelect}
 				/>
 			</FormField>

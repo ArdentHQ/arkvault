@@ -31,6 +31,7 @@ export const SelectNetwork = ({
 				networks={networks}
 				profile={profile}
 				onChange={onSelect}
+				isDisabled={isDisabled}
 			/>
 		)}
 	</div>
