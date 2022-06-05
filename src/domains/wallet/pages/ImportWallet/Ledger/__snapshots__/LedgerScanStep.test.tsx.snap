@@ -38,7 +38,134 @@ exports[`LedgerScanStep should render 1`] = `
       </label>
       <div
         data-testid="ImportWallet__network"
-      />
+      >
+        <div
+          class="relative w-full"
+          data-testid="SelectDropdown"
+        >
+          <div
+            class="sr-only css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
+            </div>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-28-menu"
+              role="combobox"
+            >
+              <div>
+                <label
+                  for="downshift-28-input"
+                  id="downshift-28-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet
+                  …
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
+                  <div
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-28-menu"
+                      aria-labelledby="downshift-28-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-28-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
+                  >
+                    <div
+                      class=""
+                    >
+                      <div
+                        class="flex items-center"
+                      >
+                        <div
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
+                        >
+                          <div
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              caret-down.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                aria-labelledby="downshift-28-label"
+                id="downshift-28-menu"
+                role="listbox"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </fieldset>
     <div
       class="-mt-3 css-1m6rt2i"
