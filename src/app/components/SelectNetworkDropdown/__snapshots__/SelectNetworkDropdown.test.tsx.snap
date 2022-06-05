@@ -29,15 +29,15 @@ exports[`SelectNetworkDropdown should change network 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-5-menu"
+        aria-owns="downshift-4-menu"
         role="combobox"
       >
         <div
           aria-expanded="false"
         >
           <label
-            for="downshift-5-input"
-            id="downshift-5-label"
+            for="downshift-4-input"
+            id="downshift-4-label"
           />
           <div
             class="invisible fixed w-auto whitespace-nowrap"
@@ -68,12 +68,12 @@ exports[`SelectNetworkDropdown should change network 1`] = `
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-5-menu"
-                aria-labelledby="downshift-5-label"
+                aria-controls="downshift-4-menu"
+                aria-labelledby="downshift-4-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-5-input"
+                id="downshift-4-input"
                 placeholder="Select option"
                 type="text"
                 value="Blockpool"
@@ -119,8 +119,8 @@ exports[`SelectNetworkDropdown should change network 1`] = `
           </div>
         </div>
         <div
-          aria-labelledby="downshift-5-label"
-          id="downshift-5-menu"
+          aria-labelledby="downshift-4-label"
+          id="downshift-4-menu"
           role="listbox"
         />
       </div>
@@ -246,7 +246,7 @@ exports[`SelectNetworkDropdown should render with default network 1`] = `
           readonly=""
           tabindex="-1"
           type="text"
-          value="ark.mainnet"
+          value=""
         />
       </div>
     </div>
@@ -264,12 +264,6 @@ exports[`SelectNetworkDropdown should render with default network 1`] = `
             for="downshift-2-input"
             id="downshift-2-label"
           />
-          <div
-            class="invisible fixed w-auto whitespace-nowrap"
-          >
-            ARK
-            …
-          </div>
           <div
             class="css-1psxlcd"
           >
@@ -296,23 +290,13 @@ exports[`SelectNetworkDropdown should render with default network 1`] = `
                 aria-controls="downshift-2-menu"
                 aria-labelledby="downshift-2-label"
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
                 data-testid="SelectDropdown__input"
                 id="downshift-2-input"
                 placeholder="Select option"
                 type="text"
-                value="ARK"
+                value=""
               />
-              <span
-                class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                data-testid="Input__suggestion"
-              >
-                <span
-                  class="truncate"
-                >
-                  ARK
-                </span>
-              </span>
             </div>
             <div
               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
