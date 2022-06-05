@@ -62,7 +62,6 @@ const networkStepID = "SendTransfer__network-step";
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
 const sendAllID = "AddRecipient__send-all";
-const ARKDevnet = "ARK Devnet";
 
 const history = createHashHistory();
 
@@ -609,7 +608,9 @@ describe("SendTransfer Fee Handling", () => {
 
 			selectFirstRecipient();
 			await waitFor(() =>
-				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(
+					profile.wallets().first().address(),
+				),
 			);
 
 			// Amount

@@ -29,7 +29,6 @@ const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const ARKDevnetOptionId = "NetworkOption-ARK-ark.devnet";
 const networkStepID = "SendTransfer__network-step";
 const formStepID = "SendTransfer__form-step";
-const ariaInvalid = "aria-invalid";
 const ARKDevnet = "ARK Devnet";
 const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 

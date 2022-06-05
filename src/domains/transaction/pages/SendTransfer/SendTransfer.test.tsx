@@ -710,10 +710,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
-		// expect(within(screen.getByTestId("SelectNetwork")).getByTestId("select-list__input")).toHaveValue(networkLabel);
-
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
