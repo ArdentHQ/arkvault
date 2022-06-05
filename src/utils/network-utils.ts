@@ -133,3 +133,23 @@ export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	);
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
+
+export const networksAsOptions = (networks?: Networks.Network[]) => {
+	if (!networks) {
+		return [];
+	}
+
+	return networks.map((network) => {
+		let label = network?.coinName();
+
+		if (network?.isTest() && !isCustomNetwork(network)) {
+			label = `${label} ${network.name()}`;
+		}
+
+		return {
+			isTestNetwork: network?.isTest(),
+			label,
+			value: network?.id(),
+		};
+	});
+};

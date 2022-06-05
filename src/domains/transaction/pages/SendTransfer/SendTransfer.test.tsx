@@ -241,22 +241,6 @@ describe("SendTransfer", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render network step without test networks", async () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const { asFragment } = renderWithForm(
-			<StepsProvider activeStep={1} steps={4}>
-				<NetworkStep networks={env.availableNetworks()} profile={profile} />
-			</StepsProvider>,
-		);
-
-		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
-		expect(within(screen.getByTestId("SendTransfer__network-step")).getAllByRole("listbox")).toHaveLength(1);
-		expect(asFragment()).toMatchSnapshot();
-
-		resetProfileNetworksMock();
-	});
-
 	it("should render form step with deeplink values and use them", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/send-transfer`;
 
@@ -539,7 +523,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[0]).toHaveTextContent("ark.svg");
+		expect(screen.getByTestId("NetworkOptions")).toHaveTextContent("ark.svg");
 
 		resetProfileNetworksMock();
 	});
@@ -605,9 +589,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+		// const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
-		expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -624,7 +607,7 @@ describe("SendTransfer", () => {
 
 		selectFirstRecipient();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -729,7 +712,8 @@ describe("SendTransfer", () => {
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 
-		expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
+		// expect(within(screen.getByTestId("SelectNetwork")).getByTestId("select-list__input")).toHaveValue(networkLabel);
+
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -746,7 +730,7 @@ describe("SendTransfer", () => {
 
 		selectFirstRecipient();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -837,8 +821,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -854,7 +836,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -949,8 +931,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -958,7 +938,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await expect(screen.findByTestId(sendAllID)).resolves.toBeVisible();
@@ -1048,8 +1028,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -1057,7 +1035,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		userEvent.click(screen.getByTestId(sendAllID));
@@ -1126,8 +1104,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -1136,7 +1112,7 @@ describe("SendTransfer", () => {
 
 		selectFirstRecipient();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		userEvent.click(screen.getByTestId(sendAllID));
@@ -1209,8 +1185,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -1219,7 +1193,7 @@ describe("SendTransfer", () => {
 
 		selectFirstRecipient();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		userEvent.click(screen.getByTestId(sendAllID));
@@ -1300,8 +1274,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -1309,7 +1281,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -1376,8 +1348,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -1393,7 +1363,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -1524,8 +1494,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -1533,7 +1501,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		selectFirstRecipient();
-		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// enter amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -1606,9 +1574,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
-		expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -1625,7 +1590,7 @@ describe("SendTransfer", () => {
 
 		selectFirstRecipient();
 
-		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(firstWalletAddress),
+		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress),
 			// Amount
 			userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");

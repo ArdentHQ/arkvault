@@ -57,7 +57,7 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
-const ARKDevnetIconID = "NetworkIcon-ARK-ark.devnet";
+const ARKDevnetIconID = "NetworkOption-ARK-ark.devnet";
 const networkStepID = "SendTransfer__network-step";
 const reviewStepID = "SendTransfer__review-step";
 const formStepID = "SendTransfer__form-step";
@@ -119,15 +119,12 @@ describe("SendTransfer Fee Handling", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetIconID));
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", ARKDevnet);
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
@@ -180,15 +177,12 @@ describe("SendTransfer Fee Handling", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetIconID));
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", ARKDevnet);
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
@@ -242,8 +236,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -252,7 +244,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -301,8 +293,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -311,7 +301,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -368,8 +358,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -453,7 +441,6 @@ describe("SendTransfer Fee Handling", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
 
 		const goSpy = jest.spyOn(history, "go").mockImplementation();
@@ -471,7 +458,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Set amount
@@ -537,8 +524,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -547,7 +532,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -616,8 +601,6 @@ describe("SendTransfer Fee Handling", () => {
 
 			await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-			const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-			await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 			await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 			selectRecipient();
@@ -626,7 +609,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			selectFirstRecipient();
 			await waitFor(() =>
-				expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 			);
 
 			// Amount
@@ -700,8 +683,6 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		selectRecipient();
@@ -710,7 +691,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
