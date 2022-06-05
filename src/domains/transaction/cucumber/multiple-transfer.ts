@@ -29,7 +29,7 @@ cucumber(
 		"When she attempts to send a multipay transaction with a valid mnemonic": async (t: TestController) => {
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
 			await t.typeText(amountInput, "10", { replace: true });
-			await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
+			await t.typeText(Selector("[data-testid=SelectDropdown__input]").nth(1), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
 				paste: true,
 			});
 			await t.pressKey("tab");
