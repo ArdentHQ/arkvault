@@ -12,7 +12,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Route, Router } from "react-router-dom";
 
 import { FormStep } from "./FormStep";
-import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransfer } from "./SendTransfer";
 import { SummaryStep } from "./SummaryStep";

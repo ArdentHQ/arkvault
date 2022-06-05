@@ -82,9 +82,7 @@ describe("SendTransfer Network Selection", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
-		await waitFor(() =>
-			expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet),
-		);
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
@@ -118,11 +116,10 @@ describe("SendTransfer Network Selection", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+
 		await expect(screen.findByTestId(ARKDevnetOptionId)).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet),
-		);
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -206,9 +203,7 @@ describe("SendTransfer Network Selection", () => {
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
-		await waitFor(() =>
-			expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet),
-		);
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		userEvent.click(continueButton());
