@@ -53,7 +53,7 @@ export const NetworkOptions = ({ disabled = false, networks = [], onSelect, sele
 	>
 		{networks.map((network: Networks.Network, index: number) => (
 			<NetworkOption
-				key={index}
+				key={network.id()}
 				disabled={disabled}
 				network={network}
 				isSelected={network.id() === selected?.id()}
