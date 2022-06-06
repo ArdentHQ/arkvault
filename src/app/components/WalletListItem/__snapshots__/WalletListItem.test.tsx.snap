@@ -295,7 +295,7 @@ exports[`WalletListItem should disable the send button when wallet has no balanc
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -776,7 +776,7 @@ exports[`WalletListItem should render when isCompact = false 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -1105,7 +1105,7 @@ exports[`WalletListItem should render when isCompact = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -1734,7 +1734,7 @@ exports[`WalletListItem should render when isLargeScreen = true 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -2072,7 +2072,7 @@ exports[`WalletListItem should render when isLargeScreen = true and wallet is no
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -2401,7 +2401,7 @@ exports[`WalletListItem should render with a N/A for fiat 1`] = `
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -2730,7 +2730,7 @@ exports[`WalletListItem should render with default BTC as default exchangeCurren
                         </div>
                       </fieldset>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
