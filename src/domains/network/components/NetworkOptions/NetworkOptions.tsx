@@ -51,7 +51,7 @@ export const NetworkOptions = ({ disabled = false, networks = [], onSelect, sele
 		data-testid="NetworkOptions"
 		className="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
 	>
-		{networks.map((network: Networks.Network, index: number) => (
+		{networks.map((network: Networks.Network) => (
 			<NetworkOption
 				key={network.id()}
 				disabled={disabled}
