@@ -724,7 +724,9 @@ exports[`Network Settings should check the main network by default 1`] = `
                                   ARK
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                class="flex items-center"
+                              >
                                 <input
                                   checked=""
                                   class="css-7i915u"
@@ -763,7 +765,9 @@ exports[`Network Settings should check the main network by default 1`] = `
                                   ARK Devnet
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                class="flex items-center"
+                              >
                                 <input
                                   class="css-7i915u"
                                   color="success"
@@ -1579,7 +1583,9 @@ exports[`Network Settings should render networks settings section 1`] = `
                                   ARK
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                class="flex items-center"
+                              >
                                 <input
                                   checked=""
                                   class="css-7i915u"
@@ -1618,7 +1624,9 @@ exports[`Network Settings should render networks settings section 1`] = `
                                   ARK Devnet
                                 </div>
                               </div>
-                              <div>
+                              <div
+                                class="flex items-center"
+                              >
                                 <input
                                   class="css-7i915u"
                                   color="success"

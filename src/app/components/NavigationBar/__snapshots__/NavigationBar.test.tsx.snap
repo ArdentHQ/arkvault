@@ -1203,7 +1203,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
 exports[`NavigationBar should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="fixed bottom-0 left-0 z-10 flex w-full flex-col justify-center bg-white dark:bg-black sm:hidden shadow-footer-smooth dark:shadow-footer-smooth-dark"
+    class="css-1mnbipv"
     data-testid="NavigationBarMobile"
   >
     <div
