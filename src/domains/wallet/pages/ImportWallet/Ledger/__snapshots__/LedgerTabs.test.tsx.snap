@@ -198,36 +198,31 @@ exports[`LedgerTabs should render connection step 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 flex justify-between"
+      class="css-1rsixno"
     >
-      <div />
-      <div
-        class="flex space-x-3"
+      <button
+        class="css-1jhy6v9"
+        data-testid="Paginator__back-button"
+        type="button"
       >
-        <button
-          class="css-1jhy6v9"
-          data-testid="Paginator__back-button"
-          type="button"
+        <div
+          class="flex items-center space-x-2"
         >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Back
-          </div>
-        </button>
-        <button
-          class="css-1yqe28v"
-          data-testid="Paginator__continue-button"
-          disabled=""
-          type="button"
+          Back
+        </div>
+      </button>
+      <button
+        class="css-1yqe28v"
+        data-testid="Paginator__continue-button"
+        disabled=""
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
         >
-          <div
-            class="flex items-center space-x-2"
-          >
-            Continue
-          </div>
-        </button>
-      </div>
+          Continue
+        </div>
+      </button>
     </div>
   </div>
 </div>

@@ -23,6 +23,7 @@ import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { assertWallet } from "@/utils/assertions";
 import { ProfilePaths } from "@/router/paths";
 import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { FormButtons } from "@/app/components/Form";
 
 const Paginator = ({
 	activeIndex,
@@ -56,52 +57,50 @@ const Paginator = ({
 	const { t } = useTranslation();
 
 	return (
-		<div className="mt-8 flex justify-between">
-			<div>
-				{showRetry && (
+		<FormButtons>
+			{showRetry && (
+				<div className="mr-auto">
 					<Button variant="secondary" onClick={onRetry} data-testid="Paginator__retry-button">
-						<Icon name="ArrowRotateRight" />
-						<span>{t("COMMON.RETRY")}</span>
+						<Icon name="ArrowRotateRight" className="py-0.5" />
+						<span className="hidden sm:block">{t("COMMON.RETRY")}</span>
 					</Button>
-				)}
-			</div>
+				</div>
+			)}
 
-			<div className="flex space-x-3">
-				{showCancelButton && (
-					<Button
-						variant="secondary"
-						onClick={onCancel}
-						data-testid="Paginator__back-button"
-						disabled={isCancelDisabled}
-					>
-						{t("COMMON.CANCEL")}
-					</Button>
-				)}
+			{showCancelButton && (
+				<Button
+					variant="secondary"
+					onClick={onCancel}
+					data-testid="Paginator__back-button"
+					disabled={isCancelDisabled}
+				>
+					{t("COMMON.CANCEL")}
+				</Button>
+			)}
 
-				{activeIndex < size && !showCancelButton && (
-					<Button variant="secondary" onClick={onBack} data-testid="Paginator__back-button">
-						{t("COMMON.BACK")}
-					</Button>
-				)}
+			{activeIndex < size && !showCancelButton && (
+				<Button variant="secondary" onClick={onBack} data-testid="Paginator__back-button">
+					{t("COMMON.BACK")}
+				</Button>
+			)}
 
-				{activeIndex < size && (
-					<Button
-						disabled={isNextDisabled || isNextLoading}
-						isLoading={isNextLoading}
-						onClick={onNext}
-						data-testid="Paginator__continue-button"
-					>
-						{t("COMMON.CONTINUE")}
-					</Button>
-				)}
+			{activeIndex < size && (
+				<Button
+					disabled={isNextDisabled || isNextLoading}
+					isLoading={isNextLoading}
+					onClick={onNext}
+					data-testid="Paginator__continue-button"
+				>
+					{t("COMMON.CONTINUE")}
+				</Button>
+			)}
 
-				{activeIndex === size && (
-					<Button disabled={isNextDisabled} data-testid="Paginator__finish-button" onClick={onFinish}>
-						{isMultiple ? t("COMMON.GO_TO_PORTFOLIO") : t("COMMON.GO_TO_WALLET")}
-					</Button>
-				)}
-			</div>
-		</div>
+			{activeIndex === size && (
+				<Button disabled={isNextDisabled} data-testid="Paginator__finish-button" onClick={onFinish}>
+					{isMultiple ? t("COMMON.GO_TO_PORTFOLIO") : t("COMMON.GO_TO_WALLET")}
+				</Button>
+			)}
+		</FormButtons>
 	);
 };
 

@@ -17,6 +17,7 @@ import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
 import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
+import { useBreakpoint } from "@/app/hooks";
 
 const MultipleImport = ({
 	network,
@@ -30,6 +31,7 @@ const MultipleImport = ({
 	wallets: LedgerData[];
 }) => {
 	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
 
 	return (
 		<div>
@@ -46,7 +48,7 @@ const MultipleImport = ({
 									"pt-6": index === 0,
 								})}
 								paddingPosition="none"
-								borderPosition={index === wallets.length - 1 ? "both" : "top"}
+								borderPosition={!isXs && index === wallets.length - 1 ? "both" : "top"}
 								extra={
 									<Tooltip content={t("WALLETS.WALLET_NAME")}>
 										<Button
@@ -91,6 +93,7 @@ const SingleImport = ({
 	wallets: LedgerData[];
 }) => {
 	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
 
 	const ledgerWallet = wallets[0];
 
@@ -107,7 +110,7 @@ const SingleImport = ({
 
 			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}
-				paddingPosition="top"
+				borderPosition={isXs ? "top" : "both"}
 				extra={
 					<Button
 						size="xs"

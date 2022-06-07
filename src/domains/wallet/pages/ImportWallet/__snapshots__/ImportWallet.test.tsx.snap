@@ -1272,12 +1272,16 @@ exports[`ImportWallet should import with encryped wif 1`] = `
 exports[`ImportWallet should render as ledger import 1`] = `
 <div>
   <div
-    class="css-wsh4oq"
+    class="css-mro1qh"
   >
     <div
-      class="css-1mnbipv"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -1761,35 +1765,30 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="mt-8 flex justify-between"
+                class="css-1rsixno"
               >
-                <div />
-                <div
-                  class="flex space-x-3"
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="Paginator__back-button"
+                  type="button"
                 >
-                  <button
-                    class="css-1jhy6v9"
-                    data-testid="Paginator__back-button"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
-                      Back
-                    </div>
-                  </button>
-                  <button
-                    class="css-1bx0hyc"
-                    data-testid="Paginator__continue-button"
-                    type="button"
+                    Back
+                  </div>
+                </button>
+                <button
+                  class="css-1bx0hyc"
+                  data-testid="Paginator__continue-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
-                      Continue
-                    </div>
-                  </button>
-                </div>
+                    Continue
+                  </div>
+                </button>
               </div>
             </div>
           </form>
