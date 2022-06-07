@@ -3,7 +3,7 @@
 exports[`General Settings should disable submit button when profile is not restored yet 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1599,7 +1599,7 @@ exports[`General Settings should disable submit button when profile is not resto
 exports[`General Settings should not update the uploaded avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3208,7 +3208,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
 exports[`General Settings should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4800,7 +4800,7 @@ exports[`General Settings should render 1`] = `
 exports[`General Settings should show identicon when removing image if name is set 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -6392,7 +6392,7 @@ exports[`General Settings should show identicon when removing image if name is s
 exports[`General Settings should update profile 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -7984,7 +7984,7 @@ exports[`General Settings should update profile 1`] = `
 exports[`General Settings should update the avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -9575,7 +9575,7 @@ exports[`General Settings should update the avatar when removing focus from name
 exports[`General Settings should update the avatar when removing focus from name input 2`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"

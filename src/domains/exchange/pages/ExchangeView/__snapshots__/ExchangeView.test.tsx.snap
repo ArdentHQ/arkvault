@@ -3,7 +3,7 @@
 exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -410,7 +410,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
           class="css-1stalmv"
@@ -986,7 +986,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 exports[`ExchangeView should render 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1393,7 +1393,7 @@ exports[`ExchangeView should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
           class="css-1stalmv"
@@ -1969,7 +1969,7 @@ exports[`ExchangeView should render 1`] = `
 exports[`ExchangeView should render dark theme 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2376,7 +2376,7 @@ exports[`ExchangeView should render dark theme 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
           class="css-1stalmv"
@@ -2952,7 +2952,7 @@ exports[`ExchangeView should render dark theme 1`] = `
 exports[`ExchangeView should render light theme 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3359,7 +3359,7 @@ exports[`ExchangeView should render light theme 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
           class="css-1stalmv"
@@ -3935,7 +3935,7 @@ exports[`ExchangeView should render light theme 1`] = `
 exports[`ExchangeView should render warning without exchange 1`] = `
 <div>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -4338,7 +4338,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
           class="css-1stalmv"

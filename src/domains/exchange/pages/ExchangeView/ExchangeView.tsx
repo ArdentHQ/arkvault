@@ -81,7 +81,7 @@ export const ExchangeView = () => {
 
 	return (
 		<Page pageTitle={exchangeProvider?.name}>
-			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20">
+			<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20">
 				<WorldMapWrapper>
 					<Image name="WorldMap" className="h-full w-full" />
 				</WorldMapWrapper>
