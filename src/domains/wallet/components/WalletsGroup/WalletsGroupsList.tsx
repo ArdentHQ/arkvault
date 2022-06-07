@@ -55,14 +55,15 @@ export const WalletsGroupsList: React.VFC = () => {
 
 	return (
 		<div data-testid="NetworkWalletsGroupList">
-			{profileIsSyncing && availableWallets.length === 0 && (
+			{profileIsSyncing && !isRestored && (
 				<AccordionWrapper>
 					<WalletsGroupHeaderSkeleton />
 				</AccordionWrapper>
 			)}
+
 			{isRestored && filteredWalletsGroupedByNetwork.length === 0 && (
 				<>
-					<EmptyBlock className="mx-8 mt-2 sm:-mt-4 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
+					<EmptyBlock className="mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
 					<MdAndAbove>
 						<AccordionWrapper isInactive>
 							<WalletsGroupHeaderSkeleton isPlaceholder />
@@ -70,6 +71,7 @@ export const WalletsGroupsList: React.VFC = () => {
 					</MdAndAbove>
 				</>
 			)}
+
 			{isRestored &&
 				(!profileIsSyncing || availableWallets.length > 0) &&
 				filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
