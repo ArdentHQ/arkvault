@@ -21,7 +21,7 @@ const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 
 	const provider = exchangeProviders.find((provider) => provider.slug === slug);
 
-	return <span>{provider?.name}</span>;
+	return provider?.name;
 };
 
 interface ExchangeTransactionsRowStatusProperties {
@@ -142,7 +142,7 @@ export const ExchangeTransactionsRowMobile = ({
 					{exchangeTransaction.orderId() ? (
 						<button
 							type="button"
-							className="link"
+							className="link font-semibold"
 							onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 						>
 							<TruncateMiddle text={exchangeTransaction.orderId()} />
@@ -151,6 +151,7 @@ export const ExchangeTransactionsRowMobile = ({
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-200">NA</span>
 					)}
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
@@ -164,11 +165,13 @@ export const ExchangeTransactionsRowMobile = ({
 
 					{DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).format(timeFormat)}
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.FROM")}</RowLabel>
 
 					<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TO")}</RowLabel>
 
@@ -178,6 +181,7 @@ export const ExchangeTransactionsRowMobile = ({
 						isPending={exchangeTransaction.isPending()}
 					/>
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
 

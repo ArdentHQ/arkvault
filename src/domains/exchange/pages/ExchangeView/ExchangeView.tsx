@@ -57,7 +57,11 @@ export const ExchangeView = () => {
 
 	const renderSpinner = () => {
 		if (!exchangeProviders || (exchangeProvider !== undefined && !isReady)) {
-			return <Spinner size="lg" />;
+			return (
+				<div className="py-32">
+					<Spinner size="lg" />
+				</div>
+			);
 		}
 
 		return <></>;
@@ -83,7 +87,7 @@ export const ExchangeView = () => {
 		<ExchangePageWrapper>
 			<Page pageTitle={exchangeProvider?.name}>
 				<div className="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20">
-					<div className="absolute inset-0 flex items-center sm:p-32">
+					<div className="absolute inset-0 hidden items-center sm:flex sm:p-32">
 						<Image name="WorldMap" className="h-full w-full" />
 					</div>
 

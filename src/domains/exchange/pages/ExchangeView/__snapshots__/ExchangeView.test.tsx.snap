@@ -416,7 +416,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
           class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
         >
           <div
-            class="absolute inset-0 flex items-center sm:p-32"
+            class="absolute inset-0 hidden items-center sm:flex sm:p-32"
           >
             <svg
               class="h-full w-full"
@@ -1403,7 +1403,7 @@ exports[`ExchangeView should render 1`] = `
           class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
         >
           <div
-            class="absolute inset-0 flex items-center sm:p-32"
+            class="absolute inset-0 hidden items-center sm:flex sm:p-32"
           >
             <svg
               class="h-full w-full"
@@ -2390,7 +2390,7 @@ exports[`ExchangeView should render dark theme 1`] = `
           class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
         >
           <div
-            class="absolute inset-0 flex items-center sm:p-32"
+            class="absolute inset-0 hidden items-center sm:flex sm:p-32"
           >
             <svg
               class="h-full w-full"
@@ -3377,7 +3377,7 @@ exports[`ExchangeView should render light theme 1`] = `
           class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
         >
           <div
-            class="absolute inset-0 flex items-center sm:p-32"
+            class="absolute inset-0 hidden items-center sm:flex sm:p-32"
           >
             <svg
               class="h-full w-full"
@@ -4360,7 +4360,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
           class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
         >
           <div
-            class="absolute inset-0 flex items-center sm:p-32"
+            class="absolute inset-0 hidden items-center sm:flex sm:p-32"
           >
             <svg
               class="h-full w-full"
