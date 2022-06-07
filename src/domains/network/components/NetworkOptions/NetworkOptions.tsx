@@ -31,7 +31,7 @@ export const NetworkOption = memo(
 					aria-label={networkDisplayName(network)}
 					data-testid={`NetworkOption-${network.coin()}-${network.id()}`}
 				>
-					<div className="flex space-x-4">
+					<div className="flex items-center space-x-4">
 						<NetworkIcon network={network} iconSize={iconSize} />
 
 						<div className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200">

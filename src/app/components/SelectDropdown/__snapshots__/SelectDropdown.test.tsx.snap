@@ -931,13 +931,13 @@ exports[`SelectDropdown should render option base with default value when free t
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-403-menu"
+        aria-owns="downshift-407-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-403-input"
-            id="downshift-403-label"
+            for="downshift-407-input"
+            id="downshift-407-label"
           />
           <div
             class="css-1psxlcd"
@@ -947,12 +947,12 @@ exports[`SelectDropdown should render option base with default value when free t
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-403-menu"
-                aria-labelledby="downshift-403-label"
+                aria-controls="downshift-407-menu"
+                aria-labelledby="downshift-407-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-403-input"
+                id="downshift-407-input"
                 placeholder="Select option"
                 type="text"
                 value="3"
@@ -988,8 +988,8 @@ exports[`SelectDropdown should render option base with default value when free t
           </div>
         </div>
         <div
-          aria-labelledby="downshift-403-label"
-          id="downshift-403-menu"
+          aria-labelledby="downshift-407-label"
+          id="downshift-407-menu"
           role="listbox"
         />
       </div>
@@ -1027,13 +1027,13 @@ exports[`SelectDropdown should render option base with initial default value 1`]
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-48-menu"
+        aria-owns="downshift-52-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-48-input"
-            id="downshift-48-label"
+            for="downshift-52-input"
+            id="downshift-52-label"
           />
           <div
             class="invisible fixed w-auto whitespace-nowrap"
@@ -1049,12 +1049,12 @@ exports[`SelectDropdown should render option base with initial default value 1`]
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-48-menu"
-                aria-labelledby="downshift-48-label"
+                aria-controls="downshift-52-menu"
+                aria-labelledby="downshift-52-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-48-input"
+                id="downshift-52-input"
                 placeholder="Select option"
                 type="text"
                 value="Option 3"
@@ -1100,8 +1100,8 @@ exports[`SelectDropdown should render option base with initial default value 1`]
           </div>
         </div>
         <div
-          aria-labelledby="downshift-48-label"
-          id="downshift-48-menu"
+          aria-labelledby="downshift-52-label"
+          id="downshift-52-menu"
           role="listbox"
         />
       </div>
@@ -1139,13 +1139,13 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-54-menu"
+        aria-owns="downshift-58-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-54-input"
-            id="downshift-54-label"
+            for="downshift-58-input"
+            id="downshift-58-label"
           />
           <div
             class="css-1psxlcd"
@@ -1155,12 +1155,12 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-54-menu"
-                aria-labelledby="downshift-54-label"
+                aria-controls="downshift-58-menu"
+                aria-labelledby="downshift-58-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none cursor-default css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-54-input"
+                id="downshift-58-input"
                 placeholder="Select option"
                 type="text"
                 value=""
@@ -1196,8 +1196,8 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
           </div>
         </div>
         <div
-          aria-labelledby="downshift-54-label"
-          id="downshift-54-menu"
+          aria-labelledby="downshift-58-label"
+          id="downshift-58-menu"
           role="listbox"
         />
       </div>
@@ -1750,13 +1750,13 @@ exports[`SelectDropdown should render option group with default value when free 
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-406-menu"
+        aria-owns="downshift-410-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-406-input"
-            id="downshift-406-label"
+            for="downshift-410-input"
+            id="downshift-410-label"
           />
           <div
             class="css-1psxlcd"
@@ -1766,12 +1766,12 @@ exports[`SelectDropdown should render option group with default value when free 
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-406-menu"
-                aria-labelledby="downshift-406-label"
+                aria-controls="downshift-410-menu"
+                aria-labelledby="downshift-410-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-406-input"
+                id="downshift-410-input"
                 placeholder="Select option"
                 type="text"
                 value="3"
@@ -1807,8 +1807,8 @@ exports[`SelectDropdown should render option group with default value when free 
           </div>
         </div>
         <div
-          aria-labelledby="downshift-406-label"
-          id="downshift-406-menu"
+          aria-labelledby="downshift-410-label"
+          id="downshift-410-menu"
           role="listbox"
         />
       </div>
@@ -1846,13 +1846,13 @@ exports[`SelectDropdown should render option group with initial default value 1`
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-51-menu"
+        aria-owns="downshift-55-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-51-input"
-            id="downshift-51-label"
+            for="downshift-55-input"
+            id="downshift-55-label"
           />
           <div
             class="invisible fixed w-auto whitespace-nowrap"
@@ -1868,12 +1868,12 @@ exports[`SelectDropdown should render option group with initial default value 1`
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-51-menu"
-                aria-labelledby="downshift-51-label"
+                aria-controls="downshift-55-menu"
+                aria-labelledby="downshift-55-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-51-input"
+                id="downshift-55-input"
                 placeholder="Select option"
                 type="text"
                 value="Item 1"
@@ -1919,8 +1919,8 @@ exports[`SelectDropdown should render option group with initial default value 1`
           </div>
         </div>
         <div
-          aria-labelledby="downshift-51-label"
-          id="downshift-51-menu"
+          aria-labelledby="downshift-55-label"
+          id="downshift-55-menu"
           role="listbox"
         />
       </div>
@@ -1958,13 +1958,13 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-56-menu"
+        aria-owns="downshift-60-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-56-input"
-            id="downshift-56-label"
+            for="downshift-60-input"
+            id="downshift-60-label"
           />
           <div
             class="css-1psxlcd"
@@ -1974,12 +1974,12 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-56-menu"
-                aria-labelledby="downshift-56-label"
+                aria-controls="downshift-60-menu"
+                aria-labelledby="downshift-60-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none cursor-default css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-56-input"
+                id="downshift-60-input"
                 placeholder="Select option"
                 type="text"
                 value=""
@@ -2015,8 +2015,8 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
           </div>
         </div>
         <div
-          aria-labelledby="downshift-56-label"
-          id="downshift-56-menu"
+          aria-labelledby="downshift-60-label"
+          id="downshift-60-menu"
           role="listbox"
         />
       </div>
@@ -2123,6 +2123,102 @@ exports[`SelectDropdown should render while allowing horizontal overflow 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
+        aria-owns="downshift-66-menu"
+        role="combobox"
+      >
+        <div>
+          <label
+            for="downshift-66-input"
+            id="downshift-66-label"
+          />
+          <div
+            class="css-1psxlcd"
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="downshift-66-menu"
+                aria-labelledby="downshift-66-label"
+                autocomplete="off"
+                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                data-testid="SelectDropdown__input"
+                id="downshift-66-input"
+                placeholder="Select option"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+              data-testid="Input__addon-end"
+            >
+              <div
+                class=""
+              >
+                <div
+                  class="flex items-center"
+                >
+                  <div
+                    class="flex items-center justify-center py-2 px-1"
+                    data-testid="SelectDropdown__caret"
+                  >
+                    <div
+                      class="transition-transform text-theme-secondary-500 css-15txs7d"
+                      height="10"
+                      width="10"
+                    >
+                      <svg>
+                        caret-down.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-labelledby="downshift-66-label"
+          id="downshift-66-menu"
+          role="listbox"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectDropdown should render with empty options 1`] = `
+<div>
+  <div
+    class="relative w-full"
+    data-testid="SelectDropdown"
+  >
+    <div
+      class="sr-only css-1psxlcd"
+    >
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <input
+          autocomplete="off"
+          class="no-ligatures w-full border-none css-1nupw50"
+          data-testid="select-list__input"
+          readonly=""
+          tabindex="-1"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
         aria-owns="downshift-62-menu"
         role="combobox"
       >
@@ -2190,102 +2286,6 @@ exports[`SelectDropdown should render while allowing horizontal overflow 1`] = `
 </div>
 `;
 
-exports[`SelectDropdown should render with empty options 1`] = `
-<div>
-  <div
-    class="relative w-full"
-    data-testid="SelectDropdown"
-  >
-    <div
-      class="sr-only css-1psxlcd"
-    >
-      <div
-        class="relative flex h-full flex-1"
-      >
-        <input
-          autocomplete="off"
-          class="no-ligatures w-full border-none css-1nupw50"
-          data-testid="select-list__input"
-          readonly=""
-          tabindex="-1"
-          type="text"
-          value=""
-        />
-      </div>
-    </div>
-    <div
-      class="w-full"
-    >
-      <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-owns="downshift-58-menu"
-        role="combobox"
-      >
-        <div>
-          <label
-            for="downshift-58-input"
-            id="downshift-58-label"
-          />
-          <div
-            class="css-1psxlcd"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="downshift-58-menu"
-                aria-labelledby="downshift-58-label"
-                autocomplete="off"
-                class="no-ligatures w-full border-none cursor-default css-1nupw50"
-                data-testid="SelectDropdown__input"
-                id="downshift-58-input"
-                placeholder="Select option"
-                type="text"
-                value=""
-              />
-            </div>
-            <div
-              class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-              data-testid="Input__addon-end"
-            >
-              <div
-                class=""
-              >
-                <div
-                  class="flex items-center"
-                >
-                  <div
-                    class="flex items-center justify-center py-2 px-1"
-                    data-testid="SelectDropdown__caret"
-                  >
-                    <div
-                      class="transition-transform text-theme-secondary-500 css-15txs7d"
-                      height="10"
-                      width="10"
-                    >
-                      <svg>
-                        caret-down.svg
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          aria-labelledby="downshift-58-label"
-          id="downshift-58-menu"
-          role="listbox"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`SelectDropdown should render with options values as numbers 1`] = `
 <div>
   <div
@@ -2315,13 +2315,13 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-owns="downshift-60-menu"
+        aria-owns="downshift-64-menu"
         role="combobox"
       >
         <div>
           <label
-            for="downshift-60-input"
-            id="downshift-60-label"
+            for="downshift-64-input"
+            id="downshift-64-label"
           />
           <div
             class="css-1psxlcd"
@@ -2331,12 +2331,12 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
             >
               <input
                 aria-autocomplete="list"
-                aria-controls="downshift-60-menu"
-                aria-labelledby="downshift-60-label"
+                aria-controls="downshift-64-menu"
+                aria-labelledby="downshift-64-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none cursor-default css-1nupw50"
                 data-testid="SelectDropdown__input"
-                id="downshift-60-input"
+                id="downshift-64-input"
                 placeholder="Select option"
                 type="text"
                 value=""
@@ -2372,8 +2372,8 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
           </div>
         </div>
         <div
-          aria-labelledby="downshift-60-label"
-          id="downshift-60-menu"
+          aria-labelledby="downshift-64-label"
+          id="downshift-64-menu"
           role="listbox"
         />
       </div>
