@@ -12,7 +12,11 @@ import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 
-const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
+interface ExchangeTransactionProviderProperties {
+	slug: string;
+}
+
+const ExchangeTransactionProvider: React.VFC<ExchangeTransactionProviderProperties> = ({ slug }) => {
 	const { exchangeProviders } = useExchangeContext();
 
 	if (!exchangeProviders) {
@@ -21,22 +25,16 @@ const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 
 	const provider = exchangeProviders.find((provider) => provider.slug === slug);
 
-	return provider?.name;
+	return <>{provider?.name}</>;
 };
 
-interface ExchangeTransactionsRowStatusProperties {
-	status: Contracts.ExchangeTransactionStatus;
-}
-
-const ExchangeTransactionRowAmount = ({
-	type,
-	data,
-	isPending,
-}: {
+interface ExchangeTransactionRowAmountProperties {
 	type: string;
 	data: Contracts.ExchangeTransactionDetail;
 	isPending?: boolean;
-}) => {
+}
+
+const ExchangeTransactionRowAmount: React.VFC<ExchangeTransactionRowAmountProperties> = ({ type, data, isPending }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -50,7 +48,11 @@ const ExchangeTransactionRowAmount = ({
 	);
 };
 
-const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusProperties> = ({
+interface ExchangeTransactionsRowStatusProperties {
+	status: Contracts.ExchangeTransactionStatus;
+}
+
+const ExchangeTransactionsRowStatus: React.VFC<ExchangeTransactionsRowStatusProperties> = ({
 	status,
 }: ExchangeTransactionsRowStatusProperties) => {
 	const { t } = useTranslation();
@@ -113,12 +115,11 @@ interface ExchangeTransactionsRowMobileProperties {
 	onRemove: (exchangeTransaction: Contracts.IExchangeTransaction) => void;
 }
 
-export const ExchangeTransactionsRowMobile = ({
+export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMobileProperties> = ({
 	exchangeTransaction,
 	onClick,
 	onRemove,
-	...properties
-}: ExchangeTransactionsRowMobileProperties) => {
+}) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -131,10 +132,7 @@ export const ExchangeTransactionsRowMobile = ({
 	};
 
 	return (
-		<TableRow
-			{...properties}
-			onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
-		>
+		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
 			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>
