@@ -7970,7 +7970,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                             data-testid="NetworkOption-ARK-ark.mainnet"
                           >
                             <div
-                              class="flex space-x-4"
+                              class="flex items-center space-x-4"
                             >
                               <div
                                 aria-label="ARK"
@@ -8005,7 +8005,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                             data-testid="NetworkOption-ARK-ark.devnet"
                           >
                             <div
-                              class="flex space-x-4"
+                              class="flex items-center space-x-4"
                             >
                               <div
                                 aria-label="ARK Devnet"

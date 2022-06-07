@@ -81,7 +81,7 @@ exports[`LedgerTabs should render connection step 1`] = `
                     data-testid="NetworkOption-ARK-ark.mainnet"
                   >
                     <div
-                      class="flex space-x-4"
+                      class="flex items-center space-x-4"
                     >
                       <div
                         aria-label="ARK"
@@ -116,7 +116,7 @@ exports[`LedgerTabs should render connection step 1`] = `
                     data-testid="NetworkOption-ARK-ark.devnet"
                   >
                     <div
-                      class="flex space-x-4"
+                      class="flex items-center space-x-4"
                     >
                       <div
                         aria-label="ARK Devnet"

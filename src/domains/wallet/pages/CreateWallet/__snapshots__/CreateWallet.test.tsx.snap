@@ -493,7 +493,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK"
@@ -528,7 +528,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -1823,7 +1823,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK"
@@ -1858,7 +1858,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -3158,7 +3158,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK"
@@ -3193,7 +3193,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -3762,7 +3762,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK"
@@ -3797,7 +3797,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK Devnet"
@@ -4397,7 +4397,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK"
@@ -4432,7 +4432,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
-                                class="flex space-x-4"
+                                class="flex items-center space-x-4"
                               >
                                 <div
                                   aria-label="ARK Devnet"
