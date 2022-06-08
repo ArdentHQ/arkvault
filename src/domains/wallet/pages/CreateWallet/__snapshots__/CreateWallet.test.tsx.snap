@@ -1284,7 +1284,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-wr7004"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -1340,9 +1340,6 @@ exports[`CreateWallet should create a wallet 2`] = `
                     </div>
                   </section>
                 </div>
-                <div
-                  class="css-1rsixno"
-                />
                 <div
                   class="css-1rsixno"
                 >
@@ -2655,7 +2652,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-wr7004"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -2711,9 +2708,6 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                     </div>
                   </section>
                 </div>
-                <div
-                  class="css-1rsixno"
-                />
                 <div
                   class="css-1rsixno"
                 >

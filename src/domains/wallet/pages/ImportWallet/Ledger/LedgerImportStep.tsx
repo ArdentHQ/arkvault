@@ -149,7 +149,7 @@ export const LedgerImportStep = ({
 		<section data-testid="LedgerImportStep">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")}
-				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE")}
+				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.SUBTITLE", { count: wallets.length })}
 			/>
 
 			<WalletDetailNetwork network={network} className="mt-2" border={false} />

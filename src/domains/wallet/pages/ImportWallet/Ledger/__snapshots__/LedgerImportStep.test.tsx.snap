@@ -442,7 +442,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
           class="flex items-center text-theme-secondary-text"
           data-testid="header__subtitle"
         >
-          Your Ledger addresses have been imported.
+          Your Ledger address has been imported.
         </div>
       </div>
     </div>
