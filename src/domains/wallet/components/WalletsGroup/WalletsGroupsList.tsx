@@ -62,19 +62,17 @@ export const WalletsGroupsList: React.VFC = () => {
 			);
 		}
 
-		if (isRestored) {
-			if (filteredWalletsGroupedByNetwork.length === 0) {
-				return (
-					<>
-						<EmptyBlock className="mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
-						<MdAndAbove>
-							<AccordionWrapper isInactive>
-								<WalletsGroupHeaderSkeleton isPlaceholder />
-							</AccordionWrapper>
-						</MdAndAbove>
-					</>
-				);
-			}
+		if (isRestored && filteredWalletsGroupedByNetwork.length === 0) {
+			return (
+				<>
+					<EmptyBlock className="mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
+					<MdAndAbove>
+						<AccordionWrapper isInactive>
+							<WalletsGroupHeaderSkeleton isPlaceholder />
+						</AccordionWrapper>
+					</MdAndAbove>
+				</>
+			);
 		}
 
 		if (!profileIsSyncing || availableWallets.length > 0) {
@@ -89,9 +87,5 @@ export const WalletsGroupsList: React.VFC = () => {
 		}
 	};
 
-	return (
-		<div data-testid="NetworkWalletsGroupList">
-			{renderContent()}
-		</div>
-	);
+	return <div data-testid="NetworkWalletsGroupList">{renderContent()}</div>;
 };
