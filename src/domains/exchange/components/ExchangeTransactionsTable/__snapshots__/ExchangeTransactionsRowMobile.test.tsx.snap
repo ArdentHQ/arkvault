@@ -21,7 +21,7 @@ exports[`ExchangeTransactionsRowMobile should render (Expired) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -178,7 +178,7 @@ exports[`ExchangeTransactionsRowMobile should render (Failed) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -335,7 +335,7 @@ exports[`ExchangeTransactionsRowMobile should render (Finished) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -492,7 +492,7 @@ exports[`ExchangeTransactionsRowMobile should render (New) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -663,7 +663,7 @@ exports[`ExchangeTransactionsRowMobile should render (Refunded) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -820,7 +820,7 @@ exports[`ExchangeTransactionsRowMobile should render (Verifying) 1`] = `
               ID
             </div>
             <button
-              class="link"
+              class="link font-semibold"
               type="button"
             >
               <span
@@ -1122,7 +1122,7 @@ exports[`ExchangeTransactionsRowMobile should render transaction provider 1`] = 
           ID
         </div>
         <button
-          class="link"
+          class="link font-semibold"
           type="button"
         >
           <span
@@ -1144,9 +1144,7 @@ exports[`ExchangeTransactionsRowMobile should render transaction provider 1`] = 
         <span
           class="font-semibold"
         >
-          <span>
-            ChangeNOW
-          </span>
+          ChangeNOW
         </span>
       </div>
       <div

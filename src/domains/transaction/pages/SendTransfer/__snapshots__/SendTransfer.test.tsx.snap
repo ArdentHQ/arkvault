@@ -756,7 +756,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 </section>
               </div>
               <div
-                class="css-v3xgej"
+                class="css-1d6x3tk"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1011,7 +1011,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         </div>
                       </div>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -1590,7 +1590,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2784,7 +2784,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3956,7 +3956,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -8047,7 +8047,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -10253,7 +10253,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -11032,7 +11032,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 </section>
               </div>
               <div
-                class="css-v3xgej"
+                class="css-1d6x3tk"
               >
                 <button
                   class="css-1jhy6v9"
@@ -11361,7 +11361,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         </div>
                       </div>
                       <div
-                        class="css-v3xgej"
+                        class="css-1d6x3tk"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -12233,7 +12233,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -13090,7 +13090,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -13947,7 +13947,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -14497,7 +14497,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <div
                       class="mr-auto"
