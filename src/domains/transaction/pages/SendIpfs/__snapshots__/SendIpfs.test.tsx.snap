@@ -545,7 +545,7 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2542,7 +2542,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3304,7 +3304,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4068,7 +4068,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4830,7 +4830,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -5603,7 +5603,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -6169,7 +6169,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <div
                       class="mr-auto"
