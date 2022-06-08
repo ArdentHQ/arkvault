@@ -9,16 +9,20 @@ const FormButtonsWrapper = styled.div<{
 	${({ showMobileNavigation }) =>
 		showMobileNavigation &&
 		css`
-			margin-bottom: 3.5rem;
-			@supports (margin-bottom: env(safe-area-inset-bottom)) {
-				margin-bottom: calc(env(safe-area-inset-bottom) + 3.5rem);
+			@media (max-width: 639px) {
+				margin-bottom: 3.5rem;
+				@supports (margin-bottom: env(safe-area-inset-bottom)) {
+					margin-bottom: calc(env(safe-area-inset-bottom) + 3.5rem);
+				}
 			}
 		`};
 	${({ showMobileNavigation }) =>
 		!showMobileNavigation &&
 		css`
-			@supports (padding-bottom: env(safe-area-inset-bottom)) {
-				padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+			@media (max-width: 639px) {
+				@supports (padding-bottom: env(safe-area-inset-bottom)) {
+					padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+				}
 			}
 		`};
 	${tw`flex fixed bg-theme-background dark:bg-black sm:dark:bg-transparent inset-x-0 bottom-0 px-8 py-3 gap-3 shadow-footer-smooth dark:shadow-footer-smooth-dark`}
