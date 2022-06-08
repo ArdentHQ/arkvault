@@ -53,35 +53,45 @@ export const WalletsGroupsList: React.VFC = () => {
 		);
 	};
 
-	return (
-		<div data-testid="NetworkWalletsGroupList">
-			{profileIsSyncing && !isRestored && (
+	const renderContent = () => {
+		if (profileIsSyncing && availableWallets.length === 0) {
+			return (
 				<AccordionWrapper>
 					<WalletsGroupHeaderSkeleton />
 				</AccordionWrapper>
-			)}
+			);
+		}
 
-			{isRestored && filteredWalletsGroupedByNetwork.length === 0 && (
-				<>
-					<EmptyBlock className="mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
-					<MdAndAbove>
-						<AccordionWrapper isInactive>
-							<WalletsGroupHeaderSkeleton isPlaceholder />
-						</AccordionWrapper>
-					</MdAndAbove>
-				</>
-			)}
+		if (isRestored) {
+			if (filteredWalletsGroupedByNetwork.length === 0) {
+				return (
+					<>
+						<EmptyBlock className="mx-8 mt-2 sm:-mt-1 md:mx-0 md:mb-3">{emptyBlockContent()}</EmptyBlock>
+						<MdAndAbove>
+							<AccordionWrapper isInactive>
+								<WalletsGroupHeaderSkeleton isPlaceholder />
+							</AccordionWrapper>
+						</MdAndAbove>
+					</>
+				);
+			}
+		}
 
-			{isRestored &&
-				(!profileIsSyncing || availableWallets.length > 0) &&
-				filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
-					<WalletsGroup
-						key={network.id()}
-						network={network}
-						wallets={wallets}
-						maxWidthReferences={{ balance: balanceMaxWidthReference, currency: currencyMaxWidthReference }}
-					/>
-				))}
+		if (!profileIsSyncing || availableWallets.length > 0) {
+			return filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
+				<WalletsGroup
+					key={network.id()}
+					network={network}
+					wallets={wallets}
+					maxWidthReferences={{ balance: balanceMaxWidthReference, currency: currencyMaxWidthReference }}
+				/>
+			));
+		}
+	};
+
+	return (
+		<div data-testid="NetworkWalletsGroupList">
+			{renderContent()}
 		</div>
 	);
 };
