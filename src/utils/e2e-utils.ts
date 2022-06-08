@@ -76,7 +76,10 @@ const walletMocks = () => {
 	);
 
 	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
-		mockRequest(`https://ark-live.arkvault.io/api/wallets/${identifier}`, `coins/ark/mainnet/wallets/${identifier}`),
+		mockRequest(
+			`https://ark-live.arkvault.io/api/wallets/${identifier}`,
+			`coins/ark/mainnet/wallets/${identifier}`,
+		),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
@@ -172,7 +175,8 @@ const searchAddressesMocks = () => {
 					(request: any) =>
 						request.url ===
 							`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
-						request.url === `https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
+						request.url ===
+							`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
 					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
@@ -248,7 +252,10 @@ export const requestMocks = {
 		// devnet
 		mockRequest("https://ark-test.arkvault.io/api/blockchain", "coins/ark/devnet/blockchain"),
 		mockRequest("https://ark-test.arkvault.io/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://ark-test.arkvault.io/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
+		mockRequest(
+			"https://ark-test.arkvault.io/api/node/configuration/crypto",
+			"coins/ark/devnet/cryptoConfiguration",
+		),
 		mockRequest("https://ark-test.arkvault.io/api/node/fees", "coins/ark/devnet/node-fees"),
 		mockRequest("https://ark-test.arkvault.io/api/node/syncing", "coins/ark/devnet/syncing"),
 		mockRequest("https://ark-test.arkvault.io/api/peers", "coins/ark/devnet/peers"),

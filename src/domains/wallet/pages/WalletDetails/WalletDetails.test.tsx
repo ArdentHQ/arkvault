@@ -331,7 +331,9 @@ describe("WalletDetails", () => {
 
 		jest.restoreAllMocks();
 		defaultNetMocks();
-		nock("https://ark-test-musig.arkvault.io/").get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS").reply(200, []);
+		nock("https://ark-test-musig.arkvault.io/")
+			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
+			.reply(200, []);
 		nock("https://ark-test-musig.arkvault.io")
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } });

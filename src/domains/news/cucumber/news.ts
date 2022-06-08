@@ -134,6 +134,9 @@ cucumber(
 	},
 	[
 		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1"),
-		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd", "news/empty-response"),
+		mockRequest(
+			"https://news.arkvault.io/api?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd",
+			"news/empty-response",
+		),
 	],
 );
