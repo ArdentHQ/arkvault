@@ -27,7 +27,7 @@ const baseWallet = {
 	delegates: [
 		{
 			address: "AbuzhuDTyhnfAqepZzVcVsgd1Ym6FgETuW",
-			explorerUrl: "https://dexplorer.ark.io",
+			explorerUrl: "https://test.arkscan.io",
 			isActive: true,
 			msqUrl: "https://marketsquare.ark.io",
 			rank: 1,

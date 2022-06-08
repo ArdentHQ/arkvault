@@ -25,7 +25,7 @@ import {
 let history: HashHistory;
 let profile: Contracts.IProfile;
 
-const exchangeBaseURL = "https://exchanges.payvo.com";
+const exchangeBaseURL = "https://exchanges.arkvault.io";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 const stubData = {

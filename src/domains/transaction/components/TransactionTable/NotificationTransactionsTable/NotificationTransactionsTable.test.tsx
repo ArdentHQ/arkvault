@@ -21,7 +21,7 @@ describe("NotificationsTransactionTable", () => {
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/transactions")
 			.query(true)
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));

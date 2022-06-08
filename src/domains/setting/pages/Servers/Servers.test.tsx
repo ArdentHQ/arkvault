@@ -23,11 +23,11 @@ import { translations } from "@/app/i18n/common/i18n";
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 
-const musigHostLive = "https://ark-live-musig.payvo.com";
-const musigHostTest = "https://ark-test-musig.payvo.com";
+const musigHostLive = "https://ark-live-musig.arkvault.io";
+const musigHostTest = "https://ark-test-musig.arkvault.io";
 
-const peerHostLive = "https://ark-live.payvo.com";
-const peerHostTest = "https://ark-test.payvo.com";
+const peerHostLive = "https://ark-live.arkvault.io";
+const peerHostTest = "https://ark-test.arkvault.io";
 
 const networksStub: any = {
 	ark: {
@@ -556,7 +556,7 @@ describe("Servers Settings", () => {
 							custom: true,
 							enabled: false,
 							height: 999_999,
-							host: "https://ark-live.payvo.com",
+							host: "https://ark-live.arkvault.io",
 							type: "full",
 						},
 						name: "Test",

@@ -19,7 +19,7 @@ describe("Notifications", () => {
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
 
-		nock("https://ark-test.payvo.com").get("/api/transactions").query(true).reply(200, {
+		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
 			data: NotificationTransactionsFixtures.data,
 			meta: TransactionsFixture.meta,
 		});

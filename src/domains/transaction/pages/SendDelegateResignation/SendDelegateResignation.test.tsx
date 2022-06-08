@@ -44,7 +44,7 @@ const renderPage = () => {
 const transactionResponse = {
 	amount: () => +transactionFixture.data.amount / 1e8,
 	data: () => ({ data: () => transactionFixture.data }),
-	explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
 	isMultiSignatureRegistration: () => false,

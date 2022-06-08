@@ -1,4 +1,4 @@
-import { ReactComponent as ARKVaultLogo } from "./payvo-logo.svg";
+import { ReactComponent as ARKVaultLogo } from "./arkvault-logo.svg";
 import { ReactComponent as DeleteBannerDarkGreen } from "./delete-banner-dark-green.svg";
 import { ReactComponent as DeleteBannerDarkNavy } from "./delete-banner-dark-navy.svg";
 import { ReactComponent as DeleteBannerLightGreen } from "./delete-banner-light-green.svg";

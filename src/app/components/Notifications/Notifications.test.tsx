@@ -13,7 +13,7 @@ let profile: Contracts.IProfile;
 
 describe("Notifications", () => {
 	beforeEach(async () => {
-		nock("https://ark-test.payvo.com/api").get("/transactions").query(true).reply(200, {
+		nock("https://ark-test.arkvault.io/api").get("/transactions").query(true).reply(200, {
 			data: NotificationTransactionsFixtures.data,
 			meta: TransactionsFixture.meta,
 		});

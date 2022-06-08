@@ -19,7 +19,7 @@ import { httpClient, toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
-const exchangeBaseURL = "https://exchanges.payvo.com";
+const exchangeBaseURL = "https://exchanges.arkvault.io";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: HashHistory;
@@ -1309,11 +1309,11 @@ describe("ReviewStep", () => {
 					payoutAmount: "1",
 					recipientWallet: "AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73",
 					toCurrency: {
-						addressExplorerMask: "https://explorer.ark.io/wallets/{}",
+						addressExplorerMask: "https://live.arkscan.io/wallets/{}",
 						coin: "ark",
 						hasExternalId: false,
 						name: "Ark",
-						transactionExplorerMask: "https://explorer.ark.io/transaction/{}",
+						transactionExplorerMask: "https://live.arkscan.io/transaction/{}",
 					},
 				},
 				mode: "onChange",

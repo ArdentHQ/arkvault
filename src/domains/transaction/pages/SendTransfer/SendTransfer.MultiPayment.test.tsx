@@ -34,7 +34,7 @@ const createTransactionMultipleMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionMultipleFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionMultipleFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionMultipleFixture.data.fee / 1e8,
 		id: () => transactionMultipleFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -80,7 +80,7 @@ describe("SendTransfer MultiPayment", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")

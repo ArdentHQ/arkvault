@@ -42,7 +42,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${voteFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -57,7 +57,7 @@ const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => unvoteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${unvoteFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
 		fee: () => unvoteFixture.data.fee / 1e8,
 		id: () => unvoteFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -115,7 +115,7 @@ describe("SendVote", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
 			.reply(200, voteFixture)
 			.get("/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf")

@@ -32,7 +32,7 @@ const mocks = [
 			},
 		},
 	),
-	mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }),
+	mockMuSigRequest("https://ark-test-musig.arkvault.io", "list", { result: [] }),
 ];
 
 const createWalletStep = {

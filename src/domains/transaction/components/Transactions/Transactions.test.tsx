@@ -27,7 +27,7 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-const API_BASE_URL = "https://ark-test.payvo.com";
+const API_BASE_URL = "https://ark-test.arkvault.io";
 
 describe("Transactions", () => {
 	beforeAll(async () => {

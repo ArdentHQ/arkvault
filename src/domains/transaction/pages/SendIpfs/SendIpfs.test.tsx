@@ -36,7 +36,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +ipfsFixture.data.amount / 1e8,
 		data: () => ({ data: () => ipfsFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${ipfsFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
 		fee: () => +ipfsFixture.data.fee / 1e8,
 		hash: () => ipfsFixture.data.asset.ipfs,
 		id: () => ipfsFixture.data.id,
@@ -62,7 +62,7 @@ describe("SendIpfs", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))

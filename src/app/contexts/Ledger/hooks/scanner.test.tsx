@@ -27,7 +27,7 @@ describe("Use Ledger Scanner", () => {
 	beforeAll(() => {
 		legacyPublicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {

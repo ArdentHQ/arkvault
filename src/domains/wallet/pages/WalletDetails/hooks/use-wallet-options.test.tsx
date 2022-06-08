@@ -11,7 +11,7 @@ describe("Wallet Options Hook", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query((parameters) => parameters.page === undefined || parameters.page === "1")
 			.reply(200, () => {

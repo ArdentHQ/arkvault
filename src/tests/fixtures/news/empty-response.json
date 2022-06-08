@@ -1,8 +1,8 @@
 {
 	"data": [],
 	"links": {
-		"first": "https://news.payvo.com/api?coins=ark&page=1",
-		"last": "https://news.payvo.com/api?coins=ark&page=1",
+		"first": "https://news.arkvault.io/api?coins=ark&page=1",
+		"last": "https://news.arkvault.io/api?coins=ark&page=1",
 		"prev": null,
 		"next": null
 	},
@@ -10,7 +10,7 @@
 		"current_page": 1,
 		"from": null,
 		"last_page": 1,
-		"path": "https://news.payvo.com/api?coins=ark",
+		"path": "https://news.arkvault.io/api?coins=ark",
 		"per_page": 15,
 		"to": null,
 		"total": 0

@@ -131,7 +131,7 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
@@ -331,8 +331,8 @@ describe("WalletDetails", () => {
 
 		jest.restoreAllMocks();
 		defaultNetMocks();
-		nock("https://ark-test-musig.payvo.com/").get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS").reply(200, []);
-		nock("https://ark-test-musig.payvo.com")
+		nock("https://ark-test-musig.arkvault.io/").get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS").reply(200, []);
+		nock("https://ark-test-musig.arkvault.io")
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } });
 
@@ -607,7 +607,7 @@ describe("WalletDetails", () => {
 
 		profile.wallets().push(newWallet);
 
-		nock("https://ark-test.payvo.com").get(`/api/wallets/${newWallet.address()}`).reply(200, walletMock);
+		nock("https://ark-test.arkvault.io").get(`/api/wallets/${newWallet.address()}`).reply(200, walletMock);
 
 		await newWallet.synchroniser().identity();
 

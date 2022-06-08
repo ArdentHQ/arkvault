@@ -34,7 +34,7 @@ describe("Dashboard", () => {
 	beforeAll(async () => {
 		useDefaultNetMocks();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {

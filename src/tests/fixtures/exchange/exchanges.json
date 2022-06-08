@@ -8,9 +8,9 @@
 			"email_address": "support@changenow.io",
 			"is_active": true,
 			"logo": {
-				"dark": "https://exchanges.payvo.com/images/changenow/dark.png",
-				"light": "https://exchanges.payvo.com/images/changenow/light.png",
-				"thumbnail": "https://exchanges.payvo.com/images/changenow/thumbnail.png"
+				"dark": "https://exchanges.arkvault.io/images/changenow/dark.png",
+				"light": "https://exchanges.arkvault.io/images/changenow/light.png",
+				"thumbnail": "https://exchanges.arkvault.io/images/changenow/thumbnail.png"
 			}
 		},
 		{
@@ -21,9 +21,9 @@
 			"email_address": "support@changelly.com",
 			"is_active": true,
 			"logo": {
-				"dark": "https://exchanges.payvo.com/images/changelly/dark.png",
-				"light": "https://exchanges.payvo.com/images/changelly/light.png",
-				"thumbnail": "https://exchanges.payvo.com/images/changelly/thumbnail.png"
+				"dark": "https://exchanges.arkvault.io/images/changelly/dark.png",
+				"light": "https://exchanges.arkvault.io/images/changelly/light.png",
+				"thumbnail": "https://exchanges.arkvault.io/images/changelly/thumbnail.png"
 			}
 		}
 	]

@@ -52,7 +52,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {
@@ -98,7 +98,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {

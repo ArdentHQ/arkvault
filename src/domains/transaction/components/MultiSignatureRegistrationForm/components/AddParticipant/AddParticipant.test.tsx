@@ -13,7 +13,7 @@ import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbv
 import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-const ARKTestURL = "https://ark-test.payvo.com";
+const ARKTestURL = "https://ark-test.arkvault.io";
 const walletsURLPath = "/api/wallets";
 
 describe("Add Participant", () => {
