@@ -75,6 +75,7 @@ export const WalletsGroupsList: React.VFC = () => {
 			);
 		}
 
+		/* istanbul ignore else */
 		if (!profileIsSyncing || availableWallets.length > 0) {
 			return filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
 				<WalletsGroup
