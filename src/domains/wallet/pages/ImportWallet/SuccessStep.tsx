@@ -22,7 +22,7 @@ export const SuccessStep = ({
 	assertWallet(importedWallet);
 
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint()
+	const { isXs } = useBreakpoint();
 
 	const network = importedWallet.network();
 
