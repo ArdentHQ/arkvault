@@ -3604,7 +3604,7 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
@@ -3766,7 +3766,7 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
@@ -3928,7 +3928,7 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
@@ -4113,7 +4113,7 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
@@ -4275,7 +4275,7 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
@@ -4437,7 +4437,7 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                   ID
                 </div>
                 <button
-                  class="link"
+                  class="link font-semibold"
                   type="button"
                 >
                   <span
