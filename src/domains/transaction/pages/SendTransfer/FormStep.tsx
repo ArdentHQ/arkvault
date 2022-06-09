@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useProfileJobs } from "@/app/hooks";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -132,10 +132,9 @@ export const FormStep = ({
 			<div className="space-y-6 pt-6">
 				<FormField name="network">
 					<FormLabel label={t("COMMON.CRYPTOASSET")} />
-					<SelectNetwork
-						id="SendTransfer__network"
+					<SelectNetworkDropdown
 						profile={profile}
-						networks={[network, network, network]}
+						networks={[network]}
 						selectedNetwork={network}
 						isDisabled
 					/>

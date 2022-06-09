@@ -2120,131 +2120,127 @@ exports[`SendTransfer should render form and use location state 1`] = `
                         Cryptoasset
                       </label>
                       <div
-                        data-testid="SendTransfer__network"
+                        class="relative w-full"
+                        data-testid="SelectDropdown"
                       >
                         <div
-                          class="relative w-full"
-                          data-testid="SelectDropdown"
+                          class="sr-only css-1psxlcd"
                         >
                           <div
-                            class="sr-only css-1psxlcd"
+                            class="relative flex h-full flex-1"
                           >
-                            <div
-                              class="relative flex h-full flex-1"
-                            >
-                              <input
-                                autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
-                                data-testid="select-list__input"
-                                name="network"
-                                readonly=""
-                                tabindex="-1"
-                                type="text"
-                                value="ark.devnet"
-                              />
-                            </div>
+                            <input
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none css-1nupw50"
+                              data-testid="select-list__input"
+                              name="network"
+                              readonly=""
+                              tabindex="-1"
+                              type="text"
+                              value="ark.devnet"
+                            />
                           </div>
+                        </div>
+                        <div
+                          class="w-full"
+                        >
                           <div
-                            class="w-full"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-owns="downshift-40-menu"
+                            role="combobox"
                           >
-                            <div
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
-                              aria-owns="downshift-40-menu"
-                              role="combobox"
-                            >
-                              <div>
-                                <label
-                                  for="downshift-40-input"
-                                  id="downshift-40-label"
-                                />
+                            <div>
+                              <label
+                                for="downshift-40-input"
+                                id="downshift-40-label"
+                              />
+                              <div
+                                class="invisible fixed w-auto whitespace-nowrap"
+                              >
+                                ARK Devnet…
+                              </div>
+                              <div
+                                class="css-n29l73"
+                                disabled=""
+                              >
                                 <div
-                                  class="invisible fixed w-auto whitespace-nowrap"
+                                  aria-label="ARK Devnet"
+                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                                 >
-                                  ARK Devnet…
+                                  <div
+                                    class="css-v0ob3f"
+                                    data-testid="NetworkIcon__icon"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      ark.svg
+                                    </svg>
+                                  </div>
                                 </div>
                                 <div
-                                  class="css-n29l73"
-                                  disabled=""
+                                  class="relative flex h-full flex-1"
+                                >
+                                  <input
+                                    aria-autocomplete="list"
+                                    aria-controls="downshift-40-menu"
+                                    aria-labelledby="downshift-40-label"
+                                    autocomplete="off"
+                                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                                    data-testid="SelectDropdown__input"
+                                    disabled=""
+                                    id="downshift-40-input"
+                                    name="network"
+                                    placeholder="Select option"
+                                    type="text"
+                                    value="ARK Devnet"
+                                  />
+                                  <span
+                                    class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                                    data-testid="Input__suggestion"
+                                  >
+                                    <span
+                                      class="truncate"
+                                    >
+                                      ARK Devnet
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                  data-testid="Input__addon-end"
                                 >
                                   <div
-                                    aria-label="ARK Devnet"
-                                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                    class=""
                                   >
                                     <div
-                                      class="css-v0ob3f"
-                                      data-testid="NetworkIcon__icon"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        ark.svg
-                                      </svg>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="relative flex h-full flex-1"
-                                  >
-                                    <input
-                                      aria-autocomplete="list"
-                                      aria-controls="downshift-40-menu"
-                                      aria-labelledby="downshift-40-label"
-                                      autocomplete="off"
-                                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                                      data-testid="SelectDropdown__input"
-                                      disabled=""
-                                      id="downshift-40-input"
-                                      name="network"
-                                      placeholder="Select option"
-                                      type="text"
-                                      value="ARK Devnet"
-                                    />
-                                    <span
-                                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                                      data-testid="Input__suggestion"
-                                    >
-                                      <span
-                                        class="truncate"
-                                      >
-                                        ARK Devnet
-                                      </span>
-                                    </span>
-                                  </div>
-                                  <div
-                                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                                    data-testid="Input__addon-end"
-                                  >
-                                    <div
-                                      class=""
+                                      class="flex items-center"
                                     >
                                       <div
-                                        class="flex items-center"
+                                        class="flex items-center justify-center py-2 px-1"
+                                        data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="flex items-center justify-center py-2 px-1"
-                                          data-testid="SelectDropdown__caret"
+                                          class="transition-transform text-theme-secondary-500 css-15txs7d"
+                                          height="10"
+                                          width="10"
                                         >
-                                          <div
-                                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                            height="10"
-                                            width="10"
-                                          >
-                                            <svg>
-                                              caret-down.svg
-                                            </svg>
-                                          </div>
+                                          <svg>
+                                            caret-down.svg
+                                          </svg>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                aria-labelledby="downshift-40-label"
-                                id="downshift-40-menu"
-                                role="listbox"
-                              />
                             </div>
+                            <div
+                              aria-labelledby="downshift-40-label"
+                              id="downshift-40-menu"
+                              role="listbox"
+                            />
                           </div>
                         </div>
                       </div>
@@ -3303,131 +3299,127 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                         Cryptoasset
                       </label>
                       <div
-                        data-testid="SendTransfer__network"
+                        class="relative w-full"
+                        data-testid="SelectDropdown"
                       >
                         <div
-                          class="relative w-full"
-                          data-testid="SelectDropdown"
+                          class="sr-only css-1psxlcd"
                         >
                           <div
-                            class="sr-only css-1psxlcd"
+                            class="relative flex h-full flex-1"
                           >
-                            <div
-                              class="relative flex h-full flex-1"
-                            >
-                              <input
-                                autocomplete="off"
-                                class="no-ligatures w-full border-none css-1nupw50"
-                                data-testid="select-list__input"
-                                name="network"
-                                readonly=""
-                                tabindex="-1"
-                                type="text"
-                                value="ark.devnet"
-                              />
-                            </div>
+                            <input
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none css-1nupw50"
+                              data-testid="select-list__input"
+                              name="network"
+                              readonly=""
+                              tabindex="-1"
+                              type="text"
+                              value="ark.devnet"
+                            />
                           </div>
+                        </div>
+                        <div
+                          class="w-full"
+                        >
                           <div
-                            class="w-full"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-owns="downshift-58-menu"
+                            role="combobox"
                           >
-                            <div
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
-                              aria-owns="downshift-58-menu"
-                              role="combobox"
-                            >
-                              <div>
-                                <label
-                                  for="downshift-58-input"
-                                  id="downshift-58-label"
-                                />
+                            <div>
+                              <label
+                                for="downshift-58-input"
+                                id="downshift-58-label"
+                              />
+                              <div
+                                class="invisible fixed w-auto whitespace-nowrap"
+                              >
+                                ARK Devnet…
+                              </div>
+                              <div
+                                class="css-n29l73"
+                                disabled=""
+                              >
                                 <div
-                                  class="invisible fixed w-auto whitespace-nowrap"
+                                  aria-label="ARK Devnet"
+                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                                 >
-                                  ARK Devnet…
+                                  <div
+                                    class="css-v0ob3f"
+                                    data-testid="NetworkIcon__icon"
+                                    height="16"
+                                    width="16"
+                                  >
+                                    <svg>
+                                      ark.svg
+                                    </svg>
+                                  </div>
                                 </div>
                                 <div
-                                  class="css-n29l73"
-                                  disabled=""
+                                  class="relative flex h-full flex-1"
+                                >
+                                  <input
+                                    aria-autocomplete="list"
+                                    aria-controls="downshift-58-menu"
+                                    aria-labelledby="downshift-58-label"
+                                    autocomplete="off"
+                                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                                    data-testid="SelectDropdown__input"
+                                    disabled=""
+                                    id="downshift-58-input"
+                                    name="network"
+                                    placeholder="Select option"
+                                    type="text"
+                                    value="ARK Devnet"
+                                  />
+                                  <span
+                                    class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                                    data-testid="Input__suggestion"
+                                  >
+                                    <span
+                                      class="truncate"
+                                    >
+                                      ARK Devnet
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                  data-testid="Input__addon-end"
                                 >
                                   <div
-                                    aria-label="ARK Devnet"
-                                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                    class=""
                                   >
                                     <div
-                                      class="css-v0ob3f"
-                                      data-testid="NetworkIcon__icon"
-                                      height="16"
-                                      width="16"
-                                    >
-                                      <svg>
-                                        ark.svg
-                                      </svg>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="relative flex h-full flex-1"
-                                  >
-                                    <input
-                                      aria-autocomplete="list"
-                                      aria-controls="downshift-58-menu"
-                                      aria-labelledby="downshift-58-label"
-                                      autocomplete="off"
-                                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                                      data-testid="SelectDropdown__input"
-                                      disabled=""
-                                      id="downshift-58-input"
-                                      name="network"
-                                      placeholder="Select option"
-                                      type="text"
-                                      value="ARK Devnet"
-                                    />
-                                    <span
-                                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                                      data-testid="Input__suggestion"
-                                    >
-                                      <span
-                                        class="truncate"
-                                      >
-                                        ARK Devnet
-                                      </span>
-                                    </span>
-                                  </div>
-                                  <div
-                                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                                    data-testid="Input__addon-end"
-                                  >
-                                    <div
-                                      class=""
+                                      class="flex items-center"
                                     >
                                       <div
-                                        class="flex items-center"
+                                        class="flex items-center justify-center py-2 px-1"
+                                        data-testid="SelectDropdown__caret"
                                       >
                                         <div
-                                          class="flex items-center justify-center py-2 px-1"
-                                          data-testid="SelectDropdown__caret"
+                                          class="transition-transform text-theme-secondary-500 css-15txs7d"
+                                          height="10"
+                                          width="10"
                                         >
-                                          <div
-                                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                                            height="10"
-                                            width="10"
-                                          >
-                                            <svg>
-                                              caret-down.svg
-                                            </svg>
-                                          </div>
+                                          <svg>
+                                            caret-down.svg
+                                          </svg>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                aria-labelledby="downshift-58-label"
-                                id="downshift-58-menu"
-                                role="listbox"
-                              />
                             </div>
+                            <div
+                              aria-labelledby="downshift-58-label"
+                              id="downshift-58-menu"
+                              role="listbox"
+                            />
                           </div>
                         </div>
                       </div>
@@ -4059,131 +4051,127 @@ exports[`SendTransfer should render form step 1`] = `
           Cryptoasset
         </label>
         <div
-          data-testid="SendTransfer__network"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
           <div
-            class="relative w-full"
-            data-testid="SelectDropdown"
+            class="sr-only css-1psxlcd"
           >
             <div
-              class="sr-only css-1psxlcd"
+              class="relative flex h-full flex-1"
             >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
-                  data-testid="select-list__input"
-                  name="network"
-                  readonly=""
-                  tabindex="-1"
-                  type="text"
-                  value="ark.devnet"
-                />
-              </div>
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
             </div>
+          </div>
+          <div
+            class="w-full"
+          >
             <div
-              class="w-full"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-0-menu"
+              role="combobox"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="downshift-0-menu"
-                role="combobox"
-              >
-                <div>
-                  <label
-                    for="downshift-0-input"
-                    id="downshift-0-label"
-                  />
+              <div>
+                <label
+                  for="downshift-0-input"
+                  id="downshift-0-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet…
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
                   <div
-                    class="invisible fixed w-auto whitespace-nowrap"
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                   >
-                    ARK Devnet…
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
                   </div>
                   <div
-                    class="css-n29l73"
-                    disabled=""
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-0-menu"
+                      aria-labelledby="downshift-0-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-0-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
-                      aria-label="ARK Devnet"
-                      class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                      class=""
                     >
                       <div
-                        class="css-v0ob3f"
-                        data-testid="NetworkIcon__icon"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          ark.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="relative flex h-full flex-1"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-0-menu"
-                        aria-labelledby="downshift-0-label"
-                        autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                        data-testid="SelectDropdown__input"
-                        disabled=""
-                        id="downshift-0-input"
-                        name="network"
-                        placeholder="Select option"
-                        type="text"
-                        value="ARK Devnet"
-                      />
-                      <span
-                        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                        data-testid="Input__suggestion"
-                      >
-                        <span
-                          class="truncate"
-                        >
-                          ARK Devnet
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
+                        class="flex items-center"
                       >
                         <div
-                          class="flex items-center"
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
                         >
                           <div
-                            class="flex items-center justify-center py-2 px-1"
-                            data-testid="SelectDropdown__caret"
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
                           >
-                            <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
-                            >
-                              <svg>
-                                caret-down.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              caret-down.svg
+                            </svg>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="downshift-0-label"
-                  id="downshift-0-menu"
-                  role="listbox"
-                />
               </div>
+              <div
+                aria-labelledby="downshift-0-label"
+                id="downshift-0-menu"
+                role="listbox"
+              />
             </div>
           </div>
         </div>
@@ -4745,131 +4733,127 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
           Cryptoasset
         </label>
         <div
-          data-testid="SendTransfer__network"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
           <div
-            class="relative w-full"
-            data-testid="SelectDropdown"
+            class="sr-only css-1psxlcd"
           >
             <div
-              class="sr-only css-1psxlcd"
+              class="relative flex h-full flex-1"
             >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
-                  data-testid="select-list__input"
-                  name="network"
-                  readonly=""
-                  tabindex="-1"
-                  type="text"
-                  value="ark.devnet"
-                />
-              </div>
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
             </div>
+          </div>
+          <div
+            class="w-full"
+          >
             <div
-              class="w-full"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-29-menu"
+              role="combobox"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="downshift-29-menu"
-                role="combobox"
-              >
-                <div>
-                  <label
-                    for="downshift-29-input"
-                    id="downshift-29-label"
-                  />
+              <div>
+                <label
+                  for="downshift-29-input"
+                  id="downshift-29-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet…
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
                   <div
-                    class="invisible fixed w-auto whitespace-nowrap"
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                   >
-                    ARK Devnet…
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
                   </div>
                   <div
-                    class="css-n29l73"
-                    disabled=""
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-29-menu"
+                      aria-labelledby="downshift-29-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-29-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
-                      aria-label="ARK Devnet"
-                      class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                      class=""
                     >
                       <div
-                        class="css-v0ob3f"
-                        data-testid="NetworkIcon__icon"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          ark.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="relative flex h-full flex-1"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-29-menu"
-                        aria-labelledby="downshift-29-label"
-                        autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                        data-testid="SelectDropdown__input"
-                        disabled=""
-                        id="downshift-29-input"
-                        name="network"
-                        placeholder="Select option"
-                        type="text"
-                        value="ARK Devnet"
-                      />
-                      <span
-                        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                        data-testid="Input__suggestion"
-                      >
-                        <span
-                          class="truncate"
-                        >
-                          ARK Devnet
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
+                        class="flex items-center"
                       >
                         <div
-                          class="flex items-center"
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
                         >
                           <div
-                            class="flex items-center justify-center py-2 px-1"
-                            data-testid="SelectDropdown__caret"
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
                           >
-                            <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
-                            >
-                              <svg>
-                                caret-down.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              caret-down.svg
+                            </svg>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="downshift-29-label"
-                  id="downshift-29-menu"
-                  role="listbox"
-                />
               </div>
+              <div
+                aria-labelledby="downshift-29-label"
+                id="downshift-29-menu"
+                role="listbox"
+              />
             </div>
           </div>
         </div>
@@ -5479,131 +5463,127 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           Cryptoasset
         </label>
         <div
-          data-testid="SendTransfer__network"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
           <div
-            class="relative w-full"
-            data-testid="SelectDropdown"
+            class="sr-only css-1psxlcd"
           >
             <div
-              class="sr-only css-1psxlcd"
+              class="relative flex h-full flex-1"
             >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
-                  data-testid="select-list__input"
-                  name="network"
-                  readonly=""
-                  tabindex="-1"
-                  type="text"
-                  value="ark.devnet"
-                />
-              </div>
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
             </div>
+          </div>
+          <div
+            class="w-full"
+          >
             <div
-              class="w-full"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-18-menu"
+              role="combobox"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="downshift-18-menu"
-                role="combobox"
-              >
-                <div>
-                  <label
-                    for="downshift-18-input"
-                    id="downshift-18-label"
-                  />
+              <div>
+                <label
+                  for="downshift-18-input"
+                  id="downshift-18-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet…
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
                   <div
-                    class="invisible fixed w-auto whitespace-nowrap"
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                   >
-                    ARK Devnet…
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
                   </div>
                   <div
-                    class="css-n29l73"
-                    disabled=""
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-18-menu"
+                      aria-labelledby="downshift-18-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-18-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
-                      aria-label="ARK Devnet"
-                      class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                      class=""
                     >
                       <div
-                        class="css-v0ob3f"
-                        data-testid="NetworkIcon__icon"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          ark.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="relative flex h-full flex-1"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-18-menu"
-                        aria-labelledby="downshift-18-label"
-                        autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                        data-testid="SelectDropdown__input"
-                        disabled=""
-                        id="downshift-18-input"
-                        name="network"
-                        placeholder="Select option"
-                        type="text"
-                        value="ARK Devnet"
-                      />
-                      <span
-                        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                        data-testid="Input__suggestion"
-                      >
-                        <span
-                          class="truncate"
-                        >
-                          ARK Devnet
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
+                        class="flex items-center"
                       >
                         <div
-                          class="flex items-center"
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
                         >
                           <div
-                            class="flex items-center justify-center py-2 px-1"
-                            data-testid="SelectDropdown__caret"
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
                           >
-                            <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
-                            >
-                              <svg>
-                                caret-down.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              caret-down.svg
+                            </svg>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="downshift-18-label"
-                  id="downshift-18-menu"
-                  role="listbox"
-                />
               </div>
+              <div
+                aria-labelledby="downshift-18-label"
+                id="downshift-18-menu"
+                role="listbox"
+              />
             </div>
           </div>
         </div>
@@ -6213,131 +6193,127 @@ exports[`SendTransfer should render form step without memo input 1`] = `
           Cryptoasset
         </label>
         <div
-          data-testid="SendTransfer__network"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
           <div
-            class="relative w-full"
-            data-testid="SelectDropdown"
+            class="sr-only css-1psxlcd"
           >
             <div
-              class="sr-only css-1psxlcd"
+              class="relative flex h-full flex-1"
             >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
-                  data-testid="select-list__input"
-                  name="network"
-                  readonly=""
-                  tabindex="-1"
-                  type="text"
-                  value="ark.devnet"
-                />
-              </div>
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
             </div>
+          </div>
+          <div
+            class="w-full"
+          >
             <div
-              class="w-full"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-6-menu"
+              role="combobox"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="downshift-6-menu"
-                role="combobox"
-              >
-                <div>
-                  <label
-                    for="downshift-6-input"
-                    id="downshift-6-label"
-                  />
+              <div>
+                <label
+                  for="downshift-6-input"
+                  id="downshift-6-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet…
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
                   <div
-                    class="invisible fixed w-auto whitespace-nowrap"
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                   >
-                    ARK Devnet…
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
                   </div>
                   <div
-                    class="css-n29l73"
-                    disabled=""
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-6-menu"
+                      aria-labelledby="downshift-6-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-6-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
-                      aria-label="ARK Devnet"
-                      class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                      class=""
                     >
                       <div
-                        class="css-v0ob3f"
-                        data-testid="NetworkIcon__icon"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          ark.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="relative flex h-full flex-1"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-6-menu"
-                        aria-labelledby="downshift-6-label"
-                        autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                        data-testid="SelectDropdown__input"
-                        disabled=""
-                        id="downshift-6-input"
-                        name="network"
-                        placeholder="Select option"
-                        type="text"
-                        value="ARK Devnet"
-                      />
-                      <span
-                        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                        data-testid="Input__suggestion"
-                      >
-                        <span
-                          class="truncate"
-                        >
-                          ARK Devnet
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
+                        class="flex items-center"
                       >
                         <div
-                          class="flex items-center"
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
                         >
                           <div
-                            class="flex items-center justify-center py-2 px-1"
-                            data-testid="SelectDropdown__caret"
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
                           >
-                            <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
-                            >
-                              <svg>
-                                caret-down.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              caret-down.svg
+                            </svg>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="downshift-6-label"
-                  id="downshift-6-menu"
-                  role="listbox"
-                />
               </div>
+              <div
+                aria-labelledby="downshift-6-label"
+                id="downshift-6-menu"
+                role="listbox"
+              />
             </div>
           </div>
         </div>
@@ -6850,131 +6826,127 @@ exports[`SendTransfer should render form step without test networks 1`] = `
           Cryptoasset
         </label>
         <div
-          data-testid="SendTransfer__network"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
           <div
-            class="relative w-full"
-            data-testid="SelectDropdown"
+            class="sr-only css-1psxlcd"
           >
             <div
-              class="sr-only css-1psxlcd"
+              class="relative flex h-full flex-1"
             >
-              <div
-                class="relative flex h-full flex-1"
-              >
-                <input
-                  autocomplete="off"
-                  class="no-ligatures w-full border-none css-1nupw50"
-                  data-testid="select-list__input"
-                  name="network"
-                  readonly=""
-                  tabindex="-1"
-                  type="text"
-                  value="ark.devnet"
-                />
-              </div>
+              <input
+                autocomplete="off"
+                class="no-ligatures w-full border-none css-1nupw50"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
+                type="text"
+                value="ark.devnet"
+              />
             </div>
+          </div>
+          <div
+            class="w-full"
+          >
             <div
-              class="w-full"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-12-menu"
+              role="combobox"
             >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="downshift-12-menu"
-                role="combobox"
-              >
-                <div>
-                  <label
-                    for="downshift-12-input"
-                    id="downshift-12-label"
-                  />
+              <div>
+                <label
+                  for="downshift-12-input"
+                  id="downshift-12-label"
+                />
+                <div
+                  class="invisible fixed w-auto whitespace-nowrap"
+                >
+                  ARK Devnet…
+                </div>
+                <div
+                  class="css-n29l73"
+                  disabled=""
+                >
                   <div
-                    class="invisible fixed w-auto whitespace-nowrap"
+                    aria-label="ARK Devnet"
+                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                   >
-                    ARK Devnet…
+                    <div
+                      class="css-v0ob3f"
+                      data-testid="NetworkIcon__icon"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
                   </div>
                   <div
-                    class="css-n29l73"
-                    disabled=""
+                    class="relative flex h-full flex-1"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-12-menu"
+                      aria-labelledby="downshift-12-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      disabled=""
+                      id="downshift-12-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value="ARK Devnet"
+                    />
+                    <span
+                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                      data-testid="Input__suggestion"
+                    >
+                      <span
+                        class="truncate"
+                      >
+                        ARK Devnet
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
-                      aria-label="ARK Devnet"
-                      class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                      class=""
                     >
                       <div
-                        class="css-v0ob3f"
-                        data-testid="NetworkIcon__icon"
-                        height="16"
-                        width="16"
-                      >
-                        <svg>
-                          ark.svg
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="relative flex h-full flex-1"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-12-menu"
-                        aria-labelledby="downshift-12-label"
-                        autocomplete="off"
-                        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                        data-testid="SelectDropdown__input"
-                        disabled=""
-                        id="downshift-12-input"
-                        name="network"
-                        placeholder="Select option"
-                        type="text"
-                        value="ARK Devnet"
-                      />
-                      <span
-                        class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                        data-testid="Input__suggestion"
-                      >
-                        <span
-                          class="truncate"
-                        >
-                          ARK Devnet
-                        </span>
-                      </span>
-                    </div>
-                    <div
-                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                      data-testid="Input__addon-end"
-                    >
-                      <div
-                        class=""
+                        class="flex items-center"
                       >
                         <div
-                          class="flex items-center"
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
                         >
                           <div
-                            class="flex items-center justify-center py-2 px-1"
-                            data-testid="SelectDropdown__caret"
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
                           >
-                            <div
-                              class="transition-transform text-theme-secondary-500 css-15txs7d"
-                              height="10"
-                              width="10"
-                            >
-                              <svg>
-                                caret-down.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              caret-down.svg
+                            </svg>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  aria-labelledby="downshift-12-label"
-                  id="downshift-12-menu"
-                  role="listbox"
-                />
               </div>
+              <div
+                aria-labelledby="downshift-12-label"
+                id="downshift-12-menu"
+                role="listbox"
+              />
             </div>
           </div>
         </div>
