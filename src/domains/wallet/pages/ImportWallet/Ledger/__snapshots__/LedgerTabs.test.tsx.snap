@@ -62,79 +62,30 @@ exports[`LedgerTabs should render connection step 1`] = `
             </div>
           </div>
           <fieldset
-            class="mt-8 flex flex-col css-1bcidjh"
+            class="mt-8 css-1bcidjh"
           >
-            <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-              data-testid="FormLabel"
-              for="network"
+            <div
+              data-testid="SelectNetwork"
             >
-              Cryptoasset
-            </label>
-            <div>
               <div
-                aria-expanded="true"
-                aria-haspopup="listbox"
-                aria-owns="NetworkStep__network-menu"
-                data-testid="SelectNetwork"
-                role="combobox"
+                class="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
+                data-testid="NetworkOptions"
               >
-                <label
-                  for="NetworkStep__network-input"
-                  id="NetworkStep__network-label"
-                />
-                
-                <div
-                  class="css-1psxlcd"
+                <li
+                  class="flex h-18 w-full cursor-pointer"
+                  data-testid="NetworkOption"
                 >
                   <div
-                    class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
-                    data-testid="SelectNetworkInput__network"
-                  />
-                  <div
-                    class="relative flex h-full flex-1"
+                    aria-label="ARK"
+                    class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                    data-testid="NetworkOption-ARK-ark.mainnet"
                   >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="NetworkStep__network-menu"
-                      aria-labelledby="NetworkStep__network-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
-                      data-testid="SelectNetworkInput__input"
-                      id="NetworkStep__network-input"
-                      placeholder="Enter a cryptoasset name"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class=""
-                data-testid="SelectNetwork__options"
-              >
-                <div
-                  class="mt-6"
-                >
-                  <div
-                    class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-                  >
-                    PUBLIC NETWORKS
-                  </div>
-                  <ul
-                    aria-labelledby="NetworkStep__network-label"
-                    class="css-6y29t8"
-                    id="NetworkStep__network-menu"
-                    role="listbox"
-                  >
-                    <li
-                      class="relative flex h-0 cursor-pointer pb-[100%]"
-                      data-testid="SelectNetwork__NetworkIcon--container"
+                    <div
+                      class="flex items-center space-x-4"
                     >
                       <div
                         aria-label="ARK"
-                        class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                        data-testid="NetworkIcon-ARK-ark.mainnet"
+                        class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -147,35 +98,29 @@ exports[`LedgerTabs should render connection step 1`] = `
                           </svg>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
-                  type="horizontal"
-                />
-                <div
-                  class="mt-6"
+                      <div
+                        class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        ARK
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="flex h-18 w-full cursor-pointer"
+                  data-testid="NetworkOption"
                 >
-                  <span
-                    class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                  <div
+                    aria-label="ARK Devnet"
+                    class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                    data-testid="NetworkOption-ARK-ark.devnet"
                   >
-                    DEVELOPMENT NETWORKS
-                  </span>
-                  <ul
-                    aria-labelledby="NetworkStep__network-label"
-                    class="css-6y29t8"
-                    id="NetworkStep__network-menu"
-                    role="listbox"
-                  >
-                    <li
-                      class="relative flex h-0 cursor-pointer pb-[100%]"
-                      data-testid="SelectNetwork__NetworkIcon--container"
+                    <div
+                      class="flex items-center space-x-4"
                     >
                       <div
                         aria-label="ARK Devnet"
-                        class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
-                        data-testid="NetworkIcon-ARK-ark.devnet"
+                        class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -188,9 +133,25 @@ exports[`LedgerTabs should render connection step 1`] = `
                           </svg>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
+                      <div
+                        class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        ARK Devnet
+                      </div>
+                    </div>
+                    <span>
+                      <div
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          code.svg
+                        </svg>
+                      </div>
+                    </span>
+                  </div>
+                </li>
               </div>
             </div>
           </fieldset>

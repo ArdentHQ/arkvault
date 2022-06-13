@@ -580,7 +580,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
             </div>
           </div>
           <div
-            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:mx-0 lg:flex-row"
+            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
             data-testid="PortfolioBreakdown"
           >
             <div
@@ -1642,7 +1642,7 @@ exports[`Dashboard should render 1`] = `
             </div>
           </div>
           <div
-            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:mx-0 lg:flex-row"
+            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
             data-testid="PortfolioBreakdown"
           >
             <div
@@ -3514,7 +3514,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
             </div>
           </div>
           <div
-            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:mx-0 lg:flex-row"
+            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
             data-testid="PortfolioBreakdown"
           >
             <div
