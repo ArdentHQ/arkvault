@@ -537,7 +537,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                   class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                 >
                   <span
-                    class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                    class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                   >
                     Estimated Rate
                     :
@@ -1796,7 +1796,7 @@ exports[`FormStep should render 1`] = `
           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
         >
           <span
-            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
           >
             Estimated Rate
             :
