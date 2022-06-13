@@ -48,7 +48,12 @@ describe("SelectNetworkDropdown", () => {
 		const onChange = jest.fn();
 
 		const { container } = render(
-			<SelectNetworkDropdown profile={profile} selectedNetwork={networks[0]} onChange={onChange} />,
+			<SelectNetworkDropdown
+				profile={profile}
+				networks={networks}
+				selectedNetwork={networks[0]}
+				onChange={onChange}
+			/>,
 		);
 
 		userEvent.click(screen.getByTestId("SelectDropdown__input"));
@@ -62,7 +67,7 @@ describe("SelectNetworkDropdown", () => {
 	});
 
 	it("should not render network option label if network is not defined", () => {
-		const { container } = render(<NetworkOptionLabel networkById={() => {}} value="tests" />);
+		const { container } = render(<NetworkOptionLabel />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -75,7 +80,7 @@ describe("SelectNetworkDropdown", () => {
 			isTest: () => false,
 		};
 
-		render(<NetworkOptionLabel networkById={() => customNetworkMock} value="tests" />);
+		render(<NetworkOptionLabel network={customNetworkMock} value="tests" />);
 
 		expect(screen.getByText("MY")).toBeInTheDocument();
 	});
