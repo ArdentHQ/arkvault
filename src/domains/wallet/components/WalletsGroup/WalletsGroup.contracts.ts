@@ -47,6 +47,7 @@ export interface WalletsGroupNetworkTotalProperties {
 	network: Networks.Network;
 	wallets: Contracts.IReadWriteWallet[];
 	maxWidthReferences?: MaxWidthReferences;
+	noBorder?: boolean;
 }
 
 export interface WalletsGroupSkeletonProperties {

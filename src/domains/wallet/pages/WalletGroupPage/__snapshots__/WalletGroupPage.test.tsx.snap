@@ -563,7 +563,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 border-r-0 pr-0 lg:border-r lg:pr-4"
                   >
                     <span
                       class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -593,7 +593,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </span>
                   </div>
                   <div
-                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex border-r-0 pr-0"
                   >
                     <span
                       class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
