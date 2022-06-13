@@ -8,7 +8,7 @@ import { goToTransferPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
-const recipientInput = Selector("[data-testid=SelectDropdown__input]");
+const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(1);
 const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
 const preSteps = {
@@ -29,9 +29,13 @@ cucumber(
 		"When she attempts to send a multipay transaction with a valid mnemonic": async (t: TestController) => {
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
 			await t.typeText(amountInput, "10", { replace: true });
-			await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
-				paste: true,
-			});
+			await t.typeText(
+				Selector("[data-testid=SelectDropdown__input]").nth(1),
+				"D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP",
+				{
+					paste: true,
+				},
+			);
 			await t.pressKey("tab");
 			await t.pressKey("enter");
 			await t.click(Selector("button").withText(translations.TRANSACTION.ADD_RECIPIENT));

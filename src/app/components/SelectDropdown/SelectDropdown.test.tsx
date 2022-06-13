@@ -140,6 +140,14 @@ describe("SelectDropdown", () => {
 		},
 	);
 
+	it.each([OptionType.base, OptionType.group])("should not trigger menu when disabled", async (optType) => {
+		render(<Select options={getOptions(optType)} showCaret disabled />);
+
+		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await expect(screen.findByTestId(firstOptionID)).rejects.toThrow(/Unable to find/);
+	});
+
 	it.each([OptionType.base, OptionType.group])("should render option %s with initial default value", (optType) => {
 		const { container } = render(<Select options={getOptions(optType)} defaultValue="3" />);
 

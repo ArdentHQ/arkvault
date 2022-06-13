@@ -486,139 +486,129 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                       >
                         Cryptoasset
                       </label>
-                      <div>
+                      <div
+                        class="relative w-full"
+                        data-testid="SelectDropdown"
+                      >
                         <div
-                          aria-expanded="false"
-                          aria-haspopup="listbox"
-                          aria-owns="SendTransfer__network-menu"
-                          data-testid="SelectNetwork"
-                          role="combobox"
+                          class="sr-only css-1psxlcd"
                         >
-                          <label
-                            for="SendTransfer__network-input"
-                            id="SendTransfer__network-label"
-                          />
-                          
                           <div
-                            class="css-n29l73"
-                            disabled=""
+                            class="relative flex h-full flex-1"
                           >
-                            <div
-                              aria-label="ARK Devnet"
-                              class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
-                              data-testid="SelectNetworkInput__network"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
-                            <div
-                              class="relative flex h-full flex-1"
-                            >
-                              <input
-                                aria-autocomplete="list"
-                                aria-controls="SendTransfer__network-menu"
-                                aria-labelledby="SendTransfer__network-label"
-                                autocomplete="off"
-                                class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
-                                data-testid="SelectNetworkInput__input"
-                                disabled=""
-                                id="SendTransfer__network-input"
-                                placeholder="Enter a cryptoasset name"
-                                type="text"
-                                value="ARK Devnet"
-                              />
-                            </div>
+                            <input
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none css-1nupw50"
+                              data-testid="select-list__input"
+                              name="network"
+                              readonly=""
+                              tabindex="-1"
+                              type="text"
+                              value="ark.devnet"
+                            />
                           </div>
                         </div>
                         <div
-                          class="hidden"
-                          data-testid="SelectNetwork__options"
+                          class="w-full"
                         >
                           <div
-                            class="mt-6"
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-owns="downshift-13-menu"
+                            role="combobox"
                           >
-                            <div
-                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-                            >
-                              PUBLIC NETWORKS
-                            </div>
-                            <ul
-                              aria-labelledby="SendTransfer__network-label"
-                              class="css-6y29t8"
-                              id="SendTransfer__network-menu"
-                              role="listbox"
-                            >
-                              <li
-                                class="relative flex h-0 cursor-pointer pb-[100%] cursor-not-allowed"
-                                data-testid="SelectNetwork__NetworkIcon--container"
+                            <div>
+                              <label
+                                for="downshift-13-input"
+                                id="downshift-13-label"
+                              />
+                              <div
+                                class="invisible fixed w-auto whitespace-nowrap"
                               >
-                                <div
-                                  aria-label="ARK"
-                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                                  data-testid="NetworkIcon-ARK-ark.mainnet"
-                                >
-                                  <div
-                                    class="css-1i4b0eq"
-                                    data-testid="NetworkIcon__icon"
-                                    height="20"
-                                    width="20"
-                                  >
-                                    <svg>
-                                      ark.svg
-                                    </svg>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                          <div
-                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
-                            type="horizontal"
-                          />
-                          <div
-                            class="mt-6"
-                          >
-                            <span
-                              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-                            >
-                              DEVELOPMENT NETWORKS
-                            </span>
-                            <ul
-                              aria-labelledby="SendTransfer__network-label"
-                              class="css-6y29t8"
-                              id="SendTransfer__network-menu"
-                              role="listbox"
-                            >
-                              <li
-                                class="relative flex h-0 cursor-pointer pb-[100%] cursor-not-allowed"
-                                data-testid="SelectNetwork__NetworkIcon--container"
+                                ARK Devnet
+                                …
+                              </div>
+                              <div
+                                class="css-n29l73"
+                                disabled=""
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
-                                  data-testid="NetworkIcon-ARK-ark.devnet"
+                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                                 >
                                   <div
-                                    class="css-1i4b0eq"
+                                    class="css-v0ob3f"
                                     data-testid="NetworkIcon__icon"
-                                    height="20"
-                                    width="20"
+                                    height="16"
+                                    width="16"
                                   >
                                     <svg>
                                       ark.svg
                                     </svg>
                                   </div>
                                 </div>
-                              </li>
-                            </ul>
+                                <div
+                                  class="relative flex h-full flex-1"
+                                >
+                                  <input
+                                    aria-autocomplete="list"
+                                    aria-controls="downshift-13-menu"
+                                    aria-labelledby="downshift-13-label"
+                                    autocomplete="off"
+                                    class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                                    data-testid="SelectDropdown__input"
+                                    disabled=""
+                                    id="downshift-13-input"
+                                    name="network"
+                                    placeholder="Select option"
+                                    type="text"
+                                    value="ARK Devnet"
+                                  />
+                                  <span
+                                    class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
+                                    data-testid="Input__suggestion"
+                                  >
+                                    <span
+                                      class="truncate"
+                                    >
+                                      ARK Devnet
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                  data-testid="Input__addon-end"
+                                >
+                                  <div
+                                    class=""
+                                  >
+                                    <div
+                                      class="flex items-center"
+                                    >
+                                      <div
+                                        class="flex items-center justify-center py-2 px-1"
+                                        data-testid="SelectDropdown__caret"
+                                      >
+                                        <div
+                                          class="transition-transform text-theme-secondary-500 css-15txs7d"
+                                          height="10"
+                                          width="10"
+                                        >
+                                          <svg>
+                                            caret-down.svg
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              aria-labelledby="downshift-13-label"
+                              id="downshift-13-menu"
+                              role="listbox"
+                            />
                           </div>
                         </div>
                       </div>
@@ -1670,81 +1660,28 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                     >
                       Cryptoasset
                     </label>
-                    <div>
+                    <div
+                      data-testid="SendTransfer__network-step__select"
+                    >
                       <div
-                        aria-expanded="true"
-                        aria-haspopup="listbox"
-                        aria-owns="SendTransfer__network-step__select-menu"
-                        data-testid="SelectNetwork"
-                        role="combobox"
+                        class="flex-col space-y-3 space-x-0 sm:flex sm:flex-row sm:space-x-3 sm:space-y-0"
+                        data-testid="NetworkOptions"
                       >
-                        <label
-                          for="SendTransfer__network-step__select-input"
-                          id="SendTransfer__network-step__select-label"
-                        />
-                        <div
-                          class="css-1psxlcd"
+                        <li
+                          class="flex h-18 w-full cursor-pointer"
+                          data-testid="NetworkOption"
                         >
                           <div
-                            aria-label="ARK Devnet"
-                            class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
-                            data-testid="SelectNetworkInput__network"
+                            aria-label="ARK"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                            data-testid="NetworkOption-ARK-ark.mainnet"
                           >
                             <div
-                              class="css-1i4b0eq"
-                              data-testid="NetworkIcon__icon"
-                              height="20"
-                              width="20"
-                            >
-                              <svg>
-                                ark.svg
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="relative flex h-full flex-1"
-                          >
-                            <input
-                              aria-autocomplete="list"
-                              aria-controls="SendTransfer__network-step__select-menu"
-                              aria-labelledby="SendTransfer__network-step__select-label"
-                              autocomplete="off"
-                              class="no-ligatures w-full border-none css-1nupw50"
-                              data-testid="SelectNetworkInput__input"
-                              id="SendTransfer__network-step__select-input"
-                              placeholder="Enter a cryptoasset name"
-                              type="text"
-                              value="ARK Devnet"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class=""
-                        data-testid="SelectNetwork__options"
-                      >
-                        <div
-                          class="mt-6"
-                        >
-                          <div
-                            class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-                          >
-                            PUBLIC NETWORKS
-                          </div>
-                          <ul
-                            aria-labelledby="SendTransfer__network-step__select-label"
-                            class="css-6y29t8"
-                            id="SendTransfer__network-step__select-menu"
-                            role="listbox"
-                          >
-                            <li
-                              class="relative flex h-0 cursor-pointer pb-[100%]"
-                              data-testid="SelectNetwork__NetworkIcon--container"
+                              class="flex items-center space-x-4"
                             >
                               <div
                                 aria-label="ARK"
-                                class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                                data-testid="NetworkIcon-ARK-ark.mainnet"
+                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
                               >
                                 <div
                                   class="css-1i4b0eq"
@@ -1757,35 +1694,29 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                            </li>
-                          </ul>
-                        </div>
-                        <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
-                          type="horizontal"
-                        />
-                        <div
-                          class="mt-6"
+                              <div
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              >
+                                ARK
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="flex h-18 w-full cursor-pointer"
+                          data-testid="NetworkOption"
                         >
-                          <span
-                            class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
+                          <div
+                            aria-label="ARK Devnet"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                            data-testid="NetworkOption-ARK-ark.devnet"
                           >
-                            DEVELOPMENT NETWORKS
-                          </span>
-                          <ul
-                            aria-labelledby="SendTransfer__network-step__select-label"
-                            class="css-6y29t8"
-                            id="SendTransfer__network-step__select-menu"
-                            role="listbox"
-                          >
-                            <li
-                              class="relative flex h-0 cursor-pointer pb-[100%]"
-                              data-testid="SelectNetwork__NetworkIcon--container"
+                            <div
+                              class="flex items-center space-x-4"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
-                                data-testid="NetworkIcon-ARK-ark.devnet"
+                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
                               >
                                 <div
                                   class="css-1i4b0eq"
@@ -1798,9 +1729,25 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                                   </svg>
                                 </div>
                               </div>
-                            </li>
-                          </ul>
-                        </div>
+                              <div
+                                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              >
+                                ARK Devnet
+                              </div>
+                            </div>
+                            <span>
+                              <div
+                                class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                                height="20"
+                                width="20"
+                              >
+                                <svg>
+                                  code.svg
+                                </svg>
+                              </div>
+                            </span>
+                          </div>
+                        </li>
                       </div>
                     </div>
                   </fieldset>

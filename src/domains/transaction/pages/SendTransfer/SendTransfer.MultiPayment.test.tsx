@@ -126,10 +126,6 @@ describe("SendTransfer MultiPayment", () => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 		});
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-
-		expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
-
 		// Select multiple type
 		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
@@ -139,7 +135,7 @@ describe("SendTransfer MultiPayment", () => {
 
 		selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -155,7 +151,7 @@ describe("SendTransfer MultiPayment", () => {
 		selectFirstRecipient();
 
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
