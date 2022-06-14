@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 const POLLING_INTERVAL = 1000 * 60; // 1 min
 

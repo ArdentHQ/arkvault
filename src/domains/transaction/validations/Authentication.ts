@@ -1,6 +1,6 @@
-import { Coins } from "@payvo/sdk";
-import { BIP39 } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Coins } from "@ardenthq/sdk";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 

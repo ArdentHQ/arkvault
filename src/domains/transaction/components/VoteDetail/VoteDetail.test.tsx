@@ -1,4 +1,4 @@
-import { ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";

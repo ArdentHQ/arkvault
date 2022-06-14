@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
-import { Signatories } from "@payvo/sdk";
-import { BIP39 } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";

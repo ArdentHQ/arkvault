@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { network } from "./Network";
 
 const testAddress1 = "https://test.com";

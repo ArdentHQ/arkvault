@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { VoteList } from "./VoteList";

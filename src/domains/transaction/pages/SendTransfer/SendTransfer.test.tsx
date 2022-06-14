@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import "jest-extended";
 
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";

@@ -1,4 +1,4 @@
-import { Environment } from "@payvo/sdk-profiles";
+import { Environment } from "@ardenthq/sdk-profiles";
 import { initializeEnvironment } from "./environment";
 import { env } from "@/utils/testing-library";
 

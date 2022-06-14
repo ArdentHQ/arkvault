@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { getDefaultAlias } from "./get-default-alias";
 import { env, MNEMONICS } from "@/utils/testing-library";

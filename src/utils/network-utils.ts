@@ -1,8 +1,8 @@
-import { UUID } from "@payvo/sdk-cryptography";
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts } from "@payvo/sdk-profiles";
-import { Networks } from "@payvo/sdk";
-import { uniq } from "@payvo/sdk-helpers";
+import { UUID } from "@ardenthq/sdk-cryptography";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { uniq } from "@ardenthq/sdk-helpers";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 

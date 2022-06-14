@@ -1,5 +1,5 @@
-import { DateTime } from "@payvo/sdk-intl";
-import { BigNumber } from "@payvo/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const wallet = {
 	address: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",

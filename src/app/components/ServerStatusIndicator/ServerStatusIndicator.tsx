@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";

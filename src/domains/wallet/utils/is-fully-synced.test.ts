@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

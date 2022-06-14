@@ -1,5 +1,5 @@
-import { sortByDesc } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { sortByDesc } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEffect, useMemo, useState } from "react";
 import { assertString } from "@/utils/assertions";
 import { AssetItem } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";

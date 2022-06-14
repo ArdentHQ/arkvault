@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import tw, { styled } from "twin.macro";
-import { Enums } from "@payvo/sdk";
+import { Enums } from "@ardenthq/sdk";
 import { useResizeDetector } from "react-resize-detector";
 import { WalletActionsProperties, WalletAddressProperties, WalletBalanceProperties } from "./WalletHeader.contracts";
 import { Amount } from "@/app/components/Amount";

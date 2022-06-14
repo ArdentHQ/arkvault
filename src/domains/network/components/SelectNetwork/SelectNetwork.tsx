@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useCombobox } from "downshift";
 import React, { useCallback, useEffect, useState } from "react";

@@ -1,4 +1,4 @@
-import { last } from "@payvo/sdk-helpers";
+import { last } from "@ardenthq/sdk-helpers";
 import React, { useMemo } from "react";
 import tw, { css, styled } from "twin.macro";
 

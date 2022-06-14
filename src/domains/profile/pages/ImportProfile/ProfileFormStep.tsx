@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";

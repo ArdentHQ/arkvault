@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { HttpClient } from "@/app/services/HttpClient";
 import { Modal } from "@/app/components/Modal";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
 import { SelectNetworkDropdown } from "./SelectNetworkDropdown";

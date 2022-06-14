@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
@@ -68,7 +68,7 @@ const networksStub: any = {
 };
 
 const musigResponse = {
-	name: "@payvo/ark-musig-server",
+	name: "@ardenthq/ark-musig-server",
 	version: "1.5.0",
 };
 

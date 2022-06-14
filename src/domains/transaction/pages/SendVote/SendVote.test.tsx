@@ -2,8 +2,8 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import "jest-extended";
 
-import { Signatories } from "@payvo/sdk";
-import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";

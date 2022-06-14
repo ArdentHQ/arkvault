@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import "jest-extended";
 
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";

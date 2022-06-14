@@ -1,6 +1,6 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { NetworkOptionLabel, NetworkIcon } from "./SelectNetworkDropdown.blocks";
 import { Select, OptionProperties } from "@/app/components/SelectDropdown";
 import { useNetworkOptions } from "@/app/hooks";

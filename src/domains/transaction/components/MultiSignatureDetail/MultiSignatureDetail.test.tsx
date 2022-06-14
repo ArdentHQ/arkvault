@@ -1,5 +1,5 @@
-import { Signatories } from "@payvo/sdk";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";

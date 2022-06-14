@@ -1,10 +1,10 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";

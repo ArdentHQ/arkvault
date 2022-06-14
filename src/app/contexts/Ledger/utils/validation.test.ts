@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { hasRequiredAppVersion } from "./validation";
 
 import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-library";

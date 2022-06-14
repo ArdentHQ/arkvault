@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/sdk";
-import { BIP39 } from "@payvo/sdk-cryptography";
-import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";

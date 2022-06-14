@@ -1,4 +1,4 @@
-import { sample } from "@payvo/sdk-helpers";
+import { sample } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useMemo, useState } from "react";
 
 import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";

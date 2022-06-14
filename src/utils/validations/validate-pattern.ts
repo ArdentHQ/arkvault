@@ -1,4 +1,4 @@
-import { sortBy, uniq } from "@payvo/sdk-helpers";
+import { sortBy, uniq } from "@ardenthq/sdk-helpers";
 
 export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 	let matches = "";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "@/app/components/Tooltip";

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";

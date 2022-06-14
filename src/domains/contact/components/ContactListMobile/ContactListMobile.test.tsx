@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { ContactListMobile } from "./ContactListMobile";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";

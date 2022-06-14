@@ -1,6 +1,6 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { Networks } from "@payvo/sdk";
-import { groupBy } from "@payvo/sdk-helpers";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { groupBy } from "@ardenthq/sdk-helpers";
 import { pingServerAddress } from "@/utils/peers";
 import { ServerHealthStatus, NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { customNetworks, defaultNetworks } from "@/utils/server-utils";

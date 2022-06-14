@@ -1,6 +1,6 @@
-import { Services } from "@payvo/sdk";
-import { BigNumber } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 

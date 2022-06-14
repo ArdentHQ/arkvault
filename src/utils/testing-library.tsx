@@ -1,5 +1,5 @@
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
 import nock from "nock";

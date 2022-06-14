@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/sdk-helpers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import React from "react";
 
 import { TransactionStatus } from "./TransactionStatus";

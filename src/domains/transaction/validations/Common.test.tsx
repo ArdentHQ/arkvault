@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useRef, useState, VFC } from "react";
 import { useFormContext } from "react-hook-form";

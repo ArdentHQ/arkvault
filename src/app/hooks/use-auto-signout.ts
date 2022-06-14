@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useIdleTimer } from "react-idle-timer";
 import { useHistory } from "react-router-dom";
 import { useCallback } from "react";

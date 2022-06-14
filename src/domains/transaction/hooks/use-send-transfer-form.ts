@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";

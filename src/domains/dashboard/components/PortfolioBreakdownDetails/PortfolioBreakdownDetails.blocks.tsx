@@ -1,4 +1,4 @@
-import { Helpers } from "@payvo/sdk-profiles";
+import { Helpers } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";

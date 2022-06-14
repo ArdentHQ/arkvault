@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DTO } from "@payvo/sdk-profiles";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

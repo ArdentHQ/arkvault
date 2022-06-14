@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 export interface AddressTableProperties {
 	wallets: Contracts.IReadWriteWallet[];

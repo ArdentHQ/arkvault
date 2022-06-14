@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-node-access */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { useTheme } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
