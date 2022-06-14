@@ -50,7 +50,15 @@ describe("SelectNetworkDropdown", () => {
 		const { container } = render(
 			<SelectNetworkDropdown
 				profile={profile}
-				networks={networks}
+				networks={[
+					...networks,
+					{
+						coinName: () => "Custom Network",
+						id: () => "whatever.custom",
+						isLive: () => true,
+						isTest: () => false,
+					},
+				]}
 				selectedNetwork={networks[0]}
 				onChange={onChange}
 			/>,
@@ -58,11 +66,11 @@ describe("SelectNetworkDropdown", () => {
 
 		userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
-		expect(screen.getByTestId("SelectDropdown__option--2")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--2"));
+		userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
 
-		expect(onChange).toHaveBeenCalledWith(networks[2]);
+		expect(onChange).toHaveBeenCalledWith(networks[1]);
 		expect(container).toMatchSnapshot();
 	});
 

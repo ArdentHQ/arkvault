@@ -31,7 +31,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
             class="ring-focus group inline-block hidden sm:block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -76,7 +76,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
             class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -151,7 +151,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
             class="ring-focus group inline-block hidden sm:block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -196,7 +196,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
             class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -271,7 +271,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
             class="ring-focus group inline-block hidden sm:block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -313,7 +313,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
           class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
-          href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+          href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
           rel="noopener noreferrer"
         >
           <span
@@ -387,7 +387,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
             class="ring-focus group inline-block hidden sm:block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -429,7 +429,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
           class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
-          href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+          href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
           rel="noopener noreferrer"
         >
           <span
@@ -503,7 +503,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 5`] = `
             class="ring-focus group inline-block hidden sm:block css-15tcy38"
             data-ring-focus-margin="-m-1"
             data-testid="Link"
-            href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+            href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
             rel="noopener noreferrer"
           >
             <span
@@ -545,7 +545,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 5`] = `
           class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
           data-ring-focus-margin="-m-1"
           data-testid="Link"
-          href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+          href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
           rel="noopener noreferrer"
         >
           <span

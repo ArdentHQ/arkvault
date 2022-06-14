@@ -1760,7 +1760,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                               class="ring-focus group inline-block flex items-center css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/transaction/adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a"
+                              href="https://test.arkscan.io/transaction/adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a"
                               rel="noopener noreferrer"
                             >
                               <span

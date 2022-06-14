@@ -141,7 +141,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                       class="ring-focus group inline-block hidden sm:block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                      href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -176,7 +176,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                     class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -400,7 +400,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -596,7 +596,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                       class="ring-focus group inline-block hidden sm:block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                      href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -638,7 +638,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                     class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -882,7 +882,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1078,7 +1078,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                       class="ring-focus group inline-block hidden sm:block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                      href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -1120,7 +1120,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                     class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -1350,7 +1350,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
