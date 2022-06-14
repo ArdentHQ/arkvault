@@ -196,14 +196,14 @@ export const ImportWallet = () => {
 
 		setValue("selectedNetworkIds", uniq([...selectedNetworkIds, wallet.network().id()]));
 
+		await syncAll(wallet);
+
 		wallet.mutator().alias(
 			getDefaultAlias({
 				network: wallet.network(),
 				profile: activeProfile,
 			}),
 		);
-
-		await syncAll(wallet);
 
 		await persist();
 

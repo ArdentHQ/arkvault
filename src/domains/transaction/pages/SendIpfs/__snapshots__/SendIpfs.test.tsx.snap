@@ -3,7 +3,7 @@
 exports[`SendIpfs should error if wrong mnemonic 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1806,7 +1806,7 @@ exports[`SendIpfs should render summary step 1`] = `
 exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2568,7 +2568,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
 exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3332,7 +3332,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 2`]
 exports[`SendIpfs should send an IPFS transaction using encryption password 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4094,7 +4094,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
 exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4856,7 +4856,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
 exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -5641,7 +5641,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
 exports[`SendIpfs should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
