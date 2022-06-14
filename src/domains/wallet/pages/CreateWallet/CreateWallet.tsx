@@ -21,7 +21,6 @@ import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { defaultNetworks } from "@/utils/server-utils";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 
 enum Step {
@@ -33,7 +32,7 @@ enum Step {
 }
 
 export const CreateWallet = () => {
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
