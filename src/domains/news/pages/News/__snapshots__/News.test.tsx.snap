@@ -3,7 +3,7 @@
 exports[`News should filter results based on category query and asset 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -1102,7 +1102,7 @@ exports[`News should filter results based on category query and asset 1`] = `
 exports[`News should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -2201,7 +2201,7 @@ exports[`News should render responsive (md) 1`] = `
 exports[`News should render responsive (xs) 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -3258,7 +3258,7 @@ exports[`News should render responsive (xs) 1`] = `
 exports[`News should show error toast if news cannot be fetched 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
