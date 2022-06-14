@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
-import { Blockfolio as FTX, BlockfolioResponse as FTXResponse, BlockfolioSignal as FTXSignal } from "@ardenthq/sdk-news";
+import {
+	Blockfolio as FTX,
+	BlockfolioResponse as FTXResponse,
+	BlockfolioSignal as FTXSignal,
+} from "@ardenthq/sdk-news";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { NewsFilters, NewsQuery } from "@/domains/news/news.contracts";
