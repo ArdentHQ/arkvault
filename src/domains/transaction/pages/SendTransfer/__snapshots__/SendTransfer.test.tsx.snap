@@ -3,7 +3,7 @@
 exports[`SendTransfer should display unconfirmed transactions modal when submitting with Enter 1`] = `
 <div>
   <div
-    class="css-lyknmy"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
@@ -1052,7 +1052,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
 exports[`SendTransfer should error if wrong mnemonic 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1639,7 +1639,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
 exports[`SendTransfer should render form and use location state 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2818,7 +2818,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
 exports[`SendTransfer should render form and use location state without memo 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -7444,7 +7444,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
 exports[`SendTransfer should render network selection without selected wallet 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -9394,7 +9394,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
 exports[`SendTransfer should send a single transfer and handle undefined expiration 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -10251,7 +10251,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
 exports[`SendTransfer should send a single transfer and show unconfirmed transactions modal 1`] = `
 <div>
   <div
-    class="css-lyknmy"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
@@ -11374,7 +11374,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
 exports[`SendTransfer should send a single transfer using wallet with encryption password 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -12231,7 +12231,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
 exports[`SendTransfer should send a single transfer with keyboard 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -13088,7 +13088,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
 exports[`SendTransfer should send a single transfer without keyboard 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -13945,7 +13945,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
 exports[`SendTransfer should show error step and go back 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
