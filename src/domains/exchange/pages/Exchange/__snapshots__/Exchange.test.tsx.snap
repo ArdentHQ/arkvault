@@ -123,7 +123,7 @@ exports[`Exchange should render empty 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -626,7 +626,7 @@ exports[`Exchange should render with exchanges 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1013,7 +1013,7 @@ exports[`Exchange should render with exchanges 1`] = `
                       <img
                         alt="ChangeNOW Logo"
                         class="h-full w-full object-cover"
-                        src="https://exchanges.payvo.com/images/changenow/thumbnail.png"
+                        src="https://exchanges.arkvault.io/images/changenow/thumbnail.png"
                       />
                     </div>
                     <div
@@ -1050,7 +1050,7 @@ exports[`Exchange should render with exchanges 1`] = `
                       <img
                         alt="Changelly Logo"
                         class="h-full w-full object-cover"
-                        src="https://exchanges.payvo.com/images/changelly/thumbnail.png"
+                        src="https://exchanges.arkvault.io/images/changelly/thumbnail.png"
                       />
                     </div>
                     <div
