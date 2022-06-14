@@ -26,8 +26,12 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
-import { defaultNetworks } from "@/utils/server-utils";
-import { enabledNetworksCount, networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import {
+	enabledNetworksCount,
+	networkDisplayName,
+	profileAllEnabledNetworkIds,
+	profileAllEnabledNetworks,
+} from "@/utils/network-utils";
 
 enum Step {
 	NetworkStep = 1,
@@ -41,7 +45,6 @@ export const ImportWallet = () => {
 	const isLedgerImport = history.location.pathname.includes("/import/ledger");
 	const activeProfile = useActiveProfile();
 	const { env, persist } = useEnvironmentContext();
-	const availableNetworks = defaultNetworks(env, activeProfile);
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
@@ -61,7 +64,7 @@ export const ImportWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -193,14 +196,14 @@ export const ImportWallet = () => {
 
 		setValue("selectedNetworkIds", uniq([...selectedNetworkIds, wallet.network().id()]));
 
+		await syncAll(wallet);
+
 		wallet.mutator().alias(
 			getDefaultAlias({
 				network: wallet.network(),
 				profile: activeProfile,
 			}),
 		);
-
-		await syncAll(wallet);
 
 		await persist();
 

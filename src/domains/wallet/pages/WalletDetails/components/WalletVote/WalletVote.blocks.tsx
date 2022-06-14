@@ -8,7 +8,7 @@ import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { Tooltip } from "@/app/components/Tooltip";
 
-const votesHelpLink = "https://docs.arkvault.io/transactions/vote";
+const votesHelpLink = "https://arkvault.io/docs/transactions/vote";
 
 const HintIcon = ({ tooltipContent }: { tooltipContent: string }) => (
 	<Tooltip content={tooltipContent} className="mb-1">

@@ -5,6 +5,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
+import * as configurationModule from "@/app/contexts/Configuration/Configuration";
 import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader/PortfolioHeader";
 import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
 import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
@@ -309,9 +310,13 @@ describe("Portfolio grouped networks", () => {
 		const useWalletFiltersSpy = jest
 			.spyOn(filterWalletsHooks, "useWalletFilters")
 			.mockReturnValue(useWalletFiltersReturn);
+		const useConfigurationSpy = jest
+			.spyOn(configurationModule, "useConfiguration")
+			.mockReturnValue({ profileIsSyncing: false });
 
 		useDisplayWalletsReturn.hasWalletsMatchingOtherNetworks = true;
 		useWalletFiltersReturn.walletsDisplayType = "starred";
+
 		const { rerender } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGroupsList />
@@ -369,9 +374,14 @@ describe("Portfolio grouped networks", () => {
 
 		useDisplayWalletsSpy.mockRestore();
 		useWalletFiltersSpy.mockRestore();
+		useConfigurationSpy.mockRestore();
 	});
 
 	it("should render empty profile wallets", async () => {
+		const useConfigurationSpy = jest
+			.spyOn(configurationModule, "useConfiguration")
+			.mockReturnValue({ profileIsSyncing: false });
+
 		history.push(`/profiles/${emptyProfile.id()}/dashboard`);
 
 		render(
@@ -391,5 +401,7 @@ describe("Portfolio grouped networks", () => {
 
 		expect(within(emptyBlock).getByText(commonTranslations.CREATE)).toBeInTheDocument();
 		expect(within(emptyBlock).getByText(commonTranslations.IMPORT)).toBeInTheDocument();
+
+		useConfigurationSpy.mockRestore();
 	});
 });

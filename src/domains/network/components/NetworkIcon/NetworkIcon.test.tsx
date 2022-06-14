@@ -33,6 +33,12 @@ describe("NetworkIcon", () => {
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});
 
+	it("should render with placeholder", () => {
+		const { asFragment } = render(<NetworkIcon size="lg" />, {});
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render with test network", () => {
 		network = availableNetworksMock[1];
 

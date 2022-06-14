@@ -110,7 +110,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 	return (
 		<>
 			<div
-				className="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:mx-0 lg:flex-row"
+				className="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
 				data-testid="PortfolioBreakdown"
 			>
 				<div className="flex">

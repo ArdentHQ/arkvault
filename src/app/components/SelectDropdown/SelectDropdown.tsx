@@ -127,7 +127,13 @@ const SelectDropdown = ({
 						<div
 							data-testid="SelectDropdown__caret"
 							className="flex items-center justify-center py-2 px-1"
-							onClick={toggleMenu}
+							onClick={() => {
+								if (disabled) {
+									return;
+								}
+
+								toggleMenu();
+							}}
 						>
 							<Icon
 								name="CaretDown"

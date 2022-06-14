@@ -26,10 +26,9 @@ let resetProfileNetworksMock: () => void;
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const backButton = () => screen.getByTestId("StepNavigation__back-button");
 
-const ARKDevnetIconID = "NetworkIcon-ARK-ark.devnet";
+const ARKDevnetOptionId = "NetworkOption-ARK-ark.devnet";
 const networkStepID = "SendTransfer__network-step";
 const formStepID = "SendTransfer__form-step";
-const ariaInvalid = "aria-invalid";
 const ARKDevnet = "ARK Devnet";
 const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 
@@ -82,10 +81,8 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
-		await waitFor(() =>
-			expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", ARKDevnet),
-		);
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
@@ -118,30 +115,11 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		const input: HTMLInputElement = screen.getByTestId("SelectNetworkInput__input");
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 
-		userEvent.paste(input, "no match");
-		await waitFor(() => expect(input).toHaveValue("no match"));
+		await expect(screen.findByTestId(ARKDevnetOptionId)).resolves.toBeVisible();
 
-		expect(input).toHaveAttribute(ariaInvalid, "true");
-
-		input.select();
-		userEvent.paste(input, "ARK Dev");
-		await waitFor(() => expect(input).toHaveValue("ARK Dev"));
-
-		expect(input).not.toHaveAttribute(ariaInvalid);
-
-		userEvent.clear(input);
-		await waitFor(() => expect(input).not.toHaveValue());
-
-		expect(input).toHaveAttribute(ariaInvalid, "true");
-
-		await expect(screen.findByTestId(ARKDevnetIconID)).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
-		await waitFor(() => expect(input).toHaveValue(ARKDevnet));
-
-		expect(input).not.toHaveAttribute(ariaInvalid);
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -161,7 +139,7 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
@@ -189,10 +167,10 @@ describe("SendTransfer Network Selection", () => {
 
 		// Change network
 		// Unselect
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).not.toHaveValue());
 		// Select
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
@@ -224,16 +202,13 @@ describe("SendTransfer Network Selection", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(ARKDevnetIconID));
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(ARKDevnet));
-
+		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", ARKDevnet);
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
