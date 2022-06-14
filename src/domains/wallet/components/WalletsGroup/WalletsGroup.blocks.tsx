@@ -120,6 +120,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 	network,
 	wallets,
 	maxWidthReferences,
+	noBorder,
 }) => {
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
@@ -197,14 +198,18 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 					{(className) => <span className={className}>{renderWallets()}</span>}
 				</LabelledText>
 
-				<LabelledText label={t("COMMON.TOTAL_BALANCE")} maxWidthReference={maxWidthReferences?.balance}>
+				<LabelledText
+					label={t("COMMON.TOTAL_BALANCE")}
+					maxWidthReference={maxWidthReferences?.balance}
+					className={cn({ "border-r-0 pr-0 lg:border-r lg:pr-4": noBorder })}
+				>
 					{(className) => <span className={className}>{renderBalance()}</span>}
 				</LabelledText>
 
 				<LabelledText
 					label={t("COMMON.TOTAL_CURRENCY")}
 					maxWidthReference={maxWidthReferences?.currency}
-					className="hidden lg:flex"
+					className={cn("hidden lg:flex", { "border-r-0 pr-0": noBorder })}
 				>
 					{(className) => <span className={className}>{renderCurrency()}</span>}
 				</LabelledText>
