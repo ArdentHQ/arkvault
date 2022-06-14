@@ -22,7 +22,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { defaultNetworks } from "@/utils/server-utils";
-import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 
 enum Step {
 	NetworkStep = 1,
@@ -37,7 +37,6 @@ export const CreateWallet = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const availableNetworks = defaultNetworks(env, activeProfile);
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
 
@@ -45,7 +44,7 @@ export const CreateWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
 		},
 		mode: "onChange",
 	});
