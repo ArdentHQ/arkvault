@@ -111,17 +111,17 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 	return network.displayName();
 };
 
-export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	profile
-		.availableNetworks()
-		.filter((network) => {
-			if (isCustomNetwork(network)) {
-				return !!network.toObject().meta?.enabled;
-			}
+export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
+	profile.availableNetworks().filter((network) => {
+		if (isCustomNetwork(network)) {
+			return !!network.toObject().meta?.enabled;
+		}
 
-			return true;
-		})
-		.map((network) => network.id());
+		return true;
+	});
+
+export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
+	profileAllEnabledNetworks(profile).map((network) => network.id());
 
 export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	uniq(

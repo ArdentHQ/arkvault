@@ -7,7 +7,7 @@ exports[`ApplicationError should render with error message and reload 1`] = `
     data-testid="Main"
   >
     <div
-      class="css-wsh4oq"
+      class="css-kmmje1"
     >
       <nav
         aria-labelledby="main menu"
@@ -144,7 +144,7 @@ exports[`ApplicationError should render without error message 1`] = `
     data-testid="Main"
   >
     <div
-      class="css-wsh4oq"
+      class="css-kmmje1"
     >
       <nav
         aria-labelledby="main menu"
