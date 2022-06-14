@@ -50,10 +50,6 @@ const networksStub: any = {
 				},
 				name: "ARK Musig #1",
 			},
-		],
-	},
-	bpl: {
-		mainnet: [
 			{
 				host: {
 					custom: true,
@@ -61,7 +57,7 @@ const networksStub: any = {
 					host: `${peerHostLive}/api`,
 					type: "full",
 				},
-				name: "Another network",
+				name: "ARK #1",
 			},
 		],
 	},
@@ -549,7 +545,6 @@ describe("Servers Settings", () => {
 
 				userEvent.click(screen.getByTestId("Server-settings__submit-button"));
 
-				await waitFor(() => expect(settingsSetSpy).toHaveBeenCalledWith("FALLBACK_TO_DEFAULT_NODES", false));
 				await waitFor(() =>
 					expect(serverPushSpy).toHaveBeenCalledWith({
 						host: {
@@ -733,7 +728,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render customs servers", async () => {
+		it("should render custom servers", async () => {
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
