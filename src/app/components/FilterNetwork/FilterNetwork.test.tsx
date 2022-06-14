@@ -134,7 +134,9 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should toggle view all", async () => {
-		const { container } = render(<FilterNetworks options={[networkOptions[0], ...networkOptions]} hideViewAll={false} />);
+		const { container } = render(
+			<FilterNetworks options={[networkOptions[0], ...networkOptions]} hideViewAll={false} />,
+		);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
@@ -154,18 +156,24 @@ describe("FilterNetworks", () => {
 	it("should select all public networks", () => {
 		const onChange = jest.fn();
 
-		render(<FilterNetworks options={[
-			{
-				isSelected: false,
-				network: {
-					coinName: () => "Custom Network",
-					id: () => "whatever.custom",
-					isLive: () => true,
-				},
-			},
-			networkOptions[0],
-			networkOptions[1],
-		]} onChange={onChange} hideViewAll={false} />);
+		render(
+			<FilterNetworks
+				options={[
+					{
+						isSelected: false,
+						network: {
+							coinName: () => "Custom Network",
+							id: () => "whatever.custom",
+							isLive: () => true,
+						},
+					},
+					networkOptions[0],
+					networkOptions[1],
+				]}
+				onChange={onChange}
+				hideViewAll={false}
+			/>,
+		);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
@@ -173,14 +181,17 @@ describe("FilterNetworks", () => {
 
 		userEvent.click(screen.getByTestId("FilterNetwork__select-all-checkbox"));
 
-		expect(onChange).toHaveBeenCalledWith(expect.anything(), expect.arrayContaining([
-			...networkOptions
-				.filter((option) => option.network.isLive())
-				.map((option) => ({ ...option, isSelected: true })),
-			...networkOptions
-				.filter((option) => option.network.isTest())
-				.map((option) => ({ ...option, isSelected: false })),
-		]));
+		expect(onChange).toHaveBeenCalledWith(
+			expect.anything(),
+			expect.arrayContaining([
+				...networkOptions
+					.filter((option) => option.network.isLive())
+					.map((option) => ({ ...option, isSelected: true })),
+				...networkOptions
+					.filter((option) => option.network.isTest())
+					.map((option) => ({ ...option, isSelected: false })),
+			]),
+		);
 	});
 
 	it("should toggle a public network option", () => {
