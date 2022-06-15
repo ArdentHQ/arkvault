@@ -619,7 +619,7 @@ describe("General Settings", () => {
 		};
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
-		expect(getSelectInput("CURRENCY")).toHaveValue("BTC (Ƀ)");
+		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
