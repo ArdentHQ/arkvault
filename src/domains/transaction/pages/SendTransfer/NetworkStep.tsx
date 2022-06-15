@@ -1,6 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useMemo } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -12,15 +12,10 @@ import { useAvailableNetworks } from "@/domains/wallet/hooks";
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
 	const { setValue, watch } = useFormContext();
 
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
-
-	const availableNetworks = useMemo(
-		() =>
-			networks.filter((network) =>
-				profileAvailableNetworks.some((networkItem) => networkItem.id() === network.id()),
-			),
-		[profile, networks, profileAvailableNetworks],
-	);
+	const availableNetworks = useAvailableNetworks({
+		filter: (network) => networks.some((networkItem) => networkItem.id() === network.id()),
+		profile,
+	});
 
 	const selectedNetwork: Networks.Network = watch("network");
 
