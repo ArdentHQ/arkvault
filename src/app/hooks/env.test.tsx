@@ -221,39 +221,4 @@ describe("useNetworks", () => {
 
 		expect(current).toHaveLength(0);
 	});
-
-	it("should return sorted array by display names", () => {
-		const fakeNetworks = [
-			{
-				displayName: () => "2 network",
-				id: () => "1",
-			},
-			{
-				displayName: () => "1 network",
-				id: () => "2",
-			},
-		];
-		const availableNetworksMock = jest.spyOn(profile, "availableNetworks").mockReturnValue(fakeNetworks);
-		const fakeWallets = [
-			{
-				network: () => fakeNetworks[0],
-				networkId: () => "1",
-			},
-			{
-				network: () => fakeNetworks[1],
-				networkId: () => "2",
-			},
-		] as unknown as Contracts.IReadWriteWallet[];
-
-		jest.spyOn(profile.wallets(), "values").mockReturnValue(fakeWallets);
-
-		const {
-			result: { current },
-		} = renderHook(() => useNetworks(profile));
-
-		expect(current).toHaveLength(2);
-		expect(current[0].displayName()).toBe("1 network");
-
-		availableNetworksMock.mockRestore();
-	});
 });
