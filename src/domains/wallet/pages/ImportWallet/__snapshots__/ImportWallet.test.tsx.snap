@@ -1389,7 +1389,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

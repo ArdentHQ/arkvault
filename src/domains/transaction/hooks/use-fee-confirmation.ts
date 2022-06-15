@@ -1,4 +1,4 @@
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useEnvironmentContext } from "@/app/contexts";

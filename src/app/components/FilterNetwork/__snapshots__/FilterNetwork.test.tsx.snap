@@ -70,126 +70,6 @@ exports[`FilterNetwork should render public networks 1`] = `
           </span>
         </div>
       </li>
-      <li
-        class="inline-block cursor-pointer pr-5 pb-5"
-        data-testid="NetworkOption__bpl.mainnet"
-      >
-        <div
-          class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-v0ob3f"
-            data-testid="NetworkIcon__icon"
-            height="16"
-            width="16"
-          >
-            <svg>
-              bpl.svg
-            </svg>
-          </div>
-          <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pr-5 pb-5"
-        data-testid="NetworkOption__bind.mainnet"
-      >
-        <div
-          class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-v0ob3f"
-            data-testid="NetworkIcon__icon"
-            height="16"
-            width="16"
-          >
-            <svg>
-              bind.svg
-            </svg>
-          </div>
-          <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pr-5 pb-5"
-        data-testid="NetworkOption__bind.testnet"
-      >
-        <div
-          class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-v0ob3f"
-            data-testid="NetworkIcon__icon"
-            height="16"
-            width="16"
-          >
-            <svg>
-              bind.svg
-            </svg>
-          </div>
-          <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pr-5 pb-5"
-        data-testid="NetworkOption__xqr.mainnet"
-      >
-        <div
-          class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-v0ob3f"
-            data-testid="NetworkIcon__icon"
-            height="16"
-            width="16"
-          >
-            <svg>
-              xqr.svg
-            </svg>
-          </div>
-          <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
-      <li
-        class="inline-block cursor-pointer pr-5 pb-5"
-        data-testid="NetworkOption__xqr.testnet"
-      >
-        <div
-          class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-        >
-          <div
-            class="css-v0ob3f"
-            data-testid="NetworkIcon__icon"
-            height="16"
-            width="16"
-          >
-            <svg>
-              xqr.svg
-            </svg>
-          </div>
-          <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-          >
-            <span />
-          </span>
-        </div>
-      </li>
     </ul>
   </div>
 </div>
@@ -244,78 +124,6 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
             </span>
           </div>
         </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bpl.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bpl.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
       </ul>
     </div>
     <div
@@ -345,54 +153,6 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
             >
               <svg>
                 ark.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
               </svg>
             </div>
             <span
@@ -458,78 +218,6 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
             </span>
           </div>
         </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bpl.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bpl.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
       </ul>
     </div>
     <div
@@ -559,54 +247,6 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
             >
               <svg>
                 ark.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
               </svg>
             </div>
             <span
@@ -689,7 +329,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
         </li>
         <li
           class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bpl.mainnet"
+          data-testid="NetworkOption__ark.mainnet"
         >
           <div
             class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
@@ -701,55 +341,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
               width="16"
             >
               <svg>
-                bpl.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
+                ark.svg
               </svg>
             </div>
             <span
@@ -834,54 +426,6 @@ exports[`FilterNetworks should toggle view all 1`] = `
             </span>
           </div>
         </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -955,7 +499,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
         </li>
         <li
           class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bpl.mainnet"
+          data-testid="NetworkOption__ark.mainnet"
         >
           <div
             class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
@@ -967,55 +511,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
               width="16"
             >
               <svg>
-                bpl.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.mainnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
+                ark.svg
               </svg>
             </div>
             <span
@@ -1087,54 +583,6 @@ exports[`FilterNetworks should toggle view all 2`] = `
             </span>
           </div>
         </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__bind.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                bind.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
-        <li
-          class="inline-block cursor-pointer pr-5 pb-5"
-          data-testid="NetworkOption__xqr.testnet"
-        >
-          <div
-            class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-          >
-            <div
-              class="css-v0ob3f"
-              data-testid="NetworkIcon__icon"
-              height="16"
-              width="16"
-            >
-              <svg>
-                xqr.svg
-              </svg>
-            </div>
-            <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-            >
-              <span />
-            </span>
-          </div>
-        </li>
       </ul>
     </div>
   </div>
@@ -1186,126 +634,6 @@ exports[`NetworkOptions should render available networks options 1`] = `
         >
           <svg>
             ark.svg
-          </svg>
-        </div>
-        <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pr-5 pb-5"
-      data-testid="NetworkOption__bpl.mainnet"
-    >
-      <div
-        class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-      >
-        <div
-          class="css-v0ob3f"
-          data-testid="NetworkIcon__icon"
-          height="16"
-          width="16"
-        >
-          <svg>
-            bpl.svg
-          </svg>
-        </div>
-        <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pr-5 pb-5"
-      data-testid="NetworkOption__bind.mainnet"
-    >
-      <div
-        class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-      >
-        <div
-          class="css-v0ob3f"
-          data-testid="NetworkIcon__icon"
-          height="16"
-          width="16"
-        >
-          <svg>
-            bind.svg
-          </svg>
-        </div>
-        <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pr-5 pb-5"
-      data-testid="NetworkOption__bind.testnet"
-    >
-      <div
-        class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-      >
-        <div
-          class="css-v0ob3f"
-          data-testid="NetworkIcon__icon"
-          height="16"
-          width="16"
-        >
-          <svg>
-            bind.svg
-          </svg>
-        </div>
-        <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pr-5 pb-5"
-      data-testid="NetworkOption__xqr.mainnet"
-    >
-      <div
-        class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-      >
-        <div
-          class="css-v0ob3f"
-          data-testid="NetworkIcon__icon"
-          height="16"
-          width="16"
-        >
-          <svg>
-            xqr.svg
-          </svg>
-        </div>
-        <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
-        >
-          <span />
-        </span>
-      </div>
-    </li>
-    <li
-      class="inline-block cursor-pointer pr-5 pb-5"
-      data-testid="NetworkOption__xqr.testnet"
-    >
-      <div
-        class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
-      >
-        <div
-          class="css-v0ob3f"
-          data-testid="NetworkIcon__icon"
-          height="16"
-          width="16"
-        >
-          <svg>
-            xqr.svg
           </svg>
         </div>
         <span

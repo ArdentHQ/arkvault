@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
@@ -13,7 +13,7 @@ import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbv
 import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-const ARKTestURL = "https://ark-test.payvo.com";
+const ARKTestURL = "https://ark-test.arkvault.io";
 const walletsURLPath = "/api/wallets";
 
 describe("Add Participant", () => {

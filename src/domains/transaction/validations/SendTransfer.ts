@@ -1,5 +1,5 @@
-import { Coins, Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "react-i18next";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";

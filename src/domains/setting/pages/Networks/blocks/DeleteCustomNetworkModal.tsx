@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Input } from "@/app/components/Input";
 import { DeleteResource } from "@/app/components/DeleteResource";

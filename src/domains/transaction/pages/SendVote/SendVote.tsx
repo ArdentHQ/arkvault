@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";

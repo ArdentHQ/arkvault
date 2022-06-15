@@ -126,7 +126,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -430,7 +430,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/dark.png"
+              src="https://exchanges.arkvault.io/images/changenow/dark.png"
             />
           </div>
           <form
@@ -1109,7 +1109,7 @@ exports[`ExchangeView should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1413,7 +1413,7 @@ exports[`ExchangeView should render 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/light.png"
+              src="https://exchanges.arkvault.io/images/changenow/light.png"
             />
           </div>
           <form
@@ -2092,7 +2092,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2396,7 +2396,7 @@ exports[`ExchangeView should render dark theme 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/dark.png"
+              src="https://exchanges.arkvault.io/images/changenow/dark.png"
             />
           </div>
           <form
@@ -3075,7 +3075,7 @@ exports[`ExchangeView should render light theme 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3379,7 +3379,7 @@ exports[`ExchangeView should render light theme 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/light.png"
+              src="https://exchanges.arkvault.io/images/changenow/light.png"
             />
           </div>
           <form
@@ -4054,7 +4054,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

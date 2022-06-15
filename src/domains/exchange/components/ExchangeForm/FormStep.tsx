@@ -1,7 +1,7 @@
 import cn from "classnames";
-import { Networks } from "@payvo/sdk";
-import { startCase } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { startCase } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 

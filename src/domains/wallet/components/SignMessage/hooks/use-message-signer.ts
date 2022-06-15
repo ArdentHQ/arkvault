@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
 	const path = wallet.data().get<string>(ProfileContracts.WalletData.DerivationPath);

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import userEvent from "@testing-library/user-event";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import { renderHook } from "@testing-library/react-hooks";
 import { Context as ResponsiveContext } from "react-responsive";

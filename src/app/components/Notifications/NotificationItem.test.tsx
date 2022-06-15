@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
@@ -13,7 +13,7 @@ let notification: any;
 
 describe("Notifications", () => {
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com").get("/api/transactions").query(true).reply(200, {
+		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
 			data: TransactionsFixture.data,
 			meta: TransactionsFixture.meta,
 		});

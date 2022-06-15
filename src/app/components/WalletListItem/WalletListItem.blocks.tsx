@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React, { useCallback } from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { WalletListItemMobileProperties } from ".";
 import { Address } from "@/app/components/Address";

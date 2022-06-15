@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { screen } from "@testing-library/react";
 import { createHashHistory } from "history";
 import React from "react";

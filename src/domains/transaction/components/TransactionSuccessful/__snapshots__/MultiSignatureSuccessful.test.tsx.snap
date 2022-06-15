@@ -144,7 +144,7 @@ exports[`MultiSignatureSuccessful should render in lg 1`] = `
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -781,7 +781,7 @@ exports[`MultiSignatureSuccessful should render in md 1`] = `
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -1421,7 +1421,7 @@ exports[`MultiSignatureSuccessful should render in sm 1`] = `
                     class="ring-focus group inline-block flex items-center justify-end css-1jnqd87"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -1999,7 +1999,7 @@ exports[`MultiSignatureSuccessful should render in xl 1`] = `
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -2639,7 +2639,7 @@ exports[`MultiSignatureSuccessful should render in xs 1`] = `
                     class="ring-focus group inline-block flex items-center justify-end css-1jnqd87"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -3217,7 +3217,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -3854,7 +3854,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -4353,7 +4353,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                  href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span

@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/sdk-profiles";
+import { DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { SendVoteStepProperties } from "./SendVote.contracts";

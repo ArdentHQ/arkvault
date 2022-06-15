@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -37,7 +37,7 @@ describe("LedgerTabs", () => {
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {

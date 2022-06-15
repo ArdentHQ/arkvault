@@ -1,4 +1,4 @@
-import { camelCase } from "@payvo/sdk-helpers";
+import { camelCase } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useMemo, useState } from "react";
 
 import { httpClient } from "@/app/services";

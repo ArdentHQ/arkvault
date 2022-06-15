@@ -1,5 +1,5 @@
-import { sortByDesc } from "@payvo/sdk-helpers";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { sortByDesc } from "@ardenthq/sdk-helpers";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { useEffect, useState } from "react";
 
 import { useWalletConfig } from "@/domains/wallet/hooks";

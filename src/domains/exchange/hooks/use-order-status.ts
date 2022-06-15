@@ -1,5 +1,5 @@
-import { UUID } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { UUID } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback } from "react";
 
 import { httpClient } from "@/app/services";

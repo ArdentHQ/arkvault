@@ -1,5 +1,5 @@
-import { upperFirst } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { upperFirst } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { HttpClient } from "@/app/services/HttpClient";
 import {
@@ -11,7 +11,7 @@ import {
 } from "@/domains/exchange/exchange.contracts";
 
 // export const exchangeHost = "http://exchange-server.test/api";
-export const exchangeHost = "https://exchanges.payvo.com/api";
+export const exchangeHost = "https://exchanges.arkvault.io/api";
 
 /**
  * Implements the ability to perform communicate with exchange providers.

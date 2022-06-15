@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React, { memo } from "react";
 
 import { wrapperClasses, optionClasses } from "./NetworkOptions.styles";

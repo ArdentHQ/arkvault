@@ -1,5 +1,5 @@
-import { uniq } from "@payvo/sdk-helpers";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { uniq } from "@ardenthq/sdk-helpers";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { EmptyBlock } from "@/app/components/EmptyBlock";

@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DateTime } from "@payvo/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 const baseWallet = {
 	actions: [
@@ -27,7 +27,7 @@ const baseWallet = {
 	delegates: [
 		{
 			address: "AbuzhuDTyhnfAqepZzVcVsgd1Ym6FgETuW",
-			explorerUrl: "https://dexplorer.ark.io",
+			explorerUrl: "https://test.arkscan.io",
 			isActive: true,
 			msqUrl: "https://marketsquare.ark.io",
 			rank: 1,

@@ -46,7 +46,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -449,7 +449,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -1173,7 +1173,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1760,7 +1760,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2939,7 +2939,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -7565,7 +7565,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9515,7 +9515,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9918,7 +9918,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -10294,7 +10294,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -10697,7 +10697,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -11495,7 +11495,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -11898,7 +11898,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -12352,7 +12352,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -12755,7 +12755,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -13209,7 +13209,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -13612,7 +13612,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -14066,7 +14066,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

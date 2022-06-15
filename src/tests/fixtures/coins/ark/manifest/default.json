@@ -65,11 +65,11 @@
 	"hosts": [
 		{
 			"failedCount": 0,
-			"host": "https://ark-live.payvo.com/api",
+			"host": "https://ark-live.arkvault.io/api",
 			"type": "full"
 		},
 		{
-			"host": "https://explorer.ark.io",
+			"host": "https://live.arkscan.io",
 			"type": "explorer"
 		}
 	],

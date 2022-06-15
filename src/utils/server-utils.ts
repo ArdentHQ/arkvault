@@ -1,5 +1,5 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { Networks } from "@payvo/sdk";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
 import { networkDisplayName } from "./network-utils";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 

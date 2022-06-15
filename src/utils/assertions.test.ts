@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-null */
-import { Coins, Networks } from "@payvo/sdk";
-import { Profile, Wallet } from "@payvo/sdk-profiles";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { Profile, Wallet } from "@ardenthq/sdk-profiles";
 
 import {
 	assertArray,

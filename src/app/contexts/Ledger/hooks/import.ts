@@ -1,5 +1,5 @@
-import { Coins } from "@payvo/sdk";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Coins } from "@ardenthq/sdk";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { useCallback } from "react";
 import { LedgerDevice } from "./connection.state";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";

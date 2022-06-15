@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 
@@ -11,7 +11,7 @@ describe("useTransaction", () => {
 
 	beforeAll(() => {
 		nock.disableNetConnect();
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {

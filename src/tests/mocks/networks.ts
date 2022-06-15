@@ -1,5 +1,5 @@
-import { Coins, Networks } from "@payvo/sdk";
-import { ARK } from "@payvo/sdk-ark";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { ARK } from "@ardenthq/sdk-ark";
 
 const createNetwork = (coin: Coins.CoinBundle, network: string) =>
 	new Networks.Network(coin.manifest, coin.manifest.networks[network]);

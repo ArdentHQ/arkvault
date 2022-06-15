@@ -1,4 +1,4 @@
-import { BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
+import { BlockfolioSignal as FTXSignal } from "@ardenthq/sdk-news";
 
 interface NewsListProperties {
 	isLoading: boolean;

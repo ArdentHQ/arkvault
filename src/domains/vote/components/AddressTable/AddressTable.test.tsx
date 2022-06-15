@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -39,7 +39,7 @@ describe("AddressTable", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))

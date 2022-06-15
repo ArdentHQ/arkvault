@@ -1,5 +1,5 @@
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
 import nock from "nock";
@@ -154,7 +154,7 @@ export const defaultNetMocks = () => {
 	nock.disableNetConnect();
 
 	// devnet
-	nock("https://ark-test.payvo.com")
+	nock("https://ark-test.arkvault.io")
 		.get("/api/blockchain")
 		.reply(200, require("../tests/fixtures/coins/ark/devnet/blockchain.json"))
 		.get("/api/node/configuration")
@@ -200,7 +200,7 @@ export const defaultNetMocks = () => {
 		.persist();
 
 	// mainnet
-	nock("https://ark-live.payvo.com")
+	nock("https://ark-live.arkvault.io")
 		.get("/api/node/configuration")
 		.reply(200, require("../tests/fixtures/coins/ark/mainnet/configuration.json"))
 		.get("/api/peers")
@@ -223,7 +223,7 @@ export const defaultNetMocks = () => {
 		.reply(200, require("../tests/fixtures/exchange/cryptocompare-historical.json"))
 		.persist();
 
-	nock("https://exchanges.payvo.com")
+	nock("https://exchanges.arkvault.io")
 		.get("/api")
 		.reply(200, require("tests/fixtures/exchange/exchanges.json"))
 		.get("/api/changenow/currencies")

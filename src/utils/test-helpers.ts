@@ -1,5 +1,5 @@
-import { Base64 } from "@payvo/sdk-cryptography";
-import { Environment, StorageData } from "@payvo/sdk-profiles";
+import { Base64 } from "@ardenthq/sdk-cryptography";
+import { Environment, StorageData } from "@ardenthq/sdk-profiles";
 
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";

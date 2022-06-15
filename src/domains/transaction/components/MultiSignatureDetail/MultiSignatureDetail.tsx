@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 

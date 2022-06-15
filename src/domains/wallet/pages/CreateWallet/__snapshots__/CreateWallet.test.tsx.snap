@@ -126,7 +126,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -732,7 +732,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1456,7 +1456,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2062,7 +2062,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2791,7 +2791,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3397,7 +3397,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4001,7 +4001,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

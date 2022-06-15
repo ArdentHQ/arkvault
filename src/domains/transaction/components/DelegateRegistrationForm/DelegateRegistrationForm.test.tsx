@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk";
-import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
@@ -67,7 +67,7 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +delegateRegistrationFixture.data.amount / 1e8,
 		data: () => ({ data: () => delegateRegistrationFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${delegateRegistrationFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${delegateRegistrationFixture.data.id}`,
 		fee: () => +delegateRegistrationFixture.data.fee / 1e8,
 		id: () => delegateRegistrationFixture.data.id,
 		recipient: () => delegateRegistrationFixture.data.recipient,

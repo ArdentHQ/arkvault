@@ -1,6 +1,6 @@
 import { AssertionError } from "assert";
-import { Coins, Networks } from "@payvo/sdk";
-import { Contracts, DTO, Profile, Wallet } from "@payvo/sdk-profiles";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { Contracts, DTO, Profile, Wallet } from "@ardenthq/sdk-profiles";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {

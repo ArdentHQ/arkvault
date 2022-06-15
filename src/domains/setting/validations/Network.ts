@@ -1,5 +1,5 @@
 import { TFunction } from "react-i18next";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { addressIsValid } from "@/utils/peers";
 
 const validateAddress = (address: string, t: TFunction) => {

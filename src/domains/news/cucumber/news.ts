@@ -27,7 +27,7 @@ cucumber(
 			await t.expect(newsCard.count).eql(itemsPerPage);
 		},
 	},
-	[mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1")],
+	[mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1")],
 );
 
 cucumber(
@@ -52,8 +52,8 @@ cucumber(
 		},
 	},
 	[
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1"),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=2", "news/page-2"),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1"),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=2", "news/page-2"),
 	],
 );
 cucumber(
@@ -87,33 +87,33 @@ cucumber(
 		},
 	},
 	[
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1"),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=2", "news/page-2"),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1"),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=2", "news/page-2"),
 		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
 			filteredNews,
 		),
 		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Community%2CEmergency%2CTechnical",
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Community%2CEmergency%2CTechnical",
 			filteredNews,
 		),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Emergency%2CTechnical", filteredNews),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency", filteredNews),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical", filteredNews),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1&categories=Emergency%2CTechnical", filteredNews),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical%2CEmergency", filteredNews),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical", filteredNews),
 		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
-			filteredNews,
-		),
-		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
 			filteredNews,
 		),
 		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency&query=major+league+hacking",
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
 			filteredNews,
 		),
 		mockRequest(
-			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hackin",
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical%2CEmergency&query=major+league+hacking",
+			filteredNews,
+		),
+		mockRequest(
+			"https://news.arkvault.io/api?coins=ARK&page=1&categories=Technical&query=major+league+hackin",
 			filteredNews,
 		),
 	],
@@ -133,7 +133,10 @@ cucumber(
 		},
 	},
 	[
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1"),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd", "news/empty-response"),
+		mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1"),
+		mockRequest(
+			"https://news.arkvault.io/api?coins=ARK&page=1&query=fjdskfjdfsdjfkdsfjdsfsd",
+			"news/empty-response",
+		),
 	],
 );

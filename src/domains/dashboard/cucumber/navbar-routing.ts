@@ -43,7 +43,7 @@ cucumber(
 			await t.expect(Selector("h1").withExactText(translations.NEWS.PAGE_NEWS.TITLE).exists).ok();
 		},
 	},
-	[mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1")],
+	[mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1")],
 );
 cucumber("@routeToSend", {
 	...preSteps,

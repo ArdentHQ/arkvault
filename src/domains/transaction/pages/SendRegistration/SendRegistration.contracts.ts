@@ -1,5 +1,5 @@
-import { Signatories } from "@payvo/sdk";
-import { Contracts, DTO, Environment } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { Contracts, DTO, Environment } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
 import { useForm } from "react-hook-form";
 

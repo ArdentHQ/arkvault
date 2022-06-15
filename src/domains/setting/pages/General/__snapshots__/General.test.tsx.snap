@@ -126,7 +126,7 @@ exports[`General Settings should disable submit button when profile is not resto
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1722,7 +1722,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3331,7 +3331,7 @@ exports[`General Settings should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4923,7 +4923,7 @@ exports[`General Settings should show identicon when removing image if name is s
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -6515,7 +6515,7 @@ exports[`General Settings should update profile 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -8107,7 +8107,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9698,7 +9698,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

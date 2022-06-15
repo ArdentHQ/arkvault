@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
-import { Networks, Coins } from "@payvo/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks, Coins } from "@ardenthq/sdk";
 import { HttpClient } from "@/app/services/HttpClient";
 import { NetworkHostType, NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 

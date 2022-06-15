@@ -1,4 +1,4 @@
-import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

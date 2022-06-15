@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
@@ -60,7 +60,7 @@ describe("Signed Transaction Table", () => {
 		pendingUnvoteTransactions = [];
 
 		nock.disableNetConnect();
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {
@@ -72,7 +72,7 @@ describe("Signed Transaction Table", () => {
 				};
 			});
 
-		nock("https://ark-test-musig.payvo.com")
+		nock("https://ark-test-musig.arkvault.io")
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
 			.persist();

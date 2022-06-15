@@ -1,5 +1,5 @@
-import { sortByDesc } from "@payvo/sdk-helpers";
-import { Contracts, Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
+import { sortByDesc } from "@ardenthq/sdk-helpers";
+import { Contracts, Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useSynchronizer } from "@/app/hooks";

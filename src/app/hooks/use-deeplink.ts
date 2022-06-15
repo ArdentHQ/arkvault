@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 
 import { generatePath } from "react-router";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
 import { lowerCaseEquals } from "@/utils/equals";
