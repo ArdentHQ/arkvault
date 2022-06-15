@@ -285,7 +285,6 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 				<span
 					className={cn("font-semibold ", {
 						"text-theme-primary-600": isSelected,
-						"text-theme-secondary-700 dark:text-theme-secondary-200": !isSelected,
 					})}
 				>
 					{currency.coin.toUpperCase()}
