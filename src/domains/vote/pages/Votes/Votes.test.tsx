@@ -357,7 +357,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
-		const selectAddressButton = screen.getByTestId("AddressRow__select-0");
+		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
 		userEvent.click(selectAddressButton);
 
