@@ -1,13 +1,13 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
@@ -19,7 +19,7 @@ describe("LedgerScanStep", () => {
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {
@@ -121,8 +121,8 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
-	it("should render", async () => {
-		const { container } = render(<Component />);
+	it.each(["xs", "lg"])("should render responsive (%s)", async (breakpoint) => {
+		const { container } = renderResponsive(<Component />, breakpoint);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
@@ -165,6 +165,18 @@ describe("LedgerScanStep", () => {
 		await waitFor(validLedgerWallet);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render compact table", async () => {
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+
+		const { container } = render(<Component />);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+
+		expect(container).toMatchSnapshot();
+
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
 	it("should update the toast messages if already added", async () => {

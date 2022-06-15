@@ -165,7 +165,8 @@ export const translations = {
 		},
 
 		LEDGER_IMPORT_STEP: {
-			SUBTITLE: "Your Ledger addresses have been imported.",
+			SUBTITLE_one: "Your Ledger address has been imported.",
+			SUBTITLE_other: "Your Ledger addresses have been imported.",
 			TITLE: "Completed",
 		},
 

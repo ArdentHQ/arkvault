@@ -24,7 +24,7 @@ exports[`ProfilePageSkeleton should render without profile 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </div>

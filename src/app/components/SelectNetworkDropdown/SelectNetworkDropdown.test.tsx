@@ -1,5 +1,5 @@
 import React from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
 import { SelectNetworkDropdown } from "./SelectNetworkDropdown";
@@ -48,21 +48,34 @@ describe("SelectNetworkDropdown", () => {
 		const onChange = jest.fn();
 
 		const { container } = render(
-			<SelectNetworkDropdown profile={profile} selectedNetwork={networks[0]} onChange={onChange} />,
+			<SelectNetworkDropdown
+				profile={profile}
+				networks={[
+					...networks,
+					{
+						coinName: () => "Custom Network",
+						id: () => "whatever.custom",
+						isLive: () => true,
+						isTest: () => false,
+					},
+				]}
+				selectedNetwork={networks[0]}
+				onChange={onChange}
+			/>,
 		);
 
 		userEvent.click(screen.getByTestId("SelectDropdown__input"));
 
-		expect(screen.getByTestId("SelectDropdown__option--2")).toBeInTheDocument();
+		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--2"));
+		userEvent.click(screen.getByTestId("SelectDropdown__option--1"));
 
-		expect(onChange).toHaveBeenCalledWith(networks[2]);
+		expect(onChange).toHaveBeenCalledWith(networks[1]);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should not render network option label if network is not defined", () => {
-		const { container } = render(<NetworkOptionLabel networkById={() => {}} value="tests" />);
+		const { container } = render(<NetworkOptionLabel />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -75,7 +88,7 @@ describe("SelectNetworkDropdown", () => {
 			isTest: () => false,
 		};
 
-		render(<NetworkOptionLabel networkById={() => customNetworkMock} value="tests" />);
+		render(<NetworkOptionLabel network={customNetworkMock} value="tests" />);
 
 		expect(screen.getByText("MY")).toBeInTheDocument();
 	});

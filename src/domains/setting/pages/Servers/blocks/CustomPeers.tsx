@@ -2,9 +2,9 @@ import React, { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import cn from "classnames";
-import { Networks } from "@payvo/sdk";
-import { Numeral } from "@payvo/sdk-intl";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Numeral } from "@ardenthq/sdk-intl";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { NormalizedNetwork, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { EmptyBlock } from "@/app/components/EmptyBlock";

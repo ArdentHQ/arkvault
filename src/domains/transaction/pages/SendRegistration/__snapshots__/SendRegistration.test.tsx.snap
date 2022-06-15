@@ -7,7 +7,7 @@ exports[`Registration should register delegate without keyboard 1`] = `<Document
 exports[`Registration should register second signature 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -130,7 +130,7 @@ exports[`Registration should register second signature 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -541,7 +541,7 @@ exports[`Registration should register second signature 1`] = `
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -589,7 +589,7 @@ exports[`Registration should register second signature 1`] = `
 exports[`Registration should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -712,7 +712,7 @@ exports[`Registration should show error step and go back 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1117,7 +1117,7 @@ exports[`Registration should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <div
                       class="mr-auto"
@@ -1197,7 +1197,7 @@ exports[`Registration should show error step and go back 1`] = `
 exports[`Registration should show mnemonic error 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1320,7 +1320,7 @@ exports[`Registration should show mnemonic error 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1792,7 +1792,7 @@ exports[`Registration should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"

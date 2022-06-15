@@ -3,7 +3,7 @@
 exports[`Export Settings should render export settings 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -126,7 +126,7 @@ exports[`Export Settings should render export settings 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -762,7 +762,7 @@ exports[`Export Settings should render export settings 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1bx0hyc"

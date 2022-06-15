@@ -45,7 +45,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {
@@ -56,7 +56,7 @@ cucumber(
 				},
 			},
 		),
-		mockMuSigRequest("https://ark-test-musig.payvo.com", "store", {
+		mockMuSigRequest("https://ark-test-musig.arkvault.io", "store", {
 			result: {
 				id: "transaction-id",
 			},

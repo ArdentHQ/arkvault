@@ -1,5 +1,5 @@
-import { Enums } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Enums } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import { TFunction, useTranslation } from "react-i18next";
 

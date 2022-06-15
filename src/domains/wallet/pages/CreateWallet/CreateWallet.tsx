@@ -1,5 +1,5 @@
-import { uniq } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { uniq } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -21,8 +21,7 @@ import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
-import { defaultNetworks } from "@/utils/server-utils";
-import { enabledNetworksCount, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
 
 enum Step {
 	NetworkStep = 1,
@@ -33,11 +32,10 @@ enum Step {
 }
 
 export const CreateWallet = () => {
-	const { persist, env } = useEnvironmentContext();
+	const { persist } = useEnvironmentContext();
 	const history = useHistory();
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const availableNetworks = defaultNetworks(env, activeProfile);
 	const onlyHasOneNetwork = enabledNetworksCount(activeProfile) === 1;
 	const [activeTab, setActiveTab] = useState<Step>(onlyHasOneNetwork ? Step.WalletOverviewStep : Step.NetworkStep);
 
@@ -45,7 +43,7 @@ export const CreateWallet = () => {
 
 	const form = useForm<any>({
 		defaultValues: {
-			network: onlyHasOneNetwork ? availableNetworks[0] : undefined,
+			network: onlyHasOneNetwork ? profileAllEnabledNetworks(activeProfile)[0] : undefined,
 		},
 		mode: "onChange",
 	});
@@ -269,45 +267,47 @@ export const CreateWallet = () => {
 								<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
 							</TabPanel>
 
-							<FormButtons>
-								{activeTab < Step.SuccessStep && (
-									<Button
-										data-testid="CreateWallet__back-button"
-										disabled={isGeneratingWallet}
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-								)}
+							{activeTab <= Step.EncryptPasswordStep && (
+								<FormButtons>
+									{activeTab < Step.SuccessStep && (
+										<Button
+											data-testid="CreateWallet__back-button"
+											disabled={isGeneratingWallet}
+											variant="secondary"
+											onClick={handleBack}
+										>
+											{t("COMMON.BACK")}
+										</Button>
+									)}
 
-								{activeTab < Step.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-button"
-										disabled={isDirty ? !isValid || isGeneratingWallet : true}
-										isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
-										onClick={() => handleNext()}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
+									{activeTab < Step.EncryptPasswordStep && (
+										<Button
+											data-testid="CreateWallet__continue-button"
+											disabled={isDirty ? !isValid || isGeneratingWallet : true}
+											isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
+											onClick={() => handleNext()}
+										>
+											{t("COMMON.CONTINUE")}
+										</Button>
+									)}
 
-								{activeTab === Step.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-encryption-button"
-										disabled={
-											!isValid ||
-											isGeneratingWallet ||
-											!encryptionPassword ||
-											!confirmEncryptionPassword
-										}
-										isLoading={isGeneratingWallet}
-										onClick={handlePasswordSubmit}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
-							</FormButtons>
+									{activeTab === Step.EncryptPasswordStep && (
+										<Button
+											data-testid="CreateWallet__continue-encryption-button"
+											disabled={
+												!isValid ||
+												isGeneratingWallet ||
+												!encryptionPassword ||
+												!confirmEncryptionPassword
+											}
+											isLoading={isGeneratingWallet}
+											onClick={handlePasswordSubmit}
+										>
+											{t("COMMON.CONTINUE")}
+										</Button>
+									)}
+								</FormButtons>
+							)}
 
 							{activeTab === Step.SuccessStep && (
 								<FormButtons>

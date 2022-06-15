@@ -34,12 +34,12 @@ export const scrollToElement = async (selector: Selector, scrollable?: Selector)
 	return t.scroll(0, top);
 };
 
-export const BASEURL = "https://ark-test.payvo.com/api/";
+export const BASEURL = "https://ark-test.arkvault.io/api/";
 
 const PING_RESPONSE_PATH = "coins/ark/mainnet/ping";
 const pingServerUrls = new Set([
-	"https://ark-live.payvo.com",
-	"https://ark-test.payvo.com",
+	"https://ark-live.arkvault.io",
+	"https://ark-test.arkvault.io",
 	"https://explorer.blockpool.io:19031",
 	"https://apis.compendia.org",
 	"https://apis-testnet.compendia.org",
@@ -72,18 +72,21 @@ const walletMocks = () => {
 	const publicKeys = ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"];
 
 	const devnetMocks = [...addresses, ...publicKeys].map((identifier: string) =>
-		mockRequest(`https://ark-test.payvo.com/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
+		mockRequest(`https://ark-test.arkvault.io/api/wallets/${identifier}`, `coins/ark/devnet/wallets/${identifier}`),
 	);
 
 	const mainnetMocks = ["AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D"].map((identifier: string) =>
-		mockRequest(`https://ark-live.payvo.com/api/wallets/${identifier}`, `coins/ark/mainnet/wallets/${identifier}`),
+		mockRequest(
+			`https://ark-live.arkvault.io/api/wallets/${identifier}`,
+			`coins/ark/mainnet/wallets/${identifier}`,
+		),
 	);
 
 	// We want to use a clean version of this wallet in E2E tests so we don't have
 	// any pre-defined behaviours like delegation, voting and whatever else exists
 	devnetMocks.push(
 		mockRequest(
-			"https://ark-test.payvo.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			"coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr-basic",
 		),
 	);
@@ -107,12 +110,12 @@ const multisignatureMocks = () => {
 
 	for (const state of ["ready", "pending"]) {
 		mocks.push(
-			...publicKeys.map(() => mockMuSigRequest("https://ark-test-musig.payvo.com/", "list", { result: [] })),
+			...publicKeys.map(() => mockMuSigRequest("https://ark-test-musig.arkvault.io/", "list", { result: [] })),
 			...publicKeysMainnet.map((publicKey: string) =>
-				mockMuSigRequest("https://ark-live-musig.payvo.com/", "list", { result: [] }, { publicKey, state }),
+				mockMuSigRequest("https://ark-live-musig.arkvault.io/", "list", { result: [] }, { publicKey, state }),
 			),
 			...publicKeysMainnet.map(() =>
-				mockMuSigRequest("https://ark-test-musig.payvo.com/", "store", {
+				mockMuSigRequest("https://ark-test-musig.arkvault.io/", "store", {
 					result: { id: "1dd96f630a23d002722b5d61c86b3815e879a31592ddb5d8a7d1ed36c0b7050d" },
 				}),
 			),
@@ -171,8 +174,9 @@ const searchAddressesMocks = () => {
 				mockRequest(
 					(request: any) =>
 						request.url ===
-							`https://ark-test.payvo.com/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
-						request.url === `https://ark-test.payvo.com/api/transactions?limit=${limit}&address=${address}`,
+							`https://ark-test.arkvault.io/api/transactions?page=${page}&limit=${limit}&address=${address}` ||
+						request.url ===
+							`https://ark-test.arkvault.io/api/transactions?limit=${limit}&address=${address}`,
 					`coins/ark/devnet/transactions/byAddress/${address}-${page}-${limit}`,
 				),
 			),
@@ -246,20 +250,23 @@ export const mockMuSigRequest = (host: string, method: string, fixture: object, 
 export const requestMocks = {
 	configuration: [
 		// devnet
-		mockRequest("https://ark-test.payvo.com/api/blockchain", "coins/ark/devnet/blockchain"),
-		mockRequest("https://ark-test.payvo.com/api/node/configuration", "coins/ark/devnet/configuration"),
-		mockRequest("https://ark-test.payvo.com/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
-		mockRequest("https://ark-test.payvo.com/api/node/fees", "coins/ark/devnet/node-fees"),
-		mockRequest("https://ark-test.payvo.com/api/node/syncing", "coins/ark/devnet/syncing"),
-		mockRequest("https://ark-test.payvo.com/api/peers", "coins/ark/devnet/peers"),
+		mockRequest("https://ark-test.arkvault.io/api/blockchain", "coins/ark/devnet/blockchain"),
+		mockRequest("https://ark-test.arkvault.io/api/node/configuration", "coins/ark/devnet/configuration"),
+		mockRequest(
+			"https://ark-test.arkvault.io/api/node/configuration/crypto",
+			"coins/ark/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://ark-test.arkvault.io/api/node/fees", "coins/ark/devnet/node-fees"),
+		mockRequest("https://ark-test.arkvault.io/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://ark-test.arkvault.io/api/peers", "coins/ark/devnet/peers"),
 
 		// mainnet
 		mockRequest(
-			"https://ark-live.payvo.com/api/node/configuration/crypto",
+			"https://ark-live.arkvault.io/api/node/configuration/crypto",
 			"coins/ark/mainnet/cryptoConfiguration",
 		),
-		mockRequest("https://ark-live.payvo.com/api/node/syncing", "coins/ark/mainnet/syncing"),
-		mockRequest("https://ark-live.payvo.com/api/node/fees", "coins/ark/mainnet/node-fees"),
+		mockRequest("https://ark-live.arkvault.io/api/node/syncing", "coins/ark/mainnet/syncing"),
+		mockRequest("https://ark-live.arkvault.io/api/node/fees", "coins/ark/mainnet/node-fees"),
 
 		// Compendia
 		mockRequest("https://apis.compendia.org/api/node/configuration", "coins/ark/devnet/configuration"),
@@ -290,15 +297,15 @@ export const requestMocks = {
 	],
 	delegates: [
 		// devnet
-		mockRequest("https://ark-test.payvo.com/api/delegates", delegatesFixture),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=1", delegatesFixture),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=2", delegatesFixture),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=3", delegatesFixture),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=4", delegatesFixture),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=5", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates?page=1", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates?page=2", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates?page=3", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates?page=4", delegatesFixture),
+		mockRequest("https://ark-test.arkvault.io/api/delegates?page=5", delegatesFixture),
 
 		// mainnet
-		mockRequest("https://ark-live.payvo.com/api/delegates", "coins/ark/mainnet/delegates"),
+		mockRequest("https://ark-live.arkvault.io/api/delegates", "coins/ark/mainnet/delegates"),
 	],
 	exchange: [
 		mockRequest(
@@ -315,7 +322,7 @@ export const requestMocks = {
 		mockRequest(/thumbnail.png$/, () => imageFixture),
 		mockRequest(/dark.png$/, () => imageFixture),
 		mockRequest(/light.png$/, () => imageFixture),
-		mockRequest("https://exchanges.payvo.com/api", "exchange/exchanges"),
+		mockRequest("https://exchanges.arkvault.io/api", "exchange/exchanges"),
 	],
 	multisignature: [...multisignatureMocks()],
 	other: [
@@ -336,115 +343,115 @@ export const requestMocks = {
 	],
 	transactions: [
 		// devnet
-		mockRequest("https://ark-test.payvo.com/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
-		mockRequest("https://ark-test.payvo.com/api/transactions?limit=10", transactionsFixture),
-		mockRequest("https://ark-test.payvo.com/api/transactions?limit=20", transactionsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
+		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=10", transactionsFixture),
+		mockRequest("https://ark-test.arkvault.io/api/transactions?limit=20", transactionsFixture),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.arkvault.io/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			"coins/ark/devnet/notification-transactions",
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			transactionsFixture,
 		),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
 			transactionsFixture,
 		),
 		// unconfirmed transactions list before sending single or multiPayment transaction
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			/https:\/\/ark-test\.payvo\.com\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
+			/https:\/\/ark-test\.arkvault\.io\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
 
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
+			"https://ark-test.arkvault.io/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
 			{ data: [], meta: {} },
 		),
 
 		// mainnet
-		mockRequest("https://ark-live.payvo.com/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
+		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
 
 		...searchAddressesMocks(),
 	],
 	wallets: [
 		mockRequest(
-			"https://ark-test.payvo.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
+			"https://ark-test.arkvault.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
 			"coins/ark/devnet/votes",
 		),
 

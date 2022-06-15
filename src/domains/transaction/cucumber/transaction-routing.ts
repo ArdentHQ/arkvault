@@ -70,7 +70,7 @@ cucumber(
 		},
 	},
 	[
-		mockRequest("https://ark-test.payvo.com/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS", {
+		mockRequest("https://ark-test.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS", {
 			data: {
 				address: "DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
 				attributes: {

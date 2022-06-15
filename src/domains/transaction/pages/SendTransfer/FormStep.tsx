@@ -1,5 +1,5 @@
-import { Enums, Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Enums, Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useProfileJobs } from "@/app/hooks";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -17,7 +17,6 @@ import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 
 export const FormStep = ({
-	networks,
 	profile,
 	deeplinkProps,
 }: {
@@ -133,12 +132,11 @@ export const FormStep = ({
 			<div className="space-y-6 pt-6">
 				<FormField name="network">
 					<FormLabel label={t("COMMON.CRYPTOASSET")} />
-					<SelectNetwork
-						id="SendTransfer__network"
-						networks={networks}
-						selected={network}
-						disabled
-						hideOptions
+					<SelectNetworkDropdown
+						profile={profile}
+						networks={[network]}
+						selectedNetwork={network}
+						isDisabled
 					/>
 				</FormField>
 

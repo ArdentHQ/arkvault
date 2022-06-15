@@ -1,8 +1,8 @@
-import { uniqBy } from "@payvo/sdk-helpers";
-import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
-import { Contracts } from "@payvo/sdk";
+import { uniqBy } from "@ardenthq/sdk-helpers";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
-import { BIP44 } from "@payvo/sdk-cryptography";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";

@@ -1,4 +1,4 @@
-import { shuffle, uniq } from "@payvo/sdk-helpers";
+import { shuffle, uniq } from "@ardenthq/sdk-helpers";
 
 interface Properties {
 	options: string[];

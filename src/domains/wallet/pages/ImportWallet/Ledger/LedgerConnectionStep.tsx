@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -108,7 +108,13 @@ export const LedgerConnectionStep = ({
 
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork id="ImportWallet__network" networks={[]} selected={network} disabled />
+				<SelectNetwork
+					id="ImportWallet__network"
+					networks={[network, network, network]}
+					selectedNetwork={network}
+					isDisabled
+					profile={activeProfile}
+				/>
 			</FormField>
 
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />

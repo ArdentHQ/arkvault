@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { BIP39 } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -61,7 +61,6 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
@@ -73,17 +72,15 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		userEvent.clear(selectNetworkInput);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton).toBeDisabled());
 
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -173,7 +170,6 @@ describe("EncryptionPasswordStep", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
@@ -185,17 +181,15 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
+		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
-		userEvent.clear(selectNetworkInput);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		await waitFor(() => expect(continueButton).toBeDisabled());
 
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
+		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 

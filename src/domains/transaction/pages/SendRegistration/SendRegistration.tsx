@@ -1,5 +1,5 @@
-import { Networks } from "@payvo/sdk";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";

@@ -87,7 +87,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
@@ -806,7 +806,7 @@ exports[`Notifications should open and close transaction details modal 1`] = `
                           class="ring-focus group inline-block flex items-center css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/transactions/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
+                          href="https://test.arkscan.io/transactions/127d323ff3c3a40cb7abec8aa3b045e8c45c72c8feb7dc667d2f85978f8b10cd"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -951,7 +951,7 @@ exports[`Notifications should render with transactions in lg 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
@@ -1401,7 +1401,7 @@ exports[`Notifications should render with transactions in md 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
@@ -1851,7 +1851,7 @@ exports[`Notifications should render with transactions in sm 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
@@ -2261,7 +2261,7 @@ exports[`Notifications should render with transactions in xl 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"
@@ -2711,7 +2711,7 @@ exports[`Notifications should render with transactions in xs 1`] = `
                             <span
                               class="text-md font-bold text-theme-secondary-600"
                             >
-                              Payvo Wallet
+                              ARKVault
                             </span>
                             <span
                               class="text-md text-theme-secondary-600"

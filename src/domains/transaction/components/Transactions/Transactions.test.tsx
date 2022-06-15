@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
@@ -27,7 +27,7 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-const API_BASE_URL = "https://ark-test.payvo.com";
+const API_BASE_URL = "https://ark-test.arkvault.io";
 
 describe("Transactions", () => {
 	beforeAll(async () => {

@@ -8,9 +8,9 @@ const exchange = {
 	emailAddress: "support@changenow.io",
 	isActive: true,
 	logo: {
-		dark: "https://exchanges.payvo.com/images/changenow/dark.png",
-		light: "https://exchanges.payvo.com/images/changenow/light.png",
-		thumbnail: "https://exchanges.payvo.com/images/changenow/thumbnail.png",
+		dark: "https://exchanges.arkvault.io/images/changenow/dark.png",
+		light: "https://exchanges.arkvault.io/images/changenow/light.png",
+		thumbnail: "https://exchanges.arkvault.io/images/changenow/thumbnail.png",
 	},
 	name: "ChangeNOW",
 	privacyPolicy: "https://changenow.io/privacy-policy",

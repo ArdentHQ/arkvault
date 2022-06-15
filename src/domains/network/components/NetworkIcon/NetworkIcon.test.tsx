@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -31,6 +31,12 @@ describe("NetworkIcon", () => {
 		userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
+	});
+
+	it("should render with placeholder", () => {
+		const { asFragment } = render(<NetworkIcon size="lg" />, {});
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with test network", () => {

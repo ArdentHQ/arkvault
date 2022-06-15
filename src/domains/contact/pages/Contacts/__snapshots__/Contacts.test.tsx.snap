@@ -3,7 +3,7 @@
 exports[`Contacts should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -120,7 +120,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1303,7 +1303,7 @@ exports[`Contacts should render compact on md screen 1`] = `
 exports[`Contacts should render compact on md screen if uses expanded tables 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -1420,7 +1420,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2603,7 +2603,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
 exports[`Contacts should render responsive with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -2720,7 +2720,7 @@ exports[`Contacts should render responsive with contacts 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3226,7 +3226,7 @@ exports[`Contacts should render responsive with contacts 1`] = `
 exports[`Contacts should render with contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -3343,7 +3343,7 @@ exports[`Contacts should render with contacts 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4526,7 +4526,7 @@ exports[`Contacts should render with contacts 1`] = `
 exports[`Contacts should render without contacts 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -4643,7 +4643,7 @@ exports[`Contacts should render without contacts 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

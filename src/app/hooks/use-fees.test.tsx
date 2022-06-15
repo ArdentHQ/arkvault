@@ -1,5 +1,5 @@
-import { ARK } from "@payvo/sdk-ark";
-import { BigNumber } from "@payvo/sdk-helpers";
+import { ARK } from "@ardenthq/sdk-ark";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 

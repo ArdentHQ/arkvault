@@ -3,7 +3,7 @@
 exports[`ImportProfile should apply theme setting of imported profile regardless of OS preferences 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <nav
       aria-labelledby="main menu"
@@ -29,7 +29,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -652,7 +652,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           </fieldset>
                         </div>
                         <div
-                          class="css-1rsixno"
+                          class="css-1kzb86y"
                         >
                           <button
                             class="css-1jhy6v9"
@@ -695,7 +695,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
 exports[`ImportProfile should apply theme setting of imported profile regardless of OS preferences 2`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <nav
       aria-labelledby="main menu"
@@ -721,7 +721,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1344,7 +1344,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           </fieldset>
                         </div>
                         <div
-                          class="css-1rsixno"
+                          class="css-1kzb86y"
                         >
                           <button
                             class="css-1jhy6v9"
@@ -1387,7 +1387,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
 exports[`ImportProfile should render first step 1`] = `
 <div>
   <div
-    class="css-lyknmy"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
@@ -1413,7 +1413,7 @@ exports[`ImportProfile should render first step 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1554,7 +1554,7 @@ exports[`ImportProfile should render first step 1`] = `
                   </button>
                 </p>
                 <div
-                  class="css-v3xgej"
+                  class="css-1d6x3tk"
                 >
                   <button
                     class="css-1jhy6v9"

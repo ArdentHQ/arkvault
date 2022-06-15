@@ -1,4 +1,4 @@
-import { Enums } from "@payvo/sdk";
+import { Enums } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 

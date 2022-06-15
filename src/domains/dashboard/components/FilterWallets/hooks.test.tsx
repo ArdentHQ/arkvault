@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 

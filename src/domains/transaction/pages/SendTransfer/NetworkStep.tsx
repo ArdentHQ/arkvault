@@ -1,5 +1,5 @@
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { useAvailableNetworks } from "@/domains/wallet/hooks";
 
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
-	const { setValue, setError, clearErrors, watch } = useFormContext();
+	const { setValue, watch } = useFormContext();
 
 	const profileAvailableNetworks = useAvailableNetworks({ profile });
 
@@ -30,28 +30,6 @@ export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile
 		setValue("network", network, { shouldDirty: true, shouldValidate: true });
 	};
 
-	const handleInputChange = (value?: string, suggestion?: string) => {
-		if (suggestion) {
-			clearErrors("network");
-		}
-
-		if (!value) {
-			return setError("network", {
-				message: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-					field: t("COMMON.CRYPTOASSET"),
-				}),
-				type: "manual",
-			});
-		}
-
-		if (!suggestion) {
-			return setError("network", {
-				message: t("COMMON.INPUT_NETWORK.VALIDATION.NETWORK_NOT_FOUND"),
-				type: "manual",
-			});
-		}
-	};
-
 	return (
 		<section data-testid="SendTransfer__network-step" className="space-y-6">
 			<StepHeader
@@ -62,10 +40,10 @@ export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
 				<SelectNetwork
+					profile={profile}
 					id="SendTransfer__network-step__select"
 					networks={availableNetworks}
-					selected={selectedNetwork}
-					onInputChange={handleInputChange}
+					selectedNetwork={selectedNetwork}
 					onSelect={handleSelect}
 				/>
 			</FormField>

@@ -64,6 +64,7 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 						<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
 					</Button>
 				)}
+
 				{!!onRepeat && (
 					<Button
 						data-testid="ErrorStep__repeat-button"

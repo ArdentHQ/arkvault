@@ -3,7 +3,7 @@
 exports[`CreateProfile should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <nav
       aria-labelledby="main menu"
@@ -29,7 +29,7 @@ exports[`CreateProfile should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -554,7 +554,7 @@ exports[`CreateProfile should render 1`] = `
                     </fieldset>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1jhy6v9"

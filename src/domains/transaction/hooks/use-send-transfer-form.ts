@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { DefaultValues } from "react-hook-form/dist/types/form";
@@ -11,7 +11,7 @@ import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transacti
 import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-
+import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
@@ -129,7 +129,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		register("suppressWarning");
 
 		if (onlyHasOneNetwork) {
-			console.log(":D");
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);
@@ -187,7 +186,9 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		const remaining = remainingBalance - fee;
 
-		setValue("amount", remaining);
+		// Using `8` for precision because is the maximum number of decimals
+		// that the amount field supports.
+		setValue("amount", precisionRound(remaining, 8));
 
 		void trigger(["fee", "amount"]);
 	}, [fee]); // eslint-disable-line react-hooks/exhaustive-deps

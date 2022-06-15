@@ -3,7 +3,7 @@
 exports[`Servers Settings should render servers settings 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -124,7 +124,7 @@ exports[`Servers Settings should render servers settings 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -929,7 +929,7 @@ exports[`Servers Settings should render servers settings 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -958,7 +958,7 @@ exports[`Servers Settings should render servers settings 1`] = `
 exports[`Servers Settings with servers should ping the servers in an interval 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1079,7 +1079,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1986,7 +1986,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                             width="20"
                                           >
                                             <svg>
-                                              bpl.svg
+                                              ark.svg
                                             </svg>
                                           </div>
                                         </div>
@@ -2000,13 +2000,13 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                               class="css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
-                                              Another network
+                                              ARK #1
                                             </span>
                                           </div>
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live.payvo.com/api
+                                            https://ark-live.arkvault.io/api
                                           </div>
                                         </div>
                                       </div>
@@ -2188,7 +2188,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-test-musig.payvo.com
+                                            https://ark-test-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -2359,7 +2359,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live-musig.payvo.com
+                                            https://ark-live-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -2509,7 +2509,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -2535,10 +2535,10 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
 </DocumentFragment>
 `;
 
-exports[`Servers Settings with servers should render customs servers 1`] = `
+exports[`Servers Settings with servers should render custom servers 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2659,7 +2659,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3558,7 +3558,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                             width="20"
                                           >
                                             <svg>
-                                              bpl.svg
+                                              ark.svg
                                             </svg>
                                           </div>
                                         </div>
@@ -3572,13 +3572,13 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                               class="css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
-                                              Another network
+                                              ARK #1
                                             </span>
                                           </div>
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live.payvo.com/api
+                                            https://ark-live.arkvault.io/api
                                           </div>
                                         </div>
                                       </div>
@@ -3755,7 +3755,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-test-musig.payvo.com
+                                            https://ark-test-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -3921,7 +3921,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live-musig.payvo.com
+                                            https://ark-live-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -4066,7 +4066,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -4095,7 +4095,7 @@ exports[`Servers Settings with servers should render customs servers 1`] = `
 exports[`Servers Settings with servers should render customs servers in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4216,7 +4216,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -5027,14 +5027,14 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                                           width="20"
                                         >
                                           <svg>
-                                            bpl.svg
+                                            ark.svg
                                           </svg>
                                         </div>
                                       </div>
                                       <div
                                         class="truncate font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                       >
-                                        Another network
+                                        ARK #1
                                       </div>
                                     </div>
                                     <div
@@ -5334,7 +5334,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -5363,7 +5363,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
 exports[`Servers Settings with servers should show status ok after ping the servers 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -5484,7 +5484,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -6391,7 +6391,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                             width="20"
                                           >
                                             <svg>
-                                              bpl.svg
+                                              ark.svg
                                             </svg>
                                           </div>
                                         </div>
@@ -6405,13 +6405,13 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                               class="css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
-                                              Another network
+                                              ARK #1
                                             </span>
                                           </div>
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live.payvo.com/api
+                                            https://ark-live.arkvault.io/api
                                           </div>
                                         </div>
                                       </div>
@@ -6593,7 +6593,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-test-musig.payvo.com
+                                            https://ark-test-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -6764,7 +6764,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live-musig.payvo.com
+                                            https://ark-live-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -6914,7 +6914,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -6943,7 +6943,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
 exports[`Servers Settings with servers should show status ok after ping the servers on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -7064,7 +7064,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -7883,14 +7883,14 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           width="20"
                                         >
                                           <svg>
-                                            bpl.svg
+                                            ark.svg
                                           </svg>
                                         </div>
                                       </div>
                                       <div
                                         class="truncate font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                       >
-                                        Another network
+                                        ARK #1
                                       </div>
                                     </div>
                                     <div
@@ -8205,7 +8205,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -8234,7 +8234,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
 exports[`Servers Settings with servers should show status ok after ping the servers on mobile when expanded 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -8355,7 +8355,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9174,14 +9174,14 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           width="20"
                                         >
                                           <svg>
-                                            bpl.svg
+                                            ark.svg
                                           </svg>
                                         </div>
                                       </div>
                                       <div
                                         class="truncate font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                       >
-                                        Another network
+                                        ARK #1
                                       </div>
                                     </div>
                                     <div
@@ -9271,7 +9271,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         <div
                                           class="break-all text-right"
                                         >
-                                          Blockpool
+                                          ARK
                                         </div>
                                       </div>
                                     </div>
@@ -9318,7 +9318,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         <div
                                           class="break-all text-right"
                                         >
-                                          https://ark-live.payvo.com/api
+                                          https://ark-live.arkvault.io/api
                                         </div>
                                       </div>
                                     </div>
@@ -9673,7 +9673,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -9702,7 +9702,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
 exports[`Servers Settings with unreachable servers should show status error if request fails 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -9823,7 +9823,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -10730,7 +10730,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                             width="20"
                                           >
                                             <svg>
-                                              bpl.svg
+                                              ark.svg
                                             </svg>
                                           </div>
                                         </div>
@@ -10744,13 +10744,13 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                               class="css-u3jrna"
                                               data-testid="TruncateEnd"
                                             >
-                                              Another network
+                                              ARK #1
                                             </span>
                                           </div>
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live.payvo.com/api
+                                            https://ark-live.arkvault.io/api
                                           </div>
                                         </div>
                                       </div>
@@ -10932,7 +10932,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-test-musig.payvo.com
+                                            https://ark-test-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -11103,7 +11103,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           <div
                                             class="truncate text-sm font-semibold text-theme-secondary-500"
                                           >
-                                            https://ark-live-musig.payvo.com
+                                            https://ark-live-musig.arkvault.io
                                           </div>
                                         </div>
                                       </div>
@@ -11253,7 +11253,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -11282,7 +11282,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
 exports[`Servers Settings with unreachable servers should show status error if request fails on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -11403,7 +11403,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -12222,14 +12222,14 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           width="20"
                                         >
                                           <svg>
-                                            bpl.svg
+                                            ark.svg
                                           </svg>
                                         </div>
                                       </div>
                                       <div
                                         class="truncate font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                       >
-                                        Another network
+                                        ARK #1
                                       </div>
                                     </div>
                                     <div
@@ -12544,7 +12544,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -12573,7 +12573,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
 exports[`Servers Settings with unreachable servers should show status error if request fails on mobile when expanded 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -12694,7 +12694,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -13513,14 +13513,14 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           width="20"
                                         >
                                           <svg>
-                                            bpl.svg
+                                            ark.svg
                                           </svg>
                                         </div>
                                       </div>
                                       <div
                                         class="truncate font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                       >
-                                        Another network
+                                        ARK #1
                                       </div>
                                     </div>
                                     <div
@@ -13610,7 +13610,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         <div
                                           class="break-all text-right"
                                         >
-                                          Blockpool
+                                          ARK
                                         </div>
                                       </div>
                                     </div>
@@ -13657,7 +13657,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         <div
                                           class="break-all text-right"
                                         >
-                                          https://ark-live.payvo.com/api
+                                          https://ark-live.arkvault.io/api
                                         </div>
                                       </div>
                                     </div>
@@ -14012,7 +14012,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"

@@ -1,6 +1,6 @@
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { UnconfirmedTransactionTable } from "./UnconfirmedTransactionTable";

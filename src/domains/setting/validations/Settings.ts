@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { TFunction } from "react-i18next";
 
 import { lowerCaseEquals } from "@/utils/equals";

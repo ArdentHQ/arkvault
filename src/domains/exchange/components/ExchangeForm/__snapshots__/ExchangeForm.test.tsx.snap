@@ -366,7 +366,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
             data-testid="ExchangeForm__form-step"
           >
             <div
-              class="flex space-x-3"
+              class="relative flex space-x-3"
             >
               <div
                 class="w-2/5"
@@ -382,7 +382,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                     Cryptoasset
                   </label>
                   <div
-                    class="relative w-full"
+                    class="static sm:relative"
                     data-testid="SelectDropdown"
                   >
                     <div
@@ -537,7 +537,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                   class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                 >
                   <span
-                    class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                    class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                   >
                     Estimated Rate
                     :
@@ -572,7 +572,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
               class="space-y-6"
             >
               <div
-                class="flex space-x-3"
+                class="relative flex space-x-3"
               >
                 <div
                   class="w-2/5"
@@ -588,7 +588,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                       Cryptoasset
                     </label>
                     <div
-                      class="relative w-full"
+                      class="static sm:relative"
                       data-testid="SelectDropdown"
                     >
                       <div
@@ -841,7 +841,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
           </div>
         </div>
         <div
-          class="css-1rsixno"
+          class="css-1kzb86y"
         >
           <button
             class="css-1jhy6v9"
@@ -1170,7 +1170,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://explorer.ark.io/transaction/payoutHash"
+                          href="https://live.arkscan.io/transaction/payoutHash"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -1235,7 +1235,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://explorer.ark.io/wallets/payoutAddress"
+                          href="https://live.arkscan.io/wallets/payoutAddress"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -1307,7 +1307,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
           </div>
         </div>
         <div
-          class="css-1rsixno"
+          class="css-1kzb86y"
         >
           <button
             class="css-1bx0hyc"
@@ -1623,7 +1623,7 @@ exports[`FormStep should render 1`] = `
     data-testid="ExchangeForm__form-step"
   >
     <div
-      class="flex space-x-3"
+      class="relative flex space-x-3"
     >
       <div
         class="w-2/5"
@@ -1639,7 +1639,7 @@ exports[`FormStep should render 1`] = `
             Cryptoasset
           </label>
           <div
-            class="relative w-full"
+            class="static sm:relative"
             data-testid="SelectDropdown"
           >
             <div
@@ -1796,7 +1796,7 @@ exports[`FormStep should render 1`] = `
           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
         >
           <span
-            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
           >
             Estimated Rate
             :
@@ -1831,7 +1831,7 @@ exports[`FormStep should render 1`] = `
       class="space-y-6"
     >
       <div
-        class="flex space-x-3"
+        class="relative flex space-x-3"
       >
         <div
           class="w-2/5"
@@ -1847,7 +1847,7 @@ exports[`FormStep should render 1`] = `
               Cryptoasset
             </label>
             <div
-              class="relative w-full"
+              class="static sm:relative"
               data-testid="SelectDropdown"
             >
               <div

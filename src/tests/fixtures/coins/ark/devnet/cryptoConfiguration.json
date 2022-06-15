@@ -1845,7 +1845,7 @@
 			"wif": 170,
 			"slip44": 1,
 			"aip20": 1,
-			"client": { "token": "DARK", "symbol": "DѦ", "explorer": "https://dexplorer.ark.io" }
+			"client": { "token": "DARK", "symbol": "DѦ", "explorer": "https://test.arkscan.io" }
 		}
 	}
 }

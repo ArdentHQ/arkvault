@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 

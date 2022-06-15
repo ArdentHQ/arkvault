@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -37,10 +37,6 @@ describe("SelectNetworkStep", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
-
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		expect(selectNetworkInput).toBeInTheDocument();
 	});
 
 	it("should render without test networks", async () => {
@@ -54,14 +50,6 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		expect(selectNetworkInput).toBeInTheDocument();
-
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
-		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
-
 		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
@@ -78,14 +66,7 @@ describe("SelectNetworkStep", () => {
 		);
 
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		expect(selectNetworkInput).toBeInTheDocument();
-
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
-
+		expect(screen.getByTestId("SelectDropdown")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();

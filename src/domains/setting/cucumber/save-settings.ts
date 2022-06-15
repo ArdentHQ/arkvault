@@ -101,11 +101,11 @@ cucumber(
 	},
 	[
 		mockRequest(
-			"https://ark-live.payvo.com/api/transactions?page=1&limit=20&senderId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			"https://ark-live.arkvault.io/api/transactions?page=1&limit=20&senderId=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
 			[],
 		),
 		mockRequest(
-			"https://ark-live.payvo.com/api/transactions?limit=30&address=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
+			"https://ark-live.arkvault.io/api/transactions?limit=30&address=AThxYTVgpzZfW7K6UxyB8vBZVMoPAwQS3D",
 			[],
 		),
 	],

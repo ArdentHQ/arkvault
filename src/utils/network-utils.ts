@@ -1,8 +1,8 @@
-import { UUID } from "@payvo/sdk-cryptography";
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts } from "@payvo/sdk-profiles";
-import { Networks } from "@payvo/sdk";
-import { uniq } from "@payvo/sdk-helpers";
+import { UUID } from "@ardenthq/sdk-cryptography";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { uniq } from "@ardenthq/sdk-helpers";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
@@ -111,17 +111,17 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 	return network.displayName();
 };
 
-export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
-	profile
-		.availableNetworks()
-		.filter((network) => {
-			if (isCustomNetwork(network)) {
-				return !!network.toObject().meta?.enabled;
-			}
+export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
+	profile.availableNetworks().filter((network) => {
+		if (isCustomNetwork(network)) {
+			return !!network.toObject().meta?.enabled;
+		}
 
-			return true;
-		})
-		.map((network) => network.id());
+		return true;
+	});
+
+export const profileAllEnabledNetworkIds = (profile: Contracts.IProfile) =>
+	profileAllEnabledNetworks(profile).map((network) => network.id());
 
 export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	uniq(
@@ -133,3 +133,23 @@ export const profileEnabledNetworkIds = (profile: Contracts.IProfile) =>
 	);
 
 export const enabledNetworksCount = (profile: Contracts.IProfile) => profileAllEnabledNetworkIds(profile).length;
+
+export const networksAsOptions = (networks?: Networks.Network[]) => {
+	if (!networks) {
+		return [];
+	}
+
+	return networks.map((network) => {
+		let label = network?.coinName();
+
+		if (network?.isTest() && !isCustomNetwork(network)) {
+			label = `${label} ${network.name()}`;
+		}
+
+		return {
+			isTestNetwork: network?.isTest(),
+			label,
+			value: network?.id(),
+		};
+	});
+};

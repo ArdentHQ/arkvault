@@ -9,11 +9,13 @@ import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
 import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
+import { useBreakpoint } from "@/app/hooks";
 
 export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
 	const { t } = useTranslation();
 
 	const { getValues, watch } = useFormContext();
+	const { isXs } = useBreakpoint();
 
 	// getValues does not get the value of `defaultValues` on first render
 	const [defaultNetwork] = useState(() => watch("network"));
@@ -39,7 +41,7 @@ export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void
 
 			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}
-				paddingPosition="top"
+				borderPosition={isXs ? "top" : "both"}
 				extra={
 					<Button
 						size="xs"

@@ -3,7 +3,7 @@
 exports[`Network Settings should check the main network by default 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -126,7 +126,7 @@ exports[`Network Settings should check the main network by default 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -833,7 +833,7 @@ exports[`Network Settings should check the main network by default 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -862,7 +862,7 @@ exports[`Network Settings should check the main network by default 1`] = `
 exports[`Network Settings should render networks settings section 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -985,7 +985,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1692,7 +1692,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"

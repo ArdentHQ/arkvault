@@ -59,7 +59,7 @@ describe("News", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
 
-		nock("https://news.payvo.com")
+		nock("https://news.arkvault.io")
 			.get("/api?coins=ARK")
 			.reply(200, firstPageReply)
 			.get("/api?coins=ARK&page=1")
@@ -71,7 +71,7 @@ describe("News", () => {
 			.reply(200, require("tests/fixtures/news/empty-response.json"))
 			.persist();
 
-		nock("https://news.payvo.com")
+		nock("https://news.arkvault.io")
 			.get("/api?coins=ARK&page=2")
 			.replyWithError({ code: "ETIMEDOUT" })
 			.get("/api?coins=ARK&page=2")

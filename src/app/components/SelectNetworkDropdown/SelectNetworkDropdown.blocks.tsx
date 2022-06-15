@@ -1,5 +1,5 @@
 import React from "react";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -50,9 +50,7 @@ export const NetworkIcon = ({
 	</div>
 );
 
-export const NetworkOptionLabel = ({ label, value, networkById }: any): JSX.Element => {
-	const network = networkById(value);
-
+export const NetworkOptionLabel = ({ network }: { network?: Networks.Network }) => {
 	if (!network) {
 		return <></>;
 	}
@@ -60,7 +58,7 @@ export const NetworkOptionLabel = ({ label, value, networkById }: any): JSX.Elem
 	return (
 		<div className="flex items-center space-x-3">
 			<NetworkIcon network={network} />
-			<div className="flex-grow">{label}</div>
+			<div className="flex-grow">{networkDisplayName(network)}</div>
 			{network.isTest() && <NetworkTestnetCodeIcon />}
 		</div>
 	);

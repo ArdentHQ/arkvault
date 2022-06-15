@@ -3,7 +3,7 @@
 exports[`General Settings should disable submit button when profile is not restored yet 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -126,7 +126,7 @@ exports[`General Settings should disable submit button when profile is not resto
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1570,7 +1570,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -1599,7 +1599,7 @@ exports[`General Settings should disable submit button when profile is not resto
 exports[`General Settings should not update the uploaded avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1722,7 +1722,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3180,7 +3180,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -3208,7 +3208,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
 exports[`General Settings should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3331,7 +3331,7 @@ exports[`General Settings should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4771,7 +4771,7 @@ exports[`General Settings should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -4800,7 +4800,7 @@ exports[`General Settings should render 1`] = `
 exports[`General Settings should show identicon when removing image if name is set 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4923,7 +4923,7 @@ exports[`General Settings should show identicon when removing image if name is s
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -6363,7 +6363,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -6392,7 +6392,7 @@ exports[`General Settings should show identicon when removing image if name is s
 exports[`General Settings should update profile 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -6515,7 +6515,7 @@ exports[`General Settings should update profile 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -7955,7 +7955,7 @@ exports[`General Settings should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1yqe28v"
@@ -7984,7 +7984,7 @@ exports[`General Settings should update profile 1`] = `
 exports[`General Settings should update the avatar when removing focus from name input 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -8107,7 +8107,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9547,7 +9547,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -9575,7 +9575,7 @@ exports[`General Settings should update the avatar when removing focus from name
 exports[`General Settings should update the avatar when removing focus from name input 2`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -9698,7 +9698,7 @@ exports[`General Settings should update the avatar when removing focus from name
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -11131,7 +11131,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <button
                       class="css-1bx0hyc"

@@ -127,7 +127,13 @@ const SelectDropdown = ({
 						<div
 							data-testid="SelectDropdown__caret"
 							className="flex items-center justify-center py-2 px-1"
-							onClick={toggleMenu}
+							onClick={() => {
+								if (disabled) {
+									return;
+								}
+
+								toggleMenu();
+							}}
 						>
 							<Icon
 								name="CaretDown"
@@ -260,6 +266,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 			id,
 			readOnly = false,
 			allowOverflow,
+			wrapperClassName = "relative w-full",
 		}: SelectProperties,
 		reference,
 	) => {
@@ -279,7 +286,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 		const isInvalidField = fieldContext?.isInvalid || isInvalid;
 
 		return (
-			<div data-testid="SelectDropdown" className="relative w-full">
+			<div data-testid="SelectDropdown" className={wrapperClassName}>
 				<Input
 					data-testid="select-list__input"
 					ref={reference}

@@ -3,7 +3,7 @@
 exports[`SendTransfer Fee Handling should send a single transfer with a high fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -124,7 +124,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -527,7 +527,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -834,7 +834,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -860,7 +860,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
 exports[`SendTransfer Fee Handling should send a single transfer with a low fee by confirming the fee warning 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -981,7 +981,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a low fee 
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1384,7 +1384,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a low fee 
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -1691,7 +1691,7 @@ exports[`SendTransfer Fee Handling should send a single transfer with a low fee 
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"

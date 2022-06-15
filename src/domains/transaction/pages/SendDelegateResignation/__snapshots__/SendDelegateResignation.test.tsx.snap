@@ -3,7 +3,7 @@
 exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -126,7 +126,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -742,7 +742,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -779,7 +779,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
 exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -902,7 +902,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1523,7 +1523,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1560,7 +1560,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
 exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1683,7 +1683,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2230,7 +2230,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2267,7 +2267,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
 exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2390,7 +2390,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2848,7 +2848,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2897,7 +2897,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
 exports[`SendDelegateResignation Delegate Resignation should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3020,7 +3020,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3425,7 +3425,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
                     </div>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <div
                       class="mr-auto"
@@ -3504,7 +3504,7 @@ exports[`SendDelegateResignation Delegate Resignation should show error step and
 exports[`SendDelegateResignation Delegate Resignation should show mnemonic authentication error 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3627,7 +3627,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4098,7 +4098,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4147,7 +4147,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4270,7 +4270,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4675,7 +4675,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -4904,7 +4904,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4930,7 +4930,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction using encryption password 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -5053,7 +5053,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -5458,7 +5458,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -5687,7 +5687,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -5713,7 +5713,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
 exports[`SendDelegateResignation Delegate Resignation should successfully sign and submit resignation transaction with keyboard 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -5836,7 +5836,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -6241,7 +6241,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                                href="https://test.arkscan.io/transaction/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -6470,7 +6470,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"

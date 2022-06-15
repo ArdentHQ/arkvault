@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
 import { SuccessStep } from "./SuccessStep";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsive, screen } from "@/utils/testing-library";
 
 describe("SuccessStep", () => {
 	let profile: Contracts.IProfile;
@@ -18,7 +18,7 @@ describe("SuccessStep", () => {
 		wallet = profile.wallets().first();
 	});
 
-	it("should render 4th step", async () => {
+	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {
@@ -30,10 +30,11 @@ describe("SuccessStep", () => {
 
 		const onClickEditAlias = jest.fn();
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsive(
 			<FormProvider {...form.current}>
 				<SuccessStep onClickEditAlias={onClickEditAlias} />
 			</FormProvider>,
+			breakpoint,
 		);
 
 		expect(screen.getByTestId("CreateWallet__SuccessStep")).toBeInTheDocument();

@@ -1,5 +1,5 @@
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DateTime } from "@payvo/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

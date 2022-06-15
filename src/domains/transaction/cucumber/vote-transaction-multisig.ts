@@ -42,7 +42,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {
@@ -56,7 +56,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				url: "https://ark-test.arkvault.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			},
 			{
 				data: {
@@ -77,7 +77,7 @@ cucumber(
 				},
 			},
 		),
-		mockMuSigRequest("https://ark-test-musig.payvo.com", "store", {
+		mockMuSigRequest("https://ark-test-musig.arkvault.io", "store", {
 			result: {
 				id: "transaction-id",
 			},

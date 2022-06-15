@@ -7,7 +7,7 @@ exports[`Votes should emit action on continue button to unvote/vote 1`] = `<Docu
 exports[`Votes should filter current delegates 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -128,7 +128,7 @@ exports[`Votes should filter current delegates 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1168,7 +1168,7 @@ exports[`Votes should filter current delegates 1`] = `
 exports[`Votes should hide testnet wallet if disabled from profile setting 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1289,7 +1289,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1908,7 +1908,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -1961,7 +1961,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -2050,7 +2050,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -2103,7 +2103,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -2192,7 +2192,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -2245,7 +2245,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -2595,7 +2595,7 @@ exports[`Votes should navigate to import wallet page 1`] = `<DocumentFragment />
 exports[`Votes should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2716,7 +2716,7 @@ exports[`Votes should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3302,7 +3302,7 @@ exports[`Votes should render 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -3355,7 +3355,7 @@ exports[`Votes should render 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -3444,7 +3444,7 @@ exports[`Votes should render 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -3497,7 +3497,7 @@ exports[`Votes should render 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -3586,7 +3586,7 @@ exports[`Votes should render 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -3639,7 +3639,7 @@ exports[`Votes should render 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -3988,7 +3988,7 @@ exports[`Votes should render 1`] = `
 exports[`Votes should render and handle wallet current voting exception 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -4109,7 +4109,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4695,7 +4695,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -4748,7 +4748,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -4837,7 +4837,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -4890,7 +4890,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -4979,7 +4979,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -5032,7 +5032,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -5381,7 +5381,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
 exports[`Votes should render with no wallets 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -5500,7 +5500,7 @@ exports[`Votes should render with no wallets 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -5901,7 +5901,7 @@ exports[`Votes should render with no wallets 1`] = `
 exports[`Votes should select a delegate 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -6022,7 +6022,7 @@ exports[`Votes should select a delegate 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -6608,7 +6608,7 @@ exports[`Votes should select a delegate 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -6661,7 +6661,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -6750,7 +6750,7 @@ exports[`Votes should select a delegate 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -6803,7 +6803,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -6892,7 +6892,7 @@ exports[`Votes should select a delegate 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -6945,7 +6945,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -7293,7 +7293,7 @@ exports[`Votes should select an address and delegate 1`] = `<DocumentFragment />
 exports[`Votes should select an address without vote 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -7414,7 +7414,7 @@ exports[`Votes should select an address without vote 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -8000,7 +8000,7 @@ exports[`Votes should select an address without vote 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -8053,7 +8053,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -8142,7 +8142,7 @@ exports[`Votes should select an address without vote 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -8195,7 +8195,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -8284,7 +8284,7 @@ exports[`Votes should select an address without vote 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -8337,7 +8337,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -8686,7 +8686,7 @@ exports[`Votes should select an address without vote 1`] = `
 exports[`Votes should select ledger option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -8803,7 +8803,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -9363,7 +9363,7 @@ exports[`Votes should select ledger option in the wallets display type 1`] = `
 exports[`Votes should select starred option in the wallets display type 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -9480,7 +9480,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -10040,7 +10040,7 @@ exports[`Votes should select starred option in the wallets display type 1`] = `
 exports[`Votes should show resigned delegate notice 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -10161,7 +10161,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -10780,7 +10780,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -10833,7 +10833,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -10922,7 +10922,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -10975,7 +10975,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -11064,7 +11064,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -11117,7 +11117,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -11463,7 +11463,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
 exports[`Votes should toggle network selection from network filters 1`] = `
 <DocumentFragment>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -11580,7 +11580,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -12660,7 +12660,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
 exports[`Votes should trigger network connection warning 1`] = `
 <DocumentFragment>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -12781,7 +12781,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -13400,7 +13400,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                              href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -13453,7 +13453,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
+                          href="https://test.arkscan.io/wallets/D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -13542,7 +13542,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                              href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -13595,7 +13595,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
+                          href="https://test.arkscan.io/wallets/DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -13684,7 +13684,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                               class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
                               data-ring-focus-margin="-m-1"
                               data-testid="Link"
-                              href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                              href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                               rel="noopener noreferrer"
                             >
                               <span
@@ -13737,7 +13737,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://dexplorer.ark.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
+                          href="https://test.arkscan.io/wallets/DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
                           rel="noopener noreferrer"
                         >
                           <span

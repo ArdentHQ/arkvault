@@ -1,4 +1,4 @@
-import { sortBy } from "@payvo/sdk-helpers";
+import { sortBy } from "@ardenthq/sdk-helpers";
 import React, { useMemo } from "react";
 
 import { ContentInsideCircle } from "./DonutGraph.blocks";

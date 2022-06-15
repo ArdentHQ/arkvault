@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
@@ -33,7 +33,7 @@ describe("Wallet Transactions Hook", () => {
 	};
 
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query((parameters) => parameters.page === undefined || parameters.page === "1")
 			.reply(200, () => {

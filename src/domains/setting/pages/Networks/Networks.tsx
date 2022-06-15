@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Prompt } from "react-router-dom";
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import NetworkFormModal from "./blocks/NetworkFormModal";
 import UpdateNetworkFormModal from "./blocks/UpdateNetworkFormModal";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";

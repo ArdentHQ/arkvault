@@ -38,7 +38,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {
@@ -49,7 +49,7 @@ cucumber(
 				},
 			},
 		),
-		mockRequest("https://ark-test.payvo.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+		mockRequest("https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
 			data: {
 				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 				attributes: {
@@ -89,7 +89,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://ark-test.payvo.com/api/transactions",
+				url: "https://ark-test.arkvault.io/api/transactions",
 			},
 			{
 				data: {
@@ -100,7 +100,7 @@ cucumber(
 				},
 			},
 		),
-		mockRequest("https://ark-test.payvo.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+		mockRequest("https://ark-test.arkvault.io/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
 			data: {
 				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 				attributes: {

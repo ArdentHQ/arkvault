@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { DTO } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 

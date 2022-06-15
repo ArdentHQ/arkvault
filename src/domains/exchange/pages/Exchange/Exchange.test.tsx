@@ -1,6 +1,6 @@
 import "jest-extended";
 
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory, HashHistory } from "history";
 import nock from "nock";
@@ -25,7 +25,7 @@ import {
 let history: HashHistory;
 let profile: Contracts.IProfile;
 
-const exchangeBaseURL = "https://exchanges.payvo.com";
+const exchangeBaseURL = "https://exchanges.arkvault.io";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 const stubData = {

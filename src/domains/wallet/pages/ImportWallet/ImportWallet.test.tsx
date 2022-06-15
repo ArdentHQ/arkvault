@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Wallet } from "@payvo/sdk-profiles";
+import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
@@ -24,6 +24,7 @@ import {
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
+	renderResponsive,
 	renderWithForm,
 	screen,
 	waitFor,
@@ -73,7 +74,7 @@ describe("ImportWallet", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
 			.persist();
@@ -103,31 +104,12 @@ describe("ImportWallet", () => {
 		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
+		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		expect(selectNetworkInput).toBeInTheDocument();
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
+		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
 		expect(selectNetworkInput).toHaveValue(ARKDevnet);
-	});
-
-	it("should render network step without test networks", async () => {
-		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const { asFragment } = renderWithForm(<NetworkStep profile={profile} title="title" subtitle="subtitle" />);
-
-		expect(screen.getByTestId("NetworkStep")).toBeInTheDocument();
-
-		expect(screen.getByTestId("SelectNetworkInput__input")).toBeInTheDocument();
-
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
-		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		resetProfileNetworksMock();
 	});
 
 	it("should render method step", async () => {
@@ -253,7 +235,7 @@ describe("ImportWallet", () => {
 		await expect(addressInput()).resolves.toBeVisible();
 	});
 
-	it("should render success step", async () => {
+	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = jest.fn();
 		const importedWallet = profile.wallets().first();
@@ -272,7 +254,7 @@ describe("ImportWallet", () => {
 			);
 		};
 
-		const { asFragment } = render(<Component />);
+		const { asFragment } = renderResponsive(<Component />, breakpoint);
 
 		expect(successStep()).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -351,12 +333,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -383,14 +360,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.keyboard("{enter}");
@@ -440,12 +410,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -494,12 +459,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -544,12 +504,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -609,12 +564,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -658,12 +608,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -708,12 +653,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -758,12 +698,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -801,12 +736,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -842,12 +772,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -890,12 +815,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -950,12 +870,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1014,12 +929,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1085,12 +995,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1149,12 +1054,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1194,12 +1094,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1237,12 +1132,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1286,12 +1176,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1366,12 +1251,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1435,12 +1315,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -1508,12 +1383,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-
-		userEvent.paste(selectNetworkInput, "ARK Dev");
-		userEvent.keyboard("{enter}");
-
-		expect(selectNetworkInput).toHaveValue(ARKDevnet);
+		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		const coin = profile.coins().get("ARK", testNetwork);
 		const coinMock = jest.spyOn(coin, "__construct").mockImplementationOnce(() => {

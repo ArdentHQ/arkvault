@@ -1,5 +1,5 @@
-import { Networks, Contracts } from "@payvo/sdk";
-import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
+import { Networks, Contracts } from "@ardenthq/sdk";
+import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -13,14 +13,13 @@ import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Checkbox } from "@/app/components/Checkbox";
-import { Circle } from "@/app/components/Circle";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
-import { useRandomNumber } from "@/app/hooks";
+import { useBreakpoint, useRandomNumber } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
@@ -42,12 +41,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
 	wallets,
 	selectedWallets,
-	isSelected,
 	toggleSelect,
 	toggleSelectAll,
+	isCompact,
 	isScanning,
+	isSelected,
 }) => {
 	const { t } = useTranslation();
+
 	const isAllSelected = !isScanning && wallets.length > 0 && selectedWallets.length === wallets.length;
 
 	const columns = useMemo<Column<LedgerData>[]>(
@@ -94,18 +95,16 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			if (showSkeleton) {
 				return (
 					<TableRow>
-						<TableCell variant="start">
+						<TableCell variant="start" isCompact={isCompact}>
 							<Skeleton height={20} width={20} />
 						</TableCell>
 
-						<TableCell className="w-2/5" innerClassName="space-x-4">
-							<Circle className="border-transparent" size="lg">
-								<Skeleton circle height={44} width={44} />
-							</Circle>
+						<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
+							<Skeleton circle height={isCompact ? 20 : 44} width={isCompact ? 20 : 44} />
 							<Skeleton height={16} width={120} />
 						</TableCell>
 
-						<TableCell variant="end" innerClassName="justify-end">
+						<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
 							<AmountWrapper isLoading={true} />
 						</TableCell>
 					</TableRow>
@@ -114,19 +113,19 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 			return (
 				<TableRow isSelected={isSelected(wallet.path)}>
-					<TableCell variant="start" innerClassName="justify-center">
+					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
 						<Checkbox checked={isSelected(wallet.path)} onChange={() => toggleSelect(wallet.path)} />
 					</TableCell>
 
-					<TableCell className="w-2/5" innerClassName="space-x-4">
-						<Avatar address={wallet.address} size="lg" noShadow />
+					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
+						<Avatar address={wallet.address} size={isCompact ? "xs" : "lg"} noShadow />
 						<div className="flex w-32 flex-1">
 							<Address address={wallet.address} />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
 
-					<TableCell variant="end" innerClassName="justify-end font-semibold">
+					<TableCell variant="end" innerClassName="justify-end font-semibold" isCompact={isCompact}>
 						<AmountWrapper isLoading={false}>
 							<Amount value={wallet.balance!} ticker={network.ticker()} />
 						</AmountWrapper>
@@ -167,6 +166,14 @@ export const LedgerScanStep = ({
 	setRetryFn?: (function_?: () => void) => void;
 }) => {
 	const { t } = useTranslation();
+
+	const { isLgAndAbove } = useBreakpoint();
+
+	const isCompact = useMemo<boolean>(
+		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
+		[isLgAndAbove, profile],
+	);
+
 	const { watch, register, unregister, setValue } = useFormContext();
 	const [network] = useState<Networks.Network>(() => watch("network"));
 
@@ -250,7 +257,13 @@ export const LedgerScanStep = ({
 
 			<FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork id="ImportWallet__network" networks={[]} selected={network} disabled />
+				<SelectNetwork
+					id="ImportWallet__network"
+					networks={[network, network, network]}
+					selectedNetwork={network}
+					isDisabled
+					profile={profile}
+				/>
 			</FormField>
 
 			{error ? (
@@ -258,7 +271,7 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} {...ledgerScanner} />
+				<LedgerTable network={network} isCompact={isCompact} {...ledgerScanner} />
 			)}
 		</section>
 	);

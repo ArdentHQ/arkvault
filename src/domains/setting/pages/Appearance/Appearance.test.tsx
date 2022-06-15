@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { camelCase } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { camelCase } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";

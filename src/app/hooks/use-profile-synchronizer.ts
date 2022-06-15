@@ -1,5 +1,5 @@
-import { isEqual } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { isEqual } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 

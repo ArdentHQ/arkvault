@@ -9,7 +9,7 @@ exports[`SendVote should return to the select a delegate page to vote 1`] = `<di
 exports[`SendVote should send a unvote transaction 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -132,7 +132,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -537,7 +537,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf"
+                                href="https://test.arkscan.io/transaction/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -822,7 +822,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -848,7 +848,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
 exports[`SendVote should send a vote transaction with keyboard 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -971,7 +971,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1376,7 +1376,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
+                                href="https://test.arkscan.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -1661,7 +1661,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1687,7 +1687,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
 exports[`SendVote should send a vote transaction without keyboard 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1810,7 +1810,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2215,7 +2215,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
+                                href="https://test.arkscan.io/transaction/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -2500,7 +2500,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2526,7 +2526,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
 exports[`SendVote should show error if wrong mnemonic 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2649,7 +2649,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3068,7 +3068,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-1rsixno"
+                class="css-1kzb86y"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3117,7 +3117,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
 exports[`SendVote should show error step and go back 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3240,7 +3240,7 @@ exports[`SendVote should show error step and go back 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3645,7 +3645,7 @@ exports[`SendVote should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1rsixno"
+                    class="css-1kzb86y"
                   >
                     <div
                       class="mr-auto"

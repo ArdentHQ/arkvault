@@ -13,7 +13,7 @@ exports[`App should close page skeleton if not e2e 1`] = `
       data-testid="RouterView__wrapper"
     >
       <div
-        class="emotion-cache-lyknmy"
+        class="emotion-cache-15789f"
       >
         <nav
           aria-labelledby="main menu"
@@ -39,7 +39,7 @@ exports[`App should close page skeleton if not e2e 1`] = `
                     <svg
                       height="28"
                     >
-                      payvo-logo.svg
+                      arkvault-logo.svg
                     </svg>
                   </span>
                 </button>
@@ -321,7 +321,7 @@ exports[`App should not migrate profiles 1`] = `
       data-testid="RouterView__wrapper"
     >
       <div
-        class="emotion-cache-lyknmy"
+        class="emotion-cache-15789f"
       >
         <nav
           aria-labelledby="main menu"
@@ -347,7 +347,7 @@ exports[`App should not migrate profiles 1`] = `
                     <svg
                       height="28"
                     >
-                      payvo-logo.svg
+                      arkvault-logo.svg
                     </svg>
                   </span>
                 </button>
@@ -623,7 +623,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
     data-testid="Main"
   >
     <div
-      class="css-lyknmy"
+      class="css-15789f"
     >
       <nav
         aria-labelledby="main menu"
@@ -649,7 +649,7 @@ exports[`App should render application error if the app fails to boot 1`] = `
                   <svg
                     height="28"
                   >
-                    payvo-logo.svg
+                    arkvault-logo.svg
                   </svg>
                 </span>
               </button>
@@ -766,7 +766,7 @@ exports[`App should render mock 1`] = `
       data-testid="RouterView__wrapper"
     >
       <div
-        class="emotion-cache-lyknmy"
+        class="emotion-cache-15789f"
       >
         <nav
           aria-labelledby="main menu"
@@ -792,7 +792,7 @@ exports[`App should render mock 1`] = `
                     <svg
                       height="28"
                     >
-                      payvo-logo.svg
+                      arkvault-logo.svg
                     </svg>
                   </span>
                 </button>
@@ -1074,7 +1074,7 @@ exports[`App should render page skeleton 1`] = `
       data-testid="RouterView__wrapper"
     >
       <div
-        class="emotion-cache-lyknmy"
+        class="emotion-cache-15789f"
       >
         <nav
           aria-labelledby="main menu"
@@ -1100,7 +1100,7 @@ exports[`App should render page skeleton 1`] = `
                     <svg
                       height="28"
                     >
-                      payvo-logo.svg
+                      arkvault-logo.svg
                     </svg>
                   </span>
                 </button>
@@ -1378,7 +1378,7 @@ exports[`App should render the offline screen if there is no internet connection
       class="Toastify"
     />
     <div
-      class="emotion-cache-lyknmy"
+      class="emotion-cache-15789f"
     >
       <nav
         aria-labelledby="main menu"
@@ -1404,7 +1404,7 @@ exports[`App should render the offline screen if there is no internet connection
                   <svg
                     height="28"
                   >
-                    payvo-logo.svg
+                    arkvault-logo.svg
                   </svg>
                 </span>
               </button>
@@ -1464,7 +1464,7 @@ exports[`App should render welcome screen after page skeleton 1`] = `
       data-testid="RouterView__wrapper"
     >
       <div
-        class="emotion-cache-lyknmy"
+        class="emotion-cache-15789f"
       >
         <nav
           aria-labelledby="main menu"
@@ -1490,7 +1490,7 @@ exports[`App should render welcome screen after page skeleton 1`] = `
                     <svg
                       height="28"
                     >
-                      payvo-logo.svg
+                      arkvault-logo.svg
                     </svg>
                   </span>
                 </button>

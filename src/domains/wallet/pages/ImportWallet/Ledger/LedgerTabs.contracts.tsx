@@ -1,5 +1,5 @@
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { useLedgerScanner } from "@/app/contexts";
 
@@ -18,4 +18,5 @@ export interface LedgerTabsProperties {
 
 export interface LedgerTableProperties extends ReturnType<typeof useLedgerScanner> {
 	network: Networks.Network;
+	isCompact: boolean;
 }

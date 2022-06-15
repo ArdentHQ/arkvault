@@ -1272,12 +1272,16 @@ exports[`ImportWallet should import with encryped wif 1`] = `
 exports[`ImportWallet should render as ledger import 1`] = `
 <div>
   <div
-    class="css-wsh4oq"
+    class="css-w3nefz"
   >
     <div
-      class="css-1mnbipv"
+      class="css-tbczne"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -1389,7 +1393,7 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1761,35 +1765,30 @@ exports[`ImportWallet should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="mt-8 flex justify-between"
+                class="css-1kzb86y"
               >
-                <div />
-                <div
-                  class="flex space-x-3"
+                <button
+                  class="css-1jhy6v9"
+                  data-testid="Paginator__back-button"
+                  type="button"
                 >
-                  <button
-                    class="css-1jhy6v9"
-                    data-testid="Paginator__back-button"
-                    type="button"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
-                      Back
-                    </div>
-                  </button>
-                  <button
-                    class="css-1bx0hyc"
-                    data-testid="Paginator__continue-button"
-                    type="button"
+                    Back
+                  </div>
+                </button>
+                <button
+                  class="css-1bx0hyc"
+                  data-testid="Paginator__continue-button"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
-                      Continue
-                    </div>
-                  </button>
-                </div>
+                    Continue
+                  </div>
+                </button>
               </div>
             </div>
           </form>
@@ -2076,7 +2075,7 @@ exports[`ImportWallet should render network step 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 flex flex-col css-1bcidjh"
+      class="mt-8 css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2085,251 +2084,100 @@ exports[`ImportWallet should render network step 1`] = `
       >
         Cryptoasset
       </label>
-      <div>
-        <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
-          aria-owns="NetworkStep__network-menu"
-          data-testid="SelectNetwork"
-          role="combobox"
-        >
-          <label
-            for="NetworkStep__network-input"
-            id="NetworkStep__network-label"
-          />
-          <div
-            class="css-1psxlcd"
-          >
-            <div
-              class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
-              data-testid="SelectNetworkInput__network"
-            />
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="NetworkStep__network-menu"
-                aria-labelledby="NetworkStep__network-label"
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
-                data-testid="SelectNetworkInput__input"
-                id="NetworkStep__network-input"
-                placeholder="Enter a cryptoasset name"
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class=""
-          data-testid="SelectNetwork__options"
-        >
-          <div
-            class="mt-6"
-          >
-            <div
-              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-            >
-              PUBLIC NETWORKS
-            </div>
-            <ul
-              aria-labelledby="NetworkStep__network-label"
-              class="css-6y29t8"
-              id="NetworkStep__network-menu"
-              role="listbox"
-            >
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="ARK"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-ark.mainnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      ark.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
-            type="horizontal"
-          />
-          <div
-            class="mt-6"
-          >
-            <span
-              class="text-sm font-bold text-theme-secondary-400 dark:text-theme-secondary-700"
-            >
-              DEVELOPMENT NETWORKS
-            </span>
-            <ul
-              aria-labelledby="NetworkStep__network-label"
-              class="css-6y29t8"
-              id="NetworkStep__network-menu"
-              role="listbox"
-            >
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="ARK Devnet"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
-                  data-testid="NetworkIcon-ARK-ark.devnet"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      ark.svg
-                    </svg>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
-                <div
-                  aria-label="ARK"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-secondary-700"
-                  data-testid="NetworkIcon-ARK-random.custom"
-                >
-                  AR
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </section>
-</DocumentFragment>
-`;
-
-exports[`ImportWallet should render network step without test networks 1`] = `
-<DocumentFragment>
-  <section
-    data-testid="NetworkStep"
-  >
-    <div
-      class="flex items-end justify-between bg-theme-background hidden sm:block"
-    >
       <div
-        class="space-y-4"
+        data-testid="SelectNetwork"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          title
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
-          data-testid="header__subtitle"
+          class="relative w-full"
+          data-testid="SelectDropdown"
         >
-          subtitle
-        </div>
-      </div>
-    </div>
-    <fieldset
-      class="mt-8 flex flex-col css-1bcidjh"
-    >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="network"
-      >
-        Cryptoasset
-      </label>
-      <div>
-        <div
-          aria-expanded="true"
-          aria-haspopup="listbox"
-          aria-owns="NetworkStep__network-menu"
-          data-testid="SelectNetwork"
-          role="combobox"
-        >
-          <label
-            for="NetworkStep__network-input"
-            id="NetworkStep__network-label"
-          />
           <div
-            class="css-1psxlcd"
+            class="sr-only css-1psxlcd"
           >
-            <div
-              class="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-800 ring-theme-background duration-100 css-459u9r"
-              data-testid="SelectNetworkInput__network"
-            />
             <div
               class="relative flex h-full flex-1"
             >
               <input
-                aria-autocomplete="list"
-                aria-controls="NetworkStep__network-menu"
-                aria-labelledby="NetworkStep__network-label"
                 autocomplete="off"
                 class="no-ligatures w-full border-none css-1nupw50"
-                data-testid="SelectNetworkInput__input"
-                id="NetworkStep__network-input"
-                placeholder="Enter a cryptoasset name"
+                data-testid="select-list__input"
+                name="network"
+                readonly=""
+                tabindex="-1"
                 type="text"
                 value=""
               />
             </div>
           </div>
-        </div>
-        <div
-          class=""
-          data-testid="SelectNetwork__options"
-        >
           <div
-            class="mt-6"
+            class="w-full"
           >
-            <ul
-              aria-labelledby="NetworkStep__network-label"
-              class="css-6y29t8"
-              id="NetworkStep__network-menu"
-              role="listbox"
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-0-menu"
+              role="combobox"
             >
-              <li
-                class="relative flex h-0 cursor-pointer pb-[100%]"
-                data-testid="SelectNetwork__NetworkIcon--container"
-              >
+              <div>
+                <label
+                  for="downshift-0-input"
+                  id="downshift-0-label"
+                />
                 <div
-                  aria-label="ARK"
-                  class="absolute inset-0 flex items-center justify-center rounded-xl border-2 border-theme-primary-100 dark:border-theme-secondary-800 text-theme-primary-600"
-                  data-testid="NetworkIcon-ARK-ark.mainnet"
+                  class="css-1psxlcd"
                 >
                   <div
-                    class="css-1i4b0eq"
-                    data-testid="NetworkIcon__icon"
-                    height="20"
-                    width="20"
+                    class="relative flex h-full flex-1"
                   >
-                    <svg>
-                      ark.svg
-                    </svg>
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="downshift-0-menu"
+                      aria-labelledby="downshift-0-label"
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                      data-testid="SelectDropdown__input"
+                      id="downshift-0-input"
+                      name="network"
+                      placeholder="Select option"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div
+                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
+                  >
+                    <div
+                      class=""
+                    >
+                      <div
+                        class="flex items-center"
+                      >
+                        <div
+                          class="flex items-center justify-center py-2 px-1"
+                          data-testid="SelectDropdown__caret"
+                        >
+                          <div
+                            class="transition-transform text-theme-secondary-500 css-15txs7d"
+                            height="10"
+                            width="10"
+                          >
+                            <svg>
+                              caret-down.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <div
+                aria-labelledby="downshift-0-label"
+                id="downshift-0-menu"
+                role="listbox"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -2338,7 +2186,7 @@ exports[`ImportWallet should render network step without test networks 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ImportWallet should render success step 1`] = `
+exports[`ImportWallet should render success step (lg) 1`] = `
 <DocumentFragment>
   <section
     data-testid="ImportWallet__success-step"
@@ -2577,6 +2425,302 @@ exports[`ImportWallet should render success step 1`] = `
     </div>
     <div
       class="no-ligatures css-wr7004"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallet Name
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Wallet 1
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Wallet 1
+            </div>
+          </div>
+          <button
+            class="css-1jhy6v9"
+            data-testid="ImportWallet__edit-alias"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  pencil.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ImportWallet should render success step (xs) 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="ImportWallet__success-step"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background hidden sm:block"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Completed
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Wallet import is complete. Now you can use it.
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures mt-2 css-1iw2tte"
+      data-testid="WalletDetailNetwork"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Cryptoasset
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Devnet
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            class="hidden sm:block"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  ark.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-19rivvh"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Address
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <div
+              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              class="shrink-0 css-1vy2z2u"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden sm:flex sm:items-center"
+          >
+            <div
+              class="shrink-0 css-8d0u1i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-19rivvh"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Balance
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                33.75089801 DARK
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-19rivvh"
       data-testid="TransactionDetail"
     >
       <div

@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { NormalizedNetwork, ServerStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { pingServerAddress, getServerHeight } from "@/utils/peers";
 import { useHosts } from "@/domains/setting/pages/Servers/hooks/use-hosts";

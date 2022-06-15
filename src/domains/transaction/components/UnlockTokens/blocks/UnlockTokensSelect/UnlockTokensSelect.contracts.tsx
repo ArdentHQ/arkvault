@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { UnlockableBalance } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 

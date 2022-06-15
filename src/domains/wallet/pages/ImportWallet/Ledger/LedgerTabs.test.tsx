@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -37,7 +37,7 @@ describe("LedgerTabs", () => {
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/wallets")
 			.query((parameters) => !!parameters.address)
 			.reply(200, {
@@ -181,9 +181,7 @@ describe("LedgerTabs", () => {
 
 		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
 
-		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
-
-		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(1);
+		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
@@ -448,7 +446,7 @@ describe("LedgerTabs", () => {
 			ledgerTransportMock.mockRestore();
 		});
 
-		it("doesnt goes to the next step if a button is the active element", async () => {
+		it("does not go to the next step if a button is the active element", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
@@ -470,7 +468,7 @@ describe("LedgerTabs", () => {
 			ledgerTransportMock.mockRestore();
 		});
 
-		it("doesnt goes to the next step if is submitting", async () => {
+		it("does not go to the next step if is submitting", async () => {
 			const originalUseFormContext = reactHookForm.useFormContext;
 
 			const formContextSpy = jest.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {

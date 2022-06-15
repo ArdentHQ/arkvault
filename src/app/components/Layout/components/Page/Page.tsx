@@ -11,7 +11,7 @@ export const PageWrapper = styled.div<{ showMobileNavigation: boolean; hasFixedF
 		min-height: -webkit-fill-available;
 	`}
 
-	${tw`relative flex flex-col md:min-h-screen`}
+	${tw`relative flex flex-col sm:min-h-screen`}
 
 	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && !hasFixedFormButtons && tw`pb-14 sm:pb-0`}
 	${({ showMobileNavigation, hasFixedFormButtons }) => showMobileNavigation && hasFixedFormButtons && tw`pb-32 sm:pb-0`}

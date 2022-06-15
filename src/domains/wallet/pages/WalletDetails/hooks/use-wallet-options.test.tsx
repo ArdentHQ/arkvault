@@ -1,5 +1,5 @@
-import { Enums } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Enums } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import nock from "nock";
 
 import { renderHook } from "@testing-library/react-hooks";
@@ -11,7 +11,7 @@ describe("Wallet Options Hook", () => {
 	let profile: Contracts.IProfile;
 
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query((parameters) => parameters.page === undefined || parameters.page === "1")
 			.reply(200, () => {

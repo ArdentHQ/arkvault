@@ -26,6 +26,21 @@ describe("Button", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render inactive", () => {
+		const { container } = render(
+			<AccordionWrapper isInactive>
+				<AccordionHeader onClick={() => {}}>Header</AccordionHeader>
+				<AccordionContent>Content</AccordionContent>
+			</AccordionWrapper>,
+		);
+
+		expect(screen.getByTestId("AccordionHeader")).toBeInTheDocument();
+		expect(screen.getByTestId("AccordionContent")).toBeInTheDocument();
+		expect(screen.getByTestId("Accordion__toggle")).toBeInTheDocument();
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should render collapsed", () => {
 		const { container } = render(
 			<AccordionWrapper isCollapsed={true}>

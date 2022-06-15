@@ -3,7 +3,7 @@
 exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -126,7 +126,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -410,10 +410,10 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
-          class="css-1stalmv"
+          class="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32"
         >
           <svg
             class="h-full w-full"
@@ -430,7 +430,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/dark.png"
+              src="https://exchanges.arkvault.io/images/changenow/dark.png"
             />
           </div>
           <form
@@ -472,7 +472,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -488,7 +488,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -643,7 +643,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -678,7 +678,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -694,7 +694,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -947,7 +947,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1rsixno"
+                  class="css-1kzb86y"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -986,7 +986,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
 exports[`ExchangeView should render 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -1109,7 +1109,7 @@ exports[`ExchangeView should render 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1393,10 +1393,10 @@ exports[`ExchangeView should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
-          class="css-1stalmv"
+          class="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32"
         >
           <svg
             class="h-full w-full"
@@ -1413,7 +1413,7 @@ exports[`ExchangeView should render 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/light.png"
+              src="https://exchanges.arkvault.io/images/changenow/light.png"
             />
           </div>
           <form
@@ -1455,7 +1455,7 @@ exports[`ExchangeView should render 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -1471,7 +1471,7 @@ exports[`ExchangeView should render 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -1626,7 +1626,7 @@ exports[`ExchangeView should render 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -1661,7 +1661,7 @@ exports[`ExchangeView should render 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -1677,7 +1677,7 @@ exports[`ExchangeView should render 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -1930,7 +1930,7 @@ exports[`ExchangeView should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1rsixno"
+                  class="css-1kzb86y"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -1969,7 +1969,7 @@ exports[`ExchangeView should render 1`] = `
 exports[`ExchangeView should render dark theme 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -2092,7 +2092,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2376,10 +2376,10 @@ exports[`ExchangeView should render dark theme 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
-          class="css-1stalmv"
+          class="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32"
         >
           <svg
             class="h-full w-full"
@@ -2396,7 +2396,7 @@ exports[`ExchangeView should render dark theme 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/dark.png"
+              src="https://exchanges.arkvault.io/images/changenow/dark.png"
             />
           </div>
           <form
@@ -2438,7 +2438,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -2454,7 +2454,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -2609,7 +2609,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -2644,7 +2644,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -2660,7 +2660,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -2913,7 +2913,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1rsixno"
+                  class="css-1kzb86y"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -2952,7 +2952,7 @@ exports[`ExchangeView should render dark theme 1`] = `
 exports[`ExchangeView should render light theme 1`] = `
 <div>
   <div
-    class="css-mro1qh"
+    class="css-w3nefz"
   >
     <div
       class="css-tbczne"
@@ -3075,7 +3075,7 @@ exports[`ExchangeView should render light theme 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3359,10 +3359,10 @@ exports[`ExchangeView should render light theme 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
-          class="css-1stalmv"
+          class="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32"
         >
           <svg
             class="h-full w-full"
@@ -3379,7 +3379,7 @@ exports[`ExchangeView should render light theme 1`] = `
             <img
               alt="ChangeNOW Header Logo"
               class="h-full w-full object-cover"
-              src="https://exchanges.payvo.com/images/changenow/light.png"
+              src="https://exchanges.arkvault.io/images/changenow/light.png"
             />
           </div>
           <form
@@ -3421,7 +3421,7 @@ exports[`ExchangeView should render light theme 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -3437,7 +3437,7 @@ exports[`ExchangeView should render light theme 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -3592,7 +3592,7 @@ exports[`ExchangeView should render light theme 1`] = `
                           class="flex flex-col space-y-2 text-sm sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0"
                         >
                           <span
-                            class="mt-px border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
+                            class="mt-px mr-auto border-b border-dashed border-theme-primary-600 font-semibold text-theme-primary-600"
                           >
                             Estimated Rate
                             :
@@ -3627,7 +3627,7 @@ exports[`ExchangeView should render light theme 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -3643,7 +3643,7 @@ exports[`ExchangeView should render light theme 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -3896,7 +3896,7 @@ exports[`ExchangeView should render light theme 1`] = `
                   </div>
                 </div>
                 <div
-                  class="css-1rsixno"
+                  class="css-1kzb86y"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -3935,7 +3935,7 @@ exports[`ExchangeView should render light theme 1`] = `
 exports[`ExchangeView should render warning without exchange 1`] = `
 <div>
   <div
-    class="css-wsh4oq"
+    class="css-kmmje1"
   >
     <div
       class="css-1mnbipv"
@@ -4054,7 +4054,7 @@ exports[`ExchangeView should render warning without exchange 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4338,10 +4338,10 @@ exports[`ExchangeView should render warning without exchange 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="relative flex h-full w-full flex-1 flex-col items-center justify-center sm:py-20"
+        class="relative flex h-full w-full flex-1 flex-col items-center justify-center py-10 md:py-20"
       >
         <div
-          class="css-1stalmv"
+          class="absolute inset-0 hidden items-center bg-[#3f4455] sm:flex sm:p-32"
         >
           <svg
             class="h-full w-full"

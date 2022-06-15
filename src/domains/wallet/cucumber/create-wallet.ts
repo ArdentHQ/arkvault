@@ -32,7 +32,7 @@ const mocks = [
 			},
 		},
 	),
-	mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }),
+	mockMuSigRequest("https://ark-test-musig.arkvault.io", "list", { result: [] }),
 ];
 
 const createWalletStep = {
@@ -77,8 +77,8 @@ const confirmMnemonicStep = {
 };
 const selectNetworkStep = {
 	"And selects a network": async (t: TestController) => {
-		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet");
-		await t.pressKey("enter");
+		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
+
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
 			.notOk("Cryptoasset selected", { timeout: 5000 });

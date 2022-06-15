@@ -14,11 +14,8 @@ const preSteps = {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet", {
-			paste: true,
-		});
+		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
 
-		await t.pressKey("enter");
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
 			.notOk("Cryptoasset selected", { timeout: 5000 });
@@ -109,9 +106,9 @@ cucumber(
 		},
 	},
 	[
-		mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }),
+		mockMuSigRequest("https://ark-test-musig.arkvault.io", "list", { result: [] }),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
 			[],
 		),
 	],
@@ -191,10 +188,7 @@ cucumber("@importWallet-duplicateAddress", {
 		await t
 			.expect(Selector("div").withText(translations.WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE).exists)
 			.ok();
-		await t.typeText(Selector('[data-testid="SelectNetworkInput__input"]'), "ARK Devnet", {
-			paste: true,
-		});
-		await t.pressKey("enter");
+		await t.click(Selector('[data-testid="NetworkOption-ARK-ark.devnet"]'));
 		await t
 			.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled"))
 			.notOk("Cryptoasset selected", { timeout: 5000 });

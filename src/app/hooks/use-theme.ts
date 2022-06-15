@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { Theme } from "@/types";
 import { shouldUseDarkColors } from "@/utils/theme";

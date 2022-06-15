@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -10,6 +10,7 @@ import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
 import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
 import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { assertWallet } from "@/utils/assertions";
+import { useBreakpoint } from "@/app/hooks";
 
 export const SuccessStep = ({
 	importedWallet,
@@ -21,6 +22,7 @@ export const SuccessStep = ({
 	assertWallet(importedWallet);
 
 	const { t } = useTranslation();
+	const { isXs } = useBreakpoint();
 
 	const network = importedWallet.network();
 
@@ -42,7 +44,7 @@ export const SuccessStep = ({
 
 			<WalletDetail
 				label={t("WALLETS.WALLET_NAME")}
-				borderPosition="both"
+				borderPosition={isXs ? "top" : "both"}
 				extra={
 					<Button
 						size="xs"

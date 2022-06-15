@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
-import { FormButtonsWrapper } from "@/app/components/Form/FormButtons";
+import { FormButtons } from "@/app/components/Form/FormButtons";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
@@ -299,7 +299,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 					</TabPanel>
 
 					{showFormButtons && (
-						<FormButtonsWrapper showMobileNavigation>
+						<FormButtons>
 							{activeTab < Step.StatusStep && (
 								<>
 									<Button
@@ -330,7 +330,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 									{t("COMMON.GO_TO_PORTFOLIO")}
 								</Button>
 							)}
-						</FormButtonsWrapper>
+						</FormButtons>
 					)}
 				</div>
 			</Tabs>

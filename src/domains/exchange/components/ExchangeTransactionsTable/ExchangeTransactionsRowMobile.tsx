@@ -1,5 +1,5 @@
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts } from "@payvo/sdk-profiles";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +12,11 @@ import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
 
-const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
+interface ExchangeTransactionProviderProperties {
+	slug: string;
+}
+
+const ExchangeTransactionProvider: React.VFC<ExchangeTransactionProviderProperties> = ({ slug }) => {
 	const { exchangeProviders } = useExchangeContext();
 
 	if (!exchangeProviders) {
@@ -21,22 +25,16 @@ const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 
 	const provider = exchangeProviders.find((provider) => provider.slug === slug);
 
-	return <span>{provider?.name}</span>;
+	return <>{provider?.name}</>;
 };
 
-interface ExchangeTransactionsRowStatusProperties {
-	status: Contracts.ExchangeTransactionStatus;
-}
-
-const ExchangeTransactionRowAmount = ({
-	type,
-	data,
-	isPending,
-}: {
+interface ExchangeTransactionRowAmountProperties {
 	type: string;
 	data: Contracts.ExchangeTransactionDetail;
 	isPending?: boolean;
-}) => {
+}
+
+const ExchangeTransactionRowAmount: React.VFC<ExchangeTransactionRowAmountProperties> = ({ type, data, isPending }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -50,7 +48,11 @@ const ExchangeTransactionRowAmount = ({
 	);
 };
 
-const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusProperties> = ({
+interface ExchangeTransactionsRowStatusProperties {
+	status: Contracts.ExchangeTransactionStatus;
+}
+
+const ExchangeTransactionsRowStatus: React.VFC<ExchangeTransactionsRowStatusProperties> = ({
 	status,
 }: ExchangeTransactionsRowStatusProperties) => {
 	const { t } = useTranslation();
@@ -113,12 +115,11 @@ interface ExchangeTransactionsRowMobileProperties {
 	onRemove: (exchangeTransaction: Contracts.IExchangeTransaction) => void;
 }
 
-export const ExchangeTransactionsRowMobile = ({
+export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMobileProperties> = ({
 	exchangeTransaction,
 	onClick,
 	onRemove,
-	...properties
-}: ExchangeTransactionsRowMobileProperties) => {
+}) => {
 	const timeFormat = useTimeFormat();
 
 	const { t } = useTranslation();
@@ -131,10 +132,7 @@ export const ExchangeTransactionsRowMobile = ({
 	};
 
 	return (
-		<TableRow
-			{...properties}
-			onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
-		>
+		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
 			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
 				<RowWrapper>
 					<RowLabel>{t("COMMON.ID")}</RowLabel>
@@ -142,7 +140,7 @@ export const ExchangeTransactionsRowMobile = ({
 					{exchangeTransaction.orderId() ? (
 						<button
 							type="button"
-							className="link"
+							className="link font-semibold"
 							onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 						>
 							<TruncateMiddle text={exchangeTransaction.orderId()} />
@@ -151,6 +149,7 @@ export const ExchangeTransactionsRowMobile = ({
 						<span className="text-theme-secondary-700 dark:text-theme-secondary-200">NA</span>
 					)}
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
@@ -164,11 +163,13 @@ export const ExchangeTransactionsRowMobile = ({
 
 					{DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).format(timeFormat)}
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.FROM")}</RowLabel>
 
 					<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TO")}</RowLabel>
 
@@ -178,6 +179,7 @@ export const ExchangeTransactionsRowMobile = ({
 						isPending={exchangeTransaction.isPending()}
 					/>
 				</RowWrapper>
+
 				<RowWrapper>
 					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
 
