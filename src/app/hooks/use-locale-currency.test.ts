@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { renderHook } from "@testing-library/react-hooks";
-import React from "react";
 
 import { useLocaleCurrency } from "./use-locale-currency";
 
 describe("useLocaleCurrency", () => {
-	it("should get currency based on locale", async () => {
+	it("should get currency based on locale", () => {
 		jest.spyOn(Intl, "DateTimeFormat").mockImplementationOnce(() => ({
 			resolvedOptions: () => ({
 				locale: "de-DE",
@@ -16,10 +14,10 @@ describe("useLocaleCurrency", () => {
 			result: { current },
 		} = renderHook(() => useLocaleCurrency());
 
-		expect(current).toEqual("EUR");
+		expect(current.localeCurrency).toBe("EUR");
 	});
 
-	it("should fall back to currency based on navigator language", async () => {
+	it("should fall back to currency based on navigator language", () => {
 		jest.spyOn(Intl, "DateTimeFormat").mockImplementationOnce(() => ({
 			resolvedOptions: () => ({
 				locale: "en",
@@ -32,10 +30,10 @@ describe("useLocaleCurrency", () => {
 			result: { current },
 		} = renderHook(() => useLocaleCurrency());
 
-		expect(current).toEqual("JPY");
+		expect(current.localeCurrency).toBe("JPY");
 	});
 
-	it("should fall back to USD", async () => {
+	it("should fall back to USD", () => {
 		jest.spyOn(Intl, "DateTimeFormat").mockImplementationOnce(() => ({
 			resolvedOptions: () => ({
 				locale: "xxx",
@@ -48,6 +46,6 @@ describe("useLocaleCurrency", () => {
 			result: { current },
 		} = renderHook(() => useLocaleCurrency());
 
-		expect(current).toEqual("USD");
+		expect(current.localeCurrency).toBe("USD");
 	});
 });

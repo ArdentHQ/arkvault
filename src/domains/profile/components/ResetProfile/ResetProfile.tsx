@@ -23,13 +23,14 @@ interface ResetProfileProperties {
 export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: ResetProfileProperties) => {
 	const { t } = useTranslation();
 
-	const localeCurrency = useLocaleCurrency();
+	const { defaultCurrency } = useLocaleCurrency();
+
 	const { persist } = useEnvironmentContext();
 
 	const handleReset = async () => {
 		profile.flushSettings();
 
-		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, localeCurrency);
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, defaultCurrency);
 
 		await persist();
 

@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useLayoutEffect, useMemo } from "react";
+import React, { useLayoutEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
@@ -7,8 +7,6 @@ import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
-import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
-import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 
@@ -19,19 +17,7 @@ export const CreateProfile = () => {
 	const history = useHistory();
 
 	const { theme, resetTheme } = useTheme();
-	const localeCurrency = useLocaleCurrency();
-
-	const currencyOptions = useCurrencyOptions(DEFAULT_MARKET_PROVIDER);
-
-	const defaultCurrency = useMemo(() => {
-		const [fiatOptions] = currencyOptions;
-
-		if (fiatOptions.options.some((option) => `${option.value}`.toLowerCase() === localeCurrency.toLowerCase())) {
-			return localeCurrency;
-		}
-
-		return "USD";
-	}, [currencyOptions, localeCurrency]);
+	const { defaultCurrency } = useLocaleCurrency();
 
 	useLayoutEffect(() => {
 		resetTheme();
