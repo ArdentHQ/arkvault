@@ -61,5 +61,5 @@ describe("useLocaleCurrency", () => {
 		} = renderHook(() => useLocaleCurrency());
 
 		expect(current.defaultCurrency).toBe("USD");
-	})
+	});
 });
