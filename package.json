@@ -38,7 +38,7 @@
 		"test:e2e:ci:edge": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json edge:headless -q attemptLimit=3,successThreshold=1",
 		"test:clean": "jest --clearCache",
 		"sdk:install-local": "node scripts/install-local-sdk.js",
-		"sdk:check-updates": "npx npm-check-updates \"/^@payvo.*$/\" -u"
+		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
 	"dependencies": {
 		"@ardenthq/sdk": "^1.0.1",
