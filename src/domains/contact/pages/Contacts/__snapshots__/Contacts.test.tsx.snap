@@ -3001,7 +3001,7 @@ exports[`Contacts should render responsive with contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <section
-        class="flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+        class="flex h-18 w-full items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black"
       >
         <h1
           class="mb-0 text-lg"
