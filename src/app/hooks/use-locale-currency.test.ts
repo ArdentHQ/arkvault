@@ -48,4 +48,18 @@ describe("useLocaleCurrency", () => {
 
 		expect(current.localeCurrency).toBe("USD");
 	});
+
+	it("should fall back to USD if currency is not supported", () => {
+		jest.spyOn(Intl, "DateTimeFormat").mockImplementationOnce(() => ({
+			resolvedOptions: () => ({
+				locale: "vi-VN",
+			}),
+		}));
+
+		const {
+			result: { current },
+		} = renderHook(() => useLocaleCurrency());
+
+		expect(current.defaultCurrency).toBe("USD");
+	})
 });
