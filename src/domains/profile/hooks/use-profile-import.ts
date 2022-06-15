@@ -12,7 +12,6 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 		let profile: Contracts.IProfile;
 
 		try {
-			console.log(profileData);
 			profile = await env.profiles().import(profileData, password);
 		} catch (error) {
 			if (error.message.includes("Reason: Unexpected token") && !password) {
