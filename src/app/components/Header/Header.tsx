@@ -42,7 +42,7 @@ export const PageHeader = ({ title, titleSuffix, subtitle, extra, border = false
 	}
 
 	return (
-		<section className="flex h-18 w-full items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black">
+		<section className="flex h-13 w-full items-center justify-between border-b border-theme-secondary-100 bg-theme-secondary-100 py-1.5 px-8 dark:border-black dark:bg-black">
 			<h1 className="mb-0 text-lg">{title}</h1>
 			{extra}
 		</section>
