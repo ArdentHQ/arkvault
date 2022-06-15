@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { startCase } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
@@ -277,12 +278,18 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 		setValue("refundWallet", address, { shouldDirty: true, shouldValidate: true });
 	};
 
-	const renderCurrencyLabel = ({ value }: OptionProperties) => {
+	const renderCurrencyLabel = ({ value, isSelected }: OptionProperties) => {
 		const currency = currencies.find(({ coin }: any) => coin === (value as string | undefined)?.toLowerCase());
 		return (
 			<div className="flex w-full flex-col">
-				<span className="font-semibold text-theme-primary-600">{currency.coin.toUpperCase()}</span>
-				<span className="text-sm">{currency.name}</span>
+				<span
+					className={cn("font-semibold ", {
+						"text-theme-primary-600": isSelected,
+					})}
+				>
+					{currency.coin.toUpperCase()}
+				</span>
+				<span className="dark:theme-text-secondary-700 text-sm text-theme-secondary-500">{currency.name}</span>
 			</div>
 		);
 	};
@@ -321,7 +328,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 	return (
 		<div data-testid="ExchangeForm__form-step" className="flex flex-col">
-			<div className="flex space-x-3">
+			<div className="relative flex space-x-3">
 				<div className="w-2/5">
 					<FormField name="fromCurrency">
 						<FormLabel label={t("COMMON.CRYPTOASSET")} />
@@ -330,6 +337,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 							disabled={!hasCurrencies}
 							defaultValue={fromCurrency?.coin.toUpperCase()}
 							placeholder={t("COMMON.SELECT")}
+							wrapperClassName="static sm:relative"
 							addons={{
 								start: {
 									content: (
@@ -382,7 +390,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			/>
 
 			<div className="space-y-6">
-				<div className="flex space-x-3">
+				<div className="relative flex space-x-3">
 					<div className="w-2/5">
 						<FormField name="toCurrency">
 							<FormLabel label={t("COMMON.CRYPTOASSET")} />
@@ -391,6 +399,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 								disabled={!hasCurrencies}
 								defaultValue={toCurrency?.coin.toUpperCase()}
 								placeholder={t("COMMON.SELECT")}
+								wrapperClassName="static sm:relative"
 								addons={{
 									start: {
 										content: (

@@ -72,4 +72,5 @@ export type SelectProperties = {
 	onChange?: (selected: OptionProperties) => void;
 	renderLabel?: (option: OptionProperties) => JSX.Element;
 	allowOverflow?: boolean;
+	wrapperClassName?: string;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
