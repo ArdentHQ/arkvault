@@ -284,7 +284,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			<div className="flex w-full flex-col">
 				<span
 					className={cn("font-semibold ", {
-						"text-theme-primary-600 dark:text-theme-primary-600": isSelected,
+						"text-theme-primary-600": isSelected,
 						"text-theme-secondary-700 dark:text-theme-secondary-200": !isSelected,
 					})}
 				>
