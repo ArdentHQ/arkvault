@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
-import { Contracts, Wallet } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { OptionsValue } from "./use-import-options";

@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useMultiSignatureStatus } from "./use-multisignature-status";

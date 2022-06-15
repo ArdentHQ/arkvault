@@ -1170,7 +1170,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://explorer.ark.io/transaction/payoutHash"
+                          href="https://live.arkscan.io/transaction/payoutHash"
                           rel="noopener noreferrer"
                         >
                           <span
@@ -1235,7 +1235,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                           class="ring-focus group inline-block css-15tcy38"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
-                          href="https://explorer.ark.io/wallets/payoutAddress"
+                          href="https://live.arkscan.io/wallets/payoutAddress"
                           rel="noopener noreferrer"
                         >
                           <span

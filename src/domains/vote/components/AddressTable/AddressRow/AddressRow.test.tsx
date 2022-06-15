@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -83,7 +83,7 @@ describe("AddressRow", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))

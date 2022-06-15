@@ -42,7 +42,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -608,7 +608,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -1213,7 +1213,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -1818,7 +1818,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -2423,7 +2423,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e42296783a9ff3b82e967c37451ebd52eb8131d16cd17411ab50fa0e9ef37711"
+                  href="https://test.arkscan.io/transactions/e42296783a9ff3b82e967c37451ebd52eb8131d16cd17411ab50fa0e9ef37711"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -2895,7 +2895,7 @@ exports[`Signed Transaction Table should render different status should show as 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/09e50e5fe66570bd736510c9eecec6f7561aa5a31896eeb36f3910d95d4b2002"
+                  href="https://test.arkscan.io/transactions/09e50e5fe66570bd736510c9eecec6f7561aa5a31896eeb36f3910d95d4b2002"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -3367,7 +3367,7 @@ exports[`Signed Transaction Table should render different status should show unc
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
+                  href="https://test.arkscan.io/transactions/e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -3972,7 +3972,7 @@ exports[`Signed Transaction Table should render pending transfers on mobile 1`] 
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
+                  href="https://test.arkscan.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -5768,7 +5768,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations on mobil
                   class="ring-focus group inline-block css-15tcy38"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
+                  href="https://test.arkscan.io/transactions/287a5898090855b3b7d1002a3f3967e910966e8c0fdf6c838aa4c7bd7277d89b"
                   rel="noopener noreferrer"
                 >
                   <span

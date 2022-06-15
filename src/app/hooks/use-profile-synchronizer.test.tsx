@@ -5,7 +5,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import {
 	useProfileJobs,
 	useProfileRestore,

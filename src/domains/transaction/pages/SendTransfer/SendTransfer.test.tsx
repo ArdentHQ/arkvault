@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import "jest-extended";
 
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -48,7 +48,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -145,7 +145,7 @@ describe("SendTransfer", () => {
 
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")

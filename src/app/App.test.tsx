@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Bcrypt } from "@payvo/sdk-cryptography";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Bcrypt } from "@ardenthq/sdk-cryptography";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import userEvent from "@testing-library/user-event";

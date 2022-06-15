@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 
 import { useWalletSync } from "./use-wallet-sync";

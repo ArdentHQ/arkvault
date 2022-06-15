@@ -1,5 +1,5 @@
-import { PBKDF2 } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { PBKDF2 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import reactRouterDom from "react-router-dom";

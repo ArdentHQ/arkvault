@@ -117,7 +117,7 @@ exports[`NavigationBar should not render with title if variant is full 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -411,7 +411,7 @@ exports[`NavigationBar should render as logo-only variant 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -541,7 +541,7 @@ exports[`NavigationBar should render full variant when profile restored is false
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -932,7 +932,7 @@ exports[`NavigationBar should render full variant when profile restored is true 
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -1317,7 +1317,7 @@ exports[`NavigationBar should render in lg 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -1702,7 +1702,7 @@ exports[`NavigationBar should render in md 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -2087,7 +2087,7 @@ exports[`NavigationBar should render in sm 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -2472,7 +2472,7 @@ exports[`NavigationBar should render in small screen variant 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -2857,7 +2857,7 @@ exports[`NavigationBar should render in xs 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -3242,7 +3242,7 @@ exports[`NavigationBar should render with custom menu 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -3627,7 +3627,7 @@ exports[`NavigationBar should render with shadow if there is a scroll 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>
@@ -3921,7 +3921,7 @@ exports[`NavigationBar should render with title if variant is logo-only 1`] = `
               <svg
                 height="28"
               >
-                payvo-logo.svg
+                arkvault-logo.svg
               </svg>
             </span>
           </button>

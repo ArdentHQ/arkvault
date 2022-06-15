@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/sdk-helpers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";

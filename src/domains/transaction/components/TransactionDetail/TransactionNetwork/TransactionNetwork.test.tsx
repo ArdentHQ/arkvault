@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { TransactionNetwork } from "./TransactionNetwork";
 import { translations } from "@/domains/transaction/i18n";
 import { availableNetworksMock } from "@/tests/mocks/networks";

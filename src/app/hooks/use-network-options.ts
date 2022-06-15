@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { Contracts } from "@payvo/sdk-profiles";
-import { Networks } from "@payvo/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
 import { useAvailableNetworks } from "@/domains/wallet/hooks";
 import { networksAsOptions } from "@/utils/network-utils";
 

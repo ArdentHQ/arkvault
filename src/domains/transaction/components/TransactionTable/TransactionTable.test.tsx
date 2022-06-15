@@ -1,5 +1,5 @@
-import { sortByDesc } from "@payvo/sdk-helpers";
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { sortByDesc } from "@ardenthq/sdk-helpers";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
@@ -22,7 +22,7 @@ describe("TransactionTable", () => {
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
 	beforeAll(() => {
-		nock("https://ark-test.payvo.com/api")
+		nock("https://ark-test.arkvault.io/api")
 			.get("/transactions")
 			.query(true)
 			.reply(

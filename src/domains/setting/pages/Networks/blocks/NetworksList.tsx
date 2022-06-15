@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { Icon } from "@/app/components/Icon";
 import { Checkbox } from "@/app/components/Checkbox";

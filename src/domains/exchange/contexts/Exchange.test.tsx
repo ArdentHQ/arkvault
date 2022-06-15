@@ -50,7 +50,7 @@ describe("Exchange Context", () => {
 	it("should handle error when fetching providers", async () => {
 		nock.cleanAll();
 
-		nock("https://exchanges.payvo.com").get("/api").reply(404);
+		nock("https://exchanges.arkvault.io").get("/api").reply(404);
 
 		const { container } = render(
 			<ExchangeProvider>

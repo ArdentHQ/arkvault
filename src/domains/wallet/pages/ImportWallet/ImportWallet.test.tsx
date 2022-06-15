@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, Wallet } from "@payvo/sdk-profiles";
+import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
@@ -74,7 +74,7 @@ describe("ImportWallet", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
 			.persist();

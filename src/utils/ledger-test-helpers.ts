@@ -1,4 +1,4 @@
-import * as SDKLedger from "@payvo/sdk-ledger";
+import * as SDKLedger from "@ardenthq/sdk-ledger";
 import { openTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 
 interface LedgerDevice {

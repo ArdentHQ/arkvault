@@ -1,6 +1,6 @@
-import { Networks } from "@payvo/sdk";
-import { ARK } from "@payvo/sdk-ark";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { ARK } from "@ardenthq/sdk-ark";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { FormProvider, useForm } from "react-hook-form";

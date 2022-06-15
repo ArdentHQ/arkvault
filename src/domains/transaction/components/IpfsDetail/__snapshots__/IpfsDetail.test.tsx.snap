@@ -269,7 +269,7 @@ exports[`IpfsDetail should render a modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -593,7 +593,7 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span

@@ -1,5 +1,5 @@
-import { isNil } from "@payvo/sdk-helpers";
-import { Contracts, DTO, Helpers } from "@payvo/sdk-profiles";
+import { isNil } from "@ardenthq/sdk-helpers";
+import { Contracts, DTO, Helpers } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

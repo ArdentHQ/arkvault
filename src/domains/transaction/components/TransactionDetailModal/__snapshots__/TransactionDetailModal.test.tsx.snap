@@ -251,7 +251,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -557,7 +557,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -881,7 +881,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1154,7 +1154,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -1350,7 +1350,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       class="ring-focus group inline-block hidden sm:block css-15tcy38"
                       data-ring-focus-margin="-m-1"
                       data-testid="Link"
-                      href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                      href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                       rel="noopener noreferrer"
                     >
                       <span
@@ -1392,7 +1392,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                     class="ring-focus group inline-block block w-32 sm:hidden css-15tcy38"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
-                    href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                    href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
@@ -1622,7 +1622,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -2160,7 +2160,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -2433,7 +2433,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -2841,7 +2841,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -3246,7 +3246,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -3651,7 +3651,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -4056,7 +4056,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span
@@ -4376,7 +4376,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                         class="ring-focus group inline-block flex items-center css-15tcy38"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
-                        href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                        href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                         rel="noopener noreferrer"
                       >
                         <span

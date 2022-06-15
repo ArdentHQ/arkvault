@@ -1,4 +1,4 @@
-import { ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";

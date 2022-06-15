@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";

@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 

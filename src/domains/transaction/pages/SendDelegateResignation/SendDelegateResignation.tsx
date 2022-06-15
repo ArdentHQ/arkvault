@@ -1,4 +1,4 @@
-import { DTO } from "@payvo/sdk-profiles";
+import { DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";

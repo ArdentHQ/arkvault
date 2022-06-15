@@ -1,5 +1,5 @@
-import { Services, Signatories } from "@payvo/sdk";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Services, Signatories } from "@ardenthq/sdk";
+import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 import { useRef } from "react";
 
 import { useLedgerContext } from "@/app/contexts";

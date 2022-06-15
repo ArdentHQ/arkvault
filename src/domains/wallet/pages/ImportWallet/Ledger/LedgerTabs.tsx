@@ -1,5 +1,5 @@
-import { Enums } from "@payvo/sdk";
-import { uniq } from "@payvo/sdk-helpers";
+import { Enums } from "@ardenthq/sdk";
+import { uniq } from "@ardenthq/sdk-helpers";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";

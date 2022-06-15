@@ -1,4 +1,4 @@
-import { Coins, Networks } from "@payvo/sdk";
+import { Coins, Networks } from "@ardenthq/sdk";
 import { TransactionFees } from "types";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 

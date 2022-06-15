@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";

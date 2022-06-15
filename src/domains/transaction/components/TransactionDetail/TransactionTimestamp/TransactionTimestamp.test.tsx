@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/sdk-intl";
+import { DateTime } from "@ardenthq/sdk-intl";
 import React from "react";
 
 import { TransactionTimestamp } from "./TransactionTimestamp";

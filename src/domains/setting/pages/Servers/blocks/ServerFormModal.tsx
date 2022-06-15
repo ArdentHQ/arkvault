@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { useForm } from "react-hook-form";
 import { Modal } from "@/app/components/Modal";
 import { Form, FormButtons, FormField, FormLabel } from "@/app/components/Form";

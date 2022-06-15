@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

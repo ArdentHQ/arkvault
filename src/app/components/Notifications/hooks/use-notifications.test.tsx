@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 
@@ -13,7 +13,7 @@ let profile: Contracts.IProfile;
 
 describe("useNotifications", () => {
 	beforeAll(async () => {
-		nock("https://ark-test.payvo.com").get("/api/transactions").query(true).reply(200, {
+		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
 			data: NotificationTransactionsFixtures.data,
 			meta: TransactionsFixture.meta,
 		});

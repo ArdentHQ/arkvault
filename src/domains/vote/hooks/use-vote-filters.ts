@@ -1,5 +1,5 @@
-import { isEmptyObject } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { isEmptyObject } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
 
 import { useNetworks, useWalletAlias } from "@/app/hooks";

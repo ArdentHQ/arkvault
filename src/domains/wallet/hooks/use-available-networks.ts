@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 
 export const useAvailableNetworks = ({

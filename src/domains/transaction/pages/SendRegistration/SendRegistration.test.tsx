@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Observer } from "@ledgerhq/hw-transport";
-import { Signatories } from "@payvo/sdk";
-import { BIP39 } from "@payvo/sdk-cryptography";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
@@ -80,7 +80,7 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +DelegateRegistrationFixture.data.amount / 1e8,
 		data: () => ({ data: () => DelegateRegistrationFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${DelegateRegistrationFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
 		fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
 		id: () => DelegateRegistrationFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -95,7 +95,7 @@ const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWalle
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ data: () => SecondSignatureRegistrationFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
 		fee: () => +SecondSignatureRegistrationFixture.data.fee / 1e8,
 		id: () => SecondSignatureRegistrationFixture.data.id,
 		isMultiSignatureRegistration: () => false,
@@ -109,7 +109,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
 		fee: () => +MultisignatureRegistrationFixture.data.fee / 1e8,
 		get: (attribute: string) => {
 			if (attribute === "multiSignature") {
@@ -182,11 +182,11 @@ describe("Registration", () => {
 		nock.cleanAll();
 		defaultNetMocks();
 
-		nock("https://ark-test-musig.payvo.com/")
+		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
 
-		nock("https://ark-test-musig.payvo.com")
+		nock("https://ark-test-musig.arkvault.io")
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
 			.persist();

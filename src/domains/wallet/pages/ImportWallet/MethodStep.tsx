@@ -1,6 +1,6 @@
-import { Coins, Networks } from "@payvo/sdk";
-import { truncate } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Coins, Networks } from "@ardenthq/sdk";
+import { truncate } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";

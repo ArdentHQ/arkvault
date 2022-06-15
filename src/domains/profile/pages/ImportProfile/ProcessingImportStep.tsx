@@ -1,4 +1,4 @@
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 

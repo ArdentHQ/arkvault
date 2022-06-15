@@ -10,18 +10,18 @@ const sdkPath = process.argv[2];
 
 if (!sdkPath) {
 	console.warn("Error: sdk path is not provided. Use relative or absolute path to link your local sdk repo.");
-	console.warn("Example: pnpm sdk:instal-local ../sdk/\n");
+	console.warn("Example: pnpm sdk:install-local ../platform-sdk/\n");
 	return;
 }
 
-packageJson.dependencies["@payvo/sdk"] = join(sdkPath, "packages/sdk");
-packageJson.dependencies["@payvo/sdk-ark"] = join(sdkPath, "packages/ark");
-packageJson.dependencies["@payvo/sdk-cryptography"] = join(sdkPath, "packages/cryptography");
-packageJson.dependencies["@payvo/sdk-helpers"] = join(sdkPath, "packages/helpers");
-packageJson.dependencies["@payvo/sdk-intl"] = join(sdkPath, "packages/intl");
-packageJson.dependencies["@payvo/sdk-ledger"] = join(sdkPath, "packages/ledger");
-packageJson.dependencies["@payvo/sdk-news"] = join(sdkPath, "packages/news");
-packageJson.dependencies["@payvo/sdk-profiles"] = join(sdkPath, "packages/profiles");
+packageJson.dependencies["@ardenthq/sdk"] = join(sdkPath, "packages/sdk");
+packageJson.dependencies["@ardenthq/sdk-ark"] = join(sdkPath, "packages/ark");
+packageJson.dependencies["@ardenthq/sdk-cryptography"] = join(sdkPath, "packages/cryptography");
+packageJson.dependencies["@ardenthq/sdk-helpers"] = join(sdkPath, "packages/helpers");
+packageJson.dependencies["@ardenthq/sdk-intl"] = join(sdkPath, "packages/intl");
+packageJson.dependencies["@ardenthq/sdk-ledger"] = join(sdkPath, "packages/ledger");
+packageJson.dependencies["@ardenthq/sdk-news"] = join(sdkPath, "packages/news");
+packageJson.dependencies["@ardenthq/sdk-profiles"] = join(sdkPath, "packages/profiles");
 
 fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 4));
 

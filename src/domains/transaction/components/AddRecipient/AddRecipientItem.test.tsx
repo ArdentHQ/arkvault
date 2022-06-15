@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { AddRecipientItem } from "./AddRecipientItem";
