@@ -1,7 +1,7 @@
-import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
-import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 import LocaleCurrency from "locale-currency";
 import { useMemo } from "react";
+import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
+import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 
 export const useLocaleCurrency = () => {
 	const currencyOptions = useCurrencyOptions(DEFAULT_MARKET_PROVIDER);
