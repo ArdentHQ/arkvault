@@ -6,6 +6,7 @@ import { useAvailableNetworks } from "@/domains/wallet/hooks/use-available-netwo
 import { useActiveProfile } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
+import { isCustomNetwork } from "@/utils/network-utils";
 
 const groupWalletsByNetwork = (
 	wallets: Contracts.IReadWriteWallet[],
@@ -52,6 +53,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 
 			wallets = wallets.sort(
 				(a, b) =>
+					Number(isCustomNetwork(a.network())) - Number(isCustomNetwork(b.network())) ||
 					a.network().coinName().localeCompare(b.network().coinName()) ||
 					Number(a.network().isTest()) - Number(b.network().isTest()) ||
 					Number(b.isStarred()) - Number(a.isStarred()) ||
