@@ -24,6 +24,7 @@ import {
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
+	renderResponsive,
 	renderWithForm,
 	screen,
 	waitFor,
@@ -234,7 +235,7 @@ describe("ImportWallet", () => {
 		await expect(addressInput()).resolves.toBeVisible();
 	});
 
-	it("should render success step", async () => {
+	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = jest.fn();
 		const importedWallet = profile.wallets().first();
@@ -253,7 +254,7 @@ describe("ImportWallet", () => {
 			);
 		};
 
-		const { asFragment } = render(<Component />);
+		const { asFragment } = renderResponsive(<Component />, breakpoint);
 
 		expect(successStep()).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

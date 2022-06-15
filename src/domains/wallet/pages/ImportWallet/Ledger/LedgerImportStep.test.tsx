@@ -8,7 +8,7 @@ import { LedgerImportStep } from "./LedgerImportStep";
 import { LedgerData } from "@/app/contexts";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 describe("LedgerImportStep", () => {
 	let profile: Contracts.IProfile;
@@ -58,7 +58,7 @@ describe("LedgerImportStep", () => {
 		}
 	});
 
-	const renderComponent = (wallets: LedgerData[] = ledgerWallets) => {
+	const renderComponent = (breakpoint: string, wallets: LedgerData[] = ledgerWallets) => {
 		const onClickEditWalletName = jest.fn();
 
 		const network = profile.wallets().findByAddressWithNetwork(wallets[0].address, "ark.devnet")?.network();
@@ -82,13 +82,13 @@ describe("LedgerImportStep", () => {
 		};
 
 		return {
-			...render(<Component />),
+			...renderResponsive(<Component />, breakpoint),
 			onClickEditWalletName,
 		};
 	};
 
-	it("should render with single import", () => {
-		const { container, onClickEditWalletName } = renderComponent(ledgerWallets.slice(1));
+	it.each(["xs", "lg"])("should render with single import (%s)", (breakpoint) => {
+		const { container, onClickEditWalletName } = renderComponent(breakpoint, ledgerWallets.slice(1));
 
 		userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
 
@@ -96,8 +96,8 @@ describe("LedgerImportStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with multiple import", async () => {
-		const { container, onClickEditWalletName } = renderComponent();
+	it.each(["xs", "lg"])("should render with multiple import", async (breakpoint) => {
+		const { container, onClickEditWalletName } = renderComponent(breakpoint);
 
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")).toHaveLength(2));
 

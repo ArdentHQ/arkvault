@@ -267,45 +267,47 @@ export const CreateWallet = () => {
 								<SuccessStep onClickEditAlias={() => setIsEditAliasModalOpen(true)} />
 							</TabPanel>
 
-							<FormButtons>
-								{activeTab < Step.SuccessStep && (
-									<Button
-										data-testid="CreateWallet__back-button"
-										disabled={isGeneratingWallet}
-										variant="secondary"
-										onClick={handleBack}
-									>
-										{t("COMMON.BACK")}
-									</Button>
-								)}
+							{activeTab <= Step.EncryptPasswordStep && (
+								<FormButtons>
+									{activeTab < Step.SuccessStep && (
+										<Button
+											data-testid="CreateWallet__back-button"
+											disabled={isGeneratingWallet}
+											variant="secondary"
+											onClick={handleBack}
+										>
+											{t("COMMON.BACK")}
+										</Button>
+									)}
 
-								{activeTab < Step.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-button"
-										disabled={isDirty ? !isValid || isGeneratingWallet : true}
-										isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
-										onClick={() => handleNext()}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
+									{activeTab < Step.EncryptPasswordStep && (
+										<Button
+											data-testid="CreateWallet__continue-button"
+											disabled={isDirty ? !isValid || isGeneratingWallet : true}
+											isLoading={isGeneratingWallet && activeTab === Step.NetworkStep}
+											onClick={() => handleNext()}
+										>
+											{t("COMMON.CONTINUE")}
+										</Button>
+									)}
 
-								{activeTab === Step.EncryptPasswordStep && (
-									<Button
-										data-testid="CreateWallet__continue-encryption-button"
-										disabled={
-											!isValid ||
-											isGeneratingWallet ||
-											!encryptionPassword ||
-											!confirmEncryptionPassword
-										}
-										isLoading={isGeneratingWallet}
-										onClick={handlePasswordSubmit}
-									>
-										{t("COMMON.CONTINUE")}
-									</Button>
-								)}
-							</FormButtons>
+									{activeTab === Step.EncryptPasswordStep && (
+										<Button
+											data-testid="CreateWallet__continue-encryption-button"
+											disabled={
+												!isValid ||
+												isGeneratingWallet ||
+												!encryptionPassword ||
+												!confirmEncryptionPassword
+											}
+											isLoading={isGeneratingWallet}
+											onClick={handlePasswordSubmit}
+										>
+											{t("COMMON.CONTINUE")}
+										</Button>
+									)}
+								</FormButtons>
+							)}
 
 							{activeTab === Step.SuccessStep && (
 								<FormButtons>
