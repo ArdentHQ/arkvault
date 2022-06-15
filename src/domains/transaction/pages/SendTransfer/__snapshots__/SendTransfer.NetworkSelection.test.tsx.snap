@@ -514,13 +514,13 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-13-menu"
+                            aria-owns="downshift-29-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-13-input"
-                                id="downshift-13-label"
+                                for="downshift-29-input"
+                                id="downshift-29-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -552,13 +552,13 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-13-menu"
-                                    aria-labelledby="downshift-13-label"
+                                    aria-controls="downshift-29-menu"
+                                    aria-labelledby="downshift-29-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-13-input"
+                                    id="downshift-29-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -605,8 +605,8 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-13-label"
-                              id="downshift-13-menu"
+                              aria-labelledby="downshift-29-label"
+                              id="downshift-29-menu"
                               role="listbox"
                             />
                           </div>
@@ -636,43 +636,14 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-base text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="css-u3jrna"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 2
-                                </span>
-                              </span>
-                              <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
-                              >
-                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                              </span>
-                            </div>
+                            />
                           </span>
                           <div
                             class="css-1psxlcd"
                           >
                             <div
-                              class="shrink-0 css-8zckym"
-                              data-testid="Avatar"
-                            >
-                              <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                              >
-                                <img
-                                  alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                                  title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                />
-                              </div>
-                            </div>
+                              class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
+                            />
                             <div
                               class="relative flex h-full flex-1 invisible"
                             >
@@ -683,7 +654,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                 name="senderAddress"
                                 readonly=""
                                 type="text"
-                                value="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                value=""
                               />
                             </div>
                             <div
@@ -829,7 +800,8 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-1psxlcd"
+                                            class="css-n29l73"
+                                            disabled=""
                                           >
                                             <div
                                               class="flex items-center"
@@ -847,8 +819,9 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                                 aria-invalid="false"
                                                 aria-labelledby="SelectRecipient__dropdown-label"
                                                 autocomplete="off"
-                                                class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                                class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                                 data-testid="SelectDropdown__input"
+                                                disabled=""
                                                 id="SelectRecipient__dropdown-input"
                                                 name="recipientAddress"
                                                 placeholder="Address"
@@ -864,7 +837,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                                 class=""
                                               >
                                                 <div
-                                                  class="flex items-center cursor-pointer"
+                                                  class="flex items-center"
                                                   data-testid="SelectRecipient__select-recipient"
                                                 >
                                                   <div
@@ -903,20 +876,6 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                 <span>
                                   Amount
                                 </span>
-                                <span
-                                  class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-                                >
-                                  (
-                                  Available
-                                   
-                                  <span
-                                    class="whitespace-nowrap"
-                                    data-testid="Amount"
-                                  >
-                                    57.60679402
-                                  </span>
-                                  )
-                                </span>
                               </label>
                               <div
                                 class="flex space-x-2"
@@ -928,15 +887,17 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n29l73"
+                                      disabled=""
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
                                       >
                                         <input
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none css-1nupw50"
+                                          class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                           data-testid="AddRecipient__amount"
+                                          disabled=""
                                           name="amount"
                                           placeholder="Enter an amount"
                                           type="text"
@@ -952,6 +913,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                   <button
                                     class=" css-h5fzq7"
                                     data-testid="AddRecipient__send-all"
+                                    disabled=""
                                     type="button"
                                   >
                                     Send All
