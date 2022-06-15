@@ -78,6 +78,14 @@ describe("SelectDropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render with custom wrapper class name", () => {
+		const { container } = render(
+			<Select options={getOptions(OptionType.base)} wrapperClassName="relative w-full" />,
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it.each([OptionType.base, OptionType.group])("should render option %s with custom label", (optType) => {
 		const { container } = render(
 			<Select options={getOptions(optType)} renderLabel={(option) => <span>{`Label ${option.label}`}</span>} />,
