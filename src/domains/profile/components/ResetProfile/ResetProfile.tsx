@@ -23,7 +23,7 @@ interface ResetProfileProperties {
 export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: ResetProfileProperties) => {
 	const { t } = useTranslation();
 
-	const localeCurrency = useLocaleCurrency()
+	const localeCurrency = useLocaleCurrency();
 	const { persist } = useEnvironmentContext();
 
 	const handleReset = async () => {

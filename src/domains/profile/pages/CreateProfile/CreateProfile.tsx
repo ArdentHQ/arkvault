@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import LocaleCurrency from "locale-currency";
 import React, { useLayoutEffect, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
