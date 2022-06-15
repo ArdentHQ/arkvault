@@ -1,4 +1,4 @@
-import { chunk } from "@payvo/sdk-helpers";
+import { chunk } from "@ardenthq/sdk-helpers";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";

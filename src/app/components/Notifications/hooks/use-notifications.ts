@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {

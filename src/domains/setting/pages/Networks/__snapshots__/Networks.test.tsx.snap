@@ -126,7 +126,7 @@ exports[`Network Settings should check the main network by default 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -985,7 +985,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

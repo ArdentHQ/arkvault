@@ -1,9 +1,9 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 import nock from "nock";
-import { UUID } from "@payvo/sdk-cryptography";
+import { UUID } from "@ardenthq/sdk-cryptography";
 import NetworksSettings from "@/domains/setting/pages/Networks";
 import {
 	env,

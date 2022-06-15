@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -44,7 +44,7 @@ const renderPage = () => {
 const transactionResponse = {
 	amount: () => +transactionFixture.data.amount / 1e8,
 	data: () => ({ data: () => transactionFixture.data }),
-	explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
 	isMultiSignatureRegistration: () => false,

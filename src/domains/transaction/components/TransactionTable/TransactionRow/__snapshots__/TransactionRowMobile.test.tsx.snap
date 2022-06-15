@@ -24,7 +24,7 @@ exports[`TransactionRowMobile should omit the currency for transactions from tes
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -223,7 +223,7 @@ exports[`TransactionRowMobile should omit the currency for transactions from tes
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -422,7 +422,7 @@ exports[`TransactionRowMobile should render 1`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -638,7 +638,7 @@ exports[`TransactionRowMobile should render 2`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -1714,7 +1714,7 @@ exports[`TransactionRowMobile should render with currency 1`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -1918,7 +1918,7 @@ exports[`TransactionRowMobile should render with currency 2`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span

@@ -1,5 +1,5 @@
 import retry from "async-retry";
-import { Coins } from "@payvo/sdk";
+import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import { hasRequiredAppVersion } from "./validation";
 

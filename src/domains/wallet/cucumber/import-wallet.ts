@@ -106,9 +106,9 @@ cucumber(
 		},
 	},
 	[
-		mockMuSigRequest("https://ark-test-musig.payvo.com", "list", { result: [] }),
+		mockMuSigRequest("https://ark-test-musig.arkvault.io", "list", { result: [] }),
 		mockRequest(
-			"https://ark-test.payvo.com/api/transactions?limit=30&address=DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
+			"https://ark-test.arkvault.io/api/transactions?limit=30&address=DNTwQTSp999ezQ425utBsWetcmzDuCn2pN",
 			[],
 		),
 	],

@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import React from "react";
@@ -34,7 +34,7 @@ describe("useLatestTransactions", () => {
 
 		useDefaultNetMocks();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))

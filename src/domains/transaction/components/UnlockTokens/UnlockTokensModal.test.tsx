@@ -1,7 +1,7 @@
-import { Signatories } from "@payvo/sdk";
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Signatories } from "@ardenthq/sdk";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
@@ -67,7 +67,7 @@ describe("UnlockTokensModal", () => {
 			amount: () => 30,
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
-			explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+			explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
 			isMultiSignatureRegistration: () => false,

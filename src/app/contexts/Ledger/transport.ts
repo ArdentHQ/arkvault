@@ -1,5 +1,5 @@
-import { LedgerTransportFactory } from "@payvo/sdk-ledger";
-import { Contracts } from "@payvo/sdk";
+import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
+import { Contracts } from "@ardenthq/sdk";
 
 export const supportedTransport = async () => new LedgerTransportFactory().supportedTransport();
 

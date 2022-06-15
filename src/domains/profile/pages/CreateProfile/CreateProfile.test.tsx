@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 /* eslint-disable @typescript-eslint/require-await */
-import { ARK } from "@payvo/sdk-ark";
+import { ARK } from "@ardenthq/sdk-ark";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";

@@ -1,4 +1,4 @@
-import { Helpers } from "@payvo/sdk-profiles";
+import { Helpers } from "@ardenthq/sdk-profiles";
 import {
 	GRAPH_COLOR_OTHER,
 	GRAPH_COLOR_OTHER_DARK,

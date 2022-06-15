@@ -29,7 +29,7 @@ exports[`Welcome should change route to create profile 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -257,7 +257,7 @@ exports[`Welcome should navigate to previous page with correct password 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -553,7 +553,7 @@ exports[`Welcome should navigate to profile dashboard 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -849,7 +849,7 @@ exports[`Welcome should navigate to profile dashboard with correct password 1`] 
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1145,7 +1145,7 @@ exports[`Welcome should navigate to profile settings from profile card menu 1`] 
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1441,7 +1441,7 @@ exports[`Welcome should navigate to profile settings with correct password 1`] =
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1737,7 +1737,7 @@ exports[`Welcome should not select profile on wrong last location 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1965,7 +1965,7 @@ exports[`Welcome should render with profiles 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2261,7 +2261,7 @@ exports[`Welcome should render without profiles 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

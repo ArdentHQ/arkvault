@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { TFunction } from "react-i18next";
 
 import { TransactionFees } from "@/types";

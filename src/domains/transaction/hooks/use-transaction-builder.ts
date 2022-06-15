@@ -1,6 +1,6 @@
-import { Services } from "@payvo/sdk";
-import { upperFirst } from "@payvo/sdk-helpers";
-import { Contracts as ProfileContracts, DTO } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { upperFirst } from "@ardenthq/sdk-helpers";
+import { Contracts as ProfileContracts, DTO } from "@ardenthq/sdk-profiles";
 
 import { useLedgerContext } from "@/app/contexts";
 import { withAbortPromise } from "@/domains/transaction/utils";

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
@@ -23,11 +23,11 @@ import { translations } from "@/app/i18n/common/i18n";
 let profile: Contracts.IProfile;
 let network: Networks.Network;
 
-const musigHostLive = "https://ark-live-musig.payvo.com";
-const musigHostTest = "https://ark-test-musig.payvo.com";
+const musigHostLive = "https://ark-live-musig.arkvault.io";
+const musigHostTest = "https://ark-test-musig.arkvault.io";
 
-const peerHostLive = "https://ark-live.payvo.com";
-const peerHostTest = "https://ark-test.payvo.com";
+const peerHostLive = "https://ark-live.arkvault.io";
+const peerHostTest = "https://ark-test.arkvault.io";
 
 const networksStub: any = {
 	ark: {
@@ -50,10 +50,6 @@ const networksStub: any = {
 				},
 				name: "ARK Musig #1",
 			},
-		],
-	},
-	bpl: {
-		mainnet: [
 			{
 				host: {
 					custom: true,
@@ -61,14 +57,14 @@ const networksStub: any = {
 					host: `${peerHostLive}/api`,
 					type: "full",
 				},
-				name: "Another network",
+				name: "ARK #1",
 			},
 		],
 	},
 };
 
 const musigResponse = {
-	name: "@payvo/ark-musig-server",
+	name: "@ardenthq/ark-musig-server",
 	version: "1.5.0",
 };
 
@@ -549,14 +545,13 @@ describe("Servers Settings", () => {
 
 				userEvent.click(screen.getByTestId("Server-settings__submit-button"));
 
-				await waitFor(() => expect(settingsSetSpy).toHaveBeenCalledWith("FALLBACK_TO_DEFAULT_NODES", false));
 				await waitFor(() =>
 					expect(serverPushSpy).toHaveBeenCalledWith({
 						host: {
 							custom: true,
 							enabled: false,
 							height: 999_999,
-							host: "https://ark-live.payvo.com",
+							host: "https://ark-live.arkvault.io",
 							type: "full",
 						},
 						name: "Test",
@@ -733,7 +728,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render customs servers", async () => {
+		it("should render custom servers", async () => {
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />

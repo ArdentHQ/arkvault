@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 
 export interface ContactListItemOption {

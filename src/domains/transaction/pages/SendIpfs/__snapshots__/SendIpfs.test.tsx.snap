@@ -126,7 +126,7 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1232,7 +1232,7 @@ exports[`SendIpfs should render summary step 1`] = `
                   class="ring-focus group inline-block flex items-center css-1jnqd87"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
-                  href="https://dexplorer.ark.io/transactions/7d5eb5fc782c766af4af5eee22b1d7f7d6d1cdd7bab166df567f315d72e1db07"
+                  href="https://test.arkscan.io/transactions/7d5eb5fc782c766af4af5eee22b1d7f7d6d1cdd7bab166df567f315d72e1db07"
                   rel="noopener noreferrer"
                 >
                   <span
@@ -1929,7 +1929,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2334,7 +2334,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -2691,7 +2691,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3096,7 +3096,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -3455,7 +3455,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3860,7 +3860,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -4217,7 +4217,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -4622,7 +4622,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                                 class="ring-focus group inline-block flex items-center css-15tcy38"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
-                                href="https://dexplorer.ark.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
+                                href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
@@ -4979,7 +4979,7 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -5764,7 +5764,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

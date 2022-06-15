@@ -25,12 +25,12 @@ describe("ExchangeService", () => {
 			const result = await subject.currency("ark");
 
 			expect(result).toStrictEqual({
-				addressExplorerMask: "https://explorer.ark.io/wallets/{}",
+				addressExplorerMask: "https://live.arkscan.io/wallets/{}",
 				coin: "ark",
 				externalIdName: null,
 				hasExternalId: false,
 				name: "Ark",
-				transactionExplorerMask: "https://explorer.ark.io/transaction/{}",
+				transactionExplorerMask: "https://live.arkscan.io/transaction/{}",
 				warnings: { from: "", to: "" },
 			});
 			expect(result.coin).toBe("ark");

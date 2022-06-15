@@ -1,5 +1,5 @@
-import { upperFirst } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { upperFirst } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";

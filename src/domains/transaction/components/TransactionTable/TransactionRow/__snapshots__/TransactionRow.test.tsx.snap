@@ -16,7 +16,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -197,7 +197,7 @@ exports[`TransactionRow should render 1`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -628,7 +628,7 @@ exports[`TransactionRow should render responsive 1`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -844,7 +844,7 @@ exports[`TransactionRow should render responsive 2`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
@@ -1265,7 +1265,7 @@ exports[`TransactionRow should render with currency 1`] = `
               class="ring-focus group inline-block css-15tcy38"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
-              href="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span

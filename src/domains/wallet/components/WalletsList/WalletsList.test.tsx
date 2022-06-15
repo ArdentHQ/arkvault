@@ -1,5 +1,5 @@
-import { Networks } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";

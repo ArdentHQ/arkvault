@@ -1,6 +1,6 @@
-import { Services } from "@payvo/sdk";
-import { BigNumber } from "@payvo/sdk-helpers";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
@@ -21,7 +21,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => BigNumber.make(transactionFixture.data.amount),
 		data: () => ({ data: () => transactionFixture.data }),
-		explorerLink: () => `https://dexplorer.ark.io/transaction/${transactionFixture.data.id}`,
+		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => BigNumber.make(transactionFixture.data.fee),
 		id: () => transactionFixture.data.id,
 		recipient: () => transactionFixture.data.recipient,

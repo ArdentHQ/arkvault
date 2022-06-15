@@ -1,4 +1,4 @@
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import { Size } from "@/types";
 
 export interface NetworkOptionProperties {

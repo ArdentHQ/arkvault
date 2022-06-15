@@ -1,6 +1,6 @@
-import { BigNumber } from "@payvo/sdk-helpers";
-import { DateTime } from "@payvo/sdk-intl";
-import { Contracts } from "@payvo/sdk-profiles";
+import { BigNumber } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect } from "react";

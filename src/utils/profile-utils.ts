@@ -1,5 +1,5 @@
 import { matchPath } from "react-router-dom";
-import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 
 export const getProfileById = (env: Environment, id: string) => {
 	if (!id) {

@@ -1,4 +1,4 @@
-import { BigNumber } from "@payvo/sdk-helpers";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 

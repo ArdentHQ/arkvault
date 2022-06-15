@@ -6,7 +6,7 @@
 		"wif": 170,
 		"token": "DARK",
 		"symbol": "DѦ",
-		"explorer": "https://dexplorer.ark.io",
+		"explorer": "https://test.arkscan.io",
 		"version": 30,
 		"ports": { "@arkecosystem/core-p2p": null, "@arkecosystem/core-api": 4003 },
 		"constants": {

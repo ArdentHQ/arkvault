@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";

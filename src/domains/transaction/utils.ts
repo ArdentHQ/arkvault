@@ -1,4 +1,4 @@
-import { Services } from "@payvo/sdk";
+import { Services } from "@ardenthq/sdk";
 
 export const isNoDeviceError = (error: any) => {
 	if (!error) {

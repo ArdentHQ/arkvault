@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";

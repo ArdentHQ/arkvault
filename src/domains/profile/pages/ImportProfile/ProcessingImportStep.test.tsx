@@ -1,5 +1,5 @@
 import fs from "fs";
-import { Profile } from "@payvo/sdk-profiles";
+import { Profile } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

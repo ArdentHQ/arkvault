@@ -1,4 +1,4 @@
-import { Contracts, DTO } from "@payvo/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
 import React, { MouseEvent, useMemo } from "react";
 import { useTranslation } from "react-i18next";

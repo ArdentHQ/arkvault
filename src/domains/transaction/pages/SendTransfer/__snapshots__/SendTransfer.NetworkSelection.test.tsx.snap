@@ -124,7 +124,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1300,7 +1300,7 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

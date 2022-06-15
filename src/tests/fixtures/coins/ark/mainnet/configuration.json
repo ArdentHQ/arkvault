@@ -6,7 +6,7 @@
 		"wif": 170,
 		"token": "ARK",
 		"symbol": "Ѧ",
-		"explorer": "https://explorer.ark.io",
+		"explorer": "https://live.arkscan.io",
 		"version": 23,
 		"ports": { "@arkecosystem/core-p2p": null, "@arkecosystem/core-api": 4003 },
 		"constants": {

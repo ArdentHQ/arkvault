@@ -123,7 +123,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -1222,7 +1222,7 @@ exports[`News should render responsive (md) 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -2321,7 +2321,7 @@ exports[`News should render responsive (xs) 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>
@@ -3378,7 +3378,7 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                 <svg
                   height="28"
                 >
-                  payvo-logo.svg
+                  arkvault-logo.svg
                 </svg>
               </span>
             </button>

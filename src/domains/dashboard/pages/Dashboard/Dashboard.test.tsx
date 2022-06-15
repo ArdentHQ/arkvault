@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
@@ -34,7 +34,7 @@ describe("Dashboard", () => {
 	beforeAll(async () => {
 		useDefaultNetMocks();
 
-		nock("https://ark-test.payvo.com")
+		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)
 			.reply(200, () => {

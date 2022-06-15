@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 

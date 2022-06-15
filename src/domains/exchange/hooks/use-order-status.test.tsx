@@ -1,4 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
 
@@ -29,7 +29,7 @@ describe("useOrderStatus", () => {
 
 	describe("#checkOrderStatus", () => {
 		it("should check the order status", async () => {
-			nock("https://exchanges.payvo.com")
+			nock("https://exchanges.arkvault.io")
 				.get("/api/changenow/orders/id")
 				.query(true)
 				.reply(200, { data: { id: "id", status: "waiting" } });

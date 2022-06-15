@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Networks } from "@payvo/sdk";
+import { Networks } from "@ardenthq/sdk";
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";

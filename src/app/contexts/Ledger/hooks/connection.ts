@@ -1,5 +1,5 @@
-import { Coins } from "@payvo/sdk";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Coins } from "@ardenthq/sdk";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import retry from "async-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";

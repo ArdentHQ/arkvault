@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { Contracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { ContactListItemMobileAddress } from "./ContactListItemMobile.blocks";
 import { Icon } from "@/app/components/Icon";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";

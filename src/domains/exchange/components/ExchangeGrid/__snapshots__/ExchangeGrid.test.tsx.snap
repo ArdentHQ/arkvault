@@ -24,7 +24,7 @@ exports[`ExchangeGrid should render 1`] = `
               <img
                 alt="ChangeNOW Logo"
                 class="h-full w-full object-cover"
-                src="https://exchanges.payvo.com/images/changenow/thumbnail.png"
+                src="https://exchanges.arkvault.io/images/changenow/thumbnail.png"
               />
             </div>
             <div

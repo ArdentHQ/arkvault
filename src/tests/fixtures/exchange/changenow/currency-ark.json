@@ -8,7 +8,7 @@
 		},
 		"hasExternalId": false,
 		"externalIdName": null,
-		"addressExplorerMask": "https://explorer.ark.io/wallets/{}",
-		"transactionExplorerMask": "https://explorer.ark.io/transaction/{}"
+		"addressExplorerMask": "https://live.arkscan.io/wallets/{}",
+		"transactionExplorerMask": "https://live.arkscan.io/transaction/{}"
 	}
 }

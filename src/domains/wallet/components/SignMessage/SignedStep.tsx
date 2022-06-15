@@ -1,5 +1,5 @@
-import { Services } from "@payvo/sdk";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
+import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 

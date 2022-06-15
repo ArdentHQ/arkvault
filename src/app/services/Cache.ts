@@ -1,4 +1,4 @@
-import { DateTime } from "@payvo/sdk-intl";
+import { DateTime } from "@ardenthq/sdk-intl";
 
 interface CacheItem {
 	value: any;

@@ -1,5 +1,5 @@
-import { DateTime } from "@payvo/sdk-intl";
-import { BigNumber } from "@payvo/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 const wallet = {
 	address: () => "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
@@ -64,9 +64,9 @@ export const TransactionFixture = {
 	hash: () => "QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68",
 	// @ts-ignore
 	explorerLink: () =>
-		"https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe",
+		"https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe",
 	explorerLinkForBlock: () =>
-		"https://explorer.ark.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
+		"https://live.arkscan.io/blocks/71fd1a494ded5430586f4dd1c79c3ac77bf38120e868c8f8980972b8075d67e9",
 	total: () => 121,
 	convertedTotal: () => 0,
 	wallet: () => wallet,
