@@ -366,7 +366,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
             data-testid="ExchangeForm__form-step"
           >
             <div
-              class="flex space-x-3"
+              class="relative flex space-x-3"
             >
               <div
                 class="w-2/5"
@@ -382,7 +382,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                     Cryptoasset
                   </label>
                   <div
-                    class="relative w-full"
+                    class="static sm:relative"
                     data-testid="SelectDropdown"
                   >
                     <div
@@ -572,7 +572,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
               class="space-y-6"
             >
               <div
-                class="flex space-x-3"
+                class="relative flex space-x-3"
               >
                 <div
                   class="w-2/5"
@@ -588,7 +588,7 @@ exports[`ExchangeForm should render exchange form 1`] = `
                       Cryptoasset
                     </label>
                     <div
-                      class="relative w-full"
+                      class="static sm:relative"
                       data-testid="SelectDropdown"
                     >
                       <div
@@ -1623,7 +1623,7 @@ exports[`FormStep should render 1`] = `
     data-testid="ExchangeForm__form-step"
   >
     <div
-      class="flex space-x-3"
+      class="relative flex space-x-3"
     >
       <div
         class="w-2/5"
@@ -1639,7 +1639,7 @@ exports[`FormStep should render 1`] = `
             Cryptoasset
           </label>
           <div
-            class="relative w-full"
+            class="static sm:relative"
             data-testid="SelectDropdown"
           >
             <div
@@ -1831,7 +1831,7 @@ exports[`FormStep should render 1`] = `
       class="space-y-6"
     >
       <div
-        class="flex space-x-3"
+        class="relative flex space-x-3"
       >
         <div
           class="w-2/5"
@@ -1847,7 +1847,7 @@ exports[`FormStep should render 1`] = `
               Cryptoasset
             </label>
             <div
-              class="relative w-full"
+              class="static sm:relative"
               data-testid="SelectDropdown"
             >
               <div

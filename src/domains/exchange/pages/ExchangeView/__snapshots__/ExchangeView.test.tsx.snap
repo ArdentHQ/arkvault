@@ -472,7 +472,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -488,7 +488,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -678,7 +678,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -694,7 +694,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -1455,7 +1455,7 @@ exports[`ExchangeView should render 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -1471,7 +1471,7 @@ exports[`ExchangeView should render 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -1661,7 +1661,7 @@ exports[`ExchangeView should render 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -1677,7 +1677,7 @@ exports[`ExchangeView should render 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -2438,7 +2438,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -2454,7 +2454,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -2644,7 +2644,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -2660,7 +2660,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
@@ -3421,7 +3421,7 @@ exports[`ExchangeView should render light theme 1`] = `
                     data-testid="ExchangeForm__form-step"
                   >
                     <div
-                      class="flex space-x-3"
+                      class="relative flex space-x-3"
                     >
                       <div
                         class="w-2/5"
@@ -3437,7 +3437,7 @@ exports[`ExchangeView should render light theme 1`] = `
                             Cryptoasset
                           </label>
                           <div
-                            class="relative w-full"
+                            class="static sm:relative"
                             data-testid="SelectDropdown"
                           >
                             <div
@@ -3627,7 +3627,7 @@ exports[`ExchangeView should render light theme 1`] = `
                       class="space-y-6"
                     >
                       <div
-                        class="flex space-x-3"
+                        class="relative flex space-x-3"
                       >
                         <div
                           class="w-2/5"
@@ -3643,7 +3643,7 @@ exports[`ExchangeView should render light theme 1`] = `
                               Cryptoasset
                             </label>
                             <div
-                              class="relative w-full"
+                              class="static sm:relative"
                               data-testid="SelectDropdown"
                             >
                               <div
