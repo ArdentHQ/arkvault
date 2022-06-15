@@ -266,6 +266,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 			id,
 			readOnly = false,
 			allowOverflow,
+			wrapperClassName = "relative w-full",
 		}: SelectProperties,
 		reference,
 	) => {
@@ -285,7 +286,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProperties>(
 		const isInvalidField = fieldContext?.isInvalid || isInvalid;
 
 		return (
-			<div data-testid="SelectDropdown" className="relative w-full">
+			<div data-testid="SelectDropdown" className={wrapperClassName}>
 				<Input
 					data-testid="select-list__input"
 					ref={reference}
