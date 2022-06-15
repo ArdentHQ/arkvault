@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useProfileRestore, useTheme } from "@/app/hooks";
+import { useLocaleCurrency, useProfileRestore, useTheme } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 
@@ -20,30 +20,19 @@ export const CreateProfile = () => {
 	const history = useHistory();
 
 	const { theme, resetTheme } = useTheme();
+	const localeCurrency = useLocaleCurrency();
 
 	const currencyOptions = useCurrencyOptions(DEFAULT_MARKET_PROVIDER);
 
 	const defaultCurrency = useMemo(() => {
-		let locale = Intl.DateTimeFormat().resolvedOptions().locale;
-
-		if (!locale.includes("-")) {
-			locale = navigator.language;
-		}
-
-		const currency = LocaleCurrency.getCurrency(locale) as string | null;
-
-		if (!currency) {
-			return "USD";
-		}
-
 		const [fiatOptions] = currencyOptions;
 
-		if (fiatOptions.options.some((option) => `${option.value}`.toLowerCase() === currency.toLowerCase())) {
-			return currency;
+		if (fiatOptions.options.some((option) => `${option.value}`.toLowerCase() === localeCurrency.toLowerCase())) {
+			return localeCurrency;
 		}
 
 		return "USD";
-	}, [currencyOptions]);
+	}, [currencyOptions, localeCurrency]);
 
 	useLayoutEffect(() => {
 		resetTheme();
