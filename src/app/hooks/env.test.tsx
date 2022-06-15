@@ -6,7 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -220,5 +220,23 @@ describe("useNetworks", () => {
 		} = renderHook(() => useNetworks(profile));
 
 		expect(current).toHaveLength(0);
+	});
+
+	it("should return the network wallets", async () => {
+		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		const profileWalletsSpy = jest.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
+
+		const {
+			result: { current },
+		} = renderHook(() => useNetworks(profile));
+
+		expect(current).toHaveLength(1);
+
+		profileWalletsSpy.mockRestore();
+		resetProfileNetworksMock();
 	});
 });
