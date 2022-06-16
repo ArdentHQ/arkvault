@@ -2608,7 +2608,7 @@ exports[`News should render responsive (xs) 1`] = `
         class="flex w-full bg-theme-secondary-background md:bg-theme-background"
       >
         <section
-          class="flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
+          class="flex h-13 w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
         >
           <h1
             class="mb-0 text-lg"
