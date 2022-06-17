@@ -603,6 +603,8 @@ describe("General Settings", () => {
 			},
 		);
 
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
 		const currencyContainer: HTMLElement = screen.getAllByRole("combobox")[1];
 		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
 
