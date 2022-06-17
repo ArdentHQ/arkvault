@@ -44,9 +44,9 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 		register("viewingMode", { required: true });
 	}, [register]);
 
-	const { avatarImage, confirmPassword, currency, disclaimer, name, password, viewingMode } = watch();
+	const { accentColor, avatarImage, confirmPassword, currency, disclaimer, name, password, viewingMode } = watch();
 
-	const { resetAccentColor } = useAccentColor();
+	const { resetAccentColor, setAccentColor } = useAccentColor();
 	const { resetTheme, setTheme } = useTheme();
 
 	const { createProfile } = useValidation();
@@ -66,6 +66,12 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 			setValue("avatarImage", "");
 		}
 	}, [formattedName, isSvg, setValue]);
+
+	useEffect(() => {
+		if (accentColor) {
+			setAccentColor(accentColor);
+		}
+	}, [accentColor]);
 
 	useEffect(() => {
 		setTheme(viewingMode);

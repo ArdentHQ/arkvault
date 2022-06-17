@@ -80,9 +80,11 @@ const Main: React.VFC = () => {
 	const { env, persist, isEnvironmentBooted, setIsEnvironmentBooted } = useEnvironmentContext();
 	const isOnline = useNetworkStatus();
 	const history = useHistory();
-	const { setTheme } = useTheme();
-	const { setShowMobileNavigation } = useNavigationContext();
+
 	const { resetAccentColor } = useAccentColor();
+	const { resetTheme } = useTheme();
+
+	const { setShowMobileNavigation } = useNavigationContext();
 
 	const { t } = useTranslation();
 
@@ -95,8 +97,9 @@ const Main: React.VFC = () => {
 				},
 			}),
 		onProfileSignOut: () => {
-			setTheme("system");
 			resetAccentColor();
+			resetTheme();
+
 			toasts.dismiss();
 
 			setShowMobileNavigation(false);

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
@@ -7,8 +7,6 @@ import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useAccentColor } from "@/app/hooks";
-import { delay } from "@/utils/delay";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;
@@ -31,7 +29,6 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	shouldValidate,
 }) => {
 	const { t } = useTranslation();
-	const { setProfileAccentColor } = useAccentColor();
 
 	const handleSubmit = async ({
 		avatarImage,
@@ -56,12 +53,6 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 		onSubmit(profile);
 	};
 
-	useEffect(() => {
-		delay(() => {
-			setProfileAccentColor(profile);
-		}, 500);
-	}, []);
-
 	return (
 		<div className="mx-auto max-w-xl">
 			<StepHeader title={t("PROFILE.IMPORT.TITLE")} subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")} />
@@ -82,6 +73,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 							name: profile.name(),
 							password,
 							viewingMode: profile.settings().get(Contracts.ProfileSetting.Theme),
+							accentColor: profile.settings().get(Contracts.ProfileSetting.AccentColor)
 						}}
 						onBack={onBack}
 						onSubmit={handleSubmit}

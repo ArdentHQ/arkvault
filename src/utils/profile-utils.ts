@@ -6,6 +6,10 @@ export const getProfileById = (env: Environment, id: string) => {
 		return;
 	}
 
+	if (id.toLowerCase() === "create" || id.toLowerCase() === "import") {
+		return null;
+	}
+
 	let response: Contracts.IProfile | undefined;
 
 	try {

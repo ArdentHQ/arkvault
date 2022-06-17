@@ -430,9 +430,9 @@ export const useProfileSynchronizer = ({
 				return;
 			}
 
+			resetAccentColor();
 			resetTheme();
 			resetIdleTimer();
-			resetAccentColor();
 
 			resetStatuses(env.profiles().values());
 			setConfiguration({ profileErroredNetworks: [] });
@@ -441,8 +441,12 @@ export const useProfileSynchronizer = ({
 		};
 
 		const syncProfile = async (profile?: Contracts.IProfile) => {
-			if (!profile) {
-				onProfileSignOut?.();
+			if (profile === null) {
+				return;
+			}
+
+			if (profile === undefined) {
+				onProfileSignOut?.(profile);
 				return clearProfileSyncStatus();
 			}
 
