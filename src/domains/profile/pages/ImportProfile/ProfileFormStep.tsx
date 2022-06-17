@@ -8,7 +8,6 @@ import { ProfileForm, ProfileFormState } from "@/domains/profile/components/Prof
 import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useAccentColor } from "@/app/hooks";
-import { delay } from "@/utils/delay";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;
@@ -57,9 +56,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	};
 
 	useEffect(() => {
-		delay(() => {
-			setProfileAccentColor(profile);
-		}, 500);
+		setProfileAccentColor(profile);
 	}, []);
 
 	return (
