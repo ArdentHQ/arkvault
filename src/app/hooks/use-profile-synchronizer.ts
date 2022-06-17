@@ -352,7 +352,7 @@ export const useProfileSynchronizer = ({
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const { setProfileAccentColor, resetAccentColor } = useAccentColor();
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
-	const [lastPathname, setLastPathname] = useState<string | undefined>();
+	const lastPathname = useRef<string | undefined>();
 
 	const history = useHistory();
 
@@ -444,15 +444,19 @@ export const useProfileSynchronizer = ({
 
 		const syncProfile = async (profile?: Contracts.IProfile) => {
 			if (!profile) {
-				if (location.pathname === lastPathname) {
+				if (location.pathname === lastPathname.current) {
 					return;
 				}
 
-				setLastPathname(location.pathname);
 				onProfileSignOut?.();
 				clearProfileSyncStatus();
+
+				lastPathname.current = location.pathname;
+
 				return;
 			}
+
+			lastPathname.current = location.pathname;
 
 			if (profile.usesPassword()) {
 				try {
