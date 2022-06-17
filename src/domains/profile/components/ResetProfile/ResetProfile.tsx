@@ -10,6 +10,7 @@ import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
 import { FormButtons } from "@/app/components/Form";
+import { useLocaleCurrency } from "@/app/hooks";
 
 interface ResetProfileProperties {
 	isOpen: boolean;
@@ -22,10 +23,14 @@ interface ResetProfileProperties {
 export const ResetProfile = ({ isOpen, profile, onClose, onCancel, onReset }: ResetProfileProperties) => {
 	const { t } = useTranslation();
 
+	const { defaultCurrency } = useLocaleCurrency();
+
 	const { persist } = useEnvironmentContext();
 
 	const handleReset = async () => {
 		profile.flushSettings();
+
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, defaultCurrency);
 
 		await persist();
 

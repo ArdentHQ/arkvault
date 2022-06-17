@@ -8,6 +8,7 @@ export * from "./use-deeplink";
 export * from "./use-document-title";
 export * from "./use-fees";
 export * from "./use-ledger-model-status";
+export * from "./use-locale-currency";
 export * from "./use-network-options";
 export * from "./use-password-validation";
 export * from "./use-previous";
