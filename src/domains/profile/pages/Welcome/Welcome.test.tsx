@@ -113,7 +113,9 @@ describe("Welcome", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		await submitPassword();
+		await act(async () => {
+			await submitPassword();
+		});
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
@@ -132,6 +134,7 @@ describe("Welcome", () => {
 		const { asFragment, container } = render(<Welcome />, { history });
 
 		expect(container).toBeInTheDocument();
+		await expect(screen.findAllByTestId("Card")).resolves.toHaveLength(3);
 
 		await env.profiles().restore(profile, getDefaultPassword());
 
@@ -139,7 +142,9 @@ describe("Welcome", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		await submitPassword();
+		await act(async () => {
+			await submitPassword();
+		});
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/exchange`);
