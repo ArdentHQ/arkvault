@@ -13,8 +13,7 @@ import { useAutoSignOut } from "@/app/hooks/use-auto-signout";
 import { delay } from "@/utils/delay";
 import { getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
 import { ProfilePeers } from "@/utils/profile-peers";
-import { enabledNetworksCount, profileEnabledNetworkIds } from "@/utils/network-utils";
-import { defaultNetworks } from "@/utils/server-utils";
+import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
 
 enum Intervals {
 	VeryShort = 15_000,
@@ -391,7 +390,7 @@ export const useProfileSynchronizer = ({
 				// step when creating or importing a wallet, which means we also
 				// skip that part of syncing network coin. The issues caused by that
 				// are solved by syncing the coin initially.
-				const availableNetworks = defaultNetworks(env, profile);
+				const availableNetworks = profileAllEnabledNetworks(profile);
 				const onlyHasOneNetwork = enabledNetworksCount(profile) === 1;
 				if (onlyHasOneNetwork) {
 					const coin = profile.coins().set(availableNetworks[0].coin(), availableNetworks[0].id());
