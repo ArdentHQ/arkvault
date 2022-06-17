@@ -1,10 +1,10 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { groupBy } from "@ardenthq/sdk-helpers";
+import { profileAllEnabledNetworks } from "./network-utils";
 import { pingServerAddress } from "@/utils/peers";
 import { ServerHealthStatus, NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { customNetworks } from "@/utils/server-utils";
-import { profileAllEnabledNetworks } from "./network-utils";
 
 interface PeerData {
 	address: string;
