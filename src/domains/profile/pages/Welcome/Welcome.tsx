@@ -13,7 +13,7 @@ import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useTheme } from "@/app/hooks";
+import { useAccentColor, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
@@ -58,6 +58,7 @@ export const Welcome = () => {
 	);
 
 	const { setProfileTheme, resetTheme } = useTheme();
+	const { setProfileAccentColor } = useAccentColor();
 
 	useEffect(() => {
 		resetTheme();
@@ -67,6 +68,7 @@ export const Welcome = () => {
 	const navigateToProfile = useCallback(
 		(profile: Contracts.IProfile, subPath = "dashboard") => {
 			setProfileTheme(profile);
+			setProfileAccentColor(profile);
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[history],
@@ -75,6 +77,7 @@ export const Welcome = () => {
 	const navigateToPreviousPage = useCallback(
 		(profile: Contracts.IProfile) => {
 			setProfileTheme(profile);
+			setProfileAccentColor(profile);
 			history.push(history.location.state!.from!);
 		},
 		[history],

@@ -603,6 +603,8 @@ describe("General Settings", () => {
 			},
 		);
 
+		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
+
 		const currencyContainer: HTMLElement = screen.getAllByRole("combobox")[1];
 		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
 
@@ -619,7 +621,7 @@ describe("General Settings", () => {
 		};
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
-		expect(getSelectInput("CURRENCY")).toHaveValue("BTC (Ƀ)");
+		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
