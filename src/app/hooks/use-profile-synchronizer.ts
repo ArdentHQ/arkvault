@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { isEqual } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -337,6 +338,7 @@ export const useProfileSynchronizer = ({
 	onProfileSignOut,
 	onProfileUpdated,
 }: ProfileSynchronizerProperties = {}) => {
+	const location = useLocation();
 	const { env, persist } = useEnvironmentContext();
 	const { setConfiguration, profileIsSyncing, profileHasSyncedOnce } = useConfiguration();
 	const { restoreProfile } = useProfileRestore();
@@ -351,6 +353,7 @@ export const useProfileSynchronizer = ({
 	const { startIdleTimer, resetIdleTimer } = useAutoSignOut(profile);
 	const { setProfileAccentColor, resetAccentColor } = useAccentColor();
 	const [activeProfileId, setActiveProfileId] = useState<string | undefined>();
+	const lastPathname = useRef<string | undefined>();
 
 	const history = useHistory();
 
@@ -442,9 +445,19 @@ export const useProfileSynchronizer = ({
 
 		const syncProfile = async (profile?: Contracts.IProfile) => {
 			if (!profile) {
+				if (location.pathname === lastPathname.current) {
+					return;
+				}
+
 				onProfileSignOut?.();
-				return clearProfileSyncStatus();
+				clearProfileSyncStatus();
+
+				lastPathname.current = location.pathname;
+
+				return;
 			}
+
+			lastPathname.current = location.pathname;
 
 			if (profile.usesPassword()) {
 				try {
