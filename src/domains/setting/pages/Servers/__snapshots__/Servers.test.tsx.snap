@@ -915,7 +915,7 @@ exports[`Servers Settings should render servers settings 1`] = `
                             </div>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -2506,7 +2506,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -4074,7 +4074,7 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -5353,7 +5353,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -6944,7 +6944,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -8246,7 +8246,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -9725,7 +9725,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -11316,7 +11316,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -12618,7 +12618,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
@@ -14097,7 +14097,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            class="mt-6 w-full space-x-2 sm:mt-3 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
