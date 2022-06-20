@@ -10,6 +10,7 @@ export * from "./use-fees";
 export * from "./use-ledger-model-status";
 export * from "./use-locale-currency";
 export * from "./use-network-options";
+export * from "./use-networks";
 export * from "./use-password-validation";
 export * from "./use-previous";
 export * from "./use-profile-synchronizer";
