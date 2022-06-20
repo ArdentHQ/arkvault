@@ -6,7 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -222,38 +222,21 @@ describe("useNetworks", () => {
 		expect(current).toHaveLength(0);
 	});
 
-	it("should return sorted array by display names", () => {
-		const fakeNetworks = [
-			{
-				displayName: () => "2 network",
-				id: () => "1",
-			},
-			{
-				displayName: () => "1 network",
-				id: () => "2",
-			},
-		];
-		const availableNetworksMock = jest.spyOn(profile, "availableNetworks").mockReturnValue(fakeNetworks);
-		const fakeWallets = [
-			{
-				network: () => fakeNetworks[0],
-				networkId: () => "1",
-			},
-			{
-				network: () => fakeNetworks[1],
-				networkId: () => "2",
-			},
-		] as unknown as Contracts.IReadWriteWallet[];
-
-		jest.spyOn(profile.wallets(), "values").mockReturnValue(fakeWallets);
+	it("should return the network wallets", async () => {
+		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		const profileWalletsSpy = jest.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
 
 		const {
 			result: { current },
 		} = renderHook(() => useNetworks(profile));
 
-		expect(current).toHaveLength(2);
-		expect(current[0].displayName()).toBe("1 network");
+		expect(current).toHaveLength(1);
 
-		availableNetworksMock.mockRestore();
+		profileWalletsSpy.mockRestore();
+		resetProfileNetworksMock();
 	});
 });

@@ -21,6 +21,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { useAvailableNetworks } from "@/domains/wallet/hooks";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -34,13 +35,10 @@ export const ServersSettings = () => {
 	const [networkToDelete, setNetworkToDelete] = useState<NormalizedNetwork | undefined>(undefined);
 	const [networkToUpdate, setNetworkToUpdate] = useState<NormalizedNetwork | undefined>(undefined);
 
-	const enabledNetworks = useMemo(
-		() =>
-			profile
-				.availableNetworks()
-				.filter((network) => profileAllEnabledNetworkIds(profile).includes(network.id())),
-		[profile],
-	);
+	const enabledNetworks = useAvailableNetworks({
+		filter: (network) => profileAllEnabledNetworkIds(profile).includes(network.id()),
+		profile,
+	});
 
 	const form = useForm({
 		defaultValues: {
