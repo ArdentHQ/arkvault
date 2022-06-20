@@ -7860,7 +7860,6 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 data-testid="tab-pabel__active-panel"
               >
                 <section
-                  class="space-y-6"
                   data-testid="SendTransfer__network-step"
                 >
                   <div
@@ -7916,15 +7915,8 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="mt-8 my-8 css-1bcidjh"
                   >
-                    <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-                      data-testid="FormLabel"
-                      for="network"
-                    >
-                      Cryptoasset
-                    </label>
                     <div
                       data-testid="SendTransfer__network-step__select"
                     >
@@ -8016,6 +8008,10 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                       </div>
                     </div>
                   </fieldset>
+                  <div
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                    type="horizontal"
+                  />
                 </section>
               </div>
               <div
