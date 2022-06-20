@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
+import { isCustomNetwork } from "@/utils/network-utils";
 
 export const useAvailableNetworks = ({
 	filter,
@@ -25,6 +26,16 @@ export const useAvailableNetworks = ({
 			availableNetworks = availableNetworks.filter((network) => filter(network));
 		}
 
-		return availableNetworks;
+		return availableNetworks.sort((a, b) => {
+			if (isCustomNetwork(a) && !isCustomNetwork(b)) {
+				return 1;
+			}
+
+			if (!isCustomNetwork(a) && isCustomNetwork(b)) {
+				return -1;
+			}
+
+			return 0;
+		});
 	}, [env, profile, filter, isProfileRestored]);
 };

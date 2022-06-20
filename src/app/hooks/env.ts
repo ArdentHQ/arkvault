@@ -1,11 +1,11 @@
 import { Networks } from "@ardenthq/sdk";
-import { sortBy } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
-import { networkDisplayName, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { sortWallets } from "@/utils/wallet-utils";
 
 export const useActiveProfile = (): Contracts.IProfile => {
 	const history = useHistory();
@@ -36,13 +36,15 @@ export const useNetworks = (profile: Contracts.IProfile) => {
 	return useMemo<Networks.Network[]>(() => {
 		const networks: Record<string, Networks.Network> = {};
 
-		for (const wallet of profile.wallets().values()) {
+		const wallets = sortWallets(profile.wallets().values());
+
+		for (const wallet of wallets) {
 			if (profileEnabledNetworkIds(profile).includes(wallet.networkId())) {
 				networks[wallet.networkId()] = wallet.network();
 			}
 		}
 
-		return sortBy(Object.values(networks), (network) => networkDisplayName(network));
+		return Object.values(networks);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [profile, isProfileRestored]);
 };

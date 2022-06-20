@@ -12,7 +12,7 @@ import { InputDefault } from "@/app/components/Input";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { Select } from "@/app/components/SelectDropdown";
 import { SelectProfileImage } from "@/app/components/SelectProfileImage";
-import { useTheme, useValidation } from "@/app/hooks";
+import { useAccentColor, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
 import { Checkbox } from "@/app/components/Checkbox";
@@ -46,6 +46,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 	const { avatarImage, confirmPassword, currency, disclaimer, name, password, viewingMode } = watch();
 
+	const { resetAccentColor } = useAccentColor();
 	const { resetTheme, setTheme } = useTheme();
 
 	const { createProfile } = useValidation();
@@ -222,6 +223,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							onBack();
 							// to prevent changing theme by component
 							resetTheme();
+							resetAccentColor();
 						}}
 					>
 						{t("COMMON.BACK")}
