@@ -479,7 +479,7 @@ const CustomPeers: React.VFC<{
 				)}
 			</Table>
 		);
-	}
+	};
 
 	return (
 		<div data-testid="CustomPeers--list" className={networks.length === 0 ? "mt-3" : "mt-1 sm:mt-3"}>
@@ -489,7 +489,7 @@ const CustomPeers: React.VFC<{
 				data-testid="CustomPeers--addnew"
 				onClick={addNewServerHandler}
 				variant="secondary"
-				className="mt-6 w-full sm:mt-3 space-x-2"
+				className="mt-6 w-full space-x-2 sm:mt-3"
 			>
 				<Icon name="Plus" />
 				<span>{t("COMMON.ADD_NEW")}</span>

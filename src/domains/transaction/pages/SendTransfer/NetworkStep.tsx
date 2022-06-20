@@ -51,9 +51,7 @@ export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile
 				/>
 			</FormField>
 
-			{networks.length === 2 && (
-				<Divider />
-			)}
+			{networks.length === 2 && <Divider />}
 		</section>
 	);
 };
