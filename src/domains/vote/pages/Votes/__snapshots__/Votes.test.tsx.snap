@@ -7960,7 +7960,7 @@ exports[`Votes should select an address without vote 1`] = `
                   >
                     <td>
                       <div
-                        class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
+                        class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-mx19qq"
                       >
                         <span>
                           2
@@ -7969,7 +7969,7 @@ exports[`Votes should select an address without vote 1`] = `
                     </td>
                     <td>
                       <div
-                        class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-1rods8x"
+                        class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1rods8x"
                       >
                         <div
                           class="-ml-0.5 shrink-0 css-jxpwdn"
@@ -8028,7 +8028,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
                       >
                         <div>
                           <div
@@ -8047,7 +8047,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
                       >
                         <a
                           class="ring-focus group inline-block css-15tcy38"
@@ -8076,7 +8076,7 @@ exports[`Votes should select an address without vote 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="justify-end border-2 border-l-0 border-transparent css-br23tb"
+                        class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-br23tb"
                       >
                         <div
                           class="-mr-0.5"
@@ -8089,7 +8089,7 @@ exports[`Votes should select an address without vote 1`] = `
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Select
+                              Current
                             </div>
                           </button>
                         </div>
@@ -8413,9 +8413,9 @@ exports[`Votes should select an address without vote 1`] = `
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                              title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
                         </div>
@@ -8442,9 +8442,9 @@ exports[`Votes should select an address without vote 1`] = `
                                 class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                               >
                                 <img
-                                  alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
-                                  title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                                 />
                               </div>
                             </div>
@@ -8463,14 +8463,14 @@ exports[`Votes should select an address without vote 1`] = `
                                   class="css-u3jrna"
                                   data-testid="TruncateEnd"
                                 >
-                                  ARK Wallet 2
+                                  ARK Wallet 1
                                 </span>
                               </span>
                               <span
                                 class="min-w-0 overflow-hidden lg:text-lg !leading-tighter text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                               </span>
                             </div>
                           </div>
@@ -12330,6 +12330,110 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
+                              alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(205, 220, 57)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"20\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                              title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-40 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden md:table-cell"
+                    >
+                      <div
+                        class="justify-center space-x-2 css-1rods8x"
+                      />
+                    </td>
+                    <td
+                      class="hidden xl:table-cell"
+                    >
+                      <div
+                        class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="Amount"
+                        >
+                          0 DARK
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="font-bold space-x-3 css-1rods8x"
+                      >
+                        <div
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                        />
+                        <span
+                          class="text-theme-secondary-400"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden lg:table-cell"
+                    >
+                      <div
+                        class="justify-center font-bold text-theme-secondary-text css-1rods8x"
+                      />
+                    </td>
+                    <td>
+                      <div
+                        class="justify-center css-1rods8x"
+                      />
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <button
+                          class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
+                          data-testid="AddressRow__select-0"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            Vote
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class=" css-1li86da"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="font-bold space-x-3 css-mx19qq"
+                      >
+                        <div
+                          class="shrink-0 shrink-0 css-jxpwdn"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                               src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -12416,7 +12520,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                       >
                         <button
                           class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
-                          data-testid="AddressRow__select-0"
+                          data-testid="AddressRow__select-1"
                           type="button"
                         >
                           <div
@@ -12530,111 +12634,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                       >
                         <button
                           class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
-                          data-testid="AddressRow__select-1"
-                          type="button"
-                        >
-                          <div
-                            class="flex items-center space-x-2"
-                          >
-                            Vote
-                          </div>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class=" css-1li86da"
-                    data-testid="TableRow"
-                  >
-                    <td>
-                      <div
-                        class="font-bold space-x-3 css-mx19qq"
-                      >
-                        <div
-                          class="shrink-0 shrink-0 css-jxpwdn"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(205, 220, 57)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"20\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
-                              title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="w-40 flex-1"
-                        >
-                          <div
-                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                          >
-                            <span
-                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="justify-center space-x-2 css-1rods8x"
-                      />
-                    </td>
-                    <td
-                      class="hidden xl:table-cell"
-                    >
-                      <div
-                        class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1rods8x"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="font-bold space-x-3 css-1rods8x"
-                      >
-                        <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
-                        />
-                        <span
-                          class="text-theme-secondary-400"
-                        >
-                          N/A
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="justify-center font-bold text-theme-secondary-text css-1rods8x"
-                      />
-                    </td>
-                    <td>
-                      <div
-                        class="justify-center css-1rods8x"
-                      />
-                    </td>
-                    <td>
-                      <div
-                        class="justify-end css-br23tb"
-                      >
-                        <button
-                          class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
                           data-testid="AddressRow__select-2"
-                          disabled=""
                           type="button"
                         >
                           <div

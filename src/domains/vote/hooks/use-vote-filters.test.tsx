@@ -47,7 +47,7 @@ describe("Use Vote Filters", () => {
 		const networkIds = Object.keys(walletsByCoin);
 
 		expect(networkIds).toHaveLength(2);
-		expect(networkIds).toStrictEqual(["ark.devnet", "ark.mainnet"]);
+		expect(networkIds).toStrictEqual(["ark.mainnet", "ark.devnet"]);
 
 		resetProfileNetworksMock();
 	});

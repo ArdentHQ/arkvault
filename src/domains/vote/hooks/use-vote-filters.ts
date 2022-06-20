@@ -6,6 +6,7 @@ import { useNetworks, useWalletAlias } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { sortWallets } from "@/utils/wallet-utils";
 
 export const useVoteFilters = ({
 	profile,
@@ -69,10 +70,12 @@ export const useVoteFilters = ({
 	};
 
 	const walletsByCoin = useMemo(() => {
-		const usedWallets = profile
-			.wallets()
-			.values()
-			.filter((wallet) => availableNetworks.some((network) => wallet.network().id() === network.id()));
+		const usedWallets = sortWallets(
+			profile
+				.wallets()
+				.values()
+				.filter((wallet) => availableNetworks.some((network) => wallet.network().id() === network.id())),
+		);
 
 		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
 
