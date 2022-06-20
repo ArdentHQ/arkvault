@@ -7,12 +7,12 @@ import { useTranslation } from "react-i18next";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { StepHeader } from "@/app/components/StepHeader";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { useNetworks } from "@/app/hooks";
 
 export const NetworkStep = ({ profile, networks }: { profile: Contracts.IProfile; networks: Networks.Network[] }) => {
 	const { setValue, watch } = useFormContext();
 
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
+	const profileAvailableNetworks = useNetworks({ profile });
 
 	const availableNetworks = useMemo(
 		() =>

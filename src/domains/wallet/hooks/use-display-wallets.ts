@@ -2,8 +2,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import hash from "string-hash";
-import { useAvailableNetworks } from "@/domains/wallet/hooks/use-available-networks";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useNetworks } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
 import { sortWallets } from "@/utils/wallet-utils";
@@ -42,7 +41,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 
 	const { walletsDisplayType, selectedNetworkIds } = useWalletFilters({ profile });
 
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
+	const profileAvailableNetworks = useNetworks({ profile });
 
 	const wallets = useMemo(
 		() =>

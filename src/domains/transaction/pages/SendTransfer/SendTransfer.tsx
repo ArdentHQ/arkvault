@@ -33,7 +33,7 @@ export const SendTransfer: React.VFC = () => {
 
 	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
-	const networks = useNetworks(activeProfile);
+	const networks = useNetworks({ profile: activeProfile });
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 	const {

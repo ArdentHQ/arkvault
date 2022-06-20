@@ -8,8 +8,7 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Icon } from "@/app/components/Icon";
 import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useNetworkOptions } from "@/app/hooks";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { useNetworkOptions, useNetworks } from "@/app/hooks";
 import { networkDisplayName } from "@/utils/network-utils";
 interface ContactListItemMobileAddressProperties {
 	profile: Contracts.IProfile;
@@ -39,7 +38,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 		sendButtonTooltip = t("CONTACTS.VALIDATION.NO_BALANCE");
 	}
 
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
+	const profileAvailableNetworks = useNetworks({ profile });
 
 	const sendIsDisabled = useMemo(() => {
 		if (!hasBalance) {

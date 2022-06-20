@@ -19,7 +19,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { useNetworks } from "@/app/hooks";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	profile,
@@ -33,7 +33,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	onAction,
 	onSend,
 }) => {
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
+	const profileAvailableNetworks = useNetworks({ profile });
 
 	const { env } = useEnvironmentContext();
 

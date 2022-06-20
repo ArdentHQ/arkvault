@@ -4,11 +4,11 @@ import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { useNetworks } from "@/app/hooks";
 
 interface NetworkStepProperties {
 	profile: Contracts.IProfile;
@@ -24,7 +24,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 
 	const { getValues, setValue } = useFormContext();
 
-	const networks = useAvailableNetworks({ filter, profile });
+	const networks = useNetworks({ filter, profile });
 
 	const selectedNetwork: Networks.Network = getValues("network");
 
