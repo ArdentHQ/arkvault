@@ -23,27 +23,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { networkDisplayName } from "@/utils/network-utils";
 
-const CustomPeersNoPeers: React.VFC<{
-	addNewServerHandler: () => void;
-}> = ({ addNewServerHandler }) => {
-	const { t } = useTranslation();
-
-	return (
-		<div className="mt-4">
-			<EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>
-
-			<Button
-				data-testid="CustomPeers--addnew"
-				onClick={addNewServerHandler}
-				variant="secondary"
-				className="mt-3 w-full"
-			>
-				{t("COMMON.ADD_NEW")}
-			</Button>
-		</div>
-	);
-};
-
 interface PeerRowProperties {
 	name: string;
 	address: string;
@@ -450,10 +429,6 @@ const CustomPeers: React.VFC<{
 
 	const { isXs } = useBreakpoint();
 
-	if (networks.length === 0) {
-		return <CustomPeersNoPeers addNewServerHandler={addNewServerHandler} />;
-	}
-
 	const columns: Column[] = [
 		{
 			Header: t("COMMON.NETWORK"),
@@ -485,8 +460,12 @@ const CustomPeers: React.VFC<{
 		},
 	];
 
-	return (
-		<div data-testid="CustomPeers--list" className="mt-3">
+	const renderPeers = () => {
+		if (networks.length === 0) {
+			return <EmptyBlock>{t("SETTINGS.SERVERS.CUSTOM_PEERS.EMPTY_MESSAGE")}</EmptyBlock>;
+		}
+
+		return (
 			<Table columns={columns} data={networks} rowsPerPage={networks.length} hideHeader={isXs}>
 				{(network: NormalizedNetwork) => (
 					<CustomPeersPeer
@@ -499,14 +478,21 @@ const CustomPeers: React.VFC<{
 					/>
 				)}
 			</Table>
+		);
+	}
+
+	return (
+		<div data-testid="CustomPeers--list" className={networks.length === 0 ? "mt-3" : "mt-1 sm:mt-3"}>
+			{renderPeers()}
 
 			<Button
-				data-testid="CustomPeers--addother"
+				data-testid="CustomPeers--addnew"
 				onClick={addNewServerHandler}
 				variant="secondary"
-				className="mt-6 w-full sm:mt-3"
+				className="mt-6 w-full sm:mt-3 space-x-2"
 			>
-				{t("COMMON.ADD_NEW")}
+				<Icon name="Plus" />
+				<span>{t("COMMON.ADD_NEW")}</span>
 			</Button>
 		</div>
 	);

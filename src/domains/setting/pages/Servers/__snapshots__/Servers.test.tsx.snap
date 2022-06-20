@@ -650,7 +650,7 @@ exports[`Servers Settings should render servers settings 1`] = `
                   id="servers__form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -870,7 +870,7 @@ exports[`Servers Settings should render servers settings 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -903,7 +903,8 @@ exports[`Servers Settings should render servers settings 1`] = `
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-4"
+                          class="mt-3"
+                          data-testid="CustomPeers--list"
                         >
                           <div
                             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -914,14 +915,25 @@ exports[`Servers Settings should render servers settings 1`] = `
                             </div>
                           </div>
                           <button
-                            class="mt-3 w-full css-1jhy6v9"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
                             data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -1605,7 +1617,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                   id="servers__form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -1832,7 +1844,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1865,7 +1877,7 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -2494,14 +2506,25 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -3185,7 +3208,7 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                   id="servers__form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -3404,7 +3427,7 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -3437,7 +3460,7 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -4051,14 +4074,25 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -4961,7 +4995,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -4994,7 +5028,7 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -5319,14 +5353,25 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -6010,7 +6055,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                   id="servers__form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -6237,7 +6282,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -6270,7 +6315,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -6899,14 +6944,25 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -7817,7 +7873,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -7850,7 +7906,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -8190,14 +8246,25 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -9108,7 +9175,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -9141,7 +9208,7 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -9658,14 +9725,25 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -10349,7 +10427,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                   id="servers__form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -10576,7 +10654,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -10609,7 +10687,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -11238,14 +11316,25 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -12156,7 +12245,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -12189,7 +12278,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -12529,14 +12618,25 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
@@ -13447,7 +13547,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -13480,7 +13580,7 @@ exports[`Servers Settings with unreachable servers should show status error if r
                         data-testid="list-divided-item__content"
                       >
                         <div
-                          class="mt-3"
+                          class="mt-1 sm:mt-3"
                           data-testid="CustomPeers--list"
                         >
                           <div
@@ -13997,14 +14097,25 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             </table>
                           </div>
                           <button
-                            class="mt-6 w-full sm:mt-3 css-1jhy6v9"
-                            data-testid="CustomPeers--addother"
+                            class="mt-6 w-full sm:mt-3 space-x-2 css-1jhy6v9"
+                            data-testid="CustomPeers--addnew"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Add New
+                              <div
+                                class="css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg>
+                                  plus.svg
+                                </svg>
+                              </div>
+                              <span>
+                                Add New
+                              </span>
                             </div>
                           </button>
                         </div>
