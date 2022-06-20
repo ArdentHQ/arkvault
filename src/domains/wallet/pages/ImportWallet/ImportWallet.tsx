@@ -311,6 +311,7 @@ export const ImportWallet = () => {
 										subtitle={t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.SUBTITLE")}
 									/>
 								</TabPanel>
+
 								<TabPanel tabId={Step.MethodStep}>
 									<MethodStep profile={activeProfile} />
 								</TabPanel>

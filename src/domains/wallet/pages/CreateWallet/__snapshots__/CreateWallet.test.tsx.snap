@@ -474,7 +474,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 css-1bcidjh"
+                      class="mt-8 my-8 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -567,6 +567,10 @@ exports[`CreateWallet should create a wallet 1`] = `
                         </div>
                       </div>
                     </fieldset>
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      type="horizontal"
+                    />
                   </section>
                 </div>
                 <div
@@ -1801,7 +1805,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 css-1bcidjh"
+                      class="mt-8 my-8 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -1894,6 +1898,10 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                         </div>
                       </div>
                     </fieldset>
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      type="horizontal"
+                    />
                   </section>
                 </div>
                 <div
@@ -3133,7 +3141,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 css-1bcidjh"
+                      class="mt-8 my-8 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -3226,6 +3234,10 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                         </div>
                       </div>
                     </fieldset>
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      type="horizontal"
+                    />
                   </section>
                 </div>
                 <div
@@ -3737,7 +3749,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 css-1bcidjh"
+                      class="mt-8 my-8 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -3830,6 +3842,10 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                         </div>
                       </div>
                     </fieldset>
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      type="horizontal"
+                    />
                   </section>
                 </div>
                 <div
@@ -4372,7 +4388,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 css-1bcidjh"
+                      class="mt-8 my-8 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -4465,6 +4481,10 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                         </div>
                       </div>
                     </fieldset>
+                    <div
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+                      type="horizontal"
+                    />
                   </section>
                 </div>
                 <div

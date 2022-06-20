@@ -6,6 +6,7 @@ import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 
 interface Properties {
+	className?: string;
 	mnemonic: string;
 	wordPositions?: number[];
 	optionsLimit: number;
@@ -35,6 +36,7 @@ const defaultProps = {
 };
 
 export function MnemonicVerification({
+	className,
 	mnemonic,
 	wordPositions = defaultProps.wordPositions,
 	optionsLimit,
@@ -74,13 +76,13 @@ export function MnemonicVerification({
 	};
 
 	return (
-		<Tabs activeId={activeTab}>
+		<Tabs className={className} activeId={activeTab}>
 			<MnemonicVerificationProgress activeTab={activeTab} wordPositions={positions} />
 
 			{!isCompleted && (
 				<div className="mt-8">
 					{positions.map((position, index) => (
-						<TabPanel key={index} tabId={index}>
+						<TabPanel key={position} tabId={index}>
 							<MnemonicVerificationOptions
 								limit={optionsLimit}
 								answer={currentAnswer}

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { Header } from "@/app/components/Header";
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
+import { Divider } from "@/app/components/Divider";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, register, setValue, watch } = useFormContext();
@@ -23,7 +24,7 @@ export const ConfirmPassphraseStep = () => {
 	}, [isVerified, register]);
 
 	return (
-		<section data-testid="CreateWallet__ConfirmPassphraseStep" className="space-y-6">
+		<section data-testid="CreateWallet__ConfirmPassphraseStep">
 			<Header
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
@@ -31,11 +32,14 @@ export const ConfirmPassphraseStep = () => {
 			/>
 
 			<MnemonicVerification
+				className="mt-6 mb-8"
 				mnemonic={mnemonic}
 				optionsLimit={6}
 				handleComplete={handleComplete}
 				isCompleted={isVerified}
 			/>
+
+			<Divider />
 		</section>
 	);
 };
