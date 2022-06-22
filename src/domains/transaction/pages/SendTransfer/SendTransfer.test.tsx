@@ -15,6 +15,7 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransfer } from "./SendTransfer";
 import { SummaryStep } from "./SummaryStep";
+import { NetworkStep } from "./NetworkStep";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -35,7 +36,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
-import { NetworkStep } from "./NetworkStep";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -179,6 +179,7 @@ describe("SendTransfer", () => {
 		);
 
 		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
+
 		await waitFor(() => expect(screen.queryByTestId("FormLabel")).not.toBeInTheDocument());
 
 		expect(
