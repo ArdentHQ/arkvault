@@ -6,6 +6,7 @@ import { useNetworks, useWalletAlias } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { sortWallets } from "@/utils/wallet-utils";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
 
 export const useVoteFilters = ({
 	profile,
@@ -34,7 +35,10 @@ export const useVoteFilters = ({
 	const [selectedNetwork, setSelectedNetwork] = useState(walletNetwork);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
-	const availableNetworks = useNetworks({ profile });
+	const availableNetworks = useNetworks({
+		profile,
+		filter: (network) => profileEnabledNetworkIds(profile).includes(network.id()),
+	});
 
 	const networks = useMemo(
 		() =>

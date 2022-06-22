@@ -4,6 +4,20 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { isCustomNetwork } from "@/utils/network-utils";
 
+const sortNetworks = (networks: Networks.Network[]) => {
+	return networks.sort((a, b) => {
+		if (isCustomNetwork(a) && !isCustomNetwork(b)) {
+			return 1;
+		}
+
+		if (!isCustomNetwork(a) && isCustomNetwork(b)) {
+			return -1;
+		}
+
+		return 0;
+	});
+};
+
 export const useNetworks = ({
 	filter,
 	profile,
@@ -20,22 +34,10 @@ export const useNetworks = ({
 			return [];
 		}
 
-		let availableNetworks = profile.availableNetworks();
-
 		if (filter) {
-			availableNetworks = availableNetworks.filter((network) => filter(network));
+			return sortNetworks(profile.availableNetworks()).filter((network) => filter(network));
 		}
 
-		return availableNetworks.sort((a, b) => {
-			if (isCustomNetwork(a) && !isCustomNetwork(b)) {
-				return 1;
-			}
-
-			if (!isCustomNetwork(a) && isCustomNetwork(b)) {
-				return -1;
-			}
-
-			return 0;
-		});
+		return sortNetworks(profile.availableNetworks());
 	}, [env, profile, filter, isProfileRestored]);
 };
