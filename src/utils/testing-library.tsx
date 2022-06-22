@@ -337,7 +337,7 @@ const testNetworksStub: any = {
 			...DefaultManifest,
 			coin: "ARK",
 			currency: {
-				ticker: "ARK",
+				ticker: "DARK",
 			},
 			id: "ark.devnet",
 			name: "Devnet",
