@@ -35,8 +35,8 @@ export const SendTransfer: React.VFC = () => {
 	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks({
-		profile: activeProfile,
 		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
+		profile: activeProfile,
 	});
 
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
