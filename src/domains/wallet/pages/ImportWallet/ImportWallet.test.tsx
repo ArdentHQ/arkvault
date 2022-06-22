@@ -116,7 +116,7 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -176,7 +176,7 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -1409,7 +1409,7 @@ describe("ImportWallet", () => {
 		const privateKey = "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712";
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -1522,7 +1522,7 @@ describe("ImportWallet", () => {
 		const wif = "wif.1111";
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -1643,7 +1643,7 @@ describe("ImportWallet", () => {
 		const wifPassword = "password";
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
+			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			//ts-ignore

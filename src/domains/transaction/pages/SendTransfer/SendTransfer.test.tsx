@@ -219,7 +219,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} networks={env.availableNetworks()} profile={profile} />,
+				<FormStep deeplinkProps={{}} networks={profile.availableNetworks()} profile={profile} />,
 			</StepsProvider>,
 			{
 				defaultValues: {

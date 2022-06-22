@@ -42,7 +42,7 @@ export const SendIpfs = () => {
 	const { env, persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWallet();
-	const networks = useMemo(() => env.availableNetworks(), [env]);
+	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const { sendIpfs, common } = useValidation();
 
 	const form = useForm({ mode: "onChange" });

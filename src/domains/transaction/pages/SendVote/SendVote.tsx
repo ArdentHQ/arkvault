@@ -43,7 +43,7 @@ export const SendVote = () => {
 
 	const activeWallet = useActiveWallet();
 
-	const networks = useMemo(() => env.availableNetworks(), [env]);
+	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 
 	const { voteDelegates, unvoteDelegates } = useVoteQueryParameters();
 
