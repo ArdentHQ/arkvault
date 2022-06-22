@@ -4,8 +4,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { isCustomNetwork } from "@/utils/network-utils";
 
-const sortNetworks = (networks: Networks.Network[]) => {
-	return networks.sort((a, b) => {
+const sortNetworks = (networks: Networks.Network[]) =>
+	networks.sort((a, b) => {
 		if (isCustomNetwork(a) && !isCustomNetwork(b)) {
 			return 1;
 		}
@@ -16,7 +16,6 @@ const sortNetworks = (networks: Networks.Network[]) => {
 
 		return 0;
 	});
-};
 
 export const useNetworks = ({
 	filter,

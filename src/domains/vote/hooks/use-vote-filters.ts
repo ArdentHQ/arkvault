@@ -36,8 +36,8 @@ export const useVoteFilters = ({
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 	const availableNetworks = useNetworks({
-		profile,
 		filter: (network) => profileEnabledNetworkIds(profile).includes(network.id()),
+		profile,
 	});
 
 	const networks = useMemo(
