@@ -117,7 +117,7 @@ export const SendTransfer: React.VFC = () => {
 		}
 
 		resetForm();
-	}, [resetForm]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
