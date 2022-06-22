@@ -96,6 +96,7 @@ const formStepID = "SendVote__form-step";
 
 describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
