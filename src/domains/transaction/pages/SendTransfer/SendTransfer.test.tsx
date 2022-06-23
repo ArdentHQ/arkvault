@@ -572,17 +572,7 @@ describe("SendTransfer", () => {
 	});
 
 	it("should render with only one network", async () => {
-		const profile = await env.profiles().create("profile-with-one-network");
-		await env.profiles().restore(profile);
-
-		const { wallet: arkWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.devnet",
-		});
-
-		profile.wallets().push(arkWallet);
-		await env.wallets().syncByProfile(profile);
-		const networkMock = jest.spyOn(profile, "availableNetworks").mockReturnValue([wallet.network()]);
+		const networkMock = jest.spyOn(profile, "availableNetworks").mockReturnValue([profile.availableNetworks()[1]]);
 
 		const transferURL = `/profiles/${profile.id()}/send-transfer`;
 
