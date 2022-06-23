@@ -8,7 +8,7 @@ import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
 import { Toggle } from "@/app/components/Toggle";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 import { useFiles } from "@/app/hooks/use-files";
@@ -18,6 +18,8 @@ const EXTENSION = "wwe";
 
 export const ExportSettings = () => {
 	const { t } = useTranslation();
+
+	const { isXs } = useBreakpoint();
 
 	const form = useForm({ mode: "onChange" });
 	const { register } = form;
@@ -54,7 +56,7 @@ export const ExportSettings = () => {
 				/>
 			),
 			labelDescription: t("SETTINGS.EXPORT.OPTIONS.EXCLUDE_LEDGER_WALLETS.DESCRIPTION"),
-			wrapperClass: "pt-6",
+			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
 
@@ -92,7 +94,7 @@ export const ExportSettings = () => {
 			<Form id="export-settings__form" context={form} onSubmit={handleSubmit} className="mt-8">
 				<h2 className="mb-0 text-lg">{t("COMMON.WALLETS")}</h2>
 
-				<ListDivided items={walletExportOptions} />
+				<ListDivided items={walletExportOptions} noBorder={isXs} />
 
 				<FormButtons>
 					<Button data-testid="Export-settings__submit-button" type="submit">
