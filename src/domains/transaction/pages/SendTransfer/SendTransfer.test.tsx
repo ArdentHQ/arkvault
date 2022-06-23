@@ -571,6 +571,40 @@ describe("SendTransfer", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should render with only one network", async () => {
+		const profile = await env.profiles().create("profile-with-one-network");
+		await env.profiles().restore(profile);
+
+		const { wallet: arkWallet } = await profile.walletFactory().generate({
+			coin: "ARK",
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(arkWallet);
+		await env.wallets().syncByProfile(profile);
+		const networkMock = jest.spyOn(profile, "availableNetworks").mockReturnValue([wallet.network()]);
+
+		const transferURL = `/profiles/${profile.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		networkMock.mockRestore();
+	});
+
 	it("should render form and use location state", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
 		history.push(transferURL);
