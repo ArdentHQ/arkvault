@@ -62,7 +62,7 @@ exports[`LedgerTabs should render connection step 1`] = `
             </div>
           </div>
           <fieldset
-            class="mt-8 css-1bcidjh"
+            class="mt-8 my-8 css-1bcidjh"
           >
             <div
               data-testid="SelectNetwork"
@@ -155,6 +155,10 @@ exports[`LedgerTabs should render connection step 1`] = `
               </div>
             </div>
           </fieldset>
+          <div
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
+            type="horizontal"
+          />
         </section>
       </div>
     </div>

@@ -112,13 +112,11 @@ const CustomNetworksList: React.VFC<{
 		<div data-testid="CustomNetworksList" className="mt-3 grid gap-3 xl:grid-cols-2">
 			<button
 				type="button"
-				className="transition-color flex cursor-pointer items-center space-x-4 rounded-xl border-2 border-theme-primary-100 px-4 py-3 text-theme-primary-600 duration-100 hover:border-theme-primary-700 hover:bg-theme-primary-700 hover:text-white dark:border-theme-secondary-800 dark:hover:border-theme-primary-700"
+				className="transition-color flex cursor-pointer items-center space-x-3 rounded-xl border-2 border-theme-primary-100 px-4 py-3 text-theme-primary-600 duration-100 hover:border-theme-primary-700 hover:bg-theme-primary-700 hover:text-white dark:border-theme-secondary-800 dark:hover:border-theme-primary-700"
 				onClick={onAdd}
 				data-testid="CustomNetworksList--add"
 			>
-				<span>
-					<Icon name="Plus" />
-				</span>
+				<Icon name="Plus" />
 				<span className="font-semibold">{t("SETTINGS.NETWORKS.CUSTOM_NETWORKS.ADD_NETWORK")}</span>
 			</button>
 

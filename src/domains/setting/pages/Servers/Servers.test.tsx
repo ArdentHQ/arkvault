@@ -83,7 +83,6 @@ const peerResponseHeight = {
 const arkDevnet = "ark.devnet";
 const serverFormSaveButtonTestingId = "ServerFormModal--save";
 const addNewPeerButtonTestId = "CustomPeers--addnew";
-const addOtherPeerTestId = "CustomPeers--addother";
 const peerStatusOkTestId = "CustomPeersPeer--statusok";
 const peerStatusLoadingTestId = "CustomPeersPeer--statusloading";
 const peerStatusErrorTestId = "CustomPeersPeer--statuserror";
@@ -742,7 +741,7 @@ describe("Servers Settings", () => {
 
 			expect(table).toBeInTheDocument();
 
-			expect(screen.getByTestId(addOtherPeerTestId)).toBeInTheDocument();
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
 			expect(within(table).getAllByTestId(CustomPeersNetworkItem)).toHaveLength(3);
 
@@ -763,9 +762,9 @@ describe("Servers Settings", () => {
 
 			expect(table).toBeInTheDocument();
 
-			expect(screen.getByTestId(addOtherPeerTestId)).toBeInTheDocument();
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
-			userEvent.click(screen.getByTestId(addOtherPeerTestId));
+			userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
 			await fillServerForm({
 				address: musigHostTest,
@@ -786,7 +785,7 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			userEvent.click(screen.getByTestId(addOtherPeerTestId));
+			userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
 			const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
 				"SelectDropdown__input",
@@ -844,7 +843,7 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			userEvent.click(screen.getByTestId(addOtherPeerTestId));
+			userEvent.click(screen.getByTestId(addNewPeerButtonTestId));
 
 			const networkSelect = within(screen.getByTestId("ServerFormModal--network")).getByTestId(
 				"SelectDropdown__input",
@@ -890,7 +889,7 @@ describe("Servers Settings", () => {
 
 			expect(table).toBeInTheDocument();
 
-			expect(screen.getByTestId(addOtherPeerTestId)).toBeInTheDocument();
+			expect(screen.getByTestId(addNewPeerButtonTestId)).toBeInTheDocument();
 
 			expect(within(table).getAllByTestId("CustomPeers-network-item--mobile")).toHaveLength(3);
 

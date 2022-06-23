@@ -15,6 +15,7 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendTransfer } from "./SendTransfer";
 import { SummaryStep } from "./SummaryStep";
+import { NetworkStep } from "./NetworkStep";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -164,6 +165,49 @@ describe("SendTransfer", () => {
 	afterEach(() => {
 		jest.restoreAllMocks();
 		resetProfileNetworksMock();
+	});
+
+	it("should render network step with network cards", async () => {
+		const { asFragment } = renderWithForm(
+			<StepsProvider activeStep={1} steps={4}>
+				<NetworkStep profile={profile} networks={profile.availableNetworks().slice(0, 2)} />
+			</StepsProvider>,
+			{
+				registerCallback: defaultRegisterCallback,
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.queryByTestId("FormLabel")).not.toBeInTheDocument());
+
+		expect(
+			within(screen.getByTestId("SendTransfer__network-step__select")).getAllByTestId("NetworkOption"),
+		).toHaveLength(2);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render network step with dropdown", () => {
+		const { asFragment } = renderWithForm(
+			<StepsProvider activeStep={1} steps={4}>
+				<NetworkStep profile={profile} networks={profile.availableNetworks()} />
+			</StepsProvider>,
+			{
+				registerCallback: defaultRegisterCallback,
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByTestId(networkStepID)).toBeInTheDocument();
+		expect(screen.getByTestId("FormLabel")).toBeInTheDocument();
+
+		expect(
+			within(screen.getByTestId("SendTransfer__network-step__select")).getByTestId("SelectDropdown"),
+		).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form step", async () => {
