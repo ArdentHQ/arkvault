@@ -514,13 +514,13 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-13-menu"
+                            aria-owns="downshift-14-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-13-input"
-                                id="downshift-13-label"
+                                for="downshift-14-input"
+                                id="downshift-14-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -552,13 +552,13 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-13-menu"
-                                    aria-labelledby="downshift-13-label"
+                                    aria-controls="downshift-14-menu"
+                                    aria-labelledby="downshift-14-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-13-input"
+                                    id="downshift-14-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -605,8 +605,8 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-13-label"
-                              id="downshift-13-menu"
+                              aria-labelledby="downshift-14-label"
+                              id="downshift-14-menu"
                               role="listbox"
                             />
                           </div>

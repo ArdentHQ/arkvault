@@ -11,7 +11,7 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useBreakpoint, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
@@ -21,7 +21,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network-utils";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
 
 export const ServersSettings = () => {
 	const { t } = useTranslation();
@@ -37,7 +36,7 @@ export const ServersSettings = () => {
 	const [networkToDelete, setNetworkToDelete] = useState<NormalizedNetwork | undefined>(undefined);
 	const [networkToUpdate, setNetworkToUpdate] = useState<NormalizedNetwork | undefined>(undefined);
 
-	const enabledNetworks = useAvailableNetworks({
+	const enabledNetworks = useNetworks({
 		filter: (network) => profileAllEnabledNetworkIds(profile).includes(network.id()),
 		profile,
 	});

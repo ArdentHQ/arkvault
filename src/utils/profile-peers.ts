@@ -1,9 +1,10 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
 import { groupBy } from "@ardenthq/sdk-helpers";
+import { profileAllEnabledNetworks } from "./network-utils";
 import { pingServerAddress } from "@/utils/peers";
 import { ServerHealthStatus, NetworkHostType } from "@/domains/setting/pages/Servers/Servers.contracts";
-import { customNetworks, defaultNetworks } from "@/utils/server-utils";
+import { customNetworks } from "@/utils/server-utils";
 
 interface PeerData {
 	address: string;
@@ -43,7 +44,7 @@ const customPeers = (env: Environment, profile: Contracts.IProfile) =>
 		.map(Peer);
 
 const defaultPeers = (env: Environment, profile: Contracts.IProfile) =>
-	defaultNetworks(env, profile)
+	profileAllEnabledNetworks(profile)
 		.map((network) => ({
 			address: network.toObject().hosts.find((host) => host.type === "full")?.host || "",
 			network,

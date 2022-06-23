@@ -2147,13 +2147,13 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-42-menu"
+                            aria-owns="downshift-53-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-42-input"
-                                id="downshift-42-label"
+                                for="downshift-53-input"
+                                id="downshift-53-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -2184,13 +2184,13 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-42-menu"
-                                    aria-labelledby="downshift-42-label"
+                                    aria-controls="downshift-53-menu"
+                                    aria-labelledby="downshift-53-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-42-input"
+                                    id="downshift-53-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -2237,8 +2237,8 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-42-label"
-                              id="downshift-42-menu"
+                              aria-labelledby="downshift-53-label"
+                              id="downshift-53-menu"
                               role="listbox"
                             />
                           </div>
@@ -3326,13 +3326,13 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-60-menu"
+                            aria-owns="downshift-71-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-60-input"
-                                id="downshift-60-label"
+                                for="downshift-71-input"
+                                id="downshift-71-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -3363,13 +3363,13 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-60-menu"
-                                    aria-labelledby="downshift-60-label"
+                                    aria-controls="downshift-71-menu"
+                                    aria-labelledby="downshift-71-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-60-input"
+                                    id="downshift-71-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -3416,8 +3416,8 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-60-label"
-                              id="downshift-60-menu"
+                              aria-labelledby="downshift-71-label"
+                              id="downshift-71-menu"
                               role="listbox"
                             />
                           </div>

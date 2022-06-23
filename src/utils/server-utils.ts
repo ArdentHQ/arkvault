@@ -1,6 +1,5 @@
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { networkDisplayName } from "./network-utils";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 export const sortByName = (networks: NormalizedNetwork[]) => networks.sort((a, b) => a.name.localeCompare(b.name));
@@ -25,27 +24,6 @@ export const customNetworks = (env: Environment, profile: Contracts.IProfile) =>
 			}));
 		});
 	});
-};
-
-export const defaultNetworks = (env: Environment, profile: Contracts.IProfile) => {
-	const profileNetworks = profile.networks().all();
-
-	return env
-		.availableNetworks()
-		.filter((network: Networks.Network) => {
-			const idParts = network.id().split(".");
-
-			const networkData = profileNetworks[idParts[0]] as Networks.NetworkManifest | undefined;
-
-			if (networkData === undefined) {
-				return false;
-			}
-
-			const profileNetwork = networkData[idParts[1]] as Record<string, unknown> | undefined;
-
-			return profileNetwork !== undefined && profileNetwork.id !== undefined;
-		})
-		.sort((a, b) => networkDisplayName(a).localeCompare(networkDisplayName(b)));
 };
 
 export const hasAvailableMusigServer = ({ profile }: { profile?: Contracts.IProfile; network: Networks.Network }) => {

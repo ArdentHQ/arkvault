@@ -24,6 +24,7 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
 
 const MAX_TABS = 5;
 
@@ -33,7 +34,11 @@ export const SendTransfer: React.VFC = () => {
 
 	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
-	const networks = useNetworks(activeProfile);
+	const networks = useNetworks({
+		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
+		profile: activeProfile,
+	});
+
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 	const {
@@ -112,7 +117,7 @@ export const SendTransfer: React.VFC = () => {
 		}
 
 		resetForm();
-	}, [resetForm]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);

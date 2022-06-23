@@ -2,12 +2,12 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
-import { useAvailableNetworks } from "@/domains/wallet/hooks/use-available-networks";
+import { useNetworks } from "@/app/hooks";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
 
-describe("useAvailableNetworks", () => {
+describe("useNetworks", () => {
 	let profile: Contracts.IProfile;
 
 	const wrapper = ({ children }) => (
@@ -19,7 +19,7 @@ describe("useAvailableNetworks", () => {
 	const renderHookWithProfile = (profile: Contracts.IProfile) =>
 		renderHook(
 			() =>
-				useAvailableNetworks({
+				useNetworks({
 					profile: profile,
 				}),
 			{
@@ -124,7 +124,7 @@ describe("useAvailableNetworks", () => {
 			result: { current },
 		} = renderHook(
 			() =>
-				useAvailableNetworks({
+				useNetworks({
 					filter: (network) => network.id() === "ark.mainnet",
 					profile: profile,
 				}),

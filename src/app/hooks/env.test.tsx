@@ -1,12 +1,10 @@
-import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
-import { env, getDefaultProfileId, render, screen, mockProfileWithOnlyPublicNetworks } from "@/utils/testing-library";
+import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -147,96 +145,4 @@ describe("useActiveProfile", () => {
 			consoleSpy.mockRestore();
 		},
 	);
-});
-
-let networks: Networks.Network[];
-let wallets: Contracts.IReadWriteWallet[];
-
-const setGlobalVariables = (profileId: string) => {
-	profile = env.profiles().findById(profileId);
-	wallets = profile.wallets().values();
-	networks = wallets.map((wallet) => wallet.network()).sort((a, b) => a.displayName().localeCompare(b.displayName()));
-	networks = [...new Set(networks)];
-};
-
-describe("useNetworks", () => {
-	const TestNetworks = ({ profile }: { profile: Contracts.IProfile }) => {
-		const networks = useNetworks(profile);
-		return (
-			<ul>
-				{networks.map((network, index) => (
-					<li key={network.id()}>{`${index}:${network.displayName()}`}</li>
-				))}
-			</ul>
-		);
-	};
-
-	beforeEach(() => {
-		setGlobalVariables(getDefaultProfileId());
-	});
-
-	it.each(["b999d134-7a24-481e-a95d-bc47c543bfc9", "cba050f1-880f-45f0-9af9-cfe48f406052"])(
-		"should return networks",
-		(profileId) => {
-			setGlobalVariables(profileId);
-
-			render(
-				<Route path="/profiles/:profileId">
-					<TestNetworks profile={profile} />
-				</Route>,
-				{
-					route: `/profiles/${profile.id()}`,
-				},
-			);
-
-			for (const [index, network] of profile.availableNetworks().entries()) {
-				expect(screen.getByText(`${index}:${network.displayName()}`)).toBeInTheDocument();
-			}
-		},
-	);
-
-	it("should throw error with no profile", () => {
-		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
-
-		expect(() =>
-			render(
-				<Route path="/profiles/:profileId/wallets/:walletId">
-					<TestNetworks profile={undefined} />
-				</Route>,
-				{
-					route: `/profiles/${"undefined"}/wallets/${"undefined"}`,
-				},
-			),
-		).toThrow(/Cannot read propert/);
-
-		consoleErrorSpy.mockRestore();
-	});
-
-	it("should return empty array on empty profile", () => {
-		jest.spyOn(profile.wallets(), "values").mockReturnValue([]);
-
-		const {
-			result: { current },
-		} = renderHook(() => useNetworks(profile));
-
-		expect(current).toHaveLength(0);
-	});
-
-	it("should return the network wallets", async () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-		const { wallet: arkMainWallet } = await profile.walletFactory().generate({
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-		const profileWalletsSpy = jest.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
-
-		const {
-			result: { current },
-		} = renderHook(() => useNetworks(profile));
-
-		expect(current).toHaveLength(1);
-
-		profileWalletsSpy.mockRestore();
-		resetProfileNetworksMock();
-	});
 });

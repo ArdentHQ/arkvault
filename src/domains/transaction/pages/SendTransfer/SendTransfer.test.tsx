@@ -263,7 +263,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} networks={env.availableNetworks()} profile={profile} />,
+				<FormStep deeplinkProps={{}} networks={profile.availableNetworks()} profile={profile} />,
 			</StepsProvider>,
 			{
 				defaultValues: {
@@ -569,6 +569,30 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("NetworkOptions")).toHaveTextContent("ark.svg");
 
 		resetProfileNetworksMock();
+	});
+
+	it("should render with only one network", async () => {
+		const networkMock = jest.spyOn(profile, "availableNetworks").mockReturnValue([profile.availableNetworks()[1]]);
+
+		const transferURL = `/profiles/${profile.id()}/send-transfer`;
+
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		networkMock.mockRestore();
 	});
 
 	it("should render form and use location state", async () => {

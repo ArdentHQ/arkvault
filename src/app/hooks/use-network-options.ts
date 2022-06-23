@@ -1,11 +1,11 @@
 import { useCallback } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { useNetworks } from "./use-networks";
 import { networksAsOptions } from "@/utils/network-utils";
 
 export const useNetworkOptions = ({ profile }: { profile: Contracts.IProfile }) => {
-	const networks = useAvailableNetworks({ profile });
+	const networks = useNetworks({ profile });
 
 	const networkOptions = useCallback(
 		(customNetworks?: Networks.Network[]) => networksAsOptions(customNetworks || networks),
