@@ -6,7 +6,7 @@ import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
-import { useFileDownload } from "./hooks/use-csv-download";
+import { useFileDownload } from "./hooks/use-file-download";
 
 export const TransactionExportSuccess = ({ onCancel, onDownload, file }: TransactionExportStatusProperties) => {
 	const { t } = useTranslation();

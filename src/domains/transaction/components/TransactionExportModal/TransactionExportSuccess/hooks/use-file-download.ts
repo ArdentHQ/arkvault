@@ -11,7 +11,7 @@ export const useFileDownload = () => {
 				extensions: [file.extension],
 				fileName: `${file.name}.${file.extension}`,
 			});
-		} catch (error) {
+		} catch {
 			return;
 		}
 
