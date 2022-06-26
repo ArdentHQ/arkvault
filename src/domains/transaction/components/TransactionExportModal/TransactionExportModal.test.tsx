@@ -5,9 +5,9 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
+import { TransactionExportModal, ExportProgressStatus } from ".";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
-import { TransactionExportModal, ExportProgressStatus } from "./";
 const history = createHashHistory();
 
 const fixtureProfileId = getDefaultProfileId();
@@ -101,6 +101,7 @@ describe("TransactionExportModal", () => {
 		userEvent.click(screen.getByTestId("TransactionExportError__close-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -122,9 +123,11 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__close-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -148,11 +151,13 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 
 		expect(asFragment()).toMatchSnapshot();
+
 		browserAccessMock.mockRestore();
 	});
 
@@ -178,11 +183,13 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
 
 		await waitFor(() => expect(onClose).not.toHaveBeenCalledWith());
 
 		expect(asFragment()).toMatchSnapshot();
+
 		browserAccessMock.mockRestore();
 	});
 });

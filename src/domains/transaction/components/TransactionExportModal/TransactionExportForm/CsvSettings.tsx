@@ -1,24 +1,22 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { useFormContext } from "react-hook-form";
+import { useDelimiterOptions } from "./hooks";
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown } from "@/app/components/Dropdown";
 import { FormField } from "@/app/components/Form";
 import { Toggle } from "@/app/components/Toggle";
-import { useTranslation } from "react-i18next";
-import { useDelimiterOptions } from "./hooks";
-import { useFormContext } from "react-hook-form";
 import { CSVDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 import { ListDivided } from "@/app/components/ListDivided";
 
-const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => {
-	return (
-		<>
-			{label}
-			<span className="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">(</span>
-			{symbol}
-			<span className="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">)</span>
-		</>
-	);
-};
+const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => (
+	<>
+		{label}
+		<span className="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">(</span>
+		{symbol}
+		<span className="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600">)</span>
+	</>
+);
 
 const SelectDelimiter = ({ value, onSelect }: { value: CSVDelimiter; onSelect?: (option: CSVDelimiter) => void }) => {
 	const delimiterOptions = useDelimiterOptions({ selectedValue: value });
@@ -54,7 +52,6 @@ export const CSVSettings = () => {
 		<ListDivided
 			items={[
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.INCLUDE_HEADER_ROW"),
 					value: (
 						<Toggle
@@ -64,9 +61,9 @@ export const CSVSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-header-row"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "pt-4",
 					label: t("TRANSACTION.EXPORT.FORM.DELIMITER"),
 					value: (
 						<SelectDelimiter
@@ -74,6 +71,7 @@ export const CSVSettings = () => {
 							onSelect={(delimiter) => form.setValue("delimiter", delimiter)}
 						/>
 					),
+					wrapperClass: "pt-4",
 				},
 			]}
 		/>

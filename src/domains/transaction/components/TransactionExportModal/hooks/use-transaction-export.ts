@@ -20,9 +20,13 @@ export const useTransactionExport = ({
 	});
 
 	return {
-		file,
 		cancelExport: () => {
 			//TODO: implement.
+			setStatus(ExportProgressStatus.Idle);
+		},
+		error,
+		file,
+		retry: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: (settings: ExportSettings) => {
@@ -32,10 +36,6 @@ export const useTransactionExport = ({
 
 			//TODO: Convert fetched transaction objects to csv
 		},
-		retry: () => {
-			setStatus(ExportProgressStatus.Idle);
-		},
 		status,
-		error,
 	};
 };

@@ -1,9 +1,5 @@
-import React, { useState } from "react";
-import { Modal } from "@/app/components/Modal";
-import { TabPanel, Tabs } from "@/app/components/Tabs";
+import React from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { toasts } from "@/app/services";
-
 import { useTransactionExport } from "./hooks";
 import {
 	TransactionExportProgress,
@@ -12,7 +8,10 @@ import {
 	TransactionExportForm,
 	TransactionExportError,
 	ExportProgressStatus,
-} from "./";
+} from ".";
+import { Modal } from "@/app/components/Modal";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { toasts } from "@/app/services";
 
 export const TransactionExportModal = ({
 	initialStatus = ExportProgressStatus.Idle,
@@ -23,8 +22,8 @@ export const TransactionExportModal = ({
 	const { t } = useTranslation();
 
 	const { file, startExport, cancelExport, status, error, retry } = useTransactionExport({
-		wallet,
 		initialStatus,
+		wallet,
 	});
 
 	return (

@@ -9,18 +9,18 @@ export const useTransactionTypeOptions = ({ selectedValue }: { selectedValue: Tr
 		() => [
 			{
 				active: selectedValue === TransactionType.All,
-				value: TransactionType.All,
 				label: t("TRANSACTION.ALL"),
+				value: TransactionType.All,
 			},
 			{
 				active: selectedValue === TransactionType.Incoming,
-				value: TransactionType.Incoming,
 				label: t("TRANSACTION.INCOMING"),
+				value: TransactionType.Incoming,
 			},
 			{
 				active: selectedValue === TransactionType.Outgoing,
-				value: TransactionType.Outgoing,
 				label: t("TRANSACTION.OUTGOING"),
+				value: TransactionType.Outgoing,
 			},
 		],
 		[selectedValue],

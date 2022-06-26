@@ -11,15 +11,15 @@ import {
 export const useTransactionExportForm = () => {
 	const form = useForm<ExportSettings>({
 		defaultValues: {
-			transactionType: TransactionType.All,
-			includeHeaderRow: true,
-			includeTransactionId: true,
-			includeDate: true,
-			includeSenderRecipient: true,
-			includeCryptoAmount: true,
-			includeFiatAmount: true,
-			delimiter: CSVDelimiter.Comma,
 			dateRange: DateRange.CurrentMonth,
+			delimiter: CSVDelimiter.Comma,
+			includeCryptoAmount: true,
+			includeDate: true,
+			includeFiatAmount: true,
+			includeHeaderRow: true,
+			includeSenderRecipient: true,
+			includeTransactionId: true,
+			transactionType: TransactionType.All,
 		},
 		mode: "onChange",
 	});

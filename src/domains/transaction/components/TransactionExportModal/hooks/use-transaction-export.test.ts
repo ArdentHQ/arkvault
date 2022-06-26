@@ -19,20 +19,20 @@ describe("useTransactionExport hook", () => {
 
 	it("should start export", async () => {
 		const { result } = renderHook(() =>
-			useTransactionExport({ wallet: profile.wallets().first(), initialStatus: ExportProgressStatus.Idle }),
+			useTransactionExport({ initialStatus: ExportProgressStatus.Idle, wallet: profile.wallets().first() }),
 		);
 
 		act(() => {
 			result.current.startExport({
-				transactionType: "all",
-				includeHeaderRow: true,
-				includeTransactionId: true,
-				includeDate: true,
-				includeSenderRecipient: true,
-				includeCryptoAmount: true,
-				includeFiatAmount: true,
-				delimiter: "comma",
 				dateRange: "custom",
+				delimiter: "comma",
+				includeCryptoAmount: true,
+				includeDate: true,
+				includeFiatAmount: true,
+				includeHeaderRow: true,
+				includeSenderRecipient: true,
+				includeTransactionId: true,
+				transactionType: "all",
 			});
 		});
 
@@ -41,7 +41,7 @@ describe("useTransactionExport hook", () => {
 
 	it("should set idle status on retry", async () => {
 		const { result } = renderHook(() =>
-			useTransactionExport({ wallet: profile.wallets().first(), initialStatus: ExportProgressStatus.Progress }),
+			useTransactionExport({ initialStatus: ExportProgressStatus.Progress, wallet: profile.wallets().first() }),
 		);
 
 		act(() => {
@@ -53,7 +53,7 @@ describe("useTransactionExport hook", () => {
 
 	it("should cancel export", async () => {
 		const { result } = renderHook(() =>
-			useTransactionExport({ wallet: profile.wallets().first(), initialStatus: ExportProgressStatus.Progress }),
+			useTransactionExport({ initialStatus: ExportProgressStatus.Progress, wallet: profile.wallets().first() }),
 		);
 
 		act(() => {

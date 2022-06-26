@@ -32,7 +32,7 @@ describe("useFileDownload hook", () => {
 		const { result } = renderHook(() => useFileDownload());
 		const response = await result.current.download(file);
 
-		expect(response).toBe(undefined);
+		expect(response).toBeUndefined();
 
 		browserAccessMock.mockRestore();
 	});

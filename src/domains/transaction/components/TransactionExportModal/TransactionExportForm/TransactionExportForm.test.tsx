@@ -5,6 +5,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { TransactionExportForm } from ".";
 import {
 	env,
 	getDefaultProfileId,
@@ -14,7 +15,6 @@ import {
 	waitFor,
 	renderResponsive,
 } from "@/utils/testing-library";
-import { TransactionExportForm } from "./";
 
 const history = createHashHistory();
 
@@ -22,15 +22,15 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
 const defaultSettings = {
-	includeHeaderRow: true,
-	includeTransactionId: true,
-	includeDate: true,
-	includeSenderRecipient: true,
-	includeCryptoAmount: true,
-	includeFiatAmount: true,
-	transactionType: "all",
-	delimiter: "comma",
 	dateRange: "currentMonth",
+	delimiter: "comma",
+	includeCryptoAmount: true,
+	includeDate: true,
+	includeFiatAmount: true,
+	includeHeaderRow: true,
+	includeSenderRecipient: true,
+	includeTransactionId: true,
+	transactionType: "all",
 };
 
 describe("TransactionExportForm", () => {
@@ -82,6 +82,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
+
 		expect(onCancel).toHaveBeenCalledWith();
 	});
 
@@ -149,7 +150,9 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 
 		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
@@ -180,7 +183,9 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("dropdown__option--all-2"));
 
 		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));

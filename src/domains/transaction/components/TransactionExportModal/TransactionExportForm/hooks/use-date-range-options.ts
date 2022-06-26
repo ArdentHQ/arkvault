@@ -10,33 +10,33 @@ export const useDateRangeOptions = ({ selectedValue }: { selectedValue: DateRang
 		() => [
 			{
 				active: selectedValue === DateRange.CurrentMonth,
-				value: DateRange.CurrentMonth,
 				label: t("TRANSACTION.EXPORT.FORM.CURRENT_MONTH"),
+				value: DateRange.CurrentMonth,
 			},
 			{
 				active: selectedValue === DateRange.LastMonth,
-				value: DateRange.LastMonth,
 				label: t("TRANSACTION.EXPORT.FORM.LAST_MONTH"),
+				value: DateRange.LastMonth,
 			},
 			{
 				active: selectedValue === DateRange.LastQuarter,
-				value: DateRange.LastQuarter,
 				label: t("TRANSACTION.EXPORT.FORM.LASTQUARTER"),
+				value: DateRange.LastQuarter,
 			},
 			{
 				active: selectedValue === DateRange.YearToDate,
-				value: DateRange.YearToDate,
 				label: t("TRANSACTION.EXPORT.FORM.YEARTODATE"),
+				value: DateRange.YearToDate,
 			},
 			{
 				active: selectedValue === DateRange.LastYear,
-				value: DateRange.LastYear,
 				label: t("TRANSACTION.EXPORT.FORM.LASTYEAR"),
+				value: DateRange.LastYear,
 			},
 			{
 				active: selectedValue === DateRange.All,
-				value: DateRange.All,
 				label: t("TRANSACTION.EXPORT.FORM.ALL"),
+				value: DateRange.All,
 			},
 		],
 		[selectedValue],
@@ -46,8 +46,8 @@ export const useDateRangeOptions = ({ selectedValue }: { selectedValue: DateRang
 		() => [
 			{
 				active: selectedValue === DateRange.Custom,
-				value: DateRange.Custom,
 				label: t("TRANSACTION.EXPORT.FORM.CUSTOM"),
+				value: DateRange.Custom,
 			},
 		],
 		[selectedValue],

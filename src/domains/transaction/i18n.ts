@@ -40,7 +40,6 @@ export const translations = {
 		TIMESTAMP: "Timestamp Expiration",
 	},
 	EXPORT: {
-		TITLE: "Transaction History",
 		DESCRIPTION: "Export your wallet's transaction history.",
 		FORM: {
 			ALL: "All",
@@ -73,6 +72,7 @@ export const translations = {
 		SUCCESS: {
 			DESCRIPTION: "The transaction history is now ready, download it below.",
 		},
+		TITLE: "Transaction History",
 	},
 	FEES: {
 		AVERAGE: "Average",

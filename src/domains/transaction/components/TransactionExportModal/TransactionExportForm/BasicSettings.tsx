@@ -1,11 +1,11 @@
 import React from "react";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { useTransactionTypeOptions, useDateRangeOptions } from "./hooks";
 import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
 import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown } from "@/app/components/Dropdown";
 import { FormField } from "@/app/components/Form";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
-import { useTransactionTypeOptions, useDateRangeOptions } from "./hooks";
 import { ListDivided } from "@/app/components/ListDivided";
 
 export const BasicSettings = () => {
@@ -25,7 +25,6 @@ export const BasicSettings = () => {
 		<ListDivided
 			items={[
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.TRANSACTIONS"),
 					value: (
 						<div>
@@ -45,9 +44,9 @@ export const BasicSettings = () => {
 							</ButtonGroup>
 						</div>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "pt-4",
 					label: t("TRANSACTION.EXPORT.FORM.DATE_RANGE"),
 					value: (
 						<FormField name="dateRange">
@@ -67,6 +66,7 @@ export const BasicSettings = () => {
 							/>
 						</FormField>
 					),
+					wrapperClass: "pt-4",
 				},
 			]}
 		/>

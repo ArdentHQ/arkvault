@@ -12,7 +12,6 @@ export const ColumnSettings = () => {
 		<ListDivided
 			items={[
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_ID"),
 					value: (
 						<Toggle
@@ -22,9 +21,9 @@ export const ColumnSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-tx-id"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_DATE"),
 					value: (
 						<Toggle
@@ -34,9 +33,9 @@ export const ColumnSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-date"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.SENDER_RECIPIENT"),
 					value: (
 						<Toggle
@@ -46,9 +45,9 @@ export const ColumnSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-crypto-amount"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.CRYPTO_AMOUNT"),
 					value: (
 						<Toggle
@@ -58,9 +57,9 @@ export const ColumnSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-crypto-amount"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 				{
-					wrapperClass: "py-4",
 					label: t("TRANSACTION.EXPORT.FORM.FIAT_AMOUNT"),
 					value: (
 						<Toggle
@@ -70,6 +69,7 @@ export const ColumnSettings = () => {
 							data-testid="TransactionExportForm__toggle-include-tx-id"
 						/>
 					),
+					wrapperClass: "py-4",
 				},
 			]}
 		/>
