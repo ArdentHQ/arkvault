@@ -1,4 +1,4 @@
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
@@ -35,7 +35,6 @@ const defaultSettings = {
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
-	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
 		nock.disableNetConnect();
@@ -55,8 +54,6 @@ describe("TransactionExportForm", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		wallet = profile.wallets().first();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
@@ -65,7 +62,7 @@ describe("TransactionExportForm", () => {
 			route: dashboardURL,
 		});
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -82,7 +79,7 @@ describe("TransactionExportForm", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
 		expect(onCancel).toHaveBeenCalledWith();
@@ -101,7 +98,7 @@ describe("TransactionExportForm", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
 		await waitFor(() => expect(onExport).toHaveBeenCalledWith(expect.objectContaining(defaultSettings)));
@@ -120,7 +117,7 @@ describe("TransactionExportForm", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[2]);
 
@@ -149,7 +146,7 @@ describe("TransactionExportForm", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
@@ -180,7 +177,7 @@ describe("TransactionExportForm", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("TransactionExportForm")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();

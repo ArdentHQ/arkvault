@@ -45,7 +45,7 @@ describe("TransactionExportModal", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -64,7 +64,7 @@ describe("TransactionExportModal", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -83,7 +83,7 @@ describe("TransactionExportModal", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -102,7 +102,7 @@ describe("TransactionExportModal", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

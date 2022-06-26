@@ -26,7 +26,7 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: (settings: ExportSettings) => {
-			// console.log({ settings });
+			console.log({ settings });
 			//TODO: Aggregate transactions and show progress.
 			setStatus(ExportProgressStatus.Progress);
 
