@@ -135,6 +135,13 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
+	if (wallet.balance() > 0 && isRestoredAndSynced(wallet)) {
+		additionalOptions.options.push({
+			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
+			value: "transaction-history",
+		});
+	}
+
 	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageSign)) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE"),

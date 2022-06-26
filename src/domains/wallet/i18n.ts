@@ -230,6 +230,7 @@ export const translations = {
 			SECOND_SIGNATURE: "Second Signature",
 			SIGN_MESSAGE: "Sign Message",
 			STORE_HASH: "Store Hash",
+			TRANSACTION_HISTORY: "Transaction History",
 			VERIFY_MESSAGE: "Verify Message",
 			WALLET_NAME: "Wallet Name",
 		},
