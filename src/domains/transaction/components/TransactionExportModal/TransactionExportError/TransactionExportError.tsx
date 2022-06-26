@@ -29,7 +29,7 @@ export const TransactionExportError = ({ onClose, onRetry, file, error }: Transa
 					{t("COMMON.CLOSE")}
 				</Button>
 
-				<Button variant="primary" data-testid="TransactionExportError__close-button" onClick={onRetry}>
+				<Button variant="primary" data-testid="TransactionExportError__retry-button" onClick={onRetry}>
 					{t("COMMON.RETRY")}
 				</Button>
 			</FormButtons>
