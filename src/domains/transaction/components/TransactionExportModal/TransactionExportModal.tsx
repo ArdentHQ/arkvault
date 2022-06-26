@@ -22,7 +22,7 @@ export const TransactionExportModal = ({
 }: TransactionExportModalProperties) => {
 	const { t } = useTranslation();
 
-	const { file, startExport, cancelExport, status, error } = useTransactionExport({
+	const { file, startExport, cancelExport, status, error, retry } = useTransactionExport({
 		wallet,
 		initialStatus,
 	});
@@ -66,7 +66,7 @@ export const TransactionExportModal = ({
 				</TabPanel>
 
 				<TabPanel tabId={ExportProgressStatus.Error}>
-					<TransactionExportError file={file} onClose={onClose} onRetry={startExport} error={error} />
+					<TransactionExportError file={file} onClose={onClose} onRetry={retry} error={error} />
 				</TabPanel>
 			</Tabs>
 		</Modal>

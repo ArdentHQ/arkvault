@@ -6,7 +6,7 @@ import { Toggle } from "@/app/components/Toggle";
 import { useTranslation } from "react-i18next";
 import { useDelimiterOptions } from "./hooks";
 import { useFormContext } from "react-hook-form";
-import { CSVDelimiter } from "./TransactionExportModal.contracts";
+import { CSVDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 import { ListDivided } from "@/app/components/ListDivided";
 
 const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => {

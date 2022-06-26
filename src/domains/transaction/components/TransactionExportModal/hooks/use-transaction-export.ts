@@ -32,6 +32,9 @@ export const useTransactionExport = ({
 
 			//TODO: Convert fetched transaction objects to csv
 		},
+		retry: () => {
+			setStatus(ExportProgressStatus.Idle);
+		},
 		status,
 		error,
 	};
