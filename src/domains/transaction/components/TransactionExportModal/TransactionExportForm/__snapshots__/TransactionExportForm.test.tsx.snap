@@ -2344,61 +2344,60 @@ exports[`TransactionExportForm should render in xs 1`] = `
               </span>
             </div>
           </div>
+        </div>
+        <div
+          class=""
+          data-testid="list-divided-item__content"
+        >
           <div>
-            <span
-              data-testid="list-divided-item__value"
+            <div
+              class="inline-flex w-full items-center mt-4 flex flex-col space-y-3"
+              data-testid="ButtonGroup"
+              role="radiogroup"
             >
-              <div>
+              <button
+                aria-checked="true"
+                aria-label="All"
+                class="css-12yryft"
+                data-testid="ButtonGroupOption"
+                role="radio"
+                type="button"
+              >
                 <div
-                  class="inline-flex w-full items-center space-x-3"
-                  data-testid="ButtonGroup"
-                  role="radiogroup"
+                  class="px-2"
                 >
-                  <button
-                    aria-checked="true"
-                    aria-label="All"
-                    class="css-12yryft"
-                    data-testid="ButtonGroupOption"
-                    role="radio"
-                    type="button"
-                  >
-                    <div
-                      class="px-2"
-                    >
-                      All
-                    </div>
-                  </button>
-                  <button
-                    aria-checked="false"
-                    aria-label="Incoming"
-                    class="css-12yryft"
-                    data-testid="ButtonGroupOption"
-                    role="radio"
-                    type="button"
-                  >
-                    <div
-                      class="px-2"
-                    >
-                      Incoming
-                    </div>
-                  </button>
-                  <button
-                    aria-checked="false"
-                    aria-label="Outgoing"
-                    class="css-12yryft"
-                    data-testid="ButtonGroupOption"
-                    role="radio"
-                    type="button"
-                  >
-                    <div
-                      class="px-2"
-                    >
-                      Outgoing
-                    </div>
-                  </button>
+                  All
                 </div>
-              </div>
-            </span>
+              </button>
+              <button
+                aria-checked="false"
+                aria-label="Incoming"
+                class="css-12yryft"
+                data-testid="ButtonGroupOption"
+                role="radio"
+                type="button"
+              >
+                <div
+                  class="px-2"
+                >
+                  Incoming
+                </div>
+              </button>
+              <button
+                aria-checked="false"
+                aria-label="Outgoing"
+                class="css-12yryft"
+                data-testid="ButtonGroupOption"
+                role="radio"
+                type="button"
+              >
+                <div
+                  class="px-2"
+                >
+                  Outgoing
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </li>
