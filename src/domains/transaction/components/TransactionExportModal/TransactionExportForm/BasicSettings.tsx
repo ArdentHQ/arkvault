@@ -77,8 +77,8 @@ export const BasicSettings = () => {
 		<ListDivided
 			items={[
 				{
-					label: t("TRANSACTION.EXPORT.FORM.TRANSACTIONS"),
 					content: isXs && <TranctionTypeOptions />,
+					label: t("TRANSACTION.EXPORT.FORM.TRANSACTIONS"),
 					value: !isXs && <TranctionTypeOptions />,
 					wrapperClass: "py-4",
 				},
