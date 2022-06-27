@@ -10,7 +10,7 @@ export const useTransactionExport = ({
 	initialStatus: ExportProgressStatus;
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
-	const [error, setError] = useState<string>();
+	const [error] = useState<string>();
 
 	const [file] = useState({
 		content: "",
@@ -35,10 +35,6 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Progress);
 
 			//TODO: Convert fetched transaction objects to csv
-			setTimeout(() => {
-				setError("Some error description");
-				setStatus(ExportProgressStatus.Error);
-			}, 4000);
 		},
 		status,
 	};
