@@ -741,7 +741,7 @@ exports[`TransactionExportModal should render error status 1`] = `
                           width="40"
                         >
                           <svg>
-                            file.svg
+                            extension-csv.svg
                           </svg>
                         </div>
                         <div
@@ -1545,7 +1545,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                           width="40"
                         >
                           <svg>
-                            file.svg
+                            extension-csv.svg
                           </svg>
                         </div>
                         <div
@@ -1709,7 +1709,7 @@ exports[`TransactionExportModal should render success and stay open if download 
                           width="40"
                         >
                           <svg>
-                            file.svg
+                            extension-csv.svg
                           </svg>
                         </div>
                         <div
@@ -1873,7 +1873,7 @@ exports[`TransactionExportModal should render success status 1`] = `
                           width="40"
                         >
                           <svg>
-                            file.svg
+                            extension-csv.svg
                           </svg>
                         </div>
                         <div

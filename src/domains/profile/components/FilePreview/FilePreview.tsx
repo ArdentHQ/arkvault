@@ -16,6 +16,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 	const fileTypeIcon: Record<string, string> = {
 		json: "ExtensionJson",
 		wwe: "ExtensionWwe",
+		csv: "ExtensionCsv",
 	};
 
 	return (
