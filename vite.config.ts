@@ -95,6 +95,7 @@ export default defineConfig({
 				"splashscreens/iphone6_splash.png",
 				"splashscreens/iphoneplus_splash.png",
 				"splashscreens/iphonex_splash.png",
+				"splashscreens/iphone13_splash.png",
 				"splashscreens/iphonexr_splash.png",
 				"splashscreens/iphonexsmax_splash.png",
 				"splashscreens/ipad_splash.png",
@@ -111,8 +112,8 @@ export default defineConfig({
 				name: "ARKVault",
 				short_name: "ARKVault",
 				description: "Control Your Assets",
-				theme_color: "#FFFFFF",
-				background_color: "#235B95",
+				theme_color: "#235b95",
+				background_color: "#235b95",
 				icons: [
 					{
 						src: "app-icon-192.png",
