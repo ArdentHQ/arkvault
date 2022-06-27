@@ -35,6 +35,9 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Progress);
 
 			//TODO: Convert fetched transaction objects to csv
+			setTimeout(() => {
+				setStatus(ExportProgressStatus.Success);
+			}, 4000);
 		},
 		status,
 	};
