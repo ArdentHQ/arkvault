@@ -27,6 +27,7 @@ import { ReactComponent as Dash } from "./dash.svg";
 import { ReactComponent as EllipsisVertical } from "./ellipsis-vertical.svg";
 import { ReactComponent as ExtensionWwe } from "./extension-wwe.svg";
 import { ReactComponent as ExtensionJson } from "./extension-json.svg";
+import { ReactComponent as ExtensionCsv } from "./extension-csv.svg";
 import { ReactComponent as Eye } from "./eye.svg";
 import { ReactComponent as EyeSlash } from "./eye-slash.svg";
 import { ReactComponent as File } from "./file.svg";
@@ -100,6 +101,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Delegate: TransactionIcons.DelegateRegistration,
 	Download,
 	EllipsisVertical,
+	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWwe,
 	Eye,
