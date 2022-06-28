@@ -53,13 +53,14 @@ const DateRangeOptions = () => {
 	return (
 		<FormField name="dateRange">
 			<Dropdown
+				variant="options"
 				data-testid="TransactionExportForm--daterange-options"
 				options={options}
 				onSelect={(option) => form.setValue("dateRange", option.value)}
 				toggleContent={(isOpen: boolean) => (
 					<CollapseToggleButton
 						isOpen={isOpen}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
 						label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
 					/>
 				)}

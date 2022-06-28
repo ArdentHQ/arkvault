@@ -30,7 +30,7 @@ const SelectDelimiter = ({ value, onSelect }: { value: CSVDelimiter; onSelect?: 
 				toggleContent={(isOpen: boolean) => (
 					<CollapseToggleButton
 						isOpen={isOpen}
-						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
 						label={
 							<SelectDelimiterLabel
 								label={delimiterOptions.selected?.label}

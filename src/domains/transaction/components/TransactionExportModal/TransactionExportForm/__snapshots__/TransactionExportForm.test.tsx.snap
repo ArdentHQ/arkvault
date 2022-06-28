@@ -127,7 +127,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -258,7 +258,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -705,7 +705,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -836,7 +836,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -1283,7 +1283,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -1414,7 +1414,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -1861,7 +1861,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -1992,7 +1992,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -2438,7 +2438,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
@@ -2569,7 +2569,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
+                      class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
                     >
                       <span
