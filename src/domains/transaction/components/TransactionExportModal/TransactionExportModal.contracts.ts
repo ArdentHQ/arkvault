@@ -57,7 +57,7 @@ export enum DateRange {
 	Custom = "custom",
 }
 
-export interface ExportSettings {
+export interface CsvSettings {
 	transactionType: TransactionType;
 	includeHeaderRow: boolean;
 	includeTransactionId: boolean;
@@ -65,6 +65,12 @@ export interface ExportSettings {
 	includeSenderRecipient: boolean;
 	includeCryptoAmount: boolean;
 	includeFiatAmount: boolean;
+	delimiter: CSVDelimiter;
+	dateRange: DateRange;
+}
+
+export interface ExportSettings extends CsvSettings {
+	transactionType: TransactionType;
 	delimiter: CSVDelimiter;
 	dateRange: DateRange;
 }
