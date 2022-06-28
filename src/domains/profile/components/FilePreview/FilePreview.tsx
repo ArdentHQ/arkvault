@@ -14,9 +14,9 @@ interface FilePreviewProperties {
 
 export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; variant?: FilePreviewVariant }) => {
 	const fileTypeIcon: Record<string, string> = {
+		csv: "ExtensionCsv",
 		json: "ExtensionJson",
 		wwe: "ExtensionWwe",
-		csv: "ExtensionCsv",
 	};
 
 	return (
