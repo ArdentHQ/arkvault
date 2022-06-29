@@ -1,5 +1,5 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import { AmountFormatter } from "./transaction-amount-formatter.factory";
+import { CsvFormatter } from "./transaction-csv-formatter.factory";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { buildTranslations } from "@/app/i18n/helpers";
 
@@ -8,26 +8,20 @@ const headers = (settings: CsvSettings) => {
 
 	return [
 		...(settings.includeTransactionId ? [COMMON.ID] : []),
-		...(settings.includeDate ? [COMMON.TIMESTAMP, COMMON.DATE] : []),
+		...(settings.includeDate ? [] : [`${COMMON.DATE} - ${COMMON.TIMESTAMP}`]),
 		...(settings.includeSenderRecipient ? [COMMON.SENDER, COMMON.RECIPIENT] : []),
 		...(settings.includeCryptoAmount ? [COMMON.AMOUNT, COMMON.FEE, COMMON.TOTAL] : []),
 	].join(settings.delimiter);
 };
 
 const transactionToCsv = (transaction: DTO.ExtendedConfirmedTransactionData, settings: CsvSettings) => {
-	const { COMMON } = buildTranslations();
-	const dateTimeFormat = "DD.MM.YYYY h:mm A";
-	const timestamp = transaction.timestamp()?.toUNIX();
-	const datetime = transaction.timestamp()?.format(dateTimeFormat);
-	const sender = transaction.sender();
-	const recipient = transaction.isMultiPayment() ? COMMON.MULTIPLE : transaction.isTransfer() ? transaction.recipient() : COMMON.OTHER;
-	const amounts = AmountFormatter(transaction);
+	const fields = CsvFormatter(transaction);
 
 	const columns = [
 		...(settings.includeTransactionId ? [transaction.id()] : []),
-		...(settings.includeDate ? [timestamp, datetime] : []),
-		...(settings.includeSenderRecipient ? [sender, recipient] : []),
-		...(settings.includeCryptoAmount ? [amounts.amount(), amounts.fee(), amounts.total()] : []),
+		...(settings.includeDate ? [`${fields.datetime()} - ${fields.timestamp()}`] : []),
+		...(settings.includeSenderRecipient ? [fields.sender(), fields.recipient()] : []),
+		...(settings.includeCryptoAmount ? [fields.amount(), fields.fee(), fields.total()] : []),
 	];
 
 	return columns.join(settings.delimiter);

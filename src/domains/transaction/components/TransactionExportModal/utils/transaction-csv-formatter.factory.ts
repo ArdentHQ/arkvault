@@ -1,5 +1,6 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DTO, Helpers } from "@ardenthq/sdk-profiles";
+import { buildTranslations } from "@/app/i18n/helpers";
 
 const formatAmount = (amount: number, transaction: DTO.ExtendedConfirmedTransactionData) =>
 	Helpers.Currency.format(amount, transaction.wallet().exchangeCurrency(), {
@@ -38,8 +39,32 @@ const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData) => 
 	return formatAmount(transaction.total(), transaction);
 };
 
-export const AmountFormatter = (transaction: DTO.ExtendedConfirmedTransactionData) => ({
+const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+	const { COMMON } = buildTranslations();
+
+	if (transaction.isMultiPayment()) {
+		return COMMON.MULTIPLE;
+	}
+
+	if (transaction.isTransfer()) {
+		return transaction.recipient();
+	}
+
+	//TODO: Handle more transaction types.
+	return COMMON.OTHER;
+};
+
+const datetime = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+	const dateTimeFormat = "DD.MM.YYYY h:mm A";
+	return transaction.timestamp()?.format(dateTimeFormat);
+};
+
+export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData) => ({
+	recipient: () => recipient(transaction),
 	amount: () => transactionAmount(transaction),
 	fee: () => formatAmount(transaction.fee(), transaction),
 	total: () => transactionTotal(transaction),
+	datetime: () => datetime(transaction),
+	timestamp: () => transaction.timestamp()?.toUNIX(),
+	sender: () => transaction.sender(),
 });
