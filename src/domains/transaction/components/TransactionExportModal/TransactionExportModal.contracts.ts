@@ -35,16 +35,16 @@ export interface TransactionExportErrorProperties {
 
 export enum TransactionType {
 	All = "all",
-	Outgoing = "outgoing",
-	Incoming = "incoming",
+	Outgoing = "sent",
+	Incoming = "received",
 }
 
 export enum CSVDelimiter {
-	Comma = "comma",
-	Semicolon = "semicolon",
-	Tab = "tab",
-	Space = "space",
-	Pipe = "pipe",
+	Comma = ",",
+	Semicolon = ";",
+	Tab = "\t",
+	Space = " ",
+	Pipe = "|",
 }
 
 export enum DateRange {

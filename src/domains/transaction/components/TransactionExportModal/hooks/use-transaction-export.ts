@@ -16,7 +16,7 @@ export const useTransactionExport = ({
 	const [file] = useState({
 		content: "",
 		extension: "csv",
-		name: `wallet-${wallet.address()}-transactions`,
+		name: wallet.address(),
 	});
 
 	const exporter = useMemo(() => TransactionExporter({ wallet }), [wallet]);
@@ -32,18 +32,19 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: async (settings: ExportSettings) => {
+			console.log({ settings });
 			setStatus(ExportProgressStatus.Progress);
 
 			try {
-				// TODO: Improve filter (tx method, timestamps).
-				await exporter.transactions().sync({ type: "all" });
+				await exporter.transactions().sync({ type: settings.transactionType });
 
 				setStatus(ExportProgressStatus.Success);
 
-				// TODO: Implement csv export
 				file.content = await exporter.transactions().toCsv(settings);
+				console.log({ content: file.content });
 			} catch (error) {
 				setError(error.message);
+				setStatus(ExportProgressStatus.Error);
 				return;
 			}
 		},

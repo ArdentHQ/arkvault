@@ -331,6 +331,7 @@ export const translations = {
 	TITLE: "Title",
 	TO: "To",
 	TOKEN: "Token",
+	TOTAL: "Total",
 	TOTAL_BALANCE: "Total Balance",
 	TOTAL_CURRENCY: "Total Currency",
 	TRANSACTION: "Transaction",
