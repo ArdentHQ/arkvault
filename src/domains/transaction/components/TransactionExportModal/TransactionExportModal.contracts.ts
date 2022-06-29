@@ -39,7 +39,7 @@ export enum TransactionType {
 	Incoming = "received",
 }
 
-export enum CSVDelimiter {
+export enum CsvDelimiter {
 	Comma = ",",
 	Semicolon = ";",
 	Tab = "\t",
