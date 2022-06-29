@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import {
 	TransactionType,
 	ExportSettings,
-	CSVDelimiter,
+	CsvDelimiter,
 	DateRange,
 } from "@/domains/transaction/components/TransactionExportModal";
 
@@ -12,7 +12,7 @@ export const useTransactionExportForm = () => {
 	const form = useForm<ExportSettings>({
 		defaultValues: {
 			dateRange: DateRange.CurrentMonth,
-			delimiter: CSVDelimiter.Comma,
+			delimiter: CsvDelimiter.Comma,
 			includeCryptoAmount: true,
 			includeDate: true,
 			includeFiatAmount: true,

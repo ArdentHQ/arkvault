@@ -23,7 +23,7 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 
 		const page = await wallet.transactionIndex()[type]({ cursor, limit });
 
-		transactions = [...transactions, ...page.items()];
+		transactions.push(...page.items());
 		cursor = cursor + 1;
 
 		// Last page.

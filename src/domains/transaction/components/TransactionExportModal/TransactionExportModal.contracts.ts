@@ -65,13 +65,13 @@ export interface CsvSettings {
 	includeSenderRecipient: boolean;
 	includeCryptoAmount: boolean;
 	includeFiatAmount: boolean;
-	delimiter: CSVDelimiter;
+	delimiter: CsvDelimiter;
 	dateRange: DateRange;
 }
 
 export interface ExportSettings extends CsvSettings {
 	transactionType: TransactionType;
-	delimiter: CSVDelimiter;
+	delimiter: CsvDelimiter;
 	dateRange: DateRange;
 }
 

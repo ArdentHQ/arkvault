@@ -1,47 +1,47 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
-import { CSVDelimiter } from "@/domains/transaction/components/TransactionExportModal";
+import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 
-export const useDelimiterOptions = ({ selectedValue }: { selectedValue: CSVDelimiter }) => {
+export const useDelimiterOptions = ({ selectedValue }: { selectedValue: CsvDelimiter }) => {
 	const { t } = useTranslation();
 
 	const basicOptions = useMemo(
 		() => [
 			{
-				active: selectedValue === CSVDelimiter.Comma,
+				active: selectedValue === CsvDelimiter.Comma,
 				label: t("TRANSACTION.EXPORT.FORM.COMMA"),
 				secondaryLabel: "( , )",
 				symbol: ",",
-				value: CSVDelimiter.Comma,
+				value: CsvDelimiter.Comma,
 			},
 			{
-				active: selectedValue === CSVDelimiter.Semicolon,
+				active: selectedValue === CsvDelimiter.Semicolon,
 				label: t("TRANSACTION.EXPORT.FORM.SEMICOLON"),
 				secondaryLabel: "( ; )",
 				symbol: ";",
-				value: CSVDelimiter.Semicolon,
+				value: CsvDelimiter.Semicolon,
 			},
 			{
-				active: selectedValue === CSVDelimiter.Tab,
+				active: selectedValue === CsvDelimiter.Tab,
 				label: t("TRANSACTION.EXPORT.FORM.TAB"),
 				secondaryLabel: "( \\t )",
 				symbol: "\\t",
-				value: CSVDelimiter.Tab,
+				value: CsvDelimiter.Tab,
 			},
 			{
-				active: selectedValue === CSVDelimiter.Space,
+				active: selectedValue === CsvDelimiter.Space,
 				label: t("TRANSACTION.EXPORT.FORM.SPACE"),
 				secondaryLabel: "(   )",
 				symbol: " ",
-				value: CSVDelimiter.Space,
+				value: CsvDelimiter.Space,
 			},
 			{
-				active: selectedValue === CSVDelimiter.Pipe,
+				active: selectedValue === CsvDelimiter.Pipe,
 				label: t("TRANSACTION.EXPORT.FORM.PIPE"),
 				secondaryLabel: "( | )",
 				symbol: "|",
-				value: CSVDelimiter.Pipe,
+				value: CsvDelimiter.Pipe,
 			},
 		],
 		[selectedValue],
