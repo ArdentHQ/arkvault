@@ -20,7 +20,7 @@ const transactionToCsv = (transaction: DTO.ExtendedConfirmedTransactionData, set
 	const timestamp = transaction.timestamp()?.toUNIX();
 	const datetime = transaction.timestamp()?.format(dateTimeFormat);
 	const sender = transaction.sender();
-	const recipient = transaction.isMultiPayment() ? COMMON.MULTIPLE : transaction.recipient();
+	const recipient = transaction.isMultiPayment() ? COMMON.MULTIPLE : transaction.isTransfer() ? transaction.recipient() : COMMON.OTHER;
 	const amounts = AmountFormatter(transaction);
 
 	const columns = [
