@@ -1,7 +1,7 @@
 import { DTO } from "@ardenthq/sdk-profiles";
+import { AmountFormatter } from "./transaction-amount-formatter.factory";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { buildTranslations } from "@/app/i18n/helpers";
-import { AmountFormatter } from "./transaction-amount-formatter.factory";
 
 const headers = (settings: CsvSettings) => {
 	const { COMMON } = buildTranslations();
@@ -39,5 +39,5 @@ export const convertToCsv = (transactions: DTO.ExtendedConfirmedTransactionData[
 		return rows.join("\n");
 	}
 
-	return [...[headers(settings)], ...rows].join("\n");
+	return [headers(settings), ...rows].join("\n");
 };

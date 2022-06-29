@@ -1,7 +1,7 @@
-import { Contracts, DTO, Helpers } from "@ardenthq/sdk-profiles";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
-import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { convertToCsv } from "./transaction-to-csv-converter";
+import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
@@ -33,13 +33,13 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 			return;
 		}
 
-		return sync({ type, from, to, cursor });
+		return sync({ cursor, from, to, type });
 	};
 
 	return {
 		transactions: () => ({
-			sync,
 			items: () => transactions,
+			sync,
 			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings),
 		}),
 	};
