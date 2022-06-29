@@ -197,6 +197,7 @@ export const translations = {
 	},
 	MORE_DETAILS: "More Details",
 	MOST_POPULAR: "Most popular",
+	MULTIPLE: "Multiple",
 	MULTISIG: "Multisig",
 	MULTISIGNATURE: "Multisignature",
 	MY_ADDRESS: "My Address",

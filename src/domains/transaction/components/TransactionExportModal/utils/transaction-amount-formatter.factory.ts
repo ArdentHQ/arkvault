@@ -1,3 +1,4 @@
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DTO, Helpers } from "@ardenthq/sdk-profiles";
 
 const formatAmount = (amount: number, transaction: DTO.ExtendedConfirmedTransactionData) =>
@@ -5,9 +6,22 @@ const formatAmount = (amount: number, transaction: DTO.ExtendedConfirmedTransact
 		withTicker: false,
 	});
 
-const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) =>
-	// TODO: Handle multiplayment amount calculation.
-	formatAmount(transaction.amount(), transaction);
+const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+	if (transaction.isReceived()) {
+		let totalReceived = BigNumber.make(transaction.amount());
+
+		for (const recipient of transaction.recipients()) {
+			if (recipient.address === transaction.wallet().address()) {
+				totalReceived.minus(recipient.amount);
+			}
+		}
+
+		return formatAmount(totalReceived.toNumber(), transaction);
+	}
+
+	return formatAmount(transaction.amount(), transaction);
+};
+
 const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	if (transaction.isMultiPayment()) {
 		return multiPaymentAmount(transaction);
@@ -16,8 +30,16 @@ const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData) =>
 	return formatAmount(transaction.amount(), transaction);
 };
 
+const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+	if (transaction.isMultiPayment()) {
+		return BigNumber.make(multiPaymentAmount(transaction)).plus(transaction.fee());
+	}
+
+	return formatAmount(transaction.total(), transaction);
+};
+
 export const AmountFormatter = (transaction: DTO.ExtendedConfirmedTransactionData) => ({
 	amount: () => transactionAmount(transaction),
 	fee: () => formatAmount(transaction.fee(), transaction),
-	total: () => formatAmount(transaction.total(), transaction),
+	total: () => transactionTotal(transaction),
 });

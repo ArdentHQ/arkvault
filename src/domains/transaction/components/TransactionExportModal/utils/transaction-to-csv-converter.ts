@@ -15,11 +15,12 @@ const headers = (settings: CsvSettings) => {
 };
 
 const transactionToCsv = (transaction: DTO.ExtendedConfirmedTransactionData, settings: CsvSettings) => {
+	const { COMMON } = buildTranslations();
 	const dateTimeFormat = "DD.MM.YYYY h:mm A";
 	const timestamp = transaction.timestamp()?.toUNIX();
 	const datetime = transaction.timestamp()?.format(dateTimeFormat);
 	const sender = transaction.sender();
-	const recipient = transaction.recipient();
+	const recipient = transaction.isMultiPayment() ? COMMON.MULTIPLE : transaction.recipient();
 	const amounts = AmountFormatter(transaction);
 
 	const columns = [
