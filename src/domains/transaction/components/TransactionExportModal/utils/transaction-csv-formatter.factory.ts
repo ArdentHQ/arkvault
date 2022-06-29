@@ -60,11 +60,11 @@ const datetime = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 };
 
 export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData) => ({
-	recipient: () => recipient(transaction),
 	amount: () => transactionAmount(transaction),
-	fee: () => formatAmount(transaction.fee(), transaction),
-	total: () => transactionTotal(transaction),
 	datetime: () => datetime(transaction),
-	timestamp: () => transaction.timestamp()?.toUNIX(),
+	fee: () => formatAmount(transaction.fee(), transaction),
+	recipient: () => recipient(transaction),
 	sender: () => transaction.sender(),
+	timestamp: () => transaction.timestamp()?.toUNIX(),
+	total: () => transactionTotal(transaction),
 });
