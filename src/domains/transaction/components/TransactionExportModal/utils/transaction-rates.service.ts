@@ -1,7 +1,7 @@
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { HttpClient } from "@/app/services/HttpClient";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import { HttpClient } from "@/app/services/HttpClient";
 
 export const TransactionRates = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const exchangeEndpoint = "https://min-api.cryptocompare.com/data/histoday";
@@ -15,9 +15,9 @@ export const TransactionRates = ({ wallet }: { wallet: Contracts.IReadWriteWalle
 	const sync = async ({ from = DateTime.make(), to }: { from?: DateTime; to: DateTime }) => {
 		const response = await client.get(exchangeEndpoint, {
 			fsym: wallet.network().ticker(),
-			tsym: baseCurrency,
-			toTs: to.toUNIX(),
 			limit: from.diffInDays(to),
+			toTs: to.toUNIX(),
+			tsym: baseCurrency,
 		});
 
 		for (const price of response.json().Data) {
@@ -26,12 +26,11 @@ export const TransactionRates = ({ wallet }: { wallet: Contracts.IReadWriteWalle
 		}
 	};
 
-	const byTimestamp = (timestamp?: DateTime) => {
-		return rates[baseCurrency].get(DateTime.make(timestamp).format("YYYY-MM-DD"));
-	};
+	const byTimestamp = (timestamp?: DateTime) =>
+		rates[baseCurrency].get(DateTime.make(timestamp).format("YYYY-MM-DD"));
 
 	return {
-		sync,
 		rate: (timestamp?: DateTime) => byTimestamp(timestamp),
+		sync,
 	};
 };
