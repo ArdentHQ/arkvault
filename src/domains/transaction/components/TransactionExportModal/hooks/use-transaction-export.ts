@@ -29,22 +29,12 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 		to?: number;
 	} = {};
 
-	let temporaryFrom = DateTime.make().startOf(period as any);
+	timestamp.from = DateTime.make().startOf(period as any).toUNIX();
 
 	if (offset === "last") {
-		const subMethod = `sub${upperFirst(period)}`;
-		const addMethod = `add${upperFirst(period)}`;
-
-		from = temporaryFrom[subMethod]();
-
-		timestamp.to = DateTime.make()
-			[addMethod]()
-			.startOf(period as any)
-			.subSecond()
-			.toUNIX();
+		timestamp.from = DateTime.fromUnix(timestamp.from)[`sub${upperFirst(period)}`]().toUNIX();
+		timestamp.to = DateTime.make().startOf(period as any).subSecond().toUNIX();
 	}
-
-	timestamp.from = temporaryFrom.toUNIX();
 
 	return timestamp;
 };
