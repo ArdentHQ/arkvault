@@ -32,9 +32,13 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 	let temporaryFrom = DateTime.make().startOf(period as any);
 
 	if (offset === "last") {
-		from = temporaryFrom[`sub${upperFirst(period)}`]();
+		const subMethod = `sub${upperFirst(period)}`;
+		const addMethod = `add${upperFirst(period)}`;
+
+		from = temporaryFrom[subMethod]();
 
 		timestamp.to = DateTime.make()
+			[addMethod]()
 			.startOf(period as any)
 			.subSecond()
 			.toUNIX();
@@ -76,10 +80,10 @@ export const useTransactionExport = ({
 		startExport: async (settings: ExportSettings) => {
 			setStatus(ExportProgressStatus.Progress);
 
-			const { from, to } = getTimestampRange(settings.dateRange, settings.from, settings.to);
+			const dateRange = getTimestampRange(settings.dateRange, settings.from, settings.to);
 
 			try {
-				await exporter.transactions().sync({ from, to, type: settings.transactionType });
+				await exporter.transactions().sync({ dateRange, type: settings.transactionType });
 
 				setStatus(ExportProgressStatus.Success);
 

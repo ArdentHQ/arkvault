@@ -1,11 +1,11 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
+import { Services } from "@ardenthq/sdk";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
-	from?: number;
-	to?: number;
+	dateRange?: Services.RangeCriteria;
 	cursor?: number;
 }
 
@@ -14,14 +14,13 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
 
-	const sync = async ({ type = "all", from, to, cursor = 1 }: TransactionExporterFetchProperties) => {
+	const sync = async ({ type = "all", dateRange, cursor = 1 }: TransactionExporterFetchProperties) => {
 		// Clear cache.
 		if (cursor === 1) {
 			transactions = [];
 		}
 
-		// TODO: include timestamps in query
-		const page = await wallet.transactionIndex()[type]({ cursor, limit });
+		const page = await wallet.transactionIndex()[type]({ cursor, limit, timestamp: dateRange });
 
 		transactions.push(...page.items());
 		cursor = cursor + 1;
@@ -33,7 +32,7 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 			return;
 		}
 
-		return sync({ cursor, from, to, type });
+		return sync({ cursor, dateRange, type });
 	};
 
 	return {
