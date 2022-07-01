@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Services } from "@ardenthq/sdk";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
-import { Services } from "@ardenthq/sdk";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
