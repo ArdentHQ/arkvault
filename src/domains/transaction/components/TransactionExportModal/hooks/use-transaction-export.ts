@@ -1,6 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ExportProgressStatus, ExportSettings } from "@/domains/transaction/components/TransactionExportModal";
+import { TransactionExporter } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-exporter.factory";
 
 export const useTransactionExport = ({
 	wallet,
@@ -10,14 +11,15 @@ export const useTransactionExport = ({
 	initialStatus: ExportProgressStatus;
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
-	const [error] = useState<string>();
+	const [error, setError] = useState<string>();
 
 	const [file] = useState({
 		content: "",
 		extension: "csv",
-		//TODO: Default export name?
-		name: `wallet-${wallet.address()}-transactions`,
+		name: wallet.address(),
 	});
+
+	const exporter = useMemo(() => TransactionExporter({ wallet }), [wallet]);
 
 	return {
 		cancelExport: () => {
@@ -29,12 +31,22 @@ export const useTransactionExport = ({
 		retry: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},
-		startExport: (settings: ExportSettings) => {
+		startExport: async (settings: ExportSettings) => {
 			console.log({ settings });
-			//TODO: Aggregate transactions and show progress.
 			setStatus(ExportProgressStatus.Progress);
 
-			//TODO: Convert fetched transaction objects to csv
+			try {
+				await exporter.transactions().sync({ type: settings.transactionType });
+
+				setStatus(ExportProgressStatus.Success);
+
+				file.content = exporter.transactions().toCsv(settings);
+				console.log({ content: file.content });
+			} catch (error) {
+				setError(error.message);
+				setStatus(ExportProgressStatus.Error);
+				return;
+			}
 		},
 		status,
 	};

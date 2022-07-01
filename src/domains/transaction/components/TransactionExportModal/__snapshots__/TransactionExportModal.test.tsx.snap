@@ -747,7 +747,7 @@ exports[`TransactionExportModal should render error status 1`] = `
                         <div
                           class="w-0 flex-1 truncate font-semibold"
                         >
-                          wallet-D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-transactions
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </div>
                       </div>
                       <div
@@ -1551,7 +1551,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                         <div
                           class="w-0 flex-1 truncate font-semibold"
                         >
-                          wallet-D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-transactions
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </div>
                       </div>
                       <div
@@ -1715,7 +1715,7 @@ exports[`TransactionExportModal should render success and stay open if download 
                         <div
                           class="w-0 flex-1 truncate font-semibold"
                         >
-                          wallet-D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-transactions
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </div>
                       </div>
                       <div
@@ -1879,7 +1879,7 @@ exports[`TransactionExportModal should render success status 1`] = `
                         <div
                           class="w-0 flex-1 truncate font-semibold"
                         >
-                          wallet-D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-transactions
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </div>
                       </div>
                       <div

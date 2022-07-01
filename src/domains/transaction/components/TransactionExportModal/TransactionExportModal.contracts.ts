@@ -35,16 +35,16 @@ export interface TransactionExportErrorProperties {
 
 export enum TransactionType {
 	All = "all",
-	Outgoing = "outgoing",
-	Incoming = "incoming",
+	Outgoing = "sent",
+	Incoming = "received",
 }
 
-export enum CSVDelimiter {
-	Comma = "comma",
-	Semicolon = "semicolon",
-	Tab = "tab",
-	Space = "space",
-	Pipe = "pipe",
+export enum CsvDelimiter {
+	Comma = ",",
+	Semicolon = ";",
+	Tab = "\t",
+	Space = " ",
+	Pipe = "|",
 }
 
 export enum DateRange {
@@ -57,7 +57,7 @@ export enum DateRange {
 	Custom = "custom",
 }
 
-export interface ExportSettings {
+export interface CsvSettings {
 	transactionType: TransactionType;
 	includeHeaderRow: boolean;
 	includeTransactionId: boolean;
@@ -65,7 +65,13 @@ export interface ExportSettings {
 	includeSenderRecipient: boolean;
 	includeCryptoAmount: boolean;
 	includeFiatAmount: boolean;
-	delimiter: CSVDelimiter;
+	delimiter: CsvDelimiter;
+	dateRange: DateRange;
+}
+
+export interface ExportSettings extends CsvSettings {
+	transactionType: TransactionType;
+	delimiter: CsvDelimiter;
 	dateRange: DateRange;
 }
 

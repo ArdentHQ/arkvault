@@ -23,7 +23,7 @@ let dashboardURL: string;
 
 const defaultSettings = {
 	dateRange: "currentMonth",
-	delimiter: "comma",
+	delimiter: ",",
 	includeCryptoAmount: true,
 	includeDate: true,
 	includeFiatAmount: true,
@@ -128,7 +128,7 @@ describe("TransactionExportForm", () => {
 			expect(onExport).toHaveBeenCalledWith(
 				expect.objectContaining({
 					...defaultSettings,
-					transactionType: "outgoing",
+					transactionType: "sent",
 				}),
 			),
 		);
@@ -194,7 +194,7 @@ describe("TransactionExportForm", () => {
 			expect(onExport).toHaveBeenCalledWith(
 				expect.objectContaining({
 					...defaultSettings,
-					delimiter: "tab",
+					delimiter: "	",
 				}),
 			),
 		);

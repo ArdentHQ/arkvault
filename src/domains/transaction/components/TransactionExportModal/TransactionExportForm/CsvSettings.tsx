@@ -6,7 +6,7 @@ import { CollapseToggleButton } from "@/app/components/Collapse";
 import { Dropdown } from "@/app/components/Dropdown";
 import { FormField } from "@/app/components/Form";
 import { Toggle } from "@/app/components/Toggle";
-import { CSVDelimiter } from "@/domains/transaction/components/TransactionExportModal";
+import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 import { ListDivided } from "@/app/components/ListDivided";
 
 const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: string }) => (
@@ -18,7 +18,7 @@ const SelectDelimiterLabel = ({ label, symbol }: { label?: string; symbol?: stri
 	</>
 );
 
-const SelectDelimiter = ({ value, onSelect }: { value: CSVDelimiter; onSelect?: (option: CSVDelimiter) => void }) => {
+const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: (option: CsvDelimiter) => void }) => {
 	const delimiterOptions = useDelimiterOptions({ selectedValue: value });
 
 	return (
@@ -26,7 +26,7 @@ const SelectDelimiter = ({ value, onSelect }: { value: CSVDelimiter; onSelect?: 
 			<Dropdown
 				data-testid="TransactionExportForm--delimiter-options"
 				options={delimiterOptions.options}
-				onSelect={(option) => onSelect?.(option.value as CSVDelimiter)}
+				onSelect={(option) => onSelect?.(option.value as CsvDelimiter)}
 				toggleContent={(isOpen: boolean) => (
 					<CollapseToggleButton
 						isOpen={isOpen}
