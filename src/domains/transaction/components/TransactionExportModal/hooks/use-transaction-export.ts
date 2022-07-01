@@ -29,11 +29,16 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 		to?: number;
 	} = {};
 
-	timestamp.from = DateTime.make().startOf(period as any).toUNIX();
+	timestamp.from = DateTime.make()
+		.startOf(period as any)
+		.toUNIX();
 
 	if (offset === "last") {
 		timestamp.from = DateTime.fromUnix(timestamp.from)[`sub${upperFirst(period)}`]().toUNIX();
-		timestamp.to = DateTime.make().startOf(period as any).subSecond().toUNIX();
+		timestamp.to = DateTime.make()
+			.startOf(period as any)
+			.subSecond()
+			.toUNIX();
 	}
 
 	return timestamp;
