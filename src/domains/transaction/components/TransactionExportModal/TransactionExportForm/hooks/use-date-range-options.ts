@@ -24,9 +24,9 @@ export const useDateRangeOptions = ({ selectedValue }: { selectedValue: DateRang
 				value: DateRange.LastQuarter,
 			},
 			{
-				active: selectedValue === DateRange.YearToDate,
-				label: t("TRANSACTION.EXPORT.FORM.YEARTODATE"),
-				value: DateRange.YearToDate,
+				active: selectedValue === DateRange.CurrentYear,
+				label: t("TRANSACTION.EXPORT.FORM.CURRENT_YEAR"),
+				value: DateRange.CurrentYear,
 			},
 			{
 				active: selectedValue === DateRange.LastYear,

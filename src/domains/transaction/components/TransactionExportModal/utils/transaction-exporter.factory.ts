@@ -1,12 +1,11 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { DateTime } from "@ardenthq/sdk-intl";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
-	from?: DateTime;
-	to?: DateTime;
+	from?: number;
+	to?: number;
 	cursor?: number;
 }
 
@@ -21,6 +20,7 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 			transactions = [];
 		}
 
+		// TODO: include timestamps in query
 		const page = await wallet.transactionIndex()[type]({ cursor, limit });
 
 		transactions.push(...page.items());

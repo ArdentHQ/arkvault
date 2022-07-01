@@ -3,6 +3,7 @@ import { FC, SVGProps } from "react";
 import { ArrowIcons } from "./arrows";
 import { ReactComponent as Bell } from "./bell.svg";
 import { ReactComponent as Categories } from "./categories.svg";
+import { ReactComponent as Calendar } from "./calendar.svg";
 import { ReactComponent as ChartActiveDot } from "./chart-active-dot.svg";
 import { ReactComponent as Checkmark } from "./check-mark.svg";
 import { ReactComponent as CheckmarkSmall } from "./check-mark-small.svg";
@@ -77,6 +78,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...Currencies,
 	...TransactionIcons,
 	Bell,
+	Calendar,
 	Categories,
 	ChartActiveDot,
 	Checkmark,

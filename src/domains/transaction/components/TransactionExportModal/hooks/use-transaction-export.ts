@@ -1,7 +1,49 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
-import { ExportProgressStatus, ExportSettings } from "@/domains/transaction/components/TransactionExportModal";
+import { kebabCase, upperFirst } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
+import {
+	DateRange,
+	ExportProgressStatus,
+	ExportSettings,
+} from "@/domains/transaction/components/TransactionExportModal";
 import { TransactionExporter } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-exporter.factory";
+
+const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
+	if (dateRange === DateRange.All) {
+		return {};
+	}
+
+	if (dateRange === DateRange.Custom) {
+		return {
+			from: DateTime.make(from!.toString()).startOf("day").toUNIX(),
+			to: DateTime.make(to!.toString()).startOf("day").addDay().subSecond().toUNIX(),
+			// to: DateTime.make(to!.toString()).endOf("day").toUNIX(),
+		};
+	}
+
+	const [offset, period] = kebabCase(dateRange)!.split("-");
+
+	const timestamp: {
+		from?: number;
+		to?: number;
+	} = {};
+
+	let temporaryFrom = DateTime.make().startOf(period as any);
+
+	if (offset === "last") {
+		from = temporaryFrom[`sub${upperFirst(period)}`]();
+
+		timestamp.to = DateTime.make()
+			.startOf(period as any)
+			.subSecond()
+			.toUNIX();
+	}
+
+	timestamp.from = temporaryFrom.toUNIX();
+
+	return timestamp;
+};
 
 export const useTransactionExport = ({
 	wallet,
@@ -32,11 +74,12 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: async (settings: ExportSettings) => {
-			console.log({ settings });
 			setStatus(ExportProgressStatus.Progress);
 
+			const { from, to } = getTimestampRange(settings.dateRange, settings.from, settings.to);
+
 			try {
-				await exporter.transactions().sync({ type: settings.transactionType });
+				await exporter.transactions().sync({ from, to, type: settings.transactionType });
 
 				setStatus(ExportProgressStatus.Success);
 
