@@ -20,14 +20,9 @@
 }
 
 .react-datepicker__navigation-icon::before {
-  @apply transition-colors border-theme-secondary-500;
-  border-style: solid;
+  @apply absolute block h-2 w-2 transition-colors border-theme-secondary-500;
   border-width: 3px 3px 0 0;
   content: "";
-  display: block;
-  position: absolute;
-  height: 8px;
-  width: 8px;
   top: 6px;
 }
 

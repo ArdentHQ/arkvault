@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import DatePicker from "react-datepicker";
 
 import { Controller, useFormContext } from "react-hook-form";
@@ -21,12 +21,15 @@ export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>
 
 		const fieldContext = useFormField();
 
+		const calenderReference = useRef(null);
+
 		return (
 			<Controller
 				name={fieldContext!.name}
 				control={control}
 				render={(field) => (
 					<DatePicker
+						ref={calenderReference}
 						selected={field.value}
 						calendarClassName="bg-theme-background"
 						popperPlacement={placement as any}
@@ -45,7 +48,7 @@ export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>
 											<button
 												data-testid="InputDate__calendar"
 												type="button"
-												// onClick={() => ???.setOpen(true)}
+												onClick={() => (calenderReference.current as any)?.setOpen(true)}
 												className="ring-focus relative flex h-full w-full items-center justify-center text-2xl focus:outline-none"
 												data-ring-focus-margin="-m-1"
 											>
