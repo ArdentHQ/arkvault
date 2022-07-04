@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Toggle } from "@/app/components/Toggle";
@@ -7,6 +7,14 @@ import { ListDivided } from "@/app/components/ListDivided";
 export const ColumnSettings = () => {
 	const { t } = useTranslation();
 	const form = useFormContext();
+
+	const { includeCryptoAmount } = form.watch();
+
+	useEffect(() => {
+		if (!includeCryptoAmount) {
+			form.setValue("includeFiatAmount", false);
+		}
+	}, [includeCryptoAmount]);
 
 	return (
 		<ListDivided
@@ -67,6 +75,7 @@ export const ColumnSettings = () => {
 							name="includeFiatAmount"
 							defaultChecked={!!form.getValues("includeFiatAmount")}
 							data-testid="TransactionExportForm__toggle-include-tx-id"
+							value={form.getValues("includeFiatAmount")}
 						/>
 					),
 					wrapperClass: "py-4",
