@@ -16,9 +16,9 @@ export const TransactionRates = ({ wallet }: { wallet: Contracts.IReadWriteWalle
 	const sync = async ({ from = DateTime.make(), to }: { from?: DateTime; to: DateTime }) => {
 		const response = await client.get(exchangeEndpoint, {
 			fsym: wallet.network().ticker(),
-			tsym: exchangeCurrency,
-			toTs: to.toUNIX() * 1000,
 			limit: from.diffInDays(to),
+			toTs: to.toUNIX() * 1000,
+			tsym: exchangeCurrency,
 		});
 
 		for (const price of response.json().Data) {
@@ -30,7 +30,7 @@ export const TransactionRates = ({ wallet }: { wallet: Contracts.IReadWriteWalle
 	const byDay = (timestamp?: DateTime) => rates[exchangeCurrency].get(timestamp?.format("YYYY-MM-DD"));
 
 	return {
-		sync,
 		byDay,
+		sync,
 	};
 };

@@ -17,11 +17,10 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	return COMMON.OTHER;
 };
 
-const formatAmount = (amount: number, currency: string) => {
-	return Helpers.Currency.format(amount, currency, {
+const formatAmount = (amount: number, currency: string) =>
+	Helpers.Currency.format(amount, currency, {
 		withTicker: true,
 	});
-};
 
 const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	if (transaction.isReceived()) {
@@ -68,15 +67,15 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 
 	return {
 		amount: () => formatAmount(amount, currency),
-		convertedTotal: () => (rate ? formatAmount(converted(total, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
 		convertedAmount: () => (rate ? formatAmount(converted(amount, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
 		convertedFee: () => (rate ? formatAmount(converted(fee, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
+		convertedTotal: () => (rate ? formatAmount(converted(total, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
 		datetime: () => transaction.timestamp()?.format("DD.MM.YYYY h:mm A"),
 		fee: () => formatAmount(fee, currency),
+		rate: () => (rate ? formatAmount(rate.toNumber(), exchangeCurrency) : COMMON.NOT_AVAILABLE),
 		recipient: () => recipient(transaction),
 		sender: () => transaction.sender(),
 		timestamp: () => transaction.timestamp()?.toUNIX(),
 		total: () => formatAmount(total, currency),
-		rate: () => (rate ? formatAmount(rate.toNumber(), exchangeCurrency) : COMMON.NOT_AVAILABLE),
 	};
 };

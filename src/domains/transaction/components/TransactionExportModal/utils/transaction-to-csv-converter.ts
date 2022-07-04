@@ -1,10 +1,10 @@
 import { DTO } from "@ardenthq/sdk-profiles";
+import { BigNumber, last } from "@ardenthq/sdk-helpers";
+import { DateTime } from "@ardenthq/sdk-intl";
 import { CsvFormatter } from "./transaction-csv-formatter.factory";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { TransactionRates } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-rates.service";
-import { BigNumber, last } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
 
 const headers = (settings: CsvSettings) => {
 	const { COMMON } = buildTranslations();
@@ -45,9 +45,9 @@ export const convertToCsv = async (transactions: DTO.ExtendedConfirmedTransactio
 		await rates.sync({ to: last(transactions).timestamp() as DateTime });
 	}
 
-	const rows = transactions.map((transaction) => {
-		return transactionToCsv(transaction, settings, rates.byDay(transaction.timestamp()));
-	});
+	const rows = transactions.map((transaction) =>
+		transactionToCsv(transaction, settings, rates.byDay(transaction.timestamp())),
+	);
 
 	if (!settings.includeHeaderRow) {
 		return rows.join("\n");
