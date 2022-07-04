@@ -23,9 +23,9 @@ export const initializeEnvironment = (): Environment => {
 	env.setMigrations(
 		{
 			"0.0.9": initializeArkNetworks(env),
-			"1.0.0": updateArkConstants(),
+			"1.1.0": updateArkConstants(),
 		},
-		"1.0.0",
+		"1.1.0",
 	);
 
 	return env;
