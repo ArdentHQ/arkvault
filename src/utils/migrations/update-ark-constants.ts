@@ -2,7 +2,6 @@ import { Networks } from "@ardenthq/sdk";
 import { ARK } from "@ardenthq/sdk-ark";
 
 export const updateArkConstants = ({ data }) => {
-	console.log("updateArkConstants");
 	if (typeof data.networks === "object" && !data.networks.ark) {
 		return;
 	}
