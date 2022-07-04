@@ -8,7 +8,13 @@ export const initializeArkNetworks = ({ data }) => {
 	}
 
 	// Assign default networks to profile
-	data.networks.ark.mainnet = ARK.manifest.networks["ark.mainnet"];
+	if (!data.networks) {
+		data.networks = {};
+	}
+
+	data.networks.ark = {
+		mainnet: ARK.manifest.networks["ark.mainnet"],
+	};
 
 	if (isE2E()) {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
