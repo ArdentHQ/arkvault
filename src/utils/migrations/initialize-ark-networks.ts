@@ -2,16 +2,16 @@ import { ARK } from "@ardenthq/sdk-ark";
 import { isE2E } from "@/utils/test-helpers";
 
 export const initializeArkNetworks = ({ data }) => {
-  console.log("initializeArkNetworks");
-  if (typeof data.networks === "object" && !!data.networks.ark) {
-    // Networks already assigned to profile, skipping migration
-    return;
-  }
+	console.log("initializeArkNetworks");
+	if (typeof data.networks === "object" && !!data.networks.ark) {
+		// Networks already assigned to profile, skipping migration
+		return;
+	}
 
-  // Assign default networks to profile
-  data.networks.ark.mainnet = ARK.manifest.networks["ark.mainnet"];
+	// Assign default networks to profile
+	data.networks.ark.mainnet = ARK.manifest.networks["ark.mainnet"];
 
-  if (isE2E()) {
-    data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
-  }
+	if (isE2E()) {
+		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
+	}
 };
