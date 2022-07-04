@@ -32,7 +32,6 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: async (settings: ExportSettings) => {
-			console.log({ settings });
 			setStatus(ExportProgressStatus.Progress);
 
 			try {
@@ -40,8 +39,7 @@ export const useTransactionExport = ({
 
 				setStatus(ExportProgressStatus.Success);
 
-				file.content = exporter.transactions().toCsv(settings);
-				console.log({ content: file.content });
+				file.content = await exporter.transactions().toCsv(settings);
 			} catch (error) {
 				setError(error.message);
 				setStatus(ExportProgressStatus.Error);
