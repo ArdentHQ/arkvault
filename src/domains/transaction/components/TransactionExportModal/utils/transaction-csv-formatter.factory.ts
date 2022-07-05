@@ -61,7 +61,11 @@ const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData): nu
 
 const converted = (value: number, rate: BigNumber) => rate.times(value).toNumber();
 
-export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, timeFormat: string, rate: BigNumber) => {
+export const CsvFormatter = (
+	transaction: DTO.ExtendedConfirmedTransactionData,
+	timeFormat: string,
+	rate: BigNumber,
+) => {
 	const { COMMON } = buildTranslations();
 
 	const amount = transactionAmount(transaction);
