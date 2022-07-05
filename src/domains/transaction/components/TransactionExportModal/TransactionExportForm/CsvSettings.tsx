@@ -49,31 +49,35 @@ export const CSVSettings = () => {
 	const form = useFormContext();
 
 	return (
-		<ListDivided
-			items={[
-				{
-					label: t("TRANSACTION.EXPORT.FORM.INCLUDE_HEADER_ROW"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeHeaderRow"
-							defaultChecked={!!form.getValues("includeHeaderRow")}
-							data-testid="TransactionExportForm__toggle-include-header-row"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-				{
-					label: t("TRANSACTION.EXPORT.FORM.DELIMITER"),
-					value: (
-						<SelectDelimiter
-							value={form.watch("delimiter")}
-							onSelect={(delimiter) => form.setValue("delimiter", delimiter)}
-						/>
-					),
-					wrapperClass: "pt-4",
-				},
-			]}
-		/>
+		<>
+			<div className="mt-8 mb-4 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.CSV_SETTINGS")}</div>
+
+			<ListDivided
+				items={[
+					{
+						label: t("TRANSACTION.EXPORT.FORM.INCLUDE_HEADER_ROW"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeHeaderRow"
+								defaultChecked={!!form.getValues("includeHeaderRow")}
+								data-testid="TransactionExportForm__toggle-include-header-row"
+							/>
+						),
+						wrapperClass: "pb-4",
+					},
+					{
+						label: t("TRANSACTION.EXPORT.FORM.DELIMITER"),
+						value: (
+							<SelectDelimiter
+								value={form.watch("delimiter")}
+								onSelect={(delimiter) => form.setValue("delimiter", delimiter)}
+							/>
+						),
+						wrapperClass: "pt-4",
+					},
+				]}
+			/>
+		</>
 	);
 };

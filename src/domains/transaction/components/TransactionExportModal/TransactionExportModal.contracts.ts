@@ -51,7 +51,7 @@ export enum DateRange {
 	CurrentMonth = "currentMonth",
 	LastMonth = "lastMonth",
 	LastQuarter = "lastQuarter",
-	YearToDate = "yearToDate",
+	CurrentYear = "currentYear",
 	LastYear = "lastYear",
 	All = "all",
 	Custom = "custom",
@@ -73,6 +73,8 @@ export interface ExportSettings extends CsvSettings {
 	transactionType: TransactionType;
 	delimiter: CsvDelimiter;
 	dateRange: DateRange;
+	from: Date;
+	to: Date;
 }
 
 export type ExportStatus = "success" | "loading" | "danger";
