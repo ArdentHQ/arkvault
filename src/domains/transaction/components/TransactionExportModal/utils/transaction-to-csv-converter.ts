@@ -38,7 +38,7 @@ const transactionToCsv = (
 	].join(settings.delimiter);
 };
 
-export const convertToCsv = async (
+export const convertToCsv = (
 	transactions: DTO.ExtendedConfirmedTransactionData[],
 	settings: CsvSettings,
 	exchangeCurrency: string,
