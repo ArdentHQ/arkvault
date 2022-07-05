@@ -23,12 +23,12 @@ const formatAmount = (amount: number, currency: string) =>
 	});
 
 const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
-	if (transaction.isReceived()) {
+	if (transaction.sender() !== transaction.wallet().address()) {
 		let totalReceived = BigNumber.make(transaction.amount());
 
 		for (const recipient of transaction.recipients()) {
-			if (recipient.address === transaction.wallet().address()) {
-				totalReceived.minus(recipient.amount);
+			if (recipient.address !== transaction.wallet().address()) {
+				totalReceived = totalReceived.minus(recipient.amount);
 			}
 		}
 
