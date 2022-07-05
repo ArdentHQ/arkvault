@@ -17,12 +17,7 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	return COMMON.OTHER;
 };
 
-const formatAmount = (amount: number, currency: string) =>
-	Helpers.Currency.format(amount, currency, {
-		withTicker: true,
-	});
-
-const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
+const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
 	if (transaction.sender() !== transaction.wallet().address()) {
 		let totalReceived = BigNumber.make(transaction.amount());
 
@@ -38,20 +33,30 @@ const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData) =
 	return transaction.amount();
 };
 
-const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData) => {
-	if (transaction.isMultiPayment()) {
-		return multiPaymentAmount(transaction);
+const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	const amount = transaction.isMultiPayment() ? multiPaymentAmount(transaction) : transaction.amount();
+
+	if (transaction.isSent()) {
+		return BigNumber.make(amount).times(-1).toNumber();
 	}
 
-	return transaction.amount();
+	return amount;
 };
 
-const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData) => {
-	if (transaction.isMultiPayment()) {
-		return BigNumber.make(multiPaymentAmount(transaction)).plus(transaction.fee()).toNumber();
+const transactionFee = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	if (transaction.isSent()) {
+		return BigNumber.make(transaction.fee()).times(-1).toNumber();
 	}
 
-	return transaction.total();
+	return 0;
+};
+
+const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	if (transaction.isSent()) {
+		return BigNumber.make(transaction.total()).times(-1).toNumber();
+	}
+
+	return transactionAmount(transaction);
 };
 
 const converted = (value: number, rate: BigNumber) => rate.times(value).toNumber();
@@ -60,22 +65,20 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 	const { COMMON } = buildTranslations();
 
 	const amount = transactionAmount(transaction);
-	const fee = transaction.fee();
+	const fee = transactionFee(transaction);
 	const total = transactionTotal(transaction);
-	const exchangeCurrency = transaction.wallet().exchangeCurrency();
-	const currency = transaction.wallet().currency();
 
 	return {
-		amount: () => formatAmount(amount, currency),
-		convertedAmount: () => (rate ? formatAmount(converted(amount, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
-		convertedFee: () => (rate ? formatAmount(converted(fee, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
-		convertedTotal: () => (rate ? formatAmount(converted(total, rate), exchangeCurrency) : COMMON.NOT_AVAILABLE),
+		amount: () => amount,
+		convertedAmount: () => (rate ? converted(amount, rate) : COMMON.NOT_AVAILABLE),
+		convertedFee: () => (rate ? converted(fee, rate) : COMMON.NOT_AVAILABLE),
+		convertedTotal: () => (rate ? converted(total, rate) : COMMON.NOT_AVAILABLE),
 		datetime: () => transaction.timestamp()?.format("DD.MM.YYYY h:mm A"),
-		fee: () => formatAmount(fee, currency),
-		rate: () => (rate ? formatAmount(rate.toNumber(), exchangeCurrency) : COMMON.NOT_AVAILABLE),
+		fee: () => fee,
+		rate: () => rate.toNumber(),
 		recipient: () => recipient(transaction),
 		sender: () => transaction.sender(),
 		timestamp: () => transaction.timestamp()?.toUNIX(),
-		total: () => formatAmount(total, currency),
+		total: () => total,
 	};
 };

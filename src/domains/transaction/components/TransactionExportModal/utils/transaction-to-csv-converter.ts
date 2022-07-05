@@ -6,16 +6,15 @@ import { CsvSettings } from "@/domains/transaction/components/TransactionExportM
 import { buildTranslations } from "@/app/i18n/helpers";
 import { TransactionRates } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-rates.service";
 
-const headers = (settings: CsvSettings) => {
+const getHeaders = (settings: CsvSettings) => {
 	const { COMMON } = buildTranslations();
 
 	return [
 		...(settings.includeTransactionId ? [COMMON.ID] : []),
-		...(settings.includeDate ? [`${COMMON.DATE} - ${COMMON.TIMESTAMP}`] : []),
+		...(settings.includeDate ? [`${COMMON.DATE} & ${COMMON.TIME}`] : []),
 		...(settings.includeSenderRecipient ? [COMMON.SENDER, COMMON.RECIPIENT] : []),
 		...(settings.includeCryptoAmount ? [COMMON.AMOUNT, COMMON.FEE, COMMON.TOTAL] : []),
-		...(settings.includeFiatAmount ? [COMMON.FIAT_AMOUNT, COMMON.FIAT_FEE, COMMON.FIAT_TOTAL] : []),
-		...(settings.includeFiatAmount ? [COMMON.RATE] : []),
+		...(settings.includeFiatAmount ? [COMMON.FIAT_AMOUNT, COMMON.FIAT_FEE, COMMON.FIAT_TOTAL, COMMON.RATE] : []),
 	].join(settings.delimiter);
 };
 
@@ -28,13 +27,12 @@ const transactionToCsv = (
 
 	return [
 		...(settings.includeTransactionId ? [transaction.id()] : []),
-		...(settings.includeDate ? [`${fields.datetime()} - ${fields.timestamp()}`] : []),
+		...(settings.includeDate ? [fields.datetime()] : []),
 		...(settings.includeSenderRecipient ? [fields.sender(), fields.recipient()] : []),
 		...(settings.includeCryptoAmount ? [fields.amount(), fields.fee(), fields.total()] : []),
 		...(settings.includeFiatAmount
-			? [fields.convertedAmount(), fields.convertedFee(), fields.convertedTotal()]
+			? [fields.convertedAmount(), fields.convertedFee(), fields.convertedTotal(), fields.rate()]
 			: []),
-		...(settings.includeFiatAmount ? [fields.rate()] : []),
 	].join(settings.delimiter);
 };
 
@@ -49,9 +47,9 @@ export const convertToCsv = async (transactions: DTO.ExtendedConfirmedTransactio
 		transactionToCsv(transaction, settings, rates.byDay(transaction.timestamp())),
 	);
 
-	if (!settings.includeHeaderRow) {
-		return rows.join("\n");
+	if (settings.includeHeaderRow) {
+		rows.unshift(getHeaders(settings));
 	}
 
-	return [headers(settings), ...rows].join("\n");
+	return rows.join("\n");
 };
