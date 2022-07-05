@@ -84,7 +84,7 @@ export const useTransactionExport = ({
 
 				setStatus(ExportProgressStatus.Success);
 
-				file.content = await exporter.transactions().toCsv(settings);
+				file.content = exporter.transactions().toCsv(settings);
 			} catch (error) {
 				setError(error.message);
 				setStatus(ExportProgressStatus.Error);
