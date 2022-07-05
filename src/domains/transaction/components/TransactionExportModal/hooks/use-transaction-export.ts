@@ -45,9 +45,11 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 };
 
 export const useTransactionExport = ({
+	profile,
 	wallet,
 	initialStatus,
 }: {
+	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	initialStatus: ExportProgressStatus;
 }) => {
@@ -60,7 +62,7 @@ export const useTransactionExport = ({
 		name: wallet.address(),
 	});
 
-	const exporter = useMemo(() => TransactionExporter({ wallet }), [wallet]);
+	const exporter = useMemo(() => TransactionExporter({ profile, wallet }), [profile, wallet]);
 
 	return {
 		cancelExport: () => {

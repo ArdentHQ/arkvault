@@ -2,6 +2,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
+import { assertString } from "@/utils/assertions";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
@@ -9,7 +10,11 @@ interface TransactionExporterFetchProperties {
 	cursor?: number;
 }
 
-export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
+export const TransactionExporter = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
+	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
+
+	assertString(exchangeCurrency);
+
 	const limit = 100;
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
@@ -39,7 +44,7 @@ export const TransactionExporter = ({ wallet }: { wallet: Contracts.IReadWriteWa
 		transactions: () => ({
 			items: () => transactions,
 			sync,
-			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings),
+			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency),
 		}),
 	};
 };
