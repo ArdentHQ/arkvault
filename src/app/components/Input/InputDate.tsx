@@ -17,7 +17,10 @@ type InputDateProperties = {
 } & React.InputHTMLAttributes<any>;
 
 export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>(
-	({ minDate, startDate, endDate, placement = "bottom-start", selectsStart, selectsEnd, ...properties }, reference) => {
+	(
+		{ minDate, startDate, endDate, placement = "bottom-start", selectsStart, selectsEnd, ...properties },
+		reference,
+	) => {
 		const { control } = useFormContext();
 
 		const fieldContext = useFormField();
