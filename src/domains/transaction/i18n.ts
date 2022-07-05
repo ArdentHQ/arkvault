@@ -48,6 +48,7 @@ export const translations = {
 			CRYPTO_AMOUNT: "Crypto Amount",
 			CSV_SETTINGS: "CSV Settings",
 			CURRENT_MONTH: "Current Month",
+			CURRENT_YEAR: "Current Year",
 			CUSTOM: "Custom",
 			DATE_RANGE: "Date Range",
 			DELIMITER: "Delimiter",
@@ -64,7 +65,6 @@ export const translations = {
 			TRANSACTIONS: "Transactions",
 			TRANSACTION_DATE: "Transaction Date",
 			TRANSACTION_ID: "Transaction ID",
-			YEARTODATE: "Year To Date",
 		},
 		PROGRESS: {
 			DESCRIPTION: "The data is being prepared. This might take a while, please wait.",

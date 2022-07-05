@@ -9,69 +9,73 @@ export const ColumnSettings = () => {
 	const form = useFormContext();
 
 	return (
-		<ListDivided
-			items={[
-				{
-					label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_ID"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeTransactionId"
-							defaultChecked={!!form.getValues("includeTransactionId")}
-							data-testid="TransactionExportForm__toggle-include-tx-id"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-				{
-					label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_DATE"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeDate"
-							defaultChecked={!!form.getValues("includeDate")}
-							data-testid="TransactionExportForm__toggle-include-date"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-				{
-					label: t("TRANSACTION.EXPORT.FORM.SENDER_RECIPIENT"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeSenderRecipient"
-							defaultChecked={!!form.getValues("includeSenderRecipient")}
-							data-testid="TransactionExportForm__toggle-include-crypto-amount"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-				{
-					label: t("TRANSACTION.EXPORT.FORM.CRYPTO_AMOUNT"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeCryptoAmount"
-							defaultChecked={!!form.getValues("includeCryptoAmount")}
-							data-testid="TransactionExportForm__toggle-include-crypto-amount"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-				{
-					label: t("TRANSACTION.EXPORT.FORM.FIAT_AMOUNT"),
-					value: (
-						<Toggle
-							ref={form.register()}
-							name="includeFiatAmount"
-							defaultChecked={!!form.getValues("includeFiatAmount")}
-							data-testid="TransactionExportForm__toggle-include-tx-id"
-						/>
-					),
-					wrapperClass: "py-4",
-				},
-			]}
-		/>
+		<>
+			<div className="mt-8 mb-4 text-lg font-semibold">{t("TRANSACTION.EXPORT.FORM.COLUMNS")}</div>
+
+			<ListDivided
+				items={[
+					{
+						label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_ID"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeTransactionId"
+								defaultChecked={!!form.getValues("includeTransactionId")}
+								data-testid="TransactionExportForm__toggle-include-tx-id"
+							/>
+						),
+						wrapperClass: "pb-4",
+					},
+					{
+						label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_DATE"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeDate"
+								defaultChecked={!!form.getValues("includeDate")}
+								data-testid="TransactionExportForm__toggle-include-date"
+							/>
+						),
+						wrapperClass: "py-4",
+					},
+					{
+						label: t("TRANSACTION.EXPORT.FORM.SENDER_RECIPIENT"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeSenderRecipient"
+								defaultChecked={!!form.getValues("includeSenderRecipient")}
+								data-testid="TransactionExportForm__toggle-include-crypto-amount"
+							/>
+						),
+						wrapperClass: "py-4",
+					},
+					{
+						label: t("TRANSACTION.EXPORT.FORM.CRYPTO_AMOUNT"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeCryptoAmount"
+								defaultChecked={!!form.getValues("includeCryptoAmount")}
+								data-testid="TransactionExportForm__toggle-include-crypto-amount"
+							/>
+						),
+						wrapperClass: "py-4",
+					},
+					{
+						label: t("TRANSACTION.EXPORT.FORM.FIAT_AMOUNT"),
+						value: (
+							<Toggle
+								ref={form.register()}
+								name="includeFiatAmount"
+								defaultChecked={!!form.getValues("includeFiatAmount")}
+								data-testid="TransactionExportForm__toggle-include-tx-id"
+							/>
+						),
+						wrapperClass: "py-4",
+					},
+				]}
+			/>
+		</>
 	);
 };

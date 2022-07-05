@@ -13,12 +13,14 @@ export const useTransactionExportForm = () => {
 		defaultValues: {
 			dateRange: DateRange.CurrentMonth,
 			delimiter: CsvDelimiter.Comma,
+			from: Date.now(),
 			includeCryptoAmount: true,
 			includeDate: true,
 			includeFiatAmount: true,
 			includeHeaderRow: true,
 			includeSenderRecipient: true,
 			includeTransactionId: true,
+			to: Date.now(),
 			transactionType: TransactionType.All,
 		},
 		mode: "onChange",
@@ -28,6 +30,8 @@ export const useTransactionExportForm = () => {
 		form.register("transactionType");
 		form.register("delimiter");
 		form.register("dateRange");
+		form.register("from", { required: true });
+		form.register("to", { required: true });
 	}, []);
 
 	return form;
