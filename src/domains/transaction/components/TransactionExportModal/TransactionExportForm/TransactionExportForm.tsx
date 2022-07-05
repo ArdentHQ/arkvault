@@ -15,7 +15,6 @@ export const TransactionExportForm = ({ onCancel, onExport }: TransactionExportF
 			data-testid="TransactionExportForm"
 			context={form}
 			onSubmit={() => {
-				console.log(form.getValues());
 				onExport?.(form.getValues());
 			}}
 			className="mt-8"
