@@ -18,7 +18,7 @@ export const useTransactionExportForm = () => {
 			includeFiatAmount: true,
 			includeHeaderRow: true,
 			includeSenderRecipient: true,
-			includeTransactionId: true,
+			includeTransactionId: false,
 			transactionType: TransactionType.All,
 		},
 		mode: "onChange",
