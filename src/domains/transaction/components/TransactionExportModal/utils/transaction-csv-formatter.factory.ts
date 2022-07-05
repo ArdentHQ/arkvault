@@ -1,7 +1,7 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
-import { buildTranslations } from "@/app/i18n/helpers";
 import { CURRENCIES } from "@ardenthq/sdk-intl";
+import { buildTranslations } from "@/app/i18n/helpers";
 
 const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	const { COMMON } = buildTranslations();
@@ -76,12 +76,15 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 	const currency = transaction.wallet().currency();
 	const exchangeCurrency = transaction.wallet().exchangeCurrency();
 
-	const rate = truncate(BigNumber.make(transaction.convertedAmount()).divide(transaction.amount()).toNumber(), exchangeCurrency);
+	const rate = truncate(
+		BigNumber.make(transaction.convertedAmount()).divide(transaction.amount()).toNumber(),
+		exchangeCurrency,
+	);
 
 	return {
 		amount: () => truncate(amount, currency),
 		convertedAmount: () => truncate(converted(amount, rate), exchangeCurrency),
-		convertedFee: () => fee === 0 ? 0 : truncate(converted(fee, rate), exchangeCurrency),
+		convertedFee: () => (fee === 0 ? 0 : truncate(converted(fee, rate), exchangeCurrency)),
 		convertedTotal: () => truncate(converted(total, rate), exchangeCurrency),
 		datetime: () => transaction.timestamp()?.format(`DD.MM.YYYY ${timeFormat}`),
 		fee: () => fee,

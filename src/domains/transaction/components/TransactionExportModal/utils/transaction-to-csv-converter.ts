@@ -44,9 +44,7 @@ export const convertToCsv = (
 	exchangeCurrency: string,
 	timeFormat: string,
 ) => {
-	const rows = transactions.map((transaction) =>
-		transactionToCsv(transaction, settings, timeFormat),
-	);
+	const rows = transactions.map((transaction) => transactionToCsv(transaction, settings, timeFormat));
 
 	if (settings.includeHeaderRow) {
 		rows.unshift(getHeaders(settings, exchangeCurrency));
