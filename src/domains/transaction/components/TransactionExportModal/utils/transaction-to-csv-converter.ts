@@ -1,10 +1,7 @@
 import { DTO } from "@ardenthq/sdk-profiles";
-import { BigNumber, last } from "@ardenthq/sdk-helpers";
-import { DateTime } from "@ardenthq/sdk-intl";
 import { CsvFormatter } from "./transaction-csv-formatter.factory";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { buildTranslations } from "@/app/i18n/helpers";
-import { TransactionRates } from "@/domains/transaction/components/TransactionExportModal/utils/transaction-rates.service";
 
 const getHeaders = (settings: CsvSettings, exchangeCurrency: string) => {
 	const { COMMON } = buildTranslations();
@@ -27,9 +24,8 @@ const transactionToCsv = (
 	transaction: DTO.ExtendedConfirmedTransactionData,
 	settings: CsvSettings,
 	timeFormat: string,
-	rate: BigNumber,
 ) => {
-	const fields = CsvFormatter(transaction, timeFormat, rate);
+	const fields = CsvFormatter(transaction, timeFormat);
 
 	return [
 		...(settings.includeTransactionId ? [transaction.id()] : []),
@@ -48,14 +44,8 @@ export const convertToCsv = async (
 	exchangeCurrency: string,
 	timeFormat: string,
 ) => {
-	const rates = TransactionRates({ wallet: transactions[0].wallet() });
-
-	if (settings.includeFiatAmount) {
-		await rates.sync({ to: last(transactions).timestamp() as DateTime });
-	}
-
 	const rows = transactions.map((transaction) =>
-		transactionToCsv(transaction, settings, timeFormat, rates.byDay(transaction.timestamp())),
+		transactionToCsv(transaction, settings, timeFormat),
 	);
 
 	if (settings.includeHeaderRow) {

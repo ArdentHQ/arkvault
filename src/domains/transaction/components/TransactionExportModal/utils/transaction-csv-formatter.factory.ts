@@ -1,6 +1,7 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { buildTranslations } from "@/app/i18n/helpers";
+import { CURRENCIES } from "@ardenthq/sdk-intl";
 
 const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	const { COMMON } = buildTranslations();
@@ -19,11 +20,11 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 
 const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
 	if (transaction.sender() !== transaction.wallet().address()) {
-		let totalReceived = BigNumber.make(transaction.amount());
+		let totalReceived = BigNumber.ZERO;
 
 		for (const recipient of transaction.recipients()) {
-			if (recipient.address !== transaction.wallet().address()) {
-				totalReceived = totalReceived.minus(recipient.amount);
+			if (recipient.address === transaction.wallet().address()) {
+				totalReceived = totalReceived.plus(recipient.amount);
 			}
 		}
 
@@ -59,30 +60,35 @@ const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData): nu
 	return transactionAmount(transaction);
 };
 
-const converted = (value: number, rate: BigNumber) => rate.times(value).toNumber();
+const converted = (value: number, rate: number) => BigNumber.make(value).times(rate).toNumber();
 
-export const CsvFormatter = (
-	transaction: DTO.ExtendedConfirmedTransactionData,
-	timeFormat: string,
-	rate: BigNumber,
-) => {
-	const { COMMON } = buildTranslations();
+const truncate = (value: number, currency: string) => {
+	const decimals = CURRENCIES[currency]?.decimals ?? 8;
 
+	return Math.trunc(value * 10 ** decimals) / 10 ** decimals;
+};
+
+export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, timeFormat: string) => {
 	const amount = transactionAmount(transaction);
 	const fee = transactionFee(transaction);
 	const total = transactionTotal(transaction);
 
+	const currency = transaction.wallet().currency();
+	const exchangeCurrency = transaction.wallet().exchangeCurrency();
+
+	const rate = truncate(BigNumber.make(transaction.convertedAmount()).divide(transaction.amount()).toNumber(), exchangeCurrency);
+
 	return {
-		amount: () => amount,
-		convertedAmount: () => (rate ? converted(amount, rate) : COMMON.NOT_AVAILABLE),
-		convertedFee: () => (rate ? converted(fee, rate) : COMMON.NOT_AVAILABLE),
-		convertedTotal: () => (rate ? converted(total, rate) : COMMON.NOT_AVAILABLE),
+		amount: () => truncate(amount, currency),
+		convertedAmount: () => truncate(converted(amount, rate), exchangeCurrency),
+		convertedFee: () => fee === 0 ? 0 : truncate(converted(fee, rate), exchangeCurrency),
+		convertedTotal: () => truncate(converted(total, rate), exchangeCurrency),
 		datetime: () => transaction.timestamp()?.format(`DD.MM.YYYY ${timeFormat}`),
 		fee: () => fee,
-		rate: () => rate.toNumber(),
+		rate: () => rate,
 		recipient: () => recipient(transaction),
 		sender: () => transaction.sender(),
 		timestamp: () => transaction.timestamp()?.toUNIX(),
-		total: () => total,
+		total: () => truncate(total, currency),
 	};
 };
