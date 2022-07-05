@@ -18,8 +18,10 @@ export const TransactionExporter = ({
 	wallet: Contracts.IReadWriteWallet;
 }) => {
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
+	const timeFormat = profile.settings().get<string>(Contracts.ProfileSetting.TimeFormat);
 
 	assertString(exchangeCurrency);
+	assertString(timeFormat);
 
 	const limit = 100;
 
@@ -50,7 +52,7 @@ export const TransactionExporter = ({
 		transactions: () => ({
 			items: () => transactions,
 			sync,
-			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency),
+			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency, timeFormat),
 		}),
 	};
 };

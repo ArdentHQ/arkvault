@@ -26,9 +26,10 @@ const getHeaders = (settings: CsvSettings, exchangeCurrency: string) => {
 const transactionToCsv = (
 	transaction: DTO.ExtendedConfirmedTransactionData,
 	settings: CsvSettings,
+	timeFormat: string,
 	rate: BigNumber,
 ) => {
-	const fields = CsvFormatter(transaction, rate);
+	const fields = CsvFormatter(transaction, timeFormat, rate);
 
 	return [
 		...(settings.includeTransactionId ? [transaction.id()] : []),
@@ -45,6 +46,7 @@ export const convertToCsv = async (
 	transactions: DTO.ExtendedConfirmedTransactionData[],
 	settings: CsvSettings,
 	exchangeCurrency: string,
+	timeFormat: string,
 ) => {
 	const rates = TransactionRates({ wallet: transactions[0].wallet() });
 
@@ -53,7 +55,7 @@ export const convertToCsv = async (
 	}
 
 	const rows = transactions.map((transaction) =>
-		transactionToCsv(transaction, settings, rates.byDay(transaction.timestamp())),
+		transactionToCsv(transaction, settings, timeFormat, rates.byDay(transaction.timestamp())),
 	);
 
 	if (settings.includeHeaderRow) {
