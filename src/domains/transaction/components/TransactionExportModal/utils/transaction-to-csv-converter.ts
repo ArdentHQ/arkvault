@@ -9,9 +9,10 @@ import { TransactionRates } from "@/domains/transaction/components/TransactionEx
 const getHeaders = (settings: CsvSettings, exchangeCurrency: string) => {
 	const { COMMON } = buildTranslations();
 
-	const buildFiatHeaders = (exchangeCurrency: string) => {
-		return [COMMON.FIAT_AMOUNT, COMMON.FIAT_FEE, COMMON.FIAT_TOTAL].map((header: string) => `${header} [${exchangeCurrency}]`);
-	};
+	const buildFiatHeaders = (exchangeCurrency: string) =>
+		[COMMON.FIAT_AMOUNT, COMMON.FIAT_FEE, COMMON.FIAT_TOTAL].map(
+			(header: string) => `${header} [${exchangeCurrency}]`,
+		);
 
 	return [
 		...(settings.includeTransactionId ? [COMMON.ID] : []),
@@ -40,7 +41,11 @@ const transactionToCsv = (
 	].join(settings.delimiter);
 };
 
-export const convertToCsv = async (transactions: DTO.ExtendedConfirmedTransactionData[], settings: CsvSettings, exchangeCurrency: string) => {
+export const convertToCsv = async (
+	transactions: DTO.ExtendedConfirmedTransactionData[],
+	settings: CsvSettings,
+	exchangeCurrency: string,
+) => {
 	const rates = TransactionRates({ wallet: transactions[0].wallet() });
 
 	if (settings.includeFiatAmount) {

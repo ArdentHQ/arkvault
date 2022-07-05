@@ -10,7 +10,13 @@ interface TransactionExporterFetchProperties {
 	cursor?: number;
 }
 
-export const TransactionExporter = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
+export const TransactionExporter = ({
+	profile,
+	wallet,
+}: {
+	profile: Contracts.IProfile;
+	wallet: Contracts.IReadWriteWallet;
+}) => {
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 
 	assertString(exchangeCurrency);
