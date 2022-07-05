@@ -17,11 +17,14 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 	const form = useFormContext();
 
 	return (
-		<div className={cn("flex w-full space-x-5 rounded-lg bg-theme-secondary-100 px-5 py-4", className)}>
+		<div className={cn("flex w-full space-x-5 rounded-lg bg-theme-secondary-100 dark:bg-theme-secondary-800 px-5 py-4", className)}>
 			<div className="flex-1">
 				<FormField name="from">
 					<FormLabel label={t("COMMON.FROM")} />
-					<InputDate selectsStart />
+					<InputDate
+						selectsStart
+						endDate={form.watch("to")}
+					/>
 				</FormField>
 			</div>
 
