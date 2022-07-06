@@ -76,10 +76,13 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 	const currency = transaction.wallet().currency();
 	const exchangeCurrency = transaction.wallet().exchangeCurrency();
 
-	const rate = truncate(
-		BigNumber.make(transaction.convertedAmount()).divide(transaction.amount()).toNumber(),
-		exchangeCurrency,
-	);
+	const rate =
+		transaction.total() === 0
+			? 0
+			: truncate(
+					BigNumber.make(transaction.convertedTotal()).divide(transaction.total()).toNumber(),
+					exchangeCurrency,
+			  );
 
 	return {
 		amount: () => truncate(amount, currency),
