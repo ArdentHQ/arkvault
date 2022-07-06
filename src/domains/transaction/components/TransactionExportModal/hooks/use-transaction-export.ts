@@ -82,7 +82,9 @@ export const useTransactionExport = ({
 			const dateRange = getTimestampRange(settings.dateRange, settings.from, settings.to);
 
 			try {
-				const transactionCount = await exporter.transactions().sync({ dateRange, type: settings.transactionType });
+				const transactionCount = await exporter
+					.transactions()
+					.sync({ dateRange, type: settings.transactionType });
 
 				setCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);

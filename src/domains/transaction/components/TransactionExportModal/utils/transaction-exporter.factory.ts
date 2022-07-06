@@ -27,7 +27,11 @@ export const TransactionExporter = ({
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
 
-	const sync = async ({ type = "all", dateRange, cursor = 1 }: TransactionExporterFetchProperties): Promise<number> => {
+	const sync = async ({
+		type = "all",
+		dateRange,
+		cursor = 1,
+	}: TransactionExporterFetchProperties): Promise<number> => {
 		// Clear cache.
 		if (cursor === 1) {
 			transactions = [];
