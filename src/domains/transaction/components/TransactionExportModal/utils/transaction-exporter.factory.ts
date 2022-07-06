@@ -56,10 +56,10 @@ export const TransactionExporter = ({
 
 	return {
 		transactions: () => ({
+			abortSync: () => (requestedSyncAbort = true),
 			items: () => transactions,
 			sync,
 			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency, timeFormat),
-			abortSync: () => (requestedSyncAbort = true),
 		}),
 	};
 };
