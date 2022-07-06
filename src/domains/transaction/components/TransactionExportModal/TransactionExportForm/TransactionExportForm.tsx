@@ -8,7 +8,9 @@ import { TransactionExportFormProperties } from "@/domains/transaction/component
 
 export const TransactionExportForm = ({ onCancel, onExport }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
+
 	const form = useTransactionExportForm();
+	const { isDirty, isSubmitting, isValid } = form.formState;
 
 	return (
 		<Form
@@ -34,7 +36,12 @@ export const TransactionExportForm = ({ onCancel, onExport }: TransactionExportF
 					{t("COMMON.CANCEL")}
 				</Button>
 
-				<Button type="submit" variant="primary" data-testid="TransactionExport__submit-button">
+				<Button
+					type="submit"
+					disabled={isSubmitting || (isDirty ? !isValid : false)}
+					variant="primary"
+					data-testid="TransactionExport__submit-button"
+				>
 					{t("COMMON.EXPORT")}
 				</Button>
 			</FormButtons>
