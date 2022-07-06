@@ -1,6 +1,5 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { CsvDelimiter } from "@/domains/transaction/components/TransactionExportModal";
 
 const renderLabel = (label: string, isActive: boolean) => (

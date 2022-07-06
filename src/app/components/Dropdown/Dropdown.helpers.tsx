@@ -52,6 +52,14 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	);
 };
 
+const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
+	if (typeof value === "function") {
+		return value(isActive);
+	}
+
+	return value;
+};
+
 export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => {
 	const onSelectItem = (event: React.MouseEvent | React.KeyboardEvent, option: DropdownOption) => {
 		event.preventDefault();
@@ -68,14 +76,6 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 			</div>
 		);
 	}
-
-	const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
-		if (typeof value === "function") {
-			return value(isActive);
-		}
-
-		return value;
-	};
 
 	return (
 		<ul data-testid="dropdown__options">
