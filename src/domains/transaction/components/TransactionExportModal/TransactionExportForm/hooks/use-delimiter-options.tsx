@@ -5,7 +5,11 @@ import { CsvDelimiter } from "@/domains/transaction/components/TransactionExport
 const renderLabel = (label: string, isActive: boolean) => (
 	<span className="space-x-1">
 		<span>(</span>
-		<span className={isActive ? "text-theme-primary-600" : "text-theme-secondary-800 dark:text-theme-secondary-200"}>{ label }</span>
+		<span
+			className={isActive ? "text-theme-primary-600" : "text-theme-secondary-800 dark:text-theme-secondary-200"}
+		>
+			{label}
+		</span>
 		<span>)</span>
 	</span>
 );
