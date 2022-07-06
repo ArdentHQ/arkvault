@@ -56,12 +56,9 @@ export const TransactionExportModal = ({
 					<TransactionExportSuccess
 						file={file}
 						onCancel={onClose}
-						onDownload={() => {
+						onDownload={(filename: string) => {
 							toasts.success(
-								<Trans
-									i18nKey="COMMON.SAVE_FILE.SUCCESS"
-									values={{ filePath: `${file.name}.${file.extension}` }}
-								/>,
+								<Trans i18nKey="COMMON.SAVE_FILE.SUCCESS" values={{ filePath: filename }} />,
 							);
 							onClose?.();
 						}}
