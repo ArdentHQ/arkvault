@@ -24,6 +24,7 @@ export const TransactionExporter = ({
 	assertString(timeFormat);
 
 	const limit = 100;
+	let requestedSyncAbort = false;
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
 
@@ -31,6 +32,11 @@ export const TransactionExporter = ({
 		// Clear cache.
 		if (cursor === 1) {
 			transactions = [];
+			requestedSyncAbort = false;
+		}
+
+		if (requestedSyncAbort) {
+			return;
 		}
 
 		const page = await wallet.transactionIndex()[type]({ cursor, limit, timestamp: dateRange });
@@ -53,6 +59,7 @@ export const TransactionExporter = ({
 			items: () => transactions,
 			sync,
 			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency, timeFormat),
+			abortSync: () => (requestedSyncAbort = true),
 		}),
 	};
 };
