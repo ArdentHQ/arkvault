@@ -26,7 +26,7 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 			<div className="md:flex-1">
 				<FormField name="from">
 					<FormLabel label={t("COMMON.FROM")} />
-					<InputDate selectsStart endDate={form.watch("to")} />
+					<InputDate selectsStart endDate={form.watch("to")} rules={{ required: true }} />
 				</FormField>
 			</div>
 
@@ -35,9 +35,10 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 					<FormLabel label={t("COMMON.TO")} />
 					<InputDate
 						placement="bottom-end"
+						selectsEnd
 						minDate={form.watch("from")}
 						startDate={form.watch("from")}
-						selectsEnd
+						rules={{ required: true }}
 					/>
 				</FormField>
 			</div>

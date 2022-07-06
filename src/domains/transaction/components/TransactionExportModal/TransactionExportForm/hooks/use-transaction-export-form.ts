@@ -33,9 +33,24 @@ export const useTransactionExportForm = () => {
 		form.register("transactionType");
 		form.register("delimiter");
 		form.register("dateRange");
-		form.register("from", { required: true });
-		form.register("to", { required: true });
 	}, []);
+
+	const { includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId } =
+		form.watch();
+
+	useEffect(() => {
+		// Trigger invalid state.
+		if (
+			[includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId].filter(
+				Boolean,
+			).length === 0
+		) {
+			form.setError("includeCryptoAmount", {});
+			return;
+		}
+
+		form.clearErrors("includeCryptoAmount");
+	}, [includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId]);
 
 	return form;
 };
