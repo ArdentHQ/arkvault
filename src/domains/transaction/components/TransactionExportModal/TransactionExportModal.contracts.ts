@@ -21,6 +21,7 @@ export interface TransactionExportFormProperties {
 }
 
 export interface TransactionExportStatusProperties {
+	count?: number;
 	file: ReadableFile;
 	onCancel?: () => void;
 	onDownload?: (filename: string) => void;
