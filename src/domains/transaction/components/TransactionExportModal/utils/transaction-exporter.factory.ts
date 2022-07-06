@@ -32,7 +32,7 @@ export const TransactionExporter = ({
 		type = "all",
 		dateRange,
 		cursor = 1,
-	}: TransactionExporterFetchProperties): Promise<number> => {
+	}: TransactionExporterFetchProperties): Promise<number | undefined> => {
 		// Clear cache.
 		if (cursor === 1) {
 			transactions = [];
