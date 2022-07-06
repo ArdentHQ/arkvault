@@ -19,7 +19,7 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 	return (
 		<div
 			className={cn(
-				"flex flex-col md:flex-row w-full md:space-x-5 space-y-5 md:space-y-0 rounded-lg bg-theme-secondary-background px-5 py-4",
+				"flex w-full flex-col space-y-5 rounded-lg bg-theme-secondary-background px-5 py-4 md:flex-row md:space-x-5 md:space-y-0",
 				className,
 			)}
 		>
