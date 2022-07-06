@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Toggle } from "@/app/components/Toggle";
@@ -7,14 +7,6 @@ import { ListDivided } from "@/app/components/ListDivided";
 export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) => {
 	const { t } = useTranslation();
 	const form = useFormContext();
-
-	const { includeCryptoAmount } = form.watch();
-
-	useEffect(() => {
-		if (!includeCryptoAmount) {
-			form.setValue("includeFiatAmount", false);
-		}
-	}, [includeCryptoAmount]);
 
 	const columnToggles = [
 		{
