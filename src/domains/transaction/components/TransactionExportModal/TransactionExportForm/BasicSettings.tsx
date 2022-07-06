@@ -19,18 +19,18 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 	return (
 		<div
 			className={cn(
-				"flex w-full space-x-5 rounded-lg bg-theme-secondary-100 px-5 py-4 dark:bg-theme-secondary-800",
+				"flex w-full flex-col space-y-5 rounded-lg bg-theme-secondary-background px-5 py-4 md:flex-row md:space-x-5 md:space-y-0",
 				className,
 			)}
 		>
-			<div className="flex-1">
+			<div className="md:flex-1">
 				<FormField name="from">
 					<FormLabel label={t("COMMON.FROM")} />
 					<InputDate selectsStart endDate={watch("to")} rules={{ required: true }} />
 				</FormField>
 			</div>
 
-			<div className="flex-1">
+			<div className="md:flex-1">
 				<FormField name="to">
 					<FormLabel label={t("COMMON.TO")} />
 					<InputDate

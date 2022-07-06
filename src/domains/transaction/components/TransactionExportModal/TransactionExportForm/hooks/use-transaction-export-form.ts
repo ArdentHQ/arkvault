@@ -24,7 +24,7 @@ export const useTransactionExportForm = () => {
 			includeSenderRecipient: true,
 			includeTransactionId: true,
 			to: new Date(),
-			transactionType: TransactionType.All,
+			transactionType: TransactionType.Incoming,
 		},
 		mode: "onChange",
 	});
