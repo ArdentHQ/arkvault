@@ -63,7 +63,7 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					data-testid="TransactionExportForm__toggle-include-crypto-amount"
 				/>
 			),
-			wrapperClass: "py-4",
+			wrapperClass: showFiatColumn ? "py-4" : "pt-4",
 		},
 	];
 
