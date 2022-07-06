@@ -34,7 +34,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	}
 
 	return (
-		<div key={key} className="mt-4 first:mt-0">
+		<div key={key} className={cn({ "mt-4": title || hasDivider })}>
 			{hasDivider && (
 				<div className="mx-8 -my-2">
 					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" />
@@ -61,7 +61,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 
 	if (isOptionGroup(options)) {
 		return (
-			<div className="pt-5 pb-1">
+			<div className="py-1">
 				{(options as DropdownOptionGroup[]).map((optionGroup: DropdownOptionGroup) =>
 					renderOptionGroup({ ...optionGroup, onSelect }),
 				)}
