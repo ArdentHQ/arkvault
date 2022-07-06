@@ -39,7 +39,7 @@ export const TransactionExportModal = ({
 		>
 			<Tabs activeId={status}>
 				<TabPanel tabId={ExportProgressStatus.Idle}>
-					<TransactionExportForm onCancel={onClose} onExport={startExport} />
+					<TransactionExportForm onCancel={onClose} onExport={startExport} wallet={wallet} />
 				</TabPanel>
 
 				<TabPanel tabId={ExportProgressStatus.Progress}>

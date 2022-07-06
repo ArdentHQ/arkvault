@@ -6,7 +6,7 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { TransactionExportFormProperties } from "@/domains/transaction/components/TransactionExportModal";
 
-export const TransactionExportForm = ({ onCancel, onExport }: TransactionExportFormProperties) => {
+export const TransactionExportForm = ({ wallet, onCancel, onExport }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
 	const form = useTransactionExportForm();
 
@@ -23,7 +23,7 @@ export const TransactionExportForm = ({ onCancel, onExport }: TransactionExportF
 
 			<CSVSettings />
 
-			<ColumnSettings />
+			<ColumnSettings showFiatAmount={wallet.network().isLive()} />
 
 			<FormButtons>
 				<Button
