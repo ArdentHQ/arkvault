@@ -37,8 +37,10 @@ export const TransactionExportSuccess = ({ onCancel, onDownload, file }: Transac
 					variant="primary"
 					data-testid="TransactionExportSuccess__download-button"
 					onClick={async () => {
-						if (await download(file)) {
-							onDownload?.();
+						const filename = await download(file);
+
+						if (filename) {
+							onDownload?.(filename);
 						}
 					}}
 				>
