@@ -14,7 +14,10 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 		return transaction.recipient();
 	}
 
-	//TODO: Handle more transaction types.
+	if (transaction.isVote() || transaction.isUnvote()) {
+		return `${COMMON.VOTE} ${COMMON.TRANSACTION}`;
+	}
+
 	return COMMON.OTHER;
 };
 
