@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Toggle } from "@/app/components/Toggle";
 import { ListDivided } from "@/app/components/ListDivided";
 
-export const ColumnSettings = ({ showFiatAmount }: { showFiatAmount: boolean }) => {
+export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) => {
 	const { t } = useTranslation();
 	const form = useFormContext();
 
@@ -67,7 +67,7 @@ export const ColumnSettings = ({ showFiatAmount }: { showFiatAmount: boolean }) 
 		},
 	];
 
-	if (showFiatAmount) {
+	if (showFiatColumn) {
 		columnToggles.push({
 			label: t("TRANSACTION.EXPORT.FORM.FIAT_AMOUNT"),
 			value: (

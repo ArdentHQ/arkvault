@@ -23,7 +23,7 @@ export const TransactionExportForm = ({ wallet, onCancel, onExport }: Transactio
 
 			<CSVSettings />
 
-			<ColumnSettings showFiatAmount={wallet.network().isLive()} />
+			<ColumnSettings showFiatColumn={wallet.network().isLive()} />
 
 			<FormButtons>
 				<Button
