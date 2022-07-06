@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
 import DatePicker from "react-datepicker";
 
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, RegisterOptions, useFormContext } from "react-hook-form";
 import { Input } from "./Input";
 import { Icon } from "@/app/components/Icon";
 import { useFormField } from "@/app/components/Form/useFormField";
 
 type InputDateProperties = {
+	rules?: RegisterOptions;
 	minDate?: Date;
 	startDate?: Date;
 	endDate?: Date;
@@ -18,7 +19,7 @@ type InputDateProperties = {
 
 export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>(
 	(
-		{ minDate, startDate, endDate, placement = "bottom-start", selectsStart, selectsEnd, ...properties },
+		{ minDate, startDate, endDate, placement = "bottom-start", selectsStart, selectsEnd, rules, ...properties },
 		reference,
 	) => {
 		const { control } = useFormContext();
@@ -31,7 +32,8 @@ export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>
 			<Controller
 				name={fieldContext!.name}
 				control={control}
-				render={(field) => (
+				rules={rules}
+				render={(field, { invalid }) => (
 					<DatePicker
 						ref={calenderReference}
 						selected={field.value}
@@ -63,7 +65,7 @@ export const InputDate = React.forwardRef<HTMLInputElement, InputDateProperties>
 										),
 									},
 								}}
-								isInvalid={!field.value}
+								isInvalid={invalid}
 								{...properties}
 							/>
 						}
