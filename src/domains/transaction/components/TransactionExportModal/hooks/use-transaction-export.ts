@@ -54,6 +54,7 @@ export const useTransactionExport = ({
 	initialStatus: ExportProgressStatus;
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
+	const [count, setCount] = useState<number>();
 	const [error, setError] = useState<string>();
 
 	const [file] = useState({
@@ -69,6 +70,7 @@ export const useTransactionExport = ({
 			//TODO: implement.
 			setStatus(ExportProgressStatus.Idle);
 		},
+		count,
 		error,
 		file,
 		retry: () => {
@@ -80,8 +82,11 @@ export const useTransactionExport = ({
 			const dateRange = getTimestampRange(settings.dateRange, settings.from, settings.to);
 
 			try {
-				await exporter.transactions().sync({ dateRange, type: settings.transactionType });
+				const transactionCount = await exporter
+					.transactions()
+					.sync({ dateRange, type: settings.transactionType });
 
+				setCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);
 
 				file.content = exporter.transactions().toCsv(settings);
