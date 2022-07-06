@@ -44,7 +44,6 @@ export enum CsvDelimiter {
 	Comma = ",",
 	Semicolon = ";",
 	Tab = "\t",
-	Space = " ",
 	Pipe = "|",
 }
 
