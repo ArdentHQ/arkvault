@@ -69,6 +69,14 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 		);
 	}
 
+	const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
+		if (typeof value === "function") {
+			return value(isActive);
+		}
+
+		return value;
+	};
+
 	return (
 		<ul data-testid="dropdown__options">
 			{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
@@ -90,7 +98,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 						{option.label}
 						{option.secondaryLabel && (
 							<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
-								{option.secondaryLabel}
+								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}
 							</span>
 						)}
 					</span>
