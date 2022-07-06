@@ -444,10 +444,10 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
       <div
-        class="pt-5 pb-1"
+        class="py-1"
       >
         <div
-          class="mt-4 first:mt-0"
+          class="mt-4"
         >
           <ul>
             <li
@@ -480,7 +480,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
           </ul>
         </div>
         <div
-          class="mt-4 first:mt-0"
+          class="mt-4"
         >
           <div
             class="mx-8 -my-2"
@@ -641,7 +641,7 @@ exports[`Dropdown should render without options one 1`] = `
       style="opacity: 1; height: -30px; overflow-y: scroll;"
     >
       <div
-        class="pt-5 pb-1"
+        class="py-1"
       />
     </div>
   </div>

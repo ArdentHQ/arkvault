@@ -24,7 +24,7 @@ export interface TransactionExportStatusProperties {
 	count?: number;
 	file: ReadableFile;
 	onCancel?: () => void;
-	onDownload?: () => void;
+	onDownload?: (filename: string) => void;
 }
 
 export interface TransactionExportErrorProperties {
@@ -44,7 +44,6 @@ export enum CsvDelimiter {
 	Comma = ",",
 	Semicolon = ";",
 	Tab = "\t",
-	Space = " ",
 	Pipe = "|",
 }
 

@@ -52,8 +52,10 @@ export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: 
 					variant="primary"
 					data-testid="TransactionExportSuccess__download-button"
 					onClick={async () => {
-						if (await download(file)) {
-							onDownload?.();
+						const filename = await download(file);
+
+						if (filename) {
+							onDownload?.(filename);
 						}
 					}}
 				>
