@@ -43,13 +43,13 @@ export enum CsvDelimiter {
 	Comma = ",",
 	Semicolon = ";",
 	Tab = "\t",
-	Space = " ",
 	Pipe = "|",
 }
 
 export enum DateRange {
 	CurrentMonth = "currentMonth",
 	LastMonth = "lastMonth",
+	CurrentQuarter = "currentQuarter",
 	LastQuarter = "lastQuarter",
 	CurrentYear = "currentYear",
 	LastYear = "lastYear",
