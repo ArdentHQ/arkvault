@@ -35,7 +35,10 @@ export const TransactionExportModal = ({
 			title={t("TRANSACTION.EXPORT.TITLE")}
 			description={t("TRANSACTION.EXPORT.DESCRIPTION")}
 			isOpen={isOpen}
-			onClose={onClose}
+			onClose={() => {
+				cancelExport();
+				onClose?.();
+			}}
 		>
 			<Tabs activeId={status}>
 				<TabPanel tabId={ExportProgressStatus.Idle}>
