@@ -138,8 +138,8 @@ export const GeneralSettings: React.FC = () => {
 						}))}
 						onChange={(signOutPeriod: SettingsOption) => {
 							setValue("automaticSignOutPeriod", signOutPeriod?.value, {
-								shouldValidate: true,
 								shouldDirty: true,
+								shouldValidate: true,
 							});
 						}}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}
