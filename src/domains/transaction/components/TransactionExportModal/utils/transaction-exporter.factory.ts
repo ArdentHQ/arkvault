@@ -28,7 +28,11 @@ export const TransactionExporter = ({
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
 
-	const sync = async ({ type = "all", dateRange, cursor = 1 }: TransactionExporterFetchProperties) => {
+	const sync = async ({
+		type = "all",
+		dateRange,
+		cursor = 1,
+	}: TransactionExporterFetchProperties): Promise<number> => {
 		// Clear cache.
 		if (cursor === 1) {
 			transactions = [];
@@ -48,7 +52,7 @@ export const TransactionExporter = ({
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
 		if (page.items().length < limit) {
-			return;
+			return transactions.length;
 		}
 
 		return sync({ cursor, dateRange, type });
