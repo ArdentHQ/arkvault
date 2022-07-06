@@ -12,6 +12,7 @@ import {
 import { Modal } from "@/app/components/Modal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { toasts } from "@/app/services";
+import { useActiveProfile } from "@/app/hooks";
 
 export const TransactionExportModal = ({
 	initialStatus = ExportProgressStatus.Idle,
@@ -21,8 +22,11 @@ export const TransactionExportModal = ({
 }: TransactionExportModalProperties) => {
 	const { t } = useTranslation();
 
+	const profile = useActiveProfile();
+
 	const { file, startExport, cancelExport, status, error, retry } = useTransactionExport({
 		initialStatus,
+		profile,
 		wallet,
 	});
 
