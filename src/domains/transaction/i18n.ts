@@ -41,6 +41,9 @@ export const translations = {
 	},
 	EXPORT: {
 		DESCRIPTION: "Export your wallet's transaction history.",
+		EMPTY: {
+			DESCRIPTION: "No transactions could be found for the selected period.",
+		},
 		FORM: {
 			ALL: "All",
 			COLUMNS: "Columns",
