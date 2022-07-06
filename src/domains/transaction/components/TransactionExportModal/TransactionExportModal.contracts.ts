@@ -23,7 +23,7 @@ export interface TransactionExportFormProperties {
 export interface TransactionExportStatusProperties {
 	file: ReadableFile;
 	onCancel?: () => void;
-	onDownload?: () => void;
+	onDownload?: (filename: string) => void;
 }
 
 export interface TransactionExportErrorProperties {
