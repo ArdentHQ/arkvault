@@ -14,7 +14,7 @@ const renderLabel = (label: string, isActive: boolean) => (
 export const useDelimiterOptions = ({ selectedValue }: { selectedValue: CsvDelimiter }) => {
 	const { t } = useTranslation();
 
-	const basicOptions = useMemo(
+	const options = useMemo(
 		() => [
 			{
 				active: selectedValue === CsvDelimiter.Comma,
@@ -48,15 +48,8 @@ export const useDelimiterOptions = ({ selectedValue }: { selectedValue: CsvDelim
 		[selectedValue],
 	);
 
-	const options: DropdownOptionGroup[] = [
-		{
-			key: "all",
-			options: basicOptions,
-		},
-	];
-
 	return {
 		options,
-		selected: useMemo(() => basicOptions.find((option) => option.value === selectedValue), [selectedValue]),
+		selected: useMemo(() => options.find((option) => option.value === selectedValue), [selectedValue]),
 	};
 };
