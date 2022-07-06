@@ -8,11 +8,6 @@ export const useTransactionTypeOptions = ({ selectedValue }: { selectedValue: Tr
 	const options = useMemo(
 		() => [
 			{
-				active: selectedValue === TransactionType.All,
-				label: t("TRANSACTION.ALL"),
-				value: TransactionType.All,
-			},
-			{
 				active: selectedValue === TransactionType.Incoming,
 				label: t("TRANSACTION.INCOMING"),
 				value: TransactionType.Incoming,
@@ -21,6 +16,11 @@ export const useTransactionTypeOptions = ({ selectedValue }: { selectedValue: Tr
 				active: selectedValue === TransactionType.Outgoing,
 				label: t("TRANSACTION.OUTGOING"),
 				value: TransactionType.Outgoing,
+			},
+			{
+				active: selectedValue === TransactionType.All,
+				label: t("TRANSACTION.ALL"),
+				value: TransactionType.All,
 			},
 		],
 		[selectedValue],
