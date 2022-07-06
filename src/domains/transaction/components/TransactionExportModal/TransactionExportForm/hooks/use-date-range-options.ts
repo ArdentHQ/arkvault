@@ -19,8 +19,13 @@ export const useDateRangeOptions = ({ selectedValue }: { selectedValue: DateRang
 				value: DateRange.LastMonth,
 			},
 			{
+				active: selectedValue === DateRange.CurrentQuarter,
+				label: t("TRANSACTION.EXPORT.FORM.CURRENT_QUARTER"),
+				value: DateRange.CurrentQuarter,
+			},
+			{
 				active: selectedValue === DateRange.LastQuarter,
-				label: t("TRANSACTION.EXPORT.FORM.LASTQUARTER"),
+				label: t("TRANSACTION.EXPORT.FORM.LAST_QUARTER"),
 				value: DateRange.LastQuarter,
 			},
 			{
