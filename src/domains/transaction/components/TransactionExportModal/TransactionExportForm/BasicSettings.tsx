@@ -14,7 +14,7 @@ import { DateRange } from "@/domains/transaction/components/TransactionExportMod
 import { InputDate } from "@/app/components/Input";
 
 const DateRangeSelection = ({ className }: { className?: string }) => {
-	const { setValue, watch } = useFormContext();
+	const form = useFormContext();
 
 	return (
 		<div
@@ -26,7 +26,7 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 			<div className="md:flex-1">
 				<FormField name="from">
 					<FormLabel label={t("COMMON.FROM")} />
-					<InputDate selectsStart endDate={watch("to")} rules={{ required: true }} />
+					<InputDate selectsStart endDate={form.watch("to")} rules={{ required: true }} />
 				</FormField>
 			</div>
 
@@ -36,8 +36,8 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 					<InputDate
 						placement="bottom-end"
 						selectsEnd
-						minDate={watch("from")}
-						startDate={watch("from")}
+						minDate={form.watch("from")}
+						startDate={form.watch("from")}
 						rules={{ required: true }}
 					/>
 				</FormField>
