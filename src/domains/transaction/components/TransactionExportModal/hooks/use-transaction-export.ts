@@ -67,8 +67,8 @@ export const useTransactionExport = ({
 
 	return {
 		cancelExport: () => {
-			//TODO: implement.
 			setStatus(ExportProgressStatus.Idle);
+			exporter.transactions().abortSync();
 		},
 		count,
 		error,
