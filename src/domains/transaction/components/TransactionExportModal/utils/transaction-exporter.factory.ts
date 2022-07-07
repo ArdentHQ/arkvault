@@ -13,9 +13,11 @@ interface TransactionExporterFetchProperties {
 export const TransactionExporter = ({
 	profile,
 	wallet,
+	limit = 100,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
+	limit?: number;
 }) => {
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	const timeFormat = profile.settings().get<string>(Contracts.ProfileSetting.TimeFormat);
@@ -23,7 +25,6 @@ export const TransactionExporter = ({
 	assertString(exchangeCurrency);
 	assertString(timeFormat);
 
-	const limit = 100;
 	let requestedSyncAbort = false;
 
 	let transactions: DTO.ExtendedConfirmedTransactionData[] = [];
