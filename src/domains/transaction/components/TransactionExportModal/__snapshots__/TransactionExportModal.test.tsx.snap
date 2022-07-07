@@ -66,7 +66,7 @@ exports[`TransactionExportModal should render 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -99,20 +99,6 @@ exports[`TransactionExportModal should render 1`] = `
                               >
                                 <button
                                   aria-checked="true"
-                                  aria-label="All"
-                                  class="css-12yryft"
-                                  data-testid="ButtonGroupOption"
-                                  role="radio"
-                                  type="button"
-                                >
-                                  <div
-                                    class="px-2"
-                                  >
-                                    All
-                                  </div>
-                                </button>
-                                <button
-                                  aria-checked="false"
                                   aria-label="Incoming"
                                   class="css-12yryft"
                                   data-testid="ButtonGroupOption"
@@ -137,6 +123,20 @@ exports[`TransactionExportModal should render 1`] = `
                                     class="px-2"
                                   >
                                     Outgoing
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="All"
+                                  class="css-12yryft"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="px-2"
+                                  >
+                                    All
                                   </div>
                                 </button>
                               </div>
@@ -191,7 +191,7 @@ exports[`TransactionExportModal should render 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Current Month
+                                        Month to Date
                                       </div>
                                     </span>
                                     <span
@@ -217,11 +217,7 @@ exports[`TransactionExportModal should render 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-                    type="horizontal"
-                  />
-                  <div
-                    class="mb-4 text-lg font-semibold"
+                    class="mt-8 mb-4 text-lg font-semibold"
                   >
                     CSV Settings
                   </div>
@@ -230,7 +226,7 @@ exports[`TransactionExportModal should render 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -259,6 +255,7 @@ exports[`TransactionExportModal should render 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-header-row"
                                 name="includeHeaderRow"
@@ -355,11 +352,7 @@ exports[`TransactionExportModal should render 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-                    type="horizontal"
-                  />
-                  <div
-                    class="mb-4 text-lg font-semibold"
+                    class="mt-8 mb-4 text-lg font-semibold"
                   >
                     Columns
                   </div>
@@ -368,7 +361,7 @@ exports[`TransactionExportModal should render 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -397,6 +390,7 @@ exports[`TransactionExportModal should render 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-tx-id"
                                 name="includeTransactionId"
@@ -444,6 +438,7 @@ exports[`TransactionExportModal should render 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-date"
                                 name="includeDate"
@@ -491,8 +486,9 @@ exports[`TransactionExportModal should render 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
-                                data-testid="TransactionExportForm__toggle-include-crypto-amount"
+                                data-testid="TransactionExportForm__toggle-include-sender-recipient"
                                 name="includeSenderRecipient"
                                 type="checkbox"
                               />
@@ -509,7 +505,7 @@ exports[`TransactionExportModal should render 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pt-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -538,56 +534,10 @@ exports[`TransactionExportModal should render 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-crypto-amount"
                                 name="includeCryptoAmount"
-                                type="checkbox"
-                              />
-                              <div
-                                class="css-7lwhds toggle-handle"
-                              >
-                                <span
-                                  class="css-1fmiyrr"
-                                />
-                              </div>
-                            </label>
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      class="flex w-full flex-col py-4"
-                      data-testid="list-divided-item__wrapper"
-                    >
-                      <div
-                        class="flex justify-between items-center"
-                        data-testid="list-divided-item__inner-wrapper"
-                      >
-                        <div
-                          class="flex w-full flex-col space-y-2"
-                        >
-                          <div
-                            class="flex items-center justify-between space-x-5"
-                          >
-                            <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                              data-testid="list-divided-item__label"
-                            >
-                              Fiat Amount
-                            </span>
-                          </div>
-                        </div>
-                        <div>
-                          <span
-                            data-testid="list-divided-item__value"
-                          >
-                            <label
-                              class="css-xklln0"
-                            >
-                              <input
-                                class="css-1r71f0z toggle-input"
-                                data-testid="TransactionExportForm__toggle-include-tx-id"
-                                name="includeFiatAmount"
                                 type="checkbox"
                               />
                               <div
@@ -868,7 +818,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -901,20 +851,6 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               >
                                 <button
                                   aria-checked="true"
-                                  aria-label="All"
-                                  class="css-12yryft"
-                                  data-testid="ButtonGroupOption"
-                                  role="radio"
-                                  type="button"
-                                >
-                                  <div
-                                    class="px-2"
-                                  >
-                                    All
-                                  </div>
-                                </button>
-                                <button
-                                  aria-checked="false"
                                   aria-label="Incoming"
                                   class="css-12yryft"
                                   data-testid="ButtonGroupOption"
@@ -939,6 +875,20 @@ exports[`TransactionExportModal should render progress status 1`] = `
                                     class="px-2"
                                   >
                                     Outgoing
+                                  </div>
+                                </button>
+                                <button
+                                  aria-checked="false"
+                                  aria-label="All"
+                                  class="css-12yryft"
+                                  data-testid="ButtonGroupOption"
+                                  role="radio"
+                                  type="button"
+                                >
+                                  <div
+                                    class="px-2"
+                                  >
+                                    All
                                   </div>
                                 </button>
                               </div>
@@ -993,7 +943,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                                       <div
                                         class="whitespace-nowrap leading-tight"
                                       >
-                                        Current Month
+                                        Month to Date
                                       </div>
                                     </span>
                                     <span
@@ -1019,11 +969,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-                    type="horizontal"
-                  />
-                  <div
-                    class="mb-4 text-lg font-semibold"
+                    class="mt-8 mb-4 text-lg font-semibold"
                   >
                     CSV Settings
                   </div>
@@ -1032,7 +978,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1061,6 +1007,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-header-row"
                                 name="includeHeaderRow"
@@ -1157,11 +1104,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-12qg4ub"
-                    type="horizontal"
-                  />
-                  <div
-                    class="mb-4 text-lg font-semibold"
+                    class="mt-8 mb-4 text-lg font-semibold"
                   >
                     Columns
                   </div>
@@ -1170,7 +1113,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pb-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1199,6 +1142,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-tx-id"
                                 name="includeTransactionId"
@@ -1246,6 +1190,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-date"
                                 name="includeDate"
@@ -1293,8 +1238,9 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
-                                data-testid="TransactionExportForm__toggle-include-crypto-amount"
+                                data-testid="TransactionExportForm__toggle-include-sender-recipient"
                                 name="includeSenderRecipient"
                                 type="checkbox"
                               />
@@ -1311,7 +1257,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col py-4"
+                      class="flex w-full flex-col pt-4"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1340,56 +1286,10 @@ exports[`TransactionExportModal should render progress status 1`] = `
                               class="css-xklln0"
                             >
                               <input
+                                checked=""
                                 class="css-1r71f0z toggle-input"
                                 data-testid="TransactionExportForm__toggle-include-crypto-amount"
                                 name="includeCryptoAmount"
-                                type="checkbox"
-                              />
-                              <div
-                                class="css-7lwhds toggle-handle"
-                              >
-                                <span
-                                  class="css-1fmiyrr"
-                                />
-                              </div>
-                            </label>
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      class="flex w-full flex-col py-4"
-                      data-testid="list-divided-item__wrapper"
-                    >
-                      <div
-                        class="flex justify-between items-center"
-                        data-testid="list-divided-item__inner-wrapper"
-                      >
-                        <div
-                          class="flex w-full flex-col space-y-2"
-                        >
-                          <div
-                            class="flex items-center justify-between space-x-5"
-                          >
-                            <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                              data-testid="list-divided-item__label"
-                            >
-                              Fiat Amount
-                            </span>
-                          </div>
-                        </div>
-                        <div>
-                          <span
-                            data-testid="list-divided-item__value"
-                          >
-                            <label
-                              class="css-xklln0"
-                            >
-                              <input
-                                class="css-1r71f0z toggle-input"
-                                data-testid="TransactionExportForm__toggle-include-tx-id"
-                                name="includeFiatAmount"
                                 type="checkbox"
                               />
                               <div
@@ -1500,11 +1400,6 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                 data-testid="tab-pabel__active-panel"
               >
                 <div>
-                  <svg
-                    class="my-6 mx-auto hidden h-32 w-full md:block"
-                  >
-                    success-banner-light-green.svg
-                  </svg>
                   <div
                     class="flex flex-col overflow-hidden rounded-xl my-6"
                   >
@@ -1664,11 +1559,6 @@ exports[`TransactionExportModal should render success and stay open if download 
                 data-testid="tab-pabel__active-panel"
               >
                 <div>
-                  <svg
-                    class="my-6 mx-auto hidden h-32 w-full md:block"
-                  >
-                    success-banner-light-green.svg
-                  </svg>
                   <div
                     class="flex flex-col overflow-hidden rounded-xl my-6"
                   >
@@ -1828,11 +1718,6 @@ exports[`TransactionExportModal should render success status 1`] = `
                 data-testid="tab-pabel__active-panel"
               >
                 <div>
-                  <svg
-                    class="my-6 mx-auto hidden h-32 w-full md:block"
-                  >
-                    success-banner-light-green.svg
-                  </svg>
                   <div
                     class="flex flex-col overflow-hidden rounded-xl my-6"
                   >

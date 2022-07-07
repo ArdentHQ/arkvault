@@ -192,4 +192,24 @@ describe("TransactionExportModal", () => {
 
 		browserAccessMock.mockRestore();
 	});
+
+	it("should cancel export on close", async () => {
+		const onClose = jest.fn();
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+	});
 });

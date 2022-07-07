@@ -26,12 +26,13 @@ const defaultSettings = {
 	delimiter: ",",
 	includeCryptoAmount: true,
 	includeDate: true,
-	includeFiatAmount: true,
 	includeHeaderRow: true,
 	includeSenderRecipient: true,
 	includeTransactionId: true,
-	transactionType: "all",
+	transactionType: "received",
 };
+
+const ExportButton = "TransactionExport__submit-button";
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
@@ -57,10 +58,14 @@ describe("TransactionExportForm", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
-		const { asFragment } = renderResponsive(<TransactionExportForm />, breakpoint, {
-			history,
-			route: dashboardURL,
-		});
+		const { asFragment } = renderResponsive(
+			<TransactionExportForm wallet={profile.wallets().first()} />,
+			breakpoint,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -71,7 +76,7 @@ describe("TransactionExportForm", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportForm onCancel={onCancel} />
+				<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />
 			</Route>,
 			{
 				history,
@@ -86,12 +91,31 @@ describe("TransactionExportForm", () => {
 		expect(onCancel).toHaveBeenCalledWith();
 	});
 
+	it("should render fiat column if wallet is live", () => {
+		const onCancel = jest.fn();
+		jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should emit onExport", async () => {
 		const onExport = jest.fn();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportForm onExport={onExport} />
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
 			</Route>,
 			{
 				history,
@@ -101,7 +125,7 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 		await waitFor(() => expect(onExport).toHaveBeenCalledWith(expect.objectContaining(defaultSettings)));
 	});
 
@@ -110,7 +134,7 @@ describe("TransactionExportForm", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportForm onExport={onExport} />
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
 			</Route>,
 			{
 				history,
@@ -120,9 +144,9 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
-		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[2]);
+		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
@@ -139,7 +163,7 @@ describe("TransactionExportForm", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportForm onExport={onExport} />
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
 			</Route>,
 			{
 				history,
@@ -155,7 +179,7 @@ describe("TransactionExportForm", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
@@ -167,12 +191,47 @@ describe("TransactionExportForm", () => {
 		);
 	});
 
+	it("should render custom date range", async () => {
+		const onExport = jest.fn();
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
+
+		userEvent.click(screen.getByTestId(ExportButton));
+
+		await waitFor(() =>
+			expect(onExport).toHaveBeenCalledWith(
+				expect.objectContaining({
+					...defaultSettings,
+					dateRange: "custom",
+					from: new Date("2020-06-24T00:00:00.000Z"),
+					to: new Date("2020-07-01T00:00:00.000Z"),
+				}),
+			),
+		);
+	});
+
 	it("should select tab delimiter", async () => {
 		const onExport = jest.fn();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportForm onExport={onExport} />
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
 			</Route>,
 			{
 				history,
@@ -186,9 +245,9 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--all-2"));
+		userEvent.click(screen.getByTestId("dropdown__option--2"));
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
@@ -198,5 +257,34 @@ describe("TransactionExportForm", () => {
 				}),
 			),
 		);
+	});
+
+	it("should not emit onExport if all column toggles are off", async () => {
+		const onExport = jest.fn();
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportForm onExport={onExport} wallet={profile.wallets().first()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+
+		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("dropdown__option--2"));
+
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-tx-id"));
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-date"));
+		userEvent.click(screen.getAllByTestId("TransactionExportForm__toggle-include-crypto-amount")[0]);
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await waitFor(() => expect(onExport).not.toHaveBeenCalledWith(expect.anything()));
 	});
 });

@@ -40,7 +40,7 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					ref={form.register()}
 					name="includeSenderRecipient"
 					defaultChecked={!!form.getValues("includeSenderRecipient")}
-					data-testid="TransactionExportForm__toggle-include-crypto-amount"
+					data-testid="TransactionExportForm__toggle-include-sender-recipient"
 				/>
 			),
 			wrapperClass: "py-4",
@@ -67,7 +67,7 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 					ref={form.register()}
 					name="includeFiatAmount"
 					defaultChecked={!!form.getValues("includeFiatAmount")}
-					data-testid="TransactionExportForm__toggle-include-tx-id"
+					data-testid="TransactionExportForm__toggle-include-fiat-amount"
 					value={form.getValues("includeFiatAmount")}
 				/>
 			),
