@@ -75,8 +75,8 @@ describe("Dropdown", () => {
 				icon: "trash",
 				iconClassName: (option) => option.label + "--class",
 				label: "option-1",
-				value: "1",
 				secondaryLabel: () => "1",
+				value: "1",
 			},
 		];
 
