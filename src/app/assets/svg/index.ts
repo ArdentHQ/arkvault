@@ -3,6 +3,7 @@ import { FC, SVGProps } from "react";
 import { ArrowIcons } from "./arrows";
 import { ReactComponent as Bell } from "./bell.svg";
 import { ReactComponent as Categories } from "./categories.svg";
+import { ReactComponent as Calendar } from "./calendar.svg";
 import { ReactComponent as ChartActiveDot } from "./chart-active-dot.svg";
 import { ReactComponent as Checkmark } from "./check-mark.svg";
 import { ReactComponent as CheckmarkSmall } from "./check-mark-small.svg";
@@ -27,6 +28,7 @@ import { ReactComponent as Dash } from "./dash.svg";
 import { ReactComponent as EllipsisVertical } from "./ellipsis-vertical.svg";
 import { ReactComponent as ExtensionWwe } from "./extension-wwe.svg";
 import { ReactComponent as ExtensionJson } from "./extension-json.svg";
+import { ReactComponent as ExtensionCsv } from "./extension-csv.svg";
 import { ReactComponent as Eye } from "./eye.svg";
 import { ReactComponent as EyeSlash } from "./eye-slash.svg";
 import { ReactComponent as File } from "./file.svg";
@@ -76,6 +78,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...Currencies,
 	...TransactionIcons,
 	Bell,
+	Calendar,
 	Categories,
 	ChartActiveDot,
 	Checkmark,
@@ -100,6 +103,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Delegate: TransactionIcons.DelegateRegistration,
 	Download,
 	EllipsisVertical,
+	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWwe,
 	Eye,

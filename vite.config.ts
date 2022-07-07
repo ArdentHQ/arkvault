@@ -18,6 +18,7 @@ export default defineConfig({
 				manualChunks: {
 					react: [
 						"react",
+						"react-datepicker",
 						"react-dom",
 						"react-error-boundary",
 						"react-hook-form",

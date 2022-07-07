@@ -34,7 +34,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	}
 
 	return (
-		<div key={key} className="mt-4 first:mt-0">
+		<div key={key} className={cn({ "mt-4": title || hasDivider })}>
 			{hasDivider && (
 				<div className="mx-8 -my-2">
 					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" />
@@ -52,6 +52,14 @@ const renderOptionGroup = ({ key, hasDivider, title, options, onSelect }: Dropdo
 	);
 };
 
+const renderSecondaryLabel = (value: string | Function, isActive: boolean) => {
+	if (typeof value === "function") {
+		return value(isActive);
+	}
+
+	return value;
+};
+
 export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => {
 	const onSelectItem = (event: React.MouseEvent | React.KeyboardEvent, option: DropdownOption) => {
 		event.preventDefault();
@@ -61,7 +69,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 
 	if (isOptionGroup(options)) {
 		return (
-			<div className="pt-5 pb-1">
+			<div className="py-1">
 				{(options as DropdownOptionGroup[]).map((optionGroup: DropdownOptionGroup) =>
 					renderOptionGroup({ ...optionGroup, onSelect }),
 				)}
@@ -90,7 +98,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 						{option.label}
 						{option.secondaryLabel && (
 							<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-600">
-								{option.secondaryLabel}
+								{renderSecondaryLabel(option.secondaryLabel, !!option.active)}
 							</span>
 						)}
 					</span>

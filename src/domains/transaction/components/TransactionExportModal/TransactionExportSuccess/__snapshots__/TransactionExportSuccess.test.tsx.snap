@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionExportForm should render in lg 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-1dwg83m"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-check-mark.svg
+          </svg>
+        </div>
+        <span>
+          Success
+        </span>
+      </div>
+      <div
+        class="css-k5jr4t"
+      >
+        The transaction history is now ready, download it below.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportSuccess__download-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportForm should render in md 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-1dwg83m"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-check-mark.svg
+          </svg>
+        </div>
+        <span>
+          Success
+        </span>
+      </div>
+      <div
+        class="css-k5jr4t"
+      >
+        The transaction history is now ready, download it below.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportSuccess__download-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportForm should render in sm 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-1dwg83m"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-check-mark.svg
+          </svg>
+        </div>
+        <span>
+          Success
+        </span>
+      </div>
+      <div
+        class="css-k5jr4t"
+      >
+        The transaction history is now ready, download it below.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportSuccess__download-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportForm should render in xl 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-1dwg83m"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-check-mark.svg
+          </svg>
+        </div>
+        <span>
+          Success
+        </span>
+      </div>
+      <div
+        class="css-k5jr4t"
+      >
+        The transaction history is now ready, download it below.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportSuccess__download-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportForm should render in xs 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-1dwg83m"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-check-mark.svg
+          </svg>
+        </div>
+        <span>
+          Success
+        </span>
+      </div>
+      <div
+        class="css-k5jr4t"
+      >
+        The transaction history is now ready, download it below.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportSuccess__download-button"
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportForm should render warnigg if count is zero 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-full md:block"
+    >
+      warning-light.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-pra96q"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-exclamation-mark.svg
+          </svg>
+        </div>
+        <span>
+          Warning
+        </span>
+      </div>
+      <div
+        class="css-1pvpof3"
+      >
+        No transactions could be found for the selected period.
+      </div>
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportSuccess__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Cancel
+        </div>
+      </button>
+      <button
+        class="css-1yqe28v"
+        data-testid="TransactionExportSuccess__download-button"
+        disabled=""
+        type="submit"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Download
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionExportError should render in lg 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+    >
+      error-banner-light-green.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-ic0qlc"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-cross.svg
+          </svg>
+        </div>
+        <span>
+          Error
+        </span>
+      </div>
+      <div
+        class="css-6o9bco"
+      />
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportError__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportError__retry-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Retry
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportError should render in md 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+    >
+      error-banner-light-green.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-ic0qlc"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-cross.svg
+          </svg>
+        </div>
+        <span>
+          Error
+        </span>
+      </div>
+      <div
+        class="css-6o9bco"
+      />
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportError__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportError__retry-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Retry
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportError should render in sm 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+    >
+      error-banner-light-green.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-ic0qlc"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-cross.svg
+          </svg>
+        </div>
+        <span>
+          Error
+        </span>
+      </div>
+      <div
+        class="css-6o9bco"
+      />
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportError__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportError__retry-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Retry
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportError should render in xl 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+    >
+      error-banner-light-green.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-ic0qlc"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-cross.svg
+          </svg>
+        </div>
+        <span>
+          Error
+        </span>
+      </div>
+      <div
+        class="css-6o9bco"
+      />
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportError__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportError__retry-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Retry
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TransactionExportError should render in xs 1`] = `
+<DocumentFragment>
+  <div>
+    <svg
+      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+    >
+      error-banner-light-green.svg
+    </svg>
+    <div
+      class="flex flex-col overflow-hidden rounded-xl my-6"
+    >
+      <div
+        class="css-ic0qlc"
+      >
+        <div
+          class="css-v0ob3f"
+          height="16"
+          width="16"
+        >
+          <svg>
+            circle-cross.svg
+          </svg>
+        </div>
+        <span>
+          Error
+        </span>
+      </div>
+      <div
+        class="css-6o9bco"
+      />
+    </div>
+    <div
+      class="css-1kzb86y"
+    >
+      <button
+        class="css-1jhy6v9"
+        data-testid="TransactionExportError__close-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Close
+        </div>
+      </button>
+      <button
+        class="css-1bx0hyc"
+        data-testid="TransactionExportError__retry-button"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Retry
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
