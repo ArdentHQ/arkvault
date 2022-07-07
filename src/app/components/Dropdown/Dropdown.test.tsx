@@ -303,6 +303,7 @@ describe("Dropdown", () => {
 
 	it("should render dropdown group options with divider, icon and secondary label", () => {
 		const primaryOptions: DropdownOptionGroup = {
+			hasDivider: false,
 			key: "primary",
 			options: [
 				{
