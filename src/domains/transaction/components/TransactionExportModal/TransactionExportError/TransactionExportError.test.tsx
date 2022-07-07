@@ -20,7 +20,7 @@ describe("TransactionExportError", () => {
 			.persist();
 	});
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 	});
 

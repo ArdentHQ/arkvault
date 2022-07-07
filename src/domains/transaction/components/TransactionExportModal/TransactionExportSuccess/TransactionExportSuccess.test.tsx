@@ -21,7 +21,7 @@ describe("TransactionExportForm", () => {
 			.persist();
 	});
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 	});
 

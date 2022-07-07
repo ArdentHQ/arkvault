@@ -1,13 +1,21 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react-hooks";
+import nock from "nock";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
-import nock from "nock";
 
 describe("useTransactionExport hook", () => {
 	let profile: Contracts.IProfile;
+	const renderExportHook = () =>
+		renderHook(() =>
+			useTransactionExport({
+				initialStatus: ExportProgressStatus.Idle,
+				profile,
+				wallet: profile.wallets().first(),
+			}),
+		);
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -34,27 +42,21 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should start export", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		await act(async () => {
 			await result.current.startExport({
 				dateRange: "custom",
 				delimiter: "comma",
+				from: Date.now(),
 				includeCryptoAmount: true,
 				includeDate: true,
 				includeFiatAmount: true,
 				includeHeaderRow: true,
 				includeSenderRecipient: true,
 				includeTransactionId: true,
-				transactionType: "all",
-				from: Date.now(),
 				to: Date.now(),
+				transactionType: "all",
 			});
 		});
 
@@ -64,13 +66,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should export all transactions", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		await act(async () => {
 			await result.current.startExport({
@@ -92,13 +88,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should export current transactions", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		await act(async () => {
 			await result.current.startExport({
@@ -120,13 +110,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should export last month transactions", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		await act(async () => {
 			await result.current.startExport({
@@ -154,27 +138,21 @@ describe("useTransactionExport hook", () => {
 				throw new Error("error");
 			});
 
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		await act(async () => {
 			await result.current.startExport({
 				dateRange: "custom",
 				delimiter: "comma",
+				from: Date.now(),
 				includeCryptoAmount: true,
 				includeDate: true,
 				includeFiatAmount: true,
 				includeHeaderRow: true,
 				includeSenderRecipient: true,
 				includeTransactionId: true,
-				transactionType: "all",
-				from: Date.now(),
 				to: Date.now(),
+				transactionType: "sent",
 			});
 		});
 
@@ -183,13 +161,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should set idle status on retry", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Progress,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		act(() => {
 			result.current.retry();
@@ -199,13 +171,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should cancel export", async () => {
-		const { result } = renderHook(() =>
-			useTransactionExport({
-				initialStatus: ExportProgressStatus.Progress,
-				wallet: profile.wallets().first(),
-				profile,
-			}),
-		);
+		const { result } = renderExportHook();
 
 		act(() => {
 			result.current.cancelExport();

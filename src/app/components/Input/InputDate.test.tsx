@@ -1,15 +1,15 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { InputDate } from "./InputDate";
-import { render, screen } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react-hooks";
 import { FormProvider, useForm } from "react-hook-form";
+import { InputDate } from "./InputDate";
+import { render, screen } from "@/utils/testing-library";
 import { FormField } from "@/app/components/Form";
 
 const defaultValues: { startDate: string | number; endDate: string | number } = {
-	startDate: new Date().getTime(),
-	endDate: new Date().getTime(),
+	endDate: Date.now(),
+	startDate: Date.now(),
 };
 
 describe("InputDate", () => {
@@ -24,6 +24,7 @@ describe("InputDate", () => {
 		);
 
 		expect(screen.getByTestId("InputDate")).toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("InputDate__calendar"));
 
 		expect(asFragment()).toMatchSnapshot();

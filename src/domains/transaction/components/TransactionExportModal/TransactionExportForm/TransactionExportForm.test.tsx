@@ -32,6 +32,8 @@ const defaultSettings = {
 	transactionType: "received",
 };
 
+const ExportButton = "TransactionExport__submit-button";
+
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
 
@@ -123,7 +125,7 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 		await waitFor(() => expect(onExport).toHaveBeenCalledWith(expect.objectContaining(defaultSettings)));
 	});
 
@@ -144,7 +146,7 @@ describe("TransactionExportForm", () => {
 
 		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
@@ -177,7 +179,7 @@ describe("TransactionExportForm", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
@@ -210,15 +212,15 @@ describe("TransactionExportForm", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(
 				expect.objectContaining({
 					...defaultSettings,
 					dateRange: "custom",
-					to: new Date("2020-07-01T00:00:00.000Z"),
 					from: new Date("2020-06-24T00:00:00.000Z"),
+					to: new Date("2020-07-01T00:00:00.000Z"),
 				}),
 			),
 		);
@@ -245,7 +247,7 @@ describe("TransactionExportForm", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__option--2"));
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(screen.getByTestId(ExportButton));
 
 		await waitFor(() =>
 			expect(onExport).toHaveBeenCalledWith(

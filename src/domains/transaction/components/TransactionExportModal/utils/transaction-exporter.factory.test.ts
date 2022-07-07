@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { TransactionExporter } from "./transaction-exporter.factory";
-import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import nock from "nock";
+import { TransactionExporter } from "./transaction-exporter.factory";
+import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 
 describe("CsvFormatter", () => {
 	let profile: Contracts.IProfile;
@@ -46,16 +46,18 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should sync all transactions recursively", async () => {
-		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first(), limit: 13 });
+		const exporter = TransactionExporter({ limit: 13, profile, wallet: profile.wallets().first() });
 		//@ts-ignore
-		await exporter.transactions().sync({ dateRange: { from: new Date().getTime(), to: new Date().getTime() } });
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
 		expect(exporter.transactions().items()).toHaveLength(17);
 	});
 
 	it("should sync transactions", async () => {
 		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
 		//@ts-ignore
-		await exporter.transactions().sync({ dateRange: { from: new Date().getTime(), to: new Date().getTime() } });
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
 		expect(exporter.transactions().items()).toHaveLength(15);
 	});
 
@@ -65,7 +67,7 @@ describe("CsvFormatter", () => {
 		await exporter
 			.transactions()
 			//@ts-ignore
-			.sync({ dateRange: { from: new Date().getTime(), to: new Date().getTime() }, cursor: 2 });
+			.sync({ cursor: 2, dateRange: { from: Date.now(), to: Date.now() } });
 
 		expect(exporter.transactions().items()).toHaveLength(0);
 	});
@@ -73,7 +75,8 @@ describe("CsvFormatter", () => {
 	it("should sync transactions and export to csv", async () => {
 		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
 		//@ts-ignore
-		await exporter.transactions().sync({ dateRange: { from: new Date().getTime(), to: new Date().getTime() } });
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
+
 		expect(exporter.transactions().items()).toHaveLength(15);
 		expect(exporter.transactions().toCsv({}).length).toBeGreaterThan(0);
 	});
