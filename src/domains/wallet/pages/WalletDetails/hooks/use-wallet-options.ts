@@ -135,7 +135,11 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 		title: t("WALLETS.PAGE_WALLET_DETAILS.ADDITIONAL_OPTIONS"),
 	};
 
-	if ((wallet.balance() > 0 || wallet.publicKey()) && isRestoredAndSynced(wallet)) {
+	if (
+		!wallet.networkId().endsWith("custom") &&
+		(wallet.balance() > 0 || wallet.publicKey()) &&
+		isRestoredAndSynced(wallet)
+	) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.TRANSACTION_HISTORY"),
 			value: "transaction-history",
