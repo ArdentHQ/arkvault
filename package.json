@@ -105,7 +105,6 @@
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/react-hooks": "^7.0.2",
 		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^28.1.4",
 		"@types/postcss-import": "^14.0.0",
 		"@types/react": "^17.0.0",
 		"@types/react-datepicker": "^4.4.2",
