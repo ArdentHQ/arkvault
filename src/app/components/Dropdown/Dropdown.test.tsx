@@ -336,7 +336,6 @@ describe("Dropdown", () => {
 					value: "value 1.2",
 				},
 			],
-			title: "Secondary Options 1",
 		};
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");

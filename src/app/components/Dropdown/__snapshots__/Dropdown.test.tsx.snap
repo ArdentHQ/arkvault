@@ -491,11 +491,6 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
             />
           </div>
           <ul>
-            <li
-              class="block whitespace-nowrap px-8 text-left text-xs font-bold uppercase text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Secondary Options 1
-            </li>
             <ul
               data-testid="dropdown__options"
             >
