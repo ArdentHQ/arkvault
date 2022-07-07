@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
@@ -7,6 +7,7 @@ import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { ProfileForm, ProfileFormState } from "@/domains/profile/components/ProfileForm";
 import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
+import { useAccentColor } from "@/app/hooks";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;
@@ -29,6 +30,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	shouldValidate,
 }) => {
 	const { t } = useTranslation();
+	const { setProfileAccentColor } = useAccentColor();
 
 	const handleSubmit = async ({
 		avatarImage,
@@ -52,6 +54,10 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 
 		onSubmit(profile);
 	};
+
+	useEffect(() => {
+		setProfileAccentColor(profile);
+	}, []);
 
 	return (
 		<div className="mx-auto max-w-xl">

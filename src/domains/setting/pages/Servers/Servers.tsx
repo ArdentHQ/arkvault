@@ -11,7 +11,7 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile, useProfileJobs } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useNetworks, useProfileJobs } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import NodesStatus from "@/domains/setting/pages/Servers/blocks/NodesStatus";
 import CustomPeers from "@/domains/setting/pages/Servers/blocks/CustomPeers";
@@ -25,6 +25,8 @@ import { networkDisplayName, profileAllEnabledNetworkIds } from "@/utils/network
 export const ServersSettings = () => {
 	const { t } = useTranslation();
 
+	const { isXs } = useBreakpoint();
+
 	const { persist, env } = useEnvironmentContext();
 	const profile = useActiveProfile();
 	const { syncServerStatus } = useProfileJobs(profile);
@@ -34,13 +36,10 @@ export const ServersSettings = () => {
 	const [networkToDelete, setNetworkToDelete] = useState<NormalizedNetwork | undefined>(undefined);
 	const [networkToUpdate, setNetworkToUpdate] = useState<NormalizedNetwork | undefined>(undefined);
 
-	const enabledNetworks = useMemo(
-		() =>
-			profile
-				.availableNetworks()
-				.filter((network) => profileAllEnabledNetworkIds(profile).includes(network.id())),
-		[profile],
-	);
+	const enabledNetworks = useNetworks({
+		filter: (network) => profileAllEnabledNetworkIds(profile).includes(network.id()),
+		profile,
+	});
 
 	const form = useForm({
 		defaultValues: {
@@ -152,7 +151,7 @@ export const ServersSettings = () => {
 				contentClass: "sm:mt-4",
 				label: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.TITLE"),
 				labelDescription: t("SETTINGS.SERVERS.OPTIONS.CUSTOM_PEERS.DESCRIPTION"),
-				wrapperClass: "pt-6",
+				wrapperClass: "pt-6 sm:pb-6",
 			},
 		],
 		[enabledNetworks, customNetworks],
@@ -182,7 +181,7 @@ export const ServersSettings = () => {
 			<Header title={t("SETTINGS.SERVERS.TITLE")} subtitle={t("SETTINGS.SERVERS.SUBTITLE")} />
 
 			<Form id="servers__form" context={form} onSubmit={saveSettings} className="mt-4">
-				<ListDivided items={serverOptions} />
+				<ListDivided items={serverOptions} noBorder={isXs} />
 
 				<FormButtons>
 					<Button disabled={isSaveButtonDisabled} data-testid="Server-settings__submit-button" type="submit">

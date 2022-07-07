@@ -9,6 +9,7 @@ import { VerifyMessage } from "@/domains/wallet/components/VerifyMessage";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { WalletEncryptionWarning } from "@/domains/wallet/components/WalletEncryptionWarning";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
+import { TransactionExportModal } from "@/domains/transaction/components/TransactionExportModal";
 
 export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 	wallet,
@@ -106,6 +107,10 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 
 			{activeModal === "unlockable-balances" && (
 				<UnlockTokensModal profile={profile} wallet={wallet} onClose={hideActiveModal} />
+			)}
+
+			{activeModal === "transaction-history" && (
+				<TransactionExportModal wallet={wallet} isOpen onClose={hideActiveModal} />
 			)}
 		</>
 	);

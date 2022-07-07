@@ -17,9 +17,8 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -64,9 +63,8 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -289,9 +287,8 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -320,9 +317,8 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1820,9 +1816,8 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -1867,9 +1862,8 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -2092,9 +2086,8 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2123,9 +2116,8 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2582,9 +2574,8 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -2629,9 +2620,8 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -2854,9 +2844,8 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2885,9 +2874,8 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -3346,9 +3334,8 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -3393,9 +3380,8 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -3618,9 +3604,8 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -3649,9 +3634,8 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -4108,9 +4092,8 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -4155,9 +4138,8 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -4380,9 +4362,8 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -4411,9 +4392,8 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -4870,9 +4850,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -4917,9 +4896,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -5142,9 +5120,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -5173,9 +5150,8 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -5655,9 +5631,8 @@ exports[`SendIpfs should show error step and go back 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -5702,9 +5677,8 @@ exports[`SendIpfs should show error step and go back 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -5927,9 +5901,8 @@ exports[`SendIpfs should show error step and go back 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -5958,9 +5931,8 @@ exports[`SendIpfs should show error step and go back 1`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div

@@ -649,16 +649,16 @@ exports[`Network Settings should check the main network by default 1`] = `
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-6"
                   data-testid="Form"
                   id="Networks--form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col pt-4 pb-6"
+                      class="flex w-full flex-col pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -783,7 +783,7 @@ exports[`Network Settings should check the main network by default 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-4 pb-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1508,16 +1508,16 @@ exports[`Network Settings should render networks settings section 1`] = `
                   </div>
                 </div>
                 <form
-                  class="mt-4"
+                  class="mt-6"
                   data-testid="Form"
                   id="Networks--form"
                 >
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
-                      class="flex w-full flex-col pt-4 pb-6"
+                      class="flex w-full flex-col pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div
@@ -1642,7 +1642,7 @@ exports[`Network Settings should render networks settings section 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-4 pb-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div

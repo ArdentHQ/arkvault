@@ -26,6 +26,7 @@ import {
 	waitFor,
 	within,
 	mockNanoXTransport,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
 const passphrase = getDefaultWalletMnemonic();
@@ -59,6 +60,8 @@ const feeWarningContinueID = "FeeWarning__continue-button";
 const reviewStepID = "SendIpfs__review-step";
 
 describe("SendIpfs", () => {
+	let resetProfileNetworksMock: () => void;
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -85,6 +88,14 @@ describe("SendIpfs", () => {
 
 	afterAll(() => {
 		getVersionSpy.mockRestore();
+	});
+
+	beforeEach(() => {
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+	});
+
+	afterEach(() => {
+		resetProfileNetworksMock();
 	});
 
 	it("should render form step", async () => {

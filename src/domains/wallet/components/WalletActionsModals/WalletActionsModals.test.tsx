@@ -219,4 +219,25 @@ describe("WalletActionsModals", () => {
 
 		expect(asFragment).toMatchSnapshot();
 	});
+
+	it("should render `transaction-history` modal", async () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<LedgerProvider>
+					<WalletActionsModals
+						wallet={mainnetWallet}
+						activeModal={"transaction-history"}
+						setActiveModal={setActiveModal}
+					/>
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		await expect(screen.findByTestId("TransactionExportForm")).resolves.toBeInTheDocument();
+
+		expect(asFragment).toMatchSnapshot();
+	});
 });

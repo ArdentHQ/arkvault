@@ -32,7 +32,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
             </span>
           </span>
           <span
-            class="css-a8q9z0"
+            class="css-1jxrcg5"
           >
             <div
               class="p-1 css-15txs7d"
@@ -52,10 +52,10 @@ exports[`FilterTransactions should open dropdown list with all transaction types
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
         <div
-          class="pt-5 pb-1"
+          class="py-1"
         >
           <div
-            class="mt-4 first:mt-0"
+            class=""
           >
             <ul>
               <ul
@@ -74,7 +74,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
             </ul>
           </div>
           <div
-            class="mt-4 first:mt-0"
+            class="mt-4"
           >
             <div
               class="mx-8 -my-2"
@@ -169,7 +169,7 @@ exports[`FilterTransactions should open dropdown list with all transaction types
             </ul>
           </div>
           <div
-            class="mt-4 first:mt-0"
+            class="mt-4"
           >
             <div
               class="mx-8 -my-2"

@@ -2,10 +2,10 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import hash from "string-hash";
-import { useAvailableNetworks } from "@/domains/wallet/hooks/use-available-networks";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useNetworks } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
+import { sortWallets } from "@/utils/wallet-utils";
 
 const groupWalletsByNetwork = (
 	wallets: Contracts.IReadWriteWallet[],
@@ -41,25 +41,18 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 
 	const { walletsDisplayType, selectedNetworkIds } = useWalletFilters({ profile });
 
-	const profileAvailableNetworks = useAvailableNetworks({ profile });
+	const profileAvailableNetworks = useNetworks({ profile });
 
 	const wallets = useMemo(
-		() => {
-			let wallets = profile
-				.wallets()
-				.valuesWithCoin()
-				.filter((wallet) => profileAvailableNetworks.some((network) => wallet.network().id() === network.id()));
-
-			wallets = wallets.sort(
-				(a, b) =>
-					a.network().coinName().localeCompare(b.network().coinName()) ||
-					Number(a.network().isTest()) - Number(b.network().isTest()) ||
-					Number(b.isStarred()) - Number(a.isStarred()) ||
-					(a.alias() ?? "").localeCompare(b.alias() ?? ""),
-			);
-
-			return wallets;
-		},
+		() =>
+			sortWallets(
+				profile
+					.wallets()
+					.valuesWithCoin()
+					.filter((wallet) =>
+						profileAvailableNetworks.some((network) => wallet.network().id() === network.id()),
+					),
+			),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[profile, isRestored, starredWalletsCount, walletsCount, aliasesHash, profileAvailableNetworks],
 	);

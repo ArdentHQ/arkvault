@@ -659,7 +659,7 @@ exports[`Export Settings should render export settings 1`] = `
                     Wallets
                   </h2>
                   <ul
-                    class="css-slpw39"
+                    class="css-14npy8n"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -712,7 +712,7 @@ exports[`Export Settings should render export settings 1`] = `
                       </div>
                     </li>
                     <li
-                      class="flex w-full flex-col pt-6"
+                      class="flex w-full flex-col pt-6 sm:pb-6"
                       data-testid="list-divided-item__wrapper"
                     >
                       <div

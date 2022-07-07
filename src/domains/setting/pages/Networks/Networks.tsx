@@ -12,7 +12,7 @@ import { Button } from "@/app/components/Button";
 import { Form, FormButtons } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { ListDivided } from "@/app/components/ListDivided";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { toasts } from "@/app/services";
 import { Toggle } from "@/app/components/Toggle";
@@ -27,6 +27,8 @@ import { useWalletConfig } from "@/domains/wallet/hooks";
 
 export const NetworksSettings = () => {
 	const { t } = useTranslation();
+
+	const { isXs } = useBreakpoint();
 
 	const getProfileNetworksList = () => {
 		const profileNetworks = profile.networks().all();
@@ -260,7 +262,7 @@ export const NetworksSettings = () => {
 				),
 				label: t("SETTINGS.NETWORKS.OPTIONS.DEFAULT_NETWORKS.TITLE"),
 				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.DEFAULT_NETWORKS.DESCRIPTION"),
-				wrapperClass: "pt-4 pb-6",
+				wrapperClass: "pb-6",
 			},
 			{
 				content: useCustomNetworks && (
@@ -293,7 +295,7 @@ export const NetworksSettings = () => {
 					/>
 				),
 				labelDescription: t("SETTINGS.NETWORKS.OPTIONS.CUSTOM_NETWORKS.DESCRIPTION"),
-				wrapperClass: "pt-4 pb-6",
+				wrapperClass: "pt-6 sm:pb-6",
 			},
 		],
 		[selectedNetworks, useCustomNetworks, customNetworks],
@@ -386,8 +388,8 @@ export const NetworksSettings = () => {
 		<SettingsWrapper profile={profile} activeSettings="networks">
 			<Header title={t("SETTINGS.NETWORKS.TITLE")} subtitle={t("SETTINGS.NETWORKS.SUBTITLE")} />
 
-			<Form id="Networks--form" context={form} onSubmit={handleSubmit} className="mt-4">
-				<ListDivided items={networksOptions} />
+			<Form id="Networks--form" context={form} onSubmit={handleSubmit} className="mt-6">
+				<ListDivided items={networksOptions} noBorder={isXs} />
 
 				<FormButtons>
 					<Button disabled={isSaveButtonDisabled} data-testid="Networks--submit-button" type="submit">

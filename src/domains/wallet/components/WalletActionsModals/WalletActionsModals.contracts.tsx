@@ -7,7 +7,8 @@ export type WalletActionsModalType =
 	| "wallet-name"
 	| "delete-wallet"
 	| "unlockable-balances"
-	| "second-signature";
+	| "second-signature"
+	| "transaction-history";
 
 export interface WalletActionsProperties {
 	wallet: Contracts.IReadWriteWallet;

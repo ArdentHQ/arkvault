@@ -5,7 +5,8 @@ import { useMemo, useState } from "react";
 import { useNetworks, useWalletAlias } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
+import { sortWallets } from "@/utils/wallet-utils";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
 
 export const useVoteFilters = ({
 	profile,
@@ -19,7 +20,6 @@ export const useVoteFilters = ({
 	hasWalletId: boolean;
 }) => {
 	const { defaultConfiguration } = useWalletFilters({ profile });
-	const basicNetworks = useNetworks(profile);
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = useMemo(() => (hasWalletId ? wallet.address() : ""), [hasWalletId, wallet]);
 	const walletNetwork = useMemo(() => (hasWalletId ? wallet.network().id() : ""), [hasWalletId, wallet]);
@@ -35,15 +35,18 @@ export const useVoteFilters = ({
 	const [selectedNetwork, setSelectedNetwork] = useState(walletNetwork);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
-	const availableNetworks = useAvailableNetworks({ profile });
+	const availableNetworks = useNetworks({
+		filter: (network) => profileEnabledNetworkIds(profile).includes(network.id()),
+		profile,
+	});
 
 	const networks = useMemo(
 		() =>
-			basicNetworks.map((network) => ({
+			availableNetworks.map((network) => ({
 				isSelected: selectedNetworkIds.includes(network.id()),
 				network,
 			})),
-		[basicNetworks, selectedNetworkIds],
+		[availableNetworks, selectedNetworkIds],
 	);
 
 	const isFilterChanged = useMemo(() => {
@@ -69,10 +72,12 @@ export const useVoteFilters = ({
 	};
 
 	const walletsByCoin = useMemo(() => {
-		const usedWallets = profile
-			.wallets()
-			.values()
-			.filter((wallet) => availableNetworks.some((network) => wallet.network().id() === network.id()));
+		const usedWallets = sortWallets(
+			profile
+				.wallets()
+				.values()
+				.filter((wallet) => availableNetworks.some((network) => wallet.network().id() === network.id())),
+		);
 
 		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
 

@@ -32,6 +32,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
+	mockProfileWithPublicAndTestNetworks,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 
@@ -94,6 +95,8 @@ const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 
 describe("SendVote", () => {
+	let resetProfileNetworksMock: () => void;
+
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -125,10 +128,12 @@ describe("SendVote", () => {
 
 	beforeEach(() => {
 		jest.useFakeTimers("legacy");
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
 		jest.useRealTimers();
+		resetProfileNetworksMock();
 	});
 
 	it("should return to the select a delegate page to vote", async () => {

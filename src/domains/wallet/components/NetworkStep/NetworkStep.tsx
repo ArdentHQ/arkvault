@@ -1,14 +1,16 @@
+import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { Divider } from "@/app/components/Divider";
+import { useNetworks } from "@/app/hooks";
 
 interface NetworkStepProperties {
 	profile: Contracts.IProfile;
@@ -24,7 +26,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 
 	const { getValues, setValue } = useFormContext();
 
-	const networks = useAvailableNetworks({ filter, profile });
+	const networks = useNetworks({ filter, profile });
 
 	const selectedNetwork: Networks.Network = getValues("network");
 
@@ -42,7 +44,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 				</div>
 			)}
 
-			<FormField name="network" className="mt-8">
+			<FormField name="network" className={cn("mt-8", { "my-8": networks.length === 2 })}>
 				{networks.length > 2 && <FormLabel label={t("COMMON.CRYPTOASSET")} />}
 
 				<SelectNetwork
@@ -53,6 +55,8 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 					onSelect={handleSelect}
 				/>
 			</FormField>
+
+			{networks.length === 2 && <Divider />}
 		</section>
 	);
 };

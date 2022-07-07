@@ -18,7 +18,7 @@ import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
 import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useScroll } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useNetworks, useScroll } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -27,7 +27,6 @@ import { useLink } from "@/app/hooks/use-link";
 import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { Logo } from "@/app/components/Logo";
-import { useAvailableNetworks } from "@/domains/wallet/hooks";
 
 const NavWrapper = styled.nav<{ noBorder?: boolean; noShadow?: boolean; scroll?: number }>`
 	${defaultStyle}
@@ -177,7 +176,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const scroll = useScroll();
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
-	const availableNetworks = useAvailableNetworks({ profile });
+	const availableNetworks = useNetworks({ profile });
 
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {

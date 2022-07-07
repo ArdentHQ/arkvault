@@ -69,6 +69,26 @@ describe("Dropdown", () => {
 		expect(container).toContainHTML("option-1--class");
 	});
 
+	it("should render with secondary label", () => {
+		const optionsWithIcon = [
+			{
+				icon: "trash",
+				iconClassName: (option) => option.label + "--class",
+				label: "option-1",
+				secondaryLabel: () => "1",
+				value: "1",
+			},
+		];
+
+		const { container } = render(<Dropdown options={optionsWithIcon} />);
+
+		const dropdown = screen.getByTestId("dropdown__toggle");
+
+		userEvent.click(dropdown);
+
+		expect(container).toContainHTML("option-1--class");
+	});
+
 	it("should open dropdown options on icon click", () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
@@ -283,6 +303,7 @@ describe("Dropdown", () => {
 
 	it("should render dropdown group options with divider, icon and secondary label", () => {
 		const primaryOptions: DropdownOptionGroup = {
+			hasDivider: false,
 			key: "primary",
 			options: [
 				{
@@ -315,7 +336,6 @@ describe("Dropdown", () => {
 					value: "value 1.2",
 				},
 			],
-			title: "Secondary Options 1",
 		};
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");

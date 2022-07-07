@@ -36,7 +36,7 @@ describe("SelectNetworkDropdown", () => {
 	});
 
 	it("should render with default network", () => {
-		const networks = env.availableNetworks();
+		const networks = profile.availableNetworks();
 
 		const { container } = render(<SelectNetworkDropdown profile={profile} selectedNetwork={networks[0]} />);
 
@@ -44,7 +44,7 @@ describe("SelectNetworkDropdown", () => {
 	});
 
 	it("should change network", () => {
-		const networks = env.availableNetworks();
+		const networks = profile.availableNetworks();
 		const onChange = jest.fn();
 
 		const { container } = render(
