@@ -17,8 +17,7 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 	if (dateRange === DateRange.Custom) {
 		return {
 			from: DateTime.make(from!.toString()).startOf("day").toUNIX(),
-			to: DateTime.make(to!.toString()).startOf("day").addDay().subSecond().toUNIX(),
-			// to: DateTime.make(to!.toString()).endOf("day").toUNIX(),
+			to: DateTime.make(to!.toString()).endOf("day").toUNIX(),
 		};
 	}
 
