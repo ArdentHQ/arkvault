@@ -451,17 +451,21 @@ exports[`SendTransfer Fee Handling should send a single transfer with a high fee
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1308,17 +1312,21 @@ exports[`SendTransfer Fee Handling should send a single transfer with a low fee 
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>

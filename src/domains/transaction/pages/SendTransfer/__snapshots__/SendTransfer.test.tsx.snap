@@ -373,17 +373,21 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1500,22 +1504,26 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Authenticate
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter your mnemonic passphrase to authenticate the transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Authenticate
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter your mnemonic passphrase to authenticate the transaction.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2086,22 +2094,52 @@ exports[`SendTransfer should render form and use location state 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Send DARK
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter details below to send your transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Send DARK
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter details below to send your transaction.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="mt-6 sm:mt-0"
+                      >
+                        <div
+                          class="flex h-full align-bottom"
+                        >
+                          <button
+                            class="css-13nqo3a"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg>
+                                qr-code.svg
+                              </svg>
+                            </div>
+                            <span
+                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                            >
+                              Scan
+                            </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -3265,22 +3303,52 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Send DARK
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter details below to send your transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Send DARK
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter details below to send your transaction.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="mt-6 sm:mt-0"
+                      >
+                        <div
+                          class="flex h-full align-bottom"
+                        >
+                          <button
+                            class="css-13nqo3a"
+                          >
+                            <div
+                              class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg>
+                                qr-code.svg
+                              </svg>
+                            </div>
+                            <span
+                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                            >
+                              Scan
+                            </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -4017,22 +4085,52 @@ exports[`SendTransfer should render form step 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Send DARK
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Enter details below to send your transaction.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Send DARK
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Enter details below to send your transaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 sm:mt-0"
+        >
+          <div
+            class="flex h-full align-bottom"
+          >
+            <button
+              class="css-13nqo3a"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  qr-code.svg
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              >
+                Scan
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -4699,22 +4797,52 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Send DARK
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Enter details below to send your transaction.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Send DARK
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Enter details below to send your transaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 sm:mt-0"
+        >
+          <div
+            class="flex h-full align-bottom"
+          >
+            <button
+              class="css-13nqo3a"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  qr-code.svg
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              >
+                Scan
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -5429,22 +5557,52 @@ exports[`SendTransfer should render form step with deeplink values and use them 
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Send DARK
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Enter details below to send your transaction.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Send DARK
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Enter details below to send your transaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 sm:mt-0"
+        >
+          <div
+            class="flex h-full align-bottom"
+          >
+            <button
+              class="css-13nqo3a"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  qr-code.svg
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              >
+                Scan
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -6159,22 +6317,52 @@ exports[`SendTransfer should render form step without memo input 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Send DARK
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Enter details below to send your transaction.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Send DARK
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Enter details below to send your transaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 sm:mt-0"
+        >
+          <div
+            class="flex h-full align-bottom"
+          >
+            <button
+              class="css-13nqo3a"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  qr-code.svg
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              >
+                Scan
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -6792,22 +6980,52 @@ exports[`SendTransfer should render form step without test networks 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Send DARK
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Enter details below to send your transaction.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Send DARK
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Enter details below to send your transaction.
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 sm:mt-0"
+        >
+          <div
+            class="flex h-full align-bottom"
+          >
+            <button
+              class="css-13nqo3a"
+            >
+              <div
+                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  qr-code.svg
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+              >
+                Scan
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -7894,22 +8112,26 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Select a cryptoasset to send funds from.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Select a cryptoasset to send funds from.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -7930,7 +8152,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                         >
                           <div
                             aria-label="ARK"
-                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                             data-testid="NetworkOption-ARK-ark.mainnet"
                           >
                             <div
@@ -7965,7 +8187,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                         >
                           <div
                             aria-label="ARK Devnet"
-                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                             data-testid="NetworkOption-ARK-ark.devnet"
                           >
                             <div
@@ -8084,22 +8306,26 @@ exports[`SendTransfer should render network step with dropdown 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Select a Cryptoasset
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Select a cryptoasset to send funds from.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Select a Cryptoasset
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Select a cryptoasset to send funds from.
+            </div>
           </div>
         </div>
       </div>
@@ -8250,22 +8476,26 @@ exports[`SendTransfer should render network step with network cards 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Select a Cryptoasset
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Select a cryptoasset to send funds from.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Select a Cryptoasset
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Select a cryptoasset to send funds from.
+            </div>
           </div>
         </div>
       </div>
@@ -8286,7 +8516,7 @@ exports[`SendTransfer should render network step with network cards 1`] = `
           >
             <div
               aria-label="ARK"
-              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
               data-testid="NetworkOption-ARK-ark.mainnet"
             >
               <div
@@ -8321,7 +8551,7 @@ exports[`SendTransfer should render network step with network cards 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
               data-testid="NetworkOption-ARK-ark.devnet"
             >
               <div
@@ -8406,22 +8636,26 @@ exports[`SendTransfer should render review step 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Transaction Review
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Review the transaction details below.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Transaction Review
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the transaction details below.
+            </div>
           </div>
         </div>
       </div>
@@ -8736,22 +8970,26 @@ exports[`SendTransfer should render review step with multiple recipients (with m
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Transaction Review
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Review the transaction details below.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Transaction Review
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the transaction details below.
+            </div>
           </div>
         </div>
       </div>
@@ -9258,22 +9496,26 @@ exports[`SendTransfer should render review step with multiple recipients (withou
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Transaction Review
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Review the transaction details below.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Transaction Review
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the transaction details below.
+            </div>
           </div>
         </div>
       </div>
@@ -10160,17 +10402,21 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -10939,17 +11185,21 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -12140,17 +12390,21 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -12997,17 +13251,21 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -13854,17 +14112,21 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -14713,17 +14975,21 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex flex-col justify-between sm:flex-row"
                       >
                         <div
-                          class="space-y-4"
+                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="space-y-4"
                           >
-                            Transaction Error
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Error
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>

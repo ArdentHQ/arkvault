@@ -451,22 +451,26 @@ exports[`SendIpfs should error if wrong mnemonic 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Authenticate
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter your mnemonic passphrase to authenticate the transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Authenticate
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter your mnemonic passphrase to authenticate the transaction.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -621,22 +625,26 @@ exports[`SendIpfs should render form step 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            IPFS
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Store an IPFS hash on the network.
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              IPFS
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Store an IPFS hash on the network.
+            </div>
           </div>
         </div>
       </div>
@@ -892,22 +900,26 @@ exports[`SendIpfs should render review step 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            Transaction Review
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
-            data-testid="header__subtitle"
+            class="space-y-4"
           >
-            Review the IPFS transaction details before sending
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Transaction Review
+            </h1>
+            <div
+              class="flex items-center text-theme-secondary-text"
+              data-testid="header__subtitle"
+            >
+              Review the IPFS transaction details before sending
+            </div>
           </div>
         </div>
       </div>
@@ -1152,17 +1164,21 @@ exports[`SendIpfs should render summary step 1`] = `
         </ul>
       </div>
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="space-y-4"
+          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
+          <div
+            class="space-y-4"
           >
-            Transaction Created
-          </h1>
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              Transaction Created
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -2250,17 +2266,21 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3008,17 +3028,21 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3768,17 +3792,21 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -4526,17 +4554,21 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="space-y-4"
                         >
-                          Transaction Sent
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Sent
+                          </h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5283,22 +5315,26 @@ exports[`SendIpfs should show an error if an invalid IPFS hash is entered 1`] = 
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          IPFS
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Store an IPFS hash on the network.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            IPFS
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Store an IPFS hash on the network.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -6067,17 +6103,21 @@ exports[`SendIpfs should show error step and go back 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex flex-col justify-between sm:flex-row"
                       >
                         <div
-                          class="space-y-4"
+                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="space-y-4"
                           >
-                            Transaction Error
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Error
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
