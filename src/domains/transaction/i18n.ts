@@ -274,9 +274,9 @@ export const translations = {
 			DESCRIPTION: "Enter details below to send your transaction.",
 			FEE_UPDATE: "The selected fee has been changed",
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
-			TITLE: "Send {{ticker}}",
 			SCAN: "Scan",
 			SCAN_FULL: "Scan QR-Code",
+			TITLE: "Send {{ticker}}",
 		},
 		NETWORK_STEP: {
 			SUBTITLE: "Select a cryptoasset to send funds from.",
