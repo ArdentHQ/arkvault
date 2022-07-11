@@ -24,6 +24,7 @@ import CustomNetworkDetailsModal from "@/domains/setting/pages/Networks/blocks/C
 import { isCustomNetwork, profileEnabledNetworkIds } from "@/utils/network-utils";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { useWalletConfig } from "@/domains/wallet/hooks";
+import { getProfileStoredPassword } from "@/utils/profile-utils";
 
 export const NetworksSettings = () => {
 	const { t } = useTranslation();
@@ -370,6 +371,9 @@ export const NetworksSettings = () => {
 			...(profile.settings().get(Contracts.ProfileSetting.DashboardConfiguration) as DashboardConfiguration),
 			selectedNetworkIds: profileEnabledNetworkIds(profile),
 		});
+
+		await env.profiles().restore(profile, getProfileStoredPassword(profile));
+		await profile.sync();
 
 		setWalletConfig("selectedNetworkIds", profileEnabledNetworkIds(profile));
 
