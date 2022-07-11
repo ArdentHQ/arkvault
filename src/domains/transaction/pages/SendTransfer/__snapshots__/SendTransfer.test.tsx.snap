@@ -2124,6 +2124,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                         >
                           <button
                             class="css-13nqo3a"
+                            type="button"
                           >
                             <div
                               class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -3333,6 +3334,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                         >
                           <button
                             class="css-13nqo3a"
+                            type="button"
                           >
                             <div
                               class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -4115,6 +4117,7 @@ exports[`SendTransfer should render form step 1`] = `
           >
             <button
               class="css-13nqo3a"
+              type="button"
             >
               <div
                 class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -4827,6 +4830,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
           >
             <button
               class="css-13nqo3a"
+              type="button"
             >
               <div
                 class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -5587,6 +5591,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           >
             <button
               class="css-13nqo3a"
+              type="button"
             >
               <div
                 class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -6347,6 +6352,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
           >
             <button
               class="css-13nqo3a"
+              type="button"
             >
               <div
                 class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
@@ -7010,6 +7016,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
           >
             <button
               class="css-13nqo3a"
+              type="button"
             >
               <div
                 class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"

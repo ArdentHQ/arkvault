@@ -140,7 +140,7 @@ export const FormStep = ({
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
-						<QrCodeButton>
+						<QrCodeButton type="button">
 							<Icon
 								size="lg"
 								name="QrCode"
