@@ -2127,7 +2127,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                             type="button"
                           >
                             <div
-                              class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                              class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                               height="20"
                               width="20"
                             >
@@ -2136,7 +2136,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               </svg>
                             </div>
                             <span
-                              class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                              class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
                             >
                               Scan
                             </span>
@@ -3337,7 +3337,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             type="button"
                           >
                             <div
-                              class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                              class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                               height="20"
                               width="20"
                             >
@@ -3346,7 +3346,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </svg>
                             </div>
                             <span
-                              class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                              class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
                             >
                               Scan
                             </span>
@@ -4120,7 +4120,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -4129,7 +4129,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -4833,7 +4833,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -4842,7 +4842,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan QR-Code
               </span>
@@ -5505,7 +5505,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -5514,7 +5514,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -6266,7 +6266,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -6275,7 +6275,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -7027,7 +7027,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -7036,7 +7036,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -7691,7 +7691,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               type="button"
             >
               <div
-                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
+                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -7700,7 +7700,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 </svg>
               </div>
               <span
-                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
+                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>

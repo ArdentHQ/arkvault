@@ -482,11 +482,11 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                           class="flex h-full align-bottom"
                         >
                           <button
-                            class="css-13nqo3a"
+                            class="group css-1vyr6lu"
                             type="button"
                           >
                             <div
-                              class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                              class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                               height="20"
                               width="20"
                             >
@@ -495,7 +495,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               </svg>
                             </div>
                             <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
                             >
                               Scan
                             </span>
