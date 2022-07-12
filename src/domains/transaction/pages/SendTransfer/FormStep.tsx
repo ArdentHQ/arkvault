@@ -144,9 +144,9 @@ export const FormStep = ({
 							<Icon
 								size="lg"
 								name="QrCode"
-								className="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white"
+								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
 							/>
-							<span className="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white">
+							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
 								{isXs
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
