@@ -216,19 +216,21 @@ describe("SendTransfer", () => {
 				<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
 			</StepsProvider>,
 			{
+				breakpoint,
 				defaultValues: {
 					network: wallet.network(),
 				},
 				registerCallback: defaultRegisterCallback,
 				withProviders: true,
-				breakpoint,
 			},
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
 		if (breakpoint === "xs") {
-			expect(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL)).toBeInTheDocument();
+			expect(
+				screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL),
+			).toBeInTheDocument();
 		}
 
 		if (breakpoint === "lg") {

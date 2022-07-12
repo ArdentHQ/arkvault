@@ -66,7 +66,7 @@ export function renderWithForm(
 		breakpoint?: LayoutBreakpoint;
 	},
 ) {
-	let renderFunction: any
+	let renderFunction: any;
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
