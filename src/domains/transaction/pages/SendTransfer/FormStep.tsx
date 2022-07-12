@@ -21,7 +21,7 @@ import { Icon } from "@/app/components/Icon";
 const QrCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
 	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
-	${tw`hover:border-theme-primary-400`}
+	${tw`hover:(bg-theme-primary-700 border-theme-primary-700)`}
 	${tw`focus:(outline-none ring-2 ring-theme-primary-400)`}
 `;
 
@@ -140,13 +140,13 @@ export const FormStep = ({
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
-						<QrCodeButton type="button">
+						<QrCodeButton className="group" type="button">
 							<Icon
 								size="lg"
 								name="QrCode"
-								className="text-theme-secondary-700 dark:text-theme-secondary-600"
+								className="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white"
 							/>
-							<span className="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200">
+							<span className="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white">
 								{isXs
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}

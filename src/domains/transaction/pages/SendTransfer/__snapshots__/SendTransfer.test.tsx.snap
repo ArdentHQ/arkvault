@@ -2123,11 +2123,11 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           class="flex h-full align-bottom"
                         >
                           <button
-                            class="css-13nqo3a"
+                            class="group css-1vyr6lu"
                             type="button"
                           >
                             <div
-                              class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                              class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                               height="20"
                               width="20"
                             >
@@ -2136,7 +2136,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               </svg>
                             </div>
                             <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
                             >
                               Scan
                             </span>
@@ -3333,11 +3333,11 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           class="flex h-full align-bottom"
                         >
                           <button
-                            class="css-13nqo3a"
+                            class="group css-1vyr6lu"
                             type="button"
                           >
                             <div
-                              class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                              class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                               height="20"
                               width="20"
                             >
@@ -3346,7 +3346,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </svg>
                             </div>
                             <span
-                              class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                              class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
                             >
                               Scan
                             </span>
@@ -4116,11 +4116,11 @@ exports[`SendTransfer should render form step (lg) 1`] = `
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -4129,7 +4129,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan
               </span>
@@ -4829,11 +4829,11 @@ exports[`SendTransfer should render form step (xs) 1`] = `
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -4842,7 +4842,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan QR-Code
               </span>
@@ -5501,11 +5501,11 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -5514,7 +5514,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan
               </span>
@@ -6262,11 +6262,11 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -6275,7 +6275,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan
               </span>
@@ -7023,11 +7023,11 @@ exports[`SendTransfer should render form step without memo input 1`] = `
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -7036,7 +7036,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan
               </span>
@@ -7687,11 +7687,11 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             class="flex h-full align-bottom"
           >
             <button
-              class="css-13nqo3a"
+              class="group css-1vyr6lu"
               type="button"
             >
               <div
-                class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
+                class="transition-colors text-theme-secondary-700 dark:text-theme-secondary-600 group-hover:text-white css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -7700,7 +7700,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
+                class="transition-colors font-semibold text-theme-secondary-700 dark:text-theme-secondary-200 group-hover:text-white"
               >
                 Scan
               </span>
