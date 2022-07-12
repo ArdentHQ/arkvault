@@ -372,12 +372,12 @@ export const NetworksSettings = () => {
 			selectedNetworkIds: profileEnabledNetworkIds(profile),
 		});
 
-		await env.profiles().restore(profile, getProfileStoredPassword(profile));
-		await profile.sync();
-
 		setWalletConfig("selectedNetworkIds", profileEnabledNetworkIds(profile));
 
 		await persist();
+
+		await env.profiles().restore(profile, getProfileStoredPassword(profile));
+		await profile.sync();
 
 		toasts.success(t("SETTINGS.GENERAL.SUCCESS"));
 
