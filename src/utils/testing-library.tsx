@@ -63,9 +63,18 @@ export function renderWithForm(
 		defaultValues?: any;
 		registerCallback?: (useFormMethods: UseFormMethods) => void;
 		shouldUnregister?: boolean;
+		breakpoint?: LayoutBreakpoint;
 	},
 ) {
-	const renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
+	let renderFunction: any
+	let responsiveRenderFunction: any;
+
+	if (options?.breakpoint) {
+		responsiveRenderFunction = options?.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
+	} else {
+		renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
+	}
+
 	const defaultValues = options?.defaultValues ?? {};
 
 	let form: UseFormMethods | undefined;
@@ -82,7 +91,17 @@ export function renderWithForm(
 		return <FormProvider {...form}>{component}</FormProvider>;
 	};
 
-	const utils: RenderResult = renderFunction(<Component />);
+	if (renderFunction !== undefined) {
+		const utils: RenderResult = renderFunction(<Component />, {
+			withProviders: options?.withProviders,
+		});
+
+		return { ...utils, form: () => form };
+	}
+
+	const utils: RenderResult = responsiveRenderFunction(<Component />, options?.breakpoint, {
+		withProviders: options?.withProviders,
+	});
 
 	return { ...utils, form: () => form };
 }
@@ -309,9 +328,7 @@ export const renderResponsiveWithRoute = (
 	};
 
 	return renderWithRouter(
-		<WithProviders>
-			<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{component}</ResponsiveContext.Provider>
-		</WithProviders>,
+		<ResponsiveContext.Provider value={{ width: widths[breakpoint] }}>{component}</ResponsiveContext.Provider>,
 		options,
 	);
 };

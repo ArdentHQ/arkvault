@@ -483,6 +483,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                         >
                           <button
                             class="css-13nqo3a"
+                            type="button"
                           >
                             <div
                               class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1i4b0eq"
