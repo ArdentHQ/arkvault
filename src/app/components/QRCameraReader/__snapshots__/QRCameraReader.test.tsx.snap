@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QRCameraReader should render 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      style="width: 100%; padding-top: 100%; overflow: hidden; position: relative;"
+    >
+      <div
+        class="absolute inset-0 border-2 border-theme-secondary-700 dark:border-theme-secondary-500"
+      >
+        <div
+          class="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        />
+        <div
+          class="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        />
+        <div
+          class="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        />
+        <div
+          class="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
+        />
+      </div>
+      <video
+        id="video"
+        style="top: 0px; left: 0px; width: 100%; height: 100%; display: block; overflow: hidden; position: absolute; object-fit: cover; padding: 6px;"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;
