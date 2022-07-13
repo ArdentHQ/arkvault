@@ -1,7 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
 import { QRCameraReader } from "./QRCameraReader";
+import { render, screen } from "@/utils/testing-library";
 
 jest.mock("react-qr-reader", () => ({
 	QrReader: ({ ViewFinder, onResult }: { ViewFinder: React.FC; onResult: (result: any) => void }) => {

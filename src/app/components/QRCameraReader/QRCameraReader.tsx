@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { QrReader } from "react-qr-reader";
 
 interface QRCameraReaderProperties {
@@ -12,10 +12,10 @@ const ViewFinder = () => (
 		className="absolute inset-0 border-2 border-theme-secondary-700 dark:border-theme-secondary-500"
 		data-testid="ViewFinder"
 	>
-		<div className="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"></div>
-		<div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"></div>
-		<div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"></div>
-		<div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"></div>
+		<div className="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
+		<div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
+		<div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
+		<div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
 	</div>
 );
 
@@ -33,7 +33,7 @@ export const QRCameraReader = ({ onCameraAccessDenied, onError, onQRRead }: QRCa
 				return onError?.(error);
 			}
 
-			if (!!result?.text) {
+			if (result?.text) {
 				return onQRRead?.(result.text);
 			}
 		}}
