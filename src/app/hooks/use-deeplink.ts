@@ -58,7 +58,7 @@ export const useDeeplink = () => {
 				URLParameters.has("network") &&
 				!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
 			) {
-				throw new Error(`Network "${URLParameters.get("network")}" not supported.`);
+				throw new Error(`Network "${URLParameters.get("network")}" is not enabled or added.`);
 			}
 
 			const availableWallets = profile
