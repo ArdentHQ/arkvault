@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`QRCameraReader should render and read qr code 1`] = `
+exports[`QRCameraReader Access Denied should render and emit access denied callback 1`] = `
 <DocumentFragment>
   <div>
     <div

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`QRCameraReader should render and read qr code 1`] = `
+exports[`QRCameraReader Generic Read Error should render and emit generic error 1`] = `
 <DocumentFragment>
   <div>
     <div
