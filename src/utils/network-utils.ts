@@ -1,4 +1,3 @@
-import { UUID } from "@ardenthq/sdk-cryptography";
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
@@ -60,7 +59,7 @@ export const buildNetwork = (
 		featureFlags,
 		governance,
 		hosts,
-		id: `${UUID.random()}.custom`,
+		id: `${meta.nethash}.custom`,
 		importMethods,
 		knownWallets: networkData.knownWallets,
 		meta,
