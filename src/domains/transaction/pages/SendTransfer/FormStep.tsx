@@ -28,10 +28,11 @@ const QrCodeButton = styled.button`
 export const FormStep = ({
 	profile,
 	deeplinkProps,
+	onScan,
 }: {
-	networks: Networks.Network[];
 	profile: Contracts.IProfile;
 	deeplinkProps: Record<string, string>;
+	onScan?: () => void;
 }) => {
 	const isMounted = useRef(true);
 
@@ -140,7 +141,7 @@ export const FormStep = ({
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
-						<QrCodeButton className="group" type="button">
+						<QrCodeButton className="group" type="button" onClick={onScan}>
 							<Icon
 								size="lg"
 								name="QrCode"

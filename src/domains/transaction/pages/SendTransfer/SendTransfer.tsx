@@ -25,6 +25,7 @@ import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks"
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { QrModal } from "@/domains/transaction/components/QrModal";
 
 const MAX_TABS = 5;
 
@@ -119,6 +120,7 @@ export const SendTransfer: React.VFC = () => {
 		resetForm();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	const [showQrModal, setShowQrModal] = useState(false);
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
 
@@ -219,7 +221,11 @@ export const SendTransfer: React.VFC = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.FormStep}>
-				<FormStep networks={networks} profile={activeProfile} deeplinkProps={deepLinkParameters} />
+				<FormStep
+					profile={activeProfile}
+					deeplinkProps={deepLinkParameters}
+					onScan={() => setShowQrModal(true)}
+				/>
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ReviewStep}>
@@ -275,6 +281,8 @@ export const SendTransfer: React.VFC = () => {
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
+
+					<QrModal isOpen={showQrModal} onCancel={() => setShowQrModal(false)} />
 
 					<FeeWarning
 						isOpen={showFeeWarning}
