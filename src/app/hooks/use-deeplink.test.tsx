@@ -106,7 +106,9 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
-		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is not enabled or added.'));
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is not enabled or added.'),
+		);
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to no senders available", async () => {
