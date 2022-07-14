@@ -88,7 +88,7 @@ export const FormStep = ({
 			return [
 				{
 					address: deeplinkProps.recipient,
-					amount: +deeplinkProps.amount,
+					amount: deeplinkProps.amount,
 				},
 			];
 		}

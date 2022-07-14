@@ -147,20 +147,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [remainingBalance, setValue, amount, recipientAddress, fee, senderAddress]);
 
 	useEffect(() => {
-		if (!withDeeplink) {
-			return;
-		}
-
-		let amount = 0;
-
-		for (const recipient of recipients) {
-			amount = amount + Number(recipient.amount);
-		}
-
-		setRecipientsAmount(amount.toString());
-	}, [recipients, withDeeplink]);
-
-	useEffect(() => {
 		register("amount", sendTransfer.amount(network, remainingNetBalance!, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingNetBalance]);

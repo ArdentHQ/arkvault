@@ -1,12 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
 import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	screen,
+	mockProfileWithPublicAndTestNetworks,
+} from "@/utils/testing-library";
 import { ProfilePaths } from "@/router/paths";
 
 const history = createHashHistory();
@@ -21,15 +28,23 @@ const deeplinkTestContent = () => screen.getByText(deeplinkTest);
 describe("useDeeplink hook", () => {
 	let toastWarningSpy: jest.SpyInstance;
 	let toastErrorSpy: jest.SpyInstance;
+	let resetProfileNetworksMock: () => void;
+	let profile: Contracts.IProfile;
+
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
 
 	beforeEach(() => {
 		toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
 		toastErrorSpy = jest.spyOn(toasts, "error").mockImplementation();
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
 		toastWarningSpy.mockRestore();
 		toastErrorSpy.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	const TestComponent: React.FC = () => {
@@ -91,7 +106,7 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
-		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.'));
+		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is not enabled or added.'));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to no senders available", async () => {
