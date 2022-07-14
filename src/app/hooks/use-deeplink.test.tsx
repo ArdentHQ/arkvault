@@ -31,7 +31,7 @@ describe("useDeeplink hook", () => {
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
