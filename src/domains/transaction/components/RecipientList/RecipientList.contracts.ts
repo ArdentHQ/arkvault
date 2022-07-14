@@ -5,7 +5,7 @@ type RecipientListLabel = "TRANSACTION.MULTISIGNATURE.PARTICIPANT_#";
 export interface RecipientItem {
 	address: string;
 	alias?: string;
-	amount?: number | string;
+	amount?: number;
 	isDelegate?: boolean;
 }
 

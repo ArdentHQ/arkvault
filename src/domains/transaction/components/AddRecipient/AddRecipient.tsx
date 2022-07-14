@@ -81,12 +81,10 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	recipients = [],
 	showMultiPaymentOption = true,
 	wallet,
-	withDeeplink,
 }) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
-	const [recipientsAmount, setRecipientsAmount] = useState<string>();
 	const isMountedReference = useRef(false);
 
 	const {
@@ -368,7 +366,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
 									placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
-									value={getValues("amount") || recipientsAmount}
+									value={getValues("amount")}
 									addons={amountAddons}
 									onChange={(amount: string) => {
 										setValue("isSendAllSelected", false);

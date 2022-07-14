@@ -88,7 +88,10 @@ export const FormStep = ({
 			return [
 				{
 					address: deeplinkProps.recipient,
-					amount: deeplinkProps.amount,
+					// TODO: Converting to number leads to floating point arithmetic overflow for small numbers.
+					//		 As the convertion is not necessary with deeplinks, this needs to be handled to be compliant
+					//       with RecipientItem type because it only accepts number, and changing RecipientItem will affect many forms.
+					amount: deeplinkProps.amount as any,
 				},
 			];
 		}
@@ -171,7 +174,6 @@ export const FormStep = ({
 						recipients={getRecipients()}
 						showMultiPaymentOption={network?.allows(Enums.FeatureFlag.TransactionMultiPayment)}
 						wallet={senderWallet}
-						withDeeplink={!!deeplinkProps.recipient}
 					/>
 				</div>
 
