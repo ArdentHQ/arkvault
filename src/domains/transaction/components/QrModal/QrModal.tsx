@@ -75,6 +75,13 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
         message: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.DESCRIPTION"),
         title: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.TITLE"),
       });
+      return
+    }
+
+    if (!!error.message) {
+      setError({
+        message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
+      });
     }
 	};
 
