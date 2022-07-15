@@ -1,40 +1,37 @@
 import React from "react";
 import { QrReader } from "react-qr-reader";
+import { string } from "yup/lib/locale";
 
 interface QRCameraReaderProperties {
-	onCameraAccessDenied?: () => void;
-	onError?: (error: Error) => void;
-	onQRRead?: (qr: string) => void;
+	onCameraAccessDenied: () => void;
+	onError: (error: Error) => void;
+	onSuccess: (text: string) => void;
 }
 
-const ViewFinder = () => (
-	<div
-		className="absolute inset-0 border-2 border-theme-secondary-700 dark:border-theme-secondary-500"
-		data-testid="ViewFinder"
-	>
-		<div className="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
-		<div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
-		<div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
-		<div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800" />
-	</div>
-);
+const NotAllowedErrors = [
+	"Permission denied", // Chrome
+	"is not allowed", // Firefox & Safari
+];
 
-export const QRCameraReader = ({ onCameraAccessDenied, onError, onQRRead }: QRCameraReaderProperties) => (
+export const QRCameraReader = ({ onCameraAccessDenied, onError, onSuccess }: QRCameraReaderProperties) => (
 	<QrReader
-		videoStyle={{ objectFit: "cover", padding: "6px" }}
-		ViewFinder={() => <ViewFinder />}
+		className="w-full h-full"
+		videoContainerStyle={{ height: "100%", width: "100%", paddingTop: 0 }}
+		videoStyle={{ objectFit: "cover" }}
 		constraints={{ facingMode: "environment" }}
 		onResult={(result?: any, error?: Error | null) => {
-			if (error && error.message === "NotAllowedError") {
-				return onCameraAccessDenied?.();
-			}
+			if (error) {
+				if (NotAllowedErrors.some((message: string) => message.includes(error.message))) {
+					return onCameraAccessDenied();
+				}
 
-			if (error && !!error.message) {
-				return onError?.(error);
+				if (!!error.message) {
+					return onError(error);
+				}
 			}
 
 			if (result?.text) {
-				return onQRRead?.(result.text);
+				return onSuccess(result.text);
 			}
 		}}
 	/>

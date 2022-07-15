@@ -185,6 +185,11 @@ export const translations = {
 	MODAL_VOTE_DETAIL: {
 		TITLE: "Delegate Vote",
 	},
+	MODAL_QR_CODE: {
+		TITLE: "Scan QR-Code",
+		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		UPLOAD: "Upload Image",
+	},
 	MULTIPLE: "Multiple",
 	MULTISIGNATURE: {
 		ADD_PARTICIPANT: "Add Participant",
