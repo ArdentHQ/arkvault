@@ -35,29 +35,24 @@ const ViewFinder = ({ error, isLoading }: { error?: QrError; isLoading: boolean 
 		<div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-secondary-800" />
 		<div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800" />
 
-		{isLoading && (
+		{(error || isLoading) && (
 			<>
 				<div
 					className="absolute inset-0 -z-10"
 					style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }}
 				/>
 
-				<Spinner size="xl" theme="dark" />
-			</>
-		)}
+				{error && (
+					<>
+						<Image className="w-22" name="ErrorSmall" useAccentColor={false} />
 
-		{error && (
-			<>
-				<div
-					className="absolute inset-0 -z-10"
-					style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }}
-				/>
+						<Alert title={error.title} variant="danger" className="mx-5 mt-8">
+							{error.message}
+						</Alert>
+					</>
+				)}
 
-				<Image className="w-22" name="ErrorSmall" useAccentColor={false} />
-
-				<Alert title={error.title} variant="danger" className="mx-5 mt-8">
-					{error.message}
-				</Alert>
+				{isLoading && <Spinner size="xl" theme="dark" />}
 			</>
 		)}
 	</div>
@@ -70,19 +65,19 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 	const { t } = useTranslation();
 
 	const handleError = (error: Error) => {
-    if (AccessDeniedErrors.some((message: string) => message.includes(error.message))) {
-      setError({
-        message: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.DESCRIPTION"),
-        title: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.TITLE"),
-      });
-      return
-    }
+		if (AccessDeniedErrors.some((message: string) => message.includes(error.message))) {
+			setError({
+				message: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.DESCRIPTION"),
+				title: t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.TITLE"),
+			});
+			return;
+		}
 
-    if (!!error.message) {
-      setError({
-        message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
-      });
-    }
+		if (!!error.message) {
+			setError({
+				message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
+			});
+		}
 	};
 
 	const handleReady = () => {
@@ -116,11 +111,7 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 				}}
 			>
 				<div className="absolute inset-0 z-10">
-					<QRCameraReader
-						onError={handleError}
-						onRead={onRead}
-						onReady={handleReady}
-					/>
+					<QRCameraReader onError={handleError} onRead={onRead} onReady={handleReady} />
 				</div>
 
 				<div className="flex h-full flex-col items-center justify-center space-y-8 py-8">
