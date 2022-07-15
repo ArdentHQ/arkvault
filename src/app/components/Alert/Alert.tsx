@@ -11,6 +11,7 @@ import { Icon } from "@/app/components/Icon";
 interface AlertProperties extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 	className?: string;
+	title?: string;
 	variant?: Color;
 }
 
@@ -29,14 +30,14 @@ const TypeIcon = ({ variant }: { variant: Color }) => {
 const AlertHeader = styled.div<AlertProperties>(getHeaderStyles);
 const AlertBody = styled.div<AlertProperties>(getBodyStyles);
 
-export const Alert = ({ variant = "warning", children, className, ...attributes }: AlertProperties) => {
+export const Alert = ({ variant = "warning", children, className, title, ...attributes }: AlertProperties) => {
 	const { t } = useTranslation();
 
 	return (
 		<div className={cn("flex flex-col overflow-hidden rounded-xl", className)} {...attributes}>
 			<AlertHeader variant={variant}>
 				<TypeIcon variant={variant} />
-				<span>{t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
+				<span>{title || t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
 			</AlertHeader>
 
 			<AlertBody variant={variant}>{children}</AlertBody>

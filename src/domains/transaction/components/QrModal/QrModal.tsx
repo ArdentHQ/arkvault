@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 interface QrModalProperties {
 	isOpen: boolean;
 	onCancel: () => void;
+	onRead: (text: string) => void;
 }
 
 const ViewFinder = ({ hasError }: { hasError: boolean }) => (
@@ -25,15 +26,17 @@ const ViewFinder = ({ hasError }: { hasError: boolean }) => (
 
     {hasError && (
       <>
+        <div className="absolute inset-0 -z-10" style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }} />
+
         <Image className="w-22" name="ErrorSmall" useAccentColor={false} />
 
-        <Alert variant="danger" className="mx-5 mt-8">Please allow access to the camera in the browser settings.</Alert>
+        <Alert title="Permission Denied" variant="danger" className="mx-5 mt-8">Allow access to the camera in the browser settings to use this feature.</Alert>
       </>
     )}
 	</div>
 );
 
-export const QrModal = ({ isOpen, onCancel }: QrModalProperties) => {
+export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
   const [showAccessDeniedError, setShowAccessDeniedError] = useState(false);
 
   const { t } = useTranslation();
@@ -44,10 +47,6 @@ export const QrModal = ({ isOpen, onCancel }: QrModalProperties) => {
 
   const handleError = (error: Error) => {
     console.log("error", error);
-  };
-
-  const handleSuccess = (text: string) => {
-    console.log("success", text);
   };
 
   return (
@@ -68,7 +67,7 @@ export const QrModal = ({ isOpen, onCancel }: QrModalProperties) => {
           <QRCameraReader
             onCameraAccessDenied={handleAccessDenied}
             onError={handleError}
-            onSuccess={handleSuccess}
+            onRead={onRead}
           />
         </div>
 

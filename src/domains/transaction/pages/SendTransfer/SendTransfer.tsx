@@ -282,7 +282,11 @@ export const SendTransfer: React.VFC = () => {
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
-					<QrModal isOpen={showQrModal} onCancel={() => setShowQrModal(false)} />
+					<QrModal
+						isOpen={showQrModal}
+						onCancel={() => setShowQrModal(false)}
+						onRead={(text: string) => console.log(text)}
+					/>
 
 					<FeeWarning
 						isOpen={showFeeWarning}

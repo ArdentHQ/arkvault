@@ -5,7 +5,7 @@ import { string } from "yup/lib/locale";
 interface QRCameraReaderProperties {
 	onCameraAccessDenied: () => void;
 	onError: (error: Error) => void;
-	onSuccess: (text: string) => void;
+	onRead: (text: string) => void;
 }
 
 const NotAllowedErrors = [
@@ -13,7 +13,7 @@ const NotAllowedErrors = [
 	"is not allowed", // Firefox & Safari
 ];
 
-export const QRCameraReader = ({ onCameraAccessDenied, onError, onSuccess }: QRCameraReaderProperties) => (
+export const QRCameraReader = ({ onCameraAccessDenied, onError, onRead }: QRCameraReaderProperties) => (
 	<QrReader
 		className="w-full h-full"
 		videoContainerStyle={{ height: "100%", width: "100%", paddingTop: 0 }}
@@ -31,7 +31,7 @@ export const QRCameraReader = ({ onCameraAccessDenied, onError, onSuccess }: QRC
 			}
 
 			if (result?.text) {
-				return onSuccess(result.text);
+				return onRead(result.text);
 			}
 		}}
 	/>
