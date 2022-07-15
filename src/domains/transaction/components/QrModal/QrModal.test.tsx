@@ -1,10 +1,10 @@
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import { render, screen } from "@/utils/testing-library";
 import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { QrModal } from "./QrModal";
+import { render, screen } from "@/utils/testing-library";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
 jest.mock("react-qr-reader", () => ({
   QrReader: jest.fn().mockImplementation(
@@ -73,7 +73,9 @@ describe("QrModal", () => {
       />
     );
 
-    await waitFor(() => expect(screen.getByText("error-small.svg")).toBeInTheDocument());
+    await waitFor(() => {
+      expect(screen.getByText("error-small.svg")).toBeInTheDocument();
+    });
 
     expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.PERMISSION_ERROR.TITLE)).toBeInTheDocument();
     expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.PERMISSION_ERROR.DESCRIPTION)).toBeInTheDocument();
@@ -98,7 +100,9 @@ describe("QrModal", () => {
       />
     );
 
-    await waitFor(() => expect(screen.getByText("error-small.svg")).toBeInTheDocument());
+    await waitFor(() => {
+      expect(screen.getByText("error-small.svg")).toBeInTheDocument();
+    });
 
     expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.ERROR)).toBeInTheDocument();
   });

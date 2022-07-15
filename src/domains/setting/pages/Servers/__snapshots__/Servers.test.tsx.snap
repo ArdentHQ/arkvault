@@ -14026,12 +14026,17 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="flex cursor-pointer justify-center"
                                       >
                                         <div
-                                          data-testid="CustomPeersPeer--statusloading"
+                                          data-testid="CustomPeersPeer--statuserror"
                                         >
                                           <div
-                                            class="css-xvdci8"
-                                            color="info"
-                                          />
+                                            class="text-theme-danger-400 css-1i4b0eq"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              status-error.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
