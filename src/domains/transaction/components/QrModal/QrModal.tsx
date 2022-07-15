@@ -13,28 +13,32 @@ interface QrModalProperties {
 	onRead: (text: string) => void;
 }
 
-const ViewFinder = ({ hasError }: { hasError: boolean }) => (
-	<div
-		data-testid="ViewFinder"
-		className="flex flex-col items-center justify-center relative border-2 border-theme-secondary-500 w-[300px] h-[300px] z-10"
-		style={{ boxShadow: "0px 0px 0px 9999px rgba(0, 0, 0, 0.75)" }}
-	>
-		<div className="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-secondary-800" />
-		<div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-secondary-800" />
-		<div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-secondary-800" />
-		<div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800" />
+const ViewFinder = ({ hasError }: { hasError: boolean }) => {
+  const { t } = useTranslation();
 
-    {hasError && (
-      <>
-        <div className="absolute inset-0 -z-10" style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }} />
+  return (
+    <div
+      data-testid="ViewFinder"
+      className="flex flex-col items-center justify-center relative border-2 border-theme-secondary-500 w-[300px] h-[300px] z-10"
+      style={{ boxShadow: "0px 0px 0px 9999px rgba(0, 0, 0, 0.75)" }}
+    >
+      <div className="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-secondary-800" />
+      <div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-secondary-800" />
+      <div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-secondary-800" />
+      <div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800" />
 
-        <Image className="w-22" name="ErrorSmall" useAccentColor={false} />
+      {hasError && (
+        <>
+          <div className="absolute inset-0 -z-10" style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }} />
 
-        <Alert title="Permission Denied" variant="danger" className="mx-5 mt-8">Allow access to the camera in the browser settings to use this feature.</Alert>
-      </>
-    )}
-	</div>
-);
+          <Image className="w-22" name="ErrorSmall" useAccentColor={false} />
+
+          <Alert title={t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.TITLE")} variant="danger" className="mx-5 mt-8">{t("TRANSACTION.MODAL_QR_CODE.PERMISSION_ERROR.DESCRIPTION")}</Alert>
+        </>
+      )}
+    </div>
+  );
+};
 
 export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
   const [showAccessDeniedError, setShowAccessDeniedError] = useState(false);

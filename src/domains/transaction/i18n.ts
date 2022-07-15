@@ -188,6 +188,10 @@ export const translations = {
 	MODAL_QR_CODE: {
 		TITLE: "Scan QR-Code",
 		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		PERMISSION_ERROR: {
+			TITLE: "Permission Denied",
+			DESCRIPTION: "Please allow access to the camera in the browser settings.",
+		},
 		UPLOAD: "Upload Image",
 	},
 	MULTIPLE: "Multiple",
