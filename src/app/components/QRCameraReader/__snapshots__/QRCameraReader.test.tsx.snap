@@ -1,25 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`QRCameraReader should render and read qr code 1`] = `
-<DocumentFragment>
-  <div>
-    <div
-      class="absolute inset-0 border-2 border-theme-secondary-700 dark:border-theme-secondary-500"
-      data-testid="ViewFinder"
-    >
-      <div
-        class="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
-      />
-      <div
-        class="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
-      />
-      <div
-        class="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
-      />
-      <div
-        class="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-primary-100 dark:bg-theme-secondary-800"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
+exports[`QRCameraReader should render and read qr code 1`] = `<DocumentFragment />`;

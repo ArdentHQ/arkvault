@@ -4,27 +4,28 @@ import { QRCameraReader } from "./QRCameraReader";
 import { render, screen } from "@/utils/testing-library";
 
 jest.mock("react-qr-reader", () => ({
-	QrReader: ({ ViewFinder, onResult }: { ViewFinder: React.FC; onResult: (result: any) => void }) => {
+	QrReader: ({ onResult }: { onResult: (result: any) => void }) => {
 		if (onResult) {
 			onResult({ text: "qrstring" });
 		}
 
-		return (
-			<div>
-				<ViewFinder />
-			</div>
-		);
+		return null;
 	},
 }));
 
 describe("QRCameraReader", () => {
 	it("should render and read qr code", () => {
-		const onQRRead = jest.fn();
+		const onRead = jest.fn();
 
-		const { asFragment } = render(<QRCameraReader onQRRead={onQRRead} />);
+		const { asFragment } = render(
+			<QRCameraReader
+				onError={jest.fn()}
+				onRead={onRead}
+				onReady={jest.fn()}
+			/>,
+		);
 
-		expect(screen.getByTestId("ViewFinder")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
-		expect(onQRRead).toHaveBeenCalledWith("qrstring");
+		expect(onRead).toHaveBeenCalledWith("qrstring");
 	});
 });
