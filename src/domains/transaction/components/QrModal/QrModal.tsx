@@ -38,7 +38,7 @@ const ViewFinder = ({ error, isLoading }: { error?: QrError; isLoading: boolean 
 		{(error || isLoading) && (
 			<>
 				<div
-          data-testid="QrModal__placeholder"
+					data-testid="QrModal__placeholder"
 					className="absolute inset-0 -z-10"
 					style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }}
 				/>
@@ -66,9 +66,9 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 	const { t } = useTranslation();
 
 	const handleError = (qrError: Error) => {
-    if (error) {
-      return;
-    }
+		if (error) {
+			return;
+		}
 
 		if (AccessDeniedErrors.some((message: string) => message.includes(qrError.message))) {
 			setError({
@@ -78,7 +78,7 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 			return;
 		}
 
-    /* istanbul ignore else */
+		/* istanbul ignore else */
 		if (qrError.message) {
 			setError({
 				message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
@@ -93,7 +93,7 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 	};
 
 	useEffect(() => {
-    /* istanbul ignore next */
+		/* istanbul ignore next */
 		if (!isOpen) {
 			setError(undefined);
 			setReady(false);
