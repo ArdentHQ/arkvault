@@ -14,11 +14,11 @@ const getColor = (color: Color, theme?: Theme) => {
 	};
 
 	return [
-			theme === "dark" ? tw`border-black` : tw`border-theme-secondary-200 dark:border-black`,
-			css`
+		theme === "dark" ? tw`border-black` : tw`border-theme-secondary-200 dark:border-black`,
+		css`
 			border-left-color: var(--theme-color-${baseColors[color]}) !important;
 		`,
-	]
+	];
 };
 
 const getSize = (size?: Size) => {
@@ -32,7 +32,7 @@ const getSize = (size?: Size) => {
 	return (sizes[size as keyof typeof sizes] || sizes.default)();
 };
 
-export const getStyles = ({ color, size, theme }: { color?: Color; size?: Size, theme?: Theme }) => [
+export const getStyles = ({ color, size, theme }: { color?: Color; size?: Size; theme?: Theme }) => [
 	baseStyle,
 	getSize(size),
 	getColor(color!, theme),

@@ -73,7 +73,7 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 			return;
 		}
 
-		if (!!error.message) {
+		if (error.message) {
 			setError({
 				message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
 			});
