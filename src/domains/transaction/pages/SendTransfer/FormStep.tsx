@@ -1,4 +1,4 @@
-import { Enums, Networks } from "@ardenthq/sdk";
+import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
