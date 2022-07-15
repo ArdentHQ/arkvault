@@ -4,7 +4,8 @@ import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { QRCameraReader } from "@/app/components/QRCameraReader";
-import React, { useState } from "react";
+import { Spinner } from "@/app/components/Spinner";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface QrModalProperties {
@@ -13,7 +14,7 @@ interface QrModalProperties {
 	onRead: (text: string) => void;
 }
 
-const ViewFinder = ({ hasError }: { hasError: boolean }) => {
+const ViewFinder = ({ hasError, isLoading }: { hasError: boolean, isLoading: boolean }) => {
   const { t } = useTranslation();
 
   return (
@@ -26,6 +27,14 @@ const ViewFinder = ({ hasError }: { hasError: boolean }) => {
       <div className="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-secondary-800" />
       <div className="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-secondary-800" />
       <div className="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800" />
+
+      {isLoading && (
+        <>
+          <div className="absolute inset-0 -z-10" style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }} />
+
+          <Spinner size="xl" theme="dark" />
+        </>
+      )}
 
       {hasError && (
         <>
@@ -42,6 +51,7 @@ const ViewFinder = ({ hasError }: { hasError: boolean }) => {
 
 export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
   const [showAccessDeniedError, setShowAccessDeniedError] = useState(false);
+  const [ready, setReady] = useState(false);
 
   const { t } = useTranslation();
 
@@ -52,6 +62,19 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
   const handleError = (error: Error) => {
     console.log("error", error);
   };
+
+  const handleReady = () => {
+    if (!ready) {
+      setReady(true);
+    }
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      setShowAccessDeniedError(false);
+      setReady(false);
+    };
+  }, [isOpen]);
 
   return (
     <Modal
@@ -72,11 +95,12 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
             onCameraAccessDenied={handleAccessDenied}
             onError={handleError}
             onRead={onRead}
+            onReady={handleReady}
           />
         </div>
 
         <div className="flex flex-col justify-center items-center space-y-8 py-8 h-full">
-          <ViewFinder hasError={showAccessDeniedError} />
+          <ViewFinder hasError={showAccessDeniedError} isLoading={!ready} />
 
           <Button variant="secondary" theme="dark" className="z-20 space-x-2">
             <Icon name="ArrowUpBracket" />
