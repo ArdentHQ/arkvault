@@ -6,8 +6,8 @@ import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 
-import { env, screen, waitFor, render, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
 import { SendTransfer } from "./SendTransfer";
+import { env, screen, waitFor, render, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
 import { LedgerProvider } from "@/app/contexts";
 
 jest.mock("react-qr-reader", () => ({
@@ -65,6 +65,7 @@ describe("SendTransfer QRModal", () => {
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(consoleSpy).toHaveBeenCalledWith(qrCodeUrl));
@@ -90,6 +91,7 @@ describe("SendTransfer QRModal", () => {
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);

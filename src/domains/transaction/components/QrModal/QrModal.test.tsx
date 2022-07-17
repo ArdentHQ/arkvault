@@ -3,10 +3,10 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
+import QrScanner from "qr-scanner";
 import { QrModal } from "./QrModal";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import QrScanner from "qr-scanner";
 
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867.custom&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
