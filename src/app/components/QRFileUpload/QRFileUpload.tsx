@@ -1,9 +1,9 @@
 import React from "react";
 import QrScanner from "qr-scanner";
 
+import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-import { useTranslation } from "react-i18next";
 import { useFiles } from "@/app/hooks/use-files";
 
 interface QRFileUploadProperties {
