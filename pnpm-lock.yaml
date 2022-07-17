@@ -85,6 +85,7 @@ specifiers:
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.9
   prop-types: ^15.8.1
+  qr-scanner: ^1.4.1
   react: ^17.0.0
   react-datepicker: ^4.8.0
   react-dom: ^17.0.0
@@ -154,6 +155,7 @@ dependencies:
   i18next: 21.6.16
   locale-currency: 0.0.2
   multiformats: 9.6.4
+  qr-scanner: 1.4.1
   react: 17.0.2
   react-datepicker: 4.8.0_sfoxds7t5ydpegc3knd667wn6m
   react-dom: 17.0.2_react@17.0.2
@@ -2906,6 +2908,10 @@ packages:
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
+
+  /@types/offscreencanvas/2019.7.0:
+    resolution: {integrity: sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==}
+    dev: false
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -8496,6 +8502,12 @@ packages:
       postcss: 8.4.12
       postcss-selector-parser: 6.0.10
     dev: true
+
+  /qr-scanner/1.4.1:
+    resolution: {integrity: sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w==}
+    dependencies:
+      '@types/offscreencanvas': 2019.7.0
+    dev: false
 
   /qrcode-terminal/0.10.0:
     resolution: {integrity: sha1-p2pI4mEKGPl/o6K9UytoKs/4bFM=}
