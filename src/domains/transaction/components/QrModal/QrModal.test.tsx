@@ -1,10 +1,15 @@
 import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
+import * as browserAccess from "browser-fs-access";
 
 import { QrModal } from "./QrModal";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import QrScanner from "qr-scanner";
+
+const qrCodeUrl =
+	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867.custom&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
 
 jest.mock("react-qr-reader", () => ({
 	QrReader: jest.fn().mockImplementation(({ onResult }: { onResult: (result: any) => void }) => {
@@ -38,6 +43,37 @@ describe("QrModal", () => {
 		userEvent.click(closeButton);
 
 		expect(onCancel).toHaveBeenCalledWith();
+	});
+
+	it("should render invalid qr error from file upload", async () => {
+		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		reactQrReaderMock.QrReader.mockImplementation(() => null);
+		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockImplementation(() => {
+			throw new Error("InvalidQR");
+		});
+
+		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() =>
+			expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE)).toBeInTheDocument(),
+		);
+		scanImageMock.mockRestore();
+		browserAccessMock.mockRestore();
+	});
+
+	it("should handle read", async () => {
+		const onRead = jest.fn();
+		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		reactQrReaderMock.QrReader.mockImplementation(() => null);
+		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
+
+		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={onRead} />);
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
+		scanImageMock.mockRestore();
+		browserAccessMock.mockRestore();
 	});
 
 	it("should render permission denied error", async () => {
