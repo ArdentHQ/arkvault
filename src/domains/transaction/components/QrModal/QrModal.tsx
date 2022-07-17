@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
-import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { QRCameraReader } from "@/app/components/QRCameraReader";
 import { Spinner } from "@/app/components/Spinner";
+import { QRFileUpload } from "@/app/components/QRFileUpload";
 
 interface QrError {
 	title?: string;
@@ -78,6 +77,14 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 			return;
 		}
 
+		if (qrError.message === "InvalidQR") {
+			setError({
+				message: t("TRANSACTION.MODAL_QR_CODE.INVALID_QR_CODE"),
+			});
+
+			return;
+		}
+
 		/* istanbul ignore else */
 		if (qrError.message) {
 			setError({
@@ -90,6 +97,11 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 		if (!ready) {
 			setReady(true);
 		}
+	};
+
+	const handleRead = (qrCodeString: string) => {
+		setError(undefined);
+		onRead?.(qrCodeString);
 	};
 
 	useEffect(() => {
@@ -118,16 +130,13 @@ export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
 				}}
 			>
 				<div className="absolute inset-0 z-10">
-					<QRCameraReader onError={handleError} onRead={onRead} onReady={handleReady} />
+					<QRCameraReader onError={handleError} onRead={handleRead} onReady={handleReady} />
 				</div>
 
 				<div className="flex h-full flex-col items-center justify-center space-y-8 py-8">
 					<ViewFinder error={error} isLoading={!ready} />
 
-					<Button variant="secondary" theme="dark" className="z-20 space-x-2">
-						<Icon name="ArrowUpBracket" />
-						<span>{t("TRANSACTION.MODAL_QR_CODE.UPLOAD")}</span>
-					</Button>
+					<QRFileUpload onError={handleError} onRead={handleRead} />
 				</div>
 			</div>
 		</Modal>

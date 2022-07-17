@@ -83,6 +83,7 @@ exports[`QrModal should render 1`] = `
                 </div>
                 <button
                   class="z-20 space-x-2 css-1q9v3yc"
+                  data-testid="QRFileUpload__upload"
                   type="button"
                 >
                   <div
