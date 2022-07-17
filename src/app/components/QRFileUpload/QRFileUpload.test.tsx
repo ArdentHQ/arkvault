@@ -20,7 +20,7 @@ describe("QRFileUpload", () => {
 		const onRead = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
 		render(<QRFileUpload onRead={onRead} />);
 
@@ -35,7 +35,7 @@ describe("QRFileUpload", () => {
 		const onRead = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
 		render(<QRFileUpload onRead={onRead} />);
 
@@ -56,7 +56,7 @@ describe("QRFileUpload", () => {
 			throw error;
 		});
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 		render(<QRFileUpload onRead={onRead} onError={onError} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));

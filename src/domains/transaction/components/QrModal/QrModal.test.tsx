@@ -55,9 +55,10 @@ describe("QrModal", () => {
 		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await waitFor(() =>
-			expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE)).toBeInTheDocument(),
-		);
+		await expect(
+			screen.findByText(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE),
+		).resolves.toBeInTheDocument();
+
 		scanImageMock.mockRestore();
 		browserAccessMock.mockRestore();
 	});

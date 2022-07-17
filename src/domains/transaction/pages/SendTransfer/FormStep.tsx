@@ -141,7 +141,7 @@ export const FormStep = ({
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
-						<QrCodeButton className="group" type="button" onClick={onScan}>
+						<QrCodeButton className="group" type="button" onClick={onScan} data-testid="QRCodeModalButton">
 							<Icon
 								size="lg"
 								name="QrCode"

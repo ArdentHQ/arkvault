@@ -1,0 +1,97 @@
+import nock from "nock";
+import React from "react";
+import { Route } from "react-router-dom";
+import QrScanner from "qr-scanner";
+import * as browserAccess from "browser-fs-access";
+import userEvent from "@testing-library/user-event";
+import { createHashHistory } from "history";
+
+import { env, screen, waitFor, render, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
+import { SendTransfer } from "./SendTransfer";
+import { LedgerProvider } from "@/app/contexts";
+
+jest.mock("react-qr-reader", () => ({
+	QrReader: jest.fn().mockImplementation(() => null),
+}));
+
+const QRCodeModalButton = "QRCodeModalButton";
+const fixtureProfileId = getDefaultProfileId();
+const fixtureWalletId = getDefaultWalletId();
+const qrCodeUrl =
+	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867.custom&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
+
+const history = createHashHistory();
+
+describe("SendTransfer QRModal", () => {
+	beforeAll(() => {
+		jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+
+		const profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
+
+		profile.coins().set("ARK", "ark.devnet");
+
+		nock("https://ark-test.arkvault.io")
+			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
+			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
+			.reply(200, { data: [], meta: {} })
+			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
+			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
+	});
+
+	afterAll(() => {
+		jest.restoreAllMocks();
+	});
+
+	it("should open QR Code Modal and read QR", async () => {
+		const consoleSpy = jest.spyOn(console, "log").mockImplementation(jest.fn());
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() => expect(consoleSpy).toHaveBeenCalledWith(qrCodeUrl));
+	});
+
+	it("should open QR Code Modal and cancel", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await expect(screen.findByTestId("Modal__inner")).rejects.toThrow(/Unable to find/);
+	});
+});
