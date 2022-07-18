@@ -54,24 +54,54 @@ export const useDeeplink = () => {
 			}
 
 			/* istanbul ignore next */
-			if (
-				URLParameters.has("network") &&
-				!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
-			) {
-				throw new Error(`Network "${URLParameters.get("network")}" is not enabled or added.`);
+			if (URLParameters.has("network")) {
+				if (!["ark.devnet", "ark.mainnet"].includes(URLParameters.get("network")!)) {
+					throw new Error(`Network "${URLParameters.get("network")}" is invalid.`);
+				}
+
+				if (
+					!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
+				) {
+					throw new Error(`Network "${URLParameters.get("network")}" is not enabled.`);
+				}
+
+				const availableWallets = profile
+					.wallets()
+					.findByCoinWithNetwork(
+						URLParameters.get("coin")!.toUpperCase(),
+						URLParameters.get("network")!.toLowerCase(),
+					);
+
+				if (availableWallets.length === 0) {
+					throw new Error(
+						`The current profile has no wallets available for the "${URLParameters.get(
+							"network",
+						)}" network`,
+					);
+				}
 			}
 
-			const availableWallets = profile
-				.wallets()
-				.findByCoinWithNetwork(
-					URLParameters.get("coin")!.toUpperCase(),
-					URLParameters.get("network")!.toLowerCase(),
-				);
+			/* istanbul ignore next */
+			if (URLParameters.has("nethash")) {
+				console.log("nethash");
+				if (!allEnabledNetworks.some((network) => network.meta().nethash === URLParameters.get("nethash")!)) {
+					throw new Error(
+						`Network with nethash "${URLParameters.get("nethash")}" is not enabled or available.`,
+					);
+				}
 
-			if (availableWallets.length === 0) {
-				throw new Error(
-					`The current profile has no wallets available for the "${URLParameters.get("network")}" network`,
-				);
+				// const availableWallets = [];
+				const availableWallets = profile
+					.wallets()
+					.findByCoinWithNethash(URLParameters.get("coin")!.toUpperCase(), URLParameters.get("nethash")!);
+
+				if (availableWallets.length === 0) {
+					throw new Error(
+						`The current profile has no wallets available for the network with nethash "${URLParameters.get(
+							"nethash",
+						)}"`,
+					);
+				}
 			}
 		},
 		[profile],

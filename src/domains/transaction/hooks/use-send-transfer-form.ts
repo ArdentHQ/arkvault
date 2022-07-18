@@ -140,11 +140,17 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		setValue(
 			"network",
-			networks.find(
-				(item) =>
-					lowerCaseEquals(item.coin(), queryParameters.coin) &&
-					lowerCaseEquals(item.id(), queryParameters.network),
-			),
+			networks.find((item) => {
+				if (lowerCaseEquals(item.coin(), queryParameters.coin)) {
+					if (queryParameters.network) {
+						return lowerCaseEquals(item.id(), queryParameters.network);
+					}
+
+					if (queryParameters.nethash) {
+						return item.meta().nethash === queryParameters.nethash;
+					}
+				}
+			}),
 		);
 
 		if (queryParameters.memo) {
