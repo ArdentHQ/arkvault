@@ -210,12 +210,13 @@ describe("SendTransfer", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render form step", async () => {
+	it.each(["xs", "lg"])("should render form step (%s)", async (breakpoint) => {
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
 				<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
 			</StepsProvider>,
 			{
+				breakpoint,
 				defaultValues: {
 					network: wallet.network(),
 				},
@@ -226,7 +227,17 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+		if (breakpoint === "xs") {
+			expect(
+				screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL),
+			).toBeInTheDocument();
+		}
+
+		if (breakpoint === "lg") {
+			expect(screen.getByText(transactionTranslations.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN)).toBeInTheDocument();
+
+			await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+		}
 
 		expect(asFragment()).toMatchSnapshot();
 	});

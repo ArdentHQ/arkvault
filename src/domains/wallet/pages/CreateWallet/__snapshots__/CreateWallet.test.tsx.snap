@@ -489,7 +489,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -524,7 +524,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
@@ -1820,7 +1820,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -1855,7 +1855,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
@@ -3156,7 +3156,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -3191,7 +3191,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
@@ -3764,7 +3764,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -3799,7 +3799,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div
@@ -4403,7 +4403,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                           >
                             <div
                               aria-label="ARK"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                               data-testid="NetworkOption-ARK-ark.mainnet"
                             >
                               <div
@@ -4438,7 +4438,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                              class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                               data-testid="NetworkOption-ARK-ark.devnet"
                             >
                               <div

@@ -3,10 +3,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import tw, { styled } from "twin.macro";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { useProfileJobs } from "@/app/hooks";
+import { useBreakpoint, useProfileJobs } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
@@ -15,6 +16,14 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
+import { Icon } from "@/app/components/Icon";
+
+const QrCodeButton = styled.button`
+	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
+	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
+	${tw`hover:(bg-theme-primary-700 border-theme-primary-700)`}
+	${tw`focus:(outline-none ring-2 ring-theme-primary-400)`}
+`;
 
 export const FormStep = ({
 	profile,
@@ -27,6 +36,8 @@ export const FormStep = ({
 	const isMounted = useRef(true);
 
 	const { t } = useTranslation();
+
+	const { isXs } = useBreakpoint();
 
 	const { syncProfileWallets } = useProfileJobs(profile);
 
@@ -130,6 +141,22 @@ export const FormStep = ({
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker })}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
+				extra={
+					<div className="flex h-full align-bottom">
+						<QrCodeButton className="group" type="button">
+							<Icon
+								size="lg"
+								name="QrCode"
+								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
+							/>
+							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+								{isXs
+									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
+									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+							</span>
+						</QrCodeButton>
+					</div>
+				}
 			/>
 
 			<div className="space-y-6 pt-6">
