@@ -12,6 +12,7 @@ import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendT
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
+import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
@@ -119,6 +120,7 @@ export const SendTransfer: React.VFC = () => {
 		resetForm();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	const [showQRModal, setShowQRModal] = useState(false);
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
 
@@ -219,7 +221,11 @@ export const SendTransfer: React.VFC = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.FormStep}>
-				<FormStep networks={networks} profile={activeProfile} deeplinkProps={deepLinkParameters} />
+				<FormStep
+					profile={activeProfile}
+					deeplinkProps={deepLinkParameters}
+					onScan={() => setShowQRModal(true)}
+				/>
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ReviewStep}>
@@ -275,6 +281,12 @@ export const SendTransfer: React.VFC = () => {
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
+
+					<QRModal
+						isOpen={showQRModal}
+						onCancel={() => setShowQRModal(false)}
+						onRead={(text: string) => console.log(text)}
+					/>
 
 					<FeeWarning
 						isOpen={showFeeWarning}

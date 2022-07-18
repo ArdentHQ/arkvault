@@ -55,7 +55,7 @@ import { ReactComponent as ServerMultisign } from "./server-multisign.svg";
 import { ReactComponent as ServerPeer } from "./server-peer.svg";
 import { ReactComponent as Forbidden } from "./forbidden.svg";
 import { ReactComponent as Plus } from "./plus.svg";
-import { ReactComponent as QrCode } from "./qr-code.svg";
+import { ReactComponent as QRCode } from "./qr-code.svg";
 import { ReactComponent as QuestionMarkSmall } from "./question-mark-small.svg";
 import { ReactComponent as ShieldCheckMark } from "./shield-check-mark.svg";
 import { ReactComponent as Sliders } from "./sliders.svg";
@@ -130,7 +130,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Pencil,
 	PencilRuler,
 	Plus,
-	QrCode,
+	QRCode,
 	QuestionMarkSmall,
 	Server,
 	ServerMultisign,

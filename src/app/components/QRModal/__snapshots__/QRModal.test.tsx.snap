@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QRModal should render 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    data-testid="Modal__overlay"
+  >
+    <div
+      class="css-u2ptd8"
+      tabindex="-1"
+    >
+      <div
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-10"
+        data-testid="Modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+        >
+          <button
+            class="h-11 w-11 css-12xyeiw"
+            data-testid="Modal__close-button"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative flex flex-1 flex-col space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Scan QR-Code
+          </h2>
+          <div
+            class="flex flex-1 flex-col"
+          >
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              Hold a compatible QR Code in front of your device's camera
+            </div>
+            <div
+              class="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden"
+              style="background-image: url(/qr-background.png); background-position: center; background-size: cover;"
+            >
+              <div
+                class="absolute inset-0 z-10"
+              />
+              <div
+                class="flex h-full flex-col items-center justify-center space-y-8 py-8"
+              >
+                <div
+                  class="relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2 border-theme-secondary-500"
+                  data-testid="ViewFinder"
+                  style="box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.75);"
+                >
+                  <div
+                    class="absolute left-8 right-8 -top-[2px] h-0.5 bg-theme-secondary-800"
+                  />
+                  <div
+                    class="absolute left-8 right-8 -bottom-[2px] h-0.5 bg-theme-secondary-800"
+                  />
+                  <div
+                    class="absolute top-8 bottom-8 -left-[2px] w-0.5 bg-theme-secondary-800"
+                  />
+                  <div
+                    class="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800"
+                  />
+                </div>
+                <button
+                  class="z-20 space-x-2 css-1q9v3yc"
+                  data-testid="QRFileUpload__upload"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg>
+                        arrow-up-bracket.svg
+                      </svg>
+                    </div>
+                    <span>
+                      Upload Image
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
