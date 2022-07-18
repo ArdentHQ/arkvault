@@ -18,7 +18,7 @@ interface ModalContentProperties {
 }
 
 const ModalContainer = styled.div<{ size?: Size }>`
-	${tw`flex-1 max-w-full md:m-auto`}
+	${tw`flex-1 max-w-full md:m-auto md:px-10`}
 
 	${({ size }) => {
 		const sizes = {

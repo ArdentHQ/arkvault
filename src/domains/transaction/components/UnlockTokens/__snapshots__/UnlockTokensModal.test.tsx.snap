@@ -7,7 +7,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -343,7 +343,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -560,7 +560,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -730,7 +730,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -917,7 +917,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -1253,7 +1253,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -1470,7 +1470,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -1640,7 +1640,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -2039,7 +2039,7 @@ exports[`UnlockTokensModal should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div

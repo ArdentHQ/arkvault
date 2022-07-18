@@ -7,7 +7,7 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -569,7 +569,7 @@ exports[`PortfolioBreakdownDetails should render responsive 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1124,7 +1124,7 @@ exports[`PortfolioBreakdownDetails should render responsive with other group 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1887,7 +1887,7 @@ exports[`PortfolioBreakdownDetails should render with other group 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

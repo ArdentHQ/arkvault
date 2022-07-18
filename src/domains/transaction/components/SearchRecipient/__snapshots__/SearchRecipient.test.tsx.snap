@@ -9,7 +9,7 @@ exports[`SearchRecipient should render a modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-pzbet3"
+      class="css-u2ptd8"
       tabindex="-1"
     >
       <div
@@ -370,7 +370,7 @@ exports[`SearchRecipient should render a modal with custom title and description
     data-testid="Modal__overlay"
   >
     <div
-      class="css-pzbet3"
+      class="css-u2ptd8"
       tabindex="-1"
     >
       <div
@@ -731,7 +731,7 @@ exports[`SearchRecipient should render with contact on mobile 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -934,7 +934,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-pzbet3"
+      class="css-u2ptd8"
       tabindex="-1"
     >
       <div
@@ -1295,7 +1295,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1656,7 +1656,7 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1929,7 +1929,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-pzbet3"
+      class="css-u2ptd8"
       tabindex="-1"
     >
       <div

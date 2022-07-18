@@ -9,7 +9,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div
@@ -145,7 +145,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div

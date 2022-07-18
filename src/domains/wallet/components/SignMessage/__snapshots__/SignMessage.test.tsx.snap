@@ -7,7 +7,7 @@ exports[`SignMessage should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -242,7 +242,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

@@ -9,7 +9,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -464,7 +464,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -946,7 +946,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

@@ -7,7 +7,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -509,7 +509,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1011,7 +1011,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1487,7 +1487,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1963,7 +1963,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -2372,7 +2372,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -3050,7 +3050,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -3439,7 +3439,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -3915,7 +3915,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -4359,7 +4359,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -4803,7 +4803,7 @@ exports[`MultiSignatureDetail should show error screen for unsupported Nano S 1`
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -4990,7 +4990,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -5492,7 +5492,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -5994,7 +5994,7 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -6192,7 +6192,7 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -6390,7 +6390,7 @@ exports[`MultiSignatureDetail should submit transaction signing using keyboards 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

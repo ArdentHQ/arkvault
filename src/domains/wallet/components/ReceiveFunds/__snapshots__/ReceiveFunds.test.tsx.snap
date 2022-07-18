@@ -7,7 +7,7 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div
@@ -170,7 +170,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div
@@ -381,7 +381,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div

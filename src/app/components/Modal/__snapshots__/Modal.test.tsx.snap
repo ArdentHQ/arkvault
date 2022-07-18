@@ -7,7 +7,7 @@ exports[`Modal should closed by the Esc key 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -64,7 +64,7 @@ exports[`Modal should render a 3x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1bkh76g"
+      class="css-9cp55s"
       tabindex="-1"
     >
       <div
@@ -119,7 +119,7 @@ exports[`Modal should render a 4x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-pzbet3"
+      class="css-u2ptd8"
       tabindex="-1"
     >
       <div
@@ -174,7 +174,7 @@ exports[`Modal should render a 5x large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -229,7 +229,7 @@ exports[`Modal should render a large one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1vhnc7q"
+      class="css-1nnbd55"
       tabindex="-1"
     >
       <div
@@ -284,7 +284,7 @@ exports[`Modal should render a medium one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-4e0zgx"
+      class="css-x6jl3y"
       tabindex="-1"
     >
       <div
@@ -339,7 +339,7 @@ exports[`Modal should render a modal with banner 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -404,7 +404,7 @@ exports[`Modal should render a modal with content 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -461,7 +461,7 @@ exports[`Modal should render a modal with description 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -522,7 +522,7 @@ exports[`Modal should render a modal with overlay 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -579,7 +579,7 @@ exports[`Modal should render a modal with overlay 2`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -636,7 +636,7 @@ exports[`Modal should render a small one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-xrj5ng"
+      class="css-oi5luv"
       tabindex="-1"
     >
       <div
@@ -691,7 +691,7 @@ exports[`Modal should render a xlarge one 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1icbhox"
+      class="css-s6in41"
       tabindex="-1"
     >
       <div
@@ -746,7 +746,7 @@ exports[`Modal should render without close button 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -780,7 +780,7 @@ exports[`Modal should render without offset for buttons 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

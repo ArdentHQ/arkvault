@@ -11,7 +11,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature registrati
     data-testid="ConfirmRemovePendingTransaction__Multisignature-Registration"
   >
     <div
-      class="css-4e0zgx"
+      class="css-x6jl3y"
       tabindex="-1"
     >
       <div
@@ -137,7 +137,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature transactio
     data-testid="ConfirmRemovePendingTransaction__Transfer-Transaction"
   >
     <div
-      class="css-4e0zgx"
+      class="css-x6jl3y"
       tabindex="-1"
     >
       <div

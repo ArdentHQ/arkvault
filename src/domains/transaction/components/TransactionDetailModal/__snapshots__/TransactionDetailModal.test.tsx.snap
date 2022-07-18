@@ -9,7 +9,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -315,7 +315,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -621,7 +621,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -945,7 +945,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1218,7 +1218,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1686,7 +1686,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -2224,7 +2224,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -2497,7 +2497,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -2905,7 +2905,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -3310,7 +3310,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -3715,7 +3715,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -4120,7 +4120,7 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div

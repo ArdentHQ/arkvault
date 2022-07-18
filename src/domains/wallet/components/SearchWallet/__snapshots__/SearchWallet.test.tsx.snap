@@ -7,7 +7,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -412,7 +412,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -819,7 +819,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1226,7 +1226,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1631,7 +1631,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1954,7 +1954,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -2277,7 +2277,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -2600,7 +2600,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3005,7 +3005,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3410,7 +3410,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3877,7 +3877,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -4344,7 +4344,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -4811,7 +4811,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5276,7 +5276,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5599,7 +5599,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5922,7 +5922,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -6245,7 +6245,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -6710,7 +6710,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
