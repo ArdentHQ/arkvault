@@ -7,12 +7,12 @@ import { QRCameraReader } from "@/app/components/QRCameraReader";
 import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
 
-interface QrError {
+interface QRError {
 	title?: string;
 	message: string;
 }
 
-interface QrModalProperties {
+interface QRModalProperties {
 	isOpen: boolean;
 	onCancel: () => void;
 	onRead: (text: string) => void;
@@ -23,7 +23,7 @@ const AccessDeniedErrors = [
 	"is not allowed", // Firefox & Safari
 ];
 
-const ViewFinder = ({ error, isLoading }: { error?: QrError; isLoading: boolean }) => (
+const ViewFinder = ({ error, isLoading }: { error?: QRError; isLoading: boolean }) => (
 	<div
 		data-testid="ViewFinder"
 		className="relative z-10 flex h-[300px] w-[300px] flex-col items-center justify-center border-2 border-theme-secondary-500"
@@ -37,7 +37,7 @@ const ViewFinder = ({ error, isLoading }: { error?: QrError; isLoading: boolean 
 		{(error || isLoading) && (
 			<>
 				<div
-					data-testid="QrModal__placeholder"
+					data-testid="QRModal__placeholder"
 					className="absolute inset-0 -z-10"
 					style={{ boxShadow: "inset 9999px 0px 0px rgba(0, 0, 0, 0.75)" }}
 				/>
@@ -58,8 +58,8 @@ const ViewFinder = ({ error, isLoading }: { error?: QrError; isLoading: boolean 
 	</div>
 );
 
-export const QrModal = ({ isOpen, onCancel, onRead }: QrModalProperties) => {
-	const [error, setError] = useState<QrError | undefined>(undefined);
+export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
+	const [error, setError] = useState<QRError | undefined>(undefined);
 	const [ready, setReady] = useState(false);
 
 	const { t } = useTranslation();

@@ -1,5 +1,5 @@
 import React from "react";
-import QrScanner from "qr-scanner";
+import QRScanner from "qr-scanner";
 
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
@@ -15,7 +15,7 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 	const { t } = useTranslation();
 	const { showOpenDialog } = useFiles();
 
-	const handeQrFileScan = async () => {
+	const handeQRFileScan = async () => {
 		try {
 			const file = await showOpenDialog({});
 
@@ -23,7 +23,7 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 				return;
 			}
 
-			const { data } = await QrScanner.scanImage(file, { returnDetailedScanResult: true });
+			const { data } = await QRScanner.scanImage(file, { returnDetailedScanResult: true });
 
 			onRead?.(data);
 		} catch (error) {
@@ -40,7 +40,7 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 			variant="secondary"
 			theme="dark"
 			className="z-20 space-x-2"
-			onClick={handeQrFileScan}
+			onClick={handeQRFileScan}
 			data-testid="QRFileUpload__upload"
 		>
 			<Icon name="ArrowUpBracket" />

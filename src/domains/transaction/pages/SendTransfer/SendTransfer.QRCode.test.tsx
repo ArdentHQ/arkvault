@@ -1,7 +1,7 @@
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import QrScanner from "qr-scanner";
+import QRScanner from "qr-scanner";
 import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -24,7 +24,7 @@ const history = createHashHistory();
 
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
-		jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 		jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 
 		const profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");

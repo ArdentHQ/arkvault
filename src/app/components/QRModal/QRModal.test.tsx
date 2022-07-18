@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
 
-import QrScanner from "qr-scanner";
-import { QrModal } from "./QrModal";
+import QRScanner from "qr-scanner";
+import { QRModal } from "./QRModal";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
@@ -23,9 +23,9 @@ jest.mock("react-qr-reader", () => ({
 
 const reactQrReaderMock = require("react-qr-reader");
 
-describe("QrModal", () => {
+describe("QRModal", () => {
 	it("should render", () => {
-		const { asFragment } = render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		const { asFragment } = render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 
 		expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.TITLE)).toBeInTheDocument();
 		expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.DESCRIPTION)).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe("QrModal", () => {
 	it("should execute onCancel callback", () => {
 		const onCancel = jest.fn();
 
-		render(<QrModal isOpen={true} onCancel={onCancel} onRead={jest.fn()} />);
+		render(<QRModal isOpen={true} onCancel={onCancel} onRead={jest.fn()} />);
 
 		const closeButton = screen.getByTestId("Modal__close-button");
 
@@ -48,11 +48,11 @@ describe("QrModal", () => {
 	it("should render invalid qr error from file upload", async () => {
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 		reactQrReaderMock.QrReader.mockImplementation(() => null);
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockImplementation(() => {
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockImplementation(() => {
 			throw new Error("InvalidQR");
 		});
 
-		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await expect(
@@ -67,9 +67,9 @@ describe("QrModal", () => {
 		const onRead = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 		reactQrReaderMock.QrReader.mockImplementation(() => null);
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
 
-		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={onRead} />);
+		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={onRead} />);
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
@@ -88,7 +88,7 @@ describe("QrModal", () => {
 			},
 		);
 
-		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByText("error-small.svg")).toBeInTheDocument();
@@ -111,7 +111,7 @@ describe("QrModal", () => {
 			},
 		);
 
-		render(<QrModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 
 		await waitFor(() => {
 			expect(screen.getByText("error-small.svg")).toBeInTheDocument();

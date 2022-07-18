@@ -2,7 +2,7 @@ import React from "react";
 import * as browserAccess from "browser-fs-access";
 import userEvent from "@testing-library/user-event";
 
-import QrScanner from "qr-scanner";
+import QRScanner from "qr-scanner";
 import { QRFileUpload } from "./QRFileUpload";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
@@ -20,7 +20,7 @@ describe("QRFileUpload", () => {
 		const onRead = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
 		render(<QRFileUpload onRead={onRead} />);
 
@@ -35,7 +35,7 @@ describe("QRFileUpload", () => {
 		const onRead = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
 		render(<QRFileUpload onRead={onRead} />);
 
@@ -56,7 +56,7 @@ describe("QRFileUpload", () => {
 			throw error;
 		});
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 		render(<QRFileUpload onRead={onRead} onError={onError} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
@@ -73,7 +73,7 @@ describe("QRFileUpload", () => {
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 		const errorMessage = "InvalidQR";
 
-		const scanImageMock = jest.spyOn(QrScanner, "scanImage").mockImplementation(() => {
+		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockImplementation(() => {
 			throw new Error(errorMessage);
 		});
 

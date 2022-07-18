@@ -12,6 +12,7 @@ import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendT
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
+import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
@@ -25,7 +26,6 @@ import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks"
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
-import { QrModal } from "@/domains/transaction/components/QrModal";
 
 const MAX_TABS = 5;
 
@@ -120,7 +120,7 @@ export const SendTransfer: React.VFC = () => {
 		resetForm();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const [showQrModal, setShowQrModal] = useState(false);
+	const [showQRModal, setShowQRModal] = useState(false);
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
 
@@ -224,7 +224,7 @@ export const SendTransfer: React.VFC = () => {
 				<FormStep
 					profile={activeProfile}
 					deeplinkProps={deepLinkParameters}
-					onScan={() => setShowQrModal(true)}
+					onScan={() => setShowQRModal(true)}
 				/>
 			</TabPanel>
 
@@ -282,9 +282,9 @@ export const SendTransfer: React.VFC = () => {
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
-					<QrModal
-						isOpen={showQrModal}
-						onCancel={() => setShowQrModal(false)}
+					<QRModal
+						isOpen={showQRModal}
+						onCancel={() => setShowQRModal(false)}
 						onRead={(text: string) => console.log(text)}
 					/>
 
