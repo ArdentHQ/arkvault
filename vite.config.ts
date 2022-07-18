@@ -27,6 +27,7 @@ export default defineConfig({
 						"react-is",
 						"react-linkify",
 						"react-loading-skeleton",
+						"react-qr-scanner",
 						"react-range",
 						"react-router",
 						"react-router-dom",
