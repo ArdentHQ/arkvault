@@ -762,7 +762,7 @@ exports[`AuthenticationStep should show ledger waiting app screen 1`] = `
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-i3nrbr"
+          class="css-1v2j3qb"
           color="info"
         />
         <span
@@ -815,7 +815,7 @@ exports[`AuthenticationStep should show ledger waiting device screen 1`] = `
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-i3nrbr"
+          class="css-1v2j3qb"
           color="info"
         />
         <span
@@ -865,7 +865,7 @@ exports[`AuthenticationStep should show ledger waiting device screen for Nano S 
       class="mt-8 inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-i3nrbr"
+        class="css-1v2j3qb"
         color="info"
       />
       <span
@@ -914,7 +914,7 @@ exports[`AuthenticationStep should show ledger waiting device screen for Nano X 
       class="mt-8 inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-i3nrbr"
+        class="css-1v2j3qb"
         color="info"
       />
       <span
@@ -963,7 +963,7 @@ exports[`AuthenticationStep should show only ledger confirmation 1`] = `
       class="mt-8 inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-i3nrbr"
+        class="css-1v2j3qb"
         color="info"
       />
       <span
@@ -1049,7 +1049,7 @@ exports[`AuthenticationStep should specify ledger supported model 1`] = `
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-i3nrbr"
+          class="css-1v2j3qb"
           color="info"
         />
         <span

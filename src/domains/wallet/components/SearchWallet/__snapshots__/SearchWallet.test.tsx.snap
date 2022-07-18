@@ -7,7 +7,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -38,7 +38,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -46,7 +46,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -412,7 +412,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -443,7 +443,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -451,7 +451,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -819,7 +819,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -850,7 +850,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -858,7 +858,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1226,7 +1226,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1257,7 +1257,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1265,7 +1265,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1631,7 +1631,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1662,7 +1662,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1670,7 +1670,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1954,7 +1954,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -1985,7 +1985,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1993,7 +1993,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -2277,7 +2277,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -2308,7 +2308,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -2316,7 +2316,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -2600,7 +2600,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -2631,7 +2631,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -2639,7 +2639,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -3005,7 +3005,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3036,7 +3036,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -3044,7 +3044,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -3410,7 +3410,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3441,7 +3441,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -3449,7 +3449,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -3877,7 +3877,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -3908,7 +3908,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -3916,7 +3916,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -4344,7 +4344,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -4375,7 +4375,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -4383,7 +4383,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -4811,7 +4811,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -4842,7 +4842,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -4850,7 +4850,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -5276,7 +5276,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5307,7 +5307,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -5315,7 +5315,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -5599,7 +5599,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5630,7 +5630,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -5638,7 +5638,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -5922,7 +5922,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -5953,7 +5953,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -5961,7 +5961,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -6245,7 +6245,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -6276,7 +6276,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -6284,7 +6284,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -6710,7 +6710,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
     data-testid="Modal__overlay"
   >
     <div
-      class="css-11haine"
+      class="css-12041bi"
       tabindex="-1"
     >
       <div
@@ -6741,7 +6741,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -6749,7 +6749,7 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
             Select Account
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"

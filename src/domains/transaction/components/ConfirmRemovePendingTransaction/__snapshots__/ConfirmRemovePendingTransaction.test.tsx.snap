@@ -11,7 +11,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature registrati
     data-testid="ConfirmRemovePendingTransaction__Multisignature-Registration"
   >
     <div
-      class="css-4e0zgx"
+      class="css-x6jl3y"
       tabindex="-1"
     >
       <div
@@ -42,7 +42,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature registrati
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -50,7 +50,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature registrati
             Remove Transaction
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="my-8 mx-auto max-w-52"
@@ -137,7 +137,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature transactio
     data-testid="ConfirmRemovePendingTransaction__Transfer-Transaction"
   >
     <div
-      class="css-4e0zgx"
+      class="css-x6jl3y"
       tabindex="-1"
     >
       <div
@@ -168,7 +168,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature transactio
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -176,7 +176,7 @@ exports[`ConfirmRemovePendingTransaction should render multisignature transactio
             Remove Transaction
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="my-8 mx-auto max-w-52"

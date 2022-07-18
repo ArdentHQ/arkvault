@@ -171,6 +171,17 @@ export const translations = {
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
 	},
+	MODAL_QR_CODE: {
+		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		ERROR: "Something went wrong.",
+		INVALID_QR_CODE: "The QR code is invalid.",
+		PERMISSION_ERROR: {
+			DESCRIPTION: "Please allow access to the camera in the browser settings.",
+			TITLE: "Permission Denied",
+		},
+		TITLE: "Scan QR-Code",
+		UPLOAD: "Upload Image",
+	},
 	MODAL_SEARCH_RECIPIENT: {
 		DESCRIPTION: "Find and select a recipient from your contacts and wallets",
 		SEARCH_PLACEHOLDER: "Enter name or address",

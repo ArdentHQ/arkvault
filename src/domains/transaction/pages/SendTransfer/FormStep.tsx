@@ -1,4 +1,4 @@
-import { Enums, Networks } from "@ardenthq/sdk";
+import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -18,7 +18,7 @@ import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 
-const QrCodeButton = styled.button`
+const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
 	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
 	${tw`hover:(bg-theme-primary-700 border-theme-primary-700)`}
@@ -28,10 +28,11 @@ const QrCodeButton = styled.button`
 export const FormStep = ({
 	profile,
 	deeplinkProps,
+	onScan,
 }: {
-	networks: Networks.Network[];
 	profile: Contracts.IProfile;
 	deeplinkProps: Record<string, string>;
+	onScan?: () => void;
 }) => {
 	const isMounted = useRef(true);
 
@@ -140,10 +141,10 @@ export const FormStep = ({
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
-						<QrCodeButton className="group" type="button">
+						<QRCodeButton className="group" type="button" onClick={onScan} data-testid="QRCodeModalButton">
 							<Icon
 								size="lg"
-								name="QrCode"
+								name="QRCode"
 								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
 							/>
 							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
@@ -151,7 +152,7 @@ export const FormStep = ({
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
 							</span>
-						</QrCodeButton>
+						</QRCodeButton>
 					</div>
 				}
 			/>
