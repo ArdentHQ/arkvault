@@ -38,11 +38,11 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -540,11 +540,11 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1042,11 +1042,11 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1518,11 +1518,11 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1994,11 +1994,11 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -2403,11 +2403,11 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -3081,11 +3081,11 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -3470,11 +3470,11 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -3946,11 +3946,11 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -4390,11 +4390,11 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -4834,11 +4834,11 @@ exports[`MultiSignatureDetail should show error screen for unsupported Nano S 1`
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -5021,11 +5021,11 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -5523,11 +5523,11 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -6025,11 +6025,11 @@ exports[`MultiSignatureDetail should sign transaction after authentication page 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -6223,11 +6223,11 @@ exports[`MultiSignatureDetail should sign transaction with a ledger wallet 1`] =
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -6421,11 +6421,11 @@ exports[`MultiSignatureDetail should submit transaction signing using keyboards 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"

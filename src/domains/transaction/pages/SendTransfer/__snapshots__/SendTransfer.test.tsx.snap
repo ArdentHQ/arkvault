@@ -811,7 +811,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                     </button>
                   </div>
                   <div
-                    class="relative space-y-4"
+                    class="relative flex flex-1 flex-col space-y-4"
                   >
                     <h2
                       class="mb-0 text-2xl font-bold"
@@ -819,7 +819,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                       Confirm Transaction
                     </h2>
                     <div
-                      class="flex-1"
+                      class="flex flex-1 flex-col"
                     >
                       <div
                         class="my-8 text-theme-secondary-text"
@@ -12310,7 +12310,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                     </button>
                   </div>
                   <div
-                    class="relative space-y-4"
+                    class="relative flex flex-1 flex-col space-y-4"
                   >
                     <h2
                       class="mb-0 text-2xl font-bold"
@@ -12318,7 +12318,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                       Confirm Transaction
                     </h2>
                     <div
-                      class="flex-1"
+                      class="flex flex-1 flex-col"
                     >
                       <div
                         class="my-8 text-theme-secondary-text"

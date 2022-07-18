@@ -72,7 +72,7 @@ const ModalContent = ({
 			</div>
 		)}
 
-		<div className="relative space-y-4">
+		<div className="relative flex flex-1 flex-col space-y-4">
 			{banner && (
 				<div className="relative -mx-10 mb-10 -mt-10 h-56">
 					{banner}
@@ -87,7 +87,7 @@ const ModalContent = ({
 
 			{!banner && title && <h2 className={cn("mb-0 text-2xl font-bold", titleClass)}>{title}</h2>}
 
-			<div className="flex-1">
+			<div className="flex flex-1 flex-col">
 				{image}
 
 				{description && <div className="whitespace-pre-line text-theme-secondary-text">{description}</div>}

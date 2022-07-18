@@ -38,7 +38,7 @@ exports[`DeleteProfile should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -46,7 +46,7 @@ exports[`DeleteProfile should render 1`] = `
             Delete Profile
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <svg
               class="my-8 mx-auto max-w-52"

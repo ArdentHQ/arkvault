@@ -122,7 +122,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			onClose={() => onCancel()}
 		>
 			<div
-				className="relative -mx-10 -mb-10 mt-8 flex justify-center overflow-hidden"
+				className="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden"
 				style={{
 					backgroundImage: "url('/qr-background.png')",
 					backgroundPosition: "center",

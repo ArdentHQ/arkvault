@@ -48,7 +48,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -56,7 +56,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
             Multisignature
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -588,7 +588,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -596,7 +596,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
             Multisignature
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -1128,7 +1128,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1136,7 +1136,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
             Multisignature
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -1613,7 +1613,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1621,7 +1621,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
             Multisignature
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -2153,7 +2153,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -2161,7 +2161,7 @@ exports[`MultiSignatureRegistrationDetail should render sender's address as gene
             Multisignature
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"

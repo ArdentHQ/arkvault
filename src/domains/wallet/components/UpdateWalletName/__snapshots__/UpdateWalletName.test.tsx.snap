@@ -38,7 +38,7 @@ exports[`UpdateWalletName should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -46,7 +46,7 @@ exports[`UpdateWalletName should render 1`] = `
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -163,7 +163,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -171,7 +171,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -307,7 +307,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -315,7 +315,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -451,7 +451,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -459,7 +459,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -595,7 +595,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -603,7 +603,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -739,7 +739,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -747,7 +747,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -883,7 +883,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -891,7 +891,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
             Wallet Name
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"

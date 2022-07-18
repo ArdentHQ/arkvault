@@ -40,7 +40,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -48,7 +48,7 @@ exports[`MultiPaymentDetail should render a modal 1`] = `
             Transfer
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -495,7 +495,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -503,7 +503,7 @@ exports[`MultiPaymentDetail should render hint icon with tooltip when it's a ret
             Transfer
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"
@@ -977,7 +977,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -985,7 +985,7 @@ exports[`MultiPaymentDetail should render with recipients 1`] = `
             Transfer
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="no-ligatures css-1iw2tte"

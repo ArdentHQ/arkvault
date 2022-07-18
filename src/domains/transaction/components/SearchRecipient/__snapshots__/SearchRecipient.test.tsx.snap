@@ -40,7 +40,7 @@ exports[`SearchRecipient should render a modal 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -48,7 +48,7 @@ exports[`SearchRecipient should render a modal 1`] = `
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -401,7 +401,7 @@ exports[`SearchRecipient should render a modal with custom title and description
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -409,7 +409,7 @@ exports[`SearchRecipient should render a modal with custom title and description
             Modal title
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -762,7 +762,7 @@ exports[`SearchRecipient should render with contact on mobile 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -770,7 +770,7 @@ exports[`SearchRecipient should render with contact on mobile 1`] = `
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -965,7 +965,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -973,7 +973,7 @@ exports[`SearchRecipient should render with selected address 1`] = `
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1326,7 +1326,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1334,7 +1334,7 @@ exports[`SearchRecipient should render with selected address on md screen 1`] = 
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1687,7 +1687,7 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1695,7 +1695,7 @@ exports[`SearchRecipient should render with selected address on mobile 1`] = `
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"
@@ -1960,7 +1960,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1968,7 +1968,7 @@ exports[`SearchRecipient should render with selected address when no compact 1`]
             Select Recipient
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="whitespace-pre-line text-theme-secondary-text"

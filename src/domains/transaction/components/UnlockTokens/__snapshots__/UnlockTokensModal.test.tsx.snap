@@ -38,10 +38,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 1`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -374,10 +374,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -591,10 +591,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -761,10 +761,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -948,10 +948,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 1
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1284,10 +1284,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1501,10 +1501,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -1671,10 +1671,10 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
@@ -2070,10 +2070,10 @@ exports[`UnlockTokensModal should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <form
               class="space-y-5"
