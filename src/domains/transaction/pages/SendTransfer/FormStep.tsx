@@ -125,22 +125,10 @@ export const FormStep = ({
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
 
-	const ticker = useMemo(() => {
-		if (deeplinkProps.coin && deeplinkProps.network) {
-			const coin = profile.coins().get(deeplinkProps.coin.toUpperCase(), deeplinkProps.network);
-
-			if (coin) {
-				return coin.network().ticker();
-			}
-		}
-
-		return network?.ticker();
-	}, [network, profile, deeplinkProps]);
-
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker })}
+				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">

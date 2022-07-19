@@ -100,7 +100,7 @@ const Component = ({ deeplinkProperties }) => {
 	return (
 		<StepsProvider activeStep={0} steps={4}>
 			<FormProvider {...form}>
-				<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
+				<FormStep profile={profile} deeplinkProps={deeplinkProperties} />
 			</FormProvider>
 		</StepsProvider>
 	);
@@ -213,7 +213,7 @@ describe("SendTransfer", () => {
 	it.each(["xs", "lg"])("should render form step (%s)", async (breakpoint) => {
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
+				<FormStep deeplinkProps={{}} profile={profile} />
 			</StepsProvider>,
 			{
 				breakpoint,
@@ -247,7 +247,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} networks={[]} profile={profile} />
+				<FormStep deeplinkProps={{}} profile={profile} />
 			</StepsProvider>,
 			{
 				defaultValues: {
@@ -274,7 +274,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
-				<FormStep deeplinkProps={{}} networks={profile.availableNetworks()} profile={profile} />,
+				<FormStep deeplinkProps={{}} profile={profile} />,
 			</StepsProvider>,
 			{
 				defaultValues: {
@@ -606,8 +606,29 @@ describe("SendTransfer", () => {
 		networkMock.mockRestore();
 	});
 
-	it("should render form and use location state", async () => {
+	it("should render form and use location state with network parameter", async () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet&amount=0`;
+		history.push(transferURL);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render form and use location state with nethash parameter", async () => {
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&amount=0`;
 		history.push(transferURL);
 
 		const { asFragment } = render(
