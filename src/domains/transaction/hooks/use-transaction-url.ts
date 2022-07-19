@@ -22,12 +22,19 @@ export const useTransactionURL = () => {
 			return t("TRANSACTION.INVALID_URL");
 		}
 
-		if (!searchParameters.get("network")) {
-			return t("TRANSACTION.VALIDATION.NETWORK_MISSING");
-		}
-
 		if (!searchParameters.get("coin")) {
 			return t("TRANSACTION.VALIDATION.COIN_MISSING");
+		}
+
+		const network = searchParameters.get("network");
+		const nethash = searchParameters.get("nethash");
+
+		if (network && !["ark.devnet", "ark.mainnet"].includes(network)) {
+			return t("TRANSACTION.VALIDATION.NETWORK_INVALID");
+		}
+
+		if (!network && !nethash) {
+			return t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING");
 		}
 	};
 
