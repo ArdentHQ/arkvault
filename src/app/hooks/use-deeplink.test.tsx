@@ -1,12 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
 import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	screen,
+	mockProfileWithPublicAndTestNetworks,
+} from "@/utils/testing-library";
 import { ProfilePaths } from "@/router/paths";
 
 const history = createHashHistory();
@@ -21,15 +28,23 @@ const deeplinkTestContent = () => screen.getByText(deeplinkTest);
 describe("useDeeplink hook", () => {
 	let toastWarningSpy: jest.SpyInstance;
 	let toastErrorSpy: jest.SpyInstance;
+	let resetProfileNetworksMock: () => void;
+	let profile: Contracts.IProfile;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
 
 	beforeEach(() => {
 		toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
 		toastErrorSpy = jest.spyOn(toasts, "error").mockImplementation();
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
 		toastWarningSpy.mockRestore();
 		toastErrorSpy.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	const TestComponent: React.FC = () => {
@@ -38,9 +53,9 @@ describe("useDeeplink hook", () => {
 		return <h1>Deeplink Test</h1>;
 	};
 
-	it("should subscribe to deeplink listener and toast a warning to select a profile", () => {
+	it("should prompt the user to select a profile", () => {
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -52,13 +67,13 @@ describe("useDeeplink hook", () => {
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to coin not supported", async () => {
+	it("should show a warning if the coin is not supported", async () => {
 		history.push(
 			"/?method=transfer&coin=doge&network=mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -73,13 +88,13 @@ describe("useDeeplink hook", () => {
 		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Coin "doge" not supported.'));
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to network not supported", async () => {
+	it("should show a warning if the network parameter is invalid", async () => {
 		history.push(
 			"/?method=transfer&coin=ark&network=custom&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -91,14 +106,14 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
-		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.'));
+		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is invalid.'));
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to no senders available", async () => {
+	it("should show a warning if there are no available senders for network", async () => {
 		history.push(mainnetDeepLink);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -117,13 +132,63 @@ describe("useDeeplink hook", () => {
 		);
 	});
 
-	it("should subscribe to deeplink listener and navigate", async () => {
+	it("should show a warning if there is no network for the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
+
+		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith(
+				`Invalid URI: Network with nethash "${nethash}" is not enabled or available.`,
+			),
+		);
+	});
+
+	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+
+		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith(
+				`Invalid URI: The current profile has no wallets available for the network with nethash "${nethash}"`,
+			),
+		);
+	});
+
+	it("should navigate to transfer page", async () => {
 		history.push(
 			"/?method=transfer&coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/profiles/:profileId/wallets/:walletId">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -147,7 +212,7 @@ describe("useDeeplink hook", () => {
 		);
 
 		render(
-			<Route pathname="/profiles/:profileId/wallets/:walletId">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -171,7 +236,7 @@ describe("useDeeplink hook", () => {
 		history.push("/?coin=ark&network=ark.devnet&delegate=alessio");
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -189,11 +254,11 @@ describe("useDeeplink hook", () => {
 	it.each([
 		["createProfile", ProfilePaths.CreateProfile],
 		["importProfile", ProfilePaths.ImportProfile],
-	])("should clear deeplink and do not show a warning toast in %S page", async (page, path) => {
+	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
 		history.push(mainnetDeepLink);
 
 		render(
-			<Route pathname={"/"}>
+			<Route>
 				<TestComponent />
 			</Route>,
 			{

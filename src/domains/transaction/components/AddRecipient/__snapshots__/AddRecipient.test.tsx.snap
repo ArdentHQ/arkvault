@@ -1435,7 +1435,7 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
                       name="amount"
                       placeholder="Enter an amount"
                       type="text"
-                      value=""
+                      value="0"
                     />
                   </div>
                   <div
