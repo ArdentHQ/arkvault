@@ -102,7 +102,9 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should return undefined if address is not provided", async () => {
-		const { result, waitForNextUpdate } = renderHook(() => useQRCode({ nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867" } as any));
+		const { result, waitForNextUpdate } = renderHook(() =>
+			useQRCode({ nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867" } as any),
+		);
 
 		await waitForNextUpdate();
 
