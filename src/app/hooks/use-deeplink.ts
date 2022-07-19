@@ -83,7 +83,6 @@ export const useDeeplink = () => {
 
 			/* istanbul ignore next */
 			if (URLParameters.has("nethash")) {
-				console.log("nethash");
 				if (!allEnabledNetworks.some((network) => network.meta().nethash === URLParameters.get("nethash")!)) {
 					throw new Error(
 						`Network with nethash "${URLParameters.get("nethash")}" is not enabled or available.`,
