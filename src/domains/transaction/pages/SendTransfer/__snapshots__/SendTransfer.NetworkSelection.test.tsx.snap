@@ -972,7 +972,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                           name="amount"
                                           placeholder="Enter an amount"
                                           type="text"
-                                          value=""
+                                          value="0"
                                         />
                                       </div>
                                     </div>

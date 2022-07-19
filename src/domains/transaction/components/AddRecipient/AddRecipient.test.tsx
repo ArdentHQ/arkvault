@@ -225,7 +225,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue());
+		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0"));
 
 		expect(container).toMatchSnapshot();
 	});
