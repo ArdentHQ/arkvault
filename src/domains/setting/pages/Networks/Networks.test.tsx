@@ -444,10 +444,9 @@ describe("Network Settings", () => {
 
 				expect(networksFillSpy).toHaveBeenCalledWith(
 					expect.objectContaining({
-						"random-uuid.custom":
-							expect.objectContaining({
-								id: "random-uuid.custom",
-							}),
+						"random-uuid.custom": expect.objectContaining({
+							id: "random-uuid.custom",
+						}),
 					}),
 				);
 
