@@ -304,6 +304,7 @@ export const translations = {
 		DESCRIPTION: "Get more users and add more information about yourself",
 		TITLE: "Photo and Video",
 	},
+	QR_CODE_SUCCESS: "QR code was successfully read.",
 	RECEIVED: "Received",
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
@@ -368,6 +369,7 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
 	},
+
 	TYPE: "Type",
 
 	UNLOCK_TOKENS: {
@@ -391,15 +393,18 @@ export const translations = {
 		UNLOCK: "Unlock",
 		UNLOCKABLE: "Unlockable",
 	},
-
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
 	VALIDATION: {
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
+		COIN_MISSING: "coin parameter is missing.",
+		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
+		NETWORK_INVALID: "network parameter is invalid.",
+		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

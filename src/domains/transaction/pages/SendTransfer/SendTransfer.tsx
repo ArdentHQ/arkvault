@@ -26,6 +26,8 @@ import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks"
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
+import { toasts } from "@/app/services";
 
 const MAX_TABS = 5;
 
@@ -61,6 +63,7 @@ export const SendTransfer: React.VFC = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const { validateTransferURLParams, generateSendTransferPath } = useTransactionURL();
 
 	const {
 		form,
@@ -211,6 +214,21 @@ export const SendTransfer: React.VFC = () => {
 		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
+	const handleQRCodeRead = (url: string) => {
+		setShowQRModal(false);
+
+		const error = validateTransferURLParams(url);
+
+		if (error) {
+			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error }));
+			return;
+		}
+
+		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
+
+		history.push(generateSendTransferPath(activeProfile, url));
+	};
+
 	const renderTabs = () => (
 		<StepsProvider
 			steps={showNetworkStep ? MAX_TABS : MAX_TABS - 1}
@@ -285,7 +303,7 @@ export const SendTransfer: React.VFC = () => {
 					<QRModal
 						isOpen={showQRModal}
 						onCancel={() => setShowQRModal(false)}
-						onRead={(text: string) => console.log(text)}
+						onRead={(text: string) => handleQRCodeRead(text)}
 					/>
 
 					<FeeWarning
