@@ -89,7 +89,6 @@ export const useDeeplink = () => {
 					);
 				}
 
-				// const availableWallets = [];
 				const availableWallets = profile
 					.wallets()
 					.findByCoinWithNethash(URLParameters.get("coin")!.toUpperCase(), URLParameters.get("nethash")!);

@@ -61,7 +61,6 @@ export const buildNetwork = (
 		governance,
 		hosts,
 		id: `${UUID.random()}.custom`,
-		// id: `${meta.nethash}.custom`,
 		importMethods,
 		knownWallets: networkData.knownWallets,
 		meta,

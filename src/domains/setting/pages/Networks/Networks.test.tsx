@@ -444,9 +444,9 @@ describe("Network Settings", () => {
 
 				expect(networksFillSpy).toHaveBeenCalledWith(
 					expect.objectContaining({
-						"7fadccaae136bfa7655aa1e1f2de440804abbf64af9f380ccfbef916e18b485c.custom":
+						"random-uuid.custom":
 							expect.objectContaining({
-								id: "7fadccaae136bfa7655aa1e1f2de440804abbf64af9f380ccfbef916e18b485c.custom",
+								id: "random-uuid.custom",
 							}),
 					}),
 				);

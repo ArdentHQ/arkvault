@@ -53,9 +53,9 @@ describe("useDeeplink hook", () => {
 		return <h1>Deeplink Test</h1>;
 	};
 
-	it("should subscribe to deeplink listener and toast a warning to select a profile", () => {
+	it("should prompt the user to select a profile", () => {
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -67,13 +67,13 @@ describe("useDeeplink hook", () => {
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to coin not supported", async () => {
+	it("should show a warning if the coin is not supported", async () => {
 		history.push(
 			"/?method=transfer&coin=doge&network=mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -88,13 +88,13 @@ describe("useDeeplink hook", () => {
 		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Coin "doge" not supported.'));
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to network not supported", async () => {
+	it("should show a warning if the network parameter is invalid", async () => {
 		history.push(
 			"/?method=transfer&coin=ark&network=custom&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -106,16 +106,14 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is not enabled or added.'),
-		);
+		await waitFor(() => expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" is invalid.'));
 	});
 
-	it("should subscribe to deeplink listener and toast a warning to no senders available", async () => {
+	it("should show a warning if there are no available senders for network", async () => {
 		history.push(mainnetDeepLink);
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -134,13 +132,63 @@ describe("useDeeplink hook", () => {
 		);
 	});
 
-	it("should subscribe to deeplink listener and navigate", async () => {
+	it("should show a warning if there is no network for the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
+
+		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith(
+				`Invalid URI: Network with nethash "${nethash}" is not enabled or available.`,
+			),
+		);
+	});
+
+	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+
+		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith(
+				`Invalid URI: The current profile has no wallets available for the network with nethash "${nethash}"`,
+			),
+		);
+	});
+
+	it("should navigate to transfer page", async () => {
 		history.push(
 			"/?method=transfer&coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
 		);
 
 		render(
-			<Route pathname="/profiles/:profileId/wallets/:walletId">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -164,7 +212,7 @@ describe("useDeeplink hook", () => {
 		);
 
 		render(
-			<Route pathname="/profiles/:profileId/wallets/:walletId">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -188,7 +236,7 @@ describe("useDeeplink hook", () => {
 		history.push("/?coin=ark&network=ark.devnet&delegate=alessio");
 
 		render(
-			<Route pathname="/">
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
@@ -206,11 +254,11 @@ describe("useDeeplink hook", () => {
 	it.each([
 		["createProfile", ProfilePaths.CreateProfile],
 		["importProfile", ProfilePaths.ImportProfile],
-	])("should clear deeplink and do not show a warning toast in %S page", async (page, path) => {
+	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
 		history.push(mainnetDeepLink);
 
 		render(
-			<Route pathname={"/"}>
+			<Route>
 				<TestComponent />
 			</Route>,
 			{
