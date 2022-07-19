@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {
-	network: string;
+	nethash: string;
 	coin: string;
 	amount: string;
 	memo: string;
@@ -12,7 +12,7 @@ interface QRCodeProperties {
 	method?: string;
 }
 
-export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCodeProperties) => {
+export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCodeProperties) => {
 	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
@@ -20,13 +20,13 @@ export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCo
 
 	const maxLength = 255;
 
-	const formatQR = useCallback(({ amount, address, memo, coin, network, method = "transfer" }: QRCodeProperties) => {
+	const formatQR = useCallback(({ amount, address, memo, coin, nethash, method = "transfer" }: QRCodeProperties) => {
 		const uri = new URI();
 
 		const parameters = uri.serialize({
 			coin,
 			method,
-			network,
+			nethash,
 			recipient: address,
 			...(amount && { amount }),
 			...(memo && { memo: memo?.slice(0, maxLength) }),
@@ -47,7 +47,7 @@ export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCo
 			  };
 
 		const generateQRCode = async () => {
-			const uri = address ? formatQR({ address, amount, coin, memo, method, network }) : undefined;
+			const uri = address ? formatQR({ address, amount, coin, memo, method, nethash }) : undefined;
 
 			let image: string | undefined;
 
@@ -64,7 +64,7 @@ export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCo
 		};
 
 		generateQRCode();
-	}, [amount, memo, network, address, formatQR, coin, method]);
+	}, [amount, memo, nethash, address, formatQR, coin, method]);
 
 	return data;
 };
