@@ -33,7 +33,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 		amount,
 		coin: network.coin(),
 		memo,
-		nethash: network.meta().hash,
+		nethash: network.meta().nethash,
 	});
 
 	return (
