@@ -54,8 +54,7 @@ exports[`QRModal should render 1`] = `
               Hold a compatible QR Code in front of your device's camera
             </div>
             <div
-              class="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden"
-              style="background-image: url(/qr-background.png); background-position: center; background-size: cover;"
+              class="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black"
             >
               <div
                 class="absolute inset-0 z-10"
