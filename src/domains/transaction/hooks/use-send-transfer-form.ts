@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Networks, Services } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -20,8 +20,13 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 	const activeProfile = useActiveProfile();
 
+	const networkPredicate = useMemo(
+		() => (network: Networks.Network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
+		[activeProfile],
+	);
+
 	const networks = useNetworks({
-		filter: (network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
+		filter: networkPredicate,
 		profile: activeProfile,
 	});
 
@@ -176,7 +181,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue("senderAddress", wallet.address(), { shouldDirty: true, shouldValidate: true });
 
 		setValue("network", wallet.network(), { shouldDirty: true, shouldValidate: true });
-	}, [wallet, networks, setValue]);
+	}, [wallet, setValue]);
 
 	useEffect(() => {
 		if (!isSendAllSelected) {
