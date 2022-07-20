@@ -121,7 +121,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			noButtons
 			onClose={() => onCancel()}
 		>
-			<div className="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden">
+			<div className="relative -mx-10 -mb-10 mt-8 flex min-h-full flex-1 items-center justify-center overflow-hidden bg-black">
 				<div className="absolute inset-0 z-10">
 					<QRCameraReader onError={handleError} onRead={handleRead} onReady={handleReady} />
 				</div>
