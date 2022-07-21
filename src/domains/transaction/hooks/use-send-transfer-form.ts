@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Networks, Services } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { MutableRefObject, useCallback, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -13,13 +13,23 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
+import { profileEnabledNetworkIds } from "@/utils/network-utils";
 
 export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 	const [lastEstimatedExpiration, setLastEstimatedExpiration] = useState<number | undefined>();
 
 	const activeProfile = useActiveProfile();
-	const networks = useNetworks({ profile: activeProfile });
-	const onlyHasOneNetwork = networks.length === 1;
+
+	const networkPredicate = useMemo(
+		() => (network: Networks.Network) => profileEnabledNetworkIds(activeProfile).includes(network.id()),
+		[activeProfile],
+	);
+
+	const networks = useNetworks({
+		filter: networkPredicate,
+		profile: activeProfile,
+	});
+
 	const transactionBuilder = useTransactionBuilder();
 	const { persist } = useEnvironmentContext();
 	const { hasAnyParameters, queryParameters } = useTransactionQueryParameters();
@@ -128,7 +138,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		register("suppressWarning");
 
-		if (onlyHasOneNetwork) {
+		if (networks.length === 1) {
 			setValue("network", networks[0], { shouldDirty: true, shouldValidate: true });
 		}
 	}, [register, sendTransferValidation, commonValidation, fees, wallet, remainingBalance, amount, senderAddress]);
@@ -178,14 +188,8 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 
 		setValue("senderAddress", wallet.address(), { shouldDirty: true, shouldValidate: true });
 
-		for (const network of networks) {
-			/* istanbul ignore else */
-			if (network.coin() === wallet.coinId() && network.id() === wallet.networkId()) {
-				setValue("network", network, { shouldDirty: true, shouldValidate: true });
-				break;
-			}
-		}
-	}, [wallet, networks, setValue]);
+		setValue("network", wallet.network(), { shouldDirty: true, shouldValidate: true });
+	}, [wallet, setValue]);
 
 	useEffect(() => {
 		if (!isSendAllSelected) {
