@@ -63,7 +63,7 @@ export const SendTransfer: React.VFC = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
-	const { validateTransferURLParams, generateSendTransferPath } = useTransactionURL();
+	const { validateTransferURLParams, urlSearchParameters } = useTransactionURL();
 
 	const {
 		form,
@@ -217,16 +217,43 @@ export const SendTransfer: React.VFC = () => {
 	const handleQRCodeRead = (url: string) => {
 		setShowQRModal(false);
 
-		const error = validateTransferURLParams(url);
+		const { network } = getValues();
+
+		const error = validateTransferURLParams(url, {
+			network: network?.id(),
+			coin: network?.coin(),
+			nethash: network?.meta().nethash,
+		});
 
 		if (error) {
 			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error }));
 			return;
 		}
 
-		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
+		const qrData = urlSearchParameters(url);
 
-		history.push(generateSendTransferPath(activeProfile, url));
+		if (!!qrData.get("amount")) {
+			form.setValue("amount", qrData.get("amount"), { shouldDirty: true, shouldValidate: true });
+		}
+
+		if (!!qrData.get("memo")) {
+			form.setValue("memo", qrData.get("memo"), { shouldDirty: true, shouldValidate: true });
+		}
+
+		if (!!qrData.get("recipient")) {
+			form.setValue(
+				"recipients",
+				[
+					{
+						address: qrData.get("recipient"),
+						amount: qrData.get("amount"),
+					},
+				],
+				{ shouldValidate: true, shouldDirty: true },
+			);
+		}
+
+		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
 	};
 
 	const renderTabs = () => (

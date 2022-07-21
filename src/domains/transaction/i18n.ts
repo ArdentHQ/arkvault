@@ -405,6 +405,8 @@ export const translations = {
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 		NETWORK_INVALID: "network parameter is invalid.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
+		NETWORK_MISMATCH: "data belongs to another network.",
+		COIN_MISMATCH: "data is for another coin.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

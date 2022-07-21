@@ -203,13 +203,13 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		}
 	}, [isSingle, setValue]);
 
-	// Update AddedRecipients state when comes back to the current page
 	useEffect(() => {
-		if (isMountedReference.current) {
+		if (recipients.length === 0) {
 			return;
 		}
 
-		if (recipients.length === 0) {
+		// Avoid rerenders.
+		if (JSON.stringify(addedRecipients) === JSON.stringify(recipients)) {
 			return;
 		}
 
