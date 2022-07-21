@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useEnvironmentContext } from "@/app/contexts";
 import { isCustomNetwork } from "@/utils/network-utils";
 
 const sortNetworks = (networks: Networks.Network[]) =>
@@ -24,8 +23,6 @@ export const useNetworks = ({
 	filter?: (network: Networks.Network) => boolean;
 	profile: Contracts.IProfile;
 }): Networks.Network[] => {
-	const { env } = useEnvironmentContext();
-
 	const isProfileRestored = profile.status().isRestored();
 
 	return useMemo(() => {
@@ -38,5 +35,5 @@ export const useNetworks = ({
 		}
 
 		return sortNetworks(profile.availableNetworks());
-	}, [env, profile, filter, isProfileRestored]);
+	}, [profile, filter, isProfileRestored]);
 };
