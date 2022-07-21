@@ -12,6 +12,7 @@ import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendT
 import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
+import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
@@ -25,6 +26,8 @@ import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks"
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
+import { toasts } from "@/app/services";
 
 const MAX_TABS = 5;
 
@@ -60,6 +63,7 @@ export const SendTransfer: React.VFC = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	const { validateTransferURLParams, urlSearchParameters } = useTransactionURL();
 
 	const {
 		form,
@@ -119,6 +123,7 @@ export const SendTransfer: React.VFC = () => {
 		resetForm();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	const [showQRModal, setShowQRModal] = useState(false);
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
 
@@ -209,6 +214,48 @@ export const SendTransfer: React.VFC = () => {
 		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
+	const handleQRCodeRead = (url: string) => {
+		setShowQRModal(false);
+
+		const { amount, network } = getValues();
+
+		const error = validateTransferURLParams(url, {
+			coin: network?.coin(),
+			nethash: network?.meta().nethash,
+			network: network?.id(),
+		});
+
+		if (error) {
+			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error }));
+			return;
+		}
+
+		const qrData = urlSearchParameters(url);
+
+		if (qrData.get("amount")) {
+			form.setValue("amount", qrData.get("amount"), { shouldDirty: true, shouldValidate: true });
+		}
+
+		if (qrData.get("memo")) {
+			form.setValue("memo", qrData.get("memo"), { shouldDirty: true, shouldValidate: true });
+		}
+
+		if (qrData.get("recipient")) {
+			form.setValue(
+				"recipients",
+				[
+					{
+						address: qrData.get("recipient"),
+						amount: qrData.get("amount") || amount,
+					},
+				],
+				{ shouldDirty: true, shouldValidate: true },
+			);
+		}
+
+		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
+	};
+
 	const renderTabs = () => (
 		<StepsProvider
 			steps={showNetworkStep ? MAX_TABS : MAX_TABS - 1}
@@ -219,7 +266,11 @@ export const SendTransfer: React.VFC = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.FormStep}>
-				<FormStep networks={networks} profile={activeProfile} deeplinkProps={deepLinkParameters} />
+				<FormStep
+					profile={activeProfile}
+					deeplinkProps={deepLinkParameters}
+					onScan={() => setShowQRModal(true)}
+				/>
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ReviewStep}>
@@ -275,6 +326,12 @@ export const SendTransfer: React.VFC = () => {
 			<Section className="flex-1">
 				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
+
+					<QRModal
+						isOpen={showQRModal}
+						onCancel={() => setShowQRModal(false)}
+						onRead={(text: string) => handleQRCodeRead(text)}
+					/>
 
 					<FeeWarning
 						isOpen={showFeeWarning}

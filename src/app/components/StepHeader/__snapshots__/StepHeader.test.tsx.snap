@@ -31,22 +31,26 @@ exports[`StepHeader should render 1`] = `
       </ul>
     </div>
     <div
-      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+      class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="space-y-4"
+        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          title
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
-          data-testid="header__subtitle"
+          class="space-y-4"
         >
-          subtitle
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            title
+          </h1>
+          <div
+            class="flex items-center text-theme-secondary-text"
+            data-testid="header__subtitle"
+          >
+            subtitle
+          </div>
         </div>
       </div>
     </div>
@@ -73,6 +77,69 @@ exports[`StepHeader should render simple header without a provider 1`] = `
         data-testid="header__subtitle"
       >
         subtitle
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepHeader should render with extra 1`] = `
+<DocumentFragment>
+  <div
+    class="sm:mt-8"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <span
+        class="css-3qwsx5"
+      >
+        title
+      </span>
+      <ul
+        class="css-xa5o6q"
+      >
+        <li
+          class="css-47028"
+        />
+        <li
+          class="css-3ldhk3"
+        />
+        <li
+          class="css-3ldhk3"
+        />
+        <li
+          class="css-3ldhk3"
+        />
+      </ul>
+    </div>
+    <div
+      class="flex flex-col justify-between sm:flex-row"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            title
+          </h1>
+          <div
+            class="flex items-center text-theme-secondary-text"
+            data-testid="header__subtitle"
+          >
+            subtitle
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-6 sm:mt-0"
+      >
+        extra
       </div>
     </div>
   </div>

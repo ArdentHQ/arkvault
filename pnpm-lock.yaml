@@ -1,14 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@ardenthq/sdk': ^1.1.1
-  '@ardenthq/sdk-ark': ^1.1.1
-  '@ardenthq/sdk-cryptography': ^1.1.1
-  '@ardenthq/sdk-helpers': ^1.1.1
-  '@ardenthq/sdk-intl': ^1.1.1
-  '@ardenthq/sdk-ledger': ^1.1.1
-  '@ardenthq/sdk-news': ^1.1.1
-  '@ardenthq/sdk-profiles': ^1.1.1
+  '@ardenthq/sdk': ^1.2.0
+  '@ardenthq/sdk-ark': ^1.2.0
+  '@ardenthq/sdk-cryptography': ^1.2.0
+  '@ardenthq/sdk-helpers': ^1.2.0
+  '@ardenthq/sdk-intl': ^1.2.0
+  '@ardenthq/sdk-ledger': ^1.2.0
+  '@ardenthq/sdk-news': ^1.2.0
+  '@ardenthq/sdk-profiles': ^1.2.0
   '@babel/core': ^7.17.9
   '@babel/preset-env': ^7.16.11
   '@babel/preset-react': ^7.16.7
@@ -85,6 +85,7 @@ specifiers:
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.9
   prop-types: ^15.8.1
+  qr-scanner: ^1.4.1
   react: ^17.0.0
   react-datepicker: ^4.8.0
   react-dom: ^17.0.0
@@ -95,6 +96,7 @@ specifiers:
   react-is: ^17.0.2
   react-linkify: ^1.0.0-alpha
   react-loading-skeleton: ^2.2.0
+  react-qr-reader: 3.0.0-beta-1
   react-range: ^1.8.12
   react-resize-detector: ^7.0.0
   react-responsive: ^9.0.0-beta.6
@@ -127,14 +129,14 @@ specifiers:
   yup: ^0.32.9
 
 dependencies:
-  '@ardenthq/sdk': 1.1.1
-  '@ardenthq/sdk-ark': 1.1.1
-  '@ardenthq/sdk-cryptography': 1.1.1
-  '@ardenthq/sdk-helpers': 1.1.1
-  '@ardenthq/sdk-intl': 1.1.1
-  '@ardenthq/sdk-ledger': 1.1.1
-  '@ardenthq/sdk-news': 1.1.1
-  '@ardenthq/sdk-profiles': 1.1.1
+  '@ardenthq/sdk': 1.2.0
+  '@ardenthq/sdk-ark': 1.2.0
+  '@ardenthq/sdk-cryptography': 1.2.0
+  '@ardenthq/sdk-helpers': 1.2.0
+  '@ardenthq/sdk-intl': 1.2.0
+  '@ardenthq/sdk-ledger': 1.2.0
+  '@ardenthq/sdk-news': 1.2.0
+  '@ardenthq/sdk-profiles': 1.2.0
   '@emotion/cache': 11.7.1
   '@emotion/react': 11.9.0_e6bd7585f4e0972b809c85f7a8594d19
   '@emotion/styled': 11.8.1_690fbe9e307bc3519937bb562dc3a813
@@ -153,6 +155,7 @@ dependencies:
   i18next: 21.6.16
   locale-currency: 0.0.2
   multiformats: 9.6.4
+  qr-scanner: 1.4.1
   react: 17.0.2
   react-datepicker: 4.8.0_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -163,6 +166,7 @@ dependencies:
   react-is: 17.0.2
   react-linkify: 1.0.0-alpha
   react-loading-skeleton: 2.2.0_react@17.0.2
+  react-qr-reader: 3.0.0-beta-1_react-dom@17.0.2+react@17.0.2
   react-range: 1.8.12_react-dom@17.0.2+react@17.0.2
   react-resize-detector: 7.0.0_react-dom@17.0.2+react@17.0.2
   react-responsive: 9.0.0-beta.6_react@17.0.2
@@ -274,14 +278,14 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@ardenthq/sdk-ark/1.1.1:
-    resolution: {integrity: sha512-zTXpYXGe2dAMbJxwG1BMNmO6MolO7pl2vUIb2VsQuofp2nzwwnhkfb7RKcrf64urBlLD8IBW8cEppsqkBC70OA==}
+  /@ardenthq/sdk-ark/1.2.0:
+    resolution: {integrity: sha512-stBfCgoBa4qHVEByP7GJynpIZTVkJqQKT0l8ZLMrxGm5/wlnqK8pxrvkl+DnGnYNIX7H6ED6/tMHTBXNOeVcHA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.1
-      '@ardenthq/sdk-cryptography': 1.1.1
-      '@ardenthq/sdk-helpers': 1.1.1
-      '@ardenthq/sdk-intl': 1.1.1
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-cryptography': 1.2.0
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 6.12.6
       ajv-keywords: 3.4.1_ajv@6.12.6
@@ -295,8 +299,8 @@ packages:
       node-dotify: 1.1.0
     dev: false
 
-  /@ardenthq/sdk-cryptography/1.1.1:
-    resolution: {integrity: sha512-wF3s4XkZHDVZqyUdkQ42BSB29eeAQTmstHeO6n9HrmgVZYSGOngReWrArguPXACQ667ke2Bou2TMOso7PODcLA==}
+  /@ardenthq/sdk-cryptography/1.2.0:
+    resolution: {integrity: sha512-w2ndpC7WfGVLkGd5deNFB17qA8CwVvXWpiPUOpvs3MecLhafj+HQlIbyFD7Bv7Rr9XhbdS8V5ozNuVT4GCnzLQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@noble/hashes': 0.5.9
@@ -316,8 +320,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /@ardenthq/sdk-helpers/1.1.1:
-    resolution: {integrity: sha512-xva/MDz4BzV9YpsFW7auVkV2ECAYWC0MS2dFaA6m9RosMPzOE3QR636RO2fNobCSQWtpSM23O5UXqPS0sTr6Lw==}
+  /@ardenthq/sdk-helpers/1.2.0:
+    resolution: {integrity: sha512-f8WJ47cHoKt0ft73G/9/XW7DdknHdJbZOwvdJcqW1WMKdHF1pXx/e/+1toaVhdKNLhT3c4W9khvh8eBDSLGqjw==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@hapi/bourne': 2.1.0
@@ -333,50 +337,50 @@ packages:
       query-string: 7.1.1
     dev: false
 
-  /@ardenthq/sdk-intl/1.1.1:
-    resolution: {integrity: sha512-X1Czb9VXv2akg+ymNfhHFMsuUJZlkocfsCr5d0H7JTUdwUz0oI+6KbUwnM5Si9B+W72mD0X4wDldO2newsZmqw==}
+  /@ardenthq/sdk-intl/1.2.0:
+    resolution: {integrity: sha512-fnZyuqj0tMkAOuKPbmzNKSamttYxlf73S2TaefzT+p1hbNQmjKG7K4R1DDAeGL/T9fP2eti0BVRGLdFtDONVqQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       dayjs: 1.11.3
       dinero.js: 1.9.1
     dev: false
 
-  /@ardenthq/sdk-ledger/1.1.1:
-    resolution: {integrity: sha512-sKgmZe3giucr+XL5EhPvkoQ0UfW8yhLRC+z05NxDW0aJaUmzu4TBBYJ9ZaN4JrpF3kLkv78lLcjZZS83AHsgiQ==}
+  /@ardenthq/sdk-ledger/1.2.0:
+    resolution: {integrity: sha512-vPjAnezfQVqswTASEVgExecTmmRfng8LXgtCBoeQom84/EakwylDuxS5/7XlRDevnljZs4zmEzY45GBzpl49iw==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.1
+      '@ardenthq/sdk': 1.2.0
       '@ledgerhq/hw-transport-u2f': 5.36.0-deprecated
       '@ledgerhq/hw-transport-webhid': 6.27.1
       '@ledgerhq/hw-transport-webusb': 6.27.1
       platform: 1.3.6
     dev: false
 
-  /@ardenthq/sdk-markets/1.1.1:
-    resolution: {integrity: sha512-jNn52eB65k5rB17lu8UNe2OYH6YjxDSNK7v+9D2FwjYhXo3oUp70YtcRHzrF7B8Sj+c7bxnTztMnUBOuMnynTA==}
+  /@ardenthq/sdk-markets/1.2.0:
+    resolution: {integrity: sha512-wCp6L+i/ZzT3NSXFAwIgsHgL9wwYAmEocJ6OeEXQ4HV815f92aycuJqDQNAzC8pGiybLs4HcNCydoctw6SwZGA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.1
-      '@ardenthq/sdk-intl': 1.1.1
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
     dev: false
 
-  /@ardenthq/sdk-news/1.1.1:
-    resolution: {integrity: sha512-H07V2GMOQvOzKd17qW2dN12ysIWNeM6ZmadGtWGdX49aOuNIJSVWge834QEwEJdX+Z85UkNWE54h591B40+pZw==}
+  /@ardenthq/sdk-news/1.2.0:
+    resolution: {integrity: sha512-F41EjUtZOB5hFW9t4mWp2yxtU/xIWCrGSKTVzE3UcKXOpC3qgfivm/ToN/jvmxzfSMFShwc0t5szXcjukY6bKQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.1
+      '@ardenthq/sdk': 1.2.0
       rss-parser: 3.12.0
     dev: false
 
-  /@ardenthq/sdk-profiles/1.1.1:
-    resolution: {integrity: sha512-jR7/rv8rqjFRx9ospNni5TRTXD6BwlxNRXmAIJxIgsxTFbxAaGltOs7f0wyH0K65sCS/NQOZ63v6GcY8NQFPSg==}
+  /@ardenthq/sdk-profiles/1.2.0:
+    resolution: {integrity: sha512-G8qD1xfpyFXdLHP4iQ3ylrVrkfmAh2iZy7id2J+xXvYe8ez3C8W4pruzwi6K2SKUZHu3RVrTE8t7R1cKXYbvYw==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.1
-      '@ardenthq/sdk-cryptography': 1.1.1
-      '@ardenthq/sdk-helpers': 1.1.1
-      '@ardenthq/sdk-intl': 1.1.1
-      '@ardenthq/sdk-markets': 1.1.1
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-cryptography': 1.2.0
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
+      '@ardenthq/sdk-markets': 1.2.0
       '@vechain/picasso': 2.1.1
       joi: 17.6.0
       localforage: 1.10.0
@@ -387,12 +391,12 @@ packages:
       type-fest: 2.13.1
     dev: false
 
-  /@ardenthq/sdk/1.1.1:
-    resolution: {integrity: sha512-meGBRHaxkj47PDmadJ2iGIDbj8RSc6yQIia8xubopXTCgk6jC08o/+yPmpQCA3v8YwT92r39k54XvB2m0r5rbQ==}
+  /@ardenthq/sdk/1.2.0:
+    resolution: {integrity: sha512-ruoY99DOP5WwFnu342hjkOZzN27w7qS94AA6a2dNHlN+tn4wJEUNikWO+qHaiWzSWAF4690dhxFvo9QK7EtZMg==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk-helpers': 1.1.1
-      '@ardenthq/sdk-intl': 1.1.1
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.0.4
@@ -2883,6 +2887,10 @@ packages:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
 
+  /@types/offscreencanvas/2019.7.0:
+    resolution: {integrity: sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==}
+    dev: false
+
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
 
@@ -3178,6 +3186,31 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@zxing/browser/0.0.7_@zxing+library@0.18.6:
+    resolution: {integrity: sha512-AepzMgDnD6EjxewqmXpHJsi4S3Gw9ilZJLIbTf6fWuWySEcHBodnGu3p7FWlgq1Sd5QyfPhTum5z3CBkkhMVng==}
+    peerDependencies:
+      '@zxing/library': ^0.18.3
+    dependencies:
+      '@zxing/library': 0.18.6
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: false
+
+  /@zxing/library/0.18.6:
+    resolution: {integrity: sha512-bulZ9JHoLFd9W36pi+7e7DnEYNJhljYjZ1UTsKPOoLMU3qtC+REHITeCRNx40zTRJZx18W5TBRXt5pq2Uopjsw==}
+    engines: {node: '>= 10.4.0'}
+    dependencies:
+      ts-custom-error: 3.2.0
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: false
+
+  /@zxing/text-encoding/0.9.0:
+    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -8398,6 +8431,12 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
+  /qr-scanner/1.4.1:
+    resolution: {integrity: sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w==}
+    dependencies:
+      '@types/offscreencanvas': 2019.7.0
+    dev: false
+
   /qrcode-terminal/0.10.0:
     resolution: {integrity: sha1-p2pI4mEKGPl/o6K9UytoKs/4bFM=}
     hasBin: true
@@ -8559,6 +8598,19 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-fast-compare: 3.2.0
       warning: 4.0.3
+
+  /react-qr-reader/3.0.0-beta-1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-5HeFH9x/BlziRYQYGK2AeWS9WiKYZtGGMs9DXy3bcySTX3C9UJL9EwcPnWw8vlf7JP4FcrAlr1SnZ5nsWLQGyw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      '@zxing/browser': 0.0.7_@zxing+library@0.18.6
+      '@zxing/library': 0.18.6
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      rollup: 2.70.2
+    dev: false
 
   /react-range/1.8.12_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-vY2eCNDvKlXtEpl8xx5AQVIBeE4ZZ46dLVL+82f4FcS9XrPqz4+XagPHmq3IPqYuVQ2H4b8UArXzvVAsd/B03Q==}
@@ -9048,7 +9100,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /rss-parser/3.12.0:
     resolution: {integrity: sha512-aqD3E8iavcCdkhVxNDIdg1nkBI17jgqF+9OqPS1orwNaOgySdpvq6B+DoONLhzjzwV8mWg37sb60e4bmLK117A==}
@@ -10075,6 +10126,11 @@ packages:
     dependencies:
       utf8-byte-length: 1.0.4
     dev: true
+
+  /ts-custom-error/3.2.0:
+    resolution: {integrity: sha512-cBvC2QjtvJ9JfWLvstVnI45Y46Y5dMxIaG1TDMGAD/R87hpvqFL+7LhvUDhnRCfOnx/xitollFWWvUKKKhbN0A==}
+    engines: {node: '>=8.0.0'}
+    dev: false
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}

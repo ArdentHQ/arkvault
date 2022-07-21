@@ -114,7 +114,7 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 	profile.availableNetworks().filter((network) => {
 		if (isCustomNetwork(network)) {
-			return !!network.toObject().meta?.enabled;
+			return network.meta().enabled;
 		}
 
 		return true;

@@ -7,7 +7,7 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -38,7 +38,7 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -46,7 +46,7 @@ exports[`PortfolioBreakdownDetails should render 1`] = `
             Portfolio Breakdown
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="space-y-4"
@@ -569,7 +569,7 @@ exports[`PortfolioBreakdownDetails should render responsive 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -600,7 +600,7 @@ exports[`PortfolioBreakdownDetails should render responsive 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -608,7 +608,7 @@ exports[`PortfolioBreakdownDetails should render responsive 1`] = `
             Portfolio Breakdown
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="space-y-4"
@@ -1124,7 +1124,7 @@ exports[`PortfolioBreakdownDetails should render responsive with other group 1`]
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1155,7 +1155,7 @@ exports[`PortfolioBreakdownDetails should render responsive with other group 1`]
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1163,7 +1163,7 @@ exports[`PortfolioBreakdownDetails should render responsive with other group 1`]
             Portfolio Breakdown
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="space-y-4"
@@ -1887,7 +1887,7 @@ exports[`PortfolioBreakdownDetails should render with other group 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nvh1sc"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -1918,7 +1918,7 @@ exports[`PortfolioBreakdownDetails should render with other group 1`] = `
           </button>
         </div>
         <div
-          class="relative space-y-4"
+          class="relative flex flex-1 flex-col space-y-4"
         >
           <h2
             class="mb-0 text-2xl font-bold"
@@ -1926,7 +1926,7 @@ exports[`PortfolioBreakdownDetails should render with other group 1`] = `
             Portfolio Breakdown
           </h2>
           <div
-            class="flex-1"
+            class="flex flex-1 flex-col"
           >
             <div
               class="space-y-4"
