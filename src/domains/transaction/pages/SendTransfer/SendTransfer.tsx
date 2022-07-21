@@ -220,9 +220,9 @@ export const SendTransfer: React.VFC = () => {
 		const { amount, network } = getValues();
 
 		const error = validateTransferURLParams(url, {
-			network: network?.id(),
 			coin: network?.coin(),
 			nethash: network?.meta().nethash,
+			network: network?.id(),
 		});
 
 		if (error) {
@@ -232,15 +232,15 @@ export const SendTransfer: React.VFC = () => {
 
 		const qrData = urlSearchParameters(url);
 
-		if (!!qrData.get("amount")) {
+		if (qrData.get("amount")) {
 			form.setValue("amount", qrData.get("amount"), { shouldDirty: true, shouldValidate: true });
 		}
 
-		if (!!qrData.get("memo")) {
+		if (qrData.get("memo")) {
 			form.setValue("memo", qrData.get("memo"), { shouldDirty: true, shouldValidate: true });
 		}
 
-		if (!!qrData.get("recipient")) {
+		if (qrData.get("recipient")) {
 			form.setValue(
 				"recipients",
 				[
@@ -249,7 +249,7 @@ export const SendTransfer: React.VFC = () => {
 						amount: !amount ? qrData.get("amount") : amount,
 					},
 				],
-				{ shouldValidate: true, shouldDirty: true },
+				{ shouldDirty: true, shouldValidate: true },
 			);
 		}
 
