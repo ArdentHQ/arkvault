@@ -16,10 +16,10 @@ const generateSendTransferPath = (profile: Contracts.IProfile, url: string) => {
 	return `${path}?${urlSearchParameters.toString()}`;
 };
 
+const urlSearchParameters = (url: string) => new URL(url.replace("#", "/")).searchParams;
+
 export const useTransactionURL = () => {
 	const { t } = useTranslation();
-
-	const urlSearchParameters = (url: string) => new URL(url.replace("#", "/")).searchParams;
 
 	const validateTransferURLParameters = (url: string, requiredOptions: RequiredOptions) => {
 		let searchParameters: URLSearchParams;
