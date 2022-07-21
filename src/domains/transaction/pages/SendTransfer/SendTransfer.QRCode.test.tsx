@@ -124,7 +124,9 @@ describe("SendTransfer QRModal", () => {
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
+
 		mockProfileWithOnlyPublicNetworksReset();
 	});
 

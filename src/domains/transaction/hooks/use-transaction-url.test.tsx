@@ -20,9 +20,9 @@ const urls = {
 };
 
 const requiredNetworkOptions = {
-	network: "ark.devnet",
-	nethash: "1",
 	coin: "ARK",
+	nethash: "1",
+	network: "ark.devnet",
 };
 
 describe("useTransactionURL", () => {
@@ -85,8 +85,8 @@ describe("useTransactionURL", () => {
 		expect(
 			result.current.validateTransferURLParams(urls.valid, {
 				...requiredNetworkOptions,
-				network: "test.custom",
 				nethash: undefined,
+				network: "test.custom",
 			}),
 		).toBe(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 	});
@@ -100,8 +100,8 @@ describe("useTransactionURL", () => {
 		expect(
 			result.current.validateTransferURLParams(urls.withNethash, {
 				...requiredNetworkOptions,
-				network: null,
 				nethash: "2",
+				network: null,
 			}),
 		).toBe(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 	});
