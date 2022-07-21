@@ -3,11 +3,11 @@ import { generatePath } from "react-router";
 import { useTranslation } from "react-i18next";
 import { ProfilePaths } from "@/router/paths";
 
-type RequiredOptions = {
+interface RequiredOptions {
 	network?: string;
 	coin?: string;
 	nethash?: string;
-};
+}
 
 const generateSendTransferPath = (profile: Contracts.IProfile, url: string) => {
 	const path = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
@@ -59,8 +59,8 @@ export const useTransactionURL = () => {
 	};
 
 	return {
-		urlSearchParameters,
 		generateSendTransferPath,
+		urlSearchParameters,
 		validateTransferURLParams: validateTransferURLParameters,
 	};
 };
