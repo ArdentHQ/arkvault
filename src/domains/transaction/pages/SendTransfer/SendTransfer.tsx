@@ -246,7 +246,7 @@ export const SendTransfer: React.VFC = () => {
 				[
 					{
 						address: qrData.get("recipient"),
-						amount: !amount ? qrData.get("amount") : amount,
+						amount: qrData.get("amount") || amount,
 					},
 				],
 				{ shouldDirty: true, shouldValidate: true },
