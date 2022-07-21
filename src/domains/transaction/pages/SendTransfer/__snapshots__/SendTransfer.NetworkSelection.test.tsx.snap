@@ -453,22 +453,54 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Send DARK
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter details below to send your transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Send DARK
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter details below to send your transaction.
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="mt-6 sm:mt-0"
+                      >
+                        <div
+                          class="flex h-full align-bottom"
+                        >
+                          <button
+                            class="group css-1vyr6lu"
+                            data-testid="QRCodeModalButton"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg>
+                                qr-code.svg
+                              </svg>
+                            </div>
+                            <span
+                              class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                            >
+                              Scan
+                            </span>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -940,7 +972,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                           name="amount"
                                           placeholder="Enter an amount"
                                           type="text"
-                                          value=""
+                                          value="0"
                                         />
                                       </div>
                                     </div>
@@ -1629,22 +1661,26 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Select a Cryptoasset
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Select a cryptoasset to send funds from.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Select a Cryptoasset
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Select a cryptoasset to send funds from.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1665,7 +1701,7 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                         >
                           <div
                             aria-label="ARK"
-                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors hover:border-theme-primary-500 dark:hover:border-theme-primary-600 text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800"
                             data-testid="NetworkOption-ARK-ark.mainnet"
                           >
                             <div
@@ -1700,7 +1736,7 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                         >
                           <div
                             aria-label="ARK Devnet"
-                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
+                            class="flex h-full w-full items-center items-center justify-between space-x-4 rounded-xl border-2 pl-4 pr-6 transition-colors border-theme-primary-500 dark:border-theme-primary-600 bg-theme-primary-100 dark:bg-theme-primary-900 text-theme-secondary-600 dark:text-theme-secondary-200"
                             data-testid="NetworkOption-ARK-ark.devnet"
                           >
                             <div

@@ -171,6 +171,17 @@ export const translations = {
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
 	},
+	MODAL_QR_CODE: {
+		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		ERROR: "Something went wrong.",
+		INVALID_QR_CODE: "The QR code is invalid.",
+		PERMISSION_ERROR: {
+			DESCRIPTION: "Please allow access to the camera in the browser settings.",
+			TITLE: "Permission Denied",
+		},
+		TITLE: "Scan QR-Code",
+		UPLOAD: "Upload Image",
+	},
 	MODAL_SEARCH_RECIPIENT: {
 		DESCRIPTION: "Find and select a recipient from your contacts and wallets",
 		SEARCH_PLACEHOLDER: "Enter name or address",
@@ -274,6 +285,8 @@ export const translations = {
 			DESCRIPTION: "Enter details below to send your transaction.",
 			FEE_UPDATE: "The selected fee has been changed",
 			MULTIPLE_UNAVAILBLE: "Multiple Recipient Transactions are not available from Ledger wallets.",
+			SCAN: "Scan",
+			SCAN_FULL: "Scan QR-Code",
 			TITLE: "Send {{ticker}}",
 		},
 		NETWORK_STEP: {
@@ -291,6 +304,7 @@ export const translations = {
 		DESCRIPTION: "Get more users and add more information about yourself",
 		TITLE: "Photo and Video",
 	},
+	QR_CODE_SUCCESS: "QR code was successfully read.",
 	RECEIVED: "Received",
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
@@ -355,6 +369,7 @@ export const translations = {
 		VOTE: "Vote",
 		VOTE_COMBINATION: "Switch Vote",
 	},
+
 	TYPE: "Type",
 
 	UNLOCK_TOKENS: {
@@ -378,15 +393,20 @@ export const translations = {
 		UNLOCK: "Unlock",
 		UNLOCKABLE: "Unlockable",
 	},
-
 	UNVOTES: "Unvotes",
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
 	VALIDATION: {
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
+		COIN_MISMATCH: "data is for another coin.",
+		COIN_MISSING: "coin parameter is missing.",
+		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
+		NETWORK_INVALID: "network parameter is invalid.",
+		NETWORK_MISMATCH: "data belongs to another network.",
+		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

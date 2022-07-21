@@ -216,7 +216,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 				uses: "nick-invision/retry@v2",
 				with: {
 					timeout_minutes: 10,
-					max_attempts: 3,
+					max_attempts: 1,
 					command: `.pnpm test --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
 						collectCoverageFrom,
 					)}' --coverageThreshold='${JSON.stringify({

@@ -466,22 +466,26 @@ exports[`Registration should register second signature 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Authenticate
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter your mnemonic passphrase to authenticate the transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Authenticate
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter your mnemonic passphrase to authenticate the transaction.
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1043,17 +1047,21 @@ exports[`Registration should show error step and go back 1`] = `
                         </ul>
                       </div>
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex flex-col justify-between sm:flex-row"
                       >
                         <div
-                          class="space-y-4"
+                          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="space-y-4"
                           >
-                            Transaction Error
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Error
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1650,22 +1658,26 @@ exports[`Registration should show mnemonic error 1`] = `
                       </ul>
                     </div>
                     <div
-                      class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                      class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="space-y-4"
+                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Authenticate
-                        </h1>
                         <div
-                          class="flex items-center text-theme-secondary-text"
-                          data-testid="header__subtitle"
+                          class="space-y-4"
                         >
-                          Enter your mnemonic passphrase to authenticate the transaction.
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Authenticate
+                          </h1>
+                          <div
+                            class="flex items-center text-theme-secondary-text"
+                            data-testid="header__subtitle"
+                          >
+                            Enter your mnemonic passphrase to authenticate the transaction.
+                          </div>
                         </div>
                       </div>
                     </div>

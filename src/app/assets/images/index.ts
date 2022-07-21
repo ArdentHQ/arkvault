@@ -7,6 +7,7 @@ import { ReactComponent as EmptyNotificationsDarkGreen } from "./empty-notificat
 import { ReactComponent as EmptyNotificationsDarkNavy } from "./empty-notifications-dark-navy.svg";
 import { ReactComponent as EmptyNotificationsLightGreen } from "./empty-notifications-light-green.svg";
 import { ReactComponent as EmptyNotificationsLightNavy } from "./empty-notifications-light-navy.svg";
+import { ReactComponent as ErrorSmall } from "./error-small.svg";
 import { ReactComponent as ErrorBannerDarkGreen } from "./error-banner-dark-green.svg";
 import { ReactComponent as ErrorBannerDarkNavy } from "./error-banner-dark-navy.svg";
 import { ReactComponent as ErrorBannerLightGreen } from "./error-banner-light-green.svg";
@@ -86,6 +87,7 @@ export const images = {
 		ErrorDarkNavy: ErrorBannerDarkGreen,
 		ErrorLightGreen: ErrorBannerLightGreen,
 		ErrorLightNavy: ErrorBannerLightGreen,
+		ErrorSmall,
 		GenericWarningDarkGreen,
 		GenericWarningDarkNavy,
 		GenericWarningLightGreen,

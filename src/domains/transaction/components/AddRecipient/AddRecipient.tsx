@@ -81,12 +81,10 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	recipients = [],
 	showMultiPaymentOption = true,
 	wallet,
-	withDeeplink,
 }) => {
 	const { t } = useTranslation();
 	const [addedRecipients, setAddedRecipients] = useState<RecipientItem[]>([]);
 	const [isSingle, setIsSingle] = useState(recipients.length <= 1);
-	const [recipientsAmount, setRecipientsAmount] = useState<string>();
 	const isMountedReference = useRef(false);
 
 	const {
@@ -147,20 +145,6 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [remainingBalance, setValue, amount, recipientAddress, fee, senderAddress]);
 
 	useEffect(() => {
-		if (!withDeeplink) {
-			return;
-		}
-
-		let amount = 0;
-
-		for (const recipient of recipients) {
-			amount = amount + Number(recipient.amount);
-		}
-
-		setRecipientsAmount(amount.toString());
-	}, [recipients, withDeeplink]);
-
-	useEffect(() => {
 		register("amount", sendTransfer.amount(network, remainingNetBalance!, addedRecipients, isSingle));
 		register("recipientAddress", sendTransfer.recipientAddress(profile, network, addedRecipients, isSingle));
 	}, [register, network, sendTransfer, addedRecipients, isSingle, profile, remainingNetBalance]);
@@ -219,13 +203,13 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 		}
 	}, [isSingle, setValue]);
 
-	// Update AddedRecipients state when comes back to the current page
 	useEffect(() => {
-		if (isMountedReference.current) {
+		if (recipients.length === 0) {
 			return;
 		}
 
-		if (recipients.length === 0) {
+		// Avoid rerenders.
+		if (JSON.stringify(addedRecipients) === JSON.stringify(recipients)) {
 			return;
 		}
 
@@ -382,7 +366,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 									disabled={!isSenderFilled}
 									data-testid="AddRecipient__amount"
 									placeholder={t("COMMON.AMOUNT_PLACEHOLDER")}
-									value={getValues("amount") || recipientsAmount}
+									value={getValues("amount")}
 									addons={amountAddons}
 									onChange={(amount: string) => {
 										setValue("isSendAllSelected", false);

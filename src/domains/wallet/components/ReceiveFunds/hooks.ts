@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {
-	network: string;
+	nethash: string;
 	coin: string;
 	amount: string;
 	memo: string;
@@ -12,21 +12,21 @@ interface QRCodeProperties {
 	method?: string;
 }
 
-export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCodeProperties) => {
-	const [qrCodeData, setQrCodeData] = useState<{ uri?: string; image?: string }>({
+export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCodeProperties) => {
+	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
 	});
 
 	const maxLength = 255;
 
-	const formatQR = useCallback(({ amount, address, memo, coin, network, method = "transfer" }: QRCodeProperties) => {
+	const formatQR = useCallback(({ amount, address, memo, coin, nethash, method = "transfer" }: QRCodeProperties) => {
 		const uri = new URI();
 
 		const parameters = uri.serialize({
 			coin,
 			method,
-			network,
+			nethash,
 			recipient: address,
 			...(amount && { amount }),
 			...(memo && { memo: memo?.slice(0, maxLength) }),
@@ -46,25 +46,25 @@ export const useQRCode = ({ network, amount, address, memo, coin, method }: QRCo
 					light: "#fff",
 			  };
 
-		const generateQrCode = async () => {
-			const qrCodeDataUri = address ? formatQR({ address, amount, coin, memo, method, network }) : undefined;
+		const generateQRCode = async () => {
+			const uri = address ? formatQR({ address, amount, coin, memo, method, nethash }) : undefined;
 
-			let qrCodeDataImage: string | undefined;
+			let image: string | undefined;
 
 			try {
-				qrCodeDataImage = await QRCode.fromString(qrCodeDataUri!).toDataURL({ color, margin: 0, width: 250 });
+				image = await QRCode.fromString(uri!).toDataURL({ color, margin: 0, width: 250 });
 			} catch {
-				qrCodeDataImage = undefined;
+				image = undefined;
 			}
 
-			setQrCodeData({
-				image: qrCodeDataImage,
-				uri: qrCodeDataUri,
+			setData({
+				image,
+				uri,
 			});
 		};
 
-		generateQrCode();
-	}, [amount, memo, network, address, formatQR, coin, method]);
+		generateQRCode();
+	}, [amount, memo, nethash, address, formatQR, coin, method]);
 
-	return qrCodeData;
+	return data;
 };

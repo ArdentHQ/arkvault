@@ -1,12 +1,13 @@
-import { Enums, Networks } from "@ardenthq/sdk";
+import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import tw, { styled } from "twin.macro";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { useProfileJobs } from "@/app/hooks";
+import { useBreakpoint, useProfileJobs } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
@@ -15,18 +16,29 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
+import { Icon } from "@/app/components/Icon";
+
+const QRCodeButton = styled.button`
+	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
+	${tw`border-2 border-theme-primary-100 dark:border-theme-secondary-800`}
+	${tw`hover:(bg-theme-primary-700 border-theme-primary-700)`}
+	${tw`focus:(outline-none ring-2 ring-theme-primary-400)`}
+`;
 
 export const FormStep = ({
 	profile,
 	deeplinkProps,
+	onScan,
 }: {
-	networks: Networks.Network[];
 	profile: Contracts.IProfile;
 	deeplinkProps: Record<string, string>;
+	onScan?: () => void;
 }) => {
 	const isMounted = useRef(true);
 
 	const { t } = useTranslation();
+
+	const { isXs } = useBreakpoint();
 
 	const { syncProfileWallets } = useProfileJobs(profile);
 
@@ -88,7 +100,10 @@ export const FormStep = ({
 			return [
 				{
 					address: deeplinkProps.recipient,
-					amount: +deeplinkProps.amount,
+					// TODO: Converting to number leads to floating point arithmetic overflow for small numbers.
+					//		 As the convertion is not necessary with deeplinks, this needs to be handled to be compliant
+					//       with RecipientItem type because it only accepts number, and changing RecipientItem will affect many forms.
+					amount: deeplinkProps.amount as any,
 				},
 			];
 		}
@@ -110,23 +125,27 @@ export const FormStep = ({
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
 
-	const ticker = useMemo(() => {
-		if (deeplinkProps.coin && deeplinkProps.network) {
-			const coin = profile.coins().get(deeplinkProps.coin.toUpperCase(), deeplinkProps.network);
-
-			if (coin) {
-				return coin.network().ticker();
-			}
-		}
-
-		return network?.ticker();
-	}, [network, profile, deeplinkProps]);
-
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
-				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker })}
+				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
+				extra={
+					<div className="flex h-full align-bottom">
+						<QRCodeButton className="group" type="button" onClick={onScan} data-testid="QRCodeModalButton">
+							<Icon
+								size="lg"
+								name="QRCode"
+								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
+							/>
+							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+								{isXs
+									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
+									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
+							</span>
+						</QRCodeButton>
+					</div>
+				}
 			/>
 
 			<div className="space-y-6 pt-6">
@@ -171,7 +190,6 @@ export const FormStep = ({
 						recipients={getRecipients()}
 						showMultiPaymentOption={network?.allows(Enums.FeatureFlag.TransactionMultiPayment)}
 						wallet={senderWallet}
-						withDeeplink={!!deeplinkProps.recipient}
 					/>
 				</div>
 

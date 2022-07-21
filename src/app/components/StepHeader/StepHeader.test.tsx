@@ -15,6 +15,18 @@ describe("StepHeader", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with extra", () => {
+		const { asFragment } = render(
+			<StepsProvider activeStep={1} steps={4}>
+				<StepHeader title="title" subtitle="subtitle" extra="extra" />
+			</StepsProvider>,
+		);
+
+		expect(screen.getByRole("list")).toBeInTheDocument();
+		expect(screen.getByText("extra")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render simple header without a provider", () => {
 		const { asFragment } = render(<StepHeader title="title" subtitle="subtitle" />);
 
