@@ -78,7 +78,6 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
@@ -116,8 +115,6 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
 
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
@@ -129,42 +126,6 @@ describe("SendTransfer QRModal", () => {
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
 		mockProfileWithOnlyPublicNetworksReset();
-	});
-
-	it("should read QR and show toast error for network mismatch", async () => {
-		const toastSpy = jest.spyOn(toasts, "error");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
-		history.push(transferURL);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-				route: transferURL,
-			},
-		);
-
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
-		userEvent.click(screen.getByTestId(QRCodeModalButton));
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
-
-		await waitFor(() =>
-			expect(toastSpy).toHaveBeenCalledWith(
-				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", {
-					reason: t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
-				}),
-			),
-		);
 	});
 
 	it("should read QR and error for invalid url", async () => {
@@ -190,7 +151,6 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
@@ -220,7 +180,6 @@ describe("SendTransfer QRModal", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
 		userEvent.click(screen.getByTestId(QRCodeModalButton));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
