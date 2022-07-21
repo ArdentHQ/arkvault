@@ -9,7 +9,15 @@ import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 
 import { SendTransfer } from "./SendTransfer";
-import { env, screen, waitFor, render, getDefaultProfileId, getDefaultWalletId } from "@/utils/testing-library";
+import {
+	env,
+	screen,
+	waitFor,
+	render,
+	getDefaultProfileId,
+	getDefaultWalletId,
+	mockProfileWithPublicAndTestNetworks,
+} from "@/utils/testing-library";
 import { LedgerProvider } from "@/app/contexts";
 import { toasts } from "@/app/services";
 
@@ -21,7 +29,7 @@ const QRCodeModalButton = "QRCodeModalButton";
 const fixtureProfileId = getDefaultProfileId();
 const fixtureWalletId = getDefaultWalletId();
 const qrCodeUrl =
-	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
+	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&memo=test&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
 
 const history = createHashHistory();
 let qrScannerMock;
@@ -49,6 +57,8 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and apply transaction parameters", async () => {
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
 		const toastSpy = jest.spyOn(toasts, "success");
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -76,6 +86,85 @@ describe("SendTransfer QRModal", () => {
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should read QR and prevent from applying parameters if not available in qr code", async () => {
+		qrScannerMock.mockRestore();
+		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({
+			data: "http://localhost:3000/#/?coin=ARK&method=transfer&network=ark.devnet",
+		});
+
+		const profile = env.profiles().findById(fixtureProfileId);
+		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
+		const toastSpy = jest.spyOn(toasts, "success");
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
+
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(t("TRANSACTION.QR_CODE_SUCCESS")));
+		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0");
+		mockProfileWithOnlyPublicNetworksReset();
+	});
+
+	it("should read QR and show toast error for network mismatch", async () => {
+		const toastSpy = jest.spyOn(toasts, "error");
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("SendTransfer__form-step")));
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(
+				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", {
+					reason: t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
+				}),
+			),
+		);
 	});
 
 	it("should read QR and error for invalid url", async () => {

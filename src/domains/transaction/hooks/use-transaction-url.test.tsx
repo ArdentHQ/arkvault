@@ -11,17 +11,25 @@ const urls = {
 		"amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 	withInvalidNetwork:
 		"http://localhost:3000/#/?amount=10&coin=ARK&network=custom&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+	withNethash:
+		"http://localhost:3000/#/?amount=10&coin=ARK&nethash=1&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 	withoutCoin:
 		"http://localhost:3000/#/?amount=10&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 	withoutNetwork:
 		"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 };
 
+const requiredNetworkOptions = {
+	network: "ark.devnet",
+	nethash: "1",
+	coin: "ARK",
+};
+
 describe("useTransactionURL", () => {
 	it("should validate url without errors", () => {
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.valid)).toBeUndefined();
+		expect(result.current.validateTransferURLParams(urls.valid, requiredNetworkOptions)).toBeUndefined();
 	});
 
 	it("should error for invalid url", () => {
@@ -30,7 +38,9 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.invalid)).toBe(t("TRANSACTION.INVALID_URL"));
+		expect(result.current.validateTransferURLParams(urls.invalid, requiredNetworkOptions)).toBe(
+			t("TRANSACTION.INVALID_URL"),
+		);
 	});
 
 	it("should error for missing coin", () => {
@@ -39,7 +49,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withoutCoin)).toBe(
+		expect(result.current.validateTransferURLParams(urls.withoutCoin, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.COIN_MISSING"),
 		);
 	});
@@ -50,7 +60,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withInvalidNetwork)).toBe(
+		expect(result.current.validateTransferURLParams(urls.withInvalidNetwork, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.NETWORK_INVALID"),
 		);
 	});
@@ -61,9 +71,53 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withoutNetwork)).toBe(
+		expect(result.current.validateTransferURLParams(urls.withoutNetwork, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
 		);
+	});
+
+	it("should error for network mismatch", () => {
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useTransactionURL());
+
+		expect(
+			result.current.validateTransferURLParams(urls.valid, {
+				...requiredNetworkOptions,
+				network: "test.custom",
+				nethash: undefined,
+			}),
+		).toBe(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+	});
+
+	it("should error for nethash mismatch", () => {
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useTransactionURL());
+
+		expect(
+			result.current.validateTransferURLParams(urls.withNethash, {
+				...requiredNetworkOptions,
+				network: null,
+				nethash: "2",
+			}),
+		).toBe(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+	});
+
+	it("should error for coin mismatch", () => {
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useTransactionURL());
+
+		expect(
+			result.current.validateTransferURLParams(urls.withNethash, {
+				...requiredNetworkOptions,
+				coin: "test",
+			}),
+		).toBe(t("TRANSACTION.VALIDATION.COIN_MISMATCH"));
 	});
 
 	it("should generate send transfer path", () => {
