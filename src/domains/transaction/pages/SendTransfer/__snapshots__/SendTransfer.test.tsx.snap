@@ -2187,13 +2187,13 @@ exports[`SendTransfer should render form and use location state with nethash par
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-80-menu"
+                            aria-owns="downshift-81-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-80-input"
-                                id="downshift-80-label"
+                                for="downshift-81-input"
+                                id="downshift-81-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -2224,13 +2224,13 @@ exports[`SendTransfer should render form and use location state with nethash par
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-80-menu"
-                                    aria-labelledby="downshift-80-label"
+                                    aria-controls="downshift-81-menu"
+                                    aria-labelledby="downshift-81-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-80-input"
+                                    id="downshift-81-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -2277,8 +2277,8 @@ exports[`SendTransfer should render form and use location state with nethash par
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-80-label"
-                              id="downshift-80-menu"
+                              aria-labelledby="downshift-81-label"
+                              id="downshift-81-menu"
                               role="listbox"
                             />
                           </div>
@@ -2576,7 +2576,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex flex-col css-5kz4tk"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2609,12 +2609,13 @@ exports[`SendTransfer should render form and use location state with nethash par
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-px3dod"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
                                       >
                                         <input
+                                          aria-invalid="true"
                                           autocomplete="off"
                                           class="no-ligatures w-full border-none css-1nupw50"
                                           data-testid="AddRecipient__amount"
@@ -2623,6 +2624,25 @@ exports[`SendTransfer should render form and use location state with nethash par
                                           type="text"
                                           value="0"
                                         />
+                                      </div>
+                                      <div
+                                        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                                        data-testid="Input__addon-end"
+                                      >
+                                        <span
+                                          data-errortext="The amount is below the minimum (0.00000001 ARK)"
+                                          data-testid="Input__error"
+                                        >
+                                          <div
+                                            class="text-theme-danger-500 css-1i4b0eq"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              circle-exclamation-mark.svg
+                                            </svg>
+                                          </div>
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -2834,8 +2854,9 @@ exports[`SendTransfer should render form and use location state with nethash par
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-1yqe28v"
                   data-testid="StepNavigation__continue-button"
+                  disabled=""
                   type="button"
                 >
                   <div
@@ -3786,7 +3807,7 @@ exports[`SendTransfer should render form and use location state with network par
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex flex-col css-5kz4tk"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3819,12 +3840,13 @@ exports[`SendTransfer should render form and use location state with network par
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-px3dod"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
                                       >
                                         <input
+                                          aria-invalid="true"
                                           autocomplete="off"
                                           class="no-ligatures w-full border-none css-1nupw50"
                                           data-testid="AddRecipient__amount"
@@ -3833,6 +3855,25 @@ exports[`SendTransfer should render form and use location state with network par
                                           type="text"
                                           value="0"
                                         />
+                                      </div>
+                                      <div
+                                        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                                        data-testid="Input__addon-end"
+                                      >
+                                        <span
+                                          data-errortext="The amount is below the minimum (0.00000001 ARK)"
+                                          data-testid="Input__error"
+                                        >
+                                          <div
+                                            class="text-theme-danger-500 css-1i4b0eq"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              circle-exclamation-mark.svg
+                                            </svg>
+                                          </div>
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -4044,8 +4085,9 @@ exports[`SendTransfer should render form and use location state with network par
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-1yqe28v"
                   data-testid="StepNavigation__continue-button"
+                  disabled=""
                   type="button"
                 >
                   <div
@@ -4607,13 +4649,13 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-101-menu"
+                            aria-owns="downshift-103-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-101-input"
-                                id="downshift-101-label"
+                                for="downshift-103-input"
+                                id="downshift-103-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -4644,13 +4686,13 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-101-menu"
-                                    aria-labelledby="downshift-101-label"
+                                    aria-controls="downshift-103-menu"
+                                    aria-labelledby="downshift-103-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-101-input"
+                                    id="downshift-103-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -4697,8 +4739,8 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-101-label"
-                              id="downshift-101-menu"
+                              aria-labelledby="downshift-103-label"
+                              id="downshift-103-menu"
                               role="listbox"
                             />
                           </div>
