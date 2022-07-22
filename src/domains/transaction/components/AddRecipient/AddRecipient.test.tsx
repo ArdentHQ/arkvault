@@ -2,7 +2,7 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
@@ -309,7 +309,7 @@ describe("AddRecipient", () => {
 		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
 		userEvent.click(addRecipientButton());
 
-		await waitFor(() => expect(recipientList()).toHaveLength(2));
+		await waitFor(() => expect(recipientList()).toHaveLength(3));
 
 		userEvent.click(singleButton);
 
@@ -421,7 +421,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(addRecipientButton());
 
-		await waitFor(() => expect(recipientList()).toHaveLength(3));
+		await waitFor(() => expect(recipientList()).toHaveLength(4));
 	});
 
 	it("should disable recipient fields if network is not filled", async () => {
@@ -573,25 +573,23 @@ describe("AddRecipient", () => {
 				form.register("senderAddress");
 			}, []);
 
-			const [recipients, setRecipients] = useState([
-				{
-					address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
-					amount: 1,
-				},
-				{
-					address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
-					amount: 1,
-				},
-			]);
-
 			return (
 				<Route path="/profiles/:profileId">
 					<FormProvider {...form}>
 						<AddRecipient
 							profile={profile}
 							wallet={wallet}
-							onChange={(newRecipients) => setRecipients(newRecipients)}
-							recipients={recipients}
+							onChange={jest.fn()}
+							recipients={[
+								{
+									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+									amount: 1,
+								},
+								{
+									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ay",
+									amount: 1,
+								},
+							]}
 						/>
 					</FormProvider>
 				</Route>
