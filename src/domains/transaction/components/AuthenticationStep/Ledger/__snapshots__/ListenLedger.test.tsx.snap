@@ -34,7 +34,7 @@ exports[`ListenLedger should emit event on device available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-i3nrbr"
+        class="css-1v2j3qb"
         color="info"
       />
       <span
@@ -82,7 +82,7 @@ exports[`ListenLedger should emit event on device not available 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-i3nrbr"
+        class="css-1v2j3qb"
         color="info"
       />
       <span

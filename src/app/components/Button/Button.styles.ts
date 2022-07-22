@@ -161,7 +161,13 @@ const getVariant = (
 			const responsive: {
 				[key in LayoutBreakpoint]?: TwStyle;
 			} = {
-				lg: tw`
+				lg:
+					theme === "dark"
+						? tw`
+					lg:(bg-theme-secondary-800 text-theme-secondary-200)
+					lg:hover:(bg-theme-primary-700 text-white)
+				`
+						: tw`
 					lg:bg-theme-primary-100 lg:text-theme-primary-600
 					lg:dark:(bg-theme-secondary-800 text-theme-secondary-200)
 					lg:hover:(bg-theme-primary-700 text-white)
@@ -171,11 +177,16 @@ const getVariant = (
 			return getResponsiveVariant(
 				responsive,
 				breakpoint,
-				tw`
-				bg-theme-primary-100 text-theme-primary-600
-				dark:(bg-theme-secondary-800 text-theme-secondary-200)
-				hover:(bg-theme-primary-700 text-white)
-			`,
+				theme === "dark"
+					? tw`
+					bg-theme-secondary-800 text-theme-secondary-200
+					hover:(bg-theme-primary-700 text-white)
+				`
+					: tw`
+					bg-theme-primary-100 text-theme-primary-600
+					dark:(bg-theme-secondary-800 text-theme-secondary-200)
+					hover:(bg-theme-primary-700 text-white)
+				`,
 			);
 		},
 		warning: () => tw`

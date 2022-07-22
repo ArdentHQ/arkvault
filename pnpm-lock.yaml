@@ -1,14 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@ardenthq/sdk': ^1.1.0
-  '@ardenthq/sdk-ark': ^1.1.0
-  '@ardenthq/sdk-cryptography': ^1.1.0
-  '@ardenthq/sdk-helpers': ^1.1.0
-  '@ardenthq/sdk-intl': ^1.1.0
-  '@ardenthq/sdk-ledger': ^1.1.0
-  '@ardenthq/sdk-news': ^1.1.0
-  '@ardenthq/sdk-profiles': ^1.1.0
+  '@ardenthq/sdk': ^1.2.0
+  '@ardenthq/sdk-ark': ^1.2.0
+  '@ardenthq/sdk-cryptography': ^1.2.0
+  '@ardenthq/sdk-helpers': ^1.2.0
+  '@ardenthq/sdk-intl': ^1.2.0
+  '@ardenthq/sdk-ledger': ^1.2.0
+  '@ardenthq/sdk-news': ^1.2.0
+  '@ardenthq/sdk-profiles': ^1.2.0
   '@babel/core': ^7.17.9
   '@babel/preset-env': ^7.16.11
   '@babel/preset-react': ^7.16.7
@@ -30,6 +30,7 @@ specifiers:
   '@types/dlv': ^1.1.2
   '@types/postcss-import': ^14.0.0
   '@types/react': ^17.0.0
+  '@types/react-datepicker': ^4.4.2
   '@types/react-dom': ^17.0.0
   '@types/react-linkify': ^1.0.0
   '@types/react-router-config': ^5.0.6
@@ -84,7 +85,9 @@ specifiers:
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.9
   prop-types: ^15.8.1
+  qr-scanner: ^1.4.1
   react: ^17.0.0
+  react-datepicker: ^4.8.0
   react-dom: ^17.0.0
   react-error-boundary: ^3.1.4
   react-hook-form: ^6.15.5
@@ -93,6 +96,7 @@ specifiers:
   react-is: ^17.0.2
   react-linkify: ^1.0.0-alpha
   react-loading-skeleton: ^2.2.0
+  react-qr-reader: 3.0.0-beta-1
   react-range: ^1.8.12
   react-resize-detector: ^7.0.0
   react-responsive: ^9.0.0-beta.6
@@ -125,14 +129,14 @@ specifiers:
   yup: ^0.32.9
 
 dependencies:
-  '@ardenthq/sdk': 1.1.0
-  '@ardenthq/sdk-ark': 1.1.0
-  '@ardenthq/sdk-cryptography': 1.1.0
-  '@ardenthq/sdk-helpers': 1.1.0
-  '@ardenthq/sdk-intl': 1.1.0
-  '@ardenthq/sdk-ledger': 1.1.0
-  '@ardenthq/sdk-news': 1.1.0
-  '@ardenthq/sdk-profiles': 1.1.0
+  '@ardenthq/sdk': 1.2.0
+  '@ardenthq/sdk-ark': 1.2.0
+  '@ardenthq/sdk-cryptography': 1.2.0
+  '@ardenthq/sdk-helpers': 1.2.0
+  '@ardenthq/sdk-intl': 1.2.0
+  '@ardenthq/sdk-ledger': 1.2.0
+  '@ardenthq/sdk-news': 1.2.0
+  '@ardenthq/sdk-profiles': 1.2.0
   '@emotion/cache': 11.7.1
   '@emotion/react': 11.9.0_e6bd7585f4e0972b809c85f7a8594d19
   '@emotion/styled': 11.8.1_690fbe9e307bc3519937bb562dc3a813
@@ -151,7 +155,9 @@ dependencies:
   i18next: 21.6.16
   locale-currency: 0.0.2
   multiformats: 9.6.4
+  qr-scanner: 1.4.1
   react: 17.0.2
+  react-datepicker: 4.8.0_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-error-boundary: 3.1.4_react@17.0.2
   react-hook-form: 6.15.8_react@17.0.2
@@ -160,6 +166,7 @@ dependencies:
   react-is: 17.0.2
   react-linkify: 1.0.0-alpha
   react-loading-skeleton: 2.2.0_react@17.0.2
+  react-qr-reader: 3.0.0-beta-1_react-dom@17.0.2+react@17.0.2
   react-range: 1.8.12_react-dom@17.0.2+react@17.0.2
   react-resize-detector: 7.0.0_react-dom@17.0.2+react@17.0.2
   react-responsive: 9.0.0-beta.6_react@17.0.2
@@ -190,6 +197,7 @@ devDependencies:
   '@testing-library/user-event': 13.5.0_@testing-library+dom@8.13.0
   '@types/postcss-import': 14.0.0
   '@types/react': 17.0.44
+  '@types/react-datepicker': 4.4.2_react-dom@17.0.2+react@17.0.2
   '@types/react-dom': 17.0.15
   '@types/react-linkify': 1.0.1
   '@types/react-router-config': 5.0.6
@@ -270,14 +278,14 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@ardenthq/sdk-ark/1.1.0:
-    resolution: {integrity: sha512-H5VTJ0TPanSbEDylvj+drupqFFi02V8bc1hjssXacB5/62TEQPxbRfZZ9hZPu2apx+9JqwX6wE5ZckS1geTjug==}
+  /@ardenthq/sdk-ark/1.2.0:
+    resolution: {integrity: sha512-stBfCgoBa4qHVEByP7GJynpIZTVkJqQKT0l8ZLMrxGm5/wlnqK8pxrvkl+DnGnYNIX7H6ED6/tMHTBXNOeVcHA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.0
-      '@ardenthq/sdk-cryptography': 1.1.0
-      '@ardenthq/sdk-helpers': 1.1.0
-      '@ardenthq/sdk-intl': 1.1.0
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-cryptography': 1.2.0
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 6.12.6
       ajv-keywords: 3.4.1_ajv@6.12.6
@@ -291,8 +299,8 @@ packages:
       node-dotify: 1.1.0
     dev: false
 
-  /@ardenthq/sdk-cryptography/1.1.0:
-    resolution: {integrity: sha512-391TALOZyrRn1EHpnSpPK9OLyn0ZJfEm1r6F4mJGcj4MNPpRARD1UH+n8BdhFZoQ86QHkRKOfKYR98OUVxHA+Q==}
+  /@ardenthq/sdk-cryptography/1.2.0:
+    resolution: {integrity: sha512-w2ndpC7WfGVLkGd5deNFB17qA8CwVvXWpiPUOpvs3MecLhafj+HQlIbyFD7Bv7Rr9XhbdS8V5ozNuVT4GCnzLQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@noble/hashes': 0.5.9
@@ -312,8 +320,8 @@ packages:
       uuid: 8.3.2
     dev: false
 
-  /@ardenthq/sdk-helpers/1.1.0:
-    resolution: {integrity: sha512-sBB9jheZnTUE80/XDRp+MIbhnDIldHCsiAgzTTGbdJ4SLelmgAM6poe7GJ99de6+7eodYB3uq1P2u7jYY3h4gg==}
+  /@ardenthq/sdk-helpers/1.2.0:
+    resolution: {integrity: sha512-f8WJ47cHoKt0ft73G/9/XW7DdknHdJbZOwvdJcqW1WMKdHF1pXx/e/+1toaVhdKNLhT3c4W9khvh8eBDSLGqjw==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@hapi/bourne': 2.1.0
@@ -329,50 +337,50 @@ packages:
       query-string: 7.1.1
     dev: false
 
-  /@ardenthq/sdk-intl/1.1.0:
-    resolution: {integrity: sha512-1rs0CcTOTUGIyWyKD4oShpDeI4UYfkN/MibwswgyDsNhk4LkZWLmXv6ATT04KJcPZ1h2slU1x7jdIa2yr+oMkA==}
+  /@ardenthq/sdk-intl/1.2.0:
+    resolution: {integrity: sha512-fnZyuqj0tMkAOuKPbmzNKSamttYxlf73S2TaefzT+p1hbNQmjKG7K4R1DDAeGL/T9fP2eti0BVRGLdFtDONVqQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       dayjs: 1.11.3
       dinero.js: 1.9.1
     dev: false
 
-  /@ardenthq/sdk-ledger/1.1.0:
-    resolution: {integrity: sha512-fkJgVKmcST2rGVSjzC5erQywz20G2Uuqp7t06Ymu0d0r3glUrjaIGKMdJGq387c4Kst7h+y7rS3OCf2Vl7kc0g==}
+  /@ardenthq/sdk-ledger/1.2.0:
+    resolution: {integrity: sha512-vPjAnezfQVqswTASEVgExecTmmRfng8LXgtCBoeQom84/EakwylDuxS5/7XlRDevnljZs4zmEzY45GBzpl49iw==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.0
+      '@ardenthq/sdk': 1.2.0
       '@ledgerhq/hw-transport-u2f': 5.36.0-deprecated
       '@ledgerhq/hw-transport-webhid': 6.27.1
       '@ledgerhq/hw-transport-webusb': 6.27.1
       platform: 1.3.6
     dev: false
 
-  /@ardenthq/sdk-markets/1.1.0:
-    resolution: {integrity: sha512-oZLPMe5lPu7g9kE30nTsSOcymU+rRPzU9kIzxyn7kDlAzXmfV/0jBHFfvBRnphxAGioZcOKThyTW5PZ+nD0mfQ==}
+  /@ardenthq/sdk-markets/1.2.0:
+    resolution: {integrity: sha512-wCp6L+i/ZzT3NSXFAwIgsHgL9wwYAmEocJ6OeEXQ4HV815f92aycuJqDQNAzC8pGiybLs4HcNCydoctw6SwZGA==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.0
-      '@ardenthq/sdk-intl': 1.1.0
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
     dev: false
 
-  /@ardenthq/sdk-news/1.1.0:
-    resolution: {integrity: sha512-Wssw0Qc5KsZnhkJTMrUdzYQjOca3QTE29Ee7gwn+dn+nu1Z0x7h3AeKUCSF4o43SrO+5qYRna7kMiUR0Lss3RA==}
+  /@ardenthq/sdk-news/1.2.0:
+    resolution: {integrity: sha512-F41EjUtZOB5hFW9t4mWp2yxtU/xIWCrGSKTVzE3UcKXOpC3qgfivm/ToN/jvmxzfSMFShwc0t5szXcjukY6bKQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.0
+      '@ardenthq/sdk': 1.2.0
       rss-parser: 3.12.0
     dev: false
 
-  /@ardenthq/sdk-profiles/1.1.0:
-    resolution: {integrity: sha512-z4yOxHtIdze0RVXpQCKNfWtf3VnS/G5FLusVy4+tPjb2SpIAAlsGWRgY0ZbOpaZV7GMS/ErBZfpm4Z5KmoFRjQ==}
+  /@ardenthq/sdk-profiles/1.2.0:
+    resolution: {integrity: sha512-G8qD1xfpyFXdLHP4iQ3ylrVrkfmAh2iZy7id2J+xXvYe8ez3C8W4pruzwi6K2SKUZHu3RVrTE8t7R1cKXYbvYw==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk': 1.1.0
-      '@ardenthq/sdk-cryptography': 1.1.0
-      '@ardenthq/sdk-helpers': 1.1.0
-      '@ardenthq/sdk-intl': 1.1.0
-      '@ardenthq/sdk-markets': 1.1.0
+      '@ardenthq/sdk': 1.2.0
+      '@ardenthq/sdk-cryptography': 1.2.0
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
+      '@ardenthq/sdk-markets': 1.2.0
       '@vechain/picasso': 2.1.1
       joi: 17.6.0
       localforage: 1.10.0
@@ -383,12 +391,12 @@ packages:
       type-fest: 2.13.1
     dev: false
 
-  /@ardenthq/sdk/1.1.0:
-    resolution: {integrity: sha512-t4RNqQTn4YUBQA4w1syV0byKdjG0+aOA4U+/KEWOc6k9FFFpvSOrXTI3BkxFQN7Bjl94leWCvZpDWI/Rzsfo2A==}
+  /@ardenthq/sdk/1.2.0:
+    resolution: {integrity: sha512-ruoY99DOP5WwFnu342hjkOZzN27w7qS94AA6a2dNHlN+tn4wJEUNikWO+qHaiWzSWAF4690dhxFvo9QK7EtZMg==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@ardenthq/sdk-helpers': 1.1.0
-      '@ardenthq/sdk-intl': 1.1.0
+      '@ardenthq/sdk-helpers': 1.2.0
+      '@ardenthq/sdk-intl': 1.2.0
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.0.4
@@ -2434,7 +2442,6 @@ packages:
 
   /@popperjs/core/2.11.5:
     resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
-    dev: false
 
   /@rollup/plugin-babel/5.3.1_@babel+core@7.17.9+rollup@2.70.2:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -2880,6 +2887,10 @@ packages:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
 
+  /@types/offscreencanvas/2019.7.0:
+    resolution: {integrity: sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==}
+    dev: false
+
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
 
@@ -2895,6 +2906,18 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+
+  /@types/react-datepicker/4.4.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-g8DhWvYmaIMLzVrIEVLXncylyImyBaoPsEUr3yR13JDaaHoebhDorqnVv4tLkNGa8SjBB8SAOQvxD5jaPNBX8A==}
+    dependencies:
+      '@popperjs/core': 2.11.5
+      '@types/react': 17.0.44
+      date-fns: 2.28.0
+      react-popper: 2.3.0_56755b872f91af5df7d7d5046f3b0a1b
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: true
 
   /@types/react-dom/17.0.15:
     resolution: {integrity: sha512-Tr9VU9DvNoHDWlmecmcsE5ZZiUkYx+nKBzum4Oxe1K0yJVyBlfbq7H3eXjxXqJczBKqPGq3EgfTru4MgKb9+Yw==}
@@ -3163,6 +3186,31 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@zxing/browser/0.0.7_@zxing+library@0.18.6:
+    resolution: {integrity: sha512-AepzMgDnD6EjxewqmXpHJsi4S3Gw9ilZJLIbTf6fWuWySEcHBodnGu3p7FWlgq1Sd5QyfPhTum5z3CBkkhMVng==}
+    peerDependencies:
+      '@zxing/library': ^0.18.3
+    dependencies:
+      '@zxing/library': 0.18.6
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: false
+
+  /@zxing/library/0.18.6:
+    resolution: {integrity: sha512-bulZ9JHoLFd9W36pi+7e7DnEYNJhljYjZ1UTsKPOoLMU3qtC+REHITeCRNx40zTRJZx18W5TBRXt5pq2Uopjsw==}
+    engines: {node: '>= 10.4.0'}
+    dependencies:
+      ts-custom-error: 3.2.0
+    optionalDependencies:
+      '@zxing/text-encoding': 0.9.0
+    dev: false
+
+  /@zxing/text-encoding/0.9.0:
+    resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -4321,6 +4369,10 @@ packages:
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
     dev: true
+
+  /date-fns/2.28.0:
+    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
+    engines: {node: '>=0.11'}
 
   /dayjs/1.10.7:
     resolution: {integrity: sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==}
@@ -7085,7 +7137,7 @@ packages:
     dev: false
 
   /js-tokens/3.0.2:
-    resolution: {integrity: sha1-mGbfOVECEw449/mWvOtlRDIJwls=}
+    resolution: {integrity: sha512-RjTcuD4xjtthQkaWH7dFlH85L+QaVtSoOyGdZ3g6HFhS9dFNDfLyqgm2NFe2X6cQpeFmt0452FJjFG5UameExg==}
     dev: true
 
   /js-tokens/4.0.0:
@@ -8379,6 +8431,12 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
+  /qr-scanner/1.4.1:
+    resolution: {integrity: sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w==}
+    dependencies:
+      '@types/offscreencanvas': 2019.7.0
+    dev: false
+
   /qrcode-terminal/0.10.0:
     resolution: {integrity: sha1-p2pI4mEKGPl/o6K9UytoKs/4bFM=}
     hasBin: true
@@ -8417,6 +8475,22 @@ packages:
     dependencies:
       safe-buffer: 5.2.1
 
+  /react-datepicker/4.8.0_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg==}
+    peerDependencies:
+      react: ^16.9.0 || ^17 || ^18
+      react-dom: ^16.9.0 || ^17 || ^18
+    dependencies:
+      '@popperjs/core': 2.11.5
+      classnames: 2.3.1
+      date-fns: 2.28.0
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-onclickoutside: 6.12.2_react-dom@17.0.2+react@17.0.2
+      react-popper: 2.3.0_56755b872f91af5df7d7d5046f3b0a1b
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -8435,6 +8509,9 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.9
       react: 17.0.2
+
+  /react-fast-compare/3.2.0:
+    resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
 
   /react-hook-form/6.15.8_react@17.0.2:
     resolution: {integrity: sha512-prq82ofMbnRyj5wqDe8hsTRcdR25jQ+B8KtCS7BLCzjFHAwNuCjRwzPuP4eYLsEBjEIeYd6try+pdLdw0kPkpg==}
@@ -8497,6 +8574,42 @@ packages:
     dependencies:
       '@emotion/core': 10.3.1_react@17.0.2
       react: 17.0.2
+    dev: false
+
+  /react-onclickoutside/6.12.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-NMXGa223OnsrGVp5dJHkuKxQ4czdLmXSp5jSV9OqiCky9LOpPATn3vLldc+q5fK3gKbEHvr7J1u0yhBh/xYkpA==}
+    peerDependencies:
+      react: ^15.5.x || ^16.x || ^17.x || ^18.x
+      react-dom: ^15.5.x || ^16.x || ^17.x || ^18.x
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /react-popper/2.3.0_56755b872f91af5df7d7d5046f3b0a1b:
+    resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
+    peerDependencies:
+      '@popperjs/core': ^2.0.0
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
+    dependencies:
+      '@popperjs/core': 2.11.5
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-fast-compare: 3.2.0
+      warning: 4.0.3
+
+  /react-qr-reader/3.0.0-beta-1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-5HeFH9x/BlziRYQYGK2AeWS9WiKYZtGGMs9DXy3bcySTX3C9UJL9EwcPnWw8vlf7JP4FcrAlr1SnZ5nsWLQGyw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      '@zxing/browser': 0.0.7_@zxing+library@0.18.6
+      '@zxing/library': 0.18.6
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      rollup: 2.70.2
     dev: false
 
   /react-range/1.8.12_react-dom@17.0.2+react@17.0.2:
@@ -8987,7 +9100,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /rss-parser/3.12.0:
     resolution: {integrity: sha512-aqD3E8iavcCdkhVxNDIdg1nkBI17jgqF+9OqPS1orwNaOgySdpvq6B+DoONLhzjzwV8mWg37sb60e4bmLK117A==}
@@ -10015,6 +10127,11 @@ packages:
       utf8-byte-length: 1.0.4
     dev: true
 
+  /ts-custom-error/3.2.0:
+    resolution: {integrity: sha512-cBvC2QjtvJ9JfWLvstVnI45Y46Y5dMxIaG1TDMGAD/R87hpvqFL+7LhvUDhnRCfOnx/xitollFWWvUKKKhbN0A==}
+    engines: {node: '>=8.0.0'}
+    dev: false
+
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
     dependencies:
@@ -10436,6 +10553,11 @@ packages:
     dependencies:
       makeerror: 1.0.12
     dev: true
+
+  /warning/4.0.3:
+    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
+    dependencies:
+      loose-envify: 1.4.0
 
   /webauth/1.1.0:
     resolution: {integrity: sha1-ZHBPa4AmmGYFvDymKZUubib90QA=}

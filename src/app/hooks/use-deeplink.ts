@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import { lowerCaseEquals } from "@/utils/equals";
 import { ProfilePaths } from "@/router/paths";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { assertProfile } from "@/utils/assertions";
+import { profileAllEnabledNetworks } from "@/utils/network-utils";
 
 export const useDeeplink = () => {
 	const { env } = useEnvironmentContext();
@@ -23,7 +24,6 @@ export const useDeeplink = () => {
 	const queryParameters = useQueryParameters();
 	const [deepLink, setDeepLink] = useState<URLSearchParams | undefined>();
 
-	const allAvailableNetworks = useMemo(() => env.availableNetworks(), [env]);
 	const navigate = useCallback((url: string, deeplinkSchema?: any) => history.push(url, deeplinkSchema), [history]);
 
 	/** useActiveProfile has no effect here because it is not within the routes */
@@ -41,38 +41,68 @@ export const useDeeplink = () => {
 
 	const validateParameters = useCallback(
 		(URLParameters: URLSearchParams) => {
+			assertProfile(profile);
+
+			const allEnabledNetworks = profileAllEnabledNetworks(profile);
+
 			/* istanbul ignore next */
 			if (
 				URLParameters.has("coin") &&
-				!allAvailableNetworks.some((item) => lowerCaseEquals(item.coin(), URLParameters.get("coin")!))
+				!allEnabledNetworks.some((network) => lowerCaseEquals(network.coin(), URLParameters.get("coin")!))
 			) {
 				throw new Error(`Coin "${URLParameters.get("coin")}" not supported.`);
 			}
 
 			/* istanbul ignore next */
-			if (
-				URLParameters.has("network") &&
-				!allAvailableNetworks.some((item) => lowerCaseEquals(item.id(), URLParameters.get("network")!))
-			) {
-				throw new Error(`Network "${URLParameters.get("network")}" not supported.`);
+			if (URLParameters.has("network")) {
+				if (!["ark.devnet", "ark.mainnet"].includes(URLParameters.get("network")!)) {
+					throw new Error(`Network "${URLParameters.get("network")}" is invalid.`);
+				}
+
+				if (
+					!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
+				) {
+					throw new Error(`Network "${URLParameters.get("network")}" is not enabled.`);
+				}
+
+				const availableWallets = profile
+					.wallets()
+					.findByCoinWithNetwork(
+						URLParameters.get("coin")!.toUpperCase(),
+						URLParameters.get("network")!.toLowerCase(),
+					);
+
+				if (availableWallets.length === 0) {
+					throw new Error(
+						`The current profile has no wallets available for the "${URLParameters.get(
+							"network",
+						)}" network`,
+					);
+				}
 			}
 
-			assertProfile(profile);
+			/* istanbul ignore next */
+			if (URLParameters.has("nethash")) {
+				if (!allEnabledNetworks.some((network) => network.meta().nethash === URLParameters.get("nethash")!)) {
+					throw new Error(
+						`Network with nethash "${URLParameters.get("nethash")}" is not enabled or available.`,
+					);
+				}
 
-			const availableWallets = profile
-				.wallets()
-				.findByCoinWithNetwork(
-					URLParameters.get("coin")!.toUpperCase(),
-					URLParameters.get("network")!.toLowerCase(),
-				);
+				const availableWallets = profile
+					.wallets()
+					.findByCoinWithNethash(URLParameters.get("coin")!.toUpperCase(), URLParameters.get("nethash")!);
 
-			if (availableWallets.length === 0) {
-				throw new Error(
-					`The current profile has no wallets available for the "${URLParameters.get("network")}" network`,
-				);
+				if (availableWallets.length === 0) {
+					throw new Error(
+						`The current profile has no wallets available for the network with nethash "${URLParameters.get(
+							"nethash",
+						)}"`,
+					);
+				}
 			}
 		},
-		[allAvailableNetworks, profile],
+		[profile],
 	);
 
 	const handleDeepLink = useCallback(

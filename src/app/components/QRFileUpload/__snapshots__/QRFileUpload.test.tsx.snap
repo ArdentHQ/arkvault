@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QRFileUpload should render 1`] = `
+<DocumentFragment>
+  <button
+    class="z-20 space-x-2 css-1q9v3yc"
+    data-testid="QRFileUpload__upload"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg>
+          arrow-up-bracket.svg
+        </svg>
+      </div>
+      <span>
+        Upload Image
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;

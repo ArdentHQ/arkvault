@@ -6,7 +6,7 @@ import { Icon } from "@/app/components/Icon";
 
 const ToggleIcon = styled.span<{ isOpen: boolean; isDisabled?: boolean }>`
 	${tw`inline-flex items-center justify-center rounded-full transition duration-200 md:bg-theme-primary-100 md:dark:bg-theme-secondary-800 text-theme-primary-600 dark:text-theme-secondary-200`}
-	${({ isOpen }) => (isOpen ? tw`bg-theme-primary-600 text-theme-primary-100 rotate-180` : "")}
+	${({ isOpen }) => (isOpen ? tw`md:bg-theme-primary-600 text-theme-primary-100 rotate-180` : "")}
 	${({ isDisabled }) =>
 		isDisabled
 			? tw`md:bg-theme-secondary-200 text-theme-secondary-400 md:dark:bg-theme-secondary-800 dark:text-theme-secondary-700`

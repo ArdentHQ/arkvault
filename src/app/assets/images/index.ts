@@ -7,6 +7,7 @@ import { ReactComponent as EmptyNotificationsDarkGreen } from "./empty-notificat
 import { ReactComponent as EmptyNotificationsDarkNavy } from "./empty-notifications-dark-navy.svg";
 import { ReactComponent as EmptyNotificationsLightGreen } from "./empty-notifications-light-green.svg";
 import { ReactComponent as EmptyNotificationsLightNavy } from "./empty-notifications-light-navy.svg";
+import { ReactComponent as ErrorSmall } from "./error-small.svg";
 import { ReactComponent as ErrorBannerDarkGreen } from "./error-banner-dark-green.svg";
 import { ReactComponent as ErrorBannerDarkNavy } from "./error-banner-dark-navy.svg";
 import { ReactComponent as ErrorBannerLightGreen } from "./error-banner-light-green.svg";
@@ -82,6 +83,11 @@ export const images = {
 		ErrorBannerDarkNavy,
 		ErrorBannerLightGreen,
 		ErrorBannerLightNavy,
+		ErrorDarkGreen: ErrorBannerDarkGreen,
+		ErrorDarkNavy: ErrorBannerDarkGreen,
+		ErrorLightGreen: ErrorBannerLightGreen,
+		ErrorLightNavy: ErrorBannerLightGreen,
+		ErrorSmall,
 		GenericWarningDarkGreen,
 		GenericWarningDarkNavy,
 		GenericWarningLightGreen,
@@ -99,7 +105,11 @@ export const images = {
 		IOsInstructionsStep3LightBlue,
 		IOsInstructionsStep3LightGreen,
 		InfoDark,
+		InfoDarkGreen: InfoDark,
+		InfoDarkNavy: InfoDark,
 		InfoLight,
+		InfoLightGreen: InfoLight,
+		InfoLightNavy: InfoLight,
 		NoResultsDarkGreen,
 		NoResultsDarkNavy,
 		NoResultsLightGreen,
@@ -108,6 +118,10 @@ export const images = {
 		SuccessBannerDarkNavy,
 		SuccessBannerLightGreen,
 		SuccessBannerLightNavy,
+		SuccessDarkGreen: SuccessBannerDarkGreen,
+		SuccessDarkNavy: SuccessBannerDarkGreen,
+		SuccessLightGreen: SuccessBannerLightGreen,
+		SuccessLightNavy: SuccessBannerLightGreen,
 		TrashDark,
 		TrashLight,
 		WarningBannerDarkGreen,
