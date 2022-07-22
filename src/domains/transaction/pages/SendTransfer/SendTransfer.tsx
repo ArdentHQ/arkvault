@@ -217,7 +217,7 @@ export const SendTransfer: React.VFC = () => {
 	const handleQRCodeRead = (url: string) => {
 		setShowQRModal(false);
 
-		const { amount, network } = getValues();
+		const { network } = getValues();
 
 		const error = validateTransferURLParams(url, {
 			coin: network?.coin(),
