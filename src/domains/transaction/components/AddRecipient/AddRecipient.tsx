@@ -204,12 +204,11 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	}, [isSingle, setValue]);
 
 	useEffect(() => {
-		if (recipients.length === 0) {
+		if (isMountedReference.current) {
 			return;
 		}
 
-		// Avoid rerenders.
-		if (JSON.stringify(addedRecipients) === JSON.stringify(recipients)) {
+		if (recipients.length === 0) {
 			return;
 		}
 

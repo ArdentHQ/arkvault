@@ -217,7 +217,7 @@ export const SendTransfer: React.VFC = () => {
 	const handleQRCodeRead = (url: string) => {
 		setShowQRModal(false);
 
-		const { amount, network } = getValues();
+		const { network } = getValues();
 
 		const error = validateTransferURLParams(url, {
 			coin: network?.coin(),
@@ -241,16 +241,7 @@ export const SendTransfer: React.VFC = () => {
 		}
 
 		if (qrData.get("recipient")) {
-			form.setValue(
-				"recipients",
-				[
-					{
-						address: qrData.get("recipient"),
-						amount: qrData.get("amount") || amount,
-					},
-				],
-				{ shouldDirty: true, shouldValidate: true },
-			);
+			form.setValue("recipientAddress", qrData.get("recipient"), { shouldDirty: true, shouldValidate: true });
 		}
 
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
