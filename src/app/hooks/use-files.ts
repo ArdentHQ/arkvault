@@ -152,9 +152,9 @@ const useFiles = (): UseFilesOutput => ({
 	openImage,
 	readFileAsDataUri,
 	readFileAsText,
+	showImageSaveDialog,
 	showOpenDialog,
 	showSaveDialog,
-	showImageSaveDialog,
 });
 
 export { useFiles, isValidImage };
