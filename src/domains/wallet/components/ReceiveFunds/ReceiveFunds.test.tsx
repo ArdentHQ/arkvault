@@ -104,7 +104,7 @@ describe("ReceiveFunds", () => {
 
 	it("should handle qr image download", async () => {
 		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
-		window.showSaveFilePicker = jest.fn();
+		jest.spyOn(window, "showSaveFilePicker").mockImplementation();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
