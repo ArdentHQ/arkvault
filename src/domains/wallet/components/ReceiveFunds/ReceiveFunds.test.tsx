@@ -8,6 +8,7 @@ import { ReceiveFunds } from "./ReceiveFunds";
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
 
 let network: Networks.Network;
+const downloadQrButton = "ReceiveFunds__download-qr";
 
 describe("ReceiveFunds", () => {
 	beforeEach(() => {
@@ -78,10 +79,7 @@ describe("ReceiveFunds", () => {
 		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
@@ -97,10 +95,7 @@ describe("ReceiveFunds", () => {
 		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
@@ -111,10 +106,7 @@ describe("ReceiveFunds", () => {
 		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
