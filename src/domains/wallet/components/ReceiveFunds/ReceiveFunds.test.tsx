@@ -85,6 +85,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
 	});
 	it("should not call success toast after qr download for legacy browsers", async () => {
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
 		global.fetch = jest.fn(() =>
 			Promise.resolve({
 				blob: () => Promise.resolve(new Blob()),
@@ -92,7 +93,6 @@ describe("ReceiveFunds", () => {
 				json: () => Promise.resolve({ test: "Test" }),
 			}),
 		);
-		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
@@ -102,8 +102,8 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should handle qr image download", async () => {
-		window.showSaveFilePicker = jest.fn();
 		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		window.showSaveFilePicker = jest.fn();
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
