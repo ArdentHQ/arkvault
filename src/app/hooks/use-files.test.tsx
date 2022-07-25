@@ -3,11 +3,11 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
-global.fetch = jest.fn(() =>
+jest.spyOn(global, "fetch").mockImplementation(() =>
 	Promise.resolve({
 		blob: () => Promise.resolve(new Blob()),
-		text: () => Promise.resolve("text"),
 		json: () => Promise.resolve({ test: "Test" }),
+		text: () => Promise.resolve("text"),
 	}),
 );
 
@@ -111,6 +111,7 @@ describe("useFiles", () => {
 		});
 
 		const withFilenameOnly = await result.current.showImageSaveDialog("test", { fileName: "test.png" });
+
 		expect(withFilenameOnly).toBe("test.png");
 
 		browserAccessMock.mockRestore();
