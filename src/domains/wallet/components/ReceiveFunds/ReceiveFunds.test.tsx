@@ -2,6 +2,7 @@
 import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
+import { toasts } from "@/app/services";
 
 import { ReceiveFunds } from "./ReceiveFunds";
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
@@ -71,5 +72,51 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
+	});
+
+	it("should do nothing after qr download if user closes file dialog", async () => {
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
+	});
+	it("should not call success toast after qr download for legacy browsers", async () => {
+		global.fetch = jest.fn(() =>
+			Promise.resolve({
+				blob: () => Promise.resolve(new Blob()),
+				text: () => Promise.resolve("text"),
+				json: () => Promise.resolve({ test: "Test" }),
+			}),
+		);
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
+	});
+
+	it("should handle qr image download", async () => {
+		window.showSaveFilePicker = jest.fn();
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__download-qr")).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
 	});
 });

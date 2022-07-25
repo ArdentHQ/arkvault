@@ -3,7 +3,6 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
-// src/utils/currency.test.js
 global.fetch = jest.fn(() =>
 	Promise.resolve({
 		blob: () => Promise.resolve(new Blob()),
