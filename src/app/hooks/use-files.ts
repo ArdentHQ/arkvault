@@ -83,6 +83,20 @@ const showSaveDialog = async (contents: string, options: SaveFileDialogOptions):
 	return result?.name;
 };
 
+const showImageSaveDialog = async (contents: string, options: SaveFileDialogOptions): Promise<string | undefined> => {
+	if (options.fileName && !options.extensions) {
+		options.extensions = [getExtension(options.fileName)];
+	}
+
+	options.extensions = sanitizeExtensions(options.extensions);
+
+	const file = await fetch(contents);
+
+	const result = await fileSave(await file.blob(), options);
+
+	return result?.name;
+};
+
 const isValidImage = async (file: ReadableFile, options?: ValidateOptions): Promise<boolean> => {
 	if (!file.extension || (options?.extensions && !options?.extensions?.includes(file.extension))) {
 		return false;
@@ -128,6 +142,7 @@ interface UseFilesOutput {
 	readFileAsText: (file: File) => Promise<ReadableFile | undefined>;
 	showOpenDialog: (options: OpenFileDialogOptions) => Promise<File | undefined>;
 	showSaveDialog: (contents: string, options: SaveFileDialogOptions) => Promise<string | undefined>;
+	showImageSaveDialog: (contents: string, options: SaveFileDialogOptions) => Promise<string | undefined>;
 	openImage: (options?: ValidateOptions) => Promise<ReadableFile>;
 }
 
@@ -139,6 +154,7 @@ const useFiles = (): UseFilesOutput => ({
 	readFileAsText,
 	showOpenDialog,
 	showSaveDialog,
+	showImageSaveDialog,
 });
 
 export { useFiles, isValidImage };

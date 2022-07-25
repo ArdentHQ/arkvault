@@ -1,7 +1,7 @@
 import { Networks } from "@ardenthq/sdk";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
@@ -13,6 +13,8 @@ import { Modal } from "@/app/components/Modal";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { ReceiveFundsForm, useQRCode } from "@/domains/wallet/components/ReceiveFunds";
+import { toasts } from "@/app/services";
+import { useFiles } from "@/app/hooks/use-files";
 
 interface ReceiveFundsProperties {
 	address: string;
@@ -35,6 +37,20 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 		memo,
 		nethash: network.meta().nethash,
 	});
+
+	const { isLegacy, showImageSaveDialog } = useFiles();
+
+	const handleQRDownload = async (qrContent: string) => {
+		try {
+			const filePath = await showImageSaveDialog(qrContent, { fileName: `${address}.png`, extensions: [".png"] });
+
+			if (!isLegacy()) {
+				toasts.success(<Trans i18nKey="COMMON.SAVE_FILE.SUCCESS" values={{ filePath }} />);
+			}
+		} catch {
+			//
+		}
+	};
 
 	return (
 		<Modal
@@ -115,6 +131,20 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 						alt={t("COMMON.QR_CODE")}
 						data-testid="ReceiveFunds__qrcode"
 					/>
+				)}
+			</div>
+
+			<div className="mx-auto mt-4 w-64">
+				{image && (
+					<Button
+						variant="secondary"
+						className="flex w-full space-x-2"
+						onClick={() => handleQRDownload(image)}
+						data-testid="ReceiveFunds__download-qr"
+					>
+						<Icon name="Download" />
+						<span>{t("WALLETS.MODAL_RECEIVE_FUNDS.DOWNLOAD_QR_CODE")}</span>
+					</Button>
 				)}
 			</div>
 

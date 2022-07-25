@@ -46,6 +46,7 @@ export const translations = {
 		DESCRIPTION: "Specify and confirm the amount to request.",
 		SPECIFY_AMOUNT: "Specify Amount",
 		TITLE: "Receive Funds",
+		DOWNLOAD_QR_CODE: "Download QR-Code",
 		WARNING:
 			"Please note that you have exceeded the number of characters allowed, anything over {{maxLength}} characters will not appear in memos.",
 	},
