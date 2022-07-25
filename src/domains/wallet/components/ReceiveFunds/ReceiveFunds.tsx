@@ -42,7 +42,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 
 	const handleQRDownload = async (qrContent: string) => {
 		try {
-			const filePath = await showImageSaveDialog(qrContent, { fileName: `${address}.png`, extensions: [".png"] });
+			const filePath = await showImageSaveDialog(qrContent, { extensions: [".png"], fileName: `${address}.png` });
 
 			if (!isLegacy()) {
 				toasts.success(<Trans i18nKey="COMMON.SAVE_FILE.SUCCESS" values={{ filePath }} />);
