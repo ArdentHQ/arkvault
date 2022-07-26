@@ -63,7 +63,7 @@ export const SendTransfer: React.VFC = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
-	const { validateTransferURLParams, urlSearchParameters } = useTransactionURL();
+	const { validateTransferURLParameters, urlSearchParameters } = useTransactionURL();
 
 	const {
 		form,
@@ -219,7 +219,7 @@ export const SendTransfer: React.VFC = () => {
 
 		const { network } = getValues();
 
-		const error = validateTransferURLParams(url, {
+		const error = validateTransferURLParameters(url, {
 			coin: network?.coin(),
 			nethash: network?.meta().nethash,
 			network: network?.id(),

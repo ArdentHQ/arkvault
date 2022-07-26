@@ -61,6 +61,6 @@ export const useTransactionURL = () => {
 	return {
 		generateSendTransferPath,
 		urlSearchParameters,
-		validateTransferURLParams: validateTransferURLParameters,
+		validateTransferURLParameters,
 	};
 };

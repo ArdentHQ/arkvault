@@ -45,60 +45,55 @@ export const useDeeplink = () => {
 
 			const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
-			/* istanbul ignore next */
-			if (
-				URLParameters.has("coin") &&
-				!allEnabledNetworks.some((network) => lowerCaseEquals(network.coin(), URLParameters.get("coin")!))
-			) {
-				throw new Error(`Coin "${URLParameters.get("coin")}" not supported.`);
+			const coin = URLParameters.get("coin");
+			const method = URLParameters.get("method");
+			const network = URLParameters.get("network");
+			const nethash = URLParameters.get("nethash");
+
+			if (!coin) {
+				throw new Error(t("TRANSACTION.VALIDATION.COIN_MISSING"));
 			}
 
-			/* istanbul ignore next */
-			if (URLParameters.has("network")) {
-				if (!["ark.devnet", "ark.mainnet"].includes(URLParameters.get("network")!)) {
-					throw new Error(`Network "${URLParameters.get("network")}" is invalid.`);
+			if (!method) {
+				throw new Error(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
+			}
+
+			if (!network && !nethash) {
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
+			}
+
+			if (!allEnabledNetworks.some((item) => lowerCaseEquals(item.coin(), coin))) {
+				throw new Error(t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin }));
+			}
+
+			if (network) {
+				if (!["ark.devnet", "ark.mainnet"].includes(network)) {
+					throw new Error(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network }));
 				}
 
-				if (
-					!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
-				) {
-					throw new Error(`Network "${URLParameters.get("network")}" is not enabled.`);
+				/* istanbul ignore next */
+				if (!allEnabledNetworks.some((item) => lowerCaseEquals(item.id(), network))) {
+					throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED", { network }));
 				}
 
 				const availableWallets = profile
 					.wallets()
-					.findByCoinWithNetwork(
-						URLParameters.get("coin")!.toUpperCase(),
-						URLParameters.get("network")!.toLowerCase(),
-					);
+					.findByCoinWithNetwork(coin.toUpperCase(), network.toLowerCase());
 
 				if (availableWallets.length === 0) {
-					throw new Error(
-						`The current profile has no wallets available for the "${URLParameters.get(
-							"network",
-						)}" network`,
-					);
+					throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network }));
 				}
 			}
 
-			/* istanbul ignore next */
-			if (URLParameters.has("nethash")) {
-				if (!allEnabledNetworks.some((network) => network.meta().nethash === URLParameters.get("nethash")!)) {
-					throw new Error(
-						`Network with nethash "${URLParameters.get("nethash")}" is not enabled or available.`,
-					);
+			if (nethash) {
+				if (!allEnabledNetworks.some((network) => network.meta().nethash === nethash)) {
+					throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash }));
 				}
 
-				const availableWallets = profile
-					.wallets()
-					.findByCoinWithNethash(URLParameters.get("coin")!.toUpperCase(), URLParameters.get("nethash")!);
+				const availableWallets = profile.wallets().findByCoinWithNethash(coin.toUpperCase(), nethash);
 
 				if (availableWallets.length === 0) {
-					throw new Error(
-						`The current profile has no wallets available for the network with nethash "${URLParameters.get(
-							"nethash",
-						)}"`,
-					);
+					throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash }));
 				}
 			}
 		},
@@ -118,12 +113,11 @@ export const useDeeplink = () => {
 			try {
 				validateParameters(URLParameters);
 
-				if (URLParameters.has("method") && URLParameters.get("method") === "transfer") {
+				/* istanbul ignore else */
+				if (URLParameters.get("method") === "transfer") {
 					const path = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
 					return navigate(`${path}?${URLParameters.toString()}`);
 				}
-
-				return navigate(ProfilePaths.Welcome);
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {

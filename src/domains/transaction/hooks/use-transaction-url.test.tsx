@@ -29,7 +29,7 @@ describe("useTransactionURL", () => {
 	it("should validate url without errors", () => {
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.valid, requiredNetworkOptions)).toBeUndefined();
+		expect(result.current.validateTransferURLParameters(urls.valid, requiredNetworkOptions)).toBeUndefined();
 	});
 
 	it("should error for invalid url", () => {
@@ -38,7 +38,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.invalid, requiredNetworkOptions)).toBe(
+		expect(result.current.validateTransferURLParameters(urls.invalid, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.INVALID_URL"),
 		);
 	});
@@ -49,7 +49,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withoutCoin, requiredNetworkOptions)).toBe(
+		expect(result.current.validateTransferURLParameters(urls.withoutCoin, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.COIN_MISSING"),
 		);
 	});
@@ -60,7 +60,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withInvalidNetwork, requiredNetworkOptions)).toBe(
+		expect(result.current.validateTransferURLParameters(urls.withInvalidNetwork, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.NETWORK_INVALID"),
 		);
 	});
@@ -71,7 +71,7 @@ describe("useTransactionURL", () => {
 
 		const { result } = renderHook(() => useTransactionURL());
 
-		expect(result.current.validateTransferURLParams(urls.withoutNetwork, requiredNetworkOptions)).toBe(
+		expect(result.current.validateTransferURLParameters(urls.withoutNetwork, requiredNetworkOptions)).toBe(
 			t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
 		);
 	});
@@ -83,7 +83,7 @@ describe("useTransactionURL", () => {
 		const { result } = renderHook(() => useTransactionURL());
 
 		expect(
-			result.current.validateTransferURLParams(urls.valid, {
+			result.current.validateTransferURLParameters(urls.valid, {
 				...requiredNetworkOptions,
 				nethash: undefined,
 				network: "test.custom",
@@ -98,7 +98,7 @@ describe("useTransactionURL", () => {
 		const { result } = renderHook(() => useTransactionURL());
 
 		expect(
-			result.current.validateTransferURLParams(urls.withNethash, {
+			result.current.validateTransferURLParameters(urls.withNethash, {
 				...requiredNetworkOptions,
 				nethash: "2",
 				network: null,
@@ -113,7 +113,7 @@ describe("useTransactionURL", () => {
 		const { result } = renderHook(() => useTransactionURL());
 
 		expect(
-			result.current.validateTransferURLParams(urls.withNethash, {
+			result.current.validateTransferURLParameters(urls.withNethash, {
 				...requiredNetworkOptions,
 				coin: "test",
 			}),
