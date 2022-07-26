@@ -3,7 +3,7 @@ import React from "react";
 
 import { InputCounter } from "./InputCounter";
 import { FormFieldProvider } from "@/app/components/Form/useFormField";
-import { render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 describe("InputCounter", () => {
 	it("should render", () => {
