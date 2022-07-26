@@ -323,7 +323,7 @@ export const GeneralSettings: React.FC = () => {
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
 									onChange={(marketProvider: SettingsOption) => {
-										if (marketProvider.unsupportedCurrencies?.includes(exchangeCurrency)) {
+										if (marketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
 													currency: exchangeCurrency,
