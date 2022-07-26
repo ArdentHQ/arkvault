@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useFormField } from "@/app/components/Form/useFormField";
 import { Input } from "@/app/components/Input";
@@ -18,6 +18,12 @@ export const InputCounter = React.forwardRef<HTMLInputElement, Properties>((prop
 		setLength(event.target.value.length);
 		properties.onChange?.(event);
 	};
+
+	useEffect(() => {
+		if (!!properties.value && properties.value !== properties.defaultValue) {
+			setLength(String(properties.value).length);
+		}
+	}, [properties.value]);
 
 	return (
 		<Input

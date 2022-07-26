@@ -3,7 +3,7 @@ import React from "react";
 
 import { InputCounter } from "./InputCounter";
 import { FormFieldProvider } from "@/app/components/Form/useFormField";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("InputCounter", () => {
 	it("should render", () => {
@@ -24,6 +24,12 @@ describe("InputCounter", () => {
 		render(<InputCounter maxLength={10} maxLengthLabel="10" />);
 
 		userEvent.type(screen.getByTestId("InputCounter__input"), "Test");
+
+		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
+	});
+
+	it("should render with default value and change", async () => {
+		render(<InputCounter maxLength={10} maxLengthLabel="10" defaultValue="Hello" value="test" />);
 
 		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
 	});
