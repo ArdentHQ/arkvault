@@ -68,7 +68,10 @@ export class ToastService {
 	}
 
 	private toast(type: ToastTypeOptions, content: ToastContent, options?: ToastOptions): ToastId {
-		return toast((properties: ToastContentProps<{}>) => this.renderContent(type, content, properties), { ...this.options(), ...options });
+		return toast((properties: ToastContentProps<{}>) => this.renderContent(type, content, properties), {
+			...this.options(),
+			...options,
+		});
 	}
 
 	public info(content: ToastContent, options?: ToastOptions): ToastId {
