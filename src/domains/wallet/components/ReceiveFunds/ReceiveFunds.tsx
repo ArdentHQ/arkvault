@@ -111,7 +111,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 				{image && (
 					<img
 						src={image}
-						className="h-64 w-64 rounded-lg border border-theme-secondary-300 p-3 dark:border-theme-secondary-800"
+						className="h-64 w-64 rounded-lg border border-theme-secondary-200 p-3 dark:bg-theme-secondary-200 dark:border-theme-secondary-800"
 						alt={t("COMMON.QR_CODE")}
 						data-testid="ReceiveFunds__qrcode"
 					/>

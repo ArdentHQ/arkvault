@@ -38,8 +38,8 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 	useEffect(() => {
 		const color = shouldUseDarkColors()
 			? {
-					dark: "#eef3f5",
-					light: "#212225",
+					dark: "#212225",
+					light: "#eef3f5",
 			  }
 			: {
 					dark: "#212225",
