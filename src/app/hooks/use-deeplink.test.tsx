@@ -71,9 +71,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the coin is missing", async () => {
-		history.push(
-			"/?method=transfer&network=ark.mainnet",
-		);
+		history.push("/?method=transfer&network=ark.mainnet");
 
 		render(
 			<Route>
@@ -96,9 +94,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the coin is not supported", async () => {
-		history.push(
-			"/?method=transfer&coin=doge&network=ark.mainnet",
-		);
+		history.push("/?method=transfer&coin=doge&network=ark.mainnet");
 
 		render(
 			<Route>
@@ -144,9 +140,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the method is not supported", async () => {
-		history.push(
-			"/?method=nuke&coin=ark&network=ark.mainnet",
-		);
+		history.push("/?method=nuke&coin=ark&network=ark.mainnet");
 
 		render(
 			<Route>
@@ -163,7 +157,9 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke")),
+				buildToastMessage(
+					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
+				),
 			),
 		);
 	});
@@ -192,9 +188,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
-		history.push(
-			"/?method=transfer&coin=ark&network=custom",
-		);
+		history.push("/?method=transfer&coin=ark&network=custom");
 
 		render(
 			<Route>
@@ -296,9 +290,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
-		history.push(
-			"/?method=transfer&coin=ark&network=ark.devnet",
-		);
+		history.push("/?method=transfer&coin=ark&network=ark.devnet");
 
 		render(
 			<Route>
@@ -341,9 +333,7 @@ describe("useDeeplink hook", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		history.push(
-			"/?method=transfer&coin=ark&network=ark.devnet",
-		);
+		history.push("/?method=transfer&coin=ark&network=ark.devnet");
 
 		render(
 			<Route>
