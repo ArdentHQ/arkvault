@@ -87,7 +87,7 @@ export const TabScroll = ({ children }) => {
 	const shadowRGB = useMemo(() => (isDarkMode ? "18, 18, 19" : "247, 250, 251"), [isDarkMode]);
 
 	return (
-		<div data-testid="TabScroll" className="relative">
+		<div data-testid="TabScroll" className="relative z-0">
 			<span
 				className="pointer-events-none absolute z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
 				style={{
