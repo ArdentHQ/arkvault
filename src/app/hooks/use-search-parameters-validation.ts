@@ -43,9 +43,9 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
 		}
 
-    if (!allowedMethods.some((item) => lowerCaseEquals(item, method))) {
-      throw new Error(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method }));
-    }
+		if (!allowedMethods.some((item) => lowerCaseEquals(item, method))) {
+			throw new Error(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method }));
+		}
 
 		if (!network && !nethash) {
 			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
