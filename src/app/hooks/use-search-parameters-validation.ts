@@ -11,6 +11,9 @@ interface RequiredParameters {
 	nethash?: string;
 }
 
+const allowedNetworks = ["ark.devnet", "ark.mainnet"];
+const allowedMethods = ["transfer"];
+
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
 
@@ -40,6 +43,10 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
 		}
 
+    if (!allowedMethods.some((item) => lowerCaseEquals(item, method))) {
+      throw new Error(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method }));
+    }
+
 		if (!network && !nethash) {
 			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
 		}
@@ -53,7 +60,7 @@ export const useSearchParametersValidation = () => {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
-			if (!["ark.devnet", "ark.mainnet"].includes(network)) {
+			if (!allowedNetworks.some((item) => lowerCaseEquals(item, network))) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network }));
 			}
 

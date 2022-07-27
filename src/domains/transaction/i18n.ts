@@ -406,6 +406,7 @@ export const translations = {
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 		METHOD_MISSING: "method parameter is missing",
+		METHOD_NOT_SUPPORTED: 'method "{{method}}" is not supported.',
 		NETHASH_NOT_ENABLED: 'network with nethash "{{nethash}}" is not enabled or available.',
 		NETHASH_NO_WALLETS: 'the current profile has no wallets available for the network with nethash "{{nethash}}".',
 		NETWORK_INVALID: 'network "{{network}}" is invalid.',
