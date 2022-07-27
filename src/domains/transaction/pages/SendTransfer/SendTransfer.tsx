@@ -28,6 +28,7 @@ import { assertNetwork, assertWallet } from "@/utils/assertions";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
 import { useTransactionURL } from "@/domains/transaction/hooks/use-transaction-url";
 import { toasts } from "@/app/services";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 
 const MAX_TABS = 5;
 
@@ -63,7 +64,8 @@ export const SendTransfer: React.VFC = () => {
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
-	const { validateTransferURLParameters, urlSearchParameters } = useTransactionURL();
+	const { urlSearchParameters } = useTransactionURL();
+	const { validateSearchParameters } = useSearchParametersValidation();
 
 	const {
 		form,
@@ -219,18 +221,20 @@ export const SendTransfer: React.VFC = () => {
 
 		const { network } = getValues();
 
-		const error = validateTransferURLParameters(url, {
-			coin: network?.coin(),
-			nethash: network?.meta().nethash,
-			network: network?.id(),
-		});
+		let qrData: URLSearchParams | undefined;
 
-		if (error) {
+		try {
+			qrData = urlSearchParameters(url);
+
+			validateSearchParameters(activeProfile, qrData, {
+				coin: network?.coin(),
+				nethash: network?.meta().nethash,
+				network: network?.id(),
+			});
+		} catch (error) {
 			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error }));
 			return;
 		}
-
-		const qrData = urlSearchParameters(url);
 
 		if (qrData.get("amount")) {
 			form.setValue("amount", qrData.get("amount"), { shouldDirty: true, shouldValidate: true });
