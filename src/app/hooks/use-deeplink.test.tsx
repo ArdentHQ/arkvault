@@ -72,7 +72,7 @@ describe("useDeeplink hook", () => {
 
 	it("should show a warning if the coin is missing", async () => {
 		history.push(
-			"/?method=transfer&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/?method=transfer&network=ark.mainnet",
 		);
 
 		render(
@@ -97,7 +97,7 @@ describe("useDeeplink hook", () => {
 
 	it("should show a warning if the coin is not supported", async () => {
 		history.push(
-			"/?method=transfer&coin=doge&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/?method=transfer&coin=doge&network=ark.mainnet",
 		);
 
 		render(
@@ -121,7 +121,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the method is missing", async () => {
-		history.push("/?coin=ARK&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK");
+		history.push("/?coin=ark&network=ark.mainnet");
 
 		render(
 			<Route>
@@ -143,10 +143,33 @@ describe("useDeeplink hook", () => {
 		);
 	});
 
-	it.todo("should show a warning if the method is not supported");
+	it("should show a warning if the method is not supported", async () => {
+		history.push(
+			"/?method=nuke&coin=ark&network=ark.mainnet",
+		);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() =>
+			expect(toastErrorSpy).toHaveBeenCalledWith(
+				buildToastMessage(transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke")),
+			),
+		);
+	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
-		history.push("/?method=transfer&coin=ARK&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK");
+		history.push("/?method=transfer&coin=ark");
 
 		render(
 			<Route>
@@ -170,7 +193,7 @@ describe("useDeeplink hook", () => {
 
 	it("should show a warning if the network parameter is invalid", async () => {
 		history.push(
-			"/?method=transfer&coin=ark&network=custom&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/?method=transfer&coin=ark&network=custom",
 		);
 
 		render(
@@ -274,7 +297,7 @@ describe("useDeeplink hook", () => {
 
 	it("should navigate to transfer page with network parameter", async () => {
 		history.push(
-			"/?method=transfer&coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/?method=transfer&coin=ark&network=ark.devnet",
 		);
 
 		render(
@@ -319,7 +342,7 @@ describe("useDeeplink hook", () => {
 		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		history.push(
-			"/?method=transfer&coin=ark&network=ark.devnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/?method=transfer&coin=ark&network=ark.devnet",
 		);
 
 		render(
