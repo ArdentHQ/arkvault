@@ -167,8 +167,11 @@ describe("SendTransfer QRModal", () => {
 			),
 		);
 	});
+
 	it("should read QR and error for invalid format", async () => {
-		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "http://localhost:3000/#/?coin=ark" });
+		qrScannerMock = jest
+			.spyOn(QRScanner, "scanImage")
+			.mockResolvedValue({ data: "http://localhost:3000/#/?coin=ark" });
 
 		const toastSpy = jest.spyOn(toasts, "error");
 		const { result } = renderHook(() => useTranslation());
