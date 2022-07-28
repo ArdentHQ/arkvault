@@ -105,7 +105,7 @@ specifiers:
   react-router-dom: ^5.3.0
   react-table: ^7.7.0
   react-test-renderer: ^17.0.2
-  react-toastify: ^6.2.0
+  react-toastify: ^9.0.7
   react-visibility-sensor: ^5.1.1
   rollup: ^2.70.2
   rollup-plugin-visualizer: ^5.6.0
@@ -173,7 +173,7 @@ dependencies:
   react-router: 6.3.0_react@17.0.2
   react-router-dom: 5.3.1_react@17.0.2
   react-table: 7.7.0_react@17.0.2
-  react-toastify: 6.2.0_react-dom@17.0.2+react@17.0.2
+  react-toastify: 9.0.7_react-dom@17.0.2+react@17.0.2
   react-visibility-sensor: 5.1.1_react-dom@17.0.2+react@17.0.2
   semver: 7.3.7
   socks-proxy-agent: 6.2.0
@@ -4585,13 +4585,6 @@ packages:
     resolution: {integrity: sha512-R305kwb5CcMDIpSHUnLyIAp7SrSPBx6F0VfQFB3M75xVMHhXJJIdePYgbPPh1o57vCHNu5QztokWUPsLjWzFqw==}
     dev: true
 
-  /dom-helpers/5.2.1:
-    resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
-    dependencies:
-      '@babel/runtime': 7.17.9
-      csstype: 3.0.11
-    dev: false
-
   /dom-walk/0.1.2:
     resolution: {integrity: sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==}
     dev: false
@@ -8734,29 +8727,13 @@ packages:
       scheduler: 0.20.2
     dev: true
 
-  /react-toastify/6.2.0_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-XpjFrcBhQ0/nBOL4syqgP/TywFnOyxmstYLWgSQWcj39qpp+WU4vPt3C/ayIDx7RFyxRWfzWTdR2qOcDGo7G0w==}
+  /react-toastify/9.0.7_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-UG5P/2F/fYdbK+v3XRWHM6xfMkWeLM+k2swKvwU8oO9DXx31GkeoH7Z6slBTkavZ0VjoQ+n/YD6xOBqEwN7HRg==}
     peerDependencies:
       react: '>=16'
+      react-dom: '>=16'
     dependencies:
       clsx: 1.1.1
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-transition-group: 4.4.2_react-dom@17.0.2+react@17.0.2
-    transitivePeerDependencies:
-      - react-dom
-    dev: false
-
-  /react-transition-group/4.4.2_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==}
-    peerDependencies:
-      react: '>=16.6.0'
-      react-dom: '>=16.6.0'
-    dependencies:
-      '@babel/runtime': 7.17.9
-      dom-helpers: 5.2.1
-      loose-envify: 1.4.0
-      prop-types: 15.8.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: false
