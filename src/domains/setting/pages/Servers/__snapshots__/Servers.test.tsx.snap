@@ -9654,12 +9654,17 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="flex cursor-pointer justify-center"
                                       >
                                         <div
-                                          data-testid="CustomPeersPeer--statusloading"
+                                          data-testid="CustomPeersPeer--statusok"
                                         >
                                           <div
-                                            class="css-xvdci8"
-                                            color="info"
-                                          />
+                                            class="text-theme-success-600 css-1i4b0eq"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              status-ok.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
