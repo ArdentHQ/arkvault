@@ -2707,7 +2707,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                               class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                               data-testid="InputCounter__counter"
                             >
-                              0/255
+                              3/255
                             </span>
                           </div>
                         </div>
@@ -3938,7 +3938,7 @@ exports[`SendTransfer should render form and use location state with network par
                               class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                               data-testid="InputCounter__counter"
                             >
-                              0/255
+                              3/255
                             </span>
                           </div>
                         </div>
