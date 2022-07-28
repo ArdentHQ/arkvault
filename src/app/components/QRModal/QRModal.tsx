@@ -6,6 +6,7 @@ import { Modal } from "@/app/components/Modal";
 import { QRCameraReader } from "@/app/components/QRCameraReader";
 import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
+import { FormButtons } from "@/app/components/Form";
 
 interface QRError {
 	title?: string;
@@ -129,7 +130,11 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 				<div className="flex h-full flex-col items-center justify-center space-y-8 py-8">
 					<ViewFinder error={error} isLoading={!ready} />
 
-					<QRFileUpload onError={handleError} onRead={handleRead} />
+					<div className="z-10">
+						<FormButtons>
+							<QRFileUpload onError={handleError} onRead={handleRead} />
+						</FormButtons>
+					</div>
 				</div>
 			</div>
 		</Modal>
