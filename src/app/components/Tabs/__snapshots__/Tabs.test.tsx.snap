@@ -170,7 +170,7 @@ exports[`Tabs should render with scroll 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="relative"
+      class="relative z-0"
       data-testid="TabScroll"
     >
       <span
@@ -239,7 +239,7 @@ exports[`Tabs should render with scroll in dark mode 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="relative"
+      class="relative z-0"
       data-testid="TabScroll"
     >
       <span
