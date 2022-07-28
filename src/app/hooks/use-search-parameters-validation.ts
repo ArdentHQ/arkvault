@@ -35,7 +35,7 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISSING"));
 		}
 
-		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
+		if (requiredParameters?.coin && !lowerCaseEquals(coin, requiredParameters?.coin)) {
 			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISMATCH"));
 		}
 
