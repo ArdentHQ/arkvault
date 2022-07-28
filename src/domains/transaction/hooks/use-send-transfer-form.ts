@@ -166,7 +166,10 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		);
 
 		if (queryParameters.memo) {
-			setValue("memo", queryParameters.memo);
+			setValue("memo", queryParameters.memo, {
+				shouldDirty: true,
+				shouldValidate: true,
+			});
 		}
 
 		if (queryParameters.recipient) {

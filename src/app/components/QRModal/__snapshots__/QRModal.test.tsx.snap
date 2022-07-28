@@ -80,28 +80,36 @@ exports[`QRModal should render 1`] = `
                     class="absolute top-8 bottom-8 -right-[2px] w-0.5 bg-theme-secondary-800"
                   />
                 </div>
-                <button
-                  class="z-20 space-x-2 css-1q9v3yc"
-                  data-testid="QRFileUpload__upload"
-                  type="button"
+                <div
+                  class="z-10"
                 >
                   <div
-                    class="flex items-center space-x-2"
+                    class="css-1d6x3tk"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                    <button
+                      class="z-20 space-x-2 css-1q9v3yc"
+                      data-testid="QRFileUpload__upload"
+                      type="button"
                     >
-                      <svg>
-                        arrow-up-bracket.svg
-                      </svg>
-                    </div>
-                    <span>
-                      Upload Image
-                    </span>
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg>
+                            arrow-up-bracket.svg
+                          </svg>
+                        </div>
+                        <span>
+                          Upload Image
+                        </span>
+                      </div>
+                    </button>
                   </div>
-                </button>
+                </div>
               </div>
             </div>
           </div>
