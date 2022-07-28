@@ -28,6 +28,12 @@ describe("InputCounter", () => {
 		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
 	});
 
+	it("should render with default value and change", () => {
+		render(<InputCounter maxLength={10} maxLengthLabel="10" defaultValue="Hello" value="test" />);
+
+		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
+	});
+
 	it("should render with invalid state", () => {
 		const { container } = render(
 			<FormFieldProvider value={{ isInvalid: true, name: "vendorField" }}>
