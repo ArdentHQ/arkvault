@@ -3,6 +3,14 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
+jest.spyOn(global, "fetch").mockImplementation(() =>
+	Promise.resolve({
+		blob: () => Promise.resolve(new Blob()),
+		json: () => Promise.resolve({ test: "Test" }),
+		text: () => Promise.resolve("text"),
+	}),
+);
+
 describe("useFiles", () => {
 	it("should read file as text", async () => {
 		const { result } = renderHook(() => useFiles());
@@ -82,6 +90,29 @@ describe("useFiles", () => {
 		expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Blob), {
 			extensions: [".json"],
 		});
+
+		browserAccessMock.mockRestore();
+	});
+
+	it("should save image file", async () => {
+		const browserAccessMock = jest
+			.spyOn(browserAccess, "fileSave")
+			// @ts-ignore
+			.mockResolvedValue({ name: "test.png" });
+
+		const { result } = renderHook(() => useFiles());
+
+		const value = await result.current.showImageSaveDialog("test", { extensions: [".png"] });
+
+		expect(value).toBe("test.png");
+
+		expect(browserAccessMock).toHaveBeenCalledWith(expect.any(Blob), {
+			extensions: [".png"],
+		});
+
+		const withFilenameOnly = await result.current.showImageSaveDialog("test", { fileName: "test.png" });
+
+		expect(withFilenameOnly).toBe("test.png");
 
 		browserAccessMock.mockRestore();
 	});
