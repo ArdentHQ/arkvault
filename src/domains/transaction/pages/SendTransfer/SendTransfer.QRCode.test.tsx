@@ -52,6 +52,10 @@ describe("SendTransfer QRModal", () => {
 			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
 	});
 
+	afterEach(() => {
+		qrScannerMock.mockReset();
+	});
+
 	afterAll(() => {
 		jest.restoreAllMocks();
 	});
@@ -89,7 +93,6 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and prevent from applying parameters if not available in qr code", async () => {
-		qrScannerMock.mockRestore();
 		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?coin=ARK&method=transfer&network=ark.devnet",
 		});
@@ -131,7 +134,6 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and error for invalid url", async () => {
-		qrScannerMock.mockRestore();
 		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "invalid url" });
 
 		const toastSpy = jest.spyOn(toasts, "error");
@@ -162,6 +164,40 @@ describe("SendTransfer QRModal", () => {
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
 				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.INVALID_URL") }),
+			),
+		);
+	});
+	it("should read QR and error for invalid format", async () => {
+		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "http://localhost:3000/#/?coin=ark" });
+
+		const toastSpy = jest.spyOn(toasts, "error");
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
+		history.push(transferURL);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
+				<LedgerProvider>
+					<SendTransfer />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: transferURL,
+			},
+		);
+
+		userEvent.click(screen.getByTestId(QRCodeModalButton));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+
+		await waitFor(() =>
+			expect(toastSpy).toHaveBeenCalledWith(
+				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.VALIDATION.METHOD_MISSING") }),
 			),
 		);
 	});
