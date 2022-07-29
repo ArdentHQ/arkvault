@@ -102,13 +102,13 @@ export const useSearchParametersValidation = () => {
 			}
 		}
 
-		if (recipient && network) {
-			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+		if (recipient) {
+			const coin: Coins.Coin = profile.coins().set(network!.coin(), network!.id());
 
 			const isValid = await coin.address().validate(recipient);
 
 			if (!isValid) {
-				throw new Error("address/network mismatch");
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 		}
 	};

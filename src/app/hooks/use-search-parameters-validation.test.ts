@@ -32,7 +32,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should validate search parameters without errors (with nethash)", async () => {
 		const parameters = new URLSearchParams(
-			"amount=10&coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -41,9 +41,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for missing coin", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("method=transfer&network=ark.devnet");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -56,9 +54,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for invalid coin", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=custom&network=ark.devnet&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=custom&network=ark.devnet&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -71,9 +67,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for coin mismatch", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&nethash=1&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -89,9 +83,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for missing method", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -104,9 +96,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for invalid method", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&network=ark.devnet&method=custom&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=custom");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -119,9 +109,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for missing network or nethash", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -134,9 +122,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for invalid network", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&network=custom&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&network=custom&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
@@ -148,17 +134,28 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
-	it("should throw for network mismatch", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+	it("should throw for invalid nethash", async () => {
+		const parameters = new URLSearchParams("coin=ARK&nethash=custom&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(() =>
+		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: "custom" }),
+		);
+	});
+
+	it("should throw for network mismatch", async () => {
+		const parameters = new URLSearchParams("coin=ark&method=transfer&network=ark.devnet");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(
 			result.current.validateSearchParameters(profile, parameters, {
 				...requiredParameters,
 				nethash: undefined,
@@ -168,21 +165,32 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should throw for nethash mismatch", async () => {
-		const parameters = new URLSearchParams(
-			"amount=10&coin=ARK&nethash=1&method=transfer&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
-		);
+		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(() =>
+		await expect(
 			result.current.validateSearchParameters(profile, parameters, {
 				...requiredParameters,
 				nethash: "wrong",
 				network: undefined,
 			}),
 		).rejects.toThrow(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+	});
+
+	it("should throw if recipient does not correspond to network", async () => {
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
+		);
 	});
 });
