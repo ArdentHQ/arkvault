@@ -216,7 +216,7 @@ export const SendTransfer: React.VFC = () => {
 		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
-	const handleQRCodeRead = (url: string) => {
+	const handleQRCodeRead = async (url: string) => {
 		setShowQRModal(false);
 
 		const { network } = getValues();
@@ -231,7 +231,7 @@ export const SendTransfer: React.VFC = () => {
 		}
 
 		try {
-			validateSearchParameters(activeProfile, qrData, {
+			await validateSearchParameters(activeProfile, qrData, {
 				coin: network?.coin(),
 				nethash: network?.meta().nethash,
 				network: network?.id(),

@@ -39,7 +39,7 @@ export const useDeeplink = () => {
 	}, [env, history.location.pathname, t]);
 
 	const handleDeepLink = useCallback(
-		(searchParameters: URLSearchParams) => {
+		async (searchParameters: URLSearchParams) => {
 			if (!profile) {
 				return verifyProfile();
 			}
@@ -49,7 +49,7 @@ export const useDeeplink = () => {
 			}
 
 			try {
-				validateSearchParameters(profile, searchParameters);
+				await validateSearchParameters(profile, searchParameters);
 
 				/* istanbul ignore else */
 				if (searchParameters.get("method") === "transfer") {

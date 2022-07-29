@@ -1,4 +1,5 @@
 /* eslint-disable sonarjs/cognitive-complexity */
+import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { assertProfile } from "@/utils/assertions";
@@ -17,7 +18,7 @@ const allowedMethods = ["transfer"];
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
 
-	const validateSearchParameters = (
+	const validateSearchParameters = async (
 		profile: Contracts.IProfile,
 		URLParameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
@@ -28,8 +29,9 @@ export const useSearchParametersValidation = () => {
 
 		const coin = URLParameters.get("coin");
 		const method = URLParameters.get("method");
-		const network = URLParameters.get("network");
+		const networkId = URLParameters.get("network");
 		const nethash = URLParameters.get("nethash");
+		const recipient = URLParameters.get("recipient");
 
 		if (!coin) {
 			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISSING"));
@@ -47,7 +49,7 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method }));
 		}
 
-		if (!network && !nethash) {
+		if (!networkId && !nethash) {
 			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
 		}
 
@@ -55,24 +57,30 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin }));
 		}
 
-		if (network) {
-			if (requiredParameters?.network && network !== requiredParameters?.network) {
+		let network: Networks.Network | undefined;
+
+		if (networkId) {
+			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
-			if (!allowedNetworks.some((item) => lowerCaseEquals(item, network))) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network }));
+			if (!allowedNetworks.some((item) => lowerCaseEquals(item, networkId))) {
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: networkId }));
 			}
+
+			network = allEnabledNetworks.find((item) => lowerCaseEquals(item.id(), networkId));
 
 			/* istanbul ignore next */
-			if (!allEnabledNetworks.some((item) => lowerCaseEquals(item.id(), network))) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED", { network }));
+			if (!network) {
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED", { network: networkId }));
 			}
 
-			const availableWallets = profile.wallets().findByCoinWithNetwork(coin.toUpperCase(), network.toLowerCase());
+			const availableWallets = profile
+				.wallets()
+				.findByCoinWithNetwork(coin.toUpperCase(), networkId.toLowerCase());
 
 			if (availableWallets.length === 0) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network }));
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: networkId }));
 			}
 		}
 
@@ -81,7 +89,9 @@ export const useSearchParametersValidation = () => {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
-			if (!allEnabledNetworks.some((network) => network.meta().nethash === nethash)) {
+			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
+
+			if (!network) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash }));
 			}
 
@@ -89,6 +99,16 @@ export const useSearchParametersValidation = () => {
 
 			if (availableWallets.length === 0) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash }));
+			}
+		}
+
+		if (recipient && network) {
+			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+			const isValid = await coin.address().validate(recipient);
+
+			if (!isValid) {
+				throw new Error("address/network mismatch");
 			}
 		}
 	};
