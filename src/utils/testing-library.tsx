@@ -357,6 +357,11 @@ const testNetworksStub: any = {
 				ticker: "DARK",
 			},
 			id: "ark.devnet",
+			meta: {
+				...DefaultManifest.meta,
+				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				version: 30,
+			},
 			name: "Devnet",
 			type: "test",
 		},
