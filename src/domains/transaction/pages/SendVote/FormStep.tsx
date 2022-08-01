@@ -5,11 +5,7 @@ import { useTranslation } from "react-i18next";
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import {
-	TransactionDetail,
-	TransactionNetwork,
-	TransactionSender,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
