@@ -12,6 +12,8 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
@@ -45,9 +47,26 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+			<FormField name="network" className="mt-8">
+				<FormLabel label={t("COMMON.CRYPTOASSET")} />
+				<SelectNetworkDropdown profile={profile} networks={[network]} selectedNetwork={network} isDisabled />
+			</FormField>
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} />
+			<FormField name="senderAddress" className="my-8">
+				<FormLabel label={t("TRANSACTION.SENDER")} />
+
+				<div data-testid="sender-address">
+					<SelectAddress
+						wallet={{
+							address: wallet.address(),
+							network: wallet.network(),
+						}}
+						wallets={profile.wallets().values()}
+						profile={profile}
+						disabled
+					/>
+				</div>
+			</FormField>
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
