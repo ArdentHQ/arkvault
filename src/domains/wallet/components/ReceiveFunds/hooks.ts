@@ -2,6 +2,7 @@ import { QRCode, URI } from "@ardenthq/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 
 import { shouldUseDarkColors } from "@/utils/theme";
+import { URLBuilder } from "@ardenthq/arkvault-url";
 
 interface QRCodeProperties {
 	nethash: string;
@@ -21,18 +22,12 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 	const maxLength = 255;
 
 	const formatQR = useCallback(({ amount, address, memo, coin, nethash, method = "transfer" }: QRCodeProperties) => {
-		const uri = new URI();
+		const urlBuilder = new URLBuilder(`${window.location.origin}/#/`);
 
-		const parameters = uri.serialize({
-			coin,
-			method,
-			nethash,
-			recipient: address,
-			...(amount && { amount }),
-			...(memo && { memo: memo?.slice(0, maxLength) }),
-		});
+		urlBuilder.setCoin(coin);
+		urlBuilder.setNethash(nethash);
 
-		return `${window.location.origin.toString()}/#/?${parameters}`;
+		return urlBuilder.generateTransfer(address, { memo: memo?.slice(0, maxLength), amount });
 	}, []);
 
 	useEffect(() => {
