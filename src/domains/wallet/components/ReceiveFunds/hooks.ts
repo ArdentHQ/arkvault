@@ -13,7 +13,7 @@ interface QRCodeProperties {
 	method?: string;
 }
 
-export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCodeProperties) => {
+export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
 	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
@@ -21,7 +21,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 
 	const maxLength = 255;
 
-	const formatQR = useCallback(({ amount, address, memo, coin, nethash, method = "transfer" }: QRCodeProperties) => {
+	const formatQR = useCallback(({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
 		const urlBuilder = new URLBuilder(`${window.location.origin}/#/`);
 
 		urlBuilder.setCoin(coin);
@@ -45,7 +45,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 			  };
 
 		const generateQRCode = async () => {
-			const uri = address ? formatQR({ address, amount, coin, memo, method, nethash }) : undefined;
+			const uri = address ? formatQR({ address, amount, coin, memo, nethash }) : undefined;
 
 			let image: string | undefined;
 
@@ -62,7 +62,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 		};
 
 		generateQRCode();
-	}, [amount, memo, nethash, address, formatQR, coin, method]);
+	}, [amount, memo, nethash, address, formatQR, coin]);
 
 	return data;
 };
