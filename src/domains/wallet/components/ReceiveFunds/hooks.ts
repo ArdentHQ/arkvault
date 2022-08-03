@@ -27,7 +27,10 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 		urlBuilder.setCoin(coin);
 		urlBuilder.setNethash(nethash);
 
-		return urlBuilder.generateTransfer(address, { memo: memo?.slice(0, maxLength), amount: Number(amount) });
+		return urlBuilder.generateTransfer(address, {
+			memo: memo?.slice(0, maxLength),
+			amount: +amount,
+		});
 	}, []);
 
 	useEffect(() => {
