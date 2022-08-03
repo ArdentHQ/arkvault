@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
@@ -8,7 +9,6 @@ import { useBreakpoint, useServerHealthStatus } from "@/app/hooks";
 import { Link } from "@/app/components/Link";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { Icon } from "@/app/components/Icon";
-import { useTranslation } from "react-i18next";
 
 const StatusDot = ({ status }: { status: ServerHealthStatus }) => {
 	const dotColorClass = () => {
