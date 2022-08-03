@@ -1,8 +1,8 @@
-import { QRCode, URI } from "@ardenthq/sdk-helpers";
+import { QRCode } from "@ardenthq/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 
-import { shouldUseDarkColors } from "@/utils/theme";
 import { URLBuilder } from "@ardenthq/arkvault-url";
+import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {
 	nethash: string;
@@ -28,8 +28,8 @@ export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProper
 		urlBuilder.setNethash(nethash);
 
 		return urlBuilder.generateTransfer(address, {
-			memo: memo?.slice(0, maxLength),
 			amount: +amount,
+			memo: memo?.slice(0, maxLength),
 		});
 	}, []);
 
