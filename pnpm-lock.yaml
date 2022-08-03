@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@ardenthq/arkvault-url': ^1.1.0
+  '@ardenthq/arkvault-url': ^1.1.1
   '@ardenthq/sdk': ^1.2.0
   '@ardenthq/sdk-ark': ^1.2.0
   '@ardenthq/sdk-cryptography': ^1.2.0
@@ -130,7 +130,7 @@ specifiers:
   yup: ^0.32.9
 
 dependencies:
-  '@ardenthq/arkvault-url': 1.1.0
+  '@ardenthq/arkvault-url': 1.1.1
   '@ardenthq/sdk': 1.2.0
   '@ardenthq/sdk-ark': 1.2.0
   '@ardenthq/sdk-cryptography': 1.2.0
@@ -280,8 +280,8 @@ packages:
       leven: 3.1.0
     dev: true
 
-  /@ardenthq/arkvault-url/1.1.0:
-    resolution: {integrity: sha512-R+fHmna9+y6fGlHkqXSVvUVoq74khebtQfYY+Q999NThSARj+Wxc72Z92Wh/7ceYGKCga11tmENPEPuNcTO2SA==}
+  /@ardenthq/arkvault-url/1.1.1:
+    resolution: {integrity: sha512-MwLSrbpXxUlQFMd7Dqyb7jwHXywxDs22vJB44y1dNVLa96YRBwFBwiOyfXarBTcuOG7u/3yjuSOuvNBu6w7w7w==}
     engines: {node: '>=14.16'}
     requiresBuild: true
     dev: false

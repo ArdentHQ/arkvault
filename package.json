@@ -41,7 +41,7 @@
 		"sdk:check-updates": "npx npm-check-updates \"/^@ardenthq.*$/\" -u"
 	},
 	"dependencies": {
-		"@ardenthq/arkvault-url": "^1.1.0",
+		"@ardenthq/arkvault-url": "^1.1.1",
 		"@ardenthq/sdk": "^1.2.0",
 		"@ardenthq/sdk-ark": "^1.2.0",
 		"@ardenthq/sdk-cryptography": "^1.2.0",
