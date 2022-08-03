@@ -44,6 +44,7 @@ export const translations = {
 
 	MODAL_RECEIVE_FUNDS: {
 		DESCRIPTION: "Specify and confirm the amount to request.",
+		DOWNLOAD_QR_CODE: "Download QR-Code",
 		SPECIFY_AMOUNT: "Specify Amount",
 		TITLE: "Receive Funds",
 		WARNING:

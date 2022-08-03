@@ -2,11 +2,13 @@
 import { Networks } from "@ardenthq/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-
 import { ReceiveFunds } from "./ReceiveFunds";
+import { toasts } from "@/app/services";
+
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
 
 let network: Networks.Network;
+const downloadQrButton = "ReceiveFunds__download-qr";
 
 describe("ReceiveFunds", () => {
 	beforeEach(() => {
@@ -71,5 +73,43 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
+	});
+
+	it("should do nothing after qr download if user closes file dialog", async () => {
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
+	});
+
+	it("should not call success toast after qr download for legacy browsers", async () => {
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		jest.spyOn(global, "fetch").mockImplementation(() =>
+			Promise.resolve({
+				blob: () => Promise.resolve(new Blob()),
+				json: () => Promise.resolve({ test: "Test" }),
+				text: () => Promise.resolve("text"),
+			}),
+		);
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
+	});
+
+	it("should handle qr image download", async () => {
+		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		Object.defineProperty(window, "showSaveFilePicker", jest.fn());
+		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
+
+		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
+
+		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
 	});
 });
