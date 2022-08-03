@@ -6,11 +6,9 @@ import { generatePath } from "react-router";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
-import { lowerCaseEquals } from "@/utils/equals";
 import { ProfilePaths } from "@/router/paths";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
-import { assertProfile } from "@/utils/assertions";
-import { profileAllEnabledNetworks } from "@/utils/network-utils";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 
 export const useDeeplink = () => {
 	const { env } = useEnvironmentContext();
@@ -22,6 +20,7 @@ export const useDeeplink = () => {
 	const history = useHistory();
 	const location = useLocation();
 	const queryParameters = useQueryParameters();
+	const { validateSearchParameters } = useSearchParametersValidation();
 	const [deepLink, setDeepLink] = useState<URLSearchParams | undefined>();
 
 	const navigate = useCallback((url: string, deeplinkSchema?: any) => history.push(url, deeplinkSchema), [history]);
@@ -39,74 +38,8 @@ export const useDeeplink = () => {
 		setProfile(env.profiles().findById(match.params.profileId));
 	}, [env, history.location.pathname, t]);
 
-	const validateParameters = useCallback(
-		(URLParameters: URLSearchParams) => {
-			assertProfile(profile);
-
-			const allEnabledNetworks = profileAllEnabledNetworks(profile);
-
-			/* istanbul ignore next */
-			if (
-				URLParameters.has("coin") &&
-				!allEnabledNetworks.some((network) => lowerCaseEquals(network.coin(), URLParameters.get("coin")!))
-			) {
-				throw new Error(`Coin "${URLParameters.get("coin")}" not supported.`);
-			}
-
-			/* istanbul ignore next */
-			if (URLParameters.has("network")) {
-				if (!["ark.devnet", "ark.mainnet"].includes(URLParameters.get("network")!)) {
-					throw new Error(`Network "${URLParameters.get("network")}" is invalid.`);
-				}
-
-				if (
-					!allEnabledNetworks.some((network) => lowerCaseEquals(network.id(), URLParameters.get("network")!))
-				) {
-					throw new Error(`Network "${URLParameters.get("network")}" is not enabled.`);
-				}
-
-				const availableWallets = profile
-					.wallets()
-					.findByCoinWithNetwork(
-						URLParameters.get("coin")!.toUpperCase(),
-						URLParameters.get("network")!.toLowerCase(),
-					);
-
-				if (availableWallets.length === 0) {
-					throw new Error(
-						`The current profile has no wallets available for the "${URLParameters.get(
-							"network",
-						)}" network`,
-					);
-				}
-			}
-
-			/* istanbul ignore next */
-			if (URLParameters.has("nethash")) {
-				if (!allEnabledNetworks.some((network) => network.meta().nethash === URLParameters.get("nethash")!)) {
-					throw new Error(
-						`Network with nethash "${URLParameters.get("nethash")}" is not enabled or available.`,
-					);
-				}
-
-				const availableWallets = profile
-					.wallets()
-					.findByCoinWithNethash(URLParameters.get("coin")!.toUpperCase(), URLParameters.get("nethash")!);
-
-				if (availableWallets.length === 0) {
-					throw new Error(
-						`The current profile has no wallets available for the network with nethash "${URLParameters.get(
-							"nethash",
-						)}"`,
-					);
-				}
-			}
-		},
-		[profile],
-	);
-
 	const handleDeepLink = useCallback(
-		(URLParameters: URLSearchParams) => {
+		async (searchParameters: URLSearchParams) => {
 			if (!profile) {
 				return verifyProfile();
 			}
@@ -116,14 +49,13 @@ export const useDeeplink = () => {
 			}
 
 			try {
-				validateParameters(URLParameters);
+				await validateSearchParameters(profile, searchParameters);
 
-				if (URLParameters.has("method") && URLParameters.get("method") === "transfer") {
+				/* istanbul ignore else */
+				if (searchParameters.get("method") === "transfer") {
 					const path = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
-					return navigate(`${path}?${URLParameters.toString()}`);
+					return navigate(`${path}?${searchParameters.toString()}`);
 				}
-
-				return navigate(ProfilePaths.Welcome);
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {
@@ -131,7 +63,7 @@ export const useDeeplink = () => {
 				setProfile(undefined);
 			}
 		},
-		[profile, isProfileRestored, verifyProfile, validateParameters, navigate],
+		[profile, isProfileRestored, verifyProfile, navigate],
 	);
 
 	const onLocationChange = useCallback(() => {
