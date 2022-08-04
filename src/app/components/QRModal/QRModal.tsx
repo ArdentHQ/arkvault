@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { Image } from "@/app/components/Image";
@@ -19,6 +19,8 @@ interface QRModalProperties {
 	onCancel: () => void;
 	onRead: (text: string) => void;
 }
+
+const ERROR_THRESHOLD = 5;
 
 const AccessDeniedErrors = [
 	"Permission denied", // Chrome
@@ -64,6 +66,8 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 	const [error, setError] = useState<QRError | undefined>(undefined);
 	const [ready, setReady] = useState(false);
 
+	const errorCounter = useRef(0);
+
 	const { t } = useTranslation();
 
 	const handleError = (qrError: Error) => {
@@ -87,7 +91,13 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 
 		/* istanbul ignore else */
 		if (qrError.message) {
-			toasts.error(t("TRANSACTION.MODAL_QR_CODE.ERROR"));
+			errorCounter.current++;
+
+			if (errorCounter.current >= ERROR_THRESHOLD) {
+				resetErrorCounter();
+
+				toasts.error(t("TRANSACTION.MODAL_QR_CODE.ERROR"));
+			}
 		}
 	};
 
@@ -102,11 +112,15 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 		onRead?.(qrCodeString);
 	};
 
+	const resetErrorCounter = () => errorCounter.current = 0;
+
 	useEffect(() => {
 		/* istanbul ignore next */
 		if (!isOpen) {
 			setError(undefined);
 			setReady(false);
+
+			resetErrorCounter;
 		}
 	}, [isOpen]);
 
