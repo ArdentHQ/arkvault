@@ -112,7 +112,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 		onRead?.(qrCodeString);
 	};
 
-	const resetErrorCounter = () => errorCounter.current = 0;
+	const resetErrorCounter = () => (errorCounter.current = 0);
 
 	useEffect(() => {
 		/* istanbul ignore next */
