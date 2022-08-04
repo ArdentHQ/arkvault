@@ -574,7 +574,7 @@ exports[`CreateWallet should create a wallet 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -1307,7 +1307,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1bx0hyc"
@@ -1905,7 +1905,7 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -2641,7 +2641,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1bx0hyc"
@@ -3241,7 +3241,7 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -3849,7 +3849,7 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -4488,7 +4488,7 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                   </section>
                 </div>
                 <div
-                  class="css-1kzb86y"
+                  class="css-2wyvkd"
                 >
                   <button
                     class="css-1yqe28v"

@@ -545,7 +545,7 @@ exports[`Registration should register second signature 1`] = `
                 </div>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1125,7 +1125,7 @@ exports[`Registration should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <div
                       class="mr-auto"
@@ -1804,7 +1804,7 @@ exports[`Registration should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
