@@ -14,7 +14,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
+import { useActiveNetwork, useActiveProfile, useProfileJobs, useValidation } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -41,7 +41,13 @@ export const SendVote = () => {
 	const activeProfile = useActiveProfile();
 	assertProfile(activeProfile);
 
-	const activeWallet = useActiveWallet();
+	const activeNetwork = useActiveNetwork(activeProfile);
+	console.log({ activeNetwork });
+
+	const { syncProfileWallets } = useProfileJobs(activeProfile);
+
+	const [activeWallet, setActiveWallet] = useState(activeProfile.wallets().last());
+	console.log({ activeWallet });
 
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 
@@ -54,6 +60,7 @@ export const SendVote = () => {
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const form = useForm({ mode: "onChange" });
+	const { senderAddress } = form.watch();
 
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
@@ -113,6 +120,27 @@ export const SendVote = () => {
 			setVotes(votesList);
 		}
 	}, [activeWallet, env, voteDelegates, votes]);
+
+	useEffect(() => {
+		if (!activeNetwork) {
+			return;
+		}
+
+		const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
+
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!newSenderWallet) {
+			return;
+		}
+
+		if (!isFullyRestoredAndSynced) {
+			syncProfileWallets(true);
+		}
+
+		setActiveWallet(newSenderWallet);
+	}, [senderAddress, syncProfileWallets]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";

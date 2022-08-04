@@ -123,6 +123,11 @@ export const useDeeplink = () => {
 					return navigate(`${path}?${URLParameters.toString()}`);
 				}
 
+				if (URLParameters.has("method") && URLParameters.get("method") === "vote") {
+					const path = generatePath(ProfilePaths.SendVote, { profileId: profile.id() });
+					return navigate(`${path}?${URLParameters.toString()}`);
+				}
+
 				return navigate(ProfilePaths.Welcome);
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);

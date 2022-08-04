@@ -10,6 +10,7 @@ import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
+import { useFormContext } from "react-hook-form";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
@@ -17,6 +18,7 @@ type FormStepProperties = {
 
 export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();
+	const { setValue } = useFormContext();
 
 	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
 
@@ -35,6 +37,10 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 		}),
 		[unvotes, votes],
 	);
+
+	const handleSelectSender = (address: any) => {
+		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+	};
 
 	return (
 		<section data-testid="SendVote__form-step">
@@ -57,9 +63,11 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 							address: wallet.address(),
 							network: wallet.network(),
 						}}
-						wallets={profile.wallets().values()}
+						wallets={profile.wallets().findByCoinWithNetwork(wallet.coinId(), wallet.networkId())}
 						profile={profile}
-						disabled
+						onChange={(address: string) => {
+							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
+						}}
 					/>
 				</div>
 			</FormField>
