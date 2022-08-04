@@ -64,6 +64,8 @@ describe("QRModal", () => {
 
 		scanImageMock.mockRestore();
 		browserAccessMock.mockRestore();
+
+		toastSpy.mockReset();
 	});
 
 	it("should handle read", async () => {
@@ -116,7 +118,12 @@ describe("QRModal", () => {
 			},
 		);
 
-		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		const { rerender } = render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.MODAL_QR_CODE.ERROR);
