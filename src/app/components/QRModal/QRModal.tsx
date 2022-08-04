@@ -7,6 +7,7 @@ import { QRCameraReader } from "@/app/components/QRCameraReader";
 import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
 import { FormButtons } from "@/app/components/Form";
+import { toasts } from "@/app/services";
 
 interface QRError {
 	title?: string;
@@ -79,18 +80,14 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 		}
 
 		if (qrError.message === "InvalidQR") {
-			setError({
-				message: t("TRANSACTION.MODAL_QR_CODE.INVALID_QR_CODE"),
-			});
+			toasts.error(t("TRANSACTION.MODAL_QR_CODE.INVALID_QR_CODE"));
 
 			return;
 		}
 
 		/* istanbul ignore else */
 		if (qrError.message) {
-			setError({
-				message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
-			});
+			toasts.error(t("TRANSACTION.MODAL_QR_CODE.ERROR"));
 		}
 	};
 
