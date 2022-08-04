@@ -121,6 +121,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 	wallets,
 	maxWidthReferences,
 	noBorder,
+	isSyncing,
 }) => {
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
@@ -138,7 +139,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		}
 
 		return [totalNetworkBalance, totalConvertedNetworkBalance];
-	}, [wallets]);
+	}, [wallets, isSyncing]);
 
 	const renderWallets = () => {
 		if (profileIsSyncing) {

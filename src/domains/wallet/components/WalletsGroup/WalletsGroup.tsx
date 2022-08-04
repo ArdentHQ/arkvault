@@ -7,6 +7,7 @@ import { WalletsGroupProperties } from "@/domains/wallet/components/WalletsGroup
 import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { WalletsList } from "@/domains/wallet/components/WalletsList";
 import { AccordionWrapper } from "@/app/components/Accordion";
+import { useConfiguration } from "@/app/contexts";
 
 const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 
@@ -15,6 +16,8 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 	const history = useHistory();
 	const profile = useActiveProfile();
 	const { isExpanded, handleHeaderClick } = useAccordion();
+
+	const { profileIsSyncingExchangeRates } = useConfiguration();
 
 	const goToCoinWallets = useCallback(() => {
 		history.push(`/profiles/${profile.id()}/network/${network.id()}`);
@@ -25,9 +28,10 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 			<WalletsGroupHeader
 				network={network}
 				wallets={wallets}
-				onClick={handleHeaderClick}
-				isExpanded={isExpanded}
 				maxWidthReferences={maxWidthReferences}
+				isExpanded={isExpanded}
+				isSyncing={profileIsSyncingExchangeRates}
+				onClick={handleHeaderClick}
 			/>
 
 			{isExpanded && (

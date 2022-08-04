@@ -22,6 +22,7 @@ export const WalletsGroupHeader: React.VFC<WalletsGroupHeaderProperties> = ({
 	isExpanded,
 	maxWidthReferences,
 	className,
+	isSyncing,
 }) => (
 	<AccordionHeader isExpanded={isExpanded} onClick={onClick} data-testid="WalletsGroupHeader" className={className}>
 		<GroupNetworkIcon network={network} isGroupExpanded={isExpanded} />
@@ -31,6 +32,7 @@ export const WalletsGroupHeader: React.VFC<WalletsGroupHeaderProperties> = ({
 			wallets={wallets}
 			maxWidthReferences={maxWidthReferences}
 			noBorder={!onClick}
+			isSyncing={isSyncing}
 		/>
 	</AccordionHeader>
 );

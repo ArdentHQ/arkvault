@@ -20,6 +20,7 @@ export interface WalletsGroupHeaderProperties {
 	maxWidthReferences?: MaxWidthReferences;
 	onClick?: (event: React.MouseEvent) => void;
 	className?: string;
+	isSyncing?: boolean;
 }
 
 export interface WalletsGroupHeaderSkeletonProperties {
@@ -48,6 +49,7 @@ export interface WalletsGroupNetworkTotalProperties {
 	wallets: Contracts.IReadWriteWallet[];
 	maxWidthReferences?: MaxWidthReferences;
 	noBorder?: boolean;
+	isSyncing?: boolean;
 }
 
 export interface WalletsGroupSkeletonProperties {
