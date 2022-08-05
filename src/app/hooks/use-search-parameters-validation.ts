@@ -105,6 +105,8 @@ export const useSearchParametersValidation = () => {
 		if (recipient) {
 			const coin: Coins.Coin = profile.coins().set(network!.coin(), network!.id());
 
+			await coin.__construct();
+
 			const isValid = await coin.address().validate(recipient);
 
 			if (!isValid) {
