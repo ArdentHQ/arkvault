@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
-import { Input, InputDefault, InputPassword } from "@/app/components/Input";
+import { Input, InputCounter, InputDefault, InputPassword } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 
 export const FormStep = ({
@@ -18,7 +18,8 @@ export const FormStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { authentication } = useValidation();
+	const { authentication, signMessage } = useValidation();
+	const maxLength = signMessage.message().maxLength?.value;
 
 	const { register, setValue } = useFormContext();
 
@@ -58,12 +59,8 @@ export const FormStep = ({
 
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
-				<InputDefault
-					ref={register({
-						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-							field: t("COMMON.MESSAGE"),
-						}).toString(),
-					})}
+				<InputCounter
+					ref={register(signMessage.message())}
 					onChange={(event: ChangeEvent<HTMLInputElement>) =>
 						setValue("message", event.target.value, {
 							shouldDirty: true,
@@ -72,6 +69,7 @@ export const FormStep = ({
 					}
 					data-testid="SignMessage__message-input"
 					readOnly={disableMessageInput}
+					maxLengthLabel={maxLength.toString()}
 				/>
 			</FormField>
 
