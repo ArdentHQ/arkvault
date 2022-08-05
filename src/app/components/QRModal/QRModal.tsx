@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Alert } from "@/app/components/Alert";
 import { Image } from "@/app/components/Image";
@@ -7,6 +7,7 @@ import { QRCameraReader } from "@/app/components/QRCameraReader";
 import { Spinner } from "@/app/components/Spinner";
 import { QRFileUpload } from "@/app/components/QRFileUpload";
 import { FormButtons } from "@/app/components/Form";
+import { toasts } from "@/app/services";
 
 interface QRError {
 	title?: string;
@@ -18,6 +19,8 @@ interface QRModalProperties {
 	onCancel: () => void;
 	onRead: (text: string) => void;
 }
+
+const ERROR_THRESHOLD = 5;
 
 const AccessDeniedErrors = [
 	"Permission denied", // Chrome
@@ -63,6 +66,8 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 	const [error, setError] = useState<QRError | undefined>(undefined);
 	const [ready, setReady] = useState(false);
 
+	const errorCounter = useRef(0);
+
 	const { t } = useTranslation();
 
 	const handleError = (qrError: Error) => {
@@ -79,18 +84,20 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 		}
 
 		if (qrError.message === "InvalidQR") {
-			setError({
-				message: t("TRANSACTION.MODAL_QR_CODE.INVALID_QR_CODE"),
-			});
+			toasts.error(t("TRANSACTION.MODAL_QR_CODE.INVALID_QR_CODE"));
 
 			return;
 		}
 
 		/* istanbul ignore else */
 		if (qrError.message) {
-			setError({
-				message: t("TRANSACTION.MODAL_QR_CODE.ERROR"),
-			});
+			errorCounter.current++;
+
+			if (errorCounter.current >= ERROR_THRESHOLD) {
+				resetErrorCounter();
+
+				toasts.error(t("TRANSACTION.MODAL_QR_CODE.ERROR"));
+			}
 		}
 	};
 
@@ -105,11 +112,15 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 		onRead?.(qrCodeString);
 	};
 
+	const resetErrorCounter = () => (errorCounter.current = 0);
+
 	useEffect(() => {
 		/* istanbul ignore next */
 		if (!isOpen) {
 			setError(undefined);
 			setReady(false);
+
+			resetErrorCounter;
 		}
 	}, [isOpen]);
 

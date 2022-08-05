@@ -5,6 +5,7 @@ import * as browserAccess from "browser-fs-access";
 
 import QRScanner from "qr-scanner";
 import { QRModal } from "./QRModal";
+import { toasts } from "@/app/services";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
@@ -46,6 +47,8 @@ describe("QRModal", () => {
 	});
 
 	it("should render invalid qr error from file upload", async () => {
+		const toastSpy = jest.spyOn(toasts, "error");
+
 		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 		reactQrReaderMock.QrReader.mockImplementation(() => null);
 		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockImplementation(() => {
@@ -55,12 +58,14 @@ describe("QRModal", () => {
 		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
-		await expect(
-			screen.findByText(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE),
-		).resolves.toBeInTheDocument();
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE);
+		});
 
 		scanImageMock.mockRestore();
 		browserAccessMock.mockRestore();
+
+		toastSpy.mockReset();
 	});
 
 	it("should handle read", async () => {
@@ -101,6 +106,8 @@ describe("QRModal", () => {
 	});
 
 	it("should render other error", async () => {
+		const toastSpy = jest.spyOn(toasts, "error");
+
 		reactQrReaderMock.QrReader.mockImplementation(
 			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
 				if (onResult) {
@@ -111,12 +118,15 @@ describe("QRModal", () => {
 			},
 		);
 
-		render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		const { rerender } = render(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
+		rerender(<QRModal isOpen={true} onCancel={jest.fn()} onRead={jest.fn()} />);
 
 		await waitFor(() => {
-			expect(screen.getByText("error-small.svg")).toBeInTheDocument();
+			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.MODAL_QR_CODE.ERROR);
 		});
-
-		expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.ERROR)).toBeInTheDocument();
 	});
 });
