@@ -1,8 +1,5 @@
 export const signMessage = (t: any) => ({
 	message: () => ({
-    required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("COMMON.MESSAGE"),
-		}),
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("COMMON.MESSAGE"),
@@ -10,5 +7,8 @@ export const signMessage = (t: any) => ({
 			}),
 			value: 600,
 		},
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.MESSAGE"),
+		}),
 	}),
 });
