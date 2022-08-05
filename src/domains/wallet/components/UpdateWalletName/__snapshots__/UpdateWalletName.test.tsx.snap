@@ -90,7 +90,7 @@ exports[`UpdateWalletName should render 1`] = `
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -234,7 +234,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -378,7 +378,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -522,7 +522,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -666,7 +666,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -810,7 +810,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -954,7 +954,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                 </div>
               </fieldset>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"

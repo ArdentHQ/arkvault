@@ -3,7 +3,7 @@
 exports[`StepNavigation should disable buttons if loading 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1yqe28v"
@@ -62,7 +62,7 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
 exports[`StepNavigation should not render back button if on last step 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -82,7 +82,7 @@ exports[`StepNavigation should not render back button if on last step 1`] = `
 exports[`StepNavigation should not render back to wallet button if not on last step 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -124,7 +124,7 @@ exports[`StepNavigation should not render back to wallet button if not on last s
 exports[`StepNavigation should not render continue button if on last two steps 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -166,7 +166,7 @@ exports[`StepNavigation should not render continue button if on last two steps 1
 exports[`StepNavigation should not render continue button if on last two steps 2`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -186,7 +186,7 @@ exports[`StepNavigation should not render continue button if on last two steps 2
 exports[`StepNavigation should render back button if not on last step 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -228,7 +228,7 @@ exports[`StepNavigation should render back button if not on last step 1`] = `
 exports[`StepNavigation should render back to wallet button if on last step 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"
@@ -248,7 +248,7 @@ exports[`StepNavigation should render back to wallet button if on last step 1`] 
 exports[`StepNavigation should render continue button if not on last two steps 1`] = `
 <DocumentFragment>
   <div
-    class="css-1kzb86y"
+    class="css-2wyvkd"
   >
     <button
       class="css-1jhy6v9"

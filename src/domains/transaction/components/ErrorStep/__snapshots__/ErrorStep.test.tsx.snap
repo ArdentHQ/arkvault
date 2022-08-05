@@ -82,7 +82,7 @@ exports[`ErrorStep should display error details 1`] = `
       </div>
     </div>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <div
         class="mr-auto"
@@ -203,7 +203,7 @@ exports[`ErrorStep should emit onBack 1`] = `
       </div>
     </div>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <div
         class="mr-auto"
@@ -339,7 +339,7 @@ exports[`ErrorStep should emit onRepeat 1`] = `
       </div>
     </div>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <div
         class="mr-auto"
@@ -475,7 +475,7 @@ exports[`ErrorStep should render with custom title 1`] = `
       </div>
     </div>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <div
         class="mr-auto"
@@ -596,7 +596,7 @@ exports[`ErrorStep should render with default texts 1`] = `
       </div>
     </div>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <div
         class="mr-auto"
