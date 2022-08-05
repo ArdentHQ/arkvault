@@ -831,7 +831,7 @@ exports[`SendVote should send a unvote transaction 1`] = `
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1679,7 +1679,7 @@ exports[`SendVote should send a vote transaction with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -2527,7 +2527,7 @@ exports[`SendVote should send a vote transaction without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3104,7 +3104,7 @@ exports[`SendVote should show error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3690,7 +3690,7 @@ exports[`SendVote should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <div
                       class="mr-auto"
