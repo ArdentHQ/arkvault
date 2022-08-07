@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Networks, Services } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -14,7 +14,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveNetwork, useActiveProfile, useProfileJobs, useValidation } from "@/app/hooks";
+import { useActiveProfile, useProfileJobs, useValidation, useQueryParameters } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -33,6 +33,32 @@ enum Step {
 	ErrorStep,
 }
 
+const useWalletFromURL = (profile: Contracts.IProfile): Contracts.IReadWriteWallet | undefined => {
+	const params = useQueryParameters();
+	const walletId = params.get("walletId");
+
+	if (!walletId) {
+		return;
+	}
+
+	return useMemo(() => profile.wallets().findById(walletId), [profile, params]);
+};
+
+const useNetworkFromURL = (profile: Contracts.IProfile): Networks.Network => {
+	const params = useQueryParameters();
+
+	const network = useMemo(
+		() => profile.availableNetworks().find((network) => network.meta().nethash === params.get("nethash")),
+		[profile, params],
+	);
+
+	if (!network) {
+		throw new Error("Nethash is missing from url");
+	}
+
+	return network;
+};
+
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
 	const history = useHistory();
@@ -41,12 +67,13 @@ export const SendVote = () => {
 	const activeProfile = useActiveProfile();
 	assertProfile(activeProfile);
 
-	const activeNetwork = useActiveNetwork(activeProfile);
+	const activeNetwork = useNetworkFromURL(activeProfile);
 	console.log({ activeNetwork });
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
-	const [activeWallet, setActiveWallet] = useState(activeProfile.wallets().last());
+	const wallet = useWalletFromURL(activeProfile);
+	const [activeWallet, setActiveWallet] = useState(wallet);
 	console.log({ activeWallet });
 
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
@@ -76,15 +103,15 @@ export const SendVote = () => {
 		register("network", sendVote.network());
 		register("senderAddress", sendVote.senderAddress());
 		register("fees");
-		register("fee", common.fee(activeWallet.balance(), activeWallet.network(), fees));
+		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
 		register("inputFeeSettings");
 
-		setValue("senderAddress", activeWallet.address(), { shouldDirty: true, shouldValidate: true });
+		setValue("senderAddress", activeWallet?.address(), { shouldDirty: true, shouldValidate: true });
 
 		register("suppressWarning");
 
 		for (const network of networks) {
-			if (network.coin() === activeWallet.coinId() && network.id() === activeWallet.networkId()) {
+			if (network.coin() === activeWallet?.coinId() && network.id() === activeWallet.networkId()) {
 				setValue("network", network, { shouldDirty: true, shouldValidate: true });
 
 				break;
@@ -99,9 +126,7 @@ export const SendVote = () => {
 		if (unvoteDelegates.length > 0 && unvotes.length === 0) {
 			const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
 				amount: unvote.amount,
-				wallet: env
-					.delegates()
-					.findByAddress(activeWallet.coinId(), activeWallet.networkId(), unvote.delegateAddress),
+				wallet: env.delegates().findByAddress(activeNetwork.coin(), activeNetwork.id(), unvote.delegateAddress),
 			}));
 
 			setUnvotes(unvotesList);
@@ -112,9 +137,7 @@ export const SendVote = () => {
 		if (voteDelegates.length > 0 && votes.length === 0) {
 			const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
 				amount: vote.amount,
-				wallet: env
-					.delegates()
-					.findByAddress(activeWallet.coinId(), activeWallet.networkId(), vote.delegateAddress),
+				wallet: env.delegates().findByAddress(activeNetwork.coin(), activeNetwork.id(), vote.delegateAddress),
 			}));
 
 			setVotes(votesList);
@@ -163,8 +186,9 @@ export const SendVote = () => {
 
 			appendParameters(parameters, "vote", voteDelegates);
 
+			//	TODO: redirect to general votes page if wallet is not defined.
 			return history.push({
-				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`,
+				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`,
 				search: `?${parameters}`,
 			});
 		}
@@ -202,6 +226,11 @@ export const SendVote = () => {
 		new Promise((resolve) => {
 			const interval = setInterval(async () => {
 				let isConfirmed = false;
+
+				//TODO: Handle nullable wallet.
+				if (!activeWallet) {
+					throw new Error("Wallet is not selected");
+				}
 
 				await activeWallet.synchroniser().votes();
 				const walletVotes = activeWallet.voting().current();
@@ -249,6 +278,11 @@ export const SendVote = () => {
 			secondSecret,
 		} = getValues();
 		const abortSignal = abortReference.current?.signal;
+
+		//TODO: Handle nullable wallet.
+		if (!activeWallet) {
+			throw new Error("Active wallet is not defined");
+		}
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
@@ -406,9 +440,11 @@ export const SendVote = () => {
 	};
 
 	const hideStepNavigation =
-		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet.isLedger());
+		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet?.isLedger());
 
 	const isNextDisabled = isDirty ? !isValid : true;
+
+	console.log({ activeWallet });
 
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
@@ -422,37 +458,55 @@ export const SendVote = () => {
 									unvotes={unvotes}
 									votes={votes}
 									wallet={activeWallet}
+									network={activeNetwork}
 								/>
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep unvotes={unvotes} votes={votes} wallet={activeWallet} />
+								{activeWallet && (
+									<ReviewStep
+										network={activeWallet.network()}
+										unvotes={unvotes}
+										votes={votes}
+										wallet={activeWallet}
+									/>
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
-								<AuthenticationStep
-									wallet={activeWallet}
-									ledgerDetails={
-										<VoteLedgerReview wallet={activeWallet} votes={votes} unvotes={unvotes} />
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-								/>
+								{activeWallet && (
+									<AuthenticationStep
+										wallet={activeWallet}
+										ledgerDetails={
+											<VoteLedgerReview
+												wallet={activeWallet}
+												votes={votes}
+												unvotes={unvotes}
+												network={activeWallet.network()}
+											/>
+										}
+										ledgerIsAwaitingDevice={!hasDeviceAvailable}
+										ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+									/>
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<SummaryStep
-									wallet={activeWallet}
-									transaction={transaction}
-									unvotes={unvotes}
-									votes={votes}
-								/>
+								{activeWallet && (
+									<SummaryStep
+										wallet={activeWallet}
+										transaction={transaction}
+										unvotes={unvotes}
+										votes={votes}
+										network={activeWallet.network()}
+									/>
+								)}
 							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
 									onBack={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
 									isRepeatDisabled={isSubmitting}
 									onRepeat={handleSubmit(submitForm)}
@@ -464,7 +518,7 @@ export const SendVote = () => {
 								<StepNavigation
 									onBackClick={handleBack}
 									onBackToWalletClick={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
+										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
 									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}

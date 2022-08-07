@@ -16,13 +16,12 @@ type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
 } & SendVoteStepProperties;
 
-export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepProperties) => {
+	console.log({ votes, unvotes });
 	const { t } = useTranslation();
 	const { setValue } = useFormContext();
 
-	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
-
-	const network = useMemo(() => wallet.network(), [wallet]);
+	const showFeeInput = useMemo(() => wallet?.network().chargesZeroFees() === false, [wallet]);
 
 	const feeTransactionData = useMemo(
 		() => ({
@@ -35,12 +34,8 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 				id: vote.wallet?.governanceIdentifier(),
 			})),
 		}),
-		[unvotes, votes],
+		[unvotes, votes, wallet],
 	);
-
-	const handleSelectSender = (address: any) => {
-		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-	};
 
 	return (
 		<section data-testid="SendVote__form-step">
@@ -59,28 +54,32 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 
 				<div data-testid="sender-address">
 					<SelectAddress
-						wallet={{
-							address: wallet.address(),
-							network: wallet.network(),
-						}}
-						wallets={profile.wallets().findByCoinWithNetwork(wallet.coinId(), wallet.networkId())}
+						wallet={
+							wallet
+								? {
+										address: wallet.address(),
+										network: wallet.network(),
+								  }
+								: undefined
+						}
+						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
 						profile={profile}
-						onChange={(address: string) => {
-							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
-						}}
+						onChange={(address: string) =>
+							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
+						}
 					/>
 				</div>
 			</FormField>
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
-					<VoteList votes={unvotes} currency={wallet.currency()} isNegativeAmount />
+					<VoteList votes={unvotes} currency={wallet?.currency() as string} isNegativeAmount />
 				</TransactionDetail>
 			)}
 
 			{votes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}>
-					<VoteList votes={votes} currency={wallet.currency()} />
+					<VoteList votes={votes} currency={wallet?.currency() as string} />
 				</TransactionDetail>
 			)}
 
