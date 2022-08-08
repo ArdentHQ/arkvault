@@ -407,6 +407,7 @@ export const translations = {
 		NETWORK_INVALID: "network parameter is invalid.",
 		NETWORK_MISMATCH: "data belongs to another network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
+		NETHASH_MISSING: "nethash parameter is missing.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

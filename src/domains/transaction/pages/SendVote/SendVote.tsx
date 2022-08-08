@@ -48,6 +48,7 @@ const useWalletFromURL = (profile: Contracts.IProfile): Contracts.IReadWriteWall
 
 const useNetworkFromURL = (profile: Contracts.IProfile): Networks.Network => {
 	const params = useQueryParameters();
+	const { t } = useTranslation();
 
 	const network = useMemo(
 		() => profile.availableNetworks().find((network) => network.meta().nethash === params.get("nethash")),
@@ -55,7 +56,7 @@ const useNetworkFromURL = (profile: Contracts.IProfile): Networks.Network => {
 	);
 
 	if (!network) {
-		throw new Error("Nethash is missing from url");
+		throw new Error(t("TRANSACTION.VALIDATION.NETHASH_MISSING"));
 	}
 
 	return network;
@@ -222,18 +223,13 @@ export const SendVote = () => {
 		setActiveTab(newIndex);
 	};
 
-	const confirmSendVote = (type: "unvote" | "vote" | "combined") =>
+	const confirmSendVote = (wallet: Contracts.IReadWriteWallet, type: "unvote" | "vote" | "combined") =>
 		new Promise((resolve) => {
 			const interval = setInterval(async () => {
 				let isConfirmed = false;
 
-				//TODO: Handle nullable wallet.
-				if (!activeWallet) {
-					throw new Error("Wallet is not selected");
-				}
-
-				await activeWallet.synchroniser().votes();
-				const walletVotes = activeWallet.voting().current();
+				await wallet.synchroniser().votes();
+				const walletVotes = wallet.voting().current();
 
 				if (type === "vote") {
 					isConfirmed = walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
@@ -337,7 +333,7 @@ export const SendVote = () => {
 
 					setActiveTab(Step.SummaryStep);
 
-					await confirmSendVote("combined");
+					await confirmSendVote(activeWallet, "combined");
 				}
 
 				if (senderWallet.network().votingMethod() === "split") {
@@ -364,7 +360,7 @@ export const SendVote = () => {
 
 					await persist();
 
-					await confirmSendVote("unvote");
+					await confirmSendVote(activeWallet, "unvote");
 
 					const voteResult = await transactionBuilder.build(
 						"vote",
@@ -393,7 +389,7 @@ export const SendVote = () => {
 
 					setActiveTab(Step.SummaryStep);
 
-					await confirmSendVote("vote");
+					await confirmSendVote(activeWallet, "vote");
 				}
 			} else {
 				const isUnvote = unvotes.length > 0;
@@ -431,7 +427,7 @@ export const SendVote = () => {
 
 				setActiveTab(Step.SummaryStep);
 
-				await confirmSendVote(isUnvote ? "unvote" : "vote");
+				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
 			}
 		} catch (error) {
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
