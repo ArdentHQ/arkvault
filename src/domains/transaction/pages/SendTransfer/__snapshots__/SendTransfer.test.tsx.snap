@@ -141,7 +141,16 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -760,7 +769,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                 </section>
               </div>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1015,7 +1024,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                         </div>
                       </div>
                       <div
-                        class="css-1d6x3tk"
+                        class="css-1tkbsa1"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -1272,7 +1281,16 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1598,7 +1616,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -1863,7 +1881,16 @@ exports[`SendTransfer should render form and use location state with nethash par
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -2840,7 +2867,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -3094,7 +3121,16 @@ exports[`SendTransfer should render form and use location state with network par
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -4071,7 +4107,7 @@ exports[`SendTransfer should render form and use location state with network par
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -4325,7 +4361,16 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -5271,7 +5316,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -9816,7 +9861,16 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -10175,7 +10229,7 @@ exports[`SendTransfer should render network selection without selected wallet 1`
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -12108,7 +12162,16 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -12727,7 +12790,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -12891,7 +12954,16 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -13510,7 +13582,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                 </section>
               </div>
               <div
-                class="css-1d6x3tk"
+                class="css-1tkbsa1"
               >
                 <button
                   class="css-1jhy6v9"
@@ -13839,7 +13911,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                         </div>
                       </div>
                       <div
-                        class="css-1d6x3tk"
+                        class="css-1tkbsa1"
                       >
                         <button
                           class="css-1jhy6v9"
@@ -14096,7 +14168,16 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -14715,7 +14796,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -14957,7 +15038,16 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -15576,7 +15666,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -15818,7 +15908,16 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -16437,7 +16536,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-1kzb86y"
+                class="css-2wyvkd"
               >
                 <button
                   class="css-1jhy6v9"
@@ -16679,7 +16778,16 @@ exports[`SendTransfer should show error step and go back 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -16991,7 +17099,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <div
                       class="mr-auto"

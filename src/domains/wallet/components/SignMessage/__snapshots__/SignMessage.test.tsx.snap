@@ -128,7 +128,7 @@ exports[`SignMessage should render 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class="css-1psxlcd"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -141,6 +141,21 @@ exports[`SignMessage should render 1`] = `
                             type="text"
                             value=""
                           />
+                        </div>
+                        <div
+                          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
+                        >
+                          <div
+                            class=""
+                          >
+                            <span
+                              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="InputCounter__counter"
+                            >
+                              0/600
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </fieldset>
@@ -199,7 +214,7 @@ exports[`SignMessage should render 1`] = `
                   </section>
                 </div>
                 <div
-                  class="css-1d6x3tk"
+                  class="css-1tkbsa1"
                 >
                   <button
                     class="css-1jhy6v9"
@@ -363,7 +378,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1psxlcd"
+                        class="css-1psxlcd"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -377,12 +392,27 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                             value=""
                           />
                         </div>
+                        <div
+                          class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
+                        >
+                          <div
+                            class=""
+                          >
+                            <span
+                              class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                              data-testid="InputCounter__counter"
+                            >
+                              0/600
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </fieldset>
                   </section>
                 </div>
                 <div
-                  class="css-1d6x3tk"
+                  class="css-1tkbsa1"
                 >
                   <button
                     class="css-1jhy6v9"

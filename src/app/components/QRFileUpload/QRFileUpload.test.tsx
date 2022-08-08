@@ -22,7 +22,7 @@ describe("QRFileUpload", () => {
 
 		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
-		render(<QRFileUpload onRead={onRead} />);
+		render(<QRFileUpload onError={jest.fn()} onRead={onRead} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
@@ -37,7 +37,7 @@ describe("QRFileUpload", () => {
 
 		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
-		render(<QRFileUpload onRead={onRead} />);
+		render(<QRFileUpload onError={jest.fn()} onRead={onRead} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).not.toHaveBeenCalled());
@@ -77,7 +77,7 @@ describe("QRFileUpload", () => {
 			throw new Error(errorMessage);
 		});
 
-		render(<QRFileUpload onError={onError} />);
+		render(<QRFileUpload onError={onError} onRead={jest.fn()} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onError).toHaveBeenCalledWith(new Error(errorMessage)));
