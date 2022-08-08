@@ -14,10 +14,10 @@ import { useFormContext } from "react-hook-form";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
-} & SendVoteStepProperties;
+	wallet?: ProfilesContracts.IReadWriteWallet;
+} & Omit<SendVoteStepProperties, "wallet">;
 
 export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepProperties) => {
-	console.log({ votes, unvotes });
 	const { t } = useTranslation();
 	const { setValue } = useFormContext();
 

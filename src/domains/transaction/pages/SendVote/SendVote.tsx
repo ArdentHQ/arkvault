@@ -37,11 +37,13 @@ const useWalletFromURL = (profile: Contracts.IProfile): Contracts.IReadWriteWall
 	const params = useQueryParameters();
 	const walletId = params.get("walletId");
 
-	if (!walletId) {
-		return;
-	}
+	return useMemo(() => {
+		if (!walletId) {
+			return;
+		}
 
-	return useMemo(() => profile.wallets().findById(walletId), [profile, params]);
+		return profile.wallets().findById(walletId);
+	}, [profile, params]);
 };
 
 const useNetworkFromURL = (profile: Contracts.IProfile): Networks.Network => {
@@ -68,13 +70,11 @@ export const SendVote = () => {
 	assertProfile(activeProfile);
 
 	const activeNetwork = useNetworkFromURL(activeProfile);
-	console.log({ activeNetwork });
 
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const wallet = useWalletFromURL(activeProfile);
 	const [activeWallet, setActiveWallet] = useState(wallet);
-	console.log({ activeWallet });
 
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 

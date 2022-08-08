@@ -21,7 +21,7 @@ type SelectAddressProperties = {
 	disabled?: boolean;
 	isInvalid?: boolean;
 	onChange?: (address: string) => void;
-} & React.InputHTMLAttributes<any>;
+} & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 const WalletAvatar = ({ address }: any) => {
 	if (!address) {
