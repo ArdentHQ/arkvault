@@ -17,6 +17,7 @@ import { ReactComponent as Clock } from "./clock.svg";
 import { ReactComponent as ClockError } from "./clock-error.svg";
 import { ReactComponent as ClockPencil } from "./clock-pencil.svg";
 import { ReactComponent as ClockSmall } from "./clock-small.svg";
+import { ReactComponent as Cloud } from "./cloud.svg";
 import { ReactComponent as Code } from "./code.svg";
 import { ReactComponent as Copy } from "./copy.svg";
 import { ReactComponent as CopyKey } from "./copy-key.svg";
@@ -93,6 +94,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ClockError,
 	ClockPencil,
 	ClockSmall,
+	Cloud,
 	Code,
 	Copy,
 	CopyKey,

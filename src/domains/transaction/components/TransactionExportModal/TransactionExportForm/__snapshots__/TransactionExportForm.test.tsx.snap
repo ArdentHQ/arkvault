@@ -548,7 +548,7 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"
@@ -1076,7 +1076,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"
@@ -1604,7 +1604,7 @@ exports[`TransactionExportForm should render in md 1`] = `
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"
@@ -2132,7 +2132,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"
@@ -2660,7 +2660,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"
@@ -3187,7 +3187,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
       </li>
     </ul>
     <div
-      class="css-1kzb86y"
+      class="css-2wyvkd"
     >
       <button
         class="css-1jhy6v9"

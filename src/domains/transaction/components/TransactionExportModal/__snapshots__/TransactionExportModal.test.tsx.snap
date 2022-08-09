@@ -554,7 +554,7 @@ exports[`TransactionExportModal should render 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -716,7 +716,7 @@ exports[`TransactionExportModal should render error status 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1306,7 +1306,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1465,7 +1465,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1624,7 +1624,7 @@ exports[`TransactionExportModal should render success and stay open if download 
                     </div>
                   </div>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"
@@ -1783,7 +1783,7 @@ exports[`TransactionExportModal should render success status 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-1d6x3tk"
+                    class="css-1tkbsa1"
                   >
                     <button
                       class="css-1jhy6v9"

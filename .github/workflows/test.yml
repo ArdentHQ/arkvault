@@ -25,7 +25,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -63,7 +63,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -102,7 +102,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -141,7 +141,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -180,7 +180,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -219,7 +219,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -258,7 +258,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -297,7 +297,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -336,7 +336,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -375,7 +375,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -414,7 +414,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -453,7 +453,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -492,7 +492,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
@@ -531,7 +531,7 @@ jobs:
                   ref: ${{ github.head_ref }}
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
             - uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
