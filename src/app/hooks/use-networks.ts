@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { isCustomNetwork } from "@/utils/network-utils";
-import { useQueryParameters } from "./use-query-parameters";
 
 const sortNetworks = (networks: Networks.Network[]) =>
 	networks.sort((a, b) => {

@@ -34,8 +34,8 @@ enum Step {
 }
 
 const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contracts.IReadWriteWallet | undefined => {
-	const params = useQueryParameters();
-	const walletId = params.get("walletId");
+	const parameters = useQueryParameters();
+	const walletId = parameters.get("walletId");
 
 	return useMemo(() => {
 		if (!walletId) {
@@ -43,16 +43,16 @@ const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contracts.IR
 		}
 
 		return profile.wallets().findById(walletId);
-	}, [profile, params]);
+	}, [profile, parameters]);
 };
 
 const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network => {
-	const params = useQueryParameters();
+	const parameters = useQueryParameters();
 	const { t } = useTranslation();
 
 	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.meta().nethash === params.get("nethash")),
-		[profile, params],
+		() => profile.availableNetworks().find((network) => network.meta().nethash === parameters.get("nethash")),
+		[profile, parameters],
 	);
 
 	if (!network) {

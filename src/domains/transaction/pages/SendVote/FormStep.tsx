@@ -2,6 +2,7 @@ import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useFormContext } from "react-hook-form";
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -10,7 +11,6 @@ import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
-import { useFormContext } from "react-hook-form";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
