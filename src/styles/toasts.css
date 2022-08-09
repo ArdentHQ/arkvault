@@ -20,7 +20,7 @@
 }
 
 .Toastify__toast {
-	@apply shadow-none cursor-default;
+	@apply rounded-none shadow-none cursor-default;
 	background: unset;
 	color: unset;
 }
@@ -30,7 +30,12 @@
 }
 
 .Toastify__toast-body {
-	@apply overflow-hidden;
+	@apply p-0 overflow-hidden;
+}
+
+.Toastify__toast-container--bottom-right {
+	right: 0;
+	bottom: 0;
 }
 
 @supports (padding-bottom: env(safe-area-inset-bottom)) {

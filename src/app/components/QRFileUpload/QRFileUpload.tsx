@@ -7,8 +7,8 @@ import { Icon } from "@/app/components/Icon";
 import { useFiles } from "@/app/hooks/use-files";
 
 interface QRFileUploadProperties {
-	onError?: (error: Error) => void;
-	onRead?: (text: string) => void;
+	onError: (error: Error) => void;
+	onRead: (text: string) => void;
 }
 
 export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
@@ -25,13 +25,13 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 
 			const { data } = await QRScanner.scanImage(file, { returnDetailedScanResult: true });
 
-			onRead?.(data);
+			onRead(data);
 		} catch (error) {
 			if (error.name === "AbortError") {
 				return;
 			}
 
-			onError?.(new Error("InvalidQR"));
+			onError(new Error("InvalidQR"));
 		}
 	};
 
