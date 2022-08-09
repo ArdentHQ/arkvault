@@ -1,7 +1,6 @@
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
 export const useQueryParameters = () => {
@@ -23,18 +22,11 @@ export const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contr
 	}, [profile, parameters]);
 };
 
-export const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network => {
+export const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network | undefined => {
 	const parameters = useQueryParameters();
-	const { t } = useTranslation();
 
-	const network = useMemo(
+	return useMemo(
 		() => profile.availableNetworks().find((network) => network.meta().nethash === parameters.get("nethash")),
 		[profile, parameters],
 	);
-
-	if (!network) {
-		throw new Error(t("TRANSACTION.VALIDATION.NETHASH_MISSING"));
-	}
-
-	return network;
 };

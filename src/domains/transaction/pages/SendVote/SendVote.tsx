@@ -28,7 +28,7 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
-import { assertProfile, assertWallet } from "@/utils/assertions";
+import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 
 enum Step {
@@ -48,8 +48,9 @@ export const SendVote = () => {
 	assertProfile(activeProfile);
 
 	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
-	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
+	assertNetwork(activeNetwork);
 
+	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useWalletFromQueryParameters(activeProfile);
 
 	const { votes, unvotes, voteDelegates, unvoteDelegates } = useDelegatesFromURL({
