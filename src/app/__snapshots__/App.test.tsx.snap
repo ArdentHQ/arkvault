@@ -193,7 +193,7 @@ exports[`App should close page skeleton if not e2e 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -501,7 +501,7 @@ exports[`App should not migrate profiles 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -946,7 +946,7 @@ exports[`App should render mock 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -1254,7 +1254,7 @@ exports[`App should render page skeleton 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -1644,7 +1644,7 @@ exports[`App should render welcome screen after page skeleton 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mr-2 mb-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
