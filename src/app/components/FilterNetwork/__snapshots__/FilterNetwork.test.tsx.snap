@@ -40,7 +40,7 @@ exports[`FilterNetwork should render public networks 1`] = `
             </svg>
           </div>
           <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
           >
             <span />
           </span>
@@ -64,7 +64,7 @@ exports[`FilterNetwork should render public networks 1`] = `
             </svg>
           </div>
           <span
-            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+            class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
           >
             <span />
           </span>
@@ -118,7 +118,7 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -156,7 +156,7 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -250,7 +250,7 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -285,7 +285,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
           All
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-700 bg-theme-primary-700 text-white css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-700 bg-theme-primary-700 text-white css-19jfgr"
         >
           <div
             class="transition-transform rotate-180 css-15txs7d"
@@ -321,7 +321,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -345,7 +345,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -384,7 +384,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
           All
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
         >
           <div
             class="transition-transform css-15txs7d"
@@ -420,7 +420,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -455,7 +455,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
           All
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
         >
           <div
             class="transition-transform css-15txs7d"
@@ -491,7 +491,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -515,7 +515,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -541,7 +541,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
           All
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
         >
           <div
             class="transition-transform css-15txs7d"
@@ -577,7 +577,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
               </svg>
             </div>
             <span
-              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
             >
               <span />
             </span>
@@ -613,7 +613,7 @@ exports[`NetworkOptions should render available networks options 1`] = `
           </svg>
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
         >
           <span />
         </span>
@@ -637,7 +637,7 @@ exports[`NetworkOptions should render available networks options 1`] = `
           </svg>
         </div>
         <span
-          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
+          class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
         >
           <span />
         </span>
@@ -668,7 +668,7 @@ exports[`ToggleAllOption should render 1`] = `
       All
     </div>
     <span
-      class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
+      class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-100 text-theme-primary-700 dark:border-theme-secondary-800 css-19jfgr"
     >
       <div
         class="transition-transform css-15txs7d"
@@ -699,7 +699,7 @@ exports[`ToggleAllOption should render selected 1`] = `
       All
     </div>
     <span
-      class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent border-theme-primary-700 bg-theme-primary-700 text-white css-19jfgr"
+      class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-primary-700 bg-theme-primary-700 text-white css-19jfgr"
     >
       <div
         class="transition-transform rotate-180 css-15txs7d"
