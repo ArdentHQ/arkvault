@@ -55,8 +55,8 @@ export const SendVote = () => {
 
 	const { votes, unvotes, voteDelegates, unvoteDelegates } = useDelegatesFromURL({
 		env,
-		profile: activeProfile,
 		network: activeNetwork,
+		profile: activeProfile,
 	});
 
 	const [activeWallet, setActiveWallet] = useState(wallet);

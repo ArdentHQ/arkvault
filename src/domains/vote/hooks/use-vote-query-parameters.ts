@@ -1,7 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { Networks } from "@ardenthq/sdk";
-import { Environment } from "@ardenthq/sdk-profiles";
 
 import { useQueryParameters } from "@/app/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
@@ -70,10 +69,10 @@ export const useDelegatesFromURL = ({
 	}, [env, voteDelegates, votes, unvoteDelegates, unvotes]);
 
 	return {
-		votes,
+		isLoading,
+		unvoteDelegates,
 		unvotes,
 		voteDelegates,
-		unvoteDelegates,
-		isLoading,
+		votes,
 	};
 };
