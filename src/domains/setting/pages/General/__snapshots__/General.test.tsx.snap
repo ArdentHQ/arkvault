@@ -221,7 +221,16 @@ exports[`General Settings should disable submit button when profile is not resto
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -1570,7 +1579,7 @@ exports[`General Settings should disable submit button when profile is not resto
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1yqe28v"
@@ -1817,7 +1826,16 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -3180,7 +3198,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -3426,7 +3444,16 @@ exports[`General Settings should render 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -4771,7 +4798,7 @@ exports[`General Settings should render 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1yqe28v"
@@ -5018,7 +5045,16 @@ exports[`General Settings should show identicon when removing image if name is s
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -6363,7 +6399,7 @@ exports[`General Settings should show identicon when removing image if name is s
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1yqe28v"
@@ -6610,7 +6646,16 @@ exports[`General Settings should update profile 1`] = `
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -7955,7 +8000,7 @@ exports[`General Settings should update profile 1`] = `
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1yqe28v"
@@ -8202,7 +8247,16 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -9547,7 +9601,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1bx0hyc"
@@ -9793,7 +9847,16 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            cloud.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
                         >
                           <div
                             class="h-2 w-2 rounded-full bg-theme-success-700"
@@ -11131,7 +11194,7 @@ exports[`General Settings should update the avatar when removing focus from name
                     </ul>
                   </div>
                   <div
-                    class="css-1kzb86y"
+                    class="css-2wyvkd"
                   >
                     <button
                       class="css-1bx0hyc"

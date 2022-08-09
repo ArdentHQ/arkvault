@@ -19,19 +19,19 @@ export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteList
 	if ((votes[0] as Contracts.VoteRegistryItem).amount === undefined) {
 		return (
 			<ListWrapper>
-				{(votes as Contracts.IReadOnlyWallet[]).map((vote: Contracts.IReadOnlyWallet, index: number) => (
-					<VoteItem currency={currency} wallet={vote} index={index} key={index} />
+				{(votes as Contracts.IReadOnlyWallet[]).map((vote: Contracts.IReadOnlyWallet) => (
+					<VoteItem currency={currency} wallet={vote} key={vote.address()} />
 				))}
 			</ListWrapper>
 		);
 	}
 
-	const renderVoteItem = (vote: Contracts.VoteRegistryItem, index: number) => {
+	const renderVoteItem = (vote: Contracts.VoteRegistryItem) => {
 		assertReadOnlyWallet(vote.wallet);
 
 		return (
 			<VoteItem
-				index={index}
+				key={vote.wallet.address()}
 				wallet={vote.wallet}
 				amount={vote.amount}
 				currency={currency}
@@ -42,9 +42,7 @@ export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteList
 
 	return (
 		<ListWrapper>
-			{(votes as Contracts.VoteRegistryItem[]).map((vote: Contracts.VoteRegistryItem, index: number) =>
-				renderVoteItem(vote, index),
-			)}
+			{(votes as Contracts.VoteRegistryItem[]).map((vote: Contracts.VoteRegistryItem) => renderVoteItem(vote))}
 		</ListWrapper>
 	);
 };

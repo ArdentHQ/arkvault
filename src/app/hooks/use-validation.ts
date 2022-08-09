@@ -15,7 +15,7 @@ import {
 	sendTransfer,
 	sendVote,
 } from "@/domains/transaction/validations";
-import { receiveFunds, verifyMessage } from "@/domains/wallet/validations";
+import { receiveFunds, signMessage, verifyMessage } from "@/domains/wallet/validations";
 
 export const useValidation = () => {
 	const { t } = useTranslation();
@@ -37,6 +37,7 @@ export const useValidation = () => {
 			sendVote: sendVote(t),
 			server: server(t),
 			settings: settings(t, env),
+			signMessage: signMessage(t),
 			verifyMessage: verifyMessage(t),
 		}),
 		[t, env],

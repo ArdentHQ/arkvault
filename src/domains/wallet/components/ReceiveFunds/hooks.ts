@@ -1,6 +1,7 @@
-import { QRCode, URI } from "@ardenthq/sdk-helpers";
+import { QRCode } from "@ardenthq/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
 
+import { URLBuilder } from "@ardenthq/arkvault-url";
 import { shouldUseDarkColors } from "@/utils/theme";
 
 interface QRCodeProperties {
@@ -12,7 +13,7 @@ interface QRCodeProperties {
 	method?: string;
 }
 
-export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCodeProperties) => {
+export const useQRCode = ({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
 	const [data, setData] = useState<{ uri?: string; image?: string }>({
 		image: undefined,
 		uri: undefined,
@@ -20,19 +21,16 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 
 	const maxLength = 255;
 
-	const formatQR = useCallback(({ amount, address, memo, coin, nethash, method = "transfer" }: QRCodeProperties) => {
-		const uri = new URI();
+	const formatQR = useCallback(({ amount, address, memo, coin, nethash }: QRCodeProperties) => {
+		const urlBuilder = new URLBuilder(`${window.location.origin}/#/`);
 
-		const parameters = uri.serialize({
-			coin,
-			method,
-			nethash,
-			recipient: address,
-			...(amount && { amount }),
-			...(memo && { memo: memo?.slice(0, maxLength) }),
+		urlBuilder.setCoin(coin);
+		urlBuilder.setNethash(nethash);
+
+		return urlBuilder.generateTransfer(address, {
+			amount: +amount,
+			memo: memo?.slice(0, maxLength),
 		});
-
-		return `${window.location.origin.toString()}/#/?${parameters}`;
 	}, []);
 
 	useEffect(() => {
@@ -47,7 +45,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 			  };
 
 		const generateQRCode = async () => {
-			const uri = address ? formatQR({ address, amount, coin, memo, method, nethash }) : undefined;
+			const uri = address ? formatQR({ address, amount, coin, memo, nethash }) : undefined;
 
 			let image: string | undefined;
 
@@ -64,7 +62,7 @@ export const useQRCode = ({ amount, address, memo, coin, nethash, method }: QRCo
 		};
 
 		generateQRCode();
-	}, [amount, memo, nethash, address, formatQR, coin, method]);
+	}, [amount, memo, nethash, address, formatQR, coin]);
 
 	return data;
 };
