@@ -62,7 +62,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "custom" }),
+			t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "CUSTOM" }),
 		);
 	});
 

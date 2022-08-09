@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 
-import { generatePath } from "react-router";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useEnvironmentContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
@@ -20,7 +19,7 @@ export const useDeeplink = () => {
 	const history = useHistory();
 	const location = useLocation();
 	const queryParameters = useQueryParameters();
-	const { validateSearchParameters } = useSearchParametersValidation();
+	const { methods, validateSearchParameters } = useSearchParametersValidation();
 	const [deepLink, setDeepLink] = useState<URLSearchParams | undefined>();
 
 	const navigate = useCallback((url: string, deeplinkSchema?: any) => history.push(url, deeplinkSchema), [history]);
@@ -51,11 +50,11 @@ export const useDeeplink = () => {
 			try {
 				await validateSearchParameters(profile, searchParameters);
 
-				/* istanbul ignore else */
-				if (searchParameters.get("method") === "transfer") {
-					const path = generatePath(ProfilePaths.SendTransfer, { profileId: profile.id() });
-					return navigate(`${path}?${searchParameters.toString()}`);
-				}
+				return navigate(
+					`${methods[searchParameters.get("method") as string].path(
+						profile.id(),
+					)}?${searchParameters.toString()}`,
+				);
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {

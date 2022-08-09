@@ -111,7 +111,7 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "doge")),
+				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
 			),
 		);
 	});
