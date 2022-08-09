@@ -9,10 +9,8 @@ export const VoteItemMobile = ({
 	amount,
 	currency,
 	isNegativeAmount,
-	index,
 }: VoteItemProperties & { amount: number }) => (
 	<div
-		key={index}
 		className="relative flex items-center justify-end space-x-4 border-b border-dashed border-theme-secondary-300 py-4 pt-0 pb-0 last:border-b-0 dark:border-theme-secondary-800 md:pt-4 md:pb-4"
 	>
 		{amount > 0 && (

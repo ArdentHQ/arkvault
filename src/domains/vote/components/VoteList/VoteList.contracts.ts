@@ -11,5 +11,4 @@ export interface VoteItemProperties {
 	amount?: number;
 	currency: string;
 	isNegativeAmount?: boolean;
-	index: number;
 }

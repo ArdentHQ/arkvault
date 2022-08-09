@@ -7,16 +7,15 @@ import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { useBreakpoint } from "@/app/hooks";
 
-export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount, index }: VoteItemProperties) => {
+export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: VoteItemProperties) => {
 	const { isXs, isSm } = useBreakpoint();
 
 	if (isSm || isXs) {
-		return <VoteItemMobile currency={currency} wallet={wallet} index={index} amount={amount} />;
+		return <VoteItemMobile currency={currency} wallet={wallet} amount={amount} />;
 	}
 
 	return (
 		<div
-			key={index}
 			className="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
 		>
 			<Avatar size="sm" address={wallet.address()} />
