@@ -21,7 +21,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepP
 	const { t } = useTranslation();
 	const { setValue } = useFormContext();
 
-	const showFeeInput = useMemo(() => wallet?.network().chargesZeroFees() === false, [wallet]);
+	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
 
 	const feeTransactionData = useMemo(
 		() => ({

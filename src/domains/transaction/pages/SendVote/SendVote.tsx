@@ -33,7 +33,7 @@ enum Step {
 	ErrorStep,
 }
 
-const useWalletFromURL = (profile: Contracts.IProfile): Contracts.IReadWriteWallet | undefined => {
+const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contracts.IReadWriteWallet | undefined => {
 	const params = useQueryParameters();
 	const walletId = params.get("walletId");
 
@@ -46,7 +46,7 @@ const useWalletFromURL = (profile: Contracts.IProfile): Contracts.IReadWriteWall
 	}, [profile, params]);
 };
 
-const useNetworkFromURL = (profile: Contracts.IProfile): Networks.Network => {
+const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network => {
 	const params = useQueryParameters();
 	const { t } = useTranslation();
 
@@ -70,16 +70,14 @@ export const SendVote = () => {
 	const activeProfile = useActiveProfile();
 	assertProfile(activeProfile);
 
-	const activeNetwork = useNetworkFromURL(activeProfile);
-
-	const { syncProfileWallets } = useProfileJobs(activeProfile);
-
-	const wallet = useWalletFromURL(activeProfile);
-	const [activeWallet, setActiveWallet] = useState(wallet);
-
+	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 
+	const wallet = useWalletFromQueryParameters(activeProfile);
+	const [activeWallet, setActiveWallet] = useState(wallet);
+
 	const { voteDelegates, unvoteDelegates } = useVoteQueryParameters();
+	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
@@ -124,26 +122,34 @@ export const SendVote = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
-		if (unvoteDelegates.length > 0 && unvotes.length === 0) {
-			const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
-				amount: unvote.amount,
-				wallet: env.delegates().findByAddress(activeNetwork.coin(), activeNetwork.id(), unvote.delegateAddress),
-			}));
+		const updateDelegates = async () => {
+			await env.delegates().sync(activeProfile, activeNetwork.coin(), activeNetwork.id());
 
-			setUnvotes(unvotesList);
-		}
-	}, [activeWallet, env, unvoteDelegates, unvotes]);
+			if (unvoteDelegates.length > 0 && unvotes.length === 0) {
+				const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
+					amount: unvote.amount,
+					wallet: env
+						.delegates()
+						.findByAddress(activeNetwork.coin(), activeNetwork.id(), unvote.delegateAddress),
+				}));
 
-	useEffect(() => {
-		if (voteDelegates.length > 0 && votes.length === 0) {
-			const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
-				amount: vote.amount,
-				wallet: env.delegates().findByAddress(activeNetwork.coin(), activeNetwork.id(), vote.delegateAddress),
-			}));
+				setUnvotes(unvotesList);
+			}
 
-			setVotes(votesList);
-		}
-	}, [activeWallet, env, voteDelegates, votes]);
+			if (voteDelegates.length > 0 && votes.length === 0) {
+				const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
+					amount: vote.amount,
+					wallet: env
+						.delegates()
+						.findByAddress(activeNetwork.coin(), activeNetwork.id(), vote.delegateAddress),
+				}));
+
+				setVotes(votesList);
+			}
+		};
+
+		updateDelegates();
+	}, [activeWallet, env, voteDelegates, votes, unvoteDelegates, unvotes]);
 
 	useEffect(() => {
 		if (!activeNetwork) {
