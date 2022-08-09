@@ -42,9 +42,7 @@ export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteList
 
 	return (
 		<ListWrapper>
-			{(votes as Contracts.VoteRegistryItem[]).map((vote: Contracts.VoteRegistryItem) =>
-				renderVoteItem(vote),
-			)}
+			{(votes as Contracts.VoteRegistryItem[]).map((vote: Contracts.VoteRegistryItem) => renderVoteItem(vote))}
 		</ListWrapper>
 	);
 };

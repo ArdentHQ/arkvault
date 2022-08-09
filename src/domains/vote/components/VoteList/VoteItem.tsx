@@ -15,9 +15,7 @@ export const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: Vot
 	}
 
 	return (
-		<div
-			className="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-		>
+		<div className="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800">
 			<Avatar size="sm" address={wallet.address()} />
 
 			<div className="ml-4 w-28 flex-1">
