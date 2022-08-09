@@ -3,7 +3,6 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { UnlockTokensModal } from "@/domains/transaction/components/UnlockTokens";
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
-import { SignMessage } from "@/domains/wallet/components/SignMessage";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { VerifyMessage } from "@/domains/wallet/components/VerifyMessage";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
@@ -42,16 +41,6 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 
 	return (
 		<>
-			{activeModal === "sign-message" && (
-				<SignMessage
-					profile={profile}
-					walletId={wallet.id()}
-					isOpen={true}
-					onClose={hideActiveModal}
-					onCancel={hideActiveModal}
-				/>
-			)}
-
 			{activeModal === "verify-message" && (
 				<VerifyMessage
 					isOpen={true}

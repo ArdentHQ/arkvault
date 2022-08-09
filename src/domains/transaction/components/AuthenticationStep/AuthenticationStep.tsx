@@ -24,6 +24,8 @@ export interface LedgerStates {
 type AuthenticationStepProperties = {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerDetails?: React.ReactNode;
+	subject?: "transaction" | "message";
+	ignoreSecondSignature?: boolean;
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
@@ -73,6 +75,7 @@ const LedgerStateWrapper = ({
 
 const LedgerAuthentication = ({
 	wallet,
+	subject,
 	ledgerDetails,
 	ledgerIsAwaitingDevice,
 	ledgerIsAwaitingApp,
@@ -80,6 +83,7 @@ const LedgerAuthentication = ({
 	ledgerSupportedModels,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
+
 	const [readyToConfirm, setReadyToConfirm] = useState(false);
 	const history = useHistory();
 
@@ -102,9 +106,9 @@ const LedgerAuthentication = ({
 				wallet={wallet}
 			>
 				<>
-					<StepHeader title={t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")} />
+					<StepHeader title={subject === "transaction" ? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE") : t("MESSAGE.LEDGER_CONFIRMATION.TITLE")} />
 
-					<LedgerConfirmation>{ledgerDetails}</LedgerConfirmation>
+					<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
 				</>
 			</LedgerStateWrapper>
 		</div>
@@ -118,11 +122,11 @@ export const AuthenticationStep = ({
 	ledgerIsAwaitingApp,
 	ledgerConnectedModel,
 	ledgerSupportedModels,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	ledgerDetails?: React.ReactNode;
-} & LedgerStates) => {
+	subject = "transaction",
+	ignoreSecondSignature,
+}: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
+
 	const { errors, getValues, register } = useFormContext();
 	const { authentication } = useValidation();
 
@@ -135,6 +139,7 @@ export const AuthenticationStep = ({
 				ledgerSupportedModels={ledgerSupportedModels}
 				ledgerConnectedModel={ledgerConnectedModel}
 				wallet={wallet}
+				subject={subject}
 			/>
 		);
 	}
@@ -147,8 +152,10 @@ export const AuthenticationStep = ({
 		wallet.actsWithWifWithEncryption() ||
 		wallet.actsWithSecretWithEncryption();
 
-	const requireSecondMnemonic = wallet.isSecondSignature() && requireMnemonic;
-	const requireSecondSecret = wallet.isSecondSignature() && wallet.actsWithSecret();
+	const requireSecondMnemonic = !ignoreSecondSignature && wallet.isSecondSignature() && requireMnemonic;
+	const requireSecondSecret = !ignoreSecondSignature && wallet.isSecondSignature() && wallet.actsWithSecret();
+
+	const isTransaction = subject === "transaction";
 
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-6">
@@ -182,7 +189,7 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithSecret() && (
 				<>
-					<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")} />
+					<StepHeader title={title} subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET")} />
 
 					<FormField name="secret">
 						<FormLabel>{t("COMMON.SECRET")}</FormLabel>
@@ -198,7 +205,7 @@ export const AuthenticationStep = ({
 				<>
 					<StepHeader
 						title={title}
-						subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")}
+						subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")}
 					/>
 
 					<FormField name="encryptionPassword">
@@ -213,7 +220,7 @@ export const AuthenticationStep = ({
 
 			{requireMnemonic && (
 				<>
-					<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")} />
+					<StepHeader title={title} subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")} />
 
 					<FormField name="mnemonic">
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>

@@ -89,6 +89,12 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 
+			if (option.value === "sign-message") {
+				history.push(
+					generatePath(ProfilePaths.SignMessageWallet, { profileId: profile.id(), walletId: wallet.id() }),
+				);
+			}
+
 			if (option.value === "multi-signature") {
 				history.push(
 					generatePath(ProfilePaths.SendMultiSignature, { profileId: profile.id(), walletId: wallet.id() }),

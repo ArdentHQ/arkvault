@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services, Signatories } from "@ardenthq/sdk";
 import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
@@ -44,7 +44,7 @@ const sign = async (
 		return withAbortPromise(options?.abortSignal)(signWithLedger(message, wallet));
 	}
 
-	let signatory: any;
+	let signatory: Signatories.Signatory;
 
 	if (mnemonic) {
 		signatory = await wallet.signatory().mnemonic(mnemonic);
@@ -58,6 +58,7 @@ const sign = async (
 		signatory = await wallet.signatory().secret(secret);
 	}
 
+	// @ts-ignore
 	return wallet.message().sign({ message, signatory });
 };
 

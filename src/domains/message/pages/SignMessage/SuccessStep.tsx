@@ -6,12 +6,12 @@ import { useTranslation } from "react-i18next";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Header } from "@/app/components/Header";
+import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { useBreakpoint } from "@/app/hooks";
 
-export const SignedStep = ({
+export const SuccessStep = ({
 	signedMessage,
 	wallet,
 }: {
@@ -29,12 +29,12 @@ export const SignedStep = ({
 
 	return (
 		<section>
-			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE")} />
+			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE")} />
 
 			<TransactionDetail
 				className="mt-4 md:mt-2"
 				borderPosition="bottom"
-				label={t("WALLETS.SIGNATORY")}
+				label={t("MESSAGE.SIGNATORY")}
 				extra={<Avatar size={iconSize} address={wallet.address()} />}
 			>
 				<div className="w-0 flex-1 text-right md:text-left">

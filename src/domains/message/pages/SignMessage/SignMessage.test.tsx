@@ -5,8 +5,8 @@ import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import { SignedStep } from "./SignedStep";
-import { SignMessage } from "./SignMessage";
+import { SignMessage } from "../../../wallet/components/SignMessage/SignMessage";
+import { SuccessStep } from "./SuccessStep";
 import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -177,7 +177,7 @@ describe("SignMessage", () => {
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
 		};
 
-		const { container } = render(<SignedStep wallet={wallet} signedMessage={signedMessage} />);
+		const { container } = render(<SuccessStep wallet={wallet} signedMessage={signedMessage} />);
 
 		expect(screen.getAllByText("my-alias")[0]).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
@@ -223,7 +223,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -280,7 +280,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -339,7 +339,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -393,7 +393,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 

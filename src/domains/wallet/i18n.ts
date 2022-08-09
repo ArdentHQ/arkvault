@@ -57,27 +57,6 @@ export const translations = {
 		TITLE: "Select Account",
 	},
 
-	MODAL_SIGN_MESSAGE: {
-		COPY_SIGNATURE: "Copy Signature",
-		FORM_STEP: {
-			DESCRIPTION_ENCRYPTION_PASSWORD: "Provide a message below and sign with your encryption password.",
-			DESCRIPTION_LEDGER: "Provide a message below and sign with your ledger.",
-			DESCRIPTION_MNEMONIC: "Provide a message below and sign with your mnemonic passphrase.",
-			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
-			TITLE: "Sign Message",
-		},
-
-		LEDGER_CONFIRMATION_STEP: {
-			TITLE: "Confirm Your Signature",
-		},
-
-		SIGN: "Sign",
-
-		SIGNED_STEP: {
-			TITLE: "Message Successfully Signed",
-		},
-	},
-
 	MODAL_VERIFY_MESSAGE: {
 		DESCRIPTION: "Authenticate a message from an address below.",
 		ERROR: {
@@ -271,8 +250,6 @@ export const translations = {
 
 		YOUR_WALLETS: "Your Wallets",
 	},
-
-	SIGNATORY: "Signatory",
 
 	SIGNATURE: "Signature",
 

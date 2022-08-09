@@ -31,7 +31,7 @@ cucumber("@signMessage", {
 		await t.click(Selector("[data-testid=SignMessage__submit-button]"));
 	},
 	"Then the message is successfully signed": async (t: TestController) => {
-		await t.expect(Selector("h1").withText(translations.WALLETS.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE).exists).ok();
+		await t.expect(Selector("h1").withText(translations.MESSAGE.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE).exists).ok();
 		await t.click(Selector("[data-testid=Modal__close-button]"));
 	},
 });
