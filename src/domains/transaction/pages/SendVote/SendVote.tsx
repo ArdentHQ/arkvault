@@ -1,4 +1,4 @@
-import { Networks, Services } from "@ardenthq/sdk";
+import { Services } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -14,16 +14,22 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useProfileJobs, useValidation, useQueryParameters } from "@/app/hooks";
+import {
+	useActiveProfile,
+	useProfileJobs,
+	useValidation,
+	useNetworkFromQueryParameters,
+	useWalletFromQueryParameters,
+} from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertProfile, assertWallet } from "@/utils/assertions";
+import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
 
 enum Step {
 	FormStep = 1,
@@ -32,35 +38,6 @@ enum Step {
 	SummaryStep,
 	ErrorStep,
 }
-
-const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contracts.IReadWriteWallet | undefined => {
-	const parameters = useQueryParameters();
-	const walletId = parameters.get("walletId");
-
-	return useMemo(() => {
-		if (!walletId) {
-			return;
-		}
-
-		return profile.wallets().findById(walletId);
-	}, [profile, parameters]);
-};
-
-const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network => {
-	const parameters = useQueryParameters();
-	const { t } = useTranslation();
-
-	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.meta().nethash === parameters.get("nethash")),
-		[profile, parameters],
-	);
-
-	if (!network) {
-		throw new Error(t("TRANSACTION.VALIDATION.NETHASH_MISSING"));
-	}
-
-	return network;
-};
 
 export const SendVote = () => {
 	const { env, persist } = useEnvironmentContext();
@@ -74,14 +51,19 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 
 	const wallet = useWalletFromQueryParameters(activeProfile);
+
+	const { votes, unvotes, voteDelegates, unvoteDelegates } = useDelegatesFromURL({
+		env,
+		profile: activeProfile,
+		network: activeNetwork,
+	});
+
 	const [activeWallet, setActiveWallet] = useState(wallet);
 
-	const { voteDelegates, unvoteDelegates } = useVoteQueryParameters();
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
+
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
@@ -120,36 +102,6 @@ export const SendVote = () => {
 
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
-
-	useEffect(() => {
-		const updateDelegates = async () => {
-			await env.delegates().sync(activeProfile, activeNetwork.coin(), activeNetwork.id());
-
-			if (unvoteDelegates.length > 0 && unvotes.length === 0) {
-				const unvotesList: Contracts.VoteRegistryItem[] = unvoteDelegates?.map((unvote) => ({
-					amount: unvote.amount,
-					wallet: env
-						.delegates()
-						.findByAddress(activeNetwork.coin(), activeNetwork.id(), unvote.delegateAddress),
-				}));
-
-				setUnvotes(unvotesList);
-			}
-
-			if (voteDelegates.length > 0 && votes.length === 0) {
-				const votesList: Contracts.VoteRegistryItem[] = voteDelegates?.map((vote) => ({
-					amount: vote.amount,
-					wallet: env
-						.delegates()
-						.findByAddress(activeNetwork.coin(), activeNetwork.id(), vote.delegateAddress),
-				}));
-
-				setVotes(votesList);
-			}
-		};
-
-		updateDelegates();
-	}, [activeWallet, env, voteDelegates, votes, unvoteDelegates, unvotes]);
 
 	useEffect(() => {
 		if (!activeNetwork) {
@@ -445,8 +397,6 @@ export const SendVote = () => {
 		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet?.isLedger());
 
 	const isNextDisabled = isDirty ? !isValid : true;
-
-	console.log({ activeWallet });
 
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
