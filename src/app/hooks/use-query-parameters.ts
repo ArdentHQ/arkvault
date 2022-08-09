@@ -18,7 +18,11 @@ export const useWalletFromQueryParameters = (profile: Contracts.IProfile): Contr
 			return;
 		}
 
-		return profile.wallets().findById(walletId);
+		try {
+			return profile.wallets().findById(walletId);
+		} catch {
+			//
+		}
 	}, [profile, parameters]);
 };
 

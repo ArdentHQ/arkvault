@@ -16,7 +16,6 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import {
 	useActiveProfile,
-	useProfileJobs,
 	useValidation,
 	useNetworkFromQueryParameters,
 	useWalletFromQueryParameters,
@@ -61,8 +60,6 @@ export const SendVote = () => {
 
 	const [activeWallet, setActiveWallet] = useState(wallet);
 
-	const { syncProfileWallets } = useProfileJobs(activeProfile);
-
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
@@ -105,25 +102,14 @@ export const SendVote = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
-		if (!activeNetwork) {
-			return;
-		}
-
 		const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
-
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!newSenderWallet) {
 			return;
 		}
 
-		if (!isFullyRestoredAndSynced) {
-			syncProfileWallets(true);
-		}
-
 		setActiveWallet(newSenderWallet);
-	}, [senderAddress, syncProfileWallets]);
+	}, [senderAddress]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -234,10 +220,7 @@ export const SendVote = () => {
 		} = getValues();
 		const abortSignal = abortReference.current?.signal;
 
-		//TODO: Handle nullable wallet.
-		if (!activeWallet) {
-			throw new Error("Active wallet is not defined");
-		}
+		assertWallet(activeWallet);
 
 		try {
 			const signatory = await activeWallet.signatoryFactory().make({
