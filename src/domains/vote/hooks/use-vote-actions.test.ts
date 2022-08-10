@@ -1,8 +1,6 @@
-import React from "react";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useVoteActions } from "./use-vote-actions";
 import { renderHook } from "@testing-library/react-hooks";
+import { useVoteActions } from "./use-vote-actions";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 jest.mock("react-router-dom", () => ({
@@ -24,20 +22,21 @@ describe("useVoteActions", () => {
 	it("should not set nethash parameter if wallet is not found", () => {
 		const wallet = profile.wallets().first();
 		const nethashSpy = jest.spyOn(wallet.network(), "meta").mockReturnValue(() => {
-			nethash: "1";
+			"1";
 		});
 
 		const { result } = renderHook(() =>
 			useVoteActions({
 				hasWalletId: false,
 				profile,
-				wallet,
 				selectedAddress: "1",
 				selectedNetwork: wallet.network().id(),
+				wallet,
 			}),
 		);
 
 		result.current.navigateToSendVote([], []);
+
 		expect(nethashSpy).not.toHaveBeenCalled();
 	});
 });
