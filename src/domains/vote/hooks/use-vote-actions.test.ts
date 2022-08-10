@@ -1,0 +1,43 @@
+import React from "react";
+
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useVoteActions } from "./use-vote-actions";
+import { renderHook } from "@testing-library/react-hooks";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
+
+jest.mock("react-router-dom", () => ({
+	...jest.requireActual("react-router-dom"),
+	useHistory: () => ({
+		push: jest.fn(),
+	}),
+}));
+
+let profile: Contracts.IProfile;
+
+describe("useVoteActions", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+		await profile.sync();
+	});
+
+	it("should not set nethash parameter if wallet is not found", () => {
+		const wallet = profile.wallets().first();
+		const nethashSpy = jest.spyOn(wallet.network(), "meta").mockReturnValue(() => {
+			nethash: "1";
+		});
+
+		const { result } = renderHook(() =>
+			useVoteActions({
+				hasWalletId: false,
+				profile,
+				wallet,
+				selectedAddress: "1",
+				selectedNetwork: wallet.network().id(),
+			}),
+		);
+
+		result.current.navigateToSendVote([], []);
+		expect(nethashSpy).not.toHaveBeenCalled();
+	});
+});

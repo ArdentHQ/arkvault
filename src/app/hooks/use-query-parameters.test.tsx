@@ -87,7 +87,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		expect(() => screen.getByTestId(walletId)).toThrowError(/Unable to find/);
 	});
 
-	it("should not find profile wallet from query parameters", () => {
+	it("should not render for undefined wallet in url", () => {
 		history.push(`/`);
 
 		render(<TestComponent />, { history, withProviders: false });
