@@ -11,7 +11,6 @@ import {
 	env,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
-	waitFor,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -19,7 +18,6 @@ const history = createHashHistory();
 let profile: Contracts.IProfile;
 
 let nethash: string;
-let walletId: string;
 let resetProfileNetworksMock: () => void;
 
 const delegateAddresses = [
@@ -33,7 +31,6 @@ const delegateAddresses = [
 describe("useWalletFromQueryParameters hook", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-		walletId = profile.wallets().first().id();
 		nethash = profile.wallets().first().network().meta().nethash;
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -63,7 +60,7 @@ describe("useWalletFromQueryParameters hook", () => {
 
 		render(<TestComponent />, { history, withProviders: false });
 
-		await waitFor(() => expect(screen.getByTestId("isLoading-false")).toBeInTheDocument());
+		await expect(screen.getByTestId("isLoading-false")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("votes-0")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
