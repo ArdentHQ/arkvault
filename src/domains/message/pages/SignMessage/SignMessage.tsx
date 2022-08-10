@@ -70,7 +70,7 @@ export const SignMessage: React.VFC = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.FormStep) {
+		if (activeTab === Step.FormStep || activeTab === Step.SuccessStep) {
 			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 		}
 
@@ -163,12 +163,11 @@ export const SignMessage: React.VFC = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									title={t("COMMON.ERROR")}
+									title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
+									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									isRepeatDisabled={isSubmitting}
-									onRepeat={handleSubmit(submitForm)}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
@@ -217,18 +216,28 @@ export const SignMessage: React.VFC = () => {
 
 							{activeTab === Step.SuccessStep && (
 								<FormButtons>
-									<Clipboard
-										variant="button"
-										data={JSON.stringify(signedMessage)}
-										data-testid="SignMessage__copy-button"
-										wrapperClassName="flex-1 md:flex-none"
-										className="w-full"
+									<div className="mr-auto">
+										<Clipboard
+											variant="button"
+											data={JSON.stringify(signedMessage)}
+											data-testid="SignMessage__copy-button"
+											wrapperClassName="flex-1 md:flex-none"
+											className="w-full"
+										>
+											<Icon name="Copy" />
+											<span className="whitespace-nowrap">
+												{t("MESSAGE.PAGE_SIGN_MESSAGE.COPY_JSON")}
+											</span>
+										</Clipboard>
+									</div>
+
+									<Button
+										onClick={handleBack}
+										data-testid="SignMessage__back-to-wallet-button"
+										variant="secondary"
 									>
-										<Icon name="Copy" />
-										<span className="whitespace-nowrap">
-											{t("MESSAGE.PAGE_SIGN_MESSAGE.COPY_SIGNATURE")}
-										</span>
-									</Clipboard>
+										<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
+									</Button>
 								</FormButtons>
 							)}
 						</StepsProvider>

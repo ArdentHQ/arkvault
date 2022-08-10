@@ -1,3 +1,4 @@
+import { ButtonVariant } from "@/types";
 import React from "react";
 
 interface ClipboardCommonProperties {
@@ -9,6 +10,7 @@ interface ClipboardCommonProperties {
 
 export type ClipboardButtonProperties = ClipboardCommonProperties & {
 	variant: "button";
+	buttonVariant?: ButtonVariant;
 	wrapperClassName?: string;
 } & React.ButtonHTMLAttributes<any>;
 

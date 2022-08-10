@@ -58,6 +58,7 @@ export const translations = {
 	CONTACTS: "Contacts",
 	CONTINUE: "Continue",
 	COPY: "Copy",
+	COPY_ERROR: "Copy Error",
 	CREATE: "Create",
 	CRYPTOASSET: "Cryptoasset",
 	CRYPTOCURRENCY: "Cryptocurrency",

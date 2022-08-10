@@ -93,11 +93,11 @@ export const VerifyMessage: React.VFC = () => {
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
-									title={t("COMMON.ERROR")}
+									title={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE")}
+									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									isRepeatDisabled={isSubmitting}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>
@@ -126,10 +126,10 @@ export const VerifyMessage: React.VFC = () => {
 								<FormButtons>
 									<Button
 										onClick={handleBack}
-										data-testid="VerifyMessage__close-button"
+										data-testid="VerifyMessage__back-to-wallet-button"
 										variant="secondary"
 									>
-										<div className="whitespace-nowrap">{t("COMMON.CLOSE")}</div>
+										<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
 									</Button>
 								</FormButtons>
 							)}

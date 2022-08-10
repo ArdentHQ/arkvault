@@ -18,6 +18,7 @@ const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ClipboardButton = ({
+	buttonVariant = "secondary",
 	data,
 	options,
 	wrapperClassName,
@@ -35,7 +36,7 @@ export const ClipboardButton = ({
 				type="button"
 				onClick={() => copy(data)}
 				data-testid="clipboard-button__wrapper"
-				variant="secondary"
+				variant={buttonVariant}
 				{...properties}
 			>
 				<div className="flex items-center space-x-2">{children}</div>
@@ -47,10 +48,16 @@ export const ClipboardButton = ({
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1, transition: { duration: 0.3 } }}
 						exit={{ opacity: 0, transition: { duration: 0.3 } }}
-						className="absolute inset-0 flex items-center justify-center rounded bg-theme-primary-100 dark:bg-theme-secondary-800"
+						className={cn("absolute inset-0 flex items-center justify-center rounded", {
+							"bg-theme-primary-100 dark:bg-theme-secondary-800": buttonVariant === "secondary",
+							"bg-theme-primary-700": buttonVariant === "primary",
+						})}
 						data-testid="clipboard-button__checkmark"
 					>
-						<Icon name="Checkmark" className="text-theme-primary-600 dark:text-theme-secondary-200" />
+						<Icon name="Checkmark" className={cn({
+							"text-theme-primary-600 dark:text-theme-secondary-200": buttonVariant === "secondary",
+							"text-white": buttonVariant === "primary",
+						})} />
 					</motion.div>
 				)}
 			</AnimatePresence>
