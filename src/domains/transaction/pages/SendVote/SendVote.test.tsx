@@ -641,6 +641,63 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should select sender", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[1].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+
+		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "0.02");
+
+		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+
+		// Select sender
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(wallet.address());
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
+		userEvent.click(firstAddress);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().last().address(),
+		);
+	});
+
 	it("should keep the fee when user step back", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
