@@ -223,7 +223,9 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE),
+		).resolves.toBeVisible();
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -280,7 +282,9 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE),
+		).resolves.toBeVisible();
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -339,7 +343,9 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE),
+		).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -393,7 +399,9 @@ describe("SignMessage", () => {
 
 		userEvent.click(submitButton());
 
-		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE)).resolves.toBeVisible();
+		await expect(
+			screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SUCCESS_STEP.TITLE),
+		).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 

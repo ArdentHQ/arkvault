@@ -38,7 +38,9 @@ cucumber("@verifyMessage", {
 		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
 	},
 	"Then the message is successfully verified": async (t: TestController) => {
-		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.SUCCESS.TITLE).exists).ok();
+		await t
+			.expect(modal.withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists)
+			.ok();
 	},
 });
 cucumber("@verifyMessage-failVerification", {
@@ -57,7 +59,9 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.ERROR.TITLE).exists).ok();
+		await t
+			.expect(modal.withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE).exists)
+			.ok();
 	},
 });
 cucumber("@verifyMessage-openAndClose", {

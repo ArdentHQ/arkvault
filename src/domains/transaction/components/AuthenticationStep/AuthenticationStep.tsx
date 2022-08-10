@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -106,7 +107,13 @@ const LedgerAuthentication = ({
 				wallet={wallet}
 			>
 				<>
-					<StepHeader title={subject === "transaction" ? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE") : t("MESSAGE.LEDGER_CONFIRMATION.TITLE")} />
+					<StepHeader
+						title={
+							subject === "transaction"
+								? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
+								: t("MESSAGE.LEDGER_CONFIRMATION.TITLE")
+						}
+					/>
 
 					<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
 				</>
@@ -189,7 +196,14 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithSecret() && (
 				<>
-					<StepHeader title={title} subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET")} />
+					<StepHeader
+						title={title}
+						subtitle={
+							isTransaction
+								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
+								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
+						}
+					/>
 
 					<FormField name="secret">
 						<FormLabel>{t("COMMON.SECRET")}</FormLabel>
@@ -205,7 +219,11 @@ export const AuthenticationStep = ({
 				<>
 					<StepHeader
 						title={title}
-						subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")}
+						subtitle={
+							isTransaction
+								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+						}
 					/>
 
 					<FormField name="encryptionPassword">
@@ -220,7 +238,14 @@ export const AuthenticationStep = ({
 
 			{requireMnemonic && (
 				<>
-					<StepHeader title={title} subtitle={isTransaction ? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC") : t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")} />
+					<StepHeader
+						title={title}
+						subtitle={
+							isTransaction
+								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
+								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
+						}
+					/>
 
 					<FormField name="mnemonic">
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>

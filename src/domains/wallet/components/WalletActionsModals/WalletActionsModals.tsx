@@ -4,7 +4,6 @@ import { UnlockTokensModal } from "@/domains/transaction/components/UnlockTokens
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
-import { VerifyMessage } from "@/domains/wallet/components/VerifyMessage";
 import { WalletActionsProperties } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import { WalletEncryptionWarning } from "@/domains/wallet/components/WalletEncryptionWarning";
 import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
@@ -41,16 +40,6 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({
 
 	return (
 		<>
-			{activeModal === "verify-message" && (
-				<VerifyMessage
-					isOpen={true}
-					onClose={hideActiveModal}
-					onCancel={hideActiveModal}
-					walletId={wallet.id()}
-					profileId={profile.id()}
-				/>
-			)}
-
 			{activeModal === "receive-funds" && (
 				<ReceiveFunds
 					address={wallet.address()}

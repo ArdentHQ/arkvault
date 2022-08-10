@@ -34,7 +34,7 @@ export const SuccessStep = ({
 			<TransactionDetail
 				className="mt-4 md:mt-2"
 				borderPosition="bottom"
-				label={t("MESSAGE.SIGNATORY")}
+				label={t("COMMON.SIGNATORY")}
 				extra={<Avatar size={iconSize} address={wallet.address()} />}
 			>
 				<div className="w-0 flex-1 text-right md:text-left">

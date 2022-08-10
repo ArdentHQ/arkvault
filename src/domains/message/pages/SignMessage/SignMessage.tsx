@@ -26,7 +26,7 @@ enum Step {
 	ErrorStep,
 }
 
-export const SignMessage = () => {
+export const SignMessage: React.VFC = () => {
 	const { t } = useTranslation();
 
 	const history = useHistory();
@@ -141,7 +141,7 @@ export const SignMessage = () => {
 											<TransactionSender
 												address={activeWallet.address()}
 												network={activeWallet.network()}
-                        paddingPosition="bottom"
+												paddingPosition="bottom"
 												border={false}
 											/>
 
@@ -152,8 +152,8 @@ export const SignMessage = () => {
 									}
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-                  subject="message"
-                  ignoreSecondSignature
+									subject="message"
+									ignoreSecondSignature
 								/>
 							</TabPanel>
 

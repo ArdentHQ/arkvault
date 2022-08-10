@@ -57,27 +57,6 @@ export const translations = {
 		TITLE: "Select Account",
 	},
 
-	MODAL_VERIFY_MESSAGE: {
-		DESCRIPTION: "Authenticate a message from an address below.",
-		ERROR: {
-			DESCRIPTION: "Message could not be verified.",
-			TITLE: "Failure",
-		},
-		JSON_STRING: "JSON String",
-		SUCCESS: {
-			DESCRIPTION: "Message has been verified successfully.",
-			TITLE: "Success",
-		},
-		TITLE: "Verify",
-		VERIFICATION_METHOD: {
-			DESCRIPTION: "Input fields manually or provide a JSON string.",
-			JSON: "JSON",
-			MANUAL: "Manual",
-			TITLE: "Verification Method",
-		},
-		VERIFY: "Verify",
-	},
-
 	MODAL_WALLET_ENCRYPTION: {
 		DESCRIPTION:
 			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your wallet if you want to use an encryption password again.",

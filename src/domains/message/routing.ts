@@ -14,6 +14,6 @@ export const MessageRoutes: RouteItem[] = [
 	{
 		component: VerifyMessage,
 		exact: true,
-		path: ProfilePaths.VerifyMessage,
+		path: ProfilePaths.VerifyMessageWallet,
 	},
 ];

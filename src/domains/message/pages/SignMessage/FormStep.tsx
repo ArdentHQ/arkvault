@@ -40,7 +40,7 @@ export const FormStep = ({
 			<StepHeader title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE")} subtitle={getSubtitle()} />
 
 			<FormField name="signatory-address">
-				<FormLabel label={t("MESSAGE.SIGNATORY")} />
+				<FormLabel label={t("COMMON.SIGNATORY")} />
 				<Input
 					innerClassName="font-semibold"
 					value={wallet.address()}
