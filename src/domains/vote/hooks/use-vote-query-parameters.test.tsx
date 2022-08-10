@@ -59,7 +59,7 @@ describe("useWalletFromQueryParameters hook", () => {
 
 		render(<TestComponent />, { history, withProviders: false });
 
-		await expect(screen.getByTestId("isLoading-false")).resolves.toBeVisible();
+		await expect(screen.findByTestId("isLoading-false")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("votes-0")).toBeInTheDocument();
 		expect(screen.getByTestId("unvotes-0")).toBeInTheDocument();
