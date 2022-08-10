@@ -57,9 +57,9 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 						wrap="hard"
 						ref={signatureReference}
 						defaultValue={JSON.stringify({
-							message: verificationResult.message,
-							signatory: verificationResult.signatory,
-							signature: verificationResult.signature,
+							message: verificationResult?.message,
+							signatory: verificationResult?.signatory,
+							signature: verificationResult?.signature,
 						})}
 						disabled
 					/>
