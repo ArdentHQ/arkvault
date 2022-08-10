@@ -61,6 +61,7 @@ describe("useWalletFromQueryParameters hook", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		walletId = profile.wallets().first().id();
 	});
+
 	const TestComponent: React.FC = () => {
 		const wallet = useWalletFromQueryParameters(profile);
 
@@ -84,7 +85,7 @@ describe("useWalletFromQueryParameters hook", () => {
 
 		render(<TestComponent />, { history, withProviders: false });
 
-		expect(() => screen.getByTestId(walletId)).toThrowError(/Unable to find/);
+		expect(() => screen.getByTestId(walletId)).toThrow(/Unable to find/);
 	});
 
 	it("should not render for undefined wallet in url", () => {
@@ -92,7 +93,7 @@ describe("useWalletFromQueryParameters hook", () => {
 
 		render(<TestComponent />, { history, withProviders: false });
 
-		expect(() => screen.getByTestId(walletId)).toThrowError(/Unable to find/);
+		expect(() => screen.getByTestId(walletId)).toThrow(/Unable to find/);
 	});
 });
 
@@ -130,6 +131,6 @@ describe("useNetworkFromQueryParameters hook", () => {
 
 		render(<TestComponent />, { history, withProviders: false });
 
-		expect(() => screen.getByTestId(nethash)).toThrowError(/Unable to find/);
+		expect(() => screen.getByTestId(nethash)).toThrow(/Unable to find/);
 	});
 });
