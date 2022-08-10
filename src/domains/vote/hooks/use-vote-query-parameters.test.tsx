@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 
@@ -42,15 +41,15 @@ describe("useWalletFromQueryParameters hook", () => {
 	const TestComponent: React.FC = () => {
 		const { votes, unvotes, isLoading } = useDelegatesFromURL({
 			env,
-			profile,
 			network: profile.availableNetworks()[1],
+			profile,
 		});
 
 		return (
 			<>
-				<div data-testid={`isLoading-${isLoading}`}></div>
-				<div data-testid={`votes-${votes.length}`}></div>
-				<div data-testid={`unvotes-${unvotes.length}`}></div>
+				<div data-testid={`isLoading-${isLoading}`} />
+				<div data-testid={`votes-${votes.length}`} />
+				<div data-testid={`unvotes-${unvotes.length}`} />
 			</>
 		);
 	};
