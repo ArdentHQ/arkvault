@@ -1,5 +1,5 @@
-import { ButtonVariant } from "@/types";
 import React from "react";
+import { ButtonVariant } from "@/types";
 
 interface ClipboardCommonProperties {
 	data: string | object;

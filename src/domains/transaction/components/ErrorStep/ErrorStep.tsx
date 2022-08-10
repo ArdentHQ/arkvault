@@ -19,7 +19,14 @@ interface Properties {
 	errorMessage?: string;
 }
 
-export const ErrorStep = ({ title, description, onBack, onRepeat, isRepeatDisabled = false, errorMessage = "test" }: Properties) => {
+export const ErrorStep = ({
+	title,
+	description,
+	onBack,
+	onRepeat,
+	isRepeatDisabled = false,
+	errorMessage = "test",
+}: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
 
@@ -31,7 +38,9 @@ export const ErrorStep = ({ title, description, onBack, onRepeat, isRepeatDisabl
 				<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
 
 				<div className="space-y-6">
-					<p className="hidden text-theme-secondary-text md:block">{description || t("TRANSACTION.ERROR.DESCRIPTION")}</p>
+					<p className="hidden text-theme-secondary-text md:block">
+						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
+					</p>
 
 					<Alert className="md:hidden" variant="danger">
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}

@@ -54,10 +54,13 @@ export const ClipboardButton = ({
 						})}
 						data-testid="clipboard-button__checkmark"
 					>
-						<Icon name="Checkmark" className={cn({
-							"text-theme-primary-600 dark:text-theme-secondary-200": buttonVariant === "secondary",
-							"text-white": buttonVariant === "primary",
-						})} />
+						<Icon
+							name="Checkmark"
+							className={cn({
+								"text-theme-primary-600 dark:text-theme-secondary-200": buttonVariant === "secondary",
+								"text-white": buttonVariant === "primary",
+							})}
+						/>
 					</motion.div>
 				)}
 			</AnimatePresence>
