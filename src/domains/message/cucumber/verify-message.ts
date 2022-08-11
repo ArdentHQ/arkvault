@@ -40,7 +40,9 @@ cucumber("@verifyMessage", {
 	},
 	"Then the message is successfully verified": async (t: TestController) => {
 		await t
-			.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists)
+			.expect(
+				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists,
+			)
 			.ok();
 	},
 });
@@ -62,7 +64,10 @@ cucumber("@verifyMessage-failVerification", {
 	},
 	"Then the message verification fails": async (t: TestController) => {
 		await t
-			.expect(Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE).exists)
+			.expect(
+				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE)
+					.exists,
+			)
 			.ok();
 	},
 });

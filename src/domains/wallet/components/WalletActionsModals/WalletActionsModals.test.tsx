@@ -6,7 +6,6 @@ import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
 import { LedgerProvider } from "@/app/contexts";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { env, getDefaultProfileId, render, syncDelegates } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

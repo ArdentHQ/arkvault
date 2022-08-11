@@ -250,12 +250,11 @@ describe("WalletHeader", () => {
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
 
-		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/sign-message`,
-		);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/sign-message`);
 
 		historySpy.mockRestore();
 	});
+
 	it("should handle message verification", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
@@ -274,9 +273,7 @@ describe("WalletHeader", () => {
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
 
-		expect(historySpy).toHaveBeenCalledWith(
-			`/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`,
-		);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`);
 
 		historySpy.mockRestore();
 	});
