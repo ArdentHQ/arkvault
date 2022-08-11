@@ -175,7 +175,7 @@ export const SignMessage: React.VFC = () => {
 							{activeTab === Step.FormStep && (
 								<FormButtons>
 									<Button
-										data-testid="SignMessage__cancel-button"
+										data-testid="SignMessage__back-button"
 										variant="secondary"
 										disabled={!activeWallet}
 										onClick={handleBack}

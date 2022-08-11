@@ -5,7 +5,7 @@ Feature: Verify Message
         Given Alice is on the wallet details page
         And selects to verify message
         When she enters valid details to verify a message
-        And submits the verify message modal
+        And submits the form
         Then the message is successfully verified
 
     @verifyMessage-failVerification
@@ -13,22 +13,12 @@ Feature: Verify Message
         Given Alice is on the wallet details page
         And selects to verify message
         When she enters invalid details to verify a message
-        And submits the verify message modal
+        And submits the form
         Then the message verification fails
 
-    @verifyMessage-openAndClose
-    Scenario: Open and close Verify Message modal
+    @verifyMessage-openAndGoBack
+    Scenario: Go to Verify Message page and back to Wallet Details page
         Given Alice is on the wallet details page
         And selects to verify message
-        When she closes the verify message modal
-        Then the verify message modal is no longer displayed
-
-    @verifyMessage-openAndCancel
-    Scenario: Open and cancel Verify Message modal
-        Given Alice is on the wallet details page
-        And selects to verify message
-        When she cancels the verify message modal
-        Then the verify message modal is no longer displayed
-
-
-
+        But selects to go back
+        Then the wallet details page is displayed
