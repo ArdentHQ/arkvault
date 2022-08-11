@@ -119,7 +119,7 @@ exports[`MultiSignatureSuccessful should render in lg 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -756,7 +756,7 @@ exports[`MultiSignatureSuccessful should render in md 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -1393,7 +1393,7 @@ exports[`MultiSignatureSuccessful should render in sm 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -1974,7 +1974,7 @@ exports[`MultiSignatureSuccessful should render in xl 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -2611,7 +2611,7 @@ exports[`MultiSignatureSuccessful should render in xs 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -3192,7 +3192,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -3829,7 +3829,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -4328,7 +4328,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
