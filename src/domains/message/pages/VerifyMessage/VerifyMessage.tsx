@@ -47,11 +47,7 @@ export const VerifyMessage: React.VFC = () => {
 	const [activeTab, setActiveTab] = useState(Step.FormStep);
 
 	const handleBack = () => {
-		if (activeTab === Step.FormStep || activeTab === Step.SuccessStep) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
-		}
-
-		setActiveTab(activeTab - 1);
+		return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 	};
 
 	const submitForm = async () => {
