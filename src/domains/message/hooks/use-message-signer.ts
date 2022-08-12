@@ -57,13 +57,6 @@ const sign = async (
 		if (encryptionPassword) {
 			const signingKey = await wallet.signingKey().get(encryptionPassword);
 
-			console.log({
-				m: wallet.actsWithMnemonicWithEncryption(),
-				s: wallet.actsWithSecretWithEncryption(),
-				signingKey,
-				w: wallet.actsWithWifWithEncryption(),
-			});
-
 			if (wallet.actsWithMnemonicWithEncryption()) {
 				return wallet.signatory().mnemonic(signingKey);
 			}
