@@ -31,17 +31,13 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message with encrypted mnemonic", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		const walletActsWithMnemonicWithEncryption = jest.spyOn(wallet, "actsWithMnemonicWithEncryption").mockReturnValue(true);
+		const walletActsWithMnemonicWithEncryption = jest
+			.spyOn(wallet, "actsWithMnemonicWithEncryption")
+			.mockReturnValue(true);
 		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
 
-		const signedMessage = await result.current.sign(
-			wallet,
-			"message",
-			undefined,
-			"password",
-			undefined,
-		);
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
@@ -58,17 +54,13 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message with encrypted secret", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		const walletActsWithSecretWithEncryption = jest.spyOn(wallet, "actsWithSecretWithEncryption").mockReturnValue(true);
+		const walletActsWithSecretWithEncryption = jest
+			.spyOn(wallet, "actsWithSecretWithEncryption")
+			.mockReturnValue(true);
 		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue("secret");
 
-		const signedMessage = await result.current.sign(
-			wallet,
-			"message",
-			undefined,
-			"password",
-			undefined,
-		);
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
@@ -91,13 +83,7 @@ describe("Use Message Signer Hook", () => {
 		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(wifDto.wif);
 
-		const signedMessage = await result.current.sign(
-			wallet,
-			"message",
-			undefined,
-			"password",
-			undefined,
-		);
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",

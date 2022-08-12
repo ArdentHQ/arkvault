@@ -46,9 +46,7 @@ export const VerifyMessage: React.VFC = () => {
 	const [verificationResult, setVerificationResult] = useState<VerificationResult | undefined>();
 	const [activeTab, setActiveTab] = useState(Step.FormStep);
 
-	const handleBack = () => {
-		return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
-	};
+	const handleBack = () => history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 
 	const submitForm = async () => {
 		try {
