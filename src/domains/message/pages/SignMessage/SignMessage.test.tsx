@@ -449,11 +449,11 @@ describe("SignMessage", () => {
 
 		const historySpy = jest.spyOn(history, "push");
 
-    userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
+		userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
 
-    expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
-    historySpy.mockRestore();
+		historySpy.mockRestore();
 
 		signMessageSpy.mockRestore();
 		isLedgerMock.mockRestore();
