@@ -102,7 +102,7 @@ module.exports = {
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",
-		"jest/no-standalone-expect": ["error", { "additionalTestBlockFunctions": ["itif"] }],
+		"jest/no-standalone-expect": ["error", { additionalTestBlockFunctions: ["itif"] }],
 		"jest/no-test-return-statement": "error",
 		"jest/prefer-called-with": "error",
 		"jest/prefer-expect-resolves": "error",
