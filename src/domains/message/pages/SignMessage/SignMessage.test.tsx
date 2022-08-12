@@ -18,7 +18,6 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
-	mockLedgerTransportError,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -462,36 +461,5 @@ describe("SignMessage", () => {
 		getPublicKeySpy.mockRestore();
 		consoleErrorMock.mockRestore();
 		getVersionMock.mockRestore();
-	});
-
-	it("should display error step if ledger is not found in time", async () => {
-		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => void 0);
-
-		const ledgerListenMock = mockLedgerTransportError("no device found");
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(wallet.id()),
-			},
-		);
-
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-		userEvent.paste(messageInput(), signMessage);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
-
-		isLedgerMock.mockRestore();
-		ledgerListenMock.mockRestore();
-		consoleErrorMock.mockRestore();
 	});
 });
