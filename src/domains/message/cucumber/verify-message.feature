@@ -20,5 +20,5 @@ Feature: Verify Message
     Scenario: Go to Verify Message page and back to Wallet Details page
         Given Alice is on the wallet details page
         And selects to verify message
-        But selects to go back
+        But selects to go back from the verify message page
         Then the wallet details page is displayed

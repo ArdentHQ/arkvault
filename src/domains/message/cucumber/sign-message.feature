@@ -19,5 +19,5 @@ Feature: Sign Message
     Scenario: Go to Sign Message page and back to Wallet Details page
         Given Alice is on the wallet details page for imported wallet
         When she selects to sign message
-        But selects to go back
+        But selects to go back from the sign message page
         Then the wallet details page is displayed

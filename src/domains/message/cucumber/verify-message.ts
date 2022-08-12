@@ -74,7 +74,7 @@ cucumber("@verifyMessage-failVerification", {
 
 cucumber("@verifyMessage-openAndGoBack", {
 	...preSteps,
-	"But selects to go back": async (t: TestController) => {
+	"But selects to go back from the verify message page": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="VerifyMessage__back-button"]').exists).ok();
 		await t.click(Selector('[data-testid="VerifyMessage__back-button"]'));
 	},

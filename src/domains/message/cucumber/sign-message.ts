@@ -54,7 +54,7 @@ cucumber("@signMessage-invalidMnemonic", {
 
 cucumber("@signMessage-openAndGoBack", {
 	...preSteps,
-	"But selects to go back": async (t: TestController) => {
+	"But selects to go back from the sign message page": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="SignMessage__back-button"]').exists).ok();
 		await t.click(Selector('[data-testid="SignMessage__back-button"]'));
 	},
