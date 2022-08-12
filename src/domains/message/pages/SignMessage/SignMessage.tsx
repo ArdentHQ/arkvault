@@ -48,7 +48,7 @@ export const SignMessage: React.VFC = () => {
 	const form = useForm({ mode: "onChange" });
 
 	const { formState, getValues, handleSubmit, register } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isSubmitting, isValid } = formState;
 
 	const { signMessage } = useValidation();
 
@@ -194,7 +194,7 @@ export const SignMessage: React.VFC = () => {
 									<Button
 										data-testid="SignMessage__sign-button"
 										type="submit"
-										disabled={isSubmitting || (isDirty ? !isValid : true)}
+										disabled={isSubmitting || !isValid}
 										isLoading={isSubmitting}
 									>
 										{t("COMMON.SIGN")}
