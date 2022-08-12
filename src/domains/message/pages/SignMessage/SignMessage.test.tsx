@@ -25,7 +25,6 @@ const walletUrl = (walletId: string) => `/profiles/${getDefaultProfileId()}/wall
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let secondWallet: Contracts.IReadWriteWallet;
 
 const mnemonic = MNEMONICS[0];
 
@@ -49,24 +48,18 @@ describe("SignMessage", () => {
 			network: "ark.devnet",
 		});
 		profile.wallets().push(wallet);
-
-		secondWallet = await profile.walletFactory().fromAddress({
-			address: "DCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7",
-			coin: "ARK",
-			network: "ark.devnet",
-		});
-		profile.wallets().push(secondWallet);
 	});
 
 	beforeEach(() => history.push(walletUrl(wallet.id())));
 
-	it("should render", async () => {
+	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		await wallet.synchroniser().identity();
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 				<SignMessage />
 			</Route>,
+			breakpoint,
 			{
 				history,
 				route: walletUrl(wallet.id()),
@@ -130,35 +123,7 @@ describe("SignMessage", () => {
 		isLedgerMock.mockRestore();
 	});
 
-	it("should render with mnemonic field for a wallet that has been imported with address", async () => {
-		history.push(walletUrl(secondWallet.id()));
-
-		await secondWallet.synchroniser().identity();
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
-				<SignMessage />
-			</Route>,
-			{
-				history,
-				route: walletUrl(secondWallet.id()),
-			},
-		);
-
-		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-		userEvent.paste(messageInput(), signMessage);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
-
-		await waitFor(() => expect(signButton()).toBeDisabled());
-	});
-
-	it.each(["xs", "lg"])("should sign message (%s)", async (breakpoint) => {
+	it("should sign message with mnemonic (%s)", async () => {
 		const signedMessage = {
 			message: signMessage,
 			signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
@@ -166,11 +131,10 @@ describe("SignMessage", () => {
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
 		};
 
-		renderResponsiveWithRoute(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 				<SignMessage />
 			</Route>,
-			breakpoint,
 			{
 				history,
 				route: walletUrl(wallet.id()),
@@ -211,7 +175,7 @@ describe("SignMessage", () => {
 		navigator.clipboard = clipboardOriginal;
 	});
 
-	it("should sign message with encryption password", async () => {
+	it("should sign message with encrypted mnemonic", async () => {
 		const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[5],
@@ -311,6 +275,68 @@ describe("SignMessage", () => {
 		walletActsWithMnemonic.mockRestore();
 		walletActsWithWithEncryption.mockRestore();
 		fromSecret.mockRestore();
+	});
+
+	it("should sign message with encrypted secret", async () => {
+		const secret = "secret";
+
+		const encryptedWallet = await profile.walletFactory().fromSecret({
+			coin: "ARK",
+			secret,
+			network: "ark.devnet"
+		});
+
+		encryptedWallet.signingKey().set(secret, "password");
+
+		encryptedWallet
+			.data()
+			.set(Contracts.WalletData.ImportMethod, Contracts.WalletImportMethod.SECRET_WITH_ENCRYPTION);
+
+		profile.wallets().push(encryptedWallet);
+
+		history.push(walletUrl(encryptedWallet.id()));
+
+		// const signMock = jest.spyOn(encryptedWallet.message(), "sign").mockResolvedValue("asd");
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
+				<SignMessage />
+			</Route>,
+			{
+				history,
+				route: walletUrl(encryptedWallet.id()),
+			},
+		);
+
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		expect(
+			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
+		).toBeInTheDocument();
+
+		userEvent.paste(messageInput(), signMessage);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+
+		userEvent.click(continueButton());
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+
+		await waitFor(() =>
+			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+		);
+
+		await waitFor(() => expect(signButton()).toBeEnabled());
+
+		userEvent.click(signButton());
+
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		// signMock.mockRestore();
+
+		profile.wallets().forget(encryptedWallet.id());
 	});
 
 	it("should sign message with a ledger wallet", async () => {

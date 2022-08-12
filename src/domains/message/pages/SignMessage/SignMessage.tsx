@@ -99,9 +99,7 @@ export const SignMessage: React.VFC = () => {
 				activeWallet,
 				message,
 				mnemonic,
-				activeWallet.signingKey().exists()
-					? await activeWallet.signingKey().get(encryptionPassword)
-					: undefined,
+				encryptionPassword,
 				secret,
 				{
 					abortSignal,
@@ -112,6 +110,7 @@ export const SignMessage: React.VFC = () => {
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
+			console.log(error);
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
 		}
