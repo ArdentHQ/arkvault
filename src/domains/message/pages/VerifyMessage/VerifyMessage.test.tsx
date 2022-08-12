@@ -28,7 +28,7 @@ let signedMessage: any;
 let signedMessageText: string;
 
 const expectHeading = async (text: string) => {
-  await expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+	await expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
 };
 
 const signatoryInput = () => screen.getByTestId("VerifyMessage__manual-signatory");
