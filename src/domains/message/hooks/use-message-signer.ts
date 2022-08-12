@@ -60,8 +60,8 @@ const sign = async (
 			console.log({
 				m: wallet.actsWithMnemonicWithEncryption(),
 				s: wallet.actsWithSecretWithEncryption(),
-				w: wallet.actsWithWifWithEncryption(),
 				signingKey,
+				w: wallet.actsWithWifWithEncryption(),
 			});
 
 			if (wallet.actsWithMnemonicWithEncryption()) {

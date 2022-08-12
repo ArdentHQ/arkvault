@@ -282,8 +282,8 @@ describe("SignMessage", () => {
 
 		const encryptedWallet = await profile.walletFactory().fromSecret({
 			coin: "ARK",
+			network: "ark.devnet",
 			secret,
-			network: "ark.devnet"
 		});
 
 		encryptedWallet.signingKey().set(secret, "password");

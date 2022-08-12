@@ -95,16 +95,9 @@ export const SignMessage: React.VFC = () => {
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
 
 		try {
-			const signedMessageResult = await sign(
-				activeWallet,
-				message,
-				mnemonic,
-				encryptionPassword,
-				secret,
-				{
-					abortSignal,
-				},
-			);
+			const signedMessageResult = await sign(activeWallet, message, mnemonic, encryptionPassword, secret, {
+				abortSignal,
+			});
 
 			setSignedMessage(signedMessageResult);
 
