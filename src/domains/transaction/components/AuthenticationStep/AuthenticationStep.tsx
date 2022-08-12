@@ -26,7 +26,6 @@ type AuthenticationStepProperties = {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerDetails?: React.ReactNode;
 	subject?: "transaction" | "message";
-	ignoreSecondSignature?: boolean;
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
@@ -130,7 +129,6 @@ export const AuthenticationStep = ({
 	ledgerConnectedModel,
 	ledgerSupportedModels,
 	subject = "transaction",
-	ignoreSecondSignature,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
@@ -159,8 +157,8 @@ export const AuthenticationStep = ({
 		wallet.actsWithWifWithEncryption() ||
 		wallet.actsWithSecretWithEncryption();
 
-	const requireSecondMnemonic = !ignoreSecondSignature && wallet.isSecondSignature() && requireMnemonic;
-	const requireSecondSecret = !ignoreSecondSignature && wallet.isSecondSignature() && wallet.actsWithSecret();
+	const requireSecondMnemonic = subject === "transaction" && wallet.isSecondSignature() && requireMnemonic;
+	const requireSecondSecret = subject === "transaction" && wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	const isTransaction = subject === "transaction";
 

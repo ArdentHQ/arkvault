@@ -153,7 +153,6 @@ export const SignMessage: React.VFC = () => {
 									ledgerIsAwaitingDevice={!hasDeviceAvailable}
 									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
 									subject="message"
-									ignoreSecondSignature
 								/>
 							</TabPanel>
 
