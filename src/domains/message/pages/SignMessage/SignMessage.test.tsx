@@ -6,7 +6,9 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SignMessage } from "./SignMessage";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as messageTranslations } from "@/domains/message/i18n";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -123,7 +125,7 @@ describe("SignMessage", () => {
 		isLedgerMock.mockRestore();
 	});
 
-	it("should sign message with mnemonic (%s)", async () => {
+	it("should sign message with mnemonic", async () => {
 		const signedMessage = {
 			message: signMessage,
 			signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
@@ -153,7 +155,23 @@ describe("SignMessage", () => {
 
 		userEvent.click(continueButton());
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
+		await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
+
+		userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		userEvent.click(continueButton());
+
+		const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
+
+		userEvent.paste(mnemonicInput, "wrong");
+
+		await waitFor(() => expect(signButton()).toBeDisabled());
+
+		mnemonicInput.select();
+
+		userEvent.paste(mnemonicInput, mnemonic);
 
 		await waitFor(() => expect(signButton()).toBeEnabled());
 
@@ -384,6 +402,8 @@ describe("SignMessage", () => {
 
 		await waitFor(() => expect(getPublicKeyMock).toHaveBeenCalledWith("m/44'/1'/0'/0/0"));
 
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
+
 		signMessageSpy.mockRestore();
 		isLedgerMock.mockRestore();
 		ledgerListenMock.mockRestore();
@@ -427,6 +447,14 @@ describe("SignMessage", () => {
 		userEvent.click(continueButton());
 
 		await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
+
+		const historySpy = jest.spyOn(history, "push");
+
+    userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
+
+    expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+    historySpy.mockRestore();
 
 		signMessageSpy.mockRestore();
 		isLedgerMock.mockRestore();

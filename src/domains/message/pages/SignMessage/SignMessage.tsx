@@ -70,11 +70,11 @@ export const SignMessage: React.VFC = () => {
 		// Abort any existing listener
 		abortReference.current.abort();
 
-		if (activeTab === Step.FormStep || activeTab === Step.SuccessStep) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+		if (activeTab === Step.AuthenticationStep) {
+			return setActiveTab(activeTab - 1);
 		}
 
-		setActiveTab(activeTab - 1);
+		return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
 	};
 
 	const handleNext = () => {
@@ -103,7 +103,6 @@ export const SignMessage: React.VFC = () => {
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
-			console.log(error);
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
 		}
@@ -156,9 +155,7 @@ export const SignMessage: React.VFC = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
-									onBack={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onBack={handleBack}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

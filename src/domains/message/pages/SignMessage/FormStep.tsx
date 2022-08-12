@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +19,12 @@ export const FormStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { setValue } = useFormContext();
+	const { setValue, unregister, watch } = useFormContext();
+	const { message } = watch();
+
+	useEffect(() => {
+		unregister("mnemonic");
+	}, [unregister]);
 
 	const getSubtitle = () => {
 		if (wallet.isLedger()) {
@@ -56,6 +61,7 @@ export const FormStep = ({
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
 				<InputCounter
+					defaultValue={message}
 					onChange={(event: ChangeEvent<HTMLInputElement>) =>
 						setValue("message", event.target.value, {
 							shouldDirty: true,

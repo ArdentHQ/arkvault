@@ -89,9 +89,7 @@ export const VerifyMessage: React.VFC = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
-									onBack={() =>
-										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
-									}
+									onBack={handleBack}
 									errorMessage={errorMessage}
 								/>
 							</TabPanel>

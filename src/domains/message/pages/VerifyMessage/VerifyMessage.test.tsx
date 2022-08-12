@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 
 import { createHashHistory } from "history";
 import { VerifyMessage } from "./VerifyMessage";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import {
 	env,
@@ -200,8 +201,6 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(verifyButton());
 
-		userEvent.click(verifyButton());
-
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE);
 
 		messageSpy.mockRestore();
@@ -230,10 +229,15 @@ describe("VerifyMessage", () => {
 
 		userEvent.click(verifyButton());
 
-		userEvent.click(verifyButton());
-
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 
+    const historySpy = jest.spyOn(history, "push");
+
+    userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
+
+    expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+
+    historySpy.mockRestore();
 		messageSpy.mockRestore();
 	});
 });
