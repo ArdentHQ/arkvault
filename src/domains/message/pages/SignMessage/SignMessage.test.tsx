@@ -35,8 +35,9 @@ const messageInput = () => screen.getByTestId("SignMessage__message-input");
 
 const signMessage = "Hello World";
 
-const expectHeading = async (text: string) =>
-	expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+const expectHeading = async (text: string) => {
+	await expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+};
 
 describe("SignMessage", () => {
 	beforeAll(async () => {
@@ -211,14 +212,16 @@ describe("SignMessage", () => {
 	});
 
 	it("should sign message with encryption password", async () => {
-		history.push(walletUrl(secondWallet.id()));
+		const encryptedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[5],
+			network: "ark.devnet",
+			password: "password",
+		});
 
-		const walletHasSigningKey = jest.spyOn(secondWallet.signingKey(), "exists").mockReturnValue(true);
-		const walletActsWithAddress = jest.spyOn(secondWallet, "actsWithAddress").mockReturnValue(false);
-		const walletActsWithSecretWithEncryption = jest
-			.spyOn(secondWallet, "actsWithSecretWithEncryption")
-			.mockReturnValue(true);
-		const walletWifMock = jest.spyOn(secondWallet.signingKey(), "get").mockReturnValue(mnemonic);
+		profile.wallets().push(encryptedWallet);
+
+		history.push(walletUrl(encryptedWallet.id()));
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -226,7 +229,7 @@ describe("SignMessage", () => {
 			</Route>,
 			{
 				history,
-				route: walletUrl(secondWallet.id()),
+				route: walletUrl(encryptedWallet.id()),
 			},
 		);
 
@@ -238,28 +241,25 @@ describe("SignMessage", () => {
 
 		userEvent.paste(messageInput(), signMessage);
 
-		await waitFor(() => {
-			expect(continueButton()).toBeEnabled();
-		});
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(continueButton());
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
-		await waitFor(() => {
-			expect(signButton()).toBeEnabled();
-		});
+		await waitFor(() =>
+			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+		);
+
+		await waitFor(() => expect(signButton()).toBeEnabled());
 
 		userEvent.click(signButton());
 
-		expect(asFragment()).toMatchSnapshot();
-
 		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-		walletActsWithAddress.mockRestore();
-		walletHasSigningKey.mockRestore();
-		walletActsWithSecretWithEncryption.mockRestore();
-		walletWifMock.mockRestore();
+		expect(asFragment()).toMatchSnapshot();
+
+		profile.wallets().forget(encryptedWallet.id());
 	});
 
 	it("should sign message with secret", async () => {

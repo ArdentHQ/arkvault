@@ -157,10 +157,10 @@ export const AuthenticationStep = ({
 		wallet.actsWithWifWithEncryption() ||
 		wallet.actsWithSecretWithEncryption();
 
-	const requireSecondMnemonic = subject === "transaction" && wallet.isSecondSignature() && requireMnemonic;
-	const requireSecondSecret = subject === "transaction" && wallet.isSecondSignature() && wallet.actsWithSecret();
-
 	const isTransaction = subject === "transaction";
+
+	const requireSecondMnemonic = isTransaction && wallet.isSecondSignature() && requireMnemonic;
+	const requireSecondSecret = isTransaction && wallet.isSecondSignature() && wallet.actsWithSecret();
 
 	return (
 		<div data-testid="AuthenticationStep" className="space-y-6">

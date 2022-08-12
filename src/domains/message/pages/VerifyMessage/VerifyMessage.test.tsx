@@ -27,8 +27,9 @@ let walletUrl: string;
 let signedMessage: any;
 let signedMessageText: string;
 
-const expectHeading = async (text: string) =>
-	expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+const expectHeading = async (text: string) => {
+  await expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+};
 
 const signatoryInput = () => screen.getByTestId("VerifyMessage__manual-signatory");
 const messageInput = () => screen.getByTestId("VerifyMessage__manual-message");
@@ -187,7 +188,7 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		const messageSpy = jest.spyOn(wallet.message(), "verify").mockReturnValue(false);
+		const messageSpy = jest.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
 		userEvent.paste(signatoryInput(), signedMessage.signatory);
 		userEvent.paste(messageInput(), signedMessage.message);

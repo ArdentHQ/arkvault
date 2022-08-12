@@ -78,8 +78,6 @@ export const SignMessage: React.VFC = () => {
 	};
 
 	const handleNext = () => {
-		console.log("next");
-
 		abortReference.current = new AbortController();
 
 		const newIndex = activeTab + 1;
@@ -92,8 +90,6 @@ export const SignMessage: React.VFC = () => {
 	};
 
 	const submitForm = async () => {
-		console.log("submitting form");
-
 		const abortSignal = abortReference.current?.signal;
 
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
@@ -116,7 +112,6 @@ export const SignMessage: React.VFC = () => {
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
-			console.log(error);
 			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
 			setActiveTab(Step.ErrorStep);
 		}
