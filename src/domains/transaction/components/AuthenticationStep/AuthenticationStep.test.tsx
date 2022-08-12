@@ -20,7 +20,7 @@ const secondMnemonicID = "AuthenticationStep__second-mnemonic";
 const secondSecretID = "AuthenticationStep__second-secret";
 const ARKDevnet = "ark.devnet";
 
-const itif = (condition) => (condition ? it : it.skip);
+const itif = (condition: boolean) => (condition ? it : it.skip);
 
 jest.mock("react-router-dom", () => ({
 	...jest.requireActual("react-router-dom"),
