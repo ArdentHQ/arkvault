@@ -30,7 +30,13 @@ export const useVoteActions = ({
 
 		const parameters = new URLSearchParams();
 
-		parameters.set("nethash", wallet.network().meta().nethash);
+		const nethash = profile
+			.wallets()
+			.findById(walletId as string)
+			.network()
+			.meta().nethash;
+
+		parameters.set("nethash", nethash);
 
 		appendParameters(parameters, "unvote", unvotes);
 

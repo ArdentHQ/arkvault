@@ -19,7 +19,7 @@ describe("useVoteActions", () => {
 		await profile.sync();
 	});
 
-	it("should not set nethash parameter if wallet is not found", () => {
+	it("should net nethash parameter", () => {
 		const wallet = profile.wallets().first();
 		const nethashSpy = jest.spyOn(wallet.network(), "meta").mockReturnValue(() => {
 			"1";
@@ -29,7 +29,7 @@ describe("useVoteActions", () => {
 			useVoteActions({
 				hasWalletId: false,
 				profile,
-				selectedAddress: "1",
+				selectedAddress: wallet.address(),
 				selectedNetwork: wallet.network().id(),
 				wallet,
 			}),
@@ -37,6 +37,6 @@ describe("useVoteActions", () => {
 
 		result.current.navigateToSendVote([], []);
 
-		expect(nethashSpy).not.toHaveBeenCalled();
+		expect(nethashSpy).toHaveBeenCalled();
 	});
 });
