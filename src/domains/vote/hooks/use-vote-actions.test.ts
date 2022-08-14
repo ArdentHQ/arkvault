@@ -37,6 +37,6 @@ describe("useVoteActions", () => {
 
 		result.current.navigateToSendVote([], []);
 
-		expect(nethashSpy).toHaveBeenCalled();
+		expect(nethashSpy).toHaveBeenCalledWith();
 	});
 });

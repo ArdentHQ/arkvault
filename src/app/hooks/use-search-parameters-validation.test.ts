@@ -194,24 +194,10 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
-	it("should throw if recipient does not correspond to network", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
-
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
-		const { result } = renderHook(() => useSearchParametersValidation());
-
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
-		);
-	});
-
 	it("should validate vote", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
 
 		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
