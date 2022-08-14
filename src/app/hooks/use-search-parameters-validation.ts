@@ -19,6 +19,11 @@ interface ValidateParameters {
 	parameters: URLSearchParams;
 }
 
+interface PathProperties {
+	profileId: string;
+	searchParameters: URLSearchParams;
+}
+
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
 
 export const useSearchParametersValidation = () => {
@@ -50,12 +55,16 @@ export const useSearchParametersValidation = () => {
 
 	const methods = {
 		transfer: {
-			path: (profileId: string) => generatePath(ProfilePaths.SendTransfer, { profileId }),
+			path: ({ profileId, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendTransfer, { profileId })}?${searchParameters.toString()}`,
 			validate: validateTransfer,
 		},
 		vote: {
-			path: (profileId: string) => generatePath(ProfilePaths.SendVote, { profileId }),
-			validate: validateTransfer,
+			path: ({ profileId, searchParameters }: PathProperties) => {
+				searchParameters.set("vote", searchParameters.get("delegate") as string);
+				return `${generatePath(ProfilePaths.SendVote, { profileId })}?${searchParameters.toString()}`;
+			},
+			validate: validateVote,
 		},
 	};
 
