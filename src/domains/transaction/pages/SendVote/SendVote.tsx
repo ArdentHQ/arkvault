@@ -99,9 +99,6 @@ export const SendVote = () => {
 	useEffect(() => {
 		const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
 
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
-
 		if (!newSenderWallet) {
 			return;
 		}

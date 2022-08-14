@@ -45,7 +45,7 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	const validateVote = async ({ parameters }: ValidateParameters) => {
+	const validateVote = ({ parameters }: ValidateParameters) => {
 		const delegate = parameters.get("delegate");
 
 		if (!delegate) {
@@ -150,7 +150,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate({ profile, network, parameters });
+		await methods[method].validate({ network, parameters, profile });
 	};
 
 	return { methods, validateSearchParameters };

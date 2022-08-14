@@ -20,7 +20,6 @@ const history = createHashHistory();
 let profile: Contracts.IProfile;
 
 let nethash: string;
-let walletId: string;
 let resetProfileNetworksMock: () => void;
 
 describe("useQueryParameters hook", () => {
