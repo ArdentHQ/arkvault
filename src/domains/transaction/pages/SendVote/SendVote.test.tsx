@@ -137,8 +137,8 @@ describe("SendVote", () => {
 	});
 
 	it("should return to the select a delegate page to vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -150,7 +150,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -174,7 +174,7 @@ describe("SendVote", () => {
 	});
 
 	it("should return to the select a delegate page to unvote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -188,7 +188,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -214,7 +214,7 @@ describe("SendVote", () => {
 	});
 
 	it("should return to the select a delegate page to unvote/vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -237,7 +237,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -266,7 +266,7 @@ describe("SendVote", () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -289,7 +289,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { history } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -388,7 +388,7 @@ describe("SendVote", () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -410,7 +410,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -531,7 +531,7 @@ describe("SendVote", () => {
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -552,7 +552,7 @@ describe("SendVote", () => {
 		);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<FormProvider {...form.current}>
 					<LedgerProvider>
 						<SendVote />
@@ -642,11 +642,11 @@ describe("SendVote", () => {
 	});
 
 	it("should select sender", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -698,7 +698,7 @@ describe("SendVote", () => {
 	});
 
 	it("should keep the fee when user step back", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -711,7 +711,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -756,7 +756,7 @@ describe("SendVote", () => {
 	});
 
 	it("should move back and forth between steps", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -769,7 +769,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -831,7 +831,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote transaction", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -844,7 +844,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -907,7 +907,7 @@ describe("SendVote", () => {
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -920,7 +920,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -964,7 +964,7 @@ describe("SendVote", () => {
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -977,7 +977,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -1021,7 +1021,7 @@ describe("SendVote", () => {
 	});
 
 	it("should show error if wrong mnemonic", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -1034,7 +1034,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -1082,7 +1082,7 @@ describe("SendVote", () => {
 
 		const history = createHashHistory();
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -1095,7 +1095,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -1161,7 +1161,7 @@ describe("SendVote", () => {
 			.spyOn(wallet.multiSignature(), "all")
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -1174,7 +1174,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -1255,7 +1255,7 @@ describe("SendVote", () => {
 			rejected: [],
 		});
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
@@ -1268,7 +1268,7 @@ describe("SendVote", () => {
 		appendParameters(parameters, "unvote", unvotes);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -1350,7 +1350,7 @@ describe("SendVote", () => {
 		const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
 		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
-		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
@@ -1372,7 +1372,7 @@ describe("SendVote", () => {
 		);
 
 		render(
-			<Route path="/profiles/:profileId/send-vote">
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<FormProvider {...form.current}>
 					<LedgerProvider>
 						<SendVote />
