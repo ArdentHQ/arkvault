@@ -197,8 +197,6 @@ describe("useSearchParametersValidation", () => {
 	it("should validate vote", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
 
-		const { result: translation } = renderHook(() => useTranslation());
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
