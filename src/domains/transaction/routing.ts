@@ -37,6 +37,11 @@ export const TransactionRoutes: RouteItem[] = [
 	{
 		component: SendVote,
 		exact: true,
+		path: ProfilePaths.SendVoteWallet,
+	},
+	{
+		component: SendVote,
+		exact: true,
 		path: ProfilePaths.SendVote,
 	},
 ];

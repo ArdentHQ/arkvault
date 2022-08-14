@@ -5,11 +5,7 @@ import { Route } from "react-router-dom";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import {
-	useNetworkFromQueryParameters,
-	useQueryParameters,
-	useWalletFromQueryParameters,
-} from "./use-query-parameters";
+import { useNetworkFromQueryParameters, useQueryParameters } from "./use-query-parameters";
 
 import {
 	render,
@@ -53,47 +49,6 @@ describe("useQueryParameters hook", () => {
 		userEvent.click(screen.getByTestId("header_test"));
 
 		expect(screen.getByText("useQueryParameters Test Component")).toBeInTheDocument();
-	});
-});
-
-describe("useWalletFromQueryParameters hook", () => {
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		walletId = profile.wallets().first().id();
-	});
-
-	const TestComponent: React.FC = () => {
-		const wallet = useWalletFromQueryParameters(profile);
-
-		if (!wallet) {
-			return null;
-		}
-
-		return <div data-testid={wallet.id()} />;
-	};
-
-	it("should find profile wallet from query parameters", () => {
-		history.push(`/?walletId=${walletId}`);
-
-		render(<TestComponent />, { history, withProviders: false });
-
-		expect(screen.getByTestId(walletId)).toBeInTheDocument();
-	});
-
-	it("should not find profile wallet from query parameters", () => {
-		history.push(`/?walletId=1`);
-
-		render(<TestComponent />, { history, withProviders: false });
-
-		expect(() => screen.getByTestId(walletId)).toThrow(/Unable to find/);
-	});
-
-	it("should not render for undefined wallet in url", () => {
-		history.push(`/`);
-
-		render(<TestComponent />, { history, withProviders: false });
-
-		expect(() => screen.getByTestId(walletId)).toThrow(/Unable to find/);
 	});
 });
 

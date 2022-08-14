@@ -13,16 +13,18 @@ interface RequiredParameters {
 	nethash?: string;
 }
 
+interface ValidateParameters {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	parameters: URLSearchParams;
+}
+
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
 
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
 
-	const validateTransfer = async (
-		profile: Contracts.IProfile,
-		network: Networks.Network,
-		parameters: URLSearchParams,
-	) => {
+	const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
 		const recipient = parameters.get("recipient");
 
 		if (recipient) {
@@ -38,9 +40,21 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
+	const validateVote = async ({ parameters }: ValidateParameters) => {
+		const delegate = parameters.get("delegate");
+
+		if (!delegate) {
+			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_MISSING"));
+		}
+	};
+
 	const methods = {
 		transfer: {
 			path: (profileId: string) => generatePath(ProfilePaths.SendTransfer, { profileId }),
+			validate: validateTransfer,
+		},
+		vote: {
+			path: (profileId: string) => generatePath(ProfilePaths.SendVote, { profileId }),
 			validate: validateTransfer,
 		},
 	};
@@ -127,7 +141,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate(profile, network, parameters);
+		await methods[method].validate({ profile, network, parameters });
 	};
 
 	return { methods, validateSearchParameters };

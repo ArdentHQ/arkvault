@@ -414,6 +414,7 @@ export const translations = {
 		NETWORK_NOT_ENABLED: 'network "{{network}}" is not enabled.',
 		NETWORK_NO_WALLETS: 'the current profile has no wallets available for the "{{network}}" network.',
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
+		DELEGATE_MISSING: "delegate parameter is missing.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

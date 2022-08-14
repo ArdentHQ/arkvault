@@ -14,12 +14,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import {
-	useActiveProfile,
-	useValidation,
-	useNetworkFromQueryParameters,
-	useWalletFromQueryParameters,
-} from "@/app/hooks";
+import { useActiveProfile, useValidation, useNetworkFromQueryParameters, useActiveWalletWhenNeeded } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -50,7 +45,7 @@ export const SendVote = () => {
 	assertNetwork(activeNetwork);
 
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
-	const wallet = useWalletFromQueryParameters(activeProfile);
+	const wallet = useActiveWalletWhenNeeded(false);
 
 	const { votes, unvotes, voteDelegates, unvoteDelegates } = useDelegatesFromURL({
 		env,
@@ -103,6 +98,9 @@ export const SendVote = () => {
 
 	useEffect(() => {
 		const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
+
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!newSenderWallet) {
 			return;

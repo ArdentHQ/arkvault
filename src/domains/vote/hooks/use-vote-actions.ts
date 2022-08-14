@@ -24,23 +24,20 @@ export const useVoteActions = ({
 	const history = useHistory();
 
 	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
-		const activeWallet = hasWalletId
-			? wallet
-			: profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork);
+		const walletId = hasWalletId
+			? wallet.id()
+			: profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id();
 
 		const parameters = new URLSearchParams();
+
+		parameters.set("nethash", wallet.network().meta().nethash);
 
 		appendParameters(parameters, "unvote", unvotes);
 
 		appendParameters(parameters, "vote", votes);
 
-		if (activeWallet) {
-			parameters.set("walletId", activeWallet.id());
-			parameters.set("nethash", activeWallet.network().meta().nethash);
-		}
-
 		history.push({
-			pathname: generatePath(ProfilePaths.SendVote, { profileId: profile.id() }),
+			pathname: generatePath(ProfilePaths.SendVoteWallet, { profileId: profile.id(), walletId }),
 			search: `?${parameters}`,
 		});
 	};
