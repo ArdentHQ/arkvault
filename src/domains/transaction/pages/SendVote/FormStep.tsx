@@ -15,9 +15,10 @@ import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
 	wallet?: ProfilesContracts.IReadWriteWallet;
+	isWalletFieldDisabled?: boolean;
 } & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
 	const { setValue } = useFormContext();
 
@@ -54,6 +55,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepP
 
 				<div data-testid="sender-address">
 					<SelectAddress
+						disabled={isWalletFieldDisabled !== false}
 						wallet={
 							wallet
 								? {

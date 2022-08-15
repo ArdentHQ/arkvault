@@ -385,6 +385,7 @@ export const SendVote = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
+									isWalletFieldDisabled={!!wallet}
 									profile={activeProfile}
 									unvotes={unvotes}
 									votes={votes}
