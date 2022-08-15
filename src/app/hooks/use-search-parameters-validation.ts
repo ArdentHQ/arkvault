@@ -45,11 +45,21 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	const validateVote = ({ parameters }: ValidateParameters) => {
+	const validateVote = async ({ parameters, profile, network }: ValidateParameters) => {
 		const delegate = parameters.get("delegate");
 
 		if (!delegate) {
 			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_MISSING"));
+		}
+
+		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+		await coin.__construct();
+
+		const isValid = await coin.address().validate(delegate);
+
+		if (!isValid) {
+			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 		}
 	};
 
