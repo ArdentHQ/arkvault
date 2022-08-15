@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
 import { Amount } from "@/app/components/Amount";
@@ -128,17 +128,6 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 	const { profileIsSyncingExchangeRates, profileIsSyncing } = useConfiguration();
 
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)!;
-	const [totalNetworkBalance, totalConvertedNetworkBalance] = useMemo<[number, number]>(() => {
-		let totalNetworkBalance = 0;
-		let totalConvertedNetworkBalance = 0;
-
-		for (const wallet of wallets) {
-			totalNetworkBalance += wallet.balance();
-			totalConvertedNetworkBalance += wallet.convertedBalance();
-		}
-
-		return [totalNetworkBalance, totalConvertedNetworkBalance];
-	}, [wallets]);
 
 	const renderWallets = () => {
 		if (profileIsSyncing) {
@@ -152,6 +141,8 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		if (profileIsSyncing) {
 			return <GroupSkeleton width={140} className="h-5" innerClassName="h-4" />;
 		}
+
+		const totalNetworkBalance = wallets.reduce((balance, wallet) => balance + wallet.balance(), 0);
 
 		return <Amount value={totalNetworkBalance} ticker={network.ticker()} />;
 	};
@@ -168,6 +159,11 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		if (profileIsSyncingExchangeRates || profileIsSyncing) {
 			return <GroupSkeleton width={110} className="h-4" innerClassName="h-3.5" />;
 		}
+
+		const totalConvertedNetworkBalance = wallets.reduce(
+			(balance, wallet) => balance + wallet.convertedBalance(),
+			0,
+		);
 
 		return <Amount value={totalConvertedNetworkBalance} ticker={exchangeCurrency} />;
 	};
