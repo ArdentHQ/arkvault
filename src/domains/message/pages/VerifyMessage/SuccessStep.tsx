@@ -6,7 +6,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { TextArea } from "@/app/components/TextArea";
 import { Alert } from "@/app/components/Alert";
-import { MdAndAbove } from "@/app/components/Breakpoint";
+import { SmAndAbove } from "@/app/components/Breakpoint";
 import { Image } from "@/app/components/Image";
 import { VerificationResult } from "@/domains/message/pages/VerifyMessage/VerifyMessage";
 
@@ -45,11 +45,11 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 		<section>
 			<StepHeader title={getTitle()} />
 
-			<MdAndAbove>
-				<Image name={isVerified ? "SuccessBanner" : "ErrorBanner"} className="my-8 w-full" />
-			</MdAndAbove>
+			<SmAndAbove>
+				<Image name={isVerified ? "SuccessBanner" : "ErrorBanner"} className="mt-8 w-full" />
+			</SmAndAbove>
 
-			<Alert variant={isVerified ? "success" : "danger"}>{getDescription()}</Alert>
+			<Alert className="mt-6 sm:mt-8" variant={isVerified ? "success" : "danger"}>{getDescription()}</Alert>
 
 			<div className="pt-4 md:pt-6">
 				<FormField name="json-signature">
