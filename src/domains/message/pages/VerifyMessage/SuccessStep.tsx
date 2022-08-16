@@ -49,7 +49,9 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 				<Image name={isVerified ? "SuccessBanner" : "ErrorBanner"} className="mt-8 w-full" />
 			</SmAndAbove>
 
-			<Alert className="mt-6 sm:mt-8" variant={isVerified ? "success" : "danger"}>{getDescription()}</Alert>
+			<Alert className="mt-6 sm:mt-8" variant={isVerified ? "success" : "danger"}>
+				{getDescription()}
+			</Alert>
 
 			<div className="pt-4 md:pt-6">
 				<FormField name="json-signature">
