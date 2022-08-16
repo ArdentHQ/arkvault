@@ -13,8 +13,6 @@ import { VerificationResult } from "@/domains/message/pages/VerifyMessage/Verify
 export const SuccessStep = ({ verificationResult }: { verificationResult?: VerificationResult }) => {
 	const { t } = useTranslation();
 
-	const signatureReference = useRef();
-
 	const isVerified = verificationResult?.verified;
 
 	const { setError } = useFormContext();
@@ -58,9 +56,7 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 					<FormLabel label={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING")} />
 					<TextArea
 						className="py-4"
-						name="signature"
 						wrap="hard"
-						ref={signatureReference}
 						defaultValue={JSON.stringify({
 							message: verificationResult?.message,
 							signatory: verificationResult?.signatory,

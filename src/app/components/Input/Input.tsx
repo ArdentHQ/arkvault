@@ -54,6 +54,10 @@ export const InputWrapperStyled = styled.div<{
 	}}
 
 	${({ disabled, invalid }) => {
+		if (disabled && invalid) {
+			return tw`border-theme-danger-500 bg-theme-secondary-100 dark:bg-theme-secondary-800`;
+		}
+
 		if (disabled) {
 			return tw`border-theme-secondary-300 dark:border-theme-secondary-700 bg-theme-secondary-100 dark:bg-theme-secondary-800`;
 		}

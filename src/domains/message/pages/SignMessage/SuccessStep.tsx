@@ -54,7 +54,6 @@ export const SuccessStep = ({
 					<FormLabel label={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.JSON_STRING")} />
 					<TextArea
 						className="py-4"
-						name="signature"
 						wrap="hard"
 						ref={messageReference}
 						defaultValue={JSON.stringify(signedMessage)}
