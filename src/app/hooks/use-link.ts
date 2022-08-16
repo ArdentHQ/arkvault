@@ -14,6 +14,7 @@ export const useLink: UseLinkHook = () => ({
 			throw new Error(`"${value}" is not a valid mailto URL`);
 		}
 
-		location.href = value;
+		const url = new URL(value);
+		window.open(url.toString());
 	},
 });
