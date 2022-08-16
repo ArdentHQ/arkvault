@@ -225,7 +225,6 @@ export const LedgerScanStep = ({
 	}, [profile, wallets]);
 
 	const scanMore = useCallback(() => {
-		console.log("scan more", { lastPath });
 		scan(profile, lastPath);
 	}, [scan, lastPath, profile]);
 
@@ -243,7 +242,6 @@ export const LedgerScanStep = ({
 	}, [setRetryFn, scan, canRetry, profile, lastPath]);
 
 	useEffect(() => {
-		console.log("scan", { lastPath });
 		scan(profile, lastPath);
 	}, [profile]);
 

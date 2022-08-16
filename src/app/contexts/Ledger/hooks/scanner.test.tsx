@@ -234,7 +234,7 @@ describe("Use Ledger Scanner", () => {
 
 			return (
 				<div>
-					<button onClick={() => scan(profile)}>Scan</button>
+					<button onClick={() => scan(profile, path1)}>Scan</button>
 				</div>
 			);
 		};
