@@ -174,7 +174,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const scroll = useScroll();
-	const { openExternal } = useLink();
+	const { openExternal, openMailto } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const availableNetworks = useNetworks({ profile });
 
@@ -378,6 +378,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							userInitials={userInitials}
 							avatarImage={profile.avatar()}
 							onUserAction={(action: DropdownOption) => {
+								if (action.isMail) {
+									return openMailto(action.mountPath());
+								}
 								if (action.isExternal) {
 									return openExternal(action.mountPath());
 								}
