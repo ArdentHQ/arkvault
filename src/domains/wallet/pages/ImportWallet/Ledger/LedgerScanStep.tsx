@@ -202,8 +202,7 @@ export const LedgerScanStep = ({
 
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
-	const { scan, selectedWallets, canRetry, isScanning, isScanningMore, abortScanner, error, loadedWallets } =
-		ledgerScanner;
+	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 
 	// eslint-disable-next-line arrow-body-style
 	useEffect(() => {
@@ -213,7 +212,7 @@ export const LedgerScanStep = ({
 	}, [abortScanner]);
 
 	const lastPath = useMemo(() => {
-		const ledgerPaths = ledgerScanner.wallets.map(({ path }) => path);
+		const ledgerPaths = wallets.map(({ path }) => path);
 		const profileWalletsPaths = profile
 			.wallets()
 			.values()
@@ -222,7 +221,7 @@ export const LedgerScanStep = ({
 		return [...profileWalletsPaths, ...ledgerPaths]
 			.filter(Boolean)
 			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
-	}, [profile, ledgerScanner]);
+	}, [profile, wallets]);
 
 	const scanMore = useCallback(() => {
 		console.log("scan more", { lastPath });

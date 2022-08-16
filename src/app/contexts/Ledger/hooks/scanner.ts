@@ -38,7 +38,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 
 			setIsScanning(true);
 
-			if (state.wallets.length > 0) {
+			if (wallets.length > 0) {
 				setIsScanningMore(true);
 			}
 
@@ -49,11 +49,11 @@ export const useLedgerScanner = (coin: string, network: string) => {
 				const instance = profile.coins().set(coin, network);
 
 				// @ts-ignore
-				const wallets = await instance.ledger().scan({ onProgress, startPath });
+				const ledgerWallets = await instance.ledger().scan({ onProgress, startPath });
 
 				const legacyWallets = await instance.ledger().scan({ onProgress, useLegacy: true });
 
-				const allWallets = { ...legacyWallets, ...wallets };
+				const allWallets = { ...legacyWallets, ...ledgerWallets };
 
 				let ledgerData: LedgerData[] = [];
 
@@ -70,7 +70,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					}
 				}
 
-				ledgerData = uniqBy([...state.wallets, ...ledgerData], (wallet) => wallet.address);
+				ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
 
 				if (abortRetryReference.current) {
 					return;
