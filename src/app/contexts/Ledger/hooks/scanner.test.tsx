@@ -283,7 +283,7 @@ describe("Use Ledger Scanner", () => {
 
 		userEvent.click(screen.getByTestId("scan"));
 
-		await waitFor(() => expect(screen.queryByTestId("scan")).not.toBeInTheDocument());
+		await expect(screen.findByTestId("scanMore")).resolves.toBeVisible();
 
 		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
 
