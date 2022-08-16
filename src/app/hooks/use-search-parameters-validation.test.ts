@@ -195,11 +195,26 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should validate vote", async () => {
-		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
+		const parameters = new URLSearchParams(
+			"coin=ARK&network=ark.devnet&method=vote&delegate=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
+	});
+
+	it("should fail to validate delegate address", async () => {
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
+		);
 	});
 
 	it("should require delegate parameter if it is a vote link", async () => {

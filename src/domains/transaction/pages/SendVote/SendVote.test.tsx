@@ -642,11 +642,11 @@ describe("SendVote", () => {
 	});
 
 	it("should select sender", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
 		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+			<Route path="/profiles/:profileId/send-vote">
 				<LedgerProvider>
 					<SendVote />
 				</LedgerProvider>
@@ -661,12 +661,9 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(wallet.address());
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
 		userEvent.click(firstAddress);
