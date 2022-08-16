@@ -2,7 +2,6 @@ import { uniqBy } from "@ardenthq/sdk-helpers";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import { Contracts } from "@ardenthq/sdk";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
-import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
@@ -25,6 +24,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	const canRetry = !!error;
 
 	const [isScanning, setIsScanning] = useState(false);
+	const [isScanningMore, setIsScanningMore] = useState(false);
 	const abortRetryReference = useRef<boolean>(false);
 
 	const onProgress = (wallet: Contracts.WalletData) => {
@@ -32,25 +32,24 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scan = useCallback(
-		async (profile: ProfilesContracts.IProfile) => {
+		async (profile: ProfilesContracts.IProfile, startPath: string) => {
 			setIdle();
 			dispatch({ type: "waiting" });
+
 			setIsScanning(true);
+
+			if (state.wallets.length > 0) {
+				setIsScanningMore(true);
+			}
+
 			setBusy();
 			abortRetryReference.current = false;
 
 			try {
 				const instance = profile.coins().set(coin, network);
 
-				const lastImportedPath = profile
-					.wallets()
-					.values()
-					.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath))
-					.filter(Boolean)
-					.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
-
 				// @ts-ignore
-				const wallets = await instance.ledger().scan({ onProgress, startPath: lastImportedPath });
+				const wallets = await instance.ledger().scan({ onProgress, startPath });
 
 				const legacyWallets = await instance.ledger().scan({ onProgress, useLegacy: true });
 
@@ -71,7 +70,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					}
 				}
 
-				ledgerData = uniqBy(ledgerData, (wallet) => wallet.address);
+				ledgerData = uniqBy([...state.wallets, ...ledgerData], (wallet) => wallet.address);
 
 				if (abortRetryReference.current) {
 					return;
@@ -84,8 +83,9 @@ export const useLedgerScanner = (coin: string, network: string) => {
 
 			setIdle();
 			setIsScanning(false);
+			setIsScanningMore(false);
 		},
-		[coin, network, setBusy, setIdle],
+		[coin, network, setBusy, setIdle, state],
 	);
 
 	const abortScanner = useCallback(() => {
@@ -101,6 +101,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 		canRetry,
 		error,
 		isScanning,
+		isScanningMore,
 		isSelected,
 		loadedWallets,
 		scan,

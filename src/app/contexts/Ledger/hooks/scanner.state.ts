@@ -52,8 +52,6 @@ export const scannerReducer = (state: State, action: Action): State => {
 		waiting: () => ({
 			...state,
 			error: undefined,
-			selected: [],
-			wallets: [],
 		}),
 	};
 
