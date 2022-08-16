@@ -14,7 +14,13 @@ import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useValidation, useNetworkFromQueryParameters, useActiveWalletWhenNeeded } from "@/app/hooks";
+import {
+	useActiveProfile,
+	useValidation,
+	useNetworkFromQueryParameters,
+	useActiveWalletWhenNeeded,
+	useProfileJobs,
+} from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
@@ -64,6 +70,8 @@ export const SendVote = () => {
 	const { senderAddress } = form.watch();
 
 	const { hasDeviceAvailable, isConnected } = useLedgerContext();
+	const { syncProfileWallets } = useProfileJobs(activeProfile);
+
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
 	const { isDirty, isValid, isSubmitting } = formState;
 
@@ -107,10 +115,7 @@ export const SendVote = () => {
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
-			console.log("syncing");
-			newSenderWallet?.synchroniser().coin();
-			newSenderWallet?.synchroniser().identity();
-			newSenderWallet?.synchroniser().votes();
+			syncProfileWallets(true);
 		}
 
 		setActiveWallet(newSenderWallet);
