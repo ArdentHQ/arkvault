@@ -185,7 +185,7 @@ describe("LedgerTabs", () => {
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6), { timeout: 3000 });
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2), { timeout: 3000 });
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2), { timeout: 4000 });
 
