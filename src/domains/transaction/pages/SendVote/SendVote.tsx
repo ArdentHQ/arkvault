@@ -103,6 +103,16 @@ export const SendVote = () => {
 			return;
 		}
 
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+
+		if (!isFullyRestoredAndSynced) {
+			console.log("syncing");
+			newSenderWallet?.synchroniser().coin();
+			newSenderWallet?.synchroniser().identity();
+			newSenderWallet?.synchroniser().votes();
+		}
+
 		setActiveWallet(newSenderWallet);
 	}, [senderAddress]);
 
