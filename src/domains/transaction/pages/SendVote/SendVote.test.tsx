@@ -673,6 +673,41 @@ describe("SendVote", () => {
 		);
 	});
 
+	it("should select sender wallet and sync if not yet synced", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
+		const walletSyncMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+		userEvent.click(firstAddress);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().first().address(),
+		);
+
+		walletSyncMock.mockRestore();
+	});
+
 	it("should render without selected wallet", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
