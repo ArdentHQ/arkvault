@@ -258,6 +258,67 @@ describe("Use Ledger Scanner", () => {
 		walletSpy2.mockRestore();
 	});
 
+	it("should load more wallets", async () => {
+		const path1 = "m/44'/1'/0'/0/3";
+		const path2 = "m/44'/1'/0'/0/1";
+		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
+			Promise.resolve(legacyPublicKeyPaths.get(path)!),
+		);
+		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+
+		const profileWallets = profile.wallets().values();
+		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
+
+		const Component = () => {
+			const { scan, wallets } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+			return (
+				<div>
+					{wallets.length > 0 ? (
+						<button data-testid="scanMore" onClick={() => scan(profile, path2)}>
+							Scan More
+						</button>
+					) : (
+						<button data-testid="scan" onClick={() => scan(profile, path1)}>
+							Scan
+						</button>
+					)}
+				</div>
+			);
+		};
+
+		render(
+			<LedgerProvider>
+				<Component />
+			</LedgerProvider>,
+		);
+
+		userEvent.click(screen.getByTestId("scan"));
+
+		await waitFor(() =>
+			expect(ledgerScanSpy).toHaveBeenCalledWith({
+				onProgress: expect.any(Function),
+				startPath: "m/44'/1'/0'/0/3",
+			}),
+		);
+
+		await expect(screen.findByTestId("scanMore")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("scanMore"));
+
+		await waitFor(() =>
+			expect(ledgerScanSpy).toHaveBeenCalledWith({
+				onProgress: expect.any(Function),
+				startPath: "m/44'/1'/0'/0/3",
+			}),
+		);
+
+		walletSpy1.mockRestore();
+		walletSpy2.mockRestore();
+	});
+
 	it("should dispatch failed", async () => {
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(legacyPublicKeyPaths.get(path)!),
