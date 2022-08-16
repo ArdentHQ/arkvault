@@ -32,7 +32,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 	};
 
 	const scan = useCallback(
-		async (profile: ProfilesContracts.IProfile, startPath: string) => {
+		async (profile: ProfilesContracts.IProfile, startPath?: string) => {
 			setIdle();
 			dispatch({ type: "waiting" });
 
