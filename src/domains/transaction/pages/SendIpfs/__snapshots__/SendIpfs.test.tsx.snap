@@ -1228,7 +1228,7 @@ exports[`SendIpfs should render summary step 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -1794,7 +1794,7 @@ exports[`SendIpfs should render summary step 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19d5ufe"
+        class="no-ligatures css-fezbvb"
         data-testid="TransactionFee"
       >
         <div
@@ -2339,7 +2339,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -2545,7 +2545,7 @@ exports[`SendIpfs should send a ipfs transfer with a ledger wallet 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -3110,7 +3110,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -3316,7 +3316,7 @@ exports[`SendIpfs should send an IPFS transaction and go back to wallet page 1`]
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -3883,7 +3883,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -4089,7 +4089,7 @@ exports[`SendIpfs should send an IPFS transaction using encryption password 1`] 
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -4654,7 +4654,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -4860,7 +4860,7 @@ exports[`SendIpfs should send an ipfs transaction with a multisig wallet 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -6272,7 +6272,7 @@ exports[`SendIpfs should show error step and go back 1`] = `
                             <span
                               class="hidden sm:block"
                             >
-                              Copy
+                              Copy Error
                             </span>
                           </div>
                         </button>

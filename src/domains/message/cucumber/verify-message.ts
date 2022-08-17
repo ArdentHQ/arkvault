@@ -1,14 +1,15 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber } from "../../../utils/e2e-utils";
+import { cucumber, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet, modal } from "../e2e/common";
+import { goToWallet } from "../../wallet/e2e/common";
 
 const translations = buildTranslations();
 
 const preSteps = {
 	"Given Alice is on the wallet details page": async (t: TestController) => {
+		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await goToWallet(t);
 	},
@@ -19,9 +20,9 @@ const preSteps = {
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE,
 			),
 		);
-		await t.expect(modal.exists).ok();
 	},
 };
+
 cucumber("@verifyMessage", {
 	...preSteps,
 	"When she enters valid details to verify a message": async (t: TestController) => {
@@ -34,13 +35,18 @@ cucumber("@verifyMessage", {
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockSuccessMessage));
 	},
-	"And submits the verify message modal": async (t: TestController) => {
-		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
+	"And submits the form": async (t: TestController) => {
+		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message is successfully verified": async (t: TestController) => {
-		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.SUCCESS.TITLE).exists).ok();
+		await t
+			.expect(
+				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE).exists,
+			)
+			.ok();
 	},
 });
+
 cucumber("@verifyMessage-failVerification", {
 	...preSteps,
 	"When she enters invalid details to verify a message": async (t: TestController) => {
@@ -53,30 +59,26 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("input[type=checkbox]").parent());
 		await t.typeText(Selector("[data-testid=VerifyMessage__json-jsonString]"), JSON.stringify(mockFailingMessage));
 	},
-	"And submits the verify message modal": async (t: TestController) => {
-		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
+	"And submits the form": async (t: TestController) => {
+		await t.click(Selector("[data-testid=VerifyMessage__verify-button]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.ERROR.TITLE).exists).ok();
+		await t
+			.expect(
+				Selector("h1").withText(translations.MESSAGE.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE)
+					.exists,
+			)
+			.ok();
 	},
 });
-cucumber("@verifyMessage-openAndClose", {
+
+cucumber("@verifyMessage-openAndGoBack", {
 	...preSteps,
-	"When she closes the verify message modal": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Modal__close-button"]').exists).ok();
-		await t.click(Selector('[data-testid="Modal__close-button"]'));
+	"But selects to go back from the verify message page": async (t: TestController) => {
+		await t.expect(Selector('[data-testid="VerifyMessage__back-button"]').exists).ok();
+		await t.click(Selector('[data-testid="VerifyMessage__back-button"]'));
 	},
-	"Then the verify message modal is no longer displayed": async (t: TestController) => {
-		await t.expect(modal.exists).notOk();
-	},
-});
-cucumber("@verifyMessage-openAndCancel", {
-	...preSteps,
-	"When she cancels the verify message modal": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=VerifyMessage__cancel]").exists).ok();
-		await t.click(Selector("[data-testid=VerifyMessage__cancel]"));
-	},
-	"Then the verify message modal is no longer displayed": async (t: TestController) => {
-		await t.expect(modal.exists).notOk();
+	"Then the wallet details page is displayed": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 	},
 });

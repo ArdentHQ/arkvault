@@ -28,18 +28,16 @@ describe("Use Message Signer Hook", () => {
 		});
 	});
 
-	it("should sign message with wif", async () => {
+	it("should sign message with encrypted mnemonic", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
+		const walletActsWithMnemonicWithEncryption = jest
+			.spyOn(wallet, "actsWithMnemonicWithEncryption")
+			.mockReturnValue(true);
 		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
 		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
 
-		const signedMessage = await result.current.sign(
-			wallet,
-			"message",
-			undefined,
-			wallet.signingKey().get("password"),
-		);
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
 		expect(signedMessage).toStrictEqual({
 			message: "message",
@@ -48,6 +46,53 @@ describe("Use Message Signer Hook", () => {
 				"1b507279e46a1c4d6c97abca5a8f9ec03abd59164693dd2d81462bb9c2b4d23c6921c5ce940824bc3a1075ff87a6f2bffcd47c3b803dac6520e043b2dc21f0c7",
 		});
 
+		walletActsWithMnemonicWithEncryption.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+	});
+
+	it("should sign message with encrypted secret", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		const walletActsWithSecretWithEncryption = jest
+			.spyOn(wallet, "actsWithSecretWithEncryption")
+			.mockReturnValue(true);
+		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue("secret");
+
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
+
+		expect(signedMessage).toStrictEqual({
+			message: "message",
+			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signature:
+				"7f610893292f2c8b152c2c9fb8f84ea0a71a2fbc4abe4fbe3736011ae2ddef7f814f8b00549bcb41ef759fa8fc0fdf914b55d6bc5a207053887bf426ae19f08e",
+		});
+
+		walletActsWithSecretWithEncryption.mockRestore();
+		walletUsesWIFMock.mockRestore();
+		walletWifMock.mockRestore();
+	});
+
+	it("should sign message with encrypted wif", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		const wifDto = await wallet.wifService().fromSecret("secret");
+
+		const walletActsWithWifWithEncryption = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(wifDto.wif);
+
+		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
+
+		expect(signedMessage).toStrictEqual({
+			message: "message",
+			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
+			signature:
+				"7f610893292f2c8b152c2c9fb8f84ea0a71a2fbc4abe4fbe3736011ae2ddef7f814f8b00549bcb41ef759fa8fc0fdf914b55d6bc5a207053887bf426ae19f08e",
+		});
+
+		walletActsWithWifWithEncryption.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
 	});

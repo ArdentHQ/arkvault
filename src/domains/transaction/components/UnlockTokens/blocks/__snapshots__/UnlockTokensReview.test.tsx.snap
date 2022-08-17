@@ -79,7 +79,7 @@ exports[`UnlockTokensReview should render 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-19d5ufe"
+    class="no-ligatures css-fezbvb"
     data-testid="TransactionAmount"
   >
     <div
@@ -126,7 +126,7 @@ exports[`UnlockTokensReview should render 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-19d5ufe"
+    class="no-ligatures css-fezbvb"
     data-testid="TransactionFee"
   >
     <div

@@ -437,7 +437,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -741,7 +741,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -12458,7 +12458,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -12762,7 +12762,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -13250,7 +13250,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -13554,7 +13554,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -14464,7 +14464,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -14768,7 +14768,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -15334,7 +15334,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -15638,7 +15638,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -16204,7 +16204,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -16508,7 +16508,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -17127,7 +17127,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                             <span
                               class="hidden sm:block"
                             >
-                              Copy
+                              Copy Error
                             </span>
                           </div>
                         </button>
