@@ -57,7 +57,7 @@ exports[`Multisignature Detail Sent Step should render sent step %s 1`] = `
     </div>
     <div>
       <div
-        class="no-ligatures css-9iovq0"
+        class="no-ligatures css-1v497ib"
         data-testid="TransactionDetail"
       >
         <div
@@ -398,7 +398,7 @@ exports[`Multisignature Detail Sent Step should render sent step %s 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19d5ufe"
+        class="no-ligatures css-fezbvb"
         data-testid="TransactionFee"
       >
         <div

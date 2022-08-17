@@ -170,56 +170,6 @@ describe("WalletHeader", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["cancel", "close"])("should open & %s sign message modal", async (action) => {
-		history.push(walletUrl);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletHeader profile={profile} wallet={wallet} />
-			</Route>,
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
-
-		await waitFor(() =>
-			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-				walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE,
-			),
-		);
-
-		if (action === "close") {
-			closeModal();
-		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
-		}
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-	});
-
-	it.each(["cancel", "close"])("should open & %s verify message modal", async (action) => {
-		render(<WalletHeader profile={profile} wallet={wallet} />);
-
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
-
-		await waitFor(() =>
-			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_VERIFY_MESSAGE.TITLE),
-		);
-
-		if (action === "close") {
-			closeModal();
-		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
-		}
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-	});
-
 	it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -280,6 +230,52 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
+	});
+
+	it("should handle message signing", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+		history.push(walletUrl);
+
+		const historySpy = jest.spyOn(history, "push");
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId">
+				<WalletHeader profile={profile} wallet={wallet} />
+			</Route>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/sign-message`);
+
+		historySpy.mockRestore();
+	});
+
+	it("should handle message verification", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+		history.push(walletUrl);
+
+		const historySpy = jest.spyOn(history, "push");
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId">
+				<WalletHeader profile={profile} wallet={wallet} />
+			</Route>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`);
+
+		historySpy.mockRestore();
 	});
 
 	it("should handle multisignature registration", () => {

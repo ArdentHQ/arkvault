@@ -20,12 +20,14 @@ const secondMnemonicID = "AuthenticationStep__second-mnemonic";
 const secondSecretID = "AuthenticationStep__second-secret";
 const ARKDevnet = "ark.devnet";
 
+const itif = (condition: boolean) => (condition ? it : it.skip);
+
 jest.mock("react-router-dom", () => ({
 	...jest.requireActual("react-router-dom"),
 	useHistory: jest.fn(),
 }));
 
-describe("AuthenticationStep", () => {
+describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	let goMock: any;
@@ -49,7 +51,7 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
-		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -66,61 +68,67 @@ describe("AuthenticationStep", () => {
 		jest.clearAllMocks();
 	});
 
-	it("should validate if second mnemonic matches the wallet second public key", async () => {
-		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: ARKDevnet,
-		});
+	itif(subject === "transaction")(
+		"should validate if second mnemonic matches the wallet second public key",
+		async () => {
+			wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+				coin: "ARK",
+				mnemonic: MNEMONICS[0],
+				network: ARKDevnet,
+			});
 
-		profile.wallets().push(wallet);
-		const secondMnemonic = MNEMONICS[1];
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(secondMnemonic);
+			profile.wallets().push(wallet);
+			const secondMnemonic = MNEMONICS[1];
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(secondMnemonic);
 
-		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-		jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+			jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+			jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
-		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
-			withProviders: true,
-		});
+			const { form } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
+				withProviders: true,
+			});
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
-		userEvent.paste(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
+			userEvent.paste(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
 
-		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		userEvent.clear(screen.getByTestId(secondMnemonicID));
-		userEvent.paste(screen.getByTestId(secondMnemonicID), secondMnemonic);
+			userEvent.clear(screen.getByTestId(secondMnemonicID));
+			userEvent.paste(screen.getByTestId(secondMnemonicID), secondMnemonic);
 
-		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
-		profile.wallets().forget(wallet.id());
-		jest.clearAllMocks();
-	});
+			profile.wallets().forget(wallet.id());
+			jest.clearAllMocks();
+		},
+	);
 
-	it("should validate if second secret matches the wallet second public key", async () => {
-		wallet = await profile.walletFactory().fromSecret({
-			coin: "ARK",
-			network: ARKDevnet,
-			secret: "abc",
-		});
+	itif(subject === "transaction")(
+		"should validate if second secret matches the wallet second public key",
+		async () => {
+			wallet = await profile.walletFactory().fromSecret({
+				coin: "ARK",
+				network: ARKDevnet,
+				secret: "abc",
+			});
 
-		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
-			withProviders: true,
-		});
+			const { form } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
+				withProviders: true,
+			});
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
+			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
-		userEvent.paste(screen.getByTestId(secondSecretID), "wrong second secret");
+			userEvent.paste(screen.getByTestId(secondSecretID), "wrong second secret");
 
-		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		userEvent.clear(screen.getByTestId(secondSecretID));
-		userEvent.paste(screen.getByTestId(secondSecretID), "abc");
+			userEvent.clear(screen.getByTestId(secondSecretID));
+			userEvent.paste(screen.getByTestId(secondSecretID), "abc");
 
-		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
-	});
+			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+		},
+	);
 
 	it("should request mnemonic if wallet was imported using mnemonic", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -131,7 +139,7 @@ describe("AuthenticationStep", () => {
 
 		const isSecondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
-		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -157,7 +165,7 @@ describe("AuthenticationStep", () => {
 
 		const isSecondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
-		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -183,7 +191,7 @@ describe("AuthenticationStep", () => {
 
 		const isSecondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
-		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -209,7 +217,7 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -228,7 +236,7 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValueOnce(false);
 
-		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -238,11 +246,11 @@ describe("AuthenticationStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should request mnemonic and second mnemonic", async () => {
+	itif(subject === "transaction")("should request mnemonic and second mnemonic", async () => {
 		await wallet.synchroniser().identity();
 		const secondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
-		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -269,14 +277,14 @@ describe("AuthenticationStep", () => {
 		secondSignatureMock.mockRestore();
 	});
 
-	it("should request secret and second secret", async () => {
+	itif(subject === "transaction")("should request secret and second secret", async () => {
 		wallet = await profile.walletFactory().fromSecret({
 			coin: "ARK",
 			network: ARKDevnet,
 			secret: "abc",
 		});
 
-		const { form, asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { form, asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -305,7 +313,7 @@ describe("AuthenticationStep", () => {
 		mockNanoXTransport();
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		const { asFragment } = renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -325,6 +333,7 @@ describe("AuthenticationStep", () => {
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
+				subject={subject}
 				ledgerIsAwaitingApp={false}
 				ledgerIsAwaitingDevice={true}
 				ledgerConnectedModel={Contracts.WalletLedgerModel.NanoS}
@@ -348,9 +357,12 @@ describe("AuthenticationStep", () => {
 		mockNanoXTransport();
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		const { asFragment } = renderWithForm(<AuthenticationStep wallet={wallet} ledgerIsAwaitingDevice={true} />, {
-			withProviders: true,
-		});
+		const { asFragment } = renderWithForm(
+			<AuthenticationStep subject={subject} wallet={wallet} ledgerIsAwaitingDevice={true} />,
+			{
+				withProviders: true,
+			},
+		);
 
 		// eslint-disable-next-line testing-library/prefer-explicit-assert
 		await screen.findByTestId("LedgerWaitingDevice-loading_message");
@@ -366,6 +378,7 @@ describe("AuthenticationStep", () => {
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
+				subject={subject}
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={false}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
@@ -389,6 +402,7 @@ describe("AuthenticationStep", () => {
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
+				subject={subject}
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={false}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoS]}
@@ -412,6 +426,7 @@ describe("AuthenticationStep", () => {
 
 		const { asFragment } = renderWithForm(
 			<AuthenticationStep
+				subject={subject}
 				ledgerIsAwaitingDevice={false}
 				ledgerIsAwaitingApp={true}
 				ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
@@ -435,7 +450,7 @@ describe("AuthenticationStep", () => {
 
 		jest.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		renderWithForm(<AuthenticationStep wallet={wallet} />, {
+		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, {
 			withProviders: true,
 		});
 
@@ -450,7 +465,7 @@ describe("AuthenticationStep", () => {
 		jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
 		jest.spyOn(wallet.signingKey(), "get").mockReturnValue(PBKDF2.encrypt(getDefaultWalletMnemonic(), "password"));
 
-		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
+		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} />, { withProviders: true });
 
 		await expect(screen.findByTestId("AuthenticationStep__encryption-password")).resolves.toBeVisible();
 
