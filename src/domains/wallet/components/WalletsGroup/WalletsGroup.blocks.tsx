@@ -162,8 +162,8 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		}
 
 		const totalConvertedNetworkBalance = wallets.reduce(
-			(balance, wallet) => balance + wallet.convertedBalance(),
-			0,
+			(balance, wallet) => balance.plus(wallet.convertedBalance()),
+			BigNumber.ZERO,
 		);
 
 		return <Amount value={totalConvertedNetworkBalance} ticker={exchangeCurrency} />;
