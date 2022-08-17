@@ -153,7 +153,7 @@ const getAdditionalOptions = (wallet: Contracts.IReadWriteWallet, t: TFunction) 
 		});
 	}
 
-	if (!isMultiSignature(wallet) && wallet.network().allows(Enums.FeatureFlag.MessageVerify)) {
+	if (wallet.network().allows(Enums.FeatureFlag.MessageVerify)) {
 		additionalOptions.options.push({
 			label: t("WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE"),
 			value: "verify-message",

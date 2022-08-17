@@ -26,9 +26,9 @@ const getPadding = (padding?: boolean, paddingPosition?: "top" | "bottom" | "bot
 
 	const paddings = {
 		both: () => tw`py-4 sm:py-6`,
-		bottom: () => tw`py-4 sm:pb-6`,
+		bottom: () => tw`pb-4 sm:pb-6`,
 		none: () => "",
-		top: () => tw`py-4 sm:pt-6`,
+		top: () => tw`pt-4 sm:pt-6`,
 	};
 
 	return (paddings[paddingPosition as keyof typeof paddings] || paddings.both)();

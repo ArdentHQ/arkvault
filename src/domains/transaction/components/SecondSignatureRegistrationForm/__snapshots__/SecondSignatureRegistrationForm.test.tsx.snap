@@ -585,7 +585,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
 exports[`SecondSignatureRegistrationForm should render transaction details 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19d5ufe"
+    class="no-ligatures css-fezbvb"
     data-testid="TransactionFee"
   >
     <div
