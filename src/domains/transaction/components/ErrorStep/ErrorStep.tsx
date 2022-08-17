@@ -12,13 +12,21 @@ import { TextArea } from "@/app/components/TextArea";
 
 interface Properties {
 	title?: string;
+	description?: string;
 	isRepeatDisabled?: boolean;
 	onBack?: () => void;
 	onRepeat?: () => void;
 	errorMessage?: string;
 }
 
-export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, errorMessage = "test" }: Properties) => {
+export const ErrorStep = ({
+	title,
+	description,
+	onBack,
+	onRepeat,
+	isRepeatDisabled = false,
+	errorMessage = "test",
+}: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
 
@@ -30,10 +38,12 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 				<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
 
 				<div className="space-y-6">
-					<p className="hidden text-theme-secondary-text md:block">{t("TRANSACTION.ERROR.DESCRIPTION")}</p>
+					<p className="hidden text-theme-secondary-text md:block">
+						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
+					</p>
 
 					<Alert className="md:hidden" variant="danger">
-						{t("TRANSACTION.ERROR.DESCRIPTION")}
+						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</Alert>
 
 					{errorMessage && (
@@ -54,7 +64,7 @@ export const ErrorStep = ({ title, onBack, onRepeat, isRepeatDisabled = false, e
 					<div className="mr-auto">
 						<Clipboard variant="button" data={errorMessage}>
 							<Icon name="Copy" size="lg" />
-							<span className="hidden sm:block">{t("COMMON.COPY")}</span>
+							<span className="hidden sm:block">{t("COMMON.COPY_ERROR")}</span>
 						</Clipboard>
 					</div>
 				)}

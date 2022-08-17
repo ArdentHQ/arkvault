@@ -15,17 +15,9 @@ Feature: Sign Message
         Then an error is displayed in the mnemonic field
         And the sign button is disabled
 
-    @signMessage-openAndCancel
-    Scenario: Open and cancel the Sign Message modal
+    @signMessage-openAndGoBack
+    Scenario: Go to Sign Message page and back to Wallet Details page
         Given Alice is on the wallet details page for imported wallet
         When she selects to sign message
-        But selects cancel on the sign message modal
-        Then the modal is no longer displayed
-
-    @signMessage-openAndClose
-    Scenario: Open and close the Sign Message modal
-        Given Alice is on the wallet details page for imported wallet
-        When she selects to sign message
-        But selects close on the sign message modal
-        Then the modal is no longer displayed
-
+        But selects to go back from the sign message page
+        Then the wallet details page is displayed
