@@ -142,7 +142,8 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			return <GroupSkeleton width={140} className="h-5" innerClassName="h-4" />;
 		}
 
-		const totalNetworkBalance = wallets.reduce((balance, wallet) => balance + wallet.balance(), 0);
+		const totalNetworkBalance = wallets.reduce((balance, wallet) => balance.plus(wallet.balance()), BigNumber.ZERO);
+
 
 		return <Amount value={totalNetworkBalance} ticker={network.ticker()} />;
 	};
