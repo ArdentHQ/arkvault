@@ -381,9 +381,6 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 								if (action.isMail) {
 									return openMailto(action.mountPath());
 								}
-								if (action.isExternal) {
-									return openExternal(action.mountPath());
-								}
 
 								return history.push(action.mountPath(profile.id()));
 							}}
