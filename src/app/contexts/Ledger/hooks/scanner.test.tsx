@@ -285,7 +285,7 @@ describe("Use Ledger Scanner", () => {
 
 		await expect(screen.findByTestId("scanMore")).resolves.toBeVisible();
 
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan").mockImplementation(() => []);
+		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
 
 		userEvent.click(screen.getByTestId("scanMore"));
 
