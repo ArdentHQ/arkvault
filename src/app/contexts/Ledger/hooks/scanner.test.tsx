@@ -96,6 +96,7 @@ describe("Use Ledger Scanner", () => {
 		getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(legacyPublicKeyPaths.get(path)!));
+
 		getExtendedPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockResolvedValue(wallet.publicKey()!);
@@ -255,13 +256,6 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should load more wallets", async () => {
-		const path1 = "m/44'/1'/0'/0/1";
-		const path2 = "m/44'/1'/0'/0/2";
-
-		const profileWallets = profile.wallets().values();
-		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
-		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
-
 		const Component = () => {
 			const { scan, wallets, isScanningMore } = useLedgerScanner(wallet.coinId(), wallet.networkId());
 
@@ -269,7 +263,7 @@ describe("Use Ledger Scanner", () => {
 				<div>
 					{isScanningMore && <p data-testid="scanningMore">Scanning more...</p>}
 					{wallets.length > 0 ? (
-						<button data-testid="scanMore" onClick={() => scan(profile, path1)}>
+						<button data-testid="scanMore" onClick={() => scan(profile)}>
 							Scan More
 						</button>
 					) : (
@@ -293,7 +287,7 @@ describe("Use Ledger Scanner", () => {
 
 		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
 
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan").mockImplementation(() => []);
+		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
 
 		userEvent.click(screen.getByTestId("scanMore"));
 
@@ -301,17 +295,7 @@ describe("Use Ledger Scanner", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("scanningMore")).not.toBeInTheDocument());
 
-		await waitFor(() =>
-			expect(ledgerScanSpy).toHaveBeenCalledWith({
-				onProgress: expect.any(Function),
-				startPath: path1,
-			}),
-		);
-
 		ledgerScanSpy.mockRestore();
-
-		walletSpy1.mockRestore();
-		walletSpy2.mockRestore();
 	});
 
 	it("should dispatch failed", async () => {
