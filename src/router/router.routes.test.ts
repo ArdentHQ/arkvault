@@ -1,7 +1,7 @@
 import { routes } from "./router.routes";
 
-describe("Route routes", () => {
+describe("Router routes", () => {
 	it("should have routes", () => {
-		expect(routes).toHaveLength(29);
+		expect(routes).toHaveLength(31);
 	});
 });

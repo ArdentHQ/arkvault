@@ -19,6 +19,88 @@ exports[`Input should render as custom element 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Input should render invalid 1`] = `
+<DocumentFragment>
+  <div
+    class="css-px3dod"
+  >
+    <div
+      class="relative flex h-full flex-1"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="no-ligatures w-full border-none css-1nupw50"
+        data-testid="Input"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+      data-testid="Input__addon-end"
+    >
+      <span
+        data-errortext="Field invalid"
+        data-testid="Input__error"
+      >
+        <div
+          class="text-theme-danger-500 css-1i4b0eq"
+          height="20"
+          width="20"
+        >
+          <svg>
+            circle-exclamation-mark.svg
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Input should render invalid and disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1by871c"
+    disabled=""
+  >
+    <div
+      class="relative flex h-full flex-1"
+    >
+      <input
+        aria-invalid="true"
+        autocomplete="off"
+        class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+        data-testid="Input"
+        disabled=""
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+      data-testid="Input__addon-end"
+    >
+      <span
+        data-errortext="Field invalid and disabled"
+        data-testid="Input__error"
+      >
+        <div
+          class="text-theme-danger-500 css-1i4b0eq"
+          height="20"
+          width="20"
+        >
+          <svg>
+            circle-exclamation-mark.svg
+          </svg>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Input should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
@@ -109,46 +191,6 @@ exports[`Input should render with focus 1`] = `
         type="text"
         value=""
       />
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Input should render with invalid 1`] = `
-<DocumentFragment>
-  <div
-    class="css-px3dod"
-  >
-    <div
-      class="relative flex h-full flex-1"
-    >
-      <input
-        aria-invalid="true"
-        autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
-        data-testid="Input"
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
-      data-testid="Input__addon-end"
-    >
-      <span
-        data-errortext="Field invalid"
-        data-testid="Input__error"
-      >
-        <div
-          class="text-theme-danger-500 css-1i4b0eq"
-          height="20"
-          width="20"
-        >
-          <svg>
-            circle-exclamation-mark.svg
-          </svg>
-        </div>
-      </span>
     </div>
   </div>
 </DocumentFragment>

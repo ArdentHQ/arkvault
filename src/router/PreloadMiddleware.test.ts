@@ -4,6 +4,7 @@ import { ProfileRoutes } from "@/domains/profile/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { ContactRoutes } from "@/domains/contact/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
+import { MessageRoutes } from "@/domains/message/routing";
 import { NewsRoutes } from "@/domains/news/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
 import { WalletRoutes } from "@/domains/wallet/routing";
@@ -27,6 +28,7 @@ describe("PreloadMiddleware", () => {
 
 		const profileSpies = [
 			...ExchangeRoutes,
+			...MessageRoutes,
 			...NewsRoutes,
 			...WalletRoutes,
 			...TransactionRoutes,
