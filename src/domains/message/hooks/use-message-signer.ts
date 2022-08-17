@@ -1,4 +1,4 @@
-import { Services } from "@ardenthq/sdk";
+import { Services, Signatories } from "@ardenthq/sdk";
 import { Contracts as ProfileContracts } from "@ardenthq/sdk-profiles";
 
 const signWithLedger = async (message: string, wallet: ProfileContracts.IReadWriteWallet) => {
@@ -34,7 +34,8 @@ const sign = async (
 	wallet: ProfileContracts.IReadWriteWallet,
 	message: string,
 	mnemonic?: string,
-	wif?: string,
+	encryptionPassword?: string,
+	// wif?: string,
 	secret?: string,
 	options?: {
 		abortSignal?: AbortSignal;
@@ -44,20 +45,33 @@ const sign = async (
 		return withAbortPromise(options?.abortSignal)(signWithLedger(message, wallet));
 	}
 
-	let signatory: any;
+	const getSignatory = async (): Promise<Signatories.Signatory | undefined> => {
+		if (mnemonic) {
+			return wallet.signatory().mnemonic(mnemonic);
+		}
 
-	if (mnemonic) {
-		signatory = await wallet.signatory().mnemonic(mnemonic);
-	}
+		if (secret) {
+			return wallet.signatory().secret(secret);
+		}
 
-	if (wif) {
-		signatory = await wallet.signatory().mnemonic(wif);
-	}
+		if (encryptionPassword) {
+			const signingKey = await wallet.signingKey().get(encryptionPassword);
 
-	if (secret) {
-		signatory = await wallet.signatory().secret(secret);
-	}
+			if (wallet.actsWithMnemonicWithEncryption()) {
+				return wallet.signatory().mnemonic(signingKey);
+			}
 
+			if (wallet.actsWithSecretWithEncryption()) {
+				return wallet.signatory().secret(signingKey);
+			}
+
+			return wallet.signatory().wif(signingKey);
+		}
+	};
+
+	const signatory = await getSignatory();
+
+	// @ts-ignore
 	return wallet.message().sign({ message, signatory });
 };
 

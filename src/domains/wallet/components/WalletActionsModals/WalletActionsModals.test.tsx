@@ -6,7 +6,6 @@ import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
 import * as envHooks from "@/app/hooks/env";
 import { LedgerProvider } from "@/app/contexts";
-import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { env, getDefaultProfileId, render, syncDelegates } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
@@ -35,50 +34,6 @@ describe("WalletActionsModals", () => {
 
 	beforeEach(() => {
 		history.push(dashboardURL);
-	});
-
-	it("should render `sign-message` modal", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<WalletActionsModals
-						wallet={mainnetWallet}
-						activeModal={"sign-message"}
-						setActiveModal={setActiveModal}
-					/>
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(screen.getByTestId("SignMessage")).toBeInTheDocument();
-		await expect(screen.findByTestId("SignMessage__message-input")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
-	});
-
-	it("should render `verify-message` modal", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<WalletActionsModals
-						wallet={mainnetWallet}
-						activeModal={"verify-message"}
-						setActiveModal={setActiveModal}
-					/>
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(screen.getByText(walletTranslations.MODAL_VERIFY_MESSAGE.DESCRIPTION)).toBeInTheDocument();
-		await expect(screen.findByTestId("VerifyMessage__submit")).resolves.toBeInTheDocument();
-
-		expect(asFragment).toMatchSnapshot();
 	});
 
 	it("should render `receive-funds` modal", async () => {

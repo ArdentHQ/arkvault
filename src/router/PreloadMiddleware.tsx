@@ -2,6 +2,7 @@ import { Middleware, MiddlewareParameters, RouteItem } from "@/router/router.typ
 import { ContactRoutes } from "@/domains/contact/routing";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
+import { MessageRoutes } from "@/domains/message/routing";
 import { NewsRoutes } from "@/domains/news/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
@@ -16,7 +17,14 @@ const getPreloadableRoutes = (path: string): RouteItem[] => {
 	}
 
 	if (path.startsWith("/profiles")) {
-		return [...ExchangeRoutes, ...NewsRoutes, ...WalletRoutes, ...TransactionRoutes, ...VoteRoutes];
+		return [
+			...ExchangeRoutes,
+			...MessageRoutes,
+			...NewsRoutes,
+			...WalletRoutes,
+			...TransactionRoutes,
+			...VoteRoutes,
+		];
 	}
 
 	return [];
