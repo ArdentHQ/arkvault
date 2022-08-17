@@ -143,11 +143,13 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			return <GroupSkeleton width={140} className="h-5" innerClassName="h-4" />;
 		}
 
-		const totalNetworkBalance = wallets
-			.reduce((balance, wallet) => balance.plus(wallet.balance()), BigNumber.ZERO)
-			.toNumber();
+		const totalNetworkBalance = BigNumber.ZERO;
 
-		return <Amount value={totalNetworkBalance} ticker={network.ticker()} />;
+		for (const wallet of wallets) {
+			totalNetworkBalance.plus(wallet.balance());
+		}
+
+		return <Amount value={totalNetworkBalance.toNumber()} ticker={network.ticker()} />;
 	};
 
 	const renderCurrency = () => {
@@ -163,11 +165,13 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			return <GroupSkeleton width={110} className="h-4" innerClassName="h-3.5" />;
 		}
 
-		const totalConvertedNetworkBalance = wallets
-			.reduce((balance, wallet) => balance.plus(wallet.convertedBalance()), BigNumber.ZERO)
-			.toNumber();
+		const totalConvertedNetworkBalance = BigNumber.ZERO;
 
-		return <Amount value={totalConvertedNetworkBalance} ticker={exchangeCurrency} />;
+		for (const wallet of wallets) {
+			totalConvertedNetworkBalance.plus(wallet.convertedBalance());
+		}
+
+		return <Amount value={totalConvertedNetworkBalance.toNumber()} ticker={exchangeCurrency} />;
 	};
 
 	return (
