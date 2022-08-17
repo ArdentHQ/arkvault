@@ -1,8 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import cn from "classnames";
-import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Amount } from "@/app/components/Amount";
 import { WalletIcon } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
@@ -128,17 +129,6 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 	const { profileIsSyncingExchangeRates, profileIsSyncing } = useConfiguration();
 
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)!;
-	const [totalNetworkBalance, totalConvertedNetworkBalance] = useMemo<[number, number]>(() => {
-		let totalNetworkBalance = 0;
-		let totalConvertedNetworkBalance = 0;
-
-		for (const wallet of wallets) {
-			totalNetworkBalance += wallet.balance();
-			totalConvertedNetworkBalance += wallet.convertedBalance();
-		}
-
-		return [totalNetworkBalance, totalConvertedNetworkBalance];
-	}, [wallets]);
 
 	const renderWallets = () => {
 		if (profileIsSyncing) {
@@ -153,7 +143,13 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			return <GroupSkeleton width={140} className="h-5" innerClassName="h-4" />;
 		}
 
-		return <Amount value={totalNetworkBalance} ticker={network.ticker()} />;
+		let totalNetworkBalance = BigNumber.ZERO;
+
+		for (const wallet of wallets) {
+			totalNetworkBalance = totalNetworkBalance.plus(wallet.balance());
+		}
+
+		return <Amount value={totalNetworkBalance.toNumber()} ticker={network.ticker()} />;
 	};
 
 	const renderCurrency = () => {
@@ -169,7 +165,13 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 			return <GroupSkeleton width={110} className="h-4" innerClassName="h-3.5" />;
 		}
 
-		return <Amount value={totalConvertedNetworkBalance} ticker={exchangeCurrency} />;
+		let totalConvertedNetworkBalance = BigNumber.ZERO;
+
+		for (const wallet of wallets) {
+			totalConvertedNetworkBalance = totalConvertedNetworkBalance.plus(wallet.convertedBalance());
+		}
+
+		return <Amount value={totalConvertedNetworkBalance.toNumber()} ticker={exchangeCurrency} />;
 	};
 
 	return (
