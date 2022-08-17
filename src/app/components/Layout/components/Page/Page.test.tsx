@@ -109,7 +109,7 @@ describe("Page", () => {
 
 			if (label === "Support") {
 				expect(windowSpy).toHaveBeenCalledWith(
-					"mailto:contact@arkvault.io?subject=I+have+a+question+about+ARKVault",
+					"mailto:contact@arkvault.io?subject=I%20have%20a%20question%20about%20ARKVault",
 				);
 			} else {
 				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);

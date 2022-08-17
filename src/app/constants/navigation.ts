@@ -42,7 +42,7 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 	{
 		isMail: true,
 		label: t("COMMON.SUPPORT"),
-		mountPath: () => "mailto:contact@arkvault.io?subject=I+have+a+question+about+ARKVault",
+		mountPath: () => "mailto:contact@arkvault.io?subject=I%20have%20a%20question%20about%20ARKVault",
 		title: "support",
 		value: "support",
 	},
