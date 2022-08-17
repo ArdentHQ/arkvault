@@ -255,15 +255,21 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should load more wallets", async () => {
-		const path = "m/44'/1'/0'/0/1";
+		const path1 = "m/44'/1'/0'/0/1";
+		const path2 = "m/44'/1'/0'/0/2";
+
+		const profileWallets = profile.wallets().values();
+		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
 
 		const Component = () => {
-			const { scan, wallets } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+			const { scan, wallets, isScanningMore } = useLedgerScanner(wallet.coinId(), wallet.networkId());
 
 			return (
 				<div>
+					{isScanningMore && <p data-testid="scanningMore">Scanning more...</p>}
 					{wallets.length > 0 ? (
-						<button data-testid="scanMore" onClick={() => scan(profile, path)}>
+						<button data-testid="scanMore" onClick={() => scan(profile, path1)}>
 							Scan More
 						</button>
 					) : (
@@ -283,20 +289,29 @@ describe("Use Ledger Scanner", () => {
 
 		userEvent.click(screen.getByTestId("scan"));
 
-		await expect(screen.findByTestId("scanMore")).resolves.toBeVisible();
+		await waitFor(() => expect(screen.queryByTestId("scan")).not.toBeInTheDocument());
 
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
+
+		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan").mockImplementation(() => []);
 
 		userEvent.click(screen.getByTestId("scanMore"));
+
+		expect(screen.getByTestId("scanningMore")).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.queryByTestId("scanningMore")).not.toBeInTheDocument());
 
 		await waitFor(() =>
 			expect(ledgerScanSpy).toHaveBeenCalledWith({
 				onProgress: expect.any(Function),
-				startPath: path,
+				startPath: path1,
 			}),
 		);
 
 		ledgerScanSpy.mockRestore();
+
+		walletSpy1.mockRestore();
+		walletSpy2.mockRestore();
 	});
 
 	it("should dispatch failed", async () => {
