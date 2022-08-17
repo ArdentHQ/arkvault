@@ -30,12 +30,20 @@ export const useVoteActions = ({
 
 		const parameters = new URLSearchParams();
 
+		const nethash = profile
+			.wallets()
+			.findById(walletId as string)
+			.network()
+			.meta().nethash;
+
+		parameters.set("nethash", nethash);
+
 		appendParameters(parameters, "unvote", unvotes);
 
 		appendParameters(parameters, "vote", votes);
 
 		history.push({
-			pathname: generatePath(ProfilePaths.SendVote, { profileId: profile.id(), walletId }),
+			pathname: generatePath(ProfilePaths.SendVoteWallet, { profileId: profile.id(), walletId }),
 			search: `?${parameters}`,
 		});
 	};

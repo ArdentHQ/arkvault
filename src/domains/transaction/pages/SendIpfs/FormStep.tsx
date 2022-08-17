@@ -40,7 +40,7 @@ const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Co
 		};
 
 		setTransactionFees(wallet);
-	}, [calculate, getValues, wallet, setValue]);
+	}, [calculate, getValues, setValue, network]);
 
 	return (
 		<section data-testid="SendIpfs__form-step">

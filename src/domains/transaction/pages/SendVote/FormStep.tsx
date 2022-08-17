@@ -2,6 +2,7 @@ import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useFormContext } from "react-hook-form";
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -13,14 +14,15 @@ import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
-} & SendVoteStepProperties;
+	wallet?: ProfilesContracts.IReadWriteWallet;
+	isWalletFieldDisabled?: boolean;
+} & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
+	const { setValue } = useFormContext();
 
-	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
-
-	const network = useMemo(() => wallet.network(), [wallet]);
+	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
 
 	const feeTransactionData = useMemo(
 		() => ({
@@ -33,7 +35,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 				id: vote.wallet?.governanceIdentifier(),
 			})),
 		}),
-		[unvotes, votes],
+		[unvotes, votes, wallet],
 	);
 
 	return (
@@ -53,26 +55,33 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 
 				<div data-testid="sender-address">
 					<SelectAddress
-						wallet={{
-							address: wallet.address(),
-							network: wallet.network(),
-						}}
-						wallets={profile.wallets().values()}
+						disabled={isWalletFieldDisabled !== false}
+						wallet={
+							wallet
+								? {
+										address: wallet.address(),
+										network: wallet.network(),
+								  }
+								: undefined
+						}
+						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
 						profile={profile}
-						disabled
+						onChange={(address: string) =>
+							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
+						}
 					/>
 				</div>
 			</FormField>
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
-					<VoteList votes={unvotes} currency={wallet.currency()} isNegativeAmount />
+					<VoteList votes={unvotes} currency={wallet?.currency() as string} isNegativeAmount />
 				</TransactionDetail>
 			)}
 
 			{votes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}>
-					<VoteList votes={votes} currency={wallet.currency()} />
+					<VoteList votes={votes} currency={wallet?.currency() as string} />
 				</TransactionDetail>
 			)}
 

@@ -138,8 +138,7 @@ describe("SendVote", () => {
 
 	it("should return to the select a delegate page to vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -166,8 +165,6 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
 		// Back to select a delegate page
 		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
@@ -179,7 +176,7 @@ describe("SendVote", () => {
 	it("should return to the select a delegate page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -219,7 +216,7 @@ describe("SendVote", () => {
 	it("should return to the select a delegate page to unvote/vote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -271,7 +268,7 @@ describe("SendVote", () => {
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -392,8 +389,7 @@ describe("SendVote", () => {
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -536,8 +532,7 @@ describe("SendVote", () => {
 
 	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -646,10 +641,97 @@ describe("SendVote", () => {
 		transactionMock.mockRestore();
 	});
 
+	it("should select sender", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
+		userEvent.click(firstAddress);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().last().address(),
+		);
+	});
+
+	it("should select sender wallet and sync if not yet synced", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
+		const walletSyncMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+		userEvent.click(firstAddress);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().first().address(),
+		);
+
+		walletSyncMock.mockRestore();
+	});
+
+	it("should render without selected wallet", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue("");
+	});
+
 	it("should keep the fee when user step back", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -707,8 +789,7 @@ describe("SendVote", () => {
 
 	it("should move back and forth between steps", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -783,8 +864,7 @@ describe("SendVote", () => {
 
 	it("should send a unvote transaction", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -860,8 +940,7 @@ describe("SendVote", () => {
 
 	it("should return to form step by cancelling fee warning", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -918,8 +997,7 @@ describe("SendVote", () => {
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -976,8 +1054,7 @@ describe("SendVote", () => {
 
 	it("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -1036,9 +1113,9 @@ describe("SendVote", () => {
 		jest.useRealTimers();
 
 		const history = createHashHistory();
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -1117,8 +1194,7 @@ describe("SendVote", () => {
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -1212,8 +1288,7 @@ describe("SendVote", () => {
 		});
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -1308,8 +1383,7 @@ describe("SendVote", () => {
 		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{

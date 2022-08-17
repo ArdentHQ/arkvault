@@ -401,6 +401,7 @@ export const translations = {
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: 'coin "{{coin}}" is not supported.',
+		DELEGATE_MISSING: "delegate parameter is missing.",
 		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		LOW_BALANCE: "The balance is too low",

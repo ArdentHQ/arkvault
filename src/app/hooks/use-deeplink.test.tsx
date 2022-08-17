@@ -378,4 +378,25 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
 	});
+
+	it("should navigate to vote page", async () => {
+		history.push(
+			"/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
+		);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+	});
 });
