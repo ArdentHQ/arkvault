@@ -108,7 +108,9 @@ describe("Page", () => {
 			userEvent.click(await screen.findByText(label));
 
 			if (label === "Support") {
-				expect(windowSpy).toHaveBeenCalledWith("mailto:contact@arkvault.io");
+				expect(windowSpy).toHaveBeenCalledWith(
+					"mailto:contact@arkvault.io?subject=I+have+a+question+about+ARKVault",
+				);
 			} else {
 				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
 			}
