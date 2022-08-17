@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useEnvironmentContext } from "@/app/contexts";
 import { password } from "@/app/validations/password";
 import { exchangeOrder } from "@/domains/exchange/validations";
+import { signMessage, verifyMessage } from "@/domains/message/validations";
 import { createProfile } from "@/domains/profile/validations";
 import { settings, server, network } from "@/domains/setting/validations";
 import {
@@ -15,7 +16,7 @@ import {
 	sendTransfer,
 	sendVote,
 } from "@/domains/transaction/validations";
-import { receiveFunds, signMessage, verifyMessage } from "@/domains/wallet/validations";
+import { receiveFunds } from "@/domains/wallet/validations";
 
 export const useValidation = () => {
 	const { t } = useTranslation();

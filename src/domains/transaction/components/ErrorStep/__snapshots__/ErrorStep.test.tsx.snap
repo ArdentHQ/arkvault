@@ -110,7 +110,7 @@ exports[`ErrorStep should display error details 1`] = `
               <span
                 class="hidden sm:block"
               >
-                Copy
+                Copy Error
               </span>
             </div>
           </button>
@@ -231,7 +231,7 @@ exports[`ErrorStep should emit onBack 1`] = `
               <span
                 class="hidden sm:block"
               >
-                Copy
+                Copy Error
               </span>
             </div>
           </button>
@@ -367,7 +367,7 @@ exports[`ErrorStep should emit onRepeat 1`] = `
               <span
                 class="hidden sm:block"
               >
-                Copy
+                Copy Error
               </span>
             </div>
           </button>
@@ -503,7 +503,7 @@ exports[`ErrorStep should render with custom title 1`] = `
               <span
                 class="hidden sm:block"
               >
-                Copy
+                Copy Error
               </span>
             </div>
           </button>
@@ -624,7 +624,7 @@ exports[`ErrorStep should render with default texts 1`] = `
               <span
                 class="hidden sm:block"
               >
-                Copy
+                Copy Error
               </span>
             </div>
           </button>

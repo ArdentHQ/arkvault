@@ -1171,7 +1171,7 @@ exports[`Registration should show error step and go back 1`] = `
                             <span
                               class="hidden sm:block"
                             >
-                              Copy
+                              Copy Error
                             </span>
                           </div>
                         </button>

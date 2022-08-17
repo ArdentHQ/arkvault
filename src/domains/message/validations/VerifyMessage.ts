@@ -1,12 +1,12 @@
 export const verifyMessage = (t: any) => ({
 	jsonString: () => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-			field: t("WALLETS.MODAL_VERIFY_MESSAGE.JSON_STRING"),
+			field: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING"),
 		}),
 		validate: {
 			valid: (jsonString: string) => {
 				const invalidError = t("COMMON.VALIDATION.FIELD_INVALID", {
-					field: t("WALLETS.MODAL_VERIFY_MESSAGE.JSON_STRING"),
+					field: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING"),
 				});
 
 				try {

@@ -25,11 +25,21 @@ describe("Input", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with invalid", () => {
-		const { asFragment } = render(<Input isInvalid={true} errorMessage="Field invalid" />);
+	it("should render invalid", () => {
+		const { asFragment } = render(<Input isInvalid errorMessage="Field invalid" />);
 		const input = screen.getByTestId("Input__error");
 
 		expect(input).toBeVisible();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render invalid and disabled", () => {
+		const { asFragment } = render(<Input isInvalid disabled errorMessage="Field invalid and disabled" />);
+		const input = screen.getByTestId("Input__error");
+
+		expect(input).toBeVisible();
+		expect(screen.getByRole("textbox")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
