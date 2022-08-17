@@ -25,8 +25,8 @@ export const scannerReducer = (state: State, action: Action): State => {
 		success: ({ payload }) => ({
 			...state,
 			error: undefined,
-			selected: payload.map(pathMapper),
-			wallets: payload,
+			selected: [...state.selected, ...payload.map(pathMapper)],
+			wallets: [...state.wallets, ...payload],
 		}),
 		toggleSelect: ({ path }) => {
 			const current = state.selected;

@@ -1,4 +1,4 @@
-import { uniqBy } from "@ardenthq/sdk-helpers";
+import { uniqBy, omitBy } from "@ardenthq/sdk-helpers";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import { Contracts } from "@ardenthq/sdk";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
@@ -73,7 +73,11 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					}
 				}
 
-				ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
+				if (isLoadingMore) {
+					ledgerData = omitBy(ledgerData, (wallet) => wallets.some((w) => w.address === wallet.address));
+				} else {
+					ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
+				}
 
 				if (abortRetryReference.current) {
 					return;
