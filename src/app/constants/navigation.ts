@@ -40,11 +40,9 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 		value: "settings",
 	},
 	{
-		icon: "ArrowExternal",
-		iconClassName: "text-theme-primary-600",
-		isExternal: true,
+		isMail: true,
 		label: t("COMMON.SUPPORT"),
-		mountPath: () => "https://arkvault.io/contact",
+		mountPath: () => "mailto:contact@arkvault.io?subject=I%20have%20a%20question%20about%20ARKVault",
 		title: "support",
 		value: "support",
 	},

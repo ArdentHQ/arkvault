@@ -1,4 +1,4 @@
-type UseLinkHook = () => { openExternal: (value: string) => void };
+type UseLinkHook = () => { openExternal: (value: string) => void; openMailto: (value: string) => void };
 
 export const useLink: UseLinkHook = () => ({
 	openExternal: (value: string) => {
@@ -8,5 +8,13 @@ export const useLink: UseLinkHook = () => ({
 
 		const url = new URL(value);
 		window.open(url.toString(), "_blank");
+	},
+	openMailto: (value: string) => {
+		if (!value.startsWith("mailto")) {
+			throw new Error(`"${value}" is not a valid mailto URL`);
+		}
+
+		const url = new URL(value);
+		window.open(url.toString());
 	},
 });
