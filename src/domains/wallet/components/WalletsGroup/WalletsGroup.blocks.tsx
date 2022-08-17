@@ -3,6 +3,7 @@ import cn from "classnames";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Amount } from "@/app/components/Amount";
 import { WalletIcon } from "@/app/components/WalletIcons";
 import { useConfiguration } from "@/app/contexts";
@@ -143,7 +144,6 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 		}
 
 		const totalNetworkBalance = wallets.reduce((balance, wallet) => balance.plus(wallet.balance()), BigNumber.ZERO);
-
 
 		return <Amount value={totalNetworkBalance} ticker={network.ticker()} />;
 	};
