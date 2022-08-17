@@ -174,7 +174,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const scroll = useScroll();
-	const { openExternal, openMailto } = useLink();
+	const { openMailto } = useLink();
 	const { isLg, isMd } = useBreakpoint();
 	const availableNetworks = useNetworks({ profile });
 
