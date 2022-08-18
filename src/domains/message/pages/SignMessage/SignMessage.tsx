@@ -18,6 +18,7 @@ import { AuthenticationStep } from "@/domains/transaction/components/Authenticat
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
+import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 
 enum Step {
 	FormStep = 1,
@@ -36,8 +37,10 @@ export const SignMessage: React.VFC = () => {
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
+	const queryParameters = useQueryParameters();
+
 	const initialState: Services.SignedMessage = {
-		message: "",
+		message: queryParameters.get("message") || "",
 		signatory: "",
 		signature: "",
 	};
@@ -45,7 +48,12 @@ export const SignMessage: React.VFC = () => {
 	const [signedMessage, setSignedMessage] = useState<Services.SignedMessage>(initialState);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const form = useForm({ mode: "onChange" });
+	const form = useForm({
+		defaultValues: {
+			message: initialState.message,
+		},
+		mode: "onChange",
+	});
 
 	const { formState, getValues, handleSubmit, register } = form;
 	const { isSubmitting, isValid } = formState;
@@ -55,6 +63,10 @@ export const SignMessage: React.VFC = () => {
 	useEffect(() => {
 		register("message", signMessage.message());
 	}, [register, signMessage]);
+
+	useEffect(() => {
+		console.log({ formState });
+	}, [formState]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -90,7 +102,7 @@ export const SignMessage: React.VFC = () => {
 	};
 
 	const submitForm = async () => {
-		const abortSignal = abortReference.current?.signal;
+		const abortSignal = abortReference.current.signal;
 
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
 
@@ -119,7 +131,7 @@ export const SignMessage: React.VFC = () => {
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
 									disableMessageInput={false}
-									maxLength={signMessage.message().maxLength?.value}
+									maxLength={signMessage.message().maxLength.value}
 									wallet={activeWallet}
 								/>
 							</TabPanel>
