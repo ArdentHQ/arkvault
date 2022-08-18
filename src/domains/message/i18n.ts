@@ -19,10 +19,10 @@ export const translations = {
 
 		FORM_STEP: {
 			DESCRIPTION_ENCRYPTION_PASSWORD: "Provide a message below and sign with your encryption password.",
-			DESCRIPTION_SELECT_WALLET: "Select an address and sign",
 			DESCRIPTION_LEDGER: "Provide a message below and sign with your ledger.",
 			DESCRIPTION_MNEMONIC: "Provide a message below and sign with your mnemonic passphrase.",
 			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
+			DESCRIPTION_SELECT_WALLET: "Select an address and sign",
 			JSON_STRING: "JSON String",
 			TITLE: "Sign Message",
 		},
