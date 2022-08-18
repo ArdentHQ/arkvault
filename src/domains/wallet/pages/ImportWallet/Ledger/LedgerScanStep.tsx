@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { Networks, Contracts } from "@ardenthq/sdk";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
@@ -141,12 +142,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<Table columns={columns} data={data}>
-				{renderTableRow}
-			</Table>
+			<div className={cn({ "-mb-6": showSkeleton })}>
+				<Table columns={columns} data={data}>
+					{renderTableRow}
+				</Table>
+			</div>
 
 			{!showSkeleton && (
-				<div className="border-t border-dashed border-theme-secondary-300 pt-5 dark:border-theme-secondary-800">
+				<div className="border-b border-theme-secondary-300 pt-2 pb-8 dark:border-theme-secondary-800">
 					<Button
 						data-testid="LedgerScanStep__scan-more"
 						isLoading={isScanningMore}
