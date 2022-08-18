@@ -13,16 +13,23 @@ interface RequiredParameters {
 	nethash?: string;
 }
 
+interface ValidateParameters {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	parameters: URLSearchParams;
+}
+
+interface PathProperties {
+	profileId: string;
+	searchParameters: URLSearchParams;
+}
+
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
 
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
 
-	const validateTransfer = async (
-		profile: Contracts.IProfile,
-		network: Networks.Network,
-		parameters: URLSearchParams,
-	) => {
+	const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
 		const recipient = parameters.get("recipient");
 
 		if (recipient) {
@@ -38,9 +45,38 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
+	const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
+		const message = parameters.get("message");
+		const address = parameters.get("address");
+
+		if (!message) {
+			throw new Error(t("TRANSACTION.VALIDATION.MESSAGE_MISSING"));
+		}
+
+		if (address) {
+			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+			await coin.__construct();
+
+			const isValid = await coin.address().validate(address);
+
+			if (!isValid) {
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+			}
+		}
+	};
+
 	const methods = {
+		sign: {
+			path: ({ profileId, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId,
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
-			path: (profileId: string) => generatePath(ProfilePaths.SendTransfer, { profileId }),
+			path: ({ profileId, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendTransfer, { profileId })}?${searchParameters.toString()}`,
 			validate: validateTransfer,
 		},
 	};
@@ -127,7 +163,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate(profile, network, parameters);
+		await methods[method].validate({ network, parameters, profile });
 	};
 
 	return { methods, validateSearchParameters };
