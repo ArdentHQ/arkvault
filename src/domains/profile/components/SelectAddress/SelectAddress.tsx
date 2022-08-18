@@ -20,6 +20,9 @@ type SelectAddressProperties = {
 	addUserIcon?: boolean;
 	disabled?: boolean;
 	isInvalid?: boolean;
+	title?: string;
+	description?: string;
+	showWalletName?: boolean;
 	onChange?: (address: string) => void;
 } & React.InputHTMLAttributes<any>;
 
@@ -38,7 +41,18 @@ const WalletAvatar = ({ address }: any) => {
 
 export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressProperties>(
 	(
-		{ wallet, wallets, profile, disabled, isInvalid, addUserIcon = true, onChange }: SelectAddressProperties,
+		{
+			wallet,
+			wallets,
+			profile,
+			disabled,
+			isInvalid,
+			addUserIcon = true,
+			showWalletName = true,
+			onChange,
+			title,
+			description,
+		}: SelectAddressProperties,
 		reference,
 	) => {
 		const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
@@ -83,8 +97,13 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					onClick={() => setSearchWalletIsOpen(true)}
 					disabled={disabled}
 				>
-					<span className="absolute inset-0 flex w-full items-center border border-transparent px-14">
-						<Address address={selectedWallet?.address} walletName={alias} />
+					<span
+						className={cn("absolute inset-0 flex w-full items-center border border-transparent", {
+							"px-14": addUserIcon,
+							"pl-14 pr-2": !addUserIcon,
+						})}
+					>
+						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
 					</span>
 
 					<Input
@@ -121,8 +140,8 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				<SearchWallet
 					isOpen={searchWalletIsOpen}
 					profile={profile}
-					title={t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
-					description={t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
+					title={title || t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
+					description={description || t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
 					disableAction={(wallet: Contracts.IReadWriteWallet) => !wallet.balance()}
 					searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
 					wallets={wallets}

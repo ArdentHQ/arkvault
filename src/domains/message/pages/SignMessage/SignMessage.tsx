@@ -150,7 +150,7 @@ export const SignMessage: React.VFC = () => {
 
 	const hideStepNavigation = activeTab === Step.AuthenticationStep && selectedWallet && selectedWallet.isLedger();
 
-	const handleSelectAddress = useCallback(
+	const handleSelectAddress: any = useCallback(
 		(address: string) => {
 			setSelectedWallet(activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork!.id()));
 		},

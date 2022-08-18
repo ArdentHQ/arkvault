@@ -24,7 +24,7 @@ export const FormStep = ({
 	wallets: Contracts.IReadWriteWallet[];
 	disableMessageInput?: boolean;
 	maxLength: number;
-	handleSelectAddress: (address: string) => void;
+	handleSelectAddress: ((address: string) => void) & React.ChangeEventHandler<any>;
 }) => {
 	const { t } = useTranslation();
 
@@ -72,7 +72,15 @@ export const FormStep = ({
 						disabled
 					/>
 				) : (
-					<SelectAddress wallets={wallets} profile={profile} onChange={handleSelectAddress} />
+					<SelectAddress
+						title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
+						description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
+						addUserIcon={false}
+						showWalletName={false}
+						wallets={wallets}
+						profile={profile}
+						onChange={handleSelectAddress}
+					/>
 				)}
 			</FormField>
 
