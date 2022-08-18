@@ -20,8 +20,9 @@ interface ValidateParameters {
 }
 
 interface PathProperties {
-	profileId: string;
-	searchParameters: URLSearchParams;
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	parameters: URLSearchParams;
 }
 
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
@@ -68,15 +69,17 @@ export const useSearchParametersValidation = () => {
 
 	const methods = {
 		sign: {
-			path: ({ profileId, searchParameters }: PathProperties) =>
+			path: ({ profile, parameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SignMessage, {
-					profileId,
-				})}?${searchParameters.toString()}`,
+					profileId: profile.id(),
+				})}?${parameters.toString()}`,
 			validate: validateSign,
 		},
 		transfer: {
-			path: ({ profileId, searchParameters }: PathProperties) =>
-				`${generatePath(ProfilePaths.SendTransfer, { profileId })}?${searchParameters.toString()}`,
+			path: ({ profile, parameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendTransfer, {
+					profileId: profile.id(),
+				})}?${parameters.toString()}`,
 			validate: validateTransfer,
 		},
 	};
@@ -164,7 +167,18 @@ export const useSearchParametersValidation = () => {
 
 		// method specific validation
 		await methods[method].validate({ network, parameters, profile });
+
+		const getPath = () =>
+			methods[method].path({
+				network,
+				parameters,
+				profile,
+			});
+
+		return {
+			getPath,
+		};
 	};
 
-	return { methods, validateSearchParameters };
+	return { validateSearchParameters };
 };

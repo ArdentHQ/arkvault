@@ -48,11 +48,9 @@ export const useDeeplink = () => {
 			}
 
 			try {
-				await validateSearchParameters(profile, searchParameters);
+				const { getPath } = await validateSearchParameters(profile, searchParameters);
 
-				const method = methods[searchParameters.get("method") as string];
-
-				return navigate(method.path({ profileId: profile.id(), searchParameters }));
+				return navigate(getPath());
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {
