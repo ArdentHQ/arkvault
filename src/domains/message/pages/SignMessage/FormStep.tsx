@@ -7,15 +7,24 @@ import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Input, InputCounter } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
 export const FormStep = ({
+	disabled = false,
 	wallet,
+	wallets,
 	disableMessageInput,
 	maxLength,
+	profile,
+	handleSelectAddress,
 }: {
-	wallet: Contracts.IReadWriteWallet;
+	profile: Contracts.IProfile;
+	disabled?: boolean;
+	wallet?: Contracts.IReadWriteWallet;
+	wallets: Contracts.IReadWriteWallet[];
 	disableMessageInput?: boolean;
 	maxLength: number;
+	handleSelectAddress: (address: string) => void;
 }) => {
 	const { t } = useTranslation();
 
@@ -27,6 +36,10 @@ export const FormStep = ({
 	}, [unregister]);
 
 	const getSubtitle = () => {
+		if (!wallet) {
+			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET");
+		}
+
 		if (wallet.isLedger()) {
 			return t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER");
 		}
@@ -46,16 +59,21 @@ export const FormStep = ({
 
 			<FormField name="signatory-address">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
-				<Input
-					innerClassName="font-semibold"
-					value={wallet.address()}
-					addons={{
-						start: {
-							content: <Avatar address={wallet.address()} size="sm" noShadow />,
-						},
-					}}
-					disabled
-				/>
+
+				{disabled ? (
+					<Input
+						innerClassName="font-semibold"
+						value={wallet!.address()}
+						addons={{
+							start: {
+								content: <Avatar address={wallet!.address()} size="sm" noShadow />,
+							},
+						}}
+						disabled
+					/>
+				) : (
+					<SelectAddress wallets={wallets} profile={profile} onChange={handleSelectAddress} />
+				)}
 			</FormField>
 
 			<FormField name="message">
