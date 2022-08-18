@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignMessage should render (lg) 1`] = `
+exports[`SignMessage Sign with Wallet should render (lg) 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -607,7 +607,7 @@ exports[`SignMessage should render (lg) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should render (xs) 1`] = `
+exports[`SignMessage Sign with Wallet should render (xs) 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -1214,7 +1214,7 @@ exports[`SignMessage should render (xs) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should render for ledger wallets 1`] = `
+exports[`SignMessage Sign with Wallet should render for ledger wallets 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -1821,7 +1821,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should sign message with encrypted mnemonic 1`] = `
+exports[`SignMessage Sign with Wallet should sign message with encrypted mnemonic 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -2466,7 +2466,7 @@ exports[`SignMessage should sign message with encrypted mnemonic 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should sign message with encrypted secret 1`] = `
+exports[`SignMessage Sign with Wallet should sign message with encrypted secret 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"

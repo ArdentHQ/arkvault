@@ -227,7 +227,7 @@ export const SignMessage: React.VFC = () => {
 									</Button>
 
 									<Button
-										disabled={!isValid}
+										disabled={!isValid || !selectedWallet}
 										onClick={handleNext}
 										data-testid="SignMessage__continue-button"
 									>
