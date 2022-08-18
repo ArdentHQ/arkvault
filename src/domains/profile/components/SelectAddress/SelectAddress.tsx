@@ -99,8 +99,8 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				>
 					<span
 						className={cn("absolute inset-0 flex w-full items-center border border-transparent", {
-							"px-14": addUserIcon,
 							"pl-14 pr-2": !addUserIcon,
+							"px-14": addUserIcon,
 						})}
 					>
 						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
