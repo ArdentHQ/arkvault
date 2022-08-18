@@ -73,14 +73,12 @@ export const useSearchParametersValidation = () => {
 				const address = parameters.get("address");
 
 				if (address) {
-					const wallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+					const wallet = profile.wallets().findByAddressWithNetwork(address, network.id())!;
 
-					if (wallet) {
-						return `${generatePath(ProfilePaths.SignMessageWallet, {
-							profileId: profile.id(),
-							walletId: wallet.id(),
-						})}?${parameters.toString()}`;
-					}
+					return `${generatePath(ProfilePaths.SignMessageWallet, {
+						profileId: profile.id(),
+						walletId: wallet.id(),
+					})}?${parameters.toString()}`;
 				}
 
 				return `${generatePath(ProfilePaths.SignMessage, {

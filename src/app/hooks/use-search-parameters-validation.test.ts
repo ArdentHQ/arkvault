@@ -193,4 +193,19 @@ describe("useSearchParametersValidation", () => {
 			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
 		);
 	});
+
+	it("should throw if sign and no message", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign",
+		);
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.MESSAGE_MISSING"),
+		);
+	});
 });
