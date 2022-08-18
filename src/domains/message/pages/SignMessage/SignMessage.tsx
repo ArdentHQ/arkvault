@@ -50,7 +50,10 @@ export const SignMessage: React.VFC = () => {
 
 	const form = useForm({
 		defaultValues: {
+			encryptionPassword: "",
 			message: initialState.message,
+			mnemonic: "",
+			secret: "",
 		},
 		mode: "onChange",
 	});
@@ -63,10 +66,6 @@ export const SignMessage: React.VFC = () => {
 	useEffect(() => {
 		register("message", signMessage.message());
 	}, [register, signMessage]);
-
-	useEffect(() => {
-		console.log({ formState });
-	}, [formState]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -131,7 +130,7 @@ export const SignMessage: React.VFC = () => {
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
 									disableMessageInput={false}
-									maxLength={signMessage.message().maxLength.value}
+									maxLength={signMessage.message().maxLength?.value}
 									wallet={activeWallet}
 								/>
 							</TabPanel>
