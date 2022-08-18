@@ -208,4 +208,21 @@ describe("useSearchParametersValidation", () => {
 			t("TRANSACTION.VALIDATION.MESSAGE_MISSING"),
 		);
 	});
+
+	it("should throw for nethash mismatch if sign", async () => {
+		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=sign");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(
+			result.current.validateSearchParameters(profile, parameters, {
+				...requiredParameters,
+				nethash: "wrong",
+				network: undefined,
+			}),
+		).rejects.toThrow(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+	});
 });
