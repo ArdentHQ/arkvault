@@ -400,39 +400,4 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/sign-message`));
 	});
-
-	it("should navigate to wallet sign page if address is provided", async () => {
-		const mnemonic = MNEMONICS[0];
-
-		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic,
-			network: "ark.devnet",
-		});
-
-		profile.wallets().push(wallet);
-
-		history.push(
-			`/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign&address=${wallet.address()}`,
-		);
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(history.location.pathname).toBe(
-				`/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/sign-message`,
-			),
-		);
-	});
 });

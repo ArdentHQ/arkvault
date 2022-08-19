@@ -37,15 +37,8 @@ export const SignMessage: React.VFC = () => {
 	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
 
 	const activeProfile = useActiveProfile();
-
-	const activeWallet = useActiveWalletWhenNeeded(!!hasWalletId);
-	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
-	const allEnabledNetworks = profileAllEnabledNetworks(activeProfile);
-
-	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-
 	const queryParameters = useQueryParameters();
-
+	const allEnabledNetworks = profileAllEnabledNetworks(activeProfile);
 	const activeNetwork = useMemo<Networks.Network | undefined>(() => {
 		const nethash = queryParameters.get("nethash");
 
@@ -55,6 +48,24 @@ export const SignMessage: React.VFC = () => {
 
 		return allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 	}, [allEnabledNetworks, queryParameters]);
+	const walletFromPath = useActiveWalletWhenNeeded(!!hasWalletId);
+	const walletFromDeeplink = useMemo(() => {
+		const address = queryParameters.get("address");
+
+		if (!address || !activeNetwork) {
+			return ;
+		}
+
+		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id())
+	}, [queryParameters]);
+
+	const activeWallet = useMemo(() => {
+		return walletFromPath || walletFromDeeplink
+	}, [walletFromPath,  walletFromDeeplink]);
+
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
+	
+	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const wallets = useMemo(
 		() =>
