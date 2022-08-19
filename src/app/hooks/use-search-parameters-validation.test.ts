@@ -1,6 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation } from "react-i18next";
+import { TFunction, useTranslation } from "react-i18next";
 
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
@@ -12,6 +12,8 @@ const requiredParameters = {
 	nethash: "1",
 	network: "ark.devnet",
 };
+
+const buildMissingParameterMessage = (t: TFunction, parameter: string) => t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter });
 
 describe("useSearchParametersValidation", () => {
 	beforeAll(() => {
@@ -49,7 +51,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") }),
+			buildMissingParameterMessage(t, t("COMMON.COIN")),
 		);
 	});
 
@@ -91,7 +93,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") }),
+			buildMissingParameterMessage(t, t("COMMON.METHOD")),
 		);
 	});
 
@@ -117,7 +119,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
+			buildMissingParameterMessage(t, t("COMMON.NETWORK_OR_NETHASH")),
 		);
 	});
 
@@ -205,17 +207,17 @@ describe("useSearchParametersValidation", () => {
 
 			let parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d");
 			await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-				t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.MESSAGE") }),
+				buildMissingParameterMessage(t, t("COMMON.MESSAGE")),
 			);
 
 			parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=verify&message=hello+world&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d");
 			await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-				t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATORY") }),
+				buildMissingParameterMessage(t, t("COMMON.SIGNATORY")),
 			);
 
 			parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
 			await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-				t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATURE") }),
+				buildMissingParameterMessage(t, t("COMMON.SIGNATURE")),
 			);
 		});
 	});
