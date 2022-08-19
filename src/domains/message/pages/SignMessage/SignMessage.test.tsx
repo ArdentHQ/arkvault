@@ -523,5 +523,31 @@ describe("SignMessage", () => {
 
 			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
 		});
+
+		it("back button sends to welcome page ", async () => {
+			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+				signMessage,
+			)}`;
+
+			history.push(signUrl);
+
+			render(
+				<Route path="/profiles/:profileId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: signUrl,
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			const historySpy = jest.spyOn(history, "push");
+
+			userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			expect(historySpy).toHaveBeenCalledWith(`/`);
+		});
 	});
 });

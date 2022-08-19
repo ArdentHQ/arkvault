@@ -220,7 +220,6 @@ export const SignMessage: React.VFC = () => {
 									<Button
 										data-testid="SignMessage__back-button"
 										variant="secondary"
-										disabled={!activeWallet}
 										onClick={handleBack}
 									>
 										{t("COMMON.BACK")}
