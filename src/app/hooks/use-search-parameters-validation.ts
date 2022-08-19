@@ -38,6 +38,7 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
+	// TODO: refactor after message signing is merged
 	const validateVerify = (
 		_: any,
 		__: any,
