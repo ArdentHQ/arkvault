@@ -46,6 +46,7 @@ export const translations = {
 		TOOLTIP_TEXT: "Copy to clipboard",
 	},
 	CLOSE: "Close",
+	COIN: "Coin",
 	COMING_SOON: "Coming soon",
 	COMPLETE: "Complete",
 	COMPLETED: "Completed",
@@ -193,6 +194,7 @@ export const translations = {
 	MAX: "Max",
 	MEMO: "Memo",
 	MESSAGE: "Message",
+	METHOD: "Method",
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",
@@ -211,6 +213,7 @@ export const translations = {
 	NETHASH: "Nethash",
 	NETWORK: "Network",
 	NETWORK_NAME: "This name is provided by the network",
+	NETWORK_OR_NETHASH: "network or nethash",
 	NETWORK_STATUS: "Network Status",
 	NEWS: "News",
 	NEXT: "Next",

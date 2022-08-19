@@ -201,7 +201,9 @@ describe("SendTransfer QRModal", () => {
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
 				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", {
-					reason: t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
+					reason: t("TRANSACTION.VALIDATION.PARAMETER_MISSING", {
+						parameter: t("COMMON.NETWORK_OR_NETHASH"),
+					}),
 				}),
 			),
 		);

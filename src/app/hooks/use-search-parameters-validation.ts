@@ -83,15 +83,17 @@ export const useSearchParametersValidation = () => {
 		const nethash = parameters.get("nethash");
 
 		if (!coin) {
-			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISSING"));
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") }));
 		}
 
 		if (!networkId && !nethash) {
-			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
+			throw new Error(
+				t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
+			);
 		}
 
 		if (!method) {
-			throw new Error(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") }));
 		}
 
 		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {

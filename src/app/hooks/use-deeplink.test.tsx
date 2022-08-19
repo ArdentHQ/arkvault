@@ -7,7 +7,6 @@ import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -16,6 +15,8 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { ProfilePaths } from "@/router/paths";
+import { renderHook } from "@testing-library/react-hooks";
+import { useTranslation } from "react-i18next";
 
 const history = createHashHistory();
 
@@ -71,6 +72,9 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should show a warning if the coin is missing", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?method=transfer&network=ark.mainnet");
 
 		render(
@@ -88,12 +92,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_MISSING),
+				buildToastMessage(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") })),
 			),
 		);
 	});
 
 	it("should show a warning if the coin is not supported", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?method=transfer&coin=doge&network=ark.mainnet");
 
 		render(
@@ -111,12 +118,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
+				buildToastMessage(t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "DOGE" })),
 			),
 		);
 	});
 
 	it("should show a warning if the method is missing", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?coin=ark&network=ark.mainnet");
 
 		render(
@@ -134,12 +144,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.METHOD_MISSING),
+				buildToastMessage(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") })),
 			),
 		);
 	});
 
 	it("should show a warning if the method is not supported", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?method=nuke&coin=ark&network=ark.mainnet");
 
 		render(
@@ -157,14 +170,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
-				),
+				buildToastMessage(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method: "nuke" })),
 			),
 		);
 	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?method=transfer&coin=ark");
 
 		render(
@@ -182,12 +196,17 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				buildToastMessage(
+					t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
+				),
 			),
 		);
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push("/?method=transfer&coin=ark&network=custom");
 
 		render(
@@ -205,12 +224,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
+				buildToastMessage(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: "custom" })),
 			),
 		);
 	});
 
 	it("should show a warning if there are no available senders for network", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		history.push(mainnetDeepLink);
 
 		render(
@@ -228,14 +250,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
-				),
+				buildToastMessage(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: "ark.mainnet" })),
 			),
 		);
 	});
 
 	it("should show a warning if there is no network for the given nethash", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
 
 		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
@@ -255,14 +278,15 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", nethash),
-				),
+				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash })),
 			),
 		);
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
 
 		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
@@ -282,9 +306,7 @@ describe("useDeeplink hook", () => {
 
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", nethash),
-				),
+				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash })),
 			),
 		);
 	});

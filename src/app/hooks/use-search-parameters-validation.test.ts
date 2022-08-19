@@ -49,7 +49,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.COIN_MISSING"),
+			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") }),
 		);
 	});
 
@@ -91,7 +91,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.METHOD_MISSING"),
+			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") }),
 		);
 	});
 
@@ -117,7 +117,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
+			t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
 		);
 	});
 
