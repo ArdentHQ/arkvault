@@ -170,7 +170,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate(profile, network, parameters);
+		await methods[method].validate({ network, parameters, profile });
 
 		const getPath = () =>
 			methods[method].path({
