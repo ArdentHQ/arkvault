@@ -38,11 +38,37 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
+	const validateVerify = (
+		_: any,
+		__: any,
+		parameters: URLSearchParams,
+	) => {
+		const message = parameters.get("message");
+		const signatory = parameters.get("signatory");
+		const signature = parameters.get("signature");
+
+		if (!message) {
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.MESSAGE")}));
+		}
+
+		if (!signatory) {
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATORY")}));
+		}
+
+		if (!signature) {
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATURE")}));
+		}
+	};
+
 	const methods = {
 		transfer: {
 			path: (profileId: string) => generatePath(ProfilePaths.SendTransfer, { profileId }),
 			validate: validateTransfer,
 		},
+		verify: {
+			path: (profileId: string) => generatePath(ProfilePaths.VerifyMessage, { profileId }),
+			validate: validateVerify,
+		}
 	};
 
 	const validateSearchParameters = async (

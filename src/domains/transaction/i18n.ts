@@ -405,6 +405,7 @@ export const translations = {
 		FEE_NEGATIVE: "Fee cannot be negative",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
+		PARAMETER_MISSING: "{{parameter}} is missing",
 		METHOD_MISSING: "method parameter is missing",
 		METHOD_NOT_SUPPORTED: 'method "{{method}}" is not supported.',
 		NETHASH_NOT_ENABLED: 'network with nethash "{{nethash}}" is not enabled or available.',

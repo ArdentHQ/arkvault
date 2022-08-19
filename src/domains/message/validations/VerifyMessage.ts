@@ -1,4 +1,19 @@
 export const verifyMessage = (t: any) => ({
+	message: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.MESSAGE"),
+		}),
+	}),
+	signatory: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.SIGNATORY"),
+		}),
+	}),
+	signature: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.SIGNATURE"),
+		}),
+	}),
 	jsonString: () => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_STRING"),
@@ -12,7 +27,7 @@ export const verifyMessage = (t: any) => ({
 				try {
 					const data = JSON.parse(jsonString);
 
-					if (data.signatory === undefined || data.message === undefined || data.signature === undefined) {
+					if (!data.signatory || !data.message || !data.signature) {
 						return invalidError;
 					}
 				} catch {
