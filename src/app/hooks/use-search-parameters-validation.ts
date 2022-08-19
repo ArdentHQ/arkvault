@@ -14,6 +14,18 @@ interface RequiredParameters {
 	nethash?: string;
 }
 
+interface ValidateParameters {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	parameters: URLSearchParams;
+}
+
+interface PathProperties {
+	profile: Contracts.IProfile;
+	network: Networks.Network;
+	parameters: URLSearchParams;
+}
+
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
 
 class MissingParameterError extends Error {
@@ -25,11 +37,7 @@ class MissingParameterError extends Error {
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
 
-	const validateTransfer = async (
-		profile: Contracts.IProfile,
-		network: Networks.Network,
-		parameters: URLSearchParams,
-	) => {
+	const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
 		const recipient = parameters.get("recipient");
 
 		if (recipient) {
@@ -45,8 +53,7 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	// TODO: refactor after message signing is merged
-	const validateVerify = (_: any, __: any, parameters: URLSearchParams) => {
+	const validateVerify = async ({ parameters }: ValidateParameters) => {
 		const message = parameters.get("message");
 		const signatory = parameters.get("signatory");
 		const signature = parameters.get("signature");
@@ -66,11 +73,17 @@ export const useSearchParametersValidation = () => {
 
 	const methods = {
 		transfer: {
-			path: (profileId: string) => generatePath(ProfilePaths.SendTransfer, { profileId }),
+			path: ({ profile, parameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendTransfer, {
+					profileId: profile.id(),
+				})}?${parameters.toString()}`,
 			validate: validateTransfer,
 		},
 		verify: {
-			path: (profileId: string) => generatePath(ProfilePaths.VerifyMessage, { profileId }),
+			path: ({ profile, parameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.VerifyMessage, {
+					profileId: profile.id(),
+				})}?${parameters.toString()}`,
 			validate: validateVerify,
 		},
 	};
@@ -158,7 +171,18 @@ export const useSearchParametersValidation = () => {
 
 		// method specific validation
 		await methods[method].validate(profile, network, parameters);
+
+		const getPath = () =>
+			methods[method].path({
+				network,
+				parameters,
+				profile,
+			});
+
+		return {
+			getPath,
+		};
 	};
 
-	return { methods, validateSearchParameters };
+	return { validateSearchParameters };
 };

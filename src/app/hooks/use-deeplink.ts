@@ -19,7 +19,7 @@ export const useDeeplink = () => {
 	const history = useHistory();
 	const location = useLocation();
 	const queryParameters = useQueryParameters();
-	const { methods, validateSearchParameters } = useSearchParametersValidation();
+	const { validateSearchParameters } = useSearchParametersValidation();
 	const [deepLink, setDeepLink] = useState<URLSearchParams | undefined>();
 
 	const navigate = useCallback((url: string, deeplinkSchema?: any) => history.push(url, deeplinkSchema), [history]);
@@ -48,13 +48,9 @@ export const useDeeplink = () => {
 			}
 
 			try {
-				await validateSearchParameters(profile, searchParameters);
+				const { getPath } = await validateSearchParameters(profile, searchParameters);
 
-				return navigate(
-					`${methods[searchParameters.get("method") as string].path(
-						profile.id(),
-					)}?${searchParameters.toString()}`,
-				);
+				return navigate(getPath());
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {
