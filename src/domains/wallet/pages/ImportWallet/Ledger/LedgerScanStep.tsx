@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { Networks, Contracts } from "@ardenthq/sdk";
 import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
@@ -5,8 +6,8 @@ import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
+import { BIP44 } from "@ardenthq/sdk-cryptography";
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
-
 import { toasts } from "@/app/services";
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
@@ -22,6 +23,7 @@ import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { useBreakpoint, useRandomNumber } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
+import { Button } from "@/app/components/Button";
 const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
 	const amountWidth = useRandomNumber(100, 130);
 
@@ -45,7 +47,9 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	toggleSelectAll,
 	isCompact,
 	isScanning,
+	isScanningMore,
 	isSelected,
+	scanMore,
 }) => {
 	const { t } = useTranslation();
 
@@ -83,7 +87,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	const { isBusy } = useLedgerContext();
 
-	const showSkeleton = isScanning || (isBusy && /* istanbul ignore next */ wallets.length === 0);
+	const showSkeleton = (isScanning || (isBusy && /* istanbul ignore next */ wallets.length === 0)) && !isScanningMore;
 
 	const data = useMemo(() => {
 		const skeletonRows = Array.from<LedgerData>({ length: 5 }).fill({} as LedgerData);
@@ -137,9 +141,32 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	);
 
 	return (
-		<Table columns={columns} data={data}>
-			{renderTableRow}
-		</Table>
+		<div>
+			<div className={cn({ "-mb-6": showSkeleton })}>
+				<Table columns={columns} data={data}>
+					{renderTableRow}
+				</Table>
+			</div>
+
+			{!showSkeleton && (
+				<div className="border-b border-theme-secondary-300 pt-2 pb-8 dark:border-theme-secondary-800">
+					<Button
+						data-testid="LedgerScanStep__scan-more"
+						isLoading={isScanningMore}
+						disabled={isScanningMore}
+						variant={isScanningMore ? "primary" : "secondary"}
+						icon="Plus"
+						iconPosition="left"
+						className="w-full"
+						onClick={scanMore}
+					>
+						<span className="pl-1">
+							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+						</span>
+					</Button>
+				</div>
+			)}
+		</div>
 	);
 };
 
@@ -179,7 +206,7 @@ export const LedgerScanStep = ({
 
 	const ledgerScanner = useLedgerScanner(network.coin(), network.id());
 
-	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets } = ledgerScanner;
+	const { scan, selectedWallets, canRetry, isScanning, abortScanner, error, loadedWallets, wallets } = ledgerScanner;
 
 	// eslint-disable-next-line arrow-body-style
 	useEffect(() => {
@@ -188,22 +215,38 @@ export const LedgerScanStep = ({
 		};
 	}, [abortScanner]);
 
+	const lastPath = useMemo(() => {
+		const ledgerPaths = wallets.map(({ path }) => path);
+		const profileWalletsPaths = profile
+			.wallets()
+			.values()
+			.map((wallet) => wallet.data().get<string>(ProfilesContracts.WalletData.DerivationPath));
+
+		return [...profileWalletsPaths, ...ledgerPaths]
+			.filter(Boolean)
+			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
+	}, [profile, wallets]);
+
+	const scanMore = useCallback(() => {
+		scan(profile, lastPath);
+	}, [scan, lastPath, profile]);
+
 	useEffect(() => {
 		setValue("isFinished", !isScanning, { shouldDirty: true, shouldValidate: true });
 	}, [isScanning, setValue]);
 
 	useEffect(() => {
 		if (canRetry) {
-			setRetryFn?.(() => scan(profile));
+			setRetryFn?.(() => scan(profile, lastPath));
 		} else {
 			setRetryFn?.(undefined);
 		}
 		return () => setRetryFn?.(undefined);
-	}, [setRetryFn, scan, canRetry, profile]);
+	}, [setRetryFn, scan, canRetry, profile, lastPath]);
 
 	useEffect(() => {
-		scan(profile);
-	}, [scan, profile]);
+		scan(profile, lastPath);
+	}, [profile]);
 
 	useEffect(() => {
 		register("wallets", { required: true, validate: (value) => Array.isArray(value) && value.length > 0 });
@@ -271,7 +314,7 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} isCompact={isCompact} {...ledgerScanner} />
+				<LedgerTable network={network} isCompact={isCompact} {...ledgerScanner} scanMore={scanMore} />
 			)}
 		</section>
 	);
