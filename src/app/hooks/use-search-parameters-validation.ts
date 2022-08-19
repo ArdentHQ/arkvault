@@ -69,22 +69,10 @@ export const useSearchParametersValidation = () => {
 
 	const methods = {
 		sign: {
-			path: ({ profile, parameters, network }: PathProperties) => {
-				const address = parameters.get("address");
-
-				if (address) {
-					const wallet = profile.wallets().findByAddressWithNetwork(address, network.id())!;
-
-					return `${generatePath(ProfilePaths.SignMessageWallet, {
-						profileId: profile.id(),
-						walletId: wallet.id(),
-					})}?${parameters.toString()}`;
-				}
-
-				return `${generatePath(ProfilePaths.SignMessage, {
+			path: ({ profile, parameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
 					profileId: profile.id(),
-				})}?${parameters.toString()}`;
-			},
+				})}?${parameters.toString()}`,
 			validate: validateSign,
 		},
 		transfer: {
