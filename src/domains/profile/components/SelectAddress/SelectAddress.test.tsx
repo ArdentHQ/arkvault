@@ -50,7 +50,7 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(screen.queryByTestId("Address__alias")).toBeInTheDocument();
+		expect(screen.getByTestId("Address__alias")).toBeInTheDocument();
 	});
 
 	it("should render without wallet name", () => {
