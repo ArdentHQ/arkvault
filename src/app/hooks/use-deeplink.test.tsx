@@ -352,7 +352,9 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should navigate to verify message page", async () => {
-		history.push("/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature");
+		history.push(
+			"/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
+		);
 
 		render(
 			<Route>
@@ -367,7 +369,9 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
-		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`));
+		await waitFor(() =>
+			expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`),
+		);
 	});
 
 	it("should wait for profile syncing", async () => {
