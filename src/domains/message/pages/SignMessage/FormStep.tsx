@@ -10,7 +10,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
 export const FormStep = ({
-	disabled = false,
+	disabled,
 	wallet,
 	wallets,
 	disableMessageInput,
@@ -19,7 +19,7 @@ export const FormStep = ({
 	handleSelectAddress,
 }: {
 	profile: Contracts.IProfile;
-	disabled?: boolean;
+	disabled: boolean;
 	wallet?: Contracts.IReadWriteWallet;
 	wallets: Contracts.IReadWriteWallet[];
 	disableMessageInput?: boolean;
