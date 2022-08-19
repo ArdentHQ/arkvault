@@ -6,6 +6,7 @@ import { generatePath } from "react-router-dom";
 import { assertProfile } from "@/utils/assertions";
 import { profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
+import { i18n } from "@/app/i18n";
 
 interface RequiredParameters {
 	network?: string;
@@ -14,6 +15,12 @@ interface RequiredParameters {
 }
 
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+
+class MissingParameterError extends Error {
+	public constructor(parameter: string) {
+		super(i18n.t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter }));
+	}
+}
 
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
@@ -45,15 +52,15 @@ export const useSearchParametersValidation = () => {
 		const signature = parameters.get("signature");
 
 		if (!message) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.MESSAGE") }));
+			throw new MissingParameterError(t("COMMON.MESSAGE"));
 		}
 
 		if (!signatory) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATORY") }));
+			throw new MissingParameterError(t("COMMON.SIGNATORY"));
 		}
 
 		if (!signature) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATURE") }));
+			throw new MissingParameterError(t("COMMON.SIGNATURE"));
 		}
 	};
 
@@ -83,17 +90,15 @@ export const useSearchParametersValidation = () => {
 		const nethash = parameters.get("nethash");
 
 		if (!coin) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") }));
+			throw new MissingParameterError(t("COMMON.COIN"));
 		}
 
 		if (!networkId && !nethash) {
-			throw new Error(
-				t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
-			);
+			throw new MissingParameterError(t("COMMON.NETWORK_OR_NETHASH"));
 		}
 
 		if (!method) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") }));
+			throw new MissingParameterError(t("COMMON.METHOD"));
 		}
 
 		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {

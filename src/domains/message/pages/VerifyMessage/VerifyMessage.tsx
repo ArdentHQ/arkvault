@@ -45,9 +45,9 @@ export const VerifyMessage: React.VFC = () => {
 
 	const history = useHistory();
 
-	const initialState = {
-		message: queryParameters.get("message") || "",
+	const initialState: Services.SignedMessage = {
 		signatory: queryParameters.get("signatory") || "",
+		message: queryParameters.get("message") || "",
 		signature: queryParameters.get("signature") || "",
 	};
 
@@ -70,14 +70,13 @@ export const VerifyMessage: React.VFC = () => {
 	const [storedMessage, setStoredMessage] = useState(initialState);
 
 	useEffect(() => {
-		console.log(storedMessage);
-		if (verificationMethod === VerificationMethod.Json) {
+		if (verificationMethod === VerificationMethod.Json && (message || signatory || signature)) {
 			setValue("jsonString", JSON.stringify(storedMessage), { shouldDirty: isDirty, shouldValidate: isDirty });
 		}
 
-		if (verificationMethod === VerificationMethod.Manual) {
-			setValue("message", storedMessage.message, { shouldDirty: isDirty, shouldValidate: isDirty });
+		if (verificationMethod === VerificationMethod.Manual && jsonString) {
 			setValue("signatory", storedMessage.signatory, { shouldDirty: isDirty, shouldValidate: isDirty });
+			setValue("message", storedMessage.message, { shouldDirty: isDirty, shouldValidate: isDirty });
 			setValue("signature", storedMessage.signature, { shouldDirty: isDirty, shouldValidate: isDirty });
 		}
 	}, [verificationMethod, setValue]);

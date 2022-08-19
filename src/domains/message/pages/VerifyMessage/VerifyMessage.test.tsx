@@ -12,6 +12,7 @@ import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
+	mockProfileWithPublicAndTestNetworks,
 	render,
 	renderResponsiveWithRoute,
 	screen,
@@ -36,12 +37,16 @@ const signatoryInput = () => screen.getByTestId("VerifyMessage__manual-signatory
 const messageInput = () => screen.getByTestId("VerifyMessage__manual-message");
 const signatureInput = () => screen.getByTestId("VerifyMessage__manual-signature");
 
+const jsonInput = () => screen.getByTestId("VerifyMessage__json-jsonString");
+
 const verifyButton = () => screen.getByTestId("VerifyMessage__verify-button");
 
 describe("VerifyMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+
+		mockProfileWithPublicAndTestNetworks(profile);
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`;
 
@@ -53,9 +58,9 @@ describe("VerifyMessage", () => {
 			message: signedMessageText,
 			signatory,
 		});
-
-		history.push(walletUrl);
 	});
+
+	beforeEach(() => history.push(walletUrl));
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
@@ -87,6 +92,14 @@ describe("VerifyMessage", () => {
 			},
 		);
 
+		userEvent.paste(signatoryInput(), signedMessage.signatory);
+		userEvent.paste(messageInput(), signedMessage.message);
+		userEvent.paste(signatureInput(), signedMessage.signature);
+
+		await waitFor(() => {
+			expect(verifyButton()).toBeEnabled();
+		});
+
 		const toggle = screen.getByRole("checkbox");
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
@@ -95,7 +108,13 @@ describe("VerifyMessage", () => {
 
 		expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
 
+		expect(jsonInput()).toHaveValue(JSON.stringify(signedMessage));
+
 		userEvent.click(toggle);
+
+		expect(signatoryInput()).toHaveValue(signedMessage.signatory);
+		expect(messageInput()).toHaveValue(signedMessage.message);
+		expect(signatureInput()).toHaveValue(signedMessage.signature);
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 	});
@@ -144,6 +163,34 @@ describe("VerifyMessage", () => {
 		userEvent.paste(jsonStringInput, JSON.stringify(signedMessage));
 
 		expect(jsonStringInput).toHaveValue(JSON.stringify(signedMessage));
+
+		await waitFor(() => {
+			expect(verifyButton()).toBeEnabled();
+		});
+
+		userEvent.click(verifyButton());
+
+		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
+	});
+
+	it("should render with deeplink values and use them", async () => {
+		const url = `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`
+
+		history.push(url);
+
+		render(
+			<Route path="/profiles/:profileId/verify-message">
+				<VerifyMessage />
+			</Route>,
+			{
+				history,
+				route: url,
+			},
+		);
+
+		expect(signatoryInput()).toHaveValue("025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
+		expect(messageInput()).toHaveValue("hello world");
+		expect(signatureInput()).toHaveValue("22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d");
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();

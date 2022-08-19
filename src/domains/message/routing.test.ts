@@ -6,6 +6,7 @@ describe("routing", () => {
 	it("should have wallet routes", () => {
 		expect(MessageRoutes).toStrictEqual([
 			expect.objectContaining({ path: ProfilePaths.SignMessageWallet }),
+			expect.objectContaining({ path: ProfilePaths.VerifyMessage }),
 			expect.objectContaining({ path: ProfilePaths.VerifyMessageWallet }),
 		]);
 	});
