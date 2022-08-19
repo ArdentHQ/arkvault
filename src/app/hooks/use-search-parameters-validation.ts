@@ -53,7 +53,7 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	const validateVerify = async ({ parameters }: ValidateParameters) => {
+	const validateVerify = ({ parameters }: ValidateParameters) => {
 		const message = parameters.get("message");
 		const signatory = parameters.get("signatory");
 		const signature = parameters.get("signature");
