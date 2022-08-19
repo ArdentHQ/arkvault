@@ -351,6 +351,25 @@ describe("useDeeplink hook", () => {
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-transfer`));
 	});
 
+	it("should navigate to verify message page", async () => {
+		history.push("/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature");
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`));
+	});
+
 	it("should wait for profile syncing", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
