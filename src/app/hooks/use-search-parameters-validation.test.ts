@@ -211,7 +211,7 @@ describe("useSearchParametersValidation", () => {
 
 	it("should throw for nethash mismatch if sign with invalid address", async () => {
 		const parameters = new URLSearchParams(
-			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&address=1",
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=1",
 		);
 
 		const { result: translation } = renderHook(() => useTranslation());
@@ -219,12 +219,8 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(
-			result.current.validateSearchParameters(profile, parameters, {
-				...requiredParameters,
-				nethash: "wrong",
-				network: undefined,
-			}),
-		).rejects.toThrow(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
+		);
 	});
 });
