@@ -46,8 +46,8 @@ export const VerifyMessage: React.VFC = () => {
 	const history = useHistory();
 
 	const initialState: Services.SignedMessage = {
-		signatory: queryParameters.get("signatory") || "",
 		message: queryParameters.get("message") || "",
+		signatory: queryParameters.get("signatory") || "",
 		signature: queryParameters.get("signature") || "",
 	};
 

@@ -174,7 +174,7 @@ describe("VerifyMessage", () => {
 	});
 
 	it("should render with deeplink values and use them", async () => {
-		const url = `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`
+		const url = `/profiles/${profile.id()}/verify-message?message=hello+world&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d&coin=ARK&network=ark.mainnet`;
 
 		history.push(url);
 
@@ -190,7 +190,9 @@ describe("VerifyMessage", () => {
 
 		expect(signatoryInput()).toHaveValue("025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca");
 		expect(messageInput()).toHaveValue("hello world");
-		expect(signatureInput()).toHaveValue("22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d");
+		expect(signatureInput()).toHaveValue(
+			"22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+		);
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();

@@ -422,9 +422,9 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 
 	const allMock = jest.spyOn(profile.networks(), "all").mockReturnValue(networks);
-	const allByCoinMock = jest.spyOn(profile.networks(), "allByCoin").mockImplementation((coin: string) => {
-		return Object.values(networks[coin.toLowerCase()] ?? []);
-	});
+	const allByCoinMock = jest
+		.spyOn(profile.networks(), "allByCoin")
+		.mockImplementation((coin: string) => Object.values(networks[coin.toLowerCase()] ?? []));
 
 	return () => {
 		allMock.mockRestore();

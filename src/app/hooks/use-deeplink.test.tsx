@@ -4,6 +4,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
 import { createHashHistory } from "history";
+import { renderHook } from "@testing-library/react-hooks";
+import { useTranslation } from "react-i18next";
 import { useDeeplink } from "./use-deeplink";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
@@ -15,8 +17,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { ProfilePaths } from "@/router/paths";
-import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation } from "react-i18next";
 
 const history = createHashHistory();
 
