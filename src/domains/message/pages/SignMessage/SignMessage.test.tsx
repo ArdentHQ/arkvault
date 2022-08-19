@@ -524,7 +524,7 @@ describe("SignMessage", () => {
 			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
 		});
 
-		it("back button sends to welcome page ", async () => {
+		it("back button sends to welcome page", async () => {
 			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
 			)}`;
