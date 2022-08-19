@@ -54,7 +54,7 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render without wallet name", () => {
-		const { container } = render(
+		render(
 			<SelectAddress
 				showWalletName={false}
 				wallets={wallets}
