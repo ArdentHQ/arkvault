@@ -23,6 +23,8 @@ describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let legacyPublicKeyPaths: Map<string, string>;
+	let getPublicKeySpy: Jest.SpyInstance;
+	let getExtendedPublicKeySpy: Jest.SpyInstance;
 
 	beforeAll(() => {
 		legacyPublicKeyPaths = new Map<string, string>();
@@ -90,6 +92,19 @@ describe("Use Ledger Scanner", () => {
 			["m/44'/1'/9'/0/0", "03f3512aa9717b2ca83d371ed3bb2d3ff922969f3ceef92f65c060afa2bc2244fb"],
 			["m/44'/1'/10'/0/0", "0349e7e2afb470994a8323e9623a6dab227c69d5f09f1a59991fd92880123ffe75"],
 		]);
+
+		getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(legacyPublicKeyPaths.get(path)!));
+
+		getExtendedPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
+			.mockResolvedValue(wallet.publicKey()!);
+	});
+
+	afterEach(() => {
+		getPublicKeySpy.mockRestore();
+		getExtendedPublicKeySpy.mockRestore();
 	});
 
 	afterAll(() => {
@@ -97,11 +112,6 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should render", async () => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
 		const Component = () => {
 			const { scan, wallets, isSelected } = useLedgerScanner(wallet.coinId(), wallet.networkId());
 
@@ -128,11 +138,6 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should render with toggleSelect", async () => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
 		const Component = () => {
 			const { toggleSelect, wallets, isSelected, scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
 
@@ -178,11 +183,6 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	it("should render with toggleSelectAll", async () => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
 		const Component = () => {
 			const { scan, toggleSelectAll, wallets, isSelected } = useLedgerScanner(
 				wallet.coinId(),
@@ -219,10 +219,6 @@ describe("Use Ledger Scanner", () => {
 		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
 		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
 	])("should load with last import path", async (path1, path2) => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
 
 		const profileWallets = profile.wallets().values();
@@ -234,7 +230,7 @@ describe("Use Ledger Scanner", () => {
 
 			return (
 				<div>
-					<button onClick={() => scan(profile)}>Scan</button>
+					<button onClick={() => scan(profile, path1)}>Scan</button>
 				</div>
 			);
 		};
@@ -250,19 +246,63 @@ describe("Use Ledger Scanner", () => {
 		await waitFor(() =>
 			expect(ledgerScanSpy).toHaveBeenCalledWith({
 				onProgress: expect.any(Function),
-				startPath: "m/44'/1'/0'/0/3",
+				startPath: path1,
 			}),
 		);
 
 		walletSpy1.mockRestore();
 		walletSpy2.mockRestore();
+		ledgerScanSpy.mockRestore();
+	});
+
+	it("should load more wallets", async () => {
+		const Component = () => {
+			const { scan, wallets, isScanningMore } = useLedgerScanner(wallet.coinId(), wallet.networkId());
+
+			return (
+				<div>
+					{isScanningMore && <p data-testid="scanningMore">Scanning more...</p>}
+					{wallets.length > 0 ? (
+						<button data-testid="scanMore" onClick={() => scan(profile)}>
+							Scan More
+						</button>
+					) : (
+						<button data-testid="scan" onClick={() => scan(profile)}>
+							Scan
+						</button>
+					)}
+				</div>
+			);
+		};
+
+		render(
+			<LedgerProvider>
+				<Component />
+			</LedgerProvider>,
+		);
+
+		userEvent.click(screen.getByTestId("scan"));
+
+		await waitFor(() => expect(screen.queryByTestId("scan")).not.toBeInTheDocument());
+
+		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
+
+		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+
+		userEvent.click(screen.getByTestId("scanMore"));
+
+		expect(screen.getByTestId("scanningMore")).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.queryByTestId("scanningMore")).not.toBeInTheDocument());
+
+		ledgerScanSpy.mockRestore();
 	});
 
 	it("should dispatch failed", async () => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockRejectedValue(new Error("Failed"));
+		getExtendedPublicKeySpy.mockRestore();
+		getExtendedPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
+			.mockRejectedValue(new Error("Failed"));
 
 		const Component = () => {
 			const { wallets, scan, canRetry } = useLedgerScanner(wallet.coinId(), wallet.networkId());
@@ -295,14 +335,11 @@ describe("Use Ledger Scanner", () => {
 		await expect(screen.findByText("Retry")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
+
+		getExtendedPublicKeySpy.mockRestore();
 	});
 
 	it("should abort scanner", async () => {
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
-			Promise.resolve(legacyPublicKeyPaths.get(path)!),
-		);
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
 		const Component = () => {
 			const { isBusy } = useLedgerContext();
 			const { scan, abortScanner } = useLedgerScanner(wallet.coinId(), wallet.networkId());
