@@ -95,7 +95,7 @@ exports[`DeleteWallet should render a modal 1`] = `
                 type="button"
               >
                 <span
-                  class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+                  class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
                 >
                   <div
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
