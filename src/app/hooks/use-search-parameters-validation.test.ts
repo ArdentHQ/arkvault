@@ -209,8 +209,10 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
-	it("should throw for nethash mismatch if sign", async () => {
-		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=sign");
+	it("should throw for nethash mismatch if sign with invalid address", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&address=1",
+		);
 
 		const { result: translation } = renderHook(() => useTranslation());
 		const { t } = translation.current;
