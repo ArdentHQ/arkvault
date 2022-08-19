@@ -111,13 +111,7 @@ export const VerifyMessage: React.VFC = () => {
 			if (activeWallet) {
 				result = await activeWallet.message().verify(storedMessage);
 			} else {
-				let coin: Coins.Coin;
-
-				if (activeProfile.coins().has("ARK", "ark.mainnet")) {
-					coin = activeProfile.coins().set("ARK", "ark.mainnet");
-				} else {
-					coin = activeProfile.coins().set("ARK", "ark.devnet");
-				}
+				const coin: Coins.Coin = activeProfile.coins().set("ARK", activeProfile.networks().allByCoin("ARK")[0].id);
 
 				await coin.__construct();
 
