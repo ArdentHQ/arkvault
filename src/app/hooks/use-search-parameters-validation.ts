@@ -39,25 +39,21 @@ export const useSearchParametersValidation = () => {
 	};
 
 	// TODO: refactor after message signing is merged
-	const validateVerify = (
-		_: any,
-		__: any,
-		parameters: URLSearchParams,
-	) => {
+	const validateVerify = (_: any, __: any, parameters: URLSearchParams) => {
 		const message = parameters.get("message");
 		const signatory = parameters.get("signatory");
 		const signature = parameters.get("signature");
 
 		if (!message) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.MESSAGE")}));
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.MESSAGE") }));
 		}
 
 		if (!signatory) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATORY")}));
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATORY") }));
 		}
 
 		if (!signature) {
-			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATURE")}));
+			throw new Error(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.SIGNATURE") }));
 		}
 	};
 
@@ -69,7 +65,7 @@ export const useSearchParametersValidation = () => {
 		verify: {
 			path: (profileId: string) => generatePath(ProfilePaths.VerifyMessage, { profileId }),
 			validate: validateVerify,
-		}
+		},
 	};
 
 	const validateSearchParameters = async (

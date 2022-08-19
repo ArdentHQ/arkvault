@@ -1,9 +1,8 @@
-import { Coins } from "@ardenthq/sdk";
+import { Coins, Services } from "@ardenthq/sdk";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
-import { Services } from "@ardenthq/sdk";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
@@ -12,7 +11,7 @@ import { StepsProvider } from "@/app/contexts";
 
 import { Form, FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
-import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from "@/app/hooks";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 
 enum Step {
@@ -38,7 +37,7 @@ export type VerificationResult = { verified?: boolean } & Services.SignedMessage
 export const VerifyMessage: React.VFC = () => {
 	const { t } = useTranslation();
 
-	const { walletId } = useParams<{ walletId: string }>()
+	const { walletId } = useParams<{ walletId: string }>();
 	const queryParameters = useQueryParameters();
 
 	const activeProfile = useActiveProfile();
@@ -71,7 +70,7 @@ export const VerifyMessage: React.VFC = () => {
 	const [storedMessage, setStoredMessage] = useState(initialState);
 
 	useEffect(() => {
-		console.log(storedMessage)
+		console.log(storedMessage);
 		if (verificationMethod === VerificationMethod.Json) {
 			setValue("jsonString", JSON.stringify(storedMessage), { shouldDirty: isDirty, shouldValidate: isDirty });
 		}
@@ -96,8 +95,8 @@ export const VerifyMessage: React.VFC = () => {
 	useEffect(() => {
 		if (message || signatory || signature) {
 			setStoredMessage({
-				signatory,
 				message,
+				signatory,
 				signature,
 			});
 		}
@@ -141,7 +140,7 @@ export const VerifyMessage: React.VFC = () => {
 			return true;
 		}
 
-		if (isDirty || (Object.values(initialState).every(Boolean))) {
+		if (isDirty || Object.values(initialState).every(Boolean)) {
 			return !isValid;
 		}
 

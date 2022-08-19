@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -47,26 +47,17 @@ const ManualForm = () => {
 		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
 			<FormField name="signatory">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-signatory"
-					ref={register(verifyMessage.signatory())}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
 			</FormField>
 
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-message"
-					ref={register(verifyMessage.message())}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
 			</FormField>
 
 			<FormField name="signature">
 				<FormLabel label={t("COMMON.SIGNATURE")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-signature"
-					ref={register(verifyMessage.signature())}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-signature" ref={register(verifyMessage.signature())} />
 			</FormField>
 		</div>
 	);
