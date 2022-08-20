@@ -165,6 +165,50 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
+	it("should load more address", async () => {
+		const scanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+
+		const getPublicKeySpy = jest
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
+
+		const ledgerTransportMock = mockNanoXTransport();
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
+		userEvent.click(nextSelector());
+
+		// eslint-disable-next-line testing-library/prefer-explicit-assert
+		await screen.findByTestId("LedgerConnectionStep");
+
+		// Auto redirect to next step
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2), { timeout: 3000 });
+
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2), { timeout: 4000 });
+
+		expect(scanSpy).toHaveBeenCalledWith({
+			onProgress: expect.any(Function),
+			startPath: undefined,
+		});
+
+		const loadMoreButton = screen.getByTestId("LedgerScanStep__scan-more");
+
+		expect(loadMoreButton).toBeInTheDocument();
+
+		userEvent.click(loadMoreButton);
+
+		expect(scanSpy).toHaveBeenCalledWith({
+			onProgress: expect.any(Function),
+			startPath: "m/44'/1'/0'/0/0",
+		});
+
+		getPublicKeySpy.mockReset();
+		ledgerTransportMock.mockRestore();
+	});
+
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
