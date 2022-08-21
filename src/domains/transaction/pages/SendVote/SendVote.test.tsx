@@ -118,6 +118,8 @@ describe("SendVote", () => {
 
 		nock.disableNetConnect();
 
+		jest.spyOn(wallet.synchroniser(), "votes").mockImplementation(jest.fn());
+
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
 			.reply(200, voteFixture)
@@ -136,127 +138,23 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should return to the select a delegate page to vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?nethash=${wallet.network().meta().nethash}`);
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
-		userEvent.click(backButton());
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should return to the select a delegate page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
+		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
-
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				{" "}
 				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+					{" "}
+					<SendVote />{" "}
+				</LedgerProvider>{" "}
 			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
+			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
-
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
-		userEvent.click(backButton());
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should return to the select a delegate page to unvote/vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
-		appendParameters(parameters, "unvote", unvotes);
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled()); userEvent.click(backButton()); expect(container).toMatchSnapshot(); }); it("should return to the select a delegate page to unvote/vote", async () => { const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`; const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`); const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ]; appendParameters(parameters, "unvote", unvotes); const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ]; appendParameters(parameters, "vote", votes); const { container } = render( <Route path="/profiles/:profileId/wallets/:walletId/send-vote"> <LedgerProvider> <SendVote /> </LedgerProvider> </Route>, { route: { pathname: voteURL, search: `?${parameters}`, }, },); expect(screen.getByTestId(formStepID)).toBeInTheDocument(); await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled());
 		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
@@ -332,11 +230,9 @@ describe("SendVote", () => {
 		const signVoteMock = jest
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastVoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
+		const broadcastVoteMock = jest
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [voteFixture.data.id], errors: {}, rejected: [] });
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
@@ -493,7 +389,7 @@ describe("SendVote", () => {
 					unvotes: [
 						{
 							amount: 10,
-							id: delegateData[1].publicKey,
+							id: delegateData[1].address,
 						},
 					],
 				},
@@ -528,117 +424,6 @@ describe("SendVote", () => {
 		transactionUnvoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
 		splitVotingMethodMock.mockRestore();
-	});
-
-	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0.1",
-				},
-			}),
-		);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<LedgerProvider>
-						<SendVote />
-					</LedgerProvider>
-				</FormProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Fee
-		expect(screen.getAllByRole("radio")[1]).toBeChecked();
-
-		userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
-
-		expect(screen.getAllByRole("radio")[2]).toBeChecked();
-
-		// remove focus from fee button
-		userEvent.click(document.body);
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-
-		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
-
-		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
-
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createVoteTransactionMock(wallet);
-
-		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
-
-		await waitFor(() => {
-			expect(passwordInput).toHaveValue(passphrase);
-		});
-
-		act(() => {
-			jest.advanceTimersByTime(1000);
-		});
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		await act(async () => {
-			if (inputMethod === "with keyboard") {
-				userEvent.keyboard("{enter}");
-			} else {
-				userEvent.click(sendButton());
-			}
-		});
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
 	});
 
 	it("should select sender", async () => {
@@ -736,7 +521,7 @@ describe("SendVote", () => {
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -758,7 +543,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -794,7 +579,7 @@ describe("SendVote", () => {
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -816,7 +601,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -869,7 +654,7 @@ describe("SendVote", () => {
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -891,7 +676,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -975,9 +760,9 @@ describe("SendVote", () => {
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		userEvent.paste(inputElement, "5");
 
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
+		await waitFor(() => expect(inputElement).toHaveValue("5"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -1293,7 +1078,7 @@ describe("SendVote", () => {
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -1315,7 +1100,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -1373,95 +1158,5 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
-	});
-
-	it("should send a vote transaction using encryption password", async () => {
-		jest.useRealTimers();
-
-		const actsWithMnemonicMock = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
-
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		// eslint-disable-next-line sonarjs/no-identical-functions
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0.1",
-				},
-			}),
-		);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<LedgerProvider>
-						<SendVote />
-					</LedgerProvider>
-				</FormProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		userEvent.click(continueButton());
-
-		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
-
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createVoteTransactionMock(wallet);
-
-		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		userEvent.paste(passwordInput, "password");
-
-		await waitFor(() => expect(passwordInput).toHaveValue("password"));
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		await act(async () => {
-			userEvent.click(sendButton());
-		});
-
-		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
 	});
 });
