@@ -27,7 +27,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
 	it("should validate search parameters without errors (with nethash)", async () => {
@@ -37,7 +37,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
 	it("should throw for missing coin", async () => {
@@ -48,7 +48,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.COIN_MISSING"),
 		);
 	});
@@ -61,7 +61,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "CUSTOM" }),
 		);
 	});
@@ -75,7 +75,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(() =>
-			result.current.validateSearchParameters(profile, parameters, {
+			result.current.validateSearchParameters(profile, env, parameters, {
 				...requiredParameters,
 				coin: "custom",
 			}),
@@ -90,7 +90,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.METHOD_MISSING"),
 		);
 	});
@@ -103,7 +103,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method: "custom" }),
 		);
 	});
@@ -116,7 +116,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
 		);
 	});
@@ -129,7 +129,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: "custom" }),
 		);
 	});
@@ -142,7 +142,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: "custom" }),
 		);
 	});
@@ -156,7 +156,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(
-			result.current.validateSearchParameters(profile, parameters, {
+			result.current.validateSearchParameters(profile, env, parameters, {
 				...requiredParameters,
 				nethash: undefined,
 				network: "custom",
@@ -173,7 +173,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(
-			result.current.validateSearchParameters(profile, parameters, {
+			result.current.validateSearchParameters(profile, env, parameters, {
 				...requiredParameters,
 				nethash: "wrong",
 				network: undefined,
@@ -189,19 +189,62 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
 		);
 	});
 
 	it("should validate vote", async () => {
+		const mockFindDelegateByName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
 		const parameters = new URLSearchParams(
 			"coin=ARK&network=ark.devnet&method=vote&delegate=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		mockFindDelegateByName.mockRestore();
+	});
+
+	it("should find delegate by public key", async () => {
+		const mockFindDelegateByPublicKey = jest
+			.spyOn(env.delegates(), "findByPublicKey")
+			.mockReturnValue(profile.wallets().first());
+
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		mockFindDelegateByPublicKey.mockRestore();
+	});
+
+	it("should fail to find delegate by public key", async () => {
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: "1" }),
+		);
+	});
+
+	it("should not allow both delegate name and public keys in the url", async () => {
+		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1&delegate=test");
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"),
+		);
 	});
 
 	it("should fail to validate delegate address", async () => {
@@ -212,8 +255,8 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: "custom" }),
 		);
 	});
 
@@ -225,7 +268,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, parameters)).rejects.toThrow(
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.DELEGATE_MISSING"),
 		);
 	});

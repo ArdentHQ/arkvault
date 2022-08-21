@@ -105,7 +105,6 @@ export const useSearchParametersValidation = () => {
 				assertNetwork(network);
 
 				const delegate = delegateFromSearchParameters({ profile, network, env, searchParameters });
-				console.log({ delegate });
 
 				searchParameters.set("vote", delegate?.address() as string);
 

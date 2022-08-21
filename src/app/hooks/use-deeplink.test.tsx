@@ -380,8 +380,12 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should navigate to vote page", async () => {
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
 		history.push(
-			"/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
+			"/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 		);
 
 		render(
@@ -398,5 +402,7 @@ describe("useDeeplink hook", () => {
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+		mockDelegateName.mockRestore();
 	});
 });
