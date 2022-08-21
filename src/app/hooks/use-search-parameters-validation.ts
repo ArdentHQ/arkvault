@@ -1,10 +1,10 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Coins, Networks } from "@ardenthq/sdk";
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { generatePath } from "react-router-dom";
-import { assertProfile } from "@/utils/assertions";
-import { profileAllEnabledNetworks } from "@/utils/network-utils";
+import { assertNetwork, assertProfile } from "@/utils/assertions";
+import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
 
 interface RequiredParameters {
@@ -14,17 +14,41 @@ interface RequiredParameters {
 }
 
 interface ValidateParameters {
+	env: Environment;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
 	parameters: URLSearchParams;
 }
 
 interface PathProperties {
-	profileId: string;
+	env: Environment;
+	profile: Contracts.IProfile;
+	network: Networks.Network;
 	searchParameters: URLSearchParams;
 }
 
 const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+
+const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+	const delegateName = searchParameters.get("delegate");
+	const delegatePublicKey = searchParameters.get("publicKey");
+
+	if (delegateName) {
+		try {
+			return env.delegates().findByUsername(network?.coin(), network?.id(), delegateName);
+		} catch {
+			//
+		}
+	}
+
+	if (delegatePublicKey) {
+		try {
+			return env.delegates().findByPublicKey(network?.coin(), network?.id(), delegatePublicKey);
+		} catch {
+			//
+		}
+	}
+};
 
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
@@ -45,34 +69,49 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	const validateVote = async ({ parameters, profile, network }: ValidateParameters) => {
-		const delegate = parameters.get("delegate");
+	const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
+		const delegateName = parameters.get("delegate");
+		const publicKey = parameters.get("publicKey");
 
-		if (!delegate) {
+		if (!delegateName && !publicKey) {
 			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_MISSING"));
 		}
 
-		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+		if (!!publicKey && !!delegateName) {
+			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"));
+		}
 
+		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await coin.__construct();
 
-		const isValid = await coin.address().validate(delegate);
+		await env.delegates().sync(profile, network.coin(), network.id());
 
-		if (!isValid) {
-			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+		if (!delegateFromSearchParameters({ profile, network, env, searchParameters: parameters })) {
+			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: delegateName || publicKey }));
 		}
 	};
 
 	const methods = {
 		transfer: {
-			path: ({ profileId, searchParameters }: PathProperties) =>
-				`${generatePath(ProfilePaths.SendTransfer, { profileId })}?${searchParameters.toString()}`,
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SendTransfer, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
 			validate: validateTransfer,
 		},
 		vote: {
-			path: ({ profileId, searchParameters }: PathProperties) => {
-				searchParameters.set("vote", searchParameters.get("delegate") as string);
-				return `${generatePath(ProfilePaths.SendVote, { profileId })}?${searchParameters.toString()}`;
+			path: ({ profile, searchParameters, env }: PathProperties) => {
+				const network = findNetworkFromSearchParameters(profile, searchParameters);
+				assertNetwork(network);
+
+				const delegate = delegateFromSearchParameters({ profile, network, env, searchParameters });
+				console.log({ delegate });
+
+				searchParameters.set("vote", delegate?.address() as string);
+
+				return `${generatePath(ProfilePaths.SendVote, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`;
 			},
 			validate: validateVote,
 		},
@@ -80,6 +119,7 @@ export const useSearchParametersValidation = () => {
 
 	const validateSearchParameters = async (
 		profile: Contracts.IProfile,
+		env: Environment,
 		parameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
 	) => {
@@ -160,7 +200,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate({ network, parameters, profile });
+		await methods[method].validate({ network, parameters, profile, env });
 	};
 
 	return { methods, validateSearchParameters };

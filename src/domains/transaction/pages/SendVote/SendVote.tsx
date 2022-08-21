@@ -1,6 +1,6 @@
 import { Services } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -30,6 +30,7 @@ import { handleBroadcastError } from "@/domains/transaction/utils";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertNetwork, assertProfile, assertWallet } from "@/utils/assertions";
 import { useDelegatesFromURL } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { toasts } from "@/app/services";
 
 enum Step {
 	FormStep = 1,
@@ -53,13 +54,14 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteDelegates, unvoteDelegates } = useDelegatesFromURL({
+	const { votes, unvotes, voteDelegates, unvoteDelegates, setVotes, setUnvotes, isLoading } = useDelegatesFromURL({
 		env,
 		network: activeNetwork,
 		profile: activeProfile,
 	});
 
 	const [activeWallet, setActiveWallet] = useState(wallet);
+	const [walletDelegateStatus, setLoadingWalletDelegateStatus] = useState(false);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
@@ -73,7 +75,7 @@ export const SendVote = () => {
 	const { syncProfileWallets } = useProfileJobs(activeProfile);
 
 	const { clearErrors, formState, getValues, handleSubmit, register, setValue, watch } = form;
-	const { isDirty, isValid, isSubmitting } = formState;
+	const { isDirty, isValid, isSubmitting, errors } = formState;
 
 	const { fee, fees } = watch();
 	const { sendVote, common } = useValidation();
@@ -88,7 +90,7 @@ export const SendVote = () => {
 		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
 		register("inputFeeSettings");
 
-		setValue("senderAddress", activeWallet?.address(), { shouldDirty: true, shouldValidate: true });
+		setValue("senderAddress", activeWallet?.address(), { shouldDirty: true, shouldValidate: !!senderAddress });
 
 		register("suppressWarning");
 
@@ -105,20 +107,66 @@ export const SendVote = () => {
 		useFeeConfirmation(fee, fees);
 
 	useEffect(() => {
-		const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
+		const updateWallet = async () => {
+			const newSenderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, activeNetwork.id());
 
-		if (!newSenderWallet) {
-			return;
-		}
+			if (!newSenderWallet) {
+				return;
+			}
 
-		const isFullyRestoredAndSynced =
-			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
+			const isFullyRestoredAndSynced =
+				newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
-		if (!isFullyRestoredAndSynced) {
-			syncProfileWallets(true);
-		}
+			if (!isFullyRestoredAndSynced) {
+				syncProfileWallets(true);
+			}
 
-		setActiveWallet(newSenderWallet);
+			setLoadingWalletDelegateStatus(true);
+			setVotes([]);
+			setActiveWallet(newSenderWallet);
+			toasts.dismiss();
+
+			const votingDelegates = newSenderWallet.voting().current();
+
+			const voteAddresses = votes.map((vote) => vote.wallet?.address());
+
+			// Case 2: Wallet is already voting for this delegate
+			if (votingDelegates.some((delegate) => voteAddresses.includes(delegate.wallet?.address()))) {
+				setLoadingWalletDelegateStatus(false);
+
+				form.setError("senderAddress", {
+					message: t("TRANSACTION.VALIDATION.ALREADY_VOTING", {
+						wallet: newSenderWallet.displayName(),
+						delegate: votes[0],
+					}),
+					type: "required",
+				});
+
+				toasts.warning(
+					t("TRANSACTION.VALIDATION.ALREADY_VOTING", {
+						wallet: newSenderWallet?.displayName(),
+						delegate: votes[0].wallet?.username(),
+					}),
+				);
+				return;
+			}
+
+			// Case 1: Wallet is not voting yet -> Show vote field.
+			if (votingDelegates.length === 0) {
+				setUnvotes([]);
+			}
+
+			// Case 3: Wallet is voting for another delegate. Show vote & unvote fields
+			if (votingDelegates.length > 0) {
+				setUnvotes(votingDelegates);
+			}
+
+			console.log("clearing errorm");
+			// form.clearErrors();
+			setLoadingWalletDelegateStatus(false);
+		};
+
+		updateWallet();
 	}, [senderAddress]);
 
 	useKeydown("Enter", () => {
@@ -390,7 +438,26 @@ export const SendVote = () => {
 	const hideStepNavigation =
 		activeTab === Step.ErrorStep || (activeTab === Step.AuthenticationStep && activeWallet?.isLedger());
 
-	const isNextDisabled = isDirty ? !isValid : true;
+	const isNextDisabled = useMemo(() => {
+		if (walletDelegateStatus) {
+			return true;
+		}
+
+		console.log({ errors });
+		if (Object.values(errors).length > 0) {
+			console.log("errror");
+			return true;
+		}
+
+		if (!isValid) {
+			console.log("is not valid");
+			return true;
+		}
+
+		return false;
+	}, [errors, isValid, walletDelegateStatus]);
+
+	console.log({ isNextDisabled });
 
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.VOTE")}>
@@ -400,7 +467,7 @@ export const SendVote = () => {
 						<Tabs activeId={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
-									isWalletFieldDisabled={!!wallet}
+									isWalletFieldDisabled={!!wallet || isLoading}
 									profile={activeProfile}
 									unvotes={unvotes}
 									votes={votes}

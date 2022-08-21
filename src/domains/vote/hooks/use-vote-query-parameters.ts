@@ -71,5 +71,7 @@ export const useDelegatesFromURL = ({
 		unvotes,
 		voteDelegates,
 		votes,
+		setVotes,
+		setUnvotes,
 	};
 };
