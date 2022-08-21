@@ -161,22 +161,13 @@ describe("SendVote", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should send a unvote & vote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+	it("should send a vote transaction", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
-		appendParameters(parameters, "unvote", unvotes);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -217,16 +208,6 @@ describe("SendVote", () => {
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
-
-		const signUnvoteMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastUnvoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionUnvoteMock = createVoteTransactionMock(wallet);
 
 		const signVoteMock = jest
 			.spyOn(wallet.transaction(), "signVote")
@@ -272,10 +253,6 @@ describe("SendVote", () => {
 
 		historySpy.mockRestore();
 
-		signUnvoteMock.mockRestore();
-		broadcastUnvoteMock.mockRestore();
-		transactionUnvoteMock.mockRestore();
-
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
@@ -291,6 +268,9 @@ describe("SendVote", () => {
 				wallet: new ReadOnlyWallet({
 					address: delegateData[0].address,
 					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
 					publicKey: delegateData[0].publicKey,
 					rank: 1,
 					username: "arkx",
