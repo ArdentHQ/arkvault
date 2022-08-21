@@ -12,6 +12,7 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { toasts } from "@/app/services";
 import { SendVote } from "./SendVote";
 import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -278,6 +279,60 @@ describe("SendVote", () => {
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
+	});
+
+	it("should warning in toast if wallet is already voting the delegate", async () => {
+		await wallet.synchroniser().votes();
+
+		const toastMock = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[0].address,
+					explorerLink: "",
+					publicKey: delegateData[0].publicKey,
+					rank: 1,
+					username: "arkx",
+				}),
+			},
+		]);
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
+
+		const { history } = render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(toastMock).toHaveBeenCalledWith("ARK Wallet 1 is already voting for arkx.");
+		});
+
+		votesMock.mockRestore();
+		toastMock.mockRestore();
 	});
 
 	it("should send a unvote & vote transaction and use split voting method", async () => {
