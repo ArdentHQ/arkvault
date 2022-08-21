@@ -33,7 +33,7 @@ describe("Send Vote Validation", () => {
 	});
 
 	it("senderAddress", async () => {
-		const validator = sendVote(translationMock).senderAddress({ profile, network, votes });
+		const validator = sendVote(translationMock).senderAddress({ network, profile, votes });
 
 		expect(validator.validate("address")).toBe(true);
 

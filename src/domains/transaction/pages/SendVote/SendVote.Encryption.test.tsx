@@ -2,11 +2,9 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import "jest-extended";
 
-import { Signatories } from "@ardenthq/sdk";
-import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -14,7 +12,6 @@ import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
 import { LedgerProvider } from "@/app/contexts";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
@@ -24,16 +21,13 @@ import {
 	act,
 	env,
 	getDefaultProfileId,
-	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	render,
 	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
-	within,
 	mockProfileWithPublicAndTestNetworks,
-	mockNanoXTransport,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -53,42 +47,11 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		usesMultiSignature: () => false,
 	});
 
-const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => unvoteFixture.data.amount / 1e8,
-		data: () => ({ data: () => voteFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
-		fee: () => unvoteFixture.data.fee / 1e8,
-		id: () => unvoteFixture.data.id,
-		isMultiSignatureRegistration: () => false,
-		recipient: () => unvoteFixture.data.recipient,
-		sender: () => unvoteFixture.data.sender,
-		type: () => "unvote",
-		usesMultiSignature: () => false,
-	});
-
 const passphrase = getDefaultWalletMnemonic();
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 
-const votingMockImplementation = () => [
-	{
-		amount: 10,
-		wallet: new ReadOnlyWallet({
-			address: delegateData[1].address,
-			explorerLink: "",
-			governanceIdentifier: "address",
-			isDelegate: true,
-			isResignedDelegate: false,
-			publicKey: delegateData[1].publicKey,
-			username: delegateData[1].username,
-		}),
-	},
-];
-
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
-const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 const reviewStepID = "SendVote__review-step";

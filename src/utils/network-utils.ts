@@ -161,4 +161,8 @@ export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, sea
 	if (nethash) {
 		return profileAllEnabledNetworks(profile).find((network) => network.meta().nethash === nethash);
 	}
+
+	if (networkId) {
+		return profileAllEnabledNetworks(profile).find((network) => network.id() === networkId);
+	}
 };

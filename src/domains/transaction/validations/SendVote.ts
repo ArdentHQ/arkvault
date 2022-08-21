@@ -34,12 +34,12 @@ export const sendVote = (t: any) => ({
 			}
 
 			const votingDelegates = wallet?.voting().current();
-			const voteAddresses = votes.map((vote) => vote.wallet?.address());
+			const voteAddresses = new Set(votes.map((vote) => vote.wallet?.address()));
 
-			if (votingDelegates.some((delegate) => voteAddresses.includes(delegate.wallet?.address()))) {
+			if (votingDelegates.some((delegate) => voteAddresses.has(delegate.wallet?.address()))) {
 				return t("TRANSACTION.VALIDATION.ALREADY_VOTING", {
-					wallet: wallet?.displayName(),
 					delegate: votes[0].wallet?.username(),
+					wallet: wallet?.displayName(),
 				});
 			}
 

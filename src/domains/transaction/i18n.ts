@@ -397,11 +397,15 @@ export const translations = {
 	UNVOTES_COUNT: "Unvotes ({{count}})",
 	UNVOTES_COUNT_one: "Unvote",
 	VALIDATION: {
+		ALREADY_VOTING: "{{wallet}} is already voting for {{delegate}}.",
 		AMOUNT_BELOW_MINIMUM: "The amount is below the minimum ({{min}} {{ coinId }})",
 		COIN_MISMATCH: "data is for another coin.",
 		COIN_MISSING: "coin parameter is missing.",
 		COIN_NOT_SUPPORTED: 'coin "{{coin}}" is not supported.',
 		DELEGATE_MISSING: "delegate name or public key parameter is missing.",
+		DELEGATE_NOT_FOUND: "delegate {{delegate}} could not be found.",
+		DELEGATE_OR_PUBLICKEY:
+			"both delegate name and public key were provided in url. Please use either one or the other.",
 		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",
 		FEE_NEGATIVE: "Fee cannot be negative",
 		LOW_BALANCE: "The balance is too low",
@@ -415,10 +419,6 @@ export const translations = {
 		NETWORK_NOT_ENABLED: 'network "{{network}}" is not enabled.',
 		NETWORK_NO_WALLETS: 'the current profile has no wallets available for the "{{network}}" network.',
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
-		ALREADY_VOTING: "{{wallet}} is already voting for {{delegate}}.",
-		DELEGATE_NOT_FOUND: "delegate {{delegate}} could not be found.",
-		DELEGATE_OR_PUBLICKEY:
-			"both delegate name and public key were provided in url. Please use either one or the other.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",

@@ -4,16 +4,14 @@ import "jest-extended";
 
 import { Signatories } from "@ardenthq/sdk";
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import { toasts } from "@/app/services";
 import { SendVote } from "./SendVote";
+import { toasts } from "@/app/services";
 import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
@@ -154,7 +152,9 @@ describe("SendVote", () => {
 			</Route>,
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
+
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled()); userEvent.click(backButton()); expect(container).toMatchSnapshot(); }); it("should return to the select a delegate page to unvote/vote", async () => { const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`; const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`); const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ]; appendParameters(parameters, "unvote", unvotes); const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ]; appendParameters(parameters, "vote", votes); const { container } = render( <Route path="/profiles/:profileId/wallets/:walletId/send-vote"> <LedgerProvider> <SendVote /> </LedgerProvider> </Route>, { route: { pathname: voteURL, search: `?${parameters}`, }, },); expect(screen.getByTestId(formStepID)).toBeInTheDocument(); await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled());
 		userEvent.click(backButton());
 
@@ -311,7 +311,7 @@ describe("SendVote", () => {
 
 		appendParameters(parameters, "vote", votes);
 
-		const { history } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<LedgerProvider>
 					<SendVote />

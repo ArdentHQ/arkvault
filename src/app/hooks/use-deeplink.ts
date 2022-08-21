@@ -52,7 +52,7 @@ export const useDeeplink = () => {
 
 				const method = methods[searchParameters.get("method") as string];
 
-				return navigate(method.path({ profile, env, searchParameters }));
+				return navigate(method.path({ env, profile, searchParameters }));
 			} catch (error) {
 				toasts.error(`Invalid URI: ${error.message}`);
 			} finally {

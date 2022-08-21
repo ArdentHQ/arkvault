@@ -1,6 +1,6 @@
 import { Services } from "@ardenthq/sdk";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
@@ -54,7 +54,7 @@ export const SendVote = () => {
 	const networks = useMemo(() => activeProfile.availableNetworks(), [env]);
 	const wallet = useActiveWalletWhenNeeded(false);
 
-	const { votes, unvotes, voteDelegates, unvoteDelegates, setVotes, setUnvotes, isLoading } = useDelegatesFromURL({
+	const { votes, unvotes, voteDelegates, unvoteDelegates, setUnvotes, isLoading } = useDelegatesFromURL({
 		env,
 		network: activeNetwork,
 		profile: activeProfile,
@@ -87,7 +87,7 @@ export const SendVote = () => {
 
 	useEffect(() => {
 		register("network", sendVote.network());
-		register("senderAddress", sendVote.senderAddress({ profile: activeProfile, network: activeNetwork, votes }));
+		register("senderAddress", sendVote.senderAddress({ network: activeNetwork, profile: activeProfile, votes }));
 		register("fees");
 		register("fee", common.fee(activeWallet?.balance(), activeWallet?.network(), fees));
 		register("inputFeeSettings");
@@ -143,7 +143,7 @@ export const SendVote = () => {
 			toasts.dismiss();
 
 			const errors = sendVote
-				.senderAddress({ profile: activeProfile, votes, network: activeNetwork })
+				.senderAddress({ network: activeNetwork, profile: activeProfile, votes })
 				.validate(senderWallet.address());
 
 			if (Object.keys(errors).length > 0) {

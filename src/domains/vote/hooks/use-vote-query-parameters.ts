@@ -67,11 +67,11 @@ export const useDelegatesFromURL = ({
 
 	return {
 		isLoading,
+		setUnvotes,
+		setVotes,
 		unvoteDelegates,
 		unvotes,
 		voteDelegates,
 		votes,
-		setVotes,
-		setUnvotes,
 	};
 };

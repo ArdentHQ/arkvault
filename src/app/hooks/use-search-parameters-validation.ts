@@ -86,7 +86,7 @@ export const useSearchParametersValidation = () => {
 
 		await env.delegates().sync(profile, network.coin(), network.id());
 
-		if (!delegateFromSearchParameters({ profile, network, env, searchParameters: parameters })) {
+		if (!delegateFromSearchParameters({ env, network, profile, searchParameters: parameters })) {
 			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: delegateName || publicKey }));
 		}
 	};
@@ -104,7 +104,7 @@ export const useSearchParametersValidation = () => {
 				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ profile, network, env, searchParameters });
+				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
 
 				searchParameters.set("vote", delegate?.address() as string);
 
@@ -199,7 +199,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		// method specific validation
-		await methods[method].validate({ network, parameters, profile, env });
+		await methods[method].validate({ env, network, parameters, profile });
 	};
 
 	return { methods, validateSearchParameters };

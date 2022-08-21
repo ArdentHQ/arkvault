@@ -206,6 +206,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+
 		mockFindDelegateByName.mockRestore();
 	});
 
@@ -219,6 +220,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+
 		mockFindDelegateByPublicKey.mockRestore();
 	});
 
