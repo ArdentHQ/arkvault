@@ -1,4 +1,4 @@
-import { Contracts } from "@ardenthq/sdk-profiles";
+import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 
@@ -273,5 +273,39 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
 			t("TRANSACTION.VALIDATION.DELEGATE_MISSING"),
 		);
+	});
+
+	it("should fail if delegate is resigned", async () => {
+		const delegateWallet = new ReadOnlyWallet({
+			address: profile.wallets().first().address(),
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: profile.wallets().first().publicKey(),
+			rank: 52,
+			username: "testi",
+		});
+		const mockFindDelegateByPublicKey = jest
+			.spyOn(env.delegates(), "findByPublicKey")
+			.mockReturnValue(delegateWallet);
+
+		const resignedMock = jest.spyOn(delegateWallet, "isResignedDelegate").mockReturnValue(true);
+
+		const parameters = new URLSearchParams(
+			`coin=ARK&network=ark.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
+		);
+
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", { delegate: delegateWallet.publicKey() }),
+		);
+
+		mockFindDelegateByPublicKey.mockRestore();
+		resignedMock.mockRestore();
 	});
 });

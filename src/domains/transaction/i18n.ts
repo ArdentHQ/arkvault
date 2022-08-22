@@ -404,6 +404,7 @@ export const translations = {
 		COIN_NOT_SUPPORTED: 'coin "{{coin}}" is not supported.',
 		DELEGATE_MISSING: "delegate name or public key parameter is missing.",
 		DELEGATE_NOT_FOUND: "delegate {{delegate}} could not be found.",
+		DELEGATE_RESIGNED: "delegate {{delegate}} is resigned.",
 		DELEGATE_OR_PUBLICKEY:
 			"both delegate name and public key were provided in url. Please use either one or the other.",
 		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",

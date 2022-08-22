@@ -3,9 +3,10 @@ import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { generatePath } from "react-router-dom";
-import { assertNetwork, assertProfile } from "@/utils/assertions";
+import { assertNetwork, assertProfile, assertString } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
+import { truncate } from "@ardenthq/sdk-helpers";
 
 interface RequiredParameters {
 	network?: string;
@@ -86,8 +87,18 @@ export const useSearchParametersValidation = () => {
 
 		await env.delegates().sync(profile, network.coin(), network.id());
 
-		if (!delegateFromSearchParameters({ env, network, profile, searchParameters: parameters })) {
-			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: delegateName || publicKey }));
+		const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
+
+		const truncatedName = truncate(delegateName || (publicKey as string), {
+			length: 12,
+			omissionPosition: "middle",
+		});
+
+		if (!delegate) {
+			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: truncatedName }));
+		}
+		if (delegate.isResignedDelegate()) {
+			throw new Error(t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", { delegate: truncatedName }));
 		}
 	};
 
