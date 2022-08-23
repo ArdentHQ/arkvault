@@ -563,7 +563,7 @@ exports[`SignMessage should render (lg) 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>
@@ -1170,7 +1170,7 @@ exports[`SignMessage should render (xs) 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>
@@ -1777,7 +1777,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>
