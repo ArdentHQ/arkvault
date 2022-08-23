@@ -137,7 +137,7 @@ export const SignMessage: React.VFC = () => {
 											/>
 
 											<TransactionDetail label={t("COMMON.MESSAGE")}>
-												<p className="whitespace-pre-line break-all">{getValues("message")}</p>
+												<p className="min-w-0 whitespace-pre-line break-words">{getValues("message")}</p>
 											</TransactionDetail>
 										</>
 									}
