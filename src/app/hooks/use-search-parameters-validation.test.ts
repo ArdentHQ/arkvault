@@ -2,9 +2,9 @@ import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 
+import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
-import { truncate } from "@ardenthq/sdk-helpers";
 
 let profile: Contracts.IProfile;
 
