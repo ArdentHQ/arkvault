@@ -72,7 +72,15 @@ describe("useNetworkFromQueryParameters hook", () => {
 		return <div data-testid={network.meta().nethash} />;
 	};
 
-	it("should find nethash from query parameters", () => {
+	it("should find network from query parameters using network id", () => {
+		history.push("/?network=ark.devnet");
+
+		render(<TestComponent />, { history, withProviders: false });
+
+		expect(screen.getByTestId(nethash)).toBeInTheDocument();
+	});
+
+	it("should find network from query parameters using nethash", () => {
 		history.push(`/?nethash=${nethash}`);
 
 		render(<TestComponent />, { history, withProviders: false });
@@ -80,7 +88,7 @@ describe("useNetworkFromQueryParameters hook", () => {
 		expect(screen.getByTestId(nethash)).toBeInTheDocument();
 	});
 
-	it("should not find nethash from query parameters", () => {
+	it("should fail to find network from query parameters using nethash", () => {
 		history.push(`/?nethash=1`);
 
 		render(<TestComponent />, { history, withProviders: false });

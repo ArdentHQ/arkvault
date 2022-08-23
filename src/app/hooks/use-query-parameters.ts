@@ -1,3 +1,4 @@
+import { isAllowedNetwork } from "@/app/hooks/use-search-parameters-validation";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
@@ -12,8 +13,13 @@ export const useQueryParameters = () => {
 export const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network | undefined => {
 	const parameters = useQueryParameters();
 
-	return useMemo(
-		() => profile.availableNetworks().find((network) => network.meta().nethash === parameters.get("nethash")),
-		[profile, parameters],
-	);
+	return useMemo(() => {
+		const networkId = parameters.get("network");
+
+		if (networkId && isAllowedNetwork(networkId)) {
+			return profile.availableNetworks().find((network) => network.id() === networkId);
+		}
+
+		return profile.availableNetworks().find((network) => network.meta().nethash === parameters.get("nethash"));
+	}, [profile, parameters]);
 };

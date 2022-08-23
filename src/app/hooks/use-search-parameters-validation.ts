@@ -28,7 +28,11 @@ interface PathProperties {
 	searchParameters: URLSearchParams;
 }
 
-const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+export const isAllowedNetwork = (network: string) => {
+	const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+
+	return allowedNetworks.has(network);
+};
 
 const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
 	const delegateName = searchParameters.get("delegate");
@@ -180,7 +184,7 @@ export const useSearchParametersValidation = () => {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
-			if (!allowedNetworks.has(networkId)) {
+			if (!isAllowedNetwork(networkId)) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: networkId }));
 			}
 
