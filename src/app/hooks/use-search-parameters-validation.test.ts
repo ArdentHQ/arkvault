@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import { truncate } from "@ardenthq/sdk-helpers";
 
 let profile: Contracts.IProfile;
 
@@ -302,7 +303,9 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", { delegate: delegateWallet.publicKey() }),
+			t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", {
+				delegate: truncate(delegateWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
+			}),
 		);
 
 		mockFindDelegateByPublicKey.mockRestore();

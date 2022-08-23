@@ -89,6 +89,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(transactionTranslations.VALIDATION.COIN_MISSING),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -112,6 +113,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -135,6 +137,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(transactionTranslations.VALIDATION.METHOD_MISSING),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -160,6 +163,7 @@ describe("useDeeplink hook", () => {
 				buildToastMessage(
 					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
 				),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -183,6 +187,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -206,6 +211,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -231,6 +237,7 @@ describe("useDeeplink hook", () => {
 				buildToastMessage(
 					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
 				),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -258,6 +265,7 @@ describe("useDeeplink hook", () => {
 				buildToastMessage(
 					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", nethash),
 				),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -285,6 +293,7 @@ describe("useDeeplink hook", () => {
 				buildToastMessage(
 					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", nethash),
 				),
+				{ delay: 5000 },
 			),
 		);
 	});
