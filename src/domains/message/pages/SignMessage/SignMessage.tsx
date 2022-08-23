@@ -60,11 +60,11 @@ export const SignMessage: React.VFC = () => {
 	}, [queryParameters]);
 
 	const activeWallet = useMemo(() => {
-		return walletFromPath || walletFromDeeplink
-	}, [walletFromPath,  walletFromDeeplink]);
+		return walletFromPath || walletFromDeeplink
+	}, [walletFromPath, walletFromDeeplink]);
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
-	
+
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const wallets = useMemo(
