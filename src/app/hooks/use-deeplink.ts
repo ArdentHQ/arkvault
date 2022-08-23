@@ -54,7 +54,7 @@ export const useDeeplink = () => {
 
 				return navigate(method.path({ env, profile, searchParameters }));
 			} catch (error) {
-				toasts.error(`Invalid URI: ${error.message}`);
+				toasts.error(`Invalid URI: ${error.message}`, { delay: 5000 });
 			} finally {
 				setDeepLink(undefined);
 				setProfile(undefined);
