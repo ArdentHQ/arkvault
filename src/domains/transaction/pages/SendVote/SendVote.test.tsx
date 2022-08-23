@@ -228,16 +228,11 @@ describe("SendVote", () => {
 			userEvent.click(sendButton());
 		});
 
+		votesMock.mockRestore();
+		const votingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+
 		act(() => {
 			jest.advanceTimersByTime(1000);
-		});
-
-		setTimeout(() => {
-			votesMock.mockRestore();
-		}, 3000);
-
-		act(() => {
-			jest.runOnlyPendingTimers();
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -256,6 +251,7 @@ describe("SendVote", () => {
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
+		votingMock.mockRestore();
 	});
 
 	it("should warning in toast if wallet is already voting the delegate", async () => {
@@ -317,6 +313,7 @@ describe("SendVote", () => {
 
 	it("should send a unvote & vote transaction and use split voting method", async () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -710,6 +707,32 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote transaction", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[0].publicKey,
+					username: delegateData[0].username,
+				}),
+			},
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[1].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[1].publicKey,
+					username: delegateData[1].username,
+				}),
+			},
+		]);
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
@@ -783,6 +806,7 @@ describe("SendVote", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		votesMock.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {
