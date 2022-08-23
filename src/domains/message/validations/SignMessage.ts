@@ -1,5 +1,7 @@
+import { validateAscii } from "@/utils/validations";
+
 export const signMessage = (t: any) => ({
-	message: () => ({
+	message: (asciiOnly: boolean) => ({
 		maxLength: {
 			message: t("COMMON.VALIDATION.MAX_LENGTH", {
 				field: t("COMMON.MESSAGE"),
@@ -10,5 +12,12 @@ export const signMessage = (t: any) => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("COMMON.MESSAGE"),
 		}),
+		validate: (message: string) => {
+			if (asciiOnly) {
+				return validateAscii(t, message);
+			}
+
+			return true;
+		},
 	}),
 });
