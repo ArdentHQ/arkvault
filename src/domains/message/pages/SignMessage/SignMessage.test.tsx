@@ -124,6 +124,39 @@ describe("SignMessage", () => {
 		isLedgerMock.mockRestore();
 	});
 
+	it("should show an error if non-ascii characters are used when signing with a ledger wallet", async () => {
+		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
+				<SignMessage />
+			</Route>,
+			{
+				history,
+				route: walletUrl(wallet.id()),
+			},
+		);
+
+		await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+		expect(
+			screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
+		).toBeInTheDocument();
+
+		userEvent.paste(messageInput(), "£££");
+
+		await waitFor(() => expect(continueButton()).toBeDisabled());
+
+		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+		expect(screen.getByTestId("Input__error")).toHaveAttribute(
+			"data-errortext",
+			"The following characters are not allowed: '£'",
+		);
+
+		isLedgerMock.mockRestore();
+	});
+
 	it("should sign message with mnemonic", async () => {
 		const signedMessage = {
 			message: signMessage,

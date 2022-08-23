@@ -53,7 +53,7 @@ export const SignMessage: React.VFC = () => {
 	const { signMessage } = useValidation();
 
 	useEffect(() => {
-		register("message", signMessage.message());
+		register("message", signMessage.message(activeWallet.isLedger()));
 	}, [register, signMessage]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
