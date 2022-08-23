@@ -13,7 +13,6 @@ import {
 	getDefaultProfileId,
 	render,
 	screen,
-	MNEMONICS,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { ProfilePaths } from "@/router/paths";

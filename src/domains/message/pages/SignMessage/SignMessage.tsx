@@ -53,15 +53,13 @@ export const SignMessage: React.VFC = () => {
 		const address = queryParameters.get("address");
 
 		if (!address || !activeNetwork) {
-			return ;
+			return;
 		}
 
-		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id())
+		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
 	}, [queryParameters]);
 
-	const activeWallet = useMemo(() => {
-		return walletFromPath || walletFromDeeplink
-	}, [walletFromPath, walletFromDeeplink]);
+	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
 
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
