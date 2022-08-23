@@ -229,9 +229,6 @@ describe("useSearchParametersValidation", () => {
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=DL8d1p4XL1k4VvkQfZp2PBx38epXdm1Tve",
 		);
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, parameters)).resolves.not.toThrow();
