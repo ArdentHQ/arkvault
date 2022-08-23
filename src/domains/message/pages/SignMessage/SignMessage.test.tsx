@@ -524,6 +524,34 @@ describe("SignMessage", () => {
 			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
 		});
 
+		it("should select address from deeplinking", async () => {
+			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+				signMessage,
+			)}&address=${wallet.address()}`;
+
+			history.push(signUrl);
+
+			render(
+				<Route path="/profiles/:profileId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: signUrl,
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
+			).toBeInTheDocument();
+
+			expect(messageInput()).toHaveValue(signMessage);
+
+			expect(continueButton()).toBeEnabled();
+		});
+
 		it("back button sends to welcome page", async () => {
 			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
 				signMessage,
