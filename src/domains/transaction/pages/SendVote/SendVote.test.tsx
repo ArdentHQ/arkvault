@@ -493,6 +493,33 @@ describe("SendVote", () => {
 		);
 	});
 
+	it("should redirect to dashboard when clicking back and wallet is not provided in url", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
+
+		const { history } = render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		const historySpy = jest.spyOn(history, "push");
+
+		userEvent.click(backButton());
+
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+	});
+
 	it("should select sender wallet and sync if not yet synced", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
