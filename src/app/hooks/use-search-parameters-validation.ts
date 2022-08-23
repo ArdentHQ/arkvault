@@ -3,10 +3,10 @@ import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { generatePath } from "react-router-dom";
-import { assertNetwork, assertProfile, assertString } from "@/utils/assertions";
+import { truncate } from "@ardenthq/sdk-helpers";
+import { assertNetwork, assertProfile } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
-import { truncate } from "@ardenthq/sdk-helpers";
 
 interface RequiredParameters {
 	network?: string;
