@@ -1,8 +1,8 @@
-import { isAllowedNetwork } from "@/app/hooks/use-search-parameters-validation";
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
+import { isAllowedNetwork } from "@/app/hooks/use-search-parameters-validation";
 
 export const useQueryParameters = () => {
 	const { search } = useLocation();
