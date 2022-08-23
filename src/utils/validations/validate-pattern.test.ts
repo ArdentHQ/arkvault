@@ -26,13 +26,13 @@ describe("validatePattern", () => {
 
 describe("validateAscii", () => {
 	it("should return true for valid patterns", () => {
-		expect(validateAscii(translationMockFunction, "\x20")).toBe(true);
+		expect(validateAscii(translationMockFunction, "\u0020")).toBe(true);
 		expect(validateAscii(translationMockFunction, "0123456789")).toBe(true);
 		expect(validateAscii(translationMockFunction, "!@$&_.")).toBe(true);
 	});
 
 	it("should return illegal characters for invalid pattern", () => {
-		expect(validateAscii(translationMockFunction, "\x00")).toBe(`illegal characters '\x00'`);
+		expect(validateAscii(translationMockFunction, "\u0000")).toBe(`illegal characters '\u0000'`);
 		expect(validateAscii(translationMockFunction, "§")).toBe("illegal characters '§'");
 	});
 });

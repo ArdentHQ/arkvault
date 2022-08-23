@@ -18,7 +18,7 @@ export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 };
 
 export const validateAscii = (t: any, value: string) => {
-	const matches = value.match(/[^\ -~]/g);
+	const matches = value.match(/[^ -~]/g);
 
 	if (matches && matches.length > 0) {
 		return t("COMMON.VALIDATION.ILLEGAL_CHARACTERS", {
