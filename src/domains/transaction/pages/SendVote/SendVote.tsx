@@ -180,13 +180,15 @@ export const SendVote = () => {
 		if (activeTab === Step.FormStep) {
 			const parameters = new URLSearchParams();
 
-			appendParameters(parameters, "unvote", unvoteDelegates);
+			if (!wallet) {
+				return history.push(`/profiles/${activeProfile.id()}/dashboard`);
+			}
 
+			appendParameters(parameters, "unvote", unvoteDelegates);
 			appendParameters(parameters, "vote", voteDelegates);
 
-			//	TODO: redirect to general votes page if wallet is not defined.
 			return history.push({
-				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}/votes`,
+				pathname: `/profiles/${activeProfile.id()}/wallets/${wallet.id()}/votes`,
 				search: `?${parameters}`,
 			});
 		}
