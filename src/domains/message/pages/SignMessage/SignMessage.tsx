@@ -109,7 +109,7 @@ export const SignMessage: React.VFC = () => {
 	const connectLedger = useCallback(async () => {
 		await connect(activeProfile, selectedWallet!.coinId(), selectedWallet!.networkId());
 		handleSubmit(submitForm)();
-	}, [activeWallet, activeProfile, connect]);
+	}, [selectedWallet, activeProfile, connect]);
 
 	const handleBack = () => {
 		// Abort any existing listener
