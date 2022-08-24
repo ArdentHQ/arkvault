@@ -202,7 +202,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 								<Tooltip content={errorMessageValue} size="sm">
 									<span data-errortext={errorMessageValue} data-testid="Input__error">
 										<Icon
-											name={"CircleExclamationMark"}
+											name="CircleExclamationMark"
 											className="text-theme-danger-500"
 											size="lg"
 										/>

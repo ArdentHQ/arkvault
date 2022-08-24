@@ -15,7 +15,7 @@ import { Page, Section } from "@/app/components/Layout";
 import { QRModal } from "@/app/components/QRModal";
 import { StepNavigation } from "@/app/components/StepNavigation";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
-import { StepsProvider, useLedgerContext } from "@/app/contexts";
+import { StepsProvider, useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWalletWhenNeeded, useNetworks } from "@/app/hooks";
 import { useKeyup } from "@/app/hooks/use-keyup";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
@@ -36,6 +36,7 @@ export const SendTransfer: React.VFC = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 
+	const { env } = useEnvironmentContext();
 	const activeWallet = useActiveWalletWhenNeeded(false);
 	const activeProfile = useActiveProfile();
 	const networks = useNetworks({
@@ -231,7 +232,7 @@ export const SendTransfer: React.VFC = () => {
 		}
 
 		try {
-			await validateSearchParameters(activeProfile, qrData, {
+			await validateSearchParameters(activeProfile, env, qrData, {
 				coin: network?.coin(),
 				nethash: network?.meta().nethash,
 				network: network?.id(),

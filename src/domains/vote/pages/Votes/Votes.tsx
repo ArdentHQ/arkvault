@@ -90,7 +90,7 @@ export const Votes: FC = () => {
 
 	useEffect(() => {
 		if (hasWalletId) {
-			fetchDelegates(activeWallet);
+			fetchDelegates(activeWallet!);
 		}
 	}, [activeWallet, fetchDelegates, hasWalletId]);
 
