@@ -2330,6 +2330,31 @@ exports[`SendTransfer should render form and use location state with nethash par
                           data-testid="SelectAddress__wrapper"
                           type="button"
                         >
+                          <span
+                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                          >
+                            <div
+                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  ARK Wallet 1
+                                </span>
+                              </span>
+                              <span
+                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                            </div>
+                          </span>
                           <div
                             class="css-1psxlcd"
                           >
@@ -2383,31 +2408,6 @@ exports[`SendTransfer should render form and use location state with nethash par
                               </div>
                             </div>
                           </div>
-                          <span
-                            class="-mt-10 flex w-full items-center border border-transparent px-14"
-                          >
-                            <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-base text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="css-u3jrna"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                              <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
-                              >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
-                            </div>
-                          </span>
                         </button>
                       </div>
                     </fieldset>
@@ -3570,6 +3570,31 @@ exports[`SendTransfer should render form and use location state with network par
                           data-testid="SelectAddress__wrapper"
                           type="button"
                         >
+                          <span
+                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                          >
+                            <div
+                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  ARK Wallet 1
+                                </span>
+                              </span>
+                              <span
+                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                            </div>
+                          </span>
                           <div
                             class="css-1psxlcd"
                           >
@@ -3623,31 +3648,6 @@ exports[`SendTransfer should render form and use location state with network par
                               </div>
                             </div>
                           </div>
-                          <span
-                            class="-mt-10 flex w-full items-center border border-transparent px-14"
-                          >
-                            <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-base text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="css-u3jrna"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                              <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
-                              >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
-                            </div>
-                          </span>
                         </button>
                       </div>
                     </fieldset>
@@ -4810,6 +4810,31 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           data-testid="SelectAddress__wrapper"
                           type="button"
                         >
+                          <span
+                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                          >
+                            <div
+                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  ARK Wallet 1
+                                </span>
+                              </span>
+                              <span
+                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                            </div>
+                          </span>
                           <div
                             class="css-1psxlcd"
                           >
@@ -4863,31 +4888,6 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                             </div>
                           </div>
-                          <span
-                            class="-mt-10 flex w-full items-center border border-transparent px-14"
-                          >
-                            <div
-                              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="font-semibold text-base text-theme-text"
-                                data-testid="Address__alias"
-                              >
-                                <span
-                                  class="css-u3jrna"
-                                  data-testid="TruncateEnd"
-                                >
-                                  ARK Wallet 1
-                                </span>
-                              </span>
-                              <span
-                                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
-                              >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
-                            </div>
-                          </span>
                         </button>
                       </div>
                     </fieldset>
@@ -5594,6 +5594,13 @@ exports[`SendTransfer should render form step (lg) 1`] = `
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              />
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -5636,13 +5643,6 @@ exports[`SendTransfer should render form step (lg) 1`] = `
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              />
-            </span>
           </button>
         </div>
       </fieldset>
@@ -6308,6 +6308,13 @@ exports[`SendTransfer should render form step (xs) 1`] = `
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              />
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -6350,13 +6357,6 @@ exports[`SendTransfer should render form step (xs) 1`] = `
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              />
-            </span>
           </button>
         </div>
       </fieldset>
@@ -6981,6 +6981,31 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -7034,31 +7059,6 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-text"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="css-u3jrna"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </span>
           </button>
         </div>
       </fieldset>
@@ -7743,6 +7743,31 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -7796,31 +7821,6 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-text"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="css-u3jrna"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </span>
           </button>
         </div>
       </fieldset>
@@ -8505,6 +8505,13 @@ exports[`SendTransfer should render form step without memo input 1`] = `
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              />
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -8547,13 +8554,6 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              />
-            </span>
           </button>
         </div>
       </fieldset>
@@ -9170,6 +9170,13 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             data-testid="SelectAddress__wrapper"
             type="button"
           >
+            <span
+              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              />
+            </span>
             <div
               class="css-1psxlcd"
             >
@@ -9212,13 +9219,6 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 </div>
               </div>
             </div>
-            <span
-              class="-mt-10 flex w-full items-center border border-transparent px-14"
-            >
-              <div
-                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              />
-            </span>
           </button>
         </div>
       </fieldset>

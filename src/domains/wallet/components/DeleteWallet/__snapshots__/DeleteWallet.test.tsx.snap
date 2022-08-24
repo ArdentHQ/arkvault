@@ -94,6 +94,20 @@ exports[`DeleteWallet should render a modal 1`] = `
                 disabled=""
                 type="button"
               >
+                <span
+                  class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-4"
+                >
+                  <div
+                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                  >
+                    <span
+                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                    </span>
+                  </div>
+                </span>
                 <div
                   class="css-n29l73"
                   disabled=""
@@ -127,20 +141,6 @@ exports[`DeleteWallet should render a modal 1`] = `
                     />
                   </div>
                 </div>
-                <span
-                  class="-mt-10 flex w-full items-center border border-transparent pl-14 pr-2"
-                >
-                  <div
-                    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
-                    </span>
-                  </div>
-                </span>
               </button>
             </fieldset>
             <div
