@@ -2,27 +2,27 @@ import { Contracts as ProfilesContracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useFormContext } from "react-hook-form";
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import {
-	TransactionDetail,
-	TransactionNetwork,
-	TransactionSender,
-} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
-} & SendVoteStepProperties;
+	wallet?: ProfilesContracts.IReadWriteWallet;
+	isWalletFieldDisabled?: boolean;
+} & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
+	const { setValue } = useFormContext();
 
-	const showFeeInput = useMemo(() => !wallet.network().chargesZeroFees(), [wallet]);
-
-	const network = useMemo(() => wallet.network(), [wallet]);
+	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
 
 	const feeTransactionData = useMemo(
 		() => ({
@@ -35,7 +35,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 				id: vote.wallet?.governanceIdentifier(),
 			})),
 		}),
-		[unvotes, votes],
+		[unvotes, votes, wallet],
 	);
 
 	return (
@@ -45,19 +45,43 @@ export const FormStep = ({ unvotes, votes, wallet, profile }: FormStepProperties
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<TransactionNetwork network={wallet.network()} border={false} />
+			<FormField name="network" className="mt-8">
+				<FormLabel label={t("COMMON.CRYPTOASSET")} />
+				<SelectNetworkDropdown profile={profile} networks={[network]} selectedNetwork={network} isDisabled />
+			</FormField>
 
-			<TransactionSender address={wallet.address()} network={wallet.network()} />
+			<FormField name="senderAddress" className="my-8">
+				<FormLabel label={t("TRANSACTION.SENDER")} />
+
+				<div data-testid="sender-address">
+					<SelectAddress
+						disabled={isWalletFieldDisabled !== false}
+						wallet={
+							wallet
+								? {
+										address: wallet.address(),
+										network: wallet.network(),
+								  }
+								: undefined
+						}
+						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
+						profile={profile}
+						onChange={(address: string) =>
+							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
+						}
+					/>
+				</div>
+			</FormField>
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>
-					<VoteList votes={unvotes} currency={wallet.currency()} isNegativeAmount />
+					<VoteList votes={unvotes} currency={wallet?.currency() as string} isNegativeAmount />
 				</TransactionDetail>
 			)}
 
 			{votes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.VOTES_COUNT", { count: votes.length })}>
-					<VoteList votes={votes} currency={wallet.currency()} />
+					<VoteList votes={votes} currency={wallet?.currency() as string} />
 				</TransactionDetail>
 			)}
 

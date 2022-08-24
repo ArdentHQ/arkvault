@@ -93,6 +93,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -119,6 +120,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "DOGE" })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -145,6 +147,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.METHOD") })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -171,6 +174,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method: "nuke" })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -199,6 +203,7 @@ describe("useDeeplink hook", () => {
 				buildToastMessage(
 					t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.NETWORK_OR_NETHASH") }),
 				),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -225,6 +230,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: "custom" })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -251,6 +257,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: "ark.mainnet" })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -279,6 +286,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -307,6 +315,7 @@ describe("useDeeplink hook", () => {
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash })),
+				{ delay: 5000 },
 			),
 		);
 	});
@@ -422,5 +431,32 @@ describe("useDeeplink hook", () => {
 		history.push(path);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
+	});
+
+	it("should navigate to vote page", async () => {
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		history.push(
+			"/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+		);
+
+		render(
+			<Route>
+				<TestComponent />
+			</Route>,
+			{
+				history,
+			},
+		);
+
+		expect(deeplinkTestContent()).toBeInTheDocument();
+
+		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+		mockDelegateName.mockRestore();
 	});
 });
