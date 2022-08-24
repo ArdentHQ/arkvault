@@ -81,7 +81,7 @@ describe("Page", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["Contacts", "Votes", "Settings", "Support"])(
+	it.each(["Contacts", "Votes", "Settings", "Documentation"])(
 		"should handle '%s' click on user actions dropdown",
 		async (label) => {
 			const windowSpy = jest.spyOn(window, "open").mockImplementation();
@@ -107,10 +107,8 @@ describe("Page", () => {
 
 			userEvent.click(await screen.findByText(label));
 
-			if (label === "Support") {
-				expect(windowSpy).toHaveBeenCalledWith(
-					"mailto:contact@arkvault.io?subject=I%20have%20a%20question%20about%20ARKVault",
-				);
+			if (label === "Documentation") {
+				expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
 			} else {
 				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
 			}
