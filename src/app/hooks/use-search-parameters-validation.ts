@@ -26,7 +26,7 @@ interface PathProperties {
 	env: Environment;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
-	searchParameters: URLSearchParams;
+	parameters: URLSearchParams;
 }
 
 export const isAllowedNetwork = (network: string) => {
@@ -116,7 +116,7 @@ export const useSearchParametersValidation = () => {
 
 		await env.delegates().sync(profile, network.coin(), network.id());
 
-		const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
+		const delegate = delegateFromSearchParameters({ env, network, profile, parameters });
 
 		const delegatePublicKey =
 			publicKey &&
@@ -154,17 +154,17 @@ export const useSearchParametersValidation = () => {
 			validate: validateVerify,
 		},
 		vote: {
-			path: ({ profile, searchParameters, env }: PathProperties) => {
+			path: ({ profile, parameters, env }: PathProperties) => {
 				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
+				const delegate = delegateFromSearchParameters({ env, network, profile, parameters });
 
-				searchParameters.set("vote", delegate?.address() as string);
+				parameters.set("vote", delegate?.address() as string);
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
-				})}?${searchParameters.toString()}`;
+				})}?${parameters.toString()}`;
 			},
 			validate: validateVote,
 		},
