@@ -61,9 +61,9 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 
 					const walletIdentifiers: Services.WalletIdentifier[] = profile
 						.wallets()
-						.valuesWithCoin()
+						.values()
 						.filter((wallet) =>
-							profile.availableNetworks().some((network) => wallet.network().id() === network.id()),
+							profile.availableNetworks().some((network) => wallet.networkId() === network.id()),
 						)
 						.map((wallet) => ({
 							networkId: wallet.networkId(),
