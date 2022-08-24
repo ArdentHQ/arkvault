@@ -75,7 +75,7 @@ export const FormStep = ({
 					wallets={wallets}
 					profile={profile}
 					disabled={disabled}
-					disableAction={(_: any) => false}
+					disableAction={() => false}
 					onChange={handleSelectAddress}
 				/>
 			</FormField>
