@@ -8,13 +8,6 @@ exports[`SelectAddress should render disabled 1`] = `
     disabled=""
     type="button"
   >
-    <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
-    >
-      <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
-    </span>
     <div
       class="css-n29l73"
       disabled=""
@@ -58,6 +51,13 @@ exports[`SelectAddress should render disabled 1`] = `
         </div>
       </div>
     </div>
+    <span
+      class="-mt-10 flex w-full items-center border border-transparent px-14"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      />
+    </span>
   </button>
 </div>
 `;
@@ -69,13 +69,6 @@ exports[`SelectAddress should render empty 1`] = `
     data-testid="SelectAddress__wrapper"
     type="button"
   >
-    <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
-    >
-      <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
-    </span>
     <div
       class="css-1psxlcd"
     >
@@ -117,6 +110,13 @@ exports[`SelectAddress should render empty 1`] = `
         </div>
       </div>
     </div>
+    <span
+      class="-mt-10 flex w-full items-center border border-transparent px-14"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      />
+    </span>
   </button>
 </div>
 `;
@@ -128,13 +128,6 @@ exports[`SelectAddress should render invalid 1`] = `
     data-testid="SelectAddress__wrapper"
     type="button"
   >
-    <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
-    >
-      <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
-    </span>
     <div
       class="css-px3dod"
     >
@@ -190,6 +183,13 @@ exports[`SelectAddress should render invalid 1`] = `
         </div>
       </div>
     </div>
+    <span
+      class="-mt-10 flex w-full items-center border border-transparent px-14 pr-24"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      />
+    </span>
   </button>
 </div>
 `;
@@ -201,31 +201,6 @@ exports[`SelectAddress should render with preselected address 1`] = `
     data-testid="SelectAddress__wrapper"
     type="button"
   >
-    <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
-    >
-      <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      >
-        <span
-          class="font-semibold text-base text-theme-text"
-          data-testid="Address__alias"
-        >
-          <span
-            class="css-u3jrna"
-            data-testid="TruncateEnd"
-          >
-            testwallet2
-          </span>
-        </span>
-        <span
-          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-          data-testid="Address__address"
-        >
-          DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-        </span>
-      </div>
-    </span>
     <div
       class="css-1psxlcd"
     >
@@ -278,6 +253,31 @@ exports[`SelectAddress should render with preselected address 1`] = `
         </div>
       </div>
     </div>
+    <span
+      class="-mt-10 flex w-full items-center border border-transparent px-14"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      >
+        <span
+          class="font-semibold text-base text-theme-text"
+          data-testid="Address__alias"
+        >
+          <span
+            class="css-u3jrna"
+            data-testid="TruncateEnd"
+          >
+            testwallet2
+          </span>
+        </span>
+        <span
+          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          data-testid="Address__address"
+        >
+          DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+        </span>
+      </div>
+    </span>
   </button>
 </div>
 `;
@@ -289,6 +289,7 @@ exports[`SelectAddress should render without user icon 1`] = `
     data-testid="SelectAddress__wrapper"
     type="button"
   >
+<<<<<<< HEAD
     <span
       class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
     >
@@ -296,6 +297,8 @@ exports[`SelectAddress should render without user icon 1`] = `
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       />
     </span>
+=======
+>>>>>>> develop
     <div
       class="css-1psxlcd"
     >
@@ -315,6 +318,13 @@ exports[`SelectAddress should render without user icon 1`] = `
         />
       </div>
     </div>
+    <span
+      class="-mt-10 flex w-full items-center border border-transparent px-14"
+    >
+      <div
+        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+      />
+    </span>
   </button>
 </div>
 `;

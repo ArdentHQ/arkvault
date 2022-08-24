@@ -10,6 +10,7 @@ describe("routing", () => {
 			expect.objectContaining({ path: ProfilePaths.SendTransferWallet }),
 			expect.objectContaining({ path: ProfilePaths.SendTransfer }),
 			expect.objectContaining({ path: ProfilePaths.SendIpfs }),
+			expect.objectContaining({ path: ProfilePaths.SendVoteWallet }),
 			expect.objectContaining({ path: ProfilePaths.SendVote }),
 		]);
 	});

@@ -98,8 +98,8 @@ export const SignMessage: React.VFC = () => {
 	const { signMessage } = useValidation();
 
 	useEffect(() => {
-		register("message", signMessage.message());
-	}, [register, signMessage]);
+		register("message", signMessage.message(selectedWallet?.isLedger()));
+	}, [selectedWallet, register, signMessage]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -119,8 +119,8 @@ export const SignMessage: React.VFC = () => {
 			return setActiveTab(activeTab - 1);
 		}
 
-		if (activeWallet) {
-			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+		if (selectedWallet) {
+			return history.push(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
 		}
 
 		return history.push(ProfilePaths.Welcome);
@@ -174,7 +174,7 @@ export const SignMessage: React.VFC = () => {
 						<StepsProvider steps={3} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
-									disabled={!!activeWallet}
+									disabled={!!selectedWallet}
 									profile={activeProfile}
 									wallets={wallets}
 									disableMessageInput={false}

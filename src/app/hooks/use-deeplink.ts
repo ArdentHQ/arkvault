@@ -38,7 +38,7 @@ export const useDeeplink = () => {
 	}, [env, history.location.pathname, t]);
 
 	const handleDeepLink = useCallback(
-		async (searchParameters: URLSearchParams) => {
+		async (parameters: URLSearchParams) => {
 			if (!profile) {
 				return verifyProfile();
 			}
@@ -48,11 +48,11 @@ export const useDeeplink = () => {
 			}
 
 			try {
-				const { getPath } = await validateSearchParameters(profile, searchParameters);
+				const { getPath } = await validateSearchParameters(profile, env, parameters);
 
 				return navigate(getPath());
 			} catch (error) {
-				toasts.error(`Invalid URI: ${error.message}`);
+				toasts.error(`Invalid URI: ${error.message}`, { delay: 5000 });
 			} finally {
 				setDeepLink(undefined);
 				setProfile(undefined);

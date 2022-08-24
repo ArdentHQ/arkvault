@@ -494,38 +494,85 @@ exports[`SignMessage Sign with Wallet should render (lg) 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
+                      <span
+                        class="-mt-10 flex w-full items-center border border-transparent px-14"
                       >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                        <div
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        >
+                          <span
+                            class="font-semibold text-base text-theme-text"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="css-u3jrna"
+                              data-testid="TruncateEnd"
+                            >
+                              testwallet2
+                            </span>
+                          </span>
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex flex-col css-1bcidjh"
@@ -563,7 +610,7 @@ exports[`SignMessage Sign with Wallet should render (lg) 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>
@@ -1101,38 +1148,85 @@ exports[`SignMessage Sign with Wallet should render (xs) 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
+                      <span
+                        class="-mt-10 flex w-full items-center border border-transparent px-14"
                       >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                        <div
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        >
+                          <span
+                            class="font-semibold text-base text-theme-text"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="css-u3jrna"
+                              data-testid="TruncateEnd"
+                            >
+                              testwallet2
+                            </span>
+                          </span>
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex flex-col css-1bcidjh"
@@ -1170,7 +1264,7 @@ exports[`SignMessage Sign with Wallet should render (xs) 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>
@@ -1708,38 +1802,85 @@ exports[`SignMessage Sign with Wallet should render for ledger wallets 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
+                      <span
+                        class="-mt-10 flex w-full items-center border border-transparent px-14"
                       >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                        <div
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        >
+                          <span
+                            class="font-semibold text-base text-theme-text"
+                            data-testid="Address__alias"
+                          >
+                            <span
+                              class="css-u3jrna"
+                              data-testid="TruncateEnd"
+                            >
+                              testwallet2
+                            </span>
+                          </span>
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex flex-col css-1bcidjh"
@@ -1777,7 +1918,7 @@ exports[`SignMessage Sign with Wallet should render for ledger wallets 1`] = `
                             class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
                             data-testid="InputCounter__counter"
                           >
-                            0/600
+                            0/255
                           </span>
                         </div>
                       </div>

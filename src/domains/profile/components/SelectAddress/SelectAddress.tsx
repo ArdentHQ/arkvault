@@ -25,7 +25,7 @@ type SelectAddressProperties = {
 	showWalletName?: boolean;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	onChange?: (address: string) => void;
-} & React.InputHTMLAttributes<any>;
+} & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
 const WalletAvatar = ({ address }: any) => {
 	if (!address) {
@@ -137,6 +137,14 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 								  }
 						}
 					/>
+
+					<span
+						className={cn("-mt-10 flex w-full items-center border border-transparent px-14", {
+							"pr-24": isInvalidField,
+						})}
+					>
+						<Address address={selectedWallet?.address} walletName={alias} />
+					</span>
 				</button>
 
 				<SearchWallet
