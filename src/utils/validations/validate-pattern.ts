@@ -16,3 +16,17 @@ export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 		  })
 		: true;
 };
+
+export const validateAscii = (t: any, value: string) => {
+	const matches = value.match(/[^ -~]/g);
+
+	if (matches && matches.length > 0) {
+		return t("COMMON.VALIDATION.ILLEGAL_CHARACTERS", {
+			characters: sortBy(uniq([...matches]))
+				.map((char) => `'${char}'`)
+				.join(", "),
+		});
+	}
+
+	return true;
+};
