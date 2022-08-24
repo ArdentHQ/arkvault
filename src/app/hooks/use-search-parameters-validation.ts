@@ -116,7 +116,7 @@ export const useSearchParametersValidation = () => {
 
 		await env.delegates().sync(profile, network.coin(), network.id());
 
-		const delegate = delegateFromSearchParameters({ env, network, profile, parameters });
+		const delegate = delegateFromSearchParameters({ env, network, parameters, profile });
 
 		const delegatePublicKey =
 			publicKey &&
@@ -158,7 +158,7 @@ export const useSearchParametersValidation = () => {
 				const network = findNetworkFromSearchParameters(profile, parameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, profile, parameters });
+				const delegate = delegateFromSearchParameters({ env, network, parameters, profile });
 
 				parameters.set("vote", delegate?.address() as string);
 
