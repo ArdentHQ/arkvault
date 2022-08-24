@@ -356,6 +356,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	VALIDATING_URI: "Validating URI. Please wait...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",
 		EXISTS: "{{field}} already exists",
@@ -387,7 +388,6 @@ export const translations = {
 		RECIPIENT_INVALID: "Recipient address is invalid",
 		SUBJECT_MISMATCH: "The {{subject}} do not match",
 	},
-	VALIDATING_URI: "Validating URI. Please wait...",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
 	VERSION: "Version",
