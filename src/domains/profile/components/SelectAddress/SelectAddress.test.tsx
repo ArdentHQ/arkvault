@@ -36,7 +36,7 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render without user icon", () => {
-		const { container } = render(<SelectAddress addUserIcon={false} wallets={wallets} profile={profile} />);
+		const { container } = render(<SelectAddress showUserIcon={false} wallets={wallets} profile={profile} />);
 
 		expect(container).toMatchSnapshot();
 	});

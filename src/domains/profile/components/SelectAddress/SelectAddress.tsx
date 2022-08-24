@@ -17,7 +17,7 @@ type SelectAddressProperties = {
 	wallet?: SelectedWallet;
 	wallets: Contracts.IReadWriteWallet[];
 	profile: Contracts.IProfile;
-	addUserIcon?: boolean;
+	showUserIcon?: boolean;
 	disabled?: boolean;
 	isInvalid?: boolean;
 	title?: string;
@@ -48,7 +48,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			profile,
 			disabled,
 			isInvalid,
-			addUserIcon = true,
+			showUserIcon = true,
 			showWalletName = true,
 			onChange,
 			title,
@@ -99,6 +99,18 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					onClick={() => setSearchWalletIsOpen(true)}
 					disabled={disabled}
 				>
+					<span
+						className={cn("pl-14 absolute inset-0 flex w-full items-center border border-transparent",
+							showUserIcon ? "pr-13" : "pr-4",
+							{
+								"pr-24": showUserIcon && isInvalidField,
+								"pr-13": !showUserIcon && isInvalidField,
+							},
+						)}
+					>
+						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
+					</span>
+
 					<Input
 						data-testid="SelectAddress__input"
 						ref={reference}
@@ -108,7 +120,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 						disabled={disabled}
 						isInvalid={isInvalidField}
 						addons={
-							addUserIcon
+							showUserIcon
 								? {
 										end: {
 											content: (
@@ -128,16 +140,6 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 								  }
 						}
 					/>
-
-					<span
-						className={cn("-mt-10 flex w-full items-center border border-transparent", {
-							"pl-14 pr-2": !addUserIcon,
-							"pr-24": isInvalidField,
-							"px-14": addUserIcon,
-						})}
-					>
-						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
-					</span>
 				</button>
 
 				<SearchWallet

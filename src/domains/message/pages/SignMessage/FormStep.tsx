@@ -62,7 +62,7 @@ export const FormStep = ({
 				<SelectAddress
 					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
 					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
-					addUserIcon={false}
+					showUserIcon={false}
 					showWalletName={false}
 					wallet={
 						wallet

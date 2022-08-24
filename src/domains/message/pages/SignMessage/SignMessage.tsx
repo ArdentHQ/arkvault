@@ -18,9 +18,8 @@ import { AuthenticationStep } from "@/domains/transaction/components/Authenticat
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
-import { useQueryParameters } from "@/app/hooks/use-query-parameters";
+import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { ProfilePaths } from "@/router/paths";
-import { profileAllEnabledNetworks } from "@/utils/network-utils";
 
 enum Step {
 	FormStep = 1,
@@ -34,21 +33,13 @@ export const SignMessage: React.VFC = () => {
 
 	const history = useHistory();
 
-	const { walletId: hasWalletId } = useParams<{ walletId: string }>();
+	const { walletId } = useParams<{ walletId: string }>();
 
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
-	const allEnabledNetworks = profileAllEnabledNetworks(activeProfile);
-	const activeNetwork = useMemo<Networks.Network | undefined>(() => {
-		const nethash = queryParameters.get("nethash");
+	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
 
-		if (!!hasWalletId || !nethash) {
-			return;
-		}
-
-		return allEnabledNetworks.find((item) => item.meta().nethash === nethash);
-	}, [allEnabledNetworks, queryParameters]);
-	const walletFromPath = useActiveWalletWhenNeeded(!!hasWalletId);
+	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
 	const walletFromDeeplink = useMemo(() => {
 		const address = queryParameters.get("address");
 
