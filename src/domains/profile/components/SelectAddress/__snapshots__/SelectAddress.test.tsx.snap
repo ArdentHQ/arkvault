@@ -184,7 +184,7 @@ exports[`SelectAddress should render invalid 1`] = `
       </div>
     </div>
     <span
-      class="-mt-10 flex w-full items-center border border-transparent px-14 pr-24"
+      class="-mt-10 flex w-full items-center border border-transparent pr-24 px-14"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
