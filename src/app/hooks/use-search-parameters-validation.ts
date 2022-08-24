@@ -253,6 +253,7 @@ export const useSearchParametersValidation = () => {
 
 		const getPath = () =>
 			methods[method].path({
+				env,
 				network,
 				parameters,
 				profile,
