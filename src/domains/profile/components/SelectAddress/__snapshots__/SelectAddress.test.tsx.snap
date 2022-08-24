@@ -289,16 +289,6 @@ exports[`SelectAddress should render without user icon 1`] = `
     data-testid="SelectAddress__wrapper"
     type="button"
   >
-<<<<<<< HEAD
-    <span
-      class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-2"
-    >
-      <div
-        class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-      />
-    </span>
-=======
->>>>>>> develop
     <div
       class="css-1psxlcd"
     >
@@ -319,7 +309,7 @@ exports[`SelectAddress should render without user icon 1`] = `
       </div>
     </div>
     <span
-      class="-mt-10 flex w-full items-center border border-transparent px-14"
+      class="-mt-10 flex w-full items-center border border-transparent pl-14 pr-2"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
