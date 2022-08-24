@@ -1,4 +1,4 @@
-import { Networks, Services } from "@ardenthq/sdk";
+import { Services } from "@ardenthq/sdk";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
