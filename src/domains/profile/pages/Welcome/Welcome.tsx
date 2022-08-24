@@ -13,17 +13,20 @@ import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useTheme } from "@/app/hooks";
+import { useAccentColor, useDeeplink, useProfileRestore, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
+import { toasts } from "@/app/services";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
 	const history = useHistory<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
+	const { restoreProfile } = useProfileRestore();
 
 	const { t } = useTranslation();
+	const { handleDeepLink, isDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -66,9 +69,20 @@ export const Welcome = () => {
 	}, [resetTheme]);
 
 	const navigateToProfile = useCallback(
-		(profile: Contracts.IProfile, subPath = "dashboard") => {
+		async (profile: Contracts.IProfile, subPath = "dashboard") => {
 			setProfileTheme(profile);
 			setProfileAccentColor(profile);
+
+			if (isDeeplink()) {
+				toasts.dismiss();
+				toasts.warning(t("COMMON.VALIDATING_URI"));
+
+				await restoreProfile(profile);
+
+				handleDeepLink(profile);
+				return;
+			}
+
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
 		[history],

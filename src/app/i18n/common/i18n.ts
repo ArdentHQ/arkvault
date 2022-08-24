@@ -387,6 +387,7 @@ export const translations = {
 		RECIPIENT_INVALID: "Recipient address is invalid",
 		SUBJECT_MISMATCH: "The {{subject}} do not match",
 	},
+	VALIDATING_URI: "Validating URI. Please wait...",
 	VALUE: "Value",
 	VERIFIED: "Verified Address: {{value}}",
 	VERSION: "Version",
