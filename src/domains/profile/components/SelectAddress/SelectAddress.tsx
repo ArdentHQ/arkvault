@@ -23,6 +23,7 @@ type SelectAddressProperties = {
 	title?: string;
 	description?: string;
 	showWalletName?: boolean;
+	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	onChange?: (address: string) => void;
 } & React.InputHTMLAttributes<any>;
 
@@ -52,6 +53,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			onChange,
 			title,
 			description,
+			disableAction = (wallet: Contracts.IReadWriteWallet) => !wallet.balance(),
 		}: SelectAddressProperties,
 		reference,
 	) => {
@@ -142,7 +144,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					profile={profile}
 					title={title || t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
 					description={description || t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
-					disableAction={(wallet: Contracts.IReadWriteWallet) => !wallet.balance()}
+					disableAction={disableAction}
 					searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
 					wallets={wallets}
 					size="4xl"

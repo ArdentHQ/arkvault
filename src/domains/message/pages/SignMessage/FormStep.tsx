@@ -3,9 +3,8 @@ import React, { ChangeEvent, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { Avatar } from "@/app/components/Avatar";
 import { FormField, FormLabel } from "@/app/components/Form";
-import { Input, InputCounter } from "@/app/components/Input";
+import { InputCounter } from "@/app/components/Input";
 import { StepHeader } from "@/app/components/StepHeader";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 
@@ -60,28 +59,25 @@ export const FormStep = ({
 			<FormField name="signatory-address">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
 
-				{disabled ? (
-					<Input
-						innerClassName="font-semibold"
-						value={wallet!.address()}
-						addons={{
-							start: {
-								content: <Avatar address={wallet!.address()} size="sm" noShadow />,
-							},
-						}}
-						disabled
-					/>
-				) : (
-					<SelectAddress
-						title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
-						description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
-						addUserIcon={false}
-						showWalletName={false}
-						wallets={wallets}
-						profile={profile}
-						onChange={handleSelectAddress}
-					/>
-				)}
+				<SelectAddress
+					title={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_TITLE")}
+					description={t("MESSAGE.PAGE_SIGN_MESSAGE.FORM_STEP.SELECT_ADDRESS_DESCRIPTION")}
+					addUserIcon={false}
+					showWalletName={false}
+					wallet={
+						wallet
+							? {
+									address: wallet.address(),
+									network: wallet.network(),
+								}
+							: undefined
+					}
+					wallets={wallets}
+					profile={profile}
+					disabled={disabled}
+					disableAction={(_: any) => false}
+					onChange={handleSelectAddress}
+				/>
 			</FormField>
 
 			<FormField name="message">
