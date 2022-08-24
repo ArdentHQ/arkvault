@@ -3,7 +3,7 @@ import { isEqual } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
-
+import { Services } from "@ardenthq/sdk";
 import { usePrevious } from "./use-previous";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
@@ -59,8 +59,22 @@ export const useProfileJobs = (profile?: Contracts.IProfile): Record<string, any
 					await env.wallets().syncByProfile(profile);
 					await profile.sync();
 
+					const walletIdentifiers: Services.WalletIdentifier[] = profile
+						.wallets()
+						.valuesWithCoin()
+						.filter((wallet) =>
+							profile.availableNetworks().some((network) => wallet.network().id() === network.id()),
+						)
+						.map((wallet) => ({
+							networkId: wallet.networkId(),
+							type: "address",
+							value: wallet.address(),
+						}));
+
 					// Update dashboard transactions
-					await profile.notifications().transactions().sync();
+					await profile.notifications().transactions().sync({
+						identifiers: walletIdentifiers,
+					});
 				} finally {
 					setConfiguration({ profileIsSyncingWallets: false });
 				}
