@@ -35,9 +35,9 @@ export const isAllowedNetwork = (network: string) => {
 	return allowedNetworks.has(network);
 };
 
-const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
-	const delegateName = searchParameters.get("delegate");
-	const delegatePublicKey = searchParameters.get("publicKey");
+const delegateFromSearchParameters = ({ env, network, parameters }: PathProperties) => {
+	const delegateName = parameters.get("delegate");
+	const delegatePublicKey = parameters.get("publicKey");
 
 	if (delegateName) {
 		try {
@@ -155,7 +155,7 @@ export const useSearchParametersValidation = () => {
 		},
 		vote: {
 			path: ({ profile, parameters, env }: PathProperties) => {
-				const network = findNetworkFromSearchParameters(profile, searchParameters);
+				const network = findNetworkFromSearchParameters(profile, parameters);
 				assertNetwork(network);
 
 				const delegate = delegateFromSearchParameters({ env, network, profile, parameters });
