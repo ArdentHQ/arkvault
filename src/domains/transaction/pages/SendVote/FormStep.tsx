@@ -48,7 +48,12 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 			<div className="my-8 space-y-8">
 				<FormField name="network">
 					<FormLabel label={t("COMMON.CRYPTOASSET")} />
-					<SelectNetworkDropdown profile={profile} networks={[network]} selectedNetwork={network} isDisabled />
+					<SelectNetworkDropdown
+						profile={profile}
+						networks={[network]}
+						selectedNetwork={network}
+						isDisabled
+					/>
 				</FormField>
 
 				<FormField name="senderAddress">
@@ -62,7 +67,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 									? {
 											address: wallet.address(),
 											network: wallet.network(),
-										}
+									  }
 									: undefined
 							}
 							wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}

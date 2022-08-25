@@ -33,7 +33,7 @@ export const FormField: React.FC<FormFieldProperties> = ({ name, ...properties }
 	}, [FormProvider, name]);
 
 	return (
-		<FormFieldStyled isInvalid={isInvalid} className="flex flex-col min-w-0" {...properties}>
+		<FormFieldStyled isInvalid={isInvalid} className="flex min-w-0 flex-col" {...properties}>
 			<FormFieldProvider value={{ errorMessage, isInvalid, name }}>{properties.children}</FormFieldProvider>
 		</FormFieldStyled>
 	);
