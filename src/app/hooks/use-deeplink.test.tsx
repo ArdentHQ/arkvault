@@ -270,10 +270,15 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
+		const truncated = truncate(nethash, {
+			length: 20,
+			omissionPosition: "middle",
+		});
+
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", nethash),
+					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
 				),
 				{ delay: 5000 },
 			),
