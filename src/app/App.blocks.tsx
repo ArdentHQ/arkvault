@@ -136,8 +136,6 @@ const Main: React.VFC = () => {
 		},
 	});
 
-	// useDeeplink();
-
 	const handleError = useErrorHandler();
 
 	useLayoutEffect(() => {

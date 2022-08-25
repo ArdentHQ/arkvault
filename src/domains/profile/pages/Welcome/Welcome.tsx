@@ -24,10 +24,10 @@ export const Welcome = () => {
 	const history = useHistory<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
 	const { restoreProfile } = useProfileRestore();
+	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
-	const { handleDeepLink, isDeeplink } = useDeeplink();
-	const isProfileCardClicked = useRef(false);
+	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -71,18 +71,29 @@ export const Welcome = () => {
 
 	const navigateToProfile = useCallback(
 		async (profile: Contracts.IProfile, subPath = "dashboard") => {
-			setProfileTheme(profile);
-			setProfileAccentColor(profile);
-
 			if (isDeeplink()) {
 				toasts.dismiss();
 				toasts.warning(t("COMMON.VALIDATING_URI"));
 
 				await restoreProfile(profile);
+				const error = await validateDeeplink(profile);
+
+				if (error) {
+					await toasts.dismiss();
+					toasts.error(error);
+					isProfileCardClickedOnce.current = false;
+					return;
+				}
+
+				setProfileTheme(profile);
+				setProfileAccentColor(profile);
 
 				handleDeepLink(profile);
 				return;
 			}
+
+			setProfileTheme(profile);
+			setProfileAccentColor(profile);
 
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
@@ -109,11 +120,11 @@ export const Welcome = () => {
 
 	const handleClick = useCallback(
 		(profile: Contracts.IProfile) => {
-			if (isProfileCardClicked.current) {
+			if (isProfileCardClickedOnce.current) {
 				return;
 			}
 
-			isProfileCardClicked.current = true;
+			isProfileCardClickedOnce.current = true;
 
 			if (profile.usesPassword()) {
 				setSelectedProfile(profile);
