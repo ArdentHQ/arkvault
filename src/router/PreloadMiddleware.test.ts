@@ -26,20 +26,19 @@ describe("PreloadMiddleware", () => {
 			jest.spyOn(route.component as any, "preload"),
 		);
 
-		const profileSpies = [
-			...ExchangeRoutes,
-			...MessageRoutes,
-			...NewsRoutes,
-			...WalletRoutes,
-			...TransactionRoutes,
-			...VoteRoutes,
-		].map((route) => jest.spyOn(route.component as any, "preload"));
+		const profileSpies = [...ExchangeRoutes, ...NewsRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
+			jest.spyOn(route.component as any, "preload"),
+		);
+
+		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
+			jest.spyOn(route.component as any, "preload"),
+		);
 
 		const canActivate = subject.handler({ location: { pathname: "/" } } as any);
 
 		expect(canActivate).toBe(true);
 
-		for (const spy of rootSpies) {
+		for (const spy of [...rootSpies, ...commonSpies]) {
 			expect(spy).toHaveBeenCalledWith();
 		}
 
@@ -47,7 +46,7 @@ describe("PreloadMiddleware", () => {
 			expect(spy).not.toHaveBeenCalled();
 		}
 
-		for (const spy of [...rootSpies, ...profileSpies]) {
+		for (const spy of [...rootSpies, ...profileSpies, ...commonSpies]) {
 			spy.mockRestore();
 		}
 	});
@@ -57,13 +56,13 @@ describe("PreloadMiddleware", () => {
 			jest.spyOn(route.component as any, "preload"),
 		);
 
-		const profileSpies = [
-			...ExchangeRoutes,
-			...NewsRoutes,
-			...WalletRoutes,
-			...TransactionRoutes,
-			...VoteRoutes,
-		].map((route) => jest.spyOn(route.component as any, "preload"));
+		const profileSpies = [...ExchangeRoutes, ...NewsRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
+			jest.spyOn(route.component as any, "preload"),
+		);
+
+		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
+			jest.spyOn(route.component as any, "preload"),
+		);
 
 		const canActivate = subject.handler({ location: { pathname: "/profiles" } } as any);
 
@@ -73,11 +72,11 @@ describe("PreloadMiddleware", () => {
 			expect(spy).not.toHaveBeenCalled();
 		}
 
-		for (const spy of profileSpies) {
+		for (const spy of [...profileSpies, ...commonSpies]) {
 			expect(spy).toHaveBeenCalledWith();
 		}
 
-		for (const spy of [...rootSpies, ...profileSpies]) {
+		for (const spy of [...rootSpies, ...profileSpies, ...commonSpies]) {
 			spy.mockRestore();
 		}
 	});
