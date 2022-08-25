@@ -7,7 +7,6 @@ export const initializeArkNetworks = ({ data }) => {
 		return;
 	}
 
-	// Assign default networks to profile
 	if (!data.networks) {
 		data.networks = {};
 	}
@@ -16,7 +15,7 @@ export const initializeArkNetworks = ({ data }) => {
 		mainnet: ARK.manifest.networks["ark.mainnet"],
 	};
 
-	if (isE2E()) {
+	if (isE2E() || process.env.NODE_ENV !== "production") {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
 };
