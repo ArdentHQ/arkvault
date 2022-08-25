@@ -364,7 +364,7 @@ describe("Welcome", () => {
 
 		let toastUpdateSpy: jest.SpyInstance;
 
-		const buildErrorMessage = (message: string) => `Invalid URI: ${message}`;
+		const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
 
 		beforeEach(() => {
 			toastUpdateSpy = jest.spyOn(toasts, "update").mockImplementation();
@@ -375,8 +375,6 @@ describe("Welcome", () => {
 		});
 
 		it("should show a warning if the coin is not supported", async () => {
-			history.push("/?method=transfer&coin=doge&network=ark.mainnet");
-
 			const { container } = render(
 				<Route path="/">
 					<Welcome />
@@ -388,11 +386,9 @@ describe("Welcome", () => {
 				},
 			);
 
-			const profile = env.profiles().findById(fixtureProfileId);
-
-			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
-
 			expect(container).toBeInTheDocument();
+
+			const profile = env.profiles().findById(fixtureProfileId);
 
 			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
@@ -400,7 +396,7 @@ describe("Welcome", () => {
 				expect(toastUpdateSpy).toHaveBeenCalledWith(
 					expect.any(String),
 					"error",
-					buildErrorMessage(
+					buildToastMessage(
 						transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE"),
 					),
 				),
