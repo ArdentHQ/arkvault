@@ -1,6 +1,5 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
@@ -8,7 +7,6 @@ import { createHashHistory } from "history";
 import { useDeeplink } from "./use-deeplink";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -56,165 +54,6 @@ describe("useDeeplink hook", () => {
 
 		return <h1>Deeplink Test</h1>;
 	};
-
-	it("should show a warning if the network and nethash are both missing", async () => {
-		history.push("/?method=transfer&coin=ark");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
-				{ delay: 5000 },
-			),
-		);
-	});
-
-	it("should show a warning if the network parameter is invalid", async () => {
-		history.push("/?method=transfer&coin=ark&network=custom");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
-				{ delay: 5000 },
-			),
-		);
-	});
-
-	it("should show a warning if there are no available senders for network", async () => {
-		history.push(mainnetDeepLink);
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
-				),
-				{ delay: 5000 },
-			),
-		);
-	});
-
-	it("should show a warning if there is no network for the given nethash", async () => {
-		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
-
-		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		const truncated = truncate(nethash, {
-			length: 20,
-			omissionPosition: "middle",
-		});
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
-				),
-				{ delay: 5000 },
-			),
-		);
-	});
-
-	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
-		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
-
-		history.push(`/?method=transfer&coin=ark&nethash=${nethash}`);
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		const truncated = truncate(nethash, {
-			length: 20,
-			omissionPosition: "middle",
-		});
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
-				),
-				{ delay: 5000 },
-			),
-		);
-	});
-
-	it("should navigate to transfer page with network parameter", async () => {
-		history.push("/?method=transfer&coin=ark&network=ark.devnet");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-transfer`));
-	});
 
 	it("should navigate to transfer page with nethash parameter", async () => {
 		history.push(

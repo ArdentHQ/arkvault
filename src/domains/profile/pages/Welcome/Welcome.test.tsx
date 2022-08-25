@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -362,6 +363,8 @@ describe("Welcome", () => {
 
 	describe("useDeeplink", () => {
 		const history = createHashHistory();
+		const mainnetDeepLink =
+			"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
 
 		let toastUpdateSpy: jest.SpyInstance;
 		let resetProfileNetworksMock: () => void;
@@ -437,6 +440,189 @@ describe("Welcome", () => {
 					),
 				),
 			);
+		});
+
+		it("should show a warning if the network and nethash are both missing", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=transfer&coin=ark",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				),
+			);
+		});
+
+		it("should show a warning if the network parameter is invalid", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=transfer&coin=ark&network=custom",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(
+						transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom"),
+					),
+				),
+			);
+		});
+
+		it("should show a warning if there are no available senders for network", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: mainnetDeepLink,
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(
+						transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
+					),
+				),
+			);
+		});
+
+		it("should show a warning if there is no network for the given nethash", async () => {
+			const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			const truncated = truncate(nethash, {
+				length: 20,
+				omissionPosition: "middle",
+			});
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(
+						transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
+					),
+				),
+			);
+		});
+
+		it("should show a warning if there are no available senders for the network with the given nethash", async () => {
+			const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			const truncated = truncate(nethash, {
+				length: 20,
+				omissionPosition: "middle",
+			});
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(
+						transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
+					),
+				),
+			);
+		});
+
+		it("should navigate to transfer page with network parameter", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=transfer&coin=ark&network=ark.devnet",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		});
+
+		it("should navigate to transfer page with nethash parameter", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 		});
 	});
 });
