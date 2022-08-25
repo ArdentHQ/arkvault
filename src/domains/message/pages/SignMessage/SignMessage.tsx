@@ -96,7 +96,7 @@ export const SignMessage: React.VFC = () => {
 		if (initialState.message) {
 			trigger("message");
 		}
-  }, [trigger]);
+	}, [trigger]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
