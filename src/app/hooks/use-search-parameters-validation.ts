@@ -205,21 +205,21 @@ export const useSearchParametersValidation = () => {
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
+			const truncated = truncate(nethash, {
+				length: 20,
+				omissionPosition: "middle",
+			});
+
 			if (!network) {
 				throw new Error(
-					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", {
-						nethash: truncate(nethash, {
-							length: 20,
-							omissionPosition: "middle",
-						}),
-					}),
+					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: truncated }),
 				);
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
 
 			if (availableWallets.length === 0) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash }));
+				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash: truncated }));
 			}
 		}
 
