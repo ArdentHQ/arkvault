@@ -57,20 +57,6 @@ describe("useDeeplink hook", () => {
 		return <h1>Deeplink Test</h1>;
 	};
 
-	it("should prompt the user to select a profile", () => {
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				route: mainnetDeepLink,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
-	});
-
 	it("should show a warning if the coin is not supported", async () => {
 		history.push("/?method=transfer&coin=doge&network=ark.mainnet");
 

@@ -7,6 +7,7 @@ import { AppRouter, Main } from "./App.blocks";
 import { getDefaultProfileId, render, screen, waitFor, within, env, defaultNetMocks } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
+import { translations } from "@/app/i18n/common/i18n";
 
 const history = createHashHistory();
 
@@ -238,5 +239,36 @@ describe("App Main", () => {
 		onProfileUpdated();
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
+	});
+
+	describe("useDeeplink", () => {
+		const mainnetDeepLink =
+			"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
+		let toastWarningSpy: jest.SpyInstance;
+
+		beforeEach(() => {
+			toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		});
+
+		afterEach(() => {
+			toastWarningSpy.mockRestore();
+		});
+
+		it("should prompt the user to select a profile", async () => {
+			render(
+				<Route path="/">
+					<Main />
+				</Route>,
+				{
+					history,
+					route: mainnetDeepLink,
+					withProviders: true,
+				},
+			);
+
+			await waitFor(() =>
+				expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
+			);
+		});
 	});
 });
