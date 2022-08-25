@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
 
@@ -27,6 +27,7 @@ export const Welcome = () => {
 
 	const { t } = useTranslation();
 	const { handleDeepLink, isDeeplink } = useDeeplink();
+	const isProfileCardClicked = useRef(false);
 
 	const profileCardActions = useMemo(
 		() => [
@@ -108,6 +109,12 @@ export const Welcome = () => {
 
 	const handleClick = useCallback(
 		(profile: Contracts.IProfile) => {
+			if (isProfileCardClicked.current) {
+				return;
+			}
+
+			isProfileCardClicked.current = true;
+
 			if (profile.usesPassword()) {
 				setSelectedProfile(profile);
 				setRequestedAction({ label: "Homepage", value: "home" });
@@ -115,7 +122,7 @@ export const Welcome = () => {
 				navigateToProfile(profile);
 			}
 		},
-		[navigateToProfile],
+		[navigateToProfile, selectedProfile],
 	);
 
 	const handleRequestedAction = useCallback(
