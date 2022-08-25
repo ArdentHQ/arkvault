@@ -8,7 +8,7 @@ import { getDefaultProfileId, render, screen, waitFor, within, env, defaultNetMo
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 import { translations } from "@/app/i18n/common/i18n";
-
+import { ProfilePaths } from "@/router/paths";
 const history = createHashHistory();
 
 jest.setTimeout(7000);
@@ -269,6 +269,32 @@ describe("App Main", () => {
 			await waitFor(() =>
 				expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
 			);
+		});
+
+		it.each([
+			["createProfile", ProfilePaths.CreateProfile],
+			["importProfile", ProfilePaths.ImportProfile],
+		])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
+			const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+			render(
+				<Route path="/">
+					<Main />
+				</Route>,
+				{
+					history,
+					route: mainnetDeepLink,
+					withProviders: true,
+				},
+			);
+
+			await waitFor(() => {
+				expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
+			});
+
+			await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
+
+			toastWarningSpy.mockRestore();
 		});
 	});
 });

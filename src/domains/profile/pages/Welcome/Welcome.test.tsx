@@ -367,6 +367,7 @@ describe("Welcome", () => {
 			"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
 
 		let toastUpdateSpy: jest.SpyInstance;
+
 		let resetProfileNetworksMock: () => void;
 		let profile: Contracts.IProfile;
 
@@ -623,6 +624,31 @@ describe("Welcome", () => {
 			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 			await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+		});
+
+		it("should navigate to vote page", async () => {
+			const mockDelegateName = jest
+				.spyOn(env.delegates(), "findByUsername")
+				.mockReturnValue(profile.wallets().first());
+
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+			mockDelegateName.mockRestore();
 		});
 	});
 });
