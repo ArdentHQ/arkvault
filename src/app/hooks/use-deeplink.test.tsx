@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
@@ -69,33 +70,6 @@ describe("useDeeplink hook", () => {
 
 		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
-	});
-
-	it("should show a warning if the coin is missing", async () => {
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
-
-		history.push("/?method=transfer&network=ark.mainnet");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter: t("COMMON.COIN") })),
-				{ delay: 5000 },
-			),
-		);
 	});
 
 	it("should show a warning if the coin is not supported", async () => {
@@ -283,9 +257,14 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
+		const truncated = truncate(nethash, {
+			length: 20,
+			omissionPosition: "middle",
+		});
+
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash })),
+				buildToastMessage(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: truncated })),
 				{ delay: 5000 },
 			),
 		);

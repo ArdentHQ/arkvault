@@ -180,14 +180,10 @@ export const useSearchParametersValidation = () => {
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
-		const coin = parameters.get("coin")?.toUpperCase();
+		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
 		const method = parameters.get("method")?.toLowerCase();
 		const networkId = parameters.get("network")?.toLowerCase();
 		const nethash = parameters.get("nethash");
-
-		if (!coin) {
-			throw new MissingParameterError(t("COMMON.COIN"));
-		}
 
 		if (!networkId && !nethash) {
 			throw new MissingParameterError(t("COMMON.NETWORK_OR_NETHASH"));
@@ -242,7 +238,14 @@ export const useSearchParametersValidation = () => {
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
 			if (!network) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash }));
+				throw new Error(
+					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", {
+						nethash: truncate(nethash, {
+							length: 20,
+							omissionPosition: "middle",
+						}),
+					}),
+				);
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
