@@ -8,11 +8,11 @@ import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider } from "@/app/contexts";
-
 import { Form, FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
 import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from "@/app/hooks";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { ProfilePaths } from "@/router/paths";
 
 enum Step {
 	FormStep = 1,
@@ -101,7 +101,13 @@ export const VerifyMessage: React.VFC = () => {
 		}
 	}, [message, signatory, signature]);
 
-	const handleBack = () => history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`);
+	const handleBack = () => {
+		if (activeWallet) {
+			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+		}
+
+		return history.push(ProfilePaths.Welcome);
+	};
 
 	const submitForm = async () => {
 		try {
@@ -173,7 +179,6 @@ export const VerifyMessage: React.VFC = () => {
 									<Button
 										variant="secondary"
 										data-testid="VerifyMessage__back-button"
-										disabled={!activeWallet?.id()}
 										onClick={handleBack}
 									>
 										{t("COMMON.BACK")}
