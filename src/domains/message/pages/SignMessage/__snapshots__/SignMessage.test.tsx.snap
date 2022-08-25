@@ -485,7 +485,7 @@ exports[`SignMessage should render (lg) 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -528,7 +528,7 @@ exports[`SignMessage should render (lg) 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1092,7 +1092,7 @@ exports[`SignMessage should render (xs) 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1135,7 +1135,7 @@ exports[`SignMessage should render (xs) 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1699,7 +1699,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1742,7 +1742,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex flex-col min-w-0 css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2372,7 +2372,7 @@ exports[`SignMessage should sign message with encrypted mnemonic 1`] = `
                     class="pt-4 md:pt-6"
                   >
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex flex-col min-w-0 css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3017,7 +3017,7 @@ exports[`SignMessage should sign message with encrypted secret 1`] = `
                     class="pt-4 md:pt-6"
                   >
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex flex-col min-w-0 css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

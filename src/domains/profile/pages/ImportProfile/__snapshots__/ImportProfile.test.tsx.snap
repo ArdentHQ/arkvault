@@ -177,7 +177,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               class="mr-6 w-full"
                             >
                               <fieldset
-                                class="flex flex-col css-5kz4tk"
+                                class="flex flex-col min-w-0 css-5kz4tk"
                               >
                                 <label
                                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -265,7 +265,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </div>
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -324,7 +324,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </fieldset>
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -507,7 +507,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               class="ml-4 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
                             >
                               <fieldset
-                                class="flex flex-col css-1bcidjh"
+                                class="flex flex-col min-w-0 css-1bcidjh"
                               >
                                 <label
                                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -588,7 +588,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           class="mb-8 pt-1 sm:py-3"
                         >
                           <fieldset
-                            class="flex flex-col css-5kz4tk"
+                            class="flex flex-col min-w-0 css-5kz4tk"
                           >
                             <label
                               class="flex cursor-pointer items-center space-x-3"
@@ -873,7 +873,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               class="mr-6 w-full"
                             >
                               <fieldset
-                                class="flex flex-col css-5kz4tk"
+                                class="flex flex-col min-w-0 css-5kz4tk"
                               >
                                 <label
                                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -961,7 +961,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </div>
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1020,7 +1020,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                             </div>
                           </fieldset>
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1203,7 +1203,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                               class="ml-4 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
                             >
                               <fieldset
-                                class="flex flex-col css-1bcidjh"
+                                class="flex flex-col min-w-0 css-1bcidjh"
                               >
                                 <label
                                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1284,7 +1284,7 @@ exports[`ImportProfile should apply theme setting of imported profile regardless
                           class="mb-8 pt-1 sm:py-3"
                         >
                           <fieldset
-                            class="flex flex-col css-5kz4tk"
+                            class="flex flex-col min-w-0 css-5kz4tk"
                           >
                             <label
                               class="flex cursor-pointer items-center space-x-3"

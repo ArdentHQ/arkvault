@@ -29,7 +29,7 @@ exports[`ImportWallet import with private key when is not valid 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -149,7 +149,7 @@ exports[`ImportWallet import with private key when is not valid 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -276,7 +276,7 @@ exports[`ImportWallet import with private key when is valid 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -396,7 +396,7 @@ exports[`ImportWallet import with private key when is valid 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -523,7 +523,7 @@ exports[`ImportWallet import with wif with invalid wif 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -643,7 +643,7 @@ exports[`ImportWallet import with wif with invalid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -770,7 +770,7 @@ exports[`ImportWallet import with wif with valid wif 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -890,7 +890,7 @@ exports[`ImportWallet import with wif with valid wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1017,7 +1017,7 @@ exports[`ImportWallet should import with encryped wif 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1137,7 +1137,7 @@ exports[`ImportWallet should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1168,7 +1168,7 @@ exports[`ImportWallet should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1837,7 +1837,7 @@ exports[`ImportWallet should render method step 1`] = `
       class="mt-8 space-y-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1957,7 +1957,7 @@ exports[`ImportWallet should render method step 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex flex-col min-w-0 css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

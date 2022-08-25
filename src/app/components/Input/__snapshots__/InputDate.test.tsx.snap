@@ -3,7 +3,7 @@
 exports[`InputDate should render 1`] = `
 <DocumentFragment>
   <fieldset
-    class="flex flex-col css-1bcidjh"
+    class="flex flex-col min-w-0 css-1bcidjh"
   >
     <div
       class="react-datepicker-wrapper"

@@ -37,7 +37,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
               class="css-pwc11e"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex flex-col min-w-0 css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -278,7 +278,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
             </div>
           </div>
           <fieldset
-            class="flex flex-col css-1bcidjh"
+            class="flex flex-col min-w-0 css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -321,7 +321,7 @@ exports[`MultiSignature Registration Form should render form step 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col css-1bcidjh"
+            class="flex flex-col min-w-0 css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

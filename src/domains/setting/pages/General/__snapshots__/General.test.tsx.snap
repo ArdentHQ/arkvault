@@ -731,7 +731,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1000,7 +1000,7 @@ exports[`General Settings should disable submit button when profile is not resto
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1380,7 +1380,7 @@ exports[`General Settings should disable submit button when profile is not resto
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -2350,7 +2350,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2619,7 +2619,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2999,7 +2999,7 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -3950,7 +3950,7 @@ exports[`General Settings should render 1`] = `
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4219,7 +4219,7 @@ exports[`General Settings should render 1`] = `
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4599,7 +4599,7 @@ exports[`General Settings should render 1`] = `
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -5551,7 +5551,7 @@ exports[`General Settings should show identicon when removing image if name is s
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5820,7 +5820,7 @@ exports[`General Settings should show identicon when removing image if name is s
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6200,7 +6200,7 @@ exports[`General Settings should show identicon when removing image if name is s
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -7152,7 +7152,7 @@ exports[`General Settings should update profile 1`] = `
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7421,7 +7421,7 @@ exports[`General Settings should update profile 1`] = `
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7801,7 +7801,7 @@ exports[`General Settings should update profile 1`] = `
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -8753,7 +8753,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9022,7 +9022,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9402,7 +9402,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label
@@ -10346,7 +10346,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="flex flex-col sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -10615,7 +10615,7 @@ exports[`General Settings should update the avatar when removing focus from name
                         class="mt-8 flex flex-col sm:ml-5 sm:mt-0 sm:w-2/4"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex flex-col min-w-0 css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -10995,7 +10995,7 @@ exports[`General Settings should update the avatar when removing focus from name
                           data-testid="list-divided-item__content"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex flex-col min-w-0 css-1bcidjh"
                             data-testid="General-settings__auto-signout"
                           >
                             <label

@@ -84,7 +84,7 @@ exports[`FeeWarning should render a warning for a fee that is too HIGH 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex flex-col min-w-0 css-1bcidjh"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
@@ -220,7 +220,7 @@ exports[`FeeWarning should render a warning for a fee that is too LOW 1`] = `
               class="mt-4"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex flex-col min-w-0 css-1bcidjh"
               >
                 <label
                   class="flex w-max cursor-pointer items-center space-x-3"
