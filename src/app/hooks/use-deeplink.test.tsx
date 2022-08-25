@@ -57,30 +57,6 @@ describe("useDeeplink hook", () => {
 		return <h1>Deeplink Test</h1>;
 	};
 
-	it("should show a warning if the coin is not supported", async () => {
-		history.push("/?method=transfer&coin=doge&network=ark.mainnet");
-
-		render(
-			<Route>
-				<TestComponent />
-			</Route>,
-			{
-				history,
-			},
-		);
-
-		expect(deeplinkTestContent()).toBeInTheDocument();
-
-		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
-
-		await waitFor(() =>
-			expect(toastErrorSpy).toHaveBeenCalledWith(
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
-				{ delay: 5000 },
-			),
-		);
-	});
-
 	it("should show a warning if the method is missing", async () => {
 		history.push("/?coin=ark&network=ark.mainnet");
 

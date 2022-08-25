@@ -3,13 +3,14 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-
+import { Route } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { httpClient } from "@/app/services";
+import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	act,
 	env,
@@ -356,5 +357,54 @@ describe("Welcome", () => {
 		expect(spy).toHaveBeenNthCalledWith(1, theme);
 
 		spy.mockRestore();
+	});
+
+	describe("useDeeplink", () => {
+		const history = createHashHistory();
+
+		let toastUpdateSpy: jest.SpyInstance;
+
+		const buildErrorMessage = (message: string) => `Invalid URI: ${message}`;
+
+		beforeEach(() => {
+			toastUpdateSpy = jest.spyOn(toasts, "update").mockImplementation();
+		});
+
+		afterEach(() => {
+			toastUpdateSpy.mockRestore();
+		});
+
+		it("should show a warning if the coin is not supported", async () => {
+			history.push("/?method=transfer&coin=doge&network=ark.mainnet");
+
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=transfer&coin=doge&network=ark.mainnet",
+					withProviders: true,
+				},
+			);
+
+			const profile = env.profiles().findById(fixtureProfileId);
+
+			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildErrorMessage(
+						transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE"),
+					),
+				),
+			);
+		});
 	});
 });
