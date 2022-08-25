@@ -1,5 +1,5 @@
 import { Services } from "@ardenthq/sdk";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
@@ -83,7 +83,7 @@ export const SignMessage: React.VFC = () => {
 		mode: "onChange",
 	});
 
-	const { formState, getValues, handleSubmit, register } = form;
+	const { formState, getValues, handleSubmit, register, trigger } = form;
 	const { isSubmitting, isValid } = formState;
 
 	const { signMessage } = useValidation();
@@ -91,6 +91,12 @@ export const SignMessage: React.VFC = () => {
 	useEffect(() => {
 		register("message", signMessage.message(selectedWallet?.isLedger()));
 	}, [selectedWallet, register, signMessage]);
+
+	useEffect(() => {
+		if (initialState.message) {
+			trigger("message");
+		}
+  }, [trigger]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
