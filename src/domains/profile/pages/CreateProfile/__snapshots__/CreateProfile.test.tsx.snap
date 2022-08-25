@@ -95,7 +95,7 @@ exports[`CreateProfile should render 1`] = `
                         class="mr-6 w-full"
                       >
                         <fieldset
-                          class="flex flex-col min-w-0 css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -163,7 +163,7 @@ exports[`CreateProfile should render 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -222,7 +222,7 @@ exports[`CreateProfile should render 1`] = `
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -405,7 +405,7 @@ exports[`CreateProfile should render 1`] = `
                         class="ml-4 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800"
                       >
                         <fieldset
-                          class="flex flex-col min-w-0 css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -486,7 +486,7 @@ exports[`CreateProfile should render 1`] = `
                     class="mb-8 pt-1 sm:py-3"
                   >
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="flex cursor-pointer items-center space-x-3"

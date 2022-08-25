@@ -518,7 +518,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                     class="space-y-6 pt-6"
                   >
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -655,7 +655,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -825,7 +825,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                             class="space-y-5"
                           >
                             <fieldset
-                              class="flex flex-col min-w-0 css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <div>
                                 <div
@@ -934,7 +934,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col min-w-0 css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1056,7 +1056,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

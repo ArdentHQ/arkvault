@@ -156,7 +156,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
           class="space-y-6 pt-6"
         >
           <fieldset
-            class="flex flex-col min-w-0 css-5kz4tk"
+            class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -203,7 +203,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -488,7 +488,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
           class="space-y-6 pt-6"
         >
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -515,7 +515,7 @@ exports[`DelegateRegistrationForm should render form step 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1029,7 +1029,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
           class="space-y-6 pt-6"
         >
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1056,7 +1056,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1336,7 +1336,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
           class="space-y-6 pt-6"
         >
           <fieldset
-            class="flex flex-col min-w-0 css-5kz4tk"
+            class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1383,7 +1383,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1668,7 +1668,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
           class="space-y-6 pt-6"
         >
           <fieldset
-            class="flex flex-col min-w-0 css-5kz4tk"
+            class="flex min-w-0 flex-col css-5kz4tk"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1715,7 +1715,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
             </div>
           </fieldset>
           <fieldset
-            class="flex flex-col min-w-0 css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

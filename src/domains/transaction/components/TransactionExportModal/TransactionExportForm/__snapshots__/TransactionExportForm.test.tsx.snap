@@ -117,7 +117,7 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -245,7 +245,7 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -694,7 +694,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -822,7 +822,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -1222,7 +1222,7 @@ exports[`TransactionExportForm should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -1350,7 +1350,7 @@ exports[`TransactionExportForm should render in md 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -1750,7 +1750,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -1878,7 +1878,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -2278,7 +2278,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -2406,7 +2406,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -2805,7 +2805,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"
@@ -2933,7 +2933,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
               data-testid="list-divided-item__value"
             >
               <fieldset
-                class="flex flex-col min-w-0 css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div
                   class="static sm:relative"

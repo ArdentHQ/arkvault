@@ -634,7 +634,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                     class="pt-6"
                   >
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1423,7 +1423,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                     class="pt-6"
                   >
                     <fieldset
-                      class="flex flex-col min-w-0 css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2792,7 +2792,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col min-w-0 css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2844,7 +2844,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 3rd step 1`]
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col min-w-0 css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4055,7 +4055,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col min-w-0 css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4107,7 +4107,7 @@ exports[`SendDelegateResignation Delegate Resignation should show mnemonic authe
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col min-w-0 css-5kz4tk"
+                    class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
