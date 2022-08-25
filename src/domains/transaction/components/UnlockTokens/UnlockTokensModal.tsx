@@ -17,7 +17,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 	const [step, setStep] = useState<Step>(Step.SelectStep);
 
 	const [transaction, setTransaction] = useState<DTO.ExtendedSignedTransactionData | undefined>(undefined);
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const { persist } = useEnvironmentContext();
 
@@ -75,7 +75,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 			setTransaction(transaction);
 			setStep(Step.SummaryStep);
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error)
 			setStep(Step.ErrorStep);
 		}
 	};
@@ -119,7 +119,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 
 				{step === Step.ErrorStep && (
 					<ErrorStep
-						errorMessage={errorMessage}
+						error={error}
 						onRepeat={/* istanbul ignore next */ () => handleSubmit(submit)}
 						isRepeatDisabled={formState.isSubmitting}
 					/>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Alert } from "@/app/components/Alert";
@@ -13,22 +13,33 @@ import { TextArea } from "@/app/components/TextArea";
 interface Properties {
 	title?: string;
 	description?: string;
+	error?: Error;
 	isRepeatDisabled?: boolean;
 	onBack?: () => void;
 	onRepeat?: () => void;
-	errorMessage?: string;
 }
 
 export const ErrorStep = ({
 	title,
 	description,
+	error,
+	isRepeatDisabled = false,
 	onBack,
 	onRepeat,
-	isRepeatDisabled = false,
-	errorMessage = "test",
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
+
+	const errorMessage = useMemo(() => {
+		if (!error) {
+			return;
+		}
+
+		return JSON.stringify({
+			message: (error as any).statusCode?.statusText ?? error.message,
+			type: error.name,
+		});
+	}, [error]);
 
 	return (
 		<div data-testid="ErrorStep">

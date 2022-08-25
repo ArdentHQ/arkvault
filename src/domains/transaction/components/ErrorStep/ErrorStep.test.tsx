@@ -18,7 +18,7 @@ describe("ErrorStep", () => {
 	});
 
 	it("should display error details", () => {
-		const { asFragment } = render(<ErrorStep errorMessage="Display error details" />);
+		const { asFragment } = render(<ErrorStep error={new Error("Display error details")} />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -75,7 +75,7 @@ exports[`ErrorStep should display error details 1`] = `
               style="height: 4px;"
               type="text"
             >
-              Display error details
+              {"message":"Display error details","type":"Error"}
             </textarea>
           </div>
         </div>
@@ -181,62 +181,11 @@ exports[`ErrorStep should emit onBack 1`] = `
             An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
           </div>
         </div>
-        <div
-          class="py-4 css-qner8f"
-          disabled=""
-        >
-          <div
-            class="relative flex h-full flex-1"
-          >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
-            >
-              test
-            </textarea>
-          </div>
-        </div>
       </div>
     </div>
     <div
       class="css-2wyvkd"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-1jhy6v9"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg>
-                  copy.svg
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-1jhy6v9"
         data-testid="ErrorStep__wallet-button"
@@ -317,62 +266,11 @@ exports[`ErrorStep should emit onRepeat 1`] = `
             An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
           </div>
         </div>
-        <div
-          class="py-4 css-qner8f"
-          disabled=""
-        >
-          <div
-            class="relative flex h-full flex-1"
-          >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
-            >
-              test
-            </textarea>
-          </div>
-        </div>
       </div>
     </div>
     <div
       class="css-2wyvkd"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-1jhy6v9"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg>
-                  copy.svg
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-1bx0hyc"
         data-testid="ErrorStep__repeat-button"
@@ -453,63 +351,11 @@ exports[`ErrorStep should render with custom title 1`] = `
             An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
           </div>
         </div>
-        <div
-          class="py-4 css-qner8f"
-          disabled=""
-        >
-          <div
-            class="relative flex h-full flex-1"
-          >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
-            >
-              test
-            </textarea>
-          </div>
-        </div>
       </div>
     </div>
     <div
       class="css-2wyvkd"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-1jhy6v9"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg>
-                  copy.svg
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
@@ -574,63 +420,11 @@ exports[`ErrorStep should render with default texts 1`] = `
             An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
           </div>
         </div>
-        <div
-          class="py-4 css-qner8f"
-          disabled=""
-        >
-          <div
-            class="relative flex h-full flex-1"
-          >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
-            >
-              test
-            </textarea>
-          </div>
-        </div>
       </div>
     </div>
     <div
       class="css-2wyvkd"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-1jhy6v9"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg>
-                  copy.svg
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;

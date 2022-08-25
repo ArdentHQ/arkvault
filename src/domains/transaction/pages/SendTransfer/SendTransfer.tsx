@@ -54,7 +54,7 @@ export const SendTransfer: React.VFC = () => {
 
 	const abortReference = useRef(new AbortController());
 
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const showNetworkStep = !hasDeepLinkParameters && !activeWallet && networks.length > 1;
 	const firstTabIndex = showNetworkStep ? SendTransferStep.NetworkStep : SendTransferStep.FormStep;
@@ -103,7 +103,7 @@ export const SendTransfer: React.VFC = () => {
 
 		const resetValues = window.setTimeout(() =>
 			resetForm(() => {
-				setErrorMessage(undefined);
+				setError(undefined);
 				setUnconfirmedTransactions([]);
 				setTransaction(undefined);
 				setWallet(undefined);
@@ -156,7 +156,7 @@ export const SendTransfer: React.VFC = () => {
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
 			} catch (error) {
-				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+				setError(error)
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},
@@ -299,9 +299,9 @@ export const SendTransfer: React.VFC = () => {
 						assertWallet(wallet);
 						history.push(`/profiles/${activeProfile.id()}/wallets/${wallet.id()}`);
 					}}
+					error={error}
 					isRepeatDisabled={isSubmitting}
 					onRepeat={handleSubmit(() => submit())}
-					errorMessage={errorMessage}
 				/>
 			</TabPanel>
 

@@ -42,7 +42,7 @@ export const SendDelegateResignation = () => {
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const { persist } = useEnvironmentContext();
 
@@ -118,7 +118,7 @@ export const SendDelegateResignation = () => {
 
 			handleNext();
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error);
 			setActiveTab(Step.ErrorStep);
 		}
 	};
@@ -152,9 +152,9 @@ export const SendDelegateResignation = () => {
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
+									error={error}
 									isRepeatDisabled={isSubmitting || !isValid}
 									onRepeat={form.handleSubmit(handleSubmit)}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 

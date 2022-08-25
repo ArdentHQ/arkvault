@@ -63,7 +63,7 @@ export const SendVote = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const form = useForm({ mode: "onChange" });
 	const { senderAddress } = form.watch();
@@ -426,7 +426,7 @@ export const SendVote = () => {
 				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
 			}
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error)
 			setActiveTab(Step.ErrorStep);
 		}
 	};
@@ -500,9 +500,9 @@ export const SendVote = () => {
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet?.id()}`)
 									}
+									error={error}
 									isRepeatDisabled={isSubmitting}
 									onRepeat={handleSubmit(submitForm)}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 

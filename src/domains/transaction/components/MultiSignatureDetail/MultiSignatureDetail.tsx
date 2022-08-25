@@ -29,7 +29,7 @@ export const MultiSignatureDetail = ({
 	transaction,
 	onClose,
 }: MultiSignatureDetailProperties) => {
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 	const [activeTransaction, setActiveTransaction] = useState<DTO.ExtendedSignedTransactionData>(transaction);
 
 	const { persist } = useEnvironmentContext();
@@ -76,7 +76,7 @@ export const MultiSignatureDetail = ({
 			await updatePendingWallets();
 			setActiveStep(MultiSignatureDetailStep.SentStep);
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error);
 			setActiveStep(MultiSignatureDetailStep.ErrorStep);
 		}
 	}, [wallet, transaction, persist, broadcast]);
@@ -123,7 +123,7 @@ export const MultiSignatureDetail = ({
 				setActiveStep(MultiSignatureDetailStep.SentStep);
 				await persist();
 			} catch (error) {
-				setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+				setError(error);
 				setActiveStep(MultiSignatureDetailStep.ErrorStep);
 			}
 		},
@@ -174,7 +174,7 @@ export const MultiSignatureDetail = ({
 							onBack={onClose}
 							isRepeatDisabled={isSubmitting}
 							onRepeat={broadcastMultiSignature}
-							errorMessage={errorMessage}
+							error={error}
 						/>
 					</TabPanel>
 

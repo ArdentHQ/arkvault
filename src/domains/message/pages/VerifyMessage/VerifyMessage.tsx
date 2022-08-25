@@ -42,7 +42,7 @@ export const VerifyMessage: React.VFC = () => {
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
 
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 	const [verificationResult, setVerificationResult] = useState<VerificationResult | undefined>();
 	const [activeTab, setActiveTab] = useState(Step.FormStep);
 
@@ -61,7 +61,7 @@ export const VerifyMessage: React.VFC = () => {
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error);
 
 			setVerificationResult(undefined);
 			setActiveTab(Step.ErrorStep);
@@ -89,8 +89,8 @@ export const VerifyMessage: React.VFC = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_VERIFY_MESSAGE.ERROR_STEP.DESCRIPTION")}
+									error={error}
 									onBack={handleBack}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 

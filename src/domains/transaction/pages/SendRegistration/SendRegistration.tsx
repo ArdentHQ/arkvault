@@ -35,7 +35,7 @@ export const SendRegistration = () => {
 	const [activeTab, setActiveTab] = useState(1);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const { registrationType } = useParams<{ registrationType: string }>();
 
@@ -191,7 +191,7 @@ export const SendRegistration = () => {
 				handleNext();
 			}
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error)
 			setActiveTab(10);
 		}
 	};
@@ -252,9 +252,9 @@ export const SendRegistration = () => {
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
+									error={error}
 									isRepeatDisabled={isSubmitting}
 									onRepeat={form.handleSubmit(handleSubmit)}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 

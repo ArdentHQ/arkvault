@@ -37,7 +37,7 @@ export const SendIpfs = () => {
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const { env, persist } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -130,7 +130,7 @@ export const SendIpfs = () => {
 			setTransaction(transaction);
 			setActiveTab(Step.SummaryStep);
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error);)
 			setActiveTab(Step.ErrorStep);
 		}
 	};
@@ -214,9 +214,9 @@ export const SendIpfs = () => {
 									onBack={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
+									error={error}
 									isRepeatDisabled={isSubmitting}
 									onRepeat={form.handleSubmit(submitForm)}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 

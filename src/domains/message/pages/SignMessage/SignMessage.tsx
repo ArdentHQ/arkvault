@@ -43,7 +43,7 @@ export const SignMessage: React.VFC = () => {
 	};
 
 	const [signedMessage, setSignedMessage] = useState<Services.SignedMessage>(initialState);
-	const [errorMessage, setErrorMessage] = useState<string | undefined>();
+	const [error, setError] = useState<Error | undefined>();
 
 	const form = useForm({ mode: "onChange" });
 
@@ -103,7 +103,7 @@ export const SignMessage: React.VFC = () => {
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
-			setErrorMessage(JSON.stringify({ message: error.message, type: error.name }));
+			setError(error);
 			setActiveTab(Step.ErrorStep);
 		}
 	};
@@ -157,8 +157,8 @@ export const SignMessage: React.VFC = () => {
 								<ErrorStep
 									title={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE")}
 									description={t("MESSAGE.PAGE_SIGN_MESSAGE.ERROR_STEP.DESCRIPTION")}
+									error={error}
 									onBack={handleBack}
-									errorMessage={errorMessage}
 								/>
 							</TabPanel>
 
