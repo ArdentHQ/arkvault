@@ -148,14 +148,10 @@ export const useSearchParametersValidation = () => {
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
-		const coin = parameters.get("coin")?.toUpperCase();
+		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
 		const method = parameters.get("method")?.toLowerCase();
 		const networkId = parameters.get("network")?.toLowerCase();
 		const nethash = parameters.get("nethash");
-
-		if (!coin) {
-			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISSING"));
-		}
 
 		if (!networkId && !nethash) {
 			throw new Error(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
