@@ -41,17 +41,12 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
-	it("should throw for missing coin", async () => {
+	it("should use default if coin is missing", async () => {
 		const parameters = new URLSearchParams("method=transfer&network=ark.devnet");
-
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.COIN_MISSING"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
 	it("should throw for invalid coin", async () => {
