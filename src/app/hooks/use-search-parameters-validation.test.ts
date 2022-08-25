@@ -44,9 +44,6 @@ describe("useSearchParametersValidation", () => {
 	it("should use default if coin is missing", async () => {
 		const parameters = new URLSearchParams("method=transfer&network=ark.devnet");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
