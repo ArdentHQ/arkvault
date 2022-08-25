@@ -16,6 +16,7 @@ export const initializeArkNetworks = ({ data }) => {
 	};
 
 	console.log({ ...process.env });
+	console.log({ ...import.meta.env });
 	if (
 		isE2E() ||
 		process.env.NODE_ENV === "development" ||
