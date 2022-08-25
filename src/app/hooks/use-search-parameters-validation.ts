@@ -211,9 +211,7 @@ export const useSearchParametersValidation = () => {
 			});
 
 			if (!network) {
-				throw new Error(
-					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: truncated }),
-				);
+				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: truncated }));
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
