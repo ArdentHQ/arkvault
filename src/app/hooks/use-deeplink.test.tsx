@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { waitFor } from "@testing-library/react";
@@ -260,10 +261,15 @@ describe("useDeeplink hook", () => {
 
 		history.push(`/profiles/${getDefaultProfileId()}/dashboard`);
 
+		const truncated = truncate(nethash, {
+			length: 20,
+			omissionPosition: "middle",
+		});
+
 		await waitFor(() =>
 			expect(toastErrorSpy).toHaveBeenCalledWith(
 				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", nethash),
+					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
 				),
 				{ delay: 5000 },
 			),

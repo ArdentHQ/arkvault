@@ -210,7 +210,14 @@ export const useSearchParametersValidation = () => {
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
 			if (!network) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash }));
+				throw new Error(
+					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", {
+						nethash: truncate(nethash, {
+							length: 20,
+							omissionPosition: "middle",
+						}),
+					}),
+				);
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
