@@ -25,6 +25,7 @@ import {
 	screen,
 	syncDelegates,
 	waitFor,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -409,6 +410,50 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		process.env.MOCK_SYNCHRONIZER = undefined;
+	});
+
+	it("should sync profile notifications for available wallets", async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		const profileNotificationsSyncSpy = jest.spyOn(profile.notifications().transactions(), "sync");
+
+		const Component = () => {
+			const { syncProfileWallets } = useProfileJobs(profile);
+
+			return <button data-testid="SyncProfile" onClick={() => syncProfileWallets()} />;
+		};
+
+		history.push(dashboardURL);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Component />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await expect(screen.findByTestId("SyncProfile")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("SyncProfile"));
+
+		await waitFor(() =>
+			expect(profileNotificationsSyncSpy).toHaveBeenCalledWith({
+				identifiers: [
+					{ networkId: "ark.devnet", type: "address", value: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+					{ networkId: "ark.devnet", type: "address", value: "D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb" },
+				],
+			}),
+		);
+
+		resetProfileNetworksMock();
+
+		profileNotificationsSyncSpy.mockRestore();
 	});
 
 	it("should sync profile and handle resync with errored networks", async () => {
