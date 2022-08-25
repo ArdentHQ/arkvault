@@ -83,6 +83,19 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					onClick={() => setSearchWalletIsOpen(true)}
 					disabled={disabled}
 				>
+					<span
+						className={cn(
+							"absolute inset-0 flex w-full items-center border border-transparent pl-14",
+							addUserIcon ? "pr-13" : "pr-4",
+							{
+								"pr-13": !addUserIcon && isInvalidField,
+								"pr-24": addUserIcon && isInvalidField,
+							},
+						)}
+					>
+						<Address address={selectedWallet?.address} walletName={alias} />
+					</span>
+
 					<Input
 						data-testid="SelectAddress__input"
 						ref={reference}
@@ -112,14 +125,6 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 								  }
 						}
 					/>
-
-					<span
-						className={cn("-mt-10 flex w-full items-center border border-transparent px-14", {
-							"pr-24": isInvalidField,
-						})}
-					>
-						<Address address={selectedWallet?.address} walletName={alias} />
-					</span>
 				</button>
 
 				<SearchWallet
