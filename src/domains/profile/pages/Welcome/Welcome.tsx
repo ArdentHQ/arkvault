@@ -71,15 +71,11 @@ export const Welcome = () => {
 
 	const navigateToProfile = useCallback(
 		async (profile: Contracts.IProfile, subPath = "dashboard") => {
-			console.log({ isDeeplink: isDeeplink() });
 			if (isDeeplink() && !deeplinkFailed) {
 				toasts.dismiss();
 				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
 				await restoreProfile(profile);
-				console.log(
-					"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus id sint eos soluta hic distinctio fugit quia deserunt ducimus, dolor molestiae, quidem nesciunt corporis porro nisi facere tenetur labore ea.",
-				);
 				const error = await validateDeeplink(profile);
 
 				if (error) {

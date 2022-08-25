@@ -20,6 +20,7 @@ import {
 	render,
 	screen,
 	waitFor,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -363,15 +364,25 @@ describe("Welcome", () => {
 		const history = createHashHistory();
 
 		let toastUpdateSpy: jest.SpyInstance;
+		let resetProfileNetworksMock: () => void;
+		let profile: Contracts.IProfile;
 
 		const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
 
+		beforeAll(() => {
+			profile = env.profiles().findById(fixtureProfileId);
+		});
+
 		beforeEach(() => {
 			toastUpdateSpy = jest.spyOn(toasts, "update").mockImplementation();
+
+			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		});
 
 		afterEach(() => {
 			toastUpdateSpy.mockRestore();
+
+			resetProfileNetworksMock();
 		});
 
 		it("should show a warning if the coin is not supported", async () => {
@@ -388,8 +399,6 @@ describe("Welcome", () => {
 
 			expect(container).toBeInTheDocument();
 
-			const profile = env.profiles().findById(fixtureProfileId);
-
 			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 			await waitFor(() =>
@@ -398,6 +407,33 @@ describe("Welcome", () => {
 					"error",
 					buildToastMessage(
 						transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE"),
+					),
+				),
+			);
+		});
+
+		it("should show a warning if the method is not supported", async () => {
+			const { container } = render(
+				<Route path="/">
+					<Welcome />
+				</Route>,
+				{
+					history,
+					route: "/?method=nuke&coin=ark&network=ark.mainnet",
+					withProviders: true,
+				},
+			);
+
+			expect(container).toBeInTheDocument();
+
+			userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+			await waitFor(() =>
+				expect(toastUpdateSpy).toHaveBeenCalledWith(
+					expect.any(String),
+					"error",
+					buildToastMessage(
+						transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
 					),
 				),
 			);
