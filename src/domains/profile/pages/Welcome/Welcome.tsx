@@ -73,14 +73,13 @@ export const Welcome = () => {
 		async (profile: Contracts.IProfile, subPath = "dashboard") => {
 			if (isDeeplink() && !deeplinkFailed) {
 				toasts.dismiss();
-				toasts.warning(t("COMMON.VALIDATING_URI"));
+				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
 				await restoreProfile(profile);
 				const error = await validateDeeplink(profile);
 
 				if (error) {
-					await toasts.dismiss();
-					toasts.error(error);
+					toasts.update(validatingToastId, "error", error);
 					isProfileCardClickedOnce.current = false;
 					return;
 				}
