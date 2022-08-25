@@ -130,7 +130,7 @@ export const SendIpfs = () => {
 			setTransaction(transaction);
 			setActiveTab(Step.SummaryStep);
 		} catch (error) {
-			setError(error);)
+			setError(error);
 			setActiveTab(Step.ErrorStep);
 		}
 	};
