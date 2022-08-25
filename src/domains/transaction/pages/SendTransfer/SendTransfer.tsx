@@ -156,7 +156,7 @@ export const SendTransfer: React.VFC = () => {
 				setTransaction(transaction);
 				setActiveTab(SendTransferStep.SummaryStep);
 			} catch (error) {
-				setError(error)
+				setError(error);
 				setActiveTab(SendTransferStep.ErrorStep);
 			}
 		},

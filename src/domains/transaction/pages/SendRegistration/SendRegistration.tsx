@@ -191,7 +191,7 @@ export const SendRegistration = () => {
 				handleNext();
 			}
 		} catch (error) {
-			setError(error)
+			setError(error);
 			setActiveTab(10);
 		}
 	};

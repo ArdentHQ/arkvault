@@ -19,14 +19,7 @@ interface Properties {
 	onRepeat?: () => void;
 }
 
-export const ErrorStep = ({
-	title,
-	description,
-	error,
-	isRepeatDisabled = false,
-	onBack,
-	onRepeat,
-}: Properties) => {
+export const ErrorStep = ({ title, description, error, isRepeatDisabled = false, onBack, onRepeat }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
 

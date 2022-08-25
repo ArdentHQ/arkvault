@@ -426,7 +426,7 @@ export const SendVote = () => {
 				await confirmSendVote(activeWallet, isUnvote ? "unvote" : "vote");
 			}
 		} catch (error) {
-			setError(error)
+			setError(error);
 			setActiveTab(Step.ErrorStep);
 		}
 	};

@@ -75,7 +75,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 			setTransaction(transaction);
 			setStep(Step.SummaryStep);
 		} catch (error) {
-			setError(error)
+			setError(error);
 			setStep(Step.ErrorStep);
 		}
 	};
