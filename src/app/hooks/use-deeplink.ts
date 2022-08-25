@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { useState } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
@@ -11,6 +12,7 @@ export const useDeeplink = () => {
 	const history = useHistory();
 	const queryParameters = useQueryParameters();
 	const { methods, validateSearchParameters } = useSearchParametersValidation();
+	const [deeplinkFailed, setDeeplinkFailed] = useState(false);
 
 	const isDeeplink = () => queryParameters.has("method");
 
@@ -23,11 +25,16 @@ export const useDeeplink = () => {
 		try {
 			await validateSearchParameters(profile, env, queryParameters);
 		} catch (error) {
+			setDeeplinkFailed(true);
+
+			history.push("/");
+
 			return `Invalid URI: ${error.message}`;
 		}
 	};
 
 	return {
+		deeplinkFailed,
 		handleDeepLink,
 		isDeeplink,
 		validateDeeplink,
