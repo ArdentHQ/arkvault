@@ -15,7 +15,12 @@ export const initializeArkNetworks = ({ data }) => {
 		mainnet: ARK.manifest.networks["ark.mainnet"],
 	};
 
-	if (isE2E() || process.env.NODE_ENV === "development" || process.env.ENABLE_DEV_NETWORKS) {
+	console.log({ ...process.env });
+	if (
+		isE2E() ||
+		process.env.NODE_ENV === "development" ||
+		["development", "preview"].includes(String(process.env.VITE_VERCEL_ENV))
+	) {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
 };
