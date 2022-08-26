@@ -129,9 +129,6 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
-const WrapperQR = ({ children }) => <span>Invalid QR: {children}</span>;
-const WrapperURI = ({ children }) => <span>Invalid URI: {children}</span>;
-
 export const useSearchParametersValidation = () => {
 	const methods = {
 		transfer: {
@@ -266,7 +263,9 @@ export const useSearchParametersValidation = () => {
 		{ type, value }: { type: SearchParametersError; value?: string },
 		qr?: boolean,
 	) => {
-		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
+		const ErrorWrapper = qr
+			? ({ children }) => <span>Invalid QR: {children}</span>
+			: ({ children }) => <span>Invalid URI: {children}</span>;
 
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
