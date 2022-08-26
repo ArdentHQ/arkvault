@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/react";
-import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { HashRouter, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useErrorHandler } from "react-error-boundary";
@@ -8,7 +8,7 @@ import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useAccentColor, useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme, useDeeplink } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -88,6 +88,14 @@ const Main: React.VFC = () => {
 
 	const { t } = useTranslation();
 
+	const { isDeeplink } = useDeeplink();
+
+	useEffect(() => {
+		if (isDeeplink()) {
+			toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
+		}
+	}, []);
+
 	useProfileSynchronizer({
 		onProfileRestoreError: () =>
 			history.push({
@@ -127,8 +135,6 @@ const Main: React.VFC = () => {
 			history.replace("/");
 		},
 	});
-
-	useDeeplink();
 
 	const handleError = useErrorHandler();
 

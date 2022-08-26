@@ -3,13 +3,15 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
-
+import { Route } from "react-router-dom";
+import { truncate } from "@ardenthq/sdk-helpers";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { httpClient } from "@/app/services";
+import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	act,
 	env,
@@ -19,6 +21,7 @@ import {
 	render,
 	screen,
 	waitFor,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
@@ -36,6 +39,330 @@ const submitPassword = async () => {
 
 	userEvent.click(screen.getByTestId(submitTestID));
 };
+
+const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
+
+describe("Welcome with deeplink", () => {
+	const history = createHashHistory();
+	const mainnetDeepLink =
+		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
+
+	let toastUpdateSpy: jest.SpyInstance;
+
+	let resetProfileNetworksMock: () => void;
+	let profile: Contracts.IProfile;
+
+	beforeAll(() => {
+		profile = env.profiles().findById(fixtureProfileId);
+	});
+
+	beforeEach(() => {
+		toastUpdateSpy = jest.spyOn(toasts, "update").mockImplementation();
+
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+	});
+
+	afterEach(() => {
+		toastUpdateSpy.mockRestore();
+
+		resetProfileNetworksMock();
+	});
+
+	it("should show a warning if the coin is not supported", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=doge&network=ark.mainnet",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
+			),
+		);
+	});
+
+	it("should ignore multiple clicks", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenNthCalledWith(
+				1,
+				expect.any(String),
+				"error",
+				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+			),
+		);
+	});
+
+	it("should show a warning if the method is not supported", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=nuke&coin=ark&network=ark.mainnet",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(
+					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
+				),
+			),
+		);
+	});
+
+	it("should show a warning if the network and nethash are both missing", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+			),
+		);
+	});
+
+	it("should show a warning if the network parameter is invalid", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark&network=custom",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
+			),
+		);
+	});
+
+	it("should show a warning if there are no available senders for network", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(
+					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
+				),
+			),
+		);
+	});
+
+	it("should show a warning if there is no network for the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8987";
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		const truncated = truncate(nethash, {
+			length: 20,
+			omissionPosition: "middle",
+		});
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(
+					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
+				),
+			),
+		);
+	});
+
+	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
+		const nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		const truncated = truncate(nethash, {
+			length: 20,
+			omissionPosition: "middle",
+		});
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenCalledWith(
+				expect.any(String),
+				"error",
+				buildToastMessage(
+					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
+				),
+			),
+		);
+	});
+
+	it("should navigate to transfer page with network parameter", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark&network=ark.devnet",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+	});
+
+	it("should navigate to transfer page with nethash parameter", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+	});
+
+	it("should navigate to vote page", async () => {
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+		mockDelegateName.mockRestore();
+	});
+});
 
 describe("Welcome", () => {
 	it("should render with profiles", () => {

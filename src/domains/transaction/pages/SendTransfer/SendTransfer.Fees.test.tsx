@@ -152,7 +152,7 @@ describe("SendTransfer Fee Handling", () => {
 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 	});
 
-	it("should sync profile wallets if new sender wallet is not restored or synced", async () => {
+	it("should sync wallet if new sender wallet is not restored or synced", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 
 		history.push(transferURL);
@@ -161,7 +161,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		const selectedWalletSpy = jest.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		const profileSyncSpy = jest.spyOn(profile, "sync");
+		const walletSyncSpy = jest.spyOn(selectedWallet.synchroniser(), "identity");
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
@@ -210,11 +210,11 @@ describe("SendTransfer Fee Handling", () => {
 
 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
-		expect(profileSyncSpy).toHaveBeenCalledWith();
+		expect(walletSyncSpy).toHaveBeenCalledWith();
 
 		selectedWalletSpy.mockRestore();
 
-		profileSyncSpy.mockRestore();
+		walletSyncSpy.mockRestore();
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
