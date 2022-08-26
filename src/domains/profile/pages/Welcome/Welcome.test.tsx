@@ -444,7 +444,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should clear the profile validation timeout", async () => {
-		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout").mockImplementation();
+		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout");
 
 		const { unmount } = render(
 			<Route path="/">
