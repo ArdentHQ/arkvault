@@ -238,10 +238,15 @@ export const useSearchParametersValidation = () => {
 					}
 				}
 
-				return { error: { type: SearchParametersError.NethashNotEnabled, value: truncate(nethash, {
-					length: 20,
-					omissionPosition: "middle",
-				}) } };
+				return {
+					error: {
+						type: SearchParametersError.NethashNotEnabled,
+						value: truncate(nethash, {
+							length: 20,
+							omissionPosition: "middle",
+						}),
+					},
+				};
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
