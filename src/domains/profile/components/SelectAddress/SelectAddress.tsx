@@ -85,11 +85,11 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				>
 					<span
 						className={cn(
-							"absolute inset-0 flex w-full items-center border border-transparent pl-14",
-							addUserIcon ? "pr-13" : "pr-4",
+							"absolute inset-y-0 left-14 flex items-center border border-transparent",
+							addUserIcon ? "right-13" : "right-4",
 							{
-								"pr-13": !addUserIcon && isInvalidField,
-								"pr-24": addUserIcon && isInvalidField,
+								"right-13": !addUserIcon && isInvalidField,
+								"right-24": addUserIcon && isInvalidField,
 							},
 						)}
 					>
