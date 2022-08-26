@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
-import { translations as commonTranslations, translations } from "@/app/i18n/common/i18n";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { ProfilePaths } from "@/router/paths";
@@ -382,7 +382,7 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() =>
 			expect(toastWarningSpy).toHaveBeenCalledWith(
-				translations.USING_PROFILE.replace("{{profileName}}", profile.name()),
+				commonTranslations.USING_PROFILE.replace("{{profileName}}", profile.name()),
 				{ delay: 500 },
 			),
 		);
@@ -409,7 +409,7 @@ describe("Welcome with deeplink", () => {
 		);
 
 		await waitFor(() =>
-			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
 
 		toastWarningSpy.mockRestore();
@@ -433,7 +433,7 @@ describe("Welcome with deeplink", () => {
 		);
 
 		await waitFor(() => {
-			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
 		});
 
 		history.push(path);
