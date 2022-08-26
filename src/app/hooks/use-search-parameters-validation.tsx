@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
@@ -124,7 +124,7 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
-const getError = (message: string) => `Invalid URI: ${message}`;
+const ErrorWrapper = ({ children }) => <span>Invalid URI: {children}</span>;
 
 export const useSearchParametersValidation = () => {
 	const { t } = useTranslation();
@@ -250,67 +250,67 @@ export const useSearchParametersValidation = () => {
 
 	const buildSearchParametersError = ({ type, value }: { type: SearchParametersError; value?: string }) => {
 		if (type === SearchParametersError.AmbiguousDelegate) {
-			return getError(t("TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
 		}
 
 		if (type === SearchParametersError.CoinMismatch) {
-			return getError(t("TRANSACTION.VALIDATION.COIN_MISMATCH"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.COIN_MISMATCH" />;
 		}
 
 		if (type === SearchParametersError.CoinNotSupported) {
-			return getError(t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED" values={{ coin: value }} />;
 		}
 
 		if (type === SearchParametersError.DelegateNotFound) {
-			return getError(t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND" values={{ delegate: value }} />;
 		}
 
 		if (type === SearchParametersError.DelegateResigned) {
-			return getError(t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", { delegate: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_RESIGNED" values={{ delegate: value }} />;
 		}
 
 		if (type === SearchParametersError.MethodNotSupported) {
-			return getError(t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED" values={{ method: value }} />;
 		}
 
 		if (type === SearchParametersError.MissingDelegate) {
-			return getError(t("TRANSACTION.VALIDATION.DELEGATE_MISSING"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_MISSING" />;
 		}
 
 		if (type === SearchParametersError.MissingMethod) {
-			return getError(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_MISSING" />;
 		}
 
 		if (type === SearchParametersError.MissingNetworkOrNethash) {
-			return getError(t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING" />;
 		}
 
 		if (type === SearchParametersError.NethashNotEnabled) {
-			return getError(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED" values={{ nethash: value }} />;
 		}
 
 		if (type === SearchParametersError.NethashNoWallets) {
-			return getError(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETHASH_NO_WALLETS" values={{ nethash: value }} />;
 		}
 
 		if (type === SearchParametersError.NetworkInvalid) {
-			return getError(t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_INVALID" values={{ network: value }} />;
 		}
 
 		if (type === SearchParametersError.NetworkMismatch) {
-			return getError(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_MISMATCH" />;
 		}
 
 		if (type === SearchParametersError.NetworkNotEnabled) {
-			return getError(t("TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED", { network: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED" values={{ network: value }} />;
 		}
 
 		if (type === SearchParametersError.NetworkNoWallets) {
-			return getError(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: value }));
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.NETWORK_NO_WALLETS." values={{ network: value }} />;
 		}
 
 		/* istanbul ignore next */
-		return getError("Unknown Error");
+		return ("Invalid URI: Unknown Error");
 	};
 
 	return { buildSearchParametersError, methods, validateSearchParameters };
