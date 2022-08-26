@@ -231,14 +231,14 @@ export const SendTransfer: React.VFC = () => {
 			return;
 		}
 
-		const { error } = await validateSearchParameters(activeProfile, env, qrData, {
+		const result = await validateSearchParameters(activeProfile, env, qrData, {
 			coin: network?.coin(),
 			nethash: network?.meta().nethash,
 			network: network?.id(),
 		});
 
-		if (error) {
-			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: buildSearchParametersError(error) }));
+		if (result?.error) {
+			toasts.error(buildSearchParametersError(result.error, true));
 			return;
 		}
 
