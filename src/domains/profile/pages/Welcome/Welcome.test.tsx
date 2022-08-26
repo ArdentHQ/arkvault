@@ -44,13 +44,7 @@ const submitPassword = async () => {
 let toastUpdateSpy: jest.SpyInstance;
 
 const expectToast = async (text: string) => {
-	await waitFor(() =>
-		expect(toastUpdateSpy).toHaveBeenCalledWith(
-			expect.any(String),
-			"error",
-			text
-		),
-	);
+	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
 };
 
 describe("Welcome with deeplink", () => {
@@ -262,7 +256,7 @@ describe("Welcome with deeplink", () => {
 			omissionPosition: "middle",
 		});
 
-		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }),);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }));
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
