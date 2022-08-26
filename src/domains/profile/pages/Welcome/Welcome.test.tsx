@@ -362,7 +362,6 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 	});
-
 });
 
 describe("Welcome", () => {
