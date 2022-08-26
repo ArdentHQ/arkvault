@@ -46,6 +46,17 @@ enum SearchParametersError {
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 }
 
+const defaultNetworks = {
+	"ark.devnet": {
+		displayName: "ARK Devnet",
+		nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+	},
+	"ark.mainnet": {
+		displayName: "ARK",
+		nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+	},
+};
+
 const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
 	const delegateName = searchParameters.get("delegate");
 	const delegatePublicKey = searchParameters.get("publicKey");
@@ -189,7 +200,7 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
-			if (!["ark.devnet", "ark.mainnet"].includes(networkId)) {
+			if (!defaultNetworks[networkId]) {
 				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
 			}
 
@@ -220,13 +231,17 @@ export const useSearchParametersValidation = () => {
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
-			const truncated = truncate(nethash, {
-				length: 20,
-				omissionPosition: "middle",
-			});
-
 			if (!network) {
-				return { error: { type: SearchParametersError.NethashNotEnabled, value: truncated } };
+				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
+					if (defaultNethash === nethash) {
+						return { error: { type: SearchParametersError.NetworkNotEnabled, value: displayName } };
+					}
+				}
+
+				return { error: { type: SearchParametersError.NethashNotEnabled, value: truncate(nethash, {
+					length: 20,
+					omissionPosition: "middle",
+				}) } };
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
