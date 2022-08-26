@@ -156,7 +156,7 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 
 export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, searchParameters: URLSearchParams) => {
 	const nethash = searchParameters.get("nethash");
-	const networkId = searchParameters.get("networkId");
+	const networkId = searchParameters.get("network");
 
 	if (nethash) {
 		return profileAllEnabledNetworks(profile).find((network) => network.meta().nethash === nethash);
