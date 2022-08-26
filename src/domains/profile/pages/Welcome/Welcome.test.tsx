@@ -310,16 +310,11 @@ describe("Welcome with deeplink", () => {
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		const truncated = truncate(nethash, {
-			length: 20,
-			omissionPosition: "middle",
-		});
-
 		await waitFor(() =>
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				result.current.buildSearchParametersError({ type: "NETHASH_NO_WALLETS", value: truncated }),
+				result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK Devnet" }),
 			),
 		);
 	});

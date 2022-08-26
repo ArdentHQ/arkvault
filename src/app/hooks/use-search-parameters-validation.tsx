@@ -44,7 +44,6 @@ enum SearchParametersError {
 	MissingMethod = "MISSING_METHOD",
 	MissingNetworkOrNethash = "MISSING_NETWORK_OR_NETHASH",
 	NethashNotEnabled = "NETHASH_NOT_ENABLED",
-	NethashNoWallets = "NETHASH_NO_WALLETS",
 	NetworkInvalid = "NETWORK_INVALID",
 	NetworkMismatch = "NETWORK_MISMATCH",
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
@@ -221,7 +220,7 @@ export const useSearchParametersValidation = () => {
 
 			/* istanbul ignore if */
 			if (network && !network.meta().enabled) {
-				return { error: { type: SearchParametersError.NethashNotEnabled, value: network.displayName() } };
+				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
 			}
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
@@ -238,7 +237,7 @@ export const useSearchParametersValidation = () => {
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NethashNoWallets, value: truncated } };
+				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
 			}
 		}
 
@@ -318,16 +317,6 @@ export const useSearchParametersValidation = () => {
 				<Trans
 					parent={ErrorWrapper}
 					i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED"
-					values={{ nethash: value }}
-				/>
-			);
-		}
-
-		if (type === SearchParametersError.NethashNoWallets) {
-			return (
-				<Trans
-					parent={ErrorWrapper}
-					i18nKey="TRANSACTION.VALIDATION.NETHASH_NO_WALLETS"
 					values={{ nethash: value }}
 				/>
 			);
