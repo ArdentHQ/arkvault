@@ -247,7 +247,10 @@ export const useSearchParametersValidation = () => {
 	};
 
 	/* istanbul ignore next */
-	const buildSearchParametersError = ({ type, value }: { type: SearchParametersError; value?: string }, qr?: boolean) => {
+	const buildSearchParametersError = (
+		{ type, value }: { type: SearchParametersError; value?: string },
+		qr?: boolean,
+	) => {
 		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
 
 		if (type === SearchParametersError.AmbiguousDelegate) {
