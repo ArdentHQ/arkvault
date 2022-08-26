@@ -83,7 +83,7 @@ export const FormStep = ({
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
 				<InputCounter
-					value={message}
+					defaultValue={message}
 					onChange={(event: ChangeEvent<HTMLInputElement>) =>
 						setValue("message", event.target.value, {
 							shouldDirty: true,
