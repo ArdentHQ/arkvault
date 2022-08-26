@@ -50,7 +50,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 	});
 
 	return (
-		<div className="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12">
+		<div className="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12">
 			<div className="flex -space-x-1">
 				<NetworkIcon
 					network={wallet.network()}
