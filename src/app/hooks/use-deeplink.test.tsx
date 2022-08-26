@@ -29,7 +29,7 @@ describe("useDeeplink hook", () => {
 			setDeeplinkValidationResult(result);
 		};
 
-		const handle = async () => {
+		const handle = () => {
 			handleDeepLink(profile);
 		};
 
@@ -54,7 +54,7 @@ describe("useDeeplink hook", () => {
 		);
 	};
 
-	it("should use the method parameter to detect deeplink", async () => {
+	it("should use the method parameter to detect deeplink", () => {
 		history.push("/?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK");
 
 		render(
@@ -90,7 +90,7 @@ describe("useDeeplink hook", () => {
 		expect(screen.getByTestId("DeeplinkFailed")).toHaveTextContent('Invalid URI: coin "DOGE" is not supported.');
 	});
 
-	it("should handle url", async () => {
+	it("should handle url", () => {
 		history.push(mainnetDeepLink);
 
 		const historySpy = jest.spyOn(history, "push");

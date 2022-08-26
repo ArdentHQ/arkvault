@@ -40,6 +40,8 @@ const submitPassword = async () => {
 	userEvent.click(screen.getByTestId(submitTestID));
 };
 
+const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
+
 describe("Welcome", () => {
 	it("should render with profiles", () => {
 		const { container, asFragment, history } = render(<Welcome />);
@@ -370,8 +372,6 @@ describe("Welcome", () => {
 
 		let resetProfileNetworksMock: () => void;
 		let profile: Contracts.IProfile;
-
-		const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
 
 		beforeAll(() => {
 			profile = env.profiles().findById(fixtureProfileId);

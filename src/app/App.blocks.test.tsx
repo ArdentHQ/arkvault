@@ -292,6 +292,8 @@ describe("App Main", () => {
 				expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
 			});
 
+			history.push(path);
+
 			await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
 
 			toastWarningSpy.mockRestore();
