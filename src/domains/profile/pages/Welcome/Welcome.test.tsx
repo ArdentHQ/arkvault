@@ -366,22 +366,32 @@ describe("Welcome with deeplink", () => {
 	it("should redirect to profile if only one available", async () => {
 		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
 
+		const profilesSpy = jest.spyOn(env.profiles(), "values").mockReturnValue([profile]);
+
 		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: mainnetDeepLink,
+				// Using transfer page as an example
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 				withProviders: true,
 			},
 		);
 
 		await waitFor(() =>
-			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
+			expect(toastWarningSpy).toHaveBeenCalledWith(
+				translations.USING_PROFILE.replace("{{profileName}}", profile.name()),
+				{ delay: 500 },
+			),
 		);
 
+		// Automatically redirects to transfer page
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+
 		toastWarningSpy.mockRestore();
+		profilesSpy.mockRestore();
 	});
 
 	it("should prompt the user to select a profile", async () => {
