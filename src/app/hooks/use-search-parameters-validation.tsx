@@ -6,11 +6,7 @@ import { Trans } from "react-i18next";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
-import {
-	findNetworkFromSearchParameters,
-	profileAllEnabledNetworks,
-	profileDefaultNetworks,
-} from "@/utils/network-utils";
+import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
 
 interface RequiredParameters {
@@ -159,7 +155,6 @@ export const useSearchParametersValidation = () => {
 	) => {
 		assertProfile(profile);
 
-		const defaultNetworks = profileDefaultNetworks(profile);
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
@@ -194,20 +189,20 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
-			network = defaultNetworks.find((item) => item.id() === networkId);
-
-			if (!network) {
+			if (!["ark.devnet", "ark.mainnet"].includes(networkId)) {
 				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
 			}
 
-			if (!network.meta().enabled) {
+			network = profile.availableNetworks().find((item) => item.id() === networkId);
+
+			if (network && !network.meta().enabled) {
 				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
+				return { error: { type: SearchParametersError.NetworkNoWallets, value: network!.displayName() } };
 			}
 		}
 
@@ -216,7 +211,7 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
-			network = defaultNetworks.find((item) => item.meta().nethash === nethash);
+			network = profile.availableNetworks().find((item) => item.meta().nethash === nethash);
 
 			/* istanbul ignore if */
 			if (network && !network.meta().enabled) {
