@@ -1,11 +1,16 @@
 /* eslint-disable sonarjs/cognitive-complexity */
+import React from "react";
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
-import { findNetworkFromSearchParameters, profileAllEnabledNetworks, profileDefaultNetworks } from "@/utils/network-utils";
+import {
+	findNetworkFromSearchParameters,
+	profileAllEnabledNetworks,
+	profileDefaultNetworks,
+} from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
 
 interface RequiredParameters {
@@ -45,12 +50,6 @@ enum SearchParametersError {
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 }
-
-export const isAllowedNetwork = (network: string) => {
-	const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
-
-	return allowedNetworks.has(network);
-};
 
 const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
 	const delegateName = searchParameters.get("delegate");
@@ -127,8 +126,6 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 const ErrorWrapper = ({ children }) => <span>Invalid URI: {children}</span>;
 
 export const useSearchParametersValidation = () => {
-	const { t } = useTranslation();
-
 	const methods = {
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
@@ -258,19 +255,43 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (type === SearchParametersError.CoinNotSupported) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED" values={{ coin: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+					values={{ coin: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.DelegateNotFound) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND" values={{ delegate: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND"
+					values={{ delegate: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.DelegateResigned) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_RESIGNED" values={{ delegate: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.DELEGATE_RESIGNED"
+					values={{ delegate: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.MethodNotSupported) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED" values={{ method: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED"
+					values={{ method: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.MissingDelegate) {
@@ -286,15 +307,33 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (type === SearchParametersError.NethashNotEnabled) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED" values={{ nethash: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED"
+					values={{ nethash: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.NethashNoWallets) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETHASH_NO_WALLETS" values={{ nethash: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.NETHASH_NO_WALLETS"
+					values={{ nethash: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.NetworkInvalid) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_INVALID" values={{ network: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.NETWORK_INVALID"
+					values={{ network: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.NetworkMismatch) {
@@ -302,15 +341,23 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (type === SearchParametersError.NetworkNotEnabled) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED" values={{ network: value }} />;
+			return (
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.NETWORK_NOT_ENABLED"
+					values={{ network: value }}
+				/>
+			);
 		}
 
 		if (type === SearchParametersError.NetworkNoWallets) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.NETWORK_NO_WALLETS." values={{ network: value }} />;
+			return (
+				<Trans parent={ErrorWrapper} i18nKey="TRANSACTION.NETWORK_NO_WALLETS." values={{ network: value }} />
+			);
 		}
 
 		/* istanbul ignore next */
-		return ("Invalid URI: Unknown Error");
+		return "Invalid URI: Unknown Error";
 	};
 
 	return { buildSearchParametersError, methods, validateSearchParameters };
