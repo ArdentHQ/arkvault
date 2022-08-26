@@ -40,7 +40,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegateName) {
 		try {
-			return env.delegates().findByUsername(network?.coin(), network?.id(), delegateName);
+			return env.delegates().findByUsername(network.coin(), network.id(), delegateName);
 		} catch {
 			//
 		}
@@ -48,7 +48,7 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 
 	if (delegatePublicKey) {
 		try {
-			return env.delegates().findByPublicKey(network?.coin(), network?.id(), delegatePublicKey);
+			return env.delegates().findByPublicKey(network.coin(), network.id(), delegatePublicKey);
 		} catch {
 			//
 		}
@@ -113,7 +113,35 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
+	const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
+		const message = parameters.get("message");
+		const address = parameters.get("address");
+
+		if (!message) {
+			throw new Error(t("TRANSACTION.VALIDATION.MESSAGE_MISSING"));
+		}
+
+		if (address) {
+			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+			await coin.__construct();
+
+			const isValid = await coin.address().validate(address);
+
+			if (!isValid) {
+				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+			}
+		}
+	};
+
 	const methods = {
+		sign: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
@@ -161,7 +189,7 @@ export const useSearchParametersValidation = () => {
 			throw new Error(t("TRANSACTION.VALIDATION.METHOD_MISSING"));
 		}
 
-		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
+		if (requiredParameters?.coin && coin !== requiredParameters.coin) {
 			throw new Error(t("TRANSACTION.VALIDATION.COIN_MISMATCH"));
 		}
 
@@ -176,7 +204,7 @@ export const useSearchParametersValidation = () => {
 		let network: Networks.Network | undefined;
 
 		if (networkId) {
-			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
+			if (requiredParameters?.network && networkId !== requiredParameters.network) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
@@ -199,7 +227,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (nethash) {
-			if (requiredParameters?.nethash && nethash !== requiredParameters?.nethash) {
+			if (requiredParameters?.nethash && nethash !== requiredParameters.nethash) {
 				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
 			}
 
