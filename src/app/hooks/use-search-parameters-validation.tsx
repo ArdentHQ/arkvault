@@ -129,6 +129,11 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
+/* istanbul ignore next */
+const WrapperQR = ({ children }) => <span>Invalid QR: {children}</span>;
+/* istanbul ignore next */
+const WrapperURI = ({ children }) => <span>Invalid URI: {children}</span>;
+
 export const useSearchParametersValidation = () => {
 	const methods = {
 		transfer: {
@@ -261,11 +266,9 @@ export const useSearchParametersValidation = () => {
 	/* istanbul ignore next */
 	const buildSearchParametersError = (
 		{ type, value }: { type: SearchParametersError; value?: string },
-		qr?: boolean,
+		qr: boolean = false,
 	) => {
-		const ErrorWrapper = qr
-			? ({ children }) => <span>Invalid QR: {children}</span>
-			: ({ children }) => <span>Invalid URI: {children}</span>;
+		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
 
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;

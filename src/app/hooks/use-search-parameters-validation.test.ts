@@ -386,13 +386,29 @@ describe("useSearchParametersValidation", () => {
 		mockAvailableWallets.mockRestore();
 	});
 
-	it("should build error message", () => {
+	it("should build uri error message", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		expect(result.current.buildSearchParametersError({ type: "AMBIGUOUS_DELEGATE" })).toMatchInlineSnapshot(`
 		<Trans
 		  i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"
 		  parent={[Function]}
+		/>
+	`);
+	});
+
+	it("should build qr error message", () => {
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		expect(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", coin: "custom" }, true)).toMatchInlineSnapshot(`
+		<Trans
+		  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+		  parent={[Function]}
+		  values={
+		    Object {
+		      "coin": undefined,
+		    }
+		  }
 		/>
 	`);
 	});
