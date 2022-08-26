@@ -112,7 +112,7 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 };
 
 export const profileDefaultNetworks = (profile: Contracts.IProfile) =>
-	profile.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id()));
+	profile.availableNetworks().filter((network) => ["ark.devnet", "ark.mainnet"].includes(network.id()));
 
 export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 	profile.availableNetworks().filter((network) => {

@@ -200,7 +200,6 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
 			}
 
-			/* istanbul ignore next */
 			if (!network.meta().enabled) {
 				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
 			}

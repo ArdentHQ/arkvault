@@ -23,6 +23,8 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { renderHook } from "@testing-library/react-hooks";
+import { useSearchParametersValidation } from "../../../../app/hooks/use-search-parameters-validation";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
@@ -54,6 +56,23 @@ describe("Welcome with deeplink", () => {
 
 	beforeAll(() => {
 		profile = env.profiles().findById(fixtureProfileId);
+
+		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
+			const networks = profile.coins().availableNetworks();
+
+			for (const network of networks) {
+				const meta = network.meta();
+
+				if (network.id().startsWith("ark.")) {
+					network.meta = () => ({
+						...meta,
+						enabled: true,
+					});
+				}
+			}
+
+			return networks;
+		});
 	});
 
 	beforeEach(() => {
@@ -80,6 +99,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -88,7 +109,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
+				result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }),
 			),
 		);
 	});
@@ -104,6 +125,8 @@ describe("Welcome with deeplink", () => {
 				withProviders: true,
 			},
 		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
 
 		expect(container).toBeInTheDocument();
 
@@ -125,7 +148,7 @@ describe("Welcome with deeplink", () => {
 				1,
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH", value: "DOGE" }),
 			),
 		);
 	});
@@ -142,6 +165,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -150,9 +175,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
-				),
+				result.current.buildSearchParametersError({ type: "METHOD_NOT_SUPPORTED", value: "nuke" }),
 			),
 		);
 	});
@@ -169,6 +192,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -177,7 +202,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }),
 			),
 		);
 	});
@@ -194,6 +219,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -202,7 +229,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
+				result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }),
 			),
 		);
 	});
@@ -219,6 +246,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -227,9 +256,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
-				),
+				result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ark.mainnet" }),
 			),
 		);
 	});
@@ -247,6 +274,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -260,9 +289,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
-				),
+				result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }),
 			),
 		);
 	});
@@ -280,6 +307,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -293,9 +322,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
-				),
+				result.current.buildSearchParametersError({ type: "NETHASH_NO_WALLETS", value: truncated }),
 			),
 		);
 	});
