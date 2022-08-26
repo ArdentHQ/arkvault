@@ -307,14 +307,14 @@ describe("useSearchParametersValidation", () => {
 		resignedMock.mockRestore();
 	});
 
-	it("should generate send transfer path", async () => {
+	it("should generate send transfer path", () => {
 		const parameters = new URLSearchParams(
 			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(
+		expect(
 			result.current.methods.transfer.path({
 				profile,
 				searchParameters: parameters,
@@ -328,14 +328,14 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
-	it("should generate send vote path", async () => {
+	it("should generate send vote path", () => {
 		const parameters = new URLSearchParams(
 			"coin=ark&method=vote&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(
+		expect(
 			result.current.methods.vote.path({
 				profile,
 				searchParameters: parameters,
