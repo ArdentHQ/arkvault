@@ -2331,7 +2331,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3571,7 +3571,7 @@ exports[`SendTransfer should render form and use location state with network par
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4811,7 +4811,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5595,7 +5595,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6309,7 +6309,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6982,7 +6982,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7744,7 +7744,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8506,7 +8506,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9171,7 +9171,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
