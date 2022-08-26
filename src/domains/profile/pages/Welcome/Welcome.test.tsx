@@ -11,7 +11,6 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	act,
 	env,
@@ -41,8 +40,6 @@ const submitPassword = async () => {
 
 	userEvent.click(screen.getByTestId(submitTestID));
 };
-
-const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
 
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
