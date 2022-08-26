@@ -91,6 +91,33 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(submitID));
+		// wait for formState.isValid to be updated
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		expect(screen.getByTestId("Input__error")).toBeVisible();
+		expect(screen.getByTestId(submitID)).toBeDisabled();
+	});
+
+	it("should set an error if the password is invalid and count retries", async () => {
+		const onSuccess = jest.fn();
+
+		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
+
+		userEvent.paste(screen.getByTestId("SignIn__input--password"), "wrong password");
+
+		// wait for formState.isValid to be updated
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(submitID));
+		jest.advanceTimersByTime(20000);
+
+		userEvent.paste(screen.getByTestId("SignIn__input--password"), "wrong password");
+
+		// wait for formState.isValid to be updated
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId(submitID));
+		jest.advanceTimersByTime(60_000);
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();

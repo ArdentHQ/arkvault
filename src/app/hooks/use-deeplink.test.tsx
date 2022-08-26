@@ -19,22 +19,22 @@ describe("useDeeplink hook", () => {
 	});
 
 	const TestComponent: React.FC = () => {
-		const { deeplinkFailed, handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
+		const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
-		const [deeplinkValidationResult, setDeeplinkValidationResult] = useState<string | undefined>(undefined);
+		const [deeplinkValidationErrors, setDeepinkValidationErrors] = useState<string | undefined>(undefined);
 
 		const validate = async () => {
-			const result = await validateDeeplink(profile);
+			const errors = await validateDeeplink(profile);
 
-			setDeeplinkValidationResult(result);
+			setDeepinkValidationErrors(errors);
 		};
 
 		const handle = () => {
 			handleDeepLink(profile);
 		};
 
-		if (deeplinkValidationResult && deeplinkFailed) {
-			return <div data-testid="DeeplinkFailed">{deeplinkValidationResult}</div>;
+		if (deeplinkValidationErrors) {
+			return <div data-testid="DeeplinkFailed">{deeplinkValidationErrors}</div>;
 		}
 
 		if (!isDeeplink()) {

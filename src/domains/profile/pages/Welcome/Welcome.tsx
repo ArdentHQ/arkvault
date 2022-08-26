@@ -27,7 +27,7 @@ export const Welcome = () => {
 	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
-	const { handleDeepLink, isDeeplink, deeplinkFailed, validateDeeplink } = useDeeplink();
+	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -71,7 +71,7 @@ export const Welcome = () => {
 
 	const navigateToProfile = useCallback(
 		async (profile: Contracts.IProfile, subPath = "dashboard") => {
-			if (isDeeplink() && !deeplinkFailed) {
+			if (isDeeplink()) {
 				toasts.dismiss();
 				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
@@ -81,6 +81,8 @@ export const Welcome = () => {
 				if (error) {
 					toasts.update(validatingToastId, "error", error);
 					isProfileCardClickedOnce.current = false;
+
+					history.push("/");
 					return;
 				}
 
@@ -96,7 +98,7 @@ export const Welcome = () => {
 
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
-		[history, deeplinkFailed],
+		[history, isDeeplink],
 	);
 
 	const navigateToPreviousPage = useCallback(
