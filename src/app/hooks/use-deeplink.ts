@@ -11,7 +11,7 @@ export const useDeeplink = () => {
 
 	const history = useHistory();
 	const queryParameters = useQueryParameters();
-	const { methods, validateSearchParameters } = useSearchParametersValidation();
+	const { methods, buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
 	const isDeeplink = useCallback(() => queryParameters.has("method"), [queryParameters]);
 
@@ -21,10 +21,10 @@ export const useDeeplink = () => {
 	};
 
 	const validateDeeplink = async (profile: Contracts.IProfile) => {
-		try {
-			await validateSearchParameters(profile, env, queryParameters);
-		} catch (error) {
-			return `Invalid URI: ${error.message}`;
+		const { error } = await validateSearchParameters(profile, env, queryParameters);
+
+		if (error) {
+			return buildSearchParametersError(error);
 		}
 	};
 
