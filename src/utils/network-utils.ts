@@ -111,6 +111,9 @@ export const networkDisplayName = (network: Networks.Network | undefined | null)
 	return network.displayName();
 };
 
+export const profileDefaultNetworks = (profile: Contracts.IProfile) =>
+	profile.availableNetworks().filter((item) => ["ark.devnet", "ark.mainnet"].includes(item.id()));
+
 export const profileAllEnabledNetworks = (profile: Contracts.IProfile) =>
 	profile.availableNetworks().filter((network) => {
 		if (isCustomNetwork(network)) {
