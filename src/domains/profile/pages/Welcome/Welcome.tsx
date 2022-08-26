@@ -200,9 +200,7 @@ export const Welcome = () => {
 		}, 1);
 
 		return () => {
-			if (navigateTimeout) {
-				clearTimeout(navigateTimeout);
-			}
+			clearTimeout(navigateTimeout!);
 		};
 	}, []);
 
