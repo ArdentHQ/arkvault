@@ -19,8 +19,8 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { LedgerProvider } from "@/app/contexts";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
-import { useSearchParametersValidation } from "../../../../app/hooks/use-search-parameters-validation";
 
 jest.mock("react-qr-reader", () => ({
 	QrReader: jest.fn().mockImplementation(() => null),
