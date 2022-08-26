@@ -487,7 +487,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                         class="w-2/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -602,7 +602,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                         class="w-3/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -693,7 +693,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                           class="w-2/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -808,7 +808,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                           class="w-3/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -845,7 +845,7 @@ exports[`ExchangeView should fetch providers if not loaded yet 1`] = `
                         data-testid="ExchangeForm__recipient-address"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1479,7 +1479,7 @@ exports[`ExchangeView should render 1`] = `
                         class="w-2/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1594,7 +1594,7 @@ exports[`ExchangeView should render 1`] = `
                         class="w-3/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1685,7 +1685,7 @@ exports[`ExchangeView should render 1`] = `
                           class="w-2/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1800,7 +1800,7 @@ exports[`ExchangeView should render 1`] = `
                           class="w-3/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1837,7 +1837,7 @@ exports[`ExchangeView should render 1`] = `
                         data-testid="ExchangeForm__recipient-address"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2471,7 +2471,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                         class="w-2/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2586,7 +2586,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                         class="w-3/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2677,7 +2677,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                           class="w-2/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2792,7 +2792,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                           class="w-3/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2829,7 +2829,7 @@ exports[`ExchangeView should render dark theme 1`] = `
                         data-testid="ExchangeForm__recipient-address"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3463,7 +3463,7 @@ exports[`ExchangeView should render light theme 1`] = `
                         class="w-2/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3578,7 +3578,7 @@ exports[`ExchangeView should render light theme 1`] = `
                         class="w-3/5"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3669,7 +3669,7 @@ exports[`ExchangeView should render light theme 1`] = `
                           class="w-2/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3784,7 +3784,7 @@ exports[`ExchangeView should render light theme 1`] = `
                           class="w-3/5"
                         >
                           <fieldset
-                            class="flex flex-col css-1bcidjh"
+                            class="flex min-w-0 flex-col css-1bcidjh"
                           >
                             <label
                               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3821,7 +3821,7 @@ exports[`ExchangeView should render light theme 1`] = `
                         data-testid="ExchangeForm__recipient-address"
                       >
                         <fieldset
-                          class="flex flex-col css-1bcidjh"
+                          class="flex min-w-0 flex-col css-1bcidjh"
                         >
                           <label
                             class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
