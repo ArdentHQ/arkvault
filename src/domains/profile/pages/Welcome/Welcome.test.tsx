@@ -314,7 +314,7 @@ describe("Welcome with deeplink", () => {
 			expect(toastUpdateSpy).toHaveBeenCalledWith(
 				expect.any(String),
 				"error",
-				result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK Devnet" }),
+				result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }),
 			),
 		);
 	});
