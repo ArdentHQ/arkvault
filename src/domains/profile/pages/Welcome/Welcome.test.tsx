@@ -5,6 +5,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
+import { renderHook } from "@testing-library/react-hooks";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
@@ -23,7 +24,6 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { renderHook } from "@testing-library/react-hooks";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;

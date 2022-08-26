@@ -87,7 +87,7 @@ describe("useDeeplink hook", () => {
 
 		await expect(screen.findByTestId("DeeplinkFailed")).resolves.toBeVisible();
 
-		expect(screen.getByTestId("DeeplinkFailed")).toHaveTextContent('Invalid URI: coin DOGE is not supported.');
+		expect(screen.getByTestId("DeeplinkFailed")).toHaveTextContent("Invalid URI: coin DOGE is not supported.");
 	});
 
 	it("should handle url", () => {
