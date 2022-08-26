@@ -673,7 +673,7 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-13"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
