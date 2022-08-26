@@ -7,7 +7,7 @@ import tw, { styled } from "twin.macro";
 
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { useBreakpoint, useProfileJobs } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
@@ -39,8 +39,6 @@ export const FormStep = ({
 	const { t } = useTranslation();
 
 	const { isXs } = useBreakpoint();
-
-	const { syncProfileWallets } = useProfileJobs(profile);
 
 	const [wallets, setWallets] = useState<Contracts.IReadWriteWallet[]>([]);
 
@@ -119,7 +117,7 @@ export const FormStep = ({
 			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
-			syncProfileWallets(true);
+			newSenderWallet?.synchroniser().identity();
 		}
 	};
 
