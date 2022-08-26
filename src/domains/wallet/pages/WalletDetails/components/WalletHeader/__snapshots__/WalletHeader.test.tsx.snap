@@ -7,7 +7,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -114,7 +114,7 @@ exports[`WalletHeader should handle locked balance 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -275,7 +275,7 @@ exports[`WalletHeader should handle locked balance when is ledger 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -397,7 +397,7 @@ exports[`WalletHeader should handle locked balance when is ledger 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -558,7 +558,7 @@ exports[`WalletHeader should render 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -665,7 +665,7 @@ exports[`WalletHeader should render 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -778,7 +778,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -885,7 +885,7 @@ exports[`WalletHeader should render amount for wallet in live network 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -1004,7 +1004,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -1111,7 +1111,7 @@ exports[`WalletHeader should show currency delta (-5%) 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -1242,7 +1242,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -1349,7 +1349,7 @@ exports[`WalletHeader should show currency delta (5%) 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -1480,7 +1480,7 @@ exports[`WalletHeader should show modifiers 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -1616,7 +1616,7 @@ exports[`WalletHeader should show modifiers 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
@@ -1729,7 +1729,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
     data-testid="WalletHeader"
   >
     <div
-      class="flex h-13 w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
     >
       <div
         class="flex -space-x-1"
@@ -1820,7 +1820,7 @@ exports[`WalletHeader should use empty string in clipboard copy if publickey is 
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="flex h-13 w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
     >
       <div
         class="mr-auto flex flex-col"
