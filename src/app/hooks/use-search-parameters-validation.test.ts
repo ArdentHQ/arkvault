@@ -346,4 +346,82 @@ describe("useSearchParametersValidation", () => {
 		mockFindDelegateByPublicKey.mockRestore();
 		resignedMock.mockRestore();
 	});
+
+	it("should generate send transfer path", () => {
+		const parameters = new URLSearchParams(
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		expect(
+			result.current.methods.transfer.path({
+				env,
+				network: profile.wallets().first().network(),
+				profile,
+				searchParameters: parameters,
+			}),
+		).toBe(
+			`/profiles/${profile.id()}/send-transfer?coin=ark&method=transfer&nethash=${
+				profile.wallets().first().network().meta().nethash
+			}`,
+		);
+	});
+
+	it("should generate send vote path", () => {
+		const parameters = new URLSearchParams(
+			"coin=ark&method=vote&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		expect(
+			result.current.methods.vote.path({
+				env,
+				network: profile.wallets().first().network(),
+				profile,
+				searchParameters: parameters,
+			}),
+		).toBe(
+			`/profiles/${profile.id()}/send-vote?coin=ark&method=vote&nethash=${
+				profile.wallets().first().network().meta().nethash
+			}&delegate=test&vote=undefined`,
+		);
+	});
+
+	it("should throw if no available wallets found in network (with network)", async () => {
+		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
+
+		const parameters = new URLSearchParams(
+			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: "ark.devnet" }),
+		);
+
+		mockAvailableWallets.mockRestore();
+	});
+
+	it("should throw if no available wallets found in network (with nethash)", async () => {
+		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
+
+		const parameters = new URLSearchParams(
+			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+		const { result: translation } = renderHook(() => useTranslation());
+		const { t } = translation.current;
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
+			t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash: "2a44f340d...bd72e867" }),
+		);
+
+		mockAvailableWallets.mockRestore();
+	});
 });

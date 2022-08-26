@@ -25,7 +25,7 @@ interface PathProperties {
 	env: Environment;
 	profile: Contracts.IProfile;
 	network: Networks.Network;
-	parameters: URLSearchParams;
+	searchParameters: URLSearchParams;
 }
 
 export const isAllowedNetwork = (network: string) => {
@@ -34,9 +34,9 @@ export const isAllowedNetwork = (network: string) => {
 	return allowedNetworks.has(network);
 };
 
-const delegateFromSearchParameters = ({ env, network, parameters }: PathProperties) => {
-	const delegateName = parameters.get("delegate");
-	const delegatePublicKey = parameters.get("publicKey");
+const delegateFromSearchParameters = ({ env, network, searchParameters }: PathProperties) => {
+	const delegateName = searchParameters.get("delegate");
+	const delegatePublicKey = searchParameters.get("publicKey");
 
 	if (delegateName) {
 		try {
@@ -74,27 +74,6 @@ export const useSearchParametersValidation = () => {
 		}
 	};
 
-	const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
-		const message = parameters.get("message");
-		const address = parameters.get("address");
-
-		if (!message) {
-			throw new Error(t("TRANSACTION.VALIDATION.MESSAGE_MISSING"));
-		}
-
-		if (address) {
-			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
-
-			await coin.__construct();
-
-			const isValid = await coin.address().validate(address);
-
-			if (!isValid) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
-			}
-		}
-	};
-
 	const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
 		const delegateName = parameters.get("delegate");
 		const publicKey = parameters.get("publicKey");
@@ -112,7 +91,7 @@ export const useSearchParametersValidation = () => {
 
 		await env.delegates().sync(profile, network.coin(), network.id());
 
-		const delegate = delegateFromSearchParameters({ env, network, parameters, profile });
+		const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
 
 		const delegatePublicKey =
 			publicKey &&
@@ -135,32 +114,25 @@ export const useSearchParametersValidation = () => {
 	};
 
 	const methods = {
-		sign: {
-			path: ({ profile, parameters }: PathProperties) =>
-				`${generatePath(ProfilePaths.SignMessage, {
-					profileId: profile.id(),
-				})}?${parameters.toString()}`,
-			validate: validateSign,
-		},
 		transfer: {
-			path: ({ profile, parameters }: PathProperties) =>
+			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
 					profileId: profile.id(),
-				})}?${parameters.toString()}`,
+				})}?${searchParameters.toString()}`,
 			validate: validateTransfer,
 		},
 		vote: {
-			path: ({ profile, parameters, env }: PathProperties) => {
-				const network = findNetworkFromSearchParameters(profile, parameters);
+			path: ({ profile, searchParameters, env }: PathProperties) => {
+				const network = findNetworkFromSearchParameters(profile, searchParameters);
 				assertNetwork(network);
 
-				const delegate = delegateFromSearchParameters({ env, network, parameters, profile });
+				const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters });
 
-				parameters.set("vote", delegate?.address() as string);
+				searchParameters.set("vote", delegate?.address() as string);
 
 				return `${generatePath(ProfilePaths.SendVote, {
 					profileId: profile.id(),
-				})}?${parameters.toString()}`;
+				})}?${searchParameters.toString()}`;
 			},
 			validate: validateVote,
 		},
@@ -233,39 +205,25 @@ export const useSearchParametersValidation = () => {
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
+			const truncated = truncate(nethash, {
+				length: 20,
+				omissionPosition: "middle",
+			});
+
 			if (!network) {
-				throw new Error(
-					t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", {
-						nethash: truncate(nethash, {
-							length: 20,
-							omissionPosition: "middle",
-						}),
-					}),
-				);
+				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: truncated }));
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
 
 			if (availableWallets.length === 0) {
-				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash }));
+				throw new Error(t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash: truncated }));
 			}
 		}
 
 		// method specific validation
 		await methods[method].validate({ env, network, parameters, profile });
-
-		const getPath = () =>
-			methods[method].path({
-				env,
-				network,
-				parameters,
-				profile,
-			});
-
-		return {
-			getPath,
-		};
 	};
 
-	return { validateSearchParameters };
+	return { methods, validateSearchParameters };
 };

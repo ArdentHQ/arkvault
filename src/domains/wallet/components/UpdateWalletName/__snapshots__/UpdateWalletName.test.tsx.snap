@@ -58,7 +58,7 @@ exports[`UpdateWalletName should render 1`] = `
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -183,7 +183,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -327,7 +327,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -471,7 +471,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -615,7 +615,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -759,7 +759,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -903,7 +903,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
               data-testid="Form"
             >
               <fieldset
-                class="flex flex-col css-5kz4tk"
+                class="flex min-w-0 flex-col css-5kz4tk"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

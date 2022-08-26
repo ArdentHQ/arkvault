@@ -45,33 +45,40 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<FormField name="network" className="mt-8">
-				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetworkDropdown profile={profile} networks={[network]} selectedNetwork={network} isDisabled />
-			</FormField>
-
-			<FormField name="senderAddress" className="my-8">
-				<FormLabel label={t("TRANSACTION.SENDER")} />
-
-				<div data-testid="sender-address">
-					<SelectAddress
-						disabled={isWalletFieldDisabled !== false}
-						wallet={
-							wallet
-								? {
-										address: wallet.address(),
-										network: wallet.network(),
-								  }
-								: undefined
-						}
-						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
+			<div className="my-8 space-y-8">
+				<FormField name="network">
+					<FormLabel label={t("COMMON.CRYPTOASSET")} />
+					<SelectNetworkDropdown
 						profile={profile}
-						onChange={(address: string) =>
-							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
-						}
+						networks={[network]}
+						selectedNetwork={network}
+						isDisabled
 					/>
-				</div>
-			</FormField>
+				</FormField>
+
+				<FormField name="senderAddress">
+					<FormLabel label={t("TRANSACTION.SENDER")} />
+
+					<div data-testid="sender-address">
+						<SelectAddress
+							disabled={isWalletFieldDisabled !== false}
+							wallet={
+								wallet
+									? {
+											address: wallet.address(),
+											network: wallet.network(),
+									  }
+									: undefined
+							}
+							wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
+							profile={profile}
+							onChange={(address: string) =>
+								setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
+							}
+						/>
+					</div>
+				</FormField>
+			</div>
 
 			{unvotes.length > 0 && (
 				<TransactionDetail label={t("TRANSACTION.UNVOTES_COUNT", { count: unvotes.length })}>

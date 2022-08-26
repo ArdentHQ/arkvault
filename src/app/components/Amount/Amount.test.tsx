@@ -7,7 +7,7 @@ describe("Amount", () => {
 	it("should format crypto or fiat depending on the ticker", () => {
 		const { rerender } = render(<Amount value={123.456} ticker="EUR" />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^€123.45$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^€123.46$/);
 
 		rerender(<Amount value={123.456} ticker="ARK" />);
 
@@ -47,7 +47,7 @@ describe("Amount", () => {
 	it("should format fiat", () => {
 		const { rerender } = render(<Amount value={123.456} ticker="USD" />);
 
-		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.45$/);
+		expect(screen.getByTestId("Amount")).toHaveTextContent(/^\$123.46$/);
 
 		rerender(<Amount value={1} ticker="USD" />);
 

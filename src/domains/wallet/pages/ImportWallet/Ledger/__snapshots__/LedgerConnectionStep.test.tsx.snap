@@ -27,7 +27,7 @@ exports[`LedgerConnectionStep should emit event on connect 1`] = `
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -223,7 +223,7 @@ exports[`LedgerConnectionStep should emit event on connection fail 1`] = `
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -447,7 +447,7 @@ exports[`LedgerConnectionStep should show update error if app version is less th
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
