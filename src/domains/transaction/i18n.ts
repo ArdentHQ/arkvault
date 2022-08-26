@@ -414,11 +414,13 @@ export const translations = {
 		METHOD_MISSING: "method parameter is missing",
 		METHOD_NOT_SUPPORTED: "method <strong>{{method}}</strong> is not supported.",
 		NETHASH_NOT_ENABLED: "network with nethash <strong>{{nethash}}</strong> is not enabled or available.",
-		NETHASH_NO_WALLETS: "the current profile has no wallets available for the network with nethash <strong>{{nethash}}</strong>.",
+		NETHASH_NO_WALLETS:
+			"the current profile has no wallets available for the network with nethash <strong>{{nethash}}</strong>.",
 		NETWORK_INVALID: "network <strong>{{network}}</strong> is invalid.",
 		NETWORK_MISMATCH: "data belongs to another network.",
 		NETWORK_NOT_ENABLED: "network <strong>{{network}}</strong> is not enabled.",
-		NETWORK_NO_WALLETS: "the current profile has no wallets available for the <strong>{{network}}</strong> network.",
+		NETWORK_NO_WALLETS:
+			"the current profile has no wallets available for the <strong>{{network}}</strong> network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
