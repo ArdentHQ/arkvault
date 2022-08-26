@@ -316,10 +316,10 @@ describe("useSearchParametersValidation", () => {
 
 		expect(
 			result.current.methods.transfer.path({
-				profile,
-				searchParameters: parameters,
 				env,
 				network: profile.wallets().first().network(),
+				profile,
+				searchParameters: parameters,
 			}),
 		).toBe(
 			`/profiles/${profile.id()}/send-transfer?coin=ark&method=transfer&nethash=${
@@ -337,10 +337,10 @@ describe("useSearchParametersValidation", () => {
 
 		expect(
 			result.current.methods.vote.path({
-				profile,
-				searchParameters: parameters,
 				env,
 				network: profile.wallets().first().network(),
+				profile,
+				searchParameters: parameters,
 			}),
 		).toBe(
 			`/profiles/${profile.id()}/send-vote?coin=ark&method=vote&nethash=${

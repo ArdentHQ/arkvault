@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useQueryParameters } from "@/app/hooks/use-query-parameters";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";

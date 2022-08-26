@@ -92,6 +92,7 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(submitID));
+
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
@@ -110,7 +111,7 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(submitID));
-		jest.advanceTimersByTime(20000);
+		jest.advanceTimersByTime(20_000);
 
 		userEvent.paste(screen.getByTestId(passwordInput), "wrong password");
 
