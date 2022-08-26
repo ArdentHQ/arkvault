@@ -400,7 +400,8 @@ describe("useSearchParametersValidation", () => {
 	it("should build qr error message", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		expect(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", coin: "custom" }, true)).toMatchInlineSnapshot(`
+		expect(result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true))
+			.toMatchInlineSnapshot(`
 		<Trans
 		  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
 		  parent={[Function]}

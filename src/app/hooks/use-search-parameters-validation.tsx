@@ -266,7 +266,7 @@ export const useSearchParametersValidation = () => {
 	/* istanbul ignore next */
 	const buildSearchParametersError = (
 		{ type, value }: { type: SearchParametersError; value?: string },
-		qr: boolean = false,
+		qr = false,
 	) => {
 		const ErrorWrapper = qr ? WrapperQR : WrapperURI;
 
