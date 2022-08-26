@@ -7,7 +7,6 @@ import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
 import { findNetworkFromSearchParameters, profileAllEnabledNetworks } from "@/utils/network-utils";
 import { ProfilePaths } from "@/router/paths";
-import React from "react";
 
 interface RequiredParameters {
 	network?: string;
@@ -30,21 +29,21 @@ interface PathProperties {
 }
 
 enum SearchParametersError {
-	AmbiguousDelegate,
-	CoinMismatch,
-	CoinNotSupported,
-	DelegateNotFound,
-	DelegateResigned,
-	MethodNotSupported,
-	MissingDelegate,
-	MissingMethod,
-	MissingNetworkOrNethash,
-	NethashNotEnabled,
-	NethashNoWallets,
-	NetworkInvalid,
-	NetworkMismatch,
-	NetworkNotEnabled,
-	NetworkNoWallets,
+	AmbiguousDelegate = "AMBIGUOUS_DELEGATE",
+	CoinMismatch = "COIN_MISMATCH",
+	CoinNotSupported = "COIN_NOT_SUPPORTED",
+	DelegateNotFound = "DELEGATE_NOT_FOUND",
+	DelegateResigned = "DELEGATE_RESIGNED",
+	MethodNotSupported = "METHOD_NOT_SUPPORTED",
+	MissingDelegate = "MISSING_DELEGATE",
+	MissingMethod = "MISSING_METHOD",
+	MissingNetworkOrNethash = "MISSING_NETWORK_OR_NETHASH",
+	NethashNotEnabled = "NETHASH_NOT_ENABLED",
+	NethashNoWallets = "NETHASH_NO_WALLETS",
+	NetworkInvalid = "NETWORK_INVALID",
+	NetworkMismatch = "NETWORK_MISMATCH",
+	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
+	NetworkNoWallets = "NETWORK_NO_WALLETS",
 }
 
 export const isAllowedNetwork = (network: string) => {
@@ -74,59 +73,61 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 	}
 };
 
-export const useSearchParametersValidation = () => {
-	const { t } = useTranslation();
+const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
+	const delegateName = parameters.get("delegate");
+	const publicKey = parameters.get("publicKey");
 
-	const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
-		const recipient = parameters.get("recipient");
+	if (!delegateName && !publicKey) {
+		return { error: { type: SearchParametersError.MissingDelegate } };
+	}
 
-		if (recipient) {
-			const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+	if (!!publicKey && !!delegateName) {
+		return { error: { type: SearchParametersError.AmbiguousDelegate } };
+	}
 
-			await coin.__construct();
+	const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+	await coin.__construct();
 
-			const isValid = await coin.address().validate(recipient);
+	await env.delegates().sync(profile, network.coin(), network.id());
 
-			if (!isValid) {
-				return { error: { type: SearchParametersError.NetworkMismatch }};
-			}
-		}
-	};
+	const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
 
-	const validateVote = async ({ parameters, profile, network, env }: ValidateParameters) => {
-		const delegateName = parameters.get("delegate");
-		const publicKey = parameters.get("publicKey");
+	const delegatePublicKey =
+		publicKey &&
+		truncate(publicKey, {
+			length: 20,
+			omissionPosition: "middle",
+		});
 
-		if (!delegateName && !publicKey) {
-			return { error: { type: SearchParametersError.MissingDelegate }};
-		}
+	if (!delegate) {
+		return { error: { type: SearchParametersError.DelegateNotFound, value: delegateName || delegatePublicKey } };
+	}
 
-		if (!!publicKey && !!delegateName) {
-			return { error: { type: SearchParametersError.AmbiguousDelegate }};
-		}
+	if (delegate.isResignedDelegate()) {
+		return { error: { type: SearchParametersError.DelegateResigned, value: delegateName || delegatePublicKey } };
+	}
+};
 
+const validateTransfer = async ({ profile, network, parameters }: ValidateParameters) => {
+	const recipient = parameters.get("recipient");
+
+	if (recipient) {
 		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
 		await coin.__construct();
 
-		await env.delegates().sync(profile, network.coin(), network.id());
+		const isValid = await coin.address().validate(recipient);
 
-		const delegate = delegateFromSearchParameters({ env, network, profile, searchParameters: parameters });
-
-		const delegatePublicKey =
-			publicKey &&
-			truncate(publicKey, {
-				length: 20,
-				omissionPosition: "middle",
-			});
-
-		if (!delegate) {
-			return { error: { type: SearchParametersError.DelegateNotFound, value: delegateName || delegatePublicKey }};
+		if (!isValid) {
+			return { error: { type: SearchParametersError.NetworkMismatch } };
 		}
+	}
+};
 
-		if (delegate.isResignedDelegate()) {
-			return { error: { type: SearchParametersError.DelegateResigned, value: delegateName || delegatePublicKey }};
-		}
-	};
+const getError = (message: string) => `Invalid URI: ${message}`;
+
+export const useSearchParametersValidation = () => {
+	const { t } = useTranslation();
 
 	const methods = {
 		transfer: {
@@ -158,7 +159,7 @@ export const useSearchParametersValidation = () => {
 		env: Environment,
 		parameters: URLSearchParams,
 		requiredParameters?: RequiredParameters,
-	): Promise<{ error?: { type: SearchParametersError, value?: string } }> => {
+	) => {
 		assertProfile(profile);
 
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
@@ -169,53 +170,53 @@ export const useSearchParametersValidation = () => {
 		const nethash = parameters.get("nethash");
 
 		if (!networkId && !nethash) {
-			return { error: { type: SearchParametersError.MissingNetworkOrNethash }};
+			return { error: { type: SearchParametersError.MissingNetworkOrNethash } };
 		}
 
 		if (!method) {
-			return { error: { type: SearchParametersError.MissingMethod }};
+			return { error: { type: SearchParametersError.MissingMethod } };
 		}
 
 		if (requiredParameters?.coin && coin !== requiredParameters?.coin) {
-			return { error: { type: SearchParametersError.CoinMismatch }};
+			return { error: { type: SearchParametersError.CoinMismatch } };
 		}
 
 		if (!allEnabledNetworks.some((item) => item.coin() === coin)) {
-			return { error: { type: SearchParametersError.CoinNotSupported, value: coin }};
+			return { error: { type: SearchParametersError.CoinNotSupported, value: coin } };
 		}
 
 		if (!Object.keys(methods).includes(method)) {
-			return { error: { type: SearchParametersError.MethodNotSupported, value: method }};
+			return { error: { type: SearchParametersError.MethodNotSupported, value: method } };
 		}
 
 		let network: Networks.Network | undefined;
 
 		if (networkId) {
 			if (requiredParameters?.network && networkId !== requiredParameters?.network) {
-				return { error: { type: SearchParametersError.NetworkMismatch }};
+				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
 			if (!isAllowedNetwork(networkId)) {
-				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId }};
+				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
 			}
 
 			network = allEnabledNetworks.find((item) => item.id() === networkId);
 
 			/* istanbul ignore next */
 			if (!network) {
-				return { error: { type: SearchParametersError.NetworkNotEnabled, value: networkId }};
+				return { error: { type: SearchParametersError.NetworkNotEnabled, value: networkId } };
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: networkId }};
+				return { error: { type: SearchParametersError.NetworkNoWallets, value: networkId } };
 			}
 		}
 
 		if (nethash) {
 			if (requiredParameters?.nethash && nethash !== requiredParameters?.nethash) {
-				return { error: { type: SearchParametersError.NetworkMismatch }};
+				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
@@ -226,23 +227,21 @@ export const useSearchParametersValidation = () => {
 			});
 
 			if (!network) {
-				return { error: { type: SearchParametersError.NethashNotEnabled, value: truncated }};
+				return { error: { type: SearchParametersError.NethashNotEnabled, value: truncated } };
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNethash(coin, nethash);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NethashNoWallets, value: truncated }};
+				return { error: { type: SearchParametersError.NethashNoWallets, value: truncated } };
 			}
 		}
 
 		// method specific validation
-		return methods[method].validate({ env, network, parameters, profile });
+		return await methods[method].validate({ env, network, parameters, profile });
 	};
 
-	const buildSearchParametersError = ({ type, value }: { type: SearchParametersError, value?: string }) => {
-		const getError = (message: string) => `Invalid URI: ${message}`;
-
+	const buildSearchParametersError = ({ type, value }: { type: SearchParametersError; value?: string }) => {
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return getError(t("TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"));
 		}
@@ -303,8 +302,9 @@ export const useSearchParametersValidation = () => {
 			return getError(t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: value }));
 		}
 
+		/* istanbul ignore next */
 		return getError("Unknown Error");
-	}
+	};
 
-	return { methods, buildSearchParametersError, validateSearchParameters };
+	return { buildSearchParametersError, methods, validateSearchParameters };
 };

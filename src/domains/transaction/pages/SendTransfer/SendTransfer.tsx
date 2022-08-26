@@ -238,7 +238,7 @@ export const SendTransfer: React.VFC = () => {
 		});
 
 		if (error) {
-			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error }));
+			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: buildSearchParametersError(error) }));
 			return;
 		}
 

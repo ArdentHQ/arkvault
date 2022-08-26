@@ -1,6 +1,5 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation } from "react-i18next";
 
 import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
@@ -28,7 +27,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
 	it("should validate search parameters without errors (with nethash)", async () => {
@@ -38,7 +37,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
 	it("should use default if coin is missing", async () => {
@@ -46,108 +45,84 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
 	it("should throw for invalid coin", async () => {
 		const parameters = new URLSearchParams("coin=custom&network=ark.devnet&method=transfer");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED", { coin: "CUSTOM" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "COIN_NOT_SUPPORTED", value: "CUSTOM" },
+		});
 	});
 
 	it("should throw for coin mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(() =>
+		await expect(
 			result.current.validateSearchParameters(profile, env, parameters, {
 				...requiredParameters,
 				coin: "custom",
 			}),
-		).rejects.toThrow(t("TRANSACTION.VALIDATION.COIN_MISMATCH"));
+		).resolves.toStrictEqual({ error: { type: "COIN_MISMATCH" } });
 	});
 
 	it("should throw for missing method", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.METHOD_MISSING"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "MISSING_METHOD" },
+		});
 	});
 
 	it("should throw for invalid method", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=custom");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.METHOD_NOT_SUPPORTED", { method: "custom" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "METHOD_NOT_SUPPORTED", value: "custom" },
+		});
 	});
 
 	it("should throw for missing network or nethash", async () => {
 		const parameters = new URLSearchParams("coin=ARK&method=transfer");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "MISSING_NETWORK_OR_NETHASH" },
+		});
 	});
 
 	it("should throw for invalid network", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=custom&method=transfer");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_INVALID", { network: "custom" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETWORK_INVALID", value: "custom" },
+		});
 	});
 
 	it("should throw for invalid nethash", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=custom&method=transfer");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETHASH_NOT_ENABLED", { nethash: "custom" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETHASH_NOT_ENABLED", value: "custom" },
+		});
 	});
 
 	it("should throw for network mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ark&method=transfer&network=ark.devnet");
-
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -157,14 +132,11 @@ describe("useSearchParametersValidation", () => {
 				nethash: undefined,
 				network: "custom",
 			}),
-		).rejects.toThrow(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+		).resolves.toStrictEqual({ error: { type: "NETWORK_MISMATCH" } });
 	});
 
 	it("should throw for nethash mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
-
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -174,20 +146,17 @@ describe("useSearchParametersValidation", () => {
 				nethash: "wrong",
 				network: undefined,
 			}),
-		).rejects.toThrow(t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"));
+		).resolves.toStrictEqual({ error: { type: "NETWORK_MISMATCH" } });
 	});
 
 	it("should throw if recipient does not correspond to network", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETWORK_MISMATCH" },
+		});
 	});
 
 	it("should validate vote", async () => {
@@ -201,7 +170,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 
 		mockFindDelegateByName.mockRestore();
 	});
@@ -215,7 +184,7 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 
 		mockFindDelegateByPublicKey.mockRestore();
 	});
@@ -223,52 +192,41 @@ describe("useSearchParametersValidation", () => {
 	it("should fail to find delegate by public key", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: "1" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "DELEGATE_NOT_FOUND", value: "1" },
+		});
 	});
 
 	it("should not allow both delegate name and public keys in the url", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1&delegate=test");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "AMBIGUOUS_DELEGATE" },
+		});
 	});
 
 	it("should fail to validate delegate address", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&delegate=custom");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_NOT_FOUND", { delegate: "custom" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "DELEGATE_NOT_FOUND", value: "custom" },
+		});
 	});
 
 	it("should require delegate parameter if it is a vote link", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote");
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_MISSING"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "MISSING_DELEGATE" },
+		});
 	});
 
 	it("should fail if delegate is resigned", async () => {
@@ -292,16 +250,14 @@ describe("useSearchParametersValidation", () => {
 			`coin=ARK&network=ark.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
 		);
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.DELEGATE_RESIGNED", {
-				delegate: truncate(delegateWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
-			}),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: {
+				type: "DELEGATE_RESIGNED",
+				value: truncate(delegateWallet.publicKey(), { length: 20, omissionPosition: "middle" }),
+			},
+		});
 
 		mockFindDelegateByPublicKey.mockRestore();
 		resignedMock.mockRestore();
@@ -357,12 +313,10 @@ describe("useSearchParametersValidation", () => {
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_NO_WALLETS", { network: "ark.devnet" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETWORK_NO_WALLETS", value: "ark.devnet" },
+		});
 
 		mockAvailableWallets.mockRestore();
 	});
@@ -375,12 +329,16 @@ describe("useSearchParametersValidation", () => {
 		);
 
 		const { result } = renderHook(() => useSearchParametersValidation());
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETHASH_NO_WALLETS", { nethash: "2a44f340d...bd72e867" }),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: {
+				type: "NETHASH_NO_WALLETS",
+				value: truncate("2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867", {
+					length: 20,
+					omissionPosition: "middle",
+				}),
+			},
+		});
 
 		mockAvailableWallets.mockRestore();
 	});
