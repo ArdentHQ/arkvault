@@ -182,7 +182,7 @@ export const Welcome = () => {
 
 	useEffect(() => {
 		// The timeout prevents this action from running twice (apparently caused
-		// by lazy loading of this page). If removed a toast with an error quickly
+		// by lazy loading of this page). If removed, a toast with an error quickly
 		// appears and disappears.
 		let navigateTimeout: ReturnType<typeof setTimeout> | undefined;
 
