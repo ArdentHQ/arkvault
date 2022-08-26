@@ -207,7 +207,7 @@ export const useSearchParametersValidation = () => {
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: networkId } };
+				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
 			}
 		}
 

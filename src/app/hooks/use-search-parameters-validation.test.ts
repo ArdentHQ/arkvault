@@ -361,7 +361,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "NETWORK_NO_WALLETS", value: "ark.devnet" },
+			error: { type: "NETWORK_NO_WALLETS", value: "ARK Devnet" },
 		});
 
 		mockAvailableWallets.mockRestore();
