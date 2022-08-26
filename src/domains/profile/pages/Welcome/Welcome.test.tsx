@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
@@ -23,7 +24,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { renderHook } from "@testing-library/react-hooks";
-import { useSearchParametersValidation } from "../../../../app/hooks/use-search-parameters-validation";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
