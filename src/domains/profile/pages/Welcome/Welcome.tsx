@@ -112,11 +112,13 @@ export const Welcome = () => {
 
 	const closeDeleteProfileModal = useCallback(() => {
 		setDeletingProfileId(undefined);
+		isProfileCardClickedOnce.current = false;
 	}, []);
 
 	const closeSignInModal = useCallback(() => {
 		setSelectedProfile(undefined);
 		setRequestedAction(undefined);
+		isProfileCardClickedOnce.current = false;
 	}, []);
 
 	const handleClick = useCallback(

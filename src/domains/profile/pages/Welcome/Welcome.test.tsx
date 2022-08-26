@@ -93,6 +93,43 @@ describe("Welcome with deeplink", () => {
 		);
 	});
 
+	it("should ignore multiple clicks", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=transfer&coin=ark",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(toastUpdateSpy).toHaveBeenNthCalledWith(
+				1,
+				expect.any(String),
+				"error",
+				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+			),
+		);
+	});
+
 	it("should show a warning if the method is not supported", async () => {
 		const { container } = render(
 			<Route path="/">
