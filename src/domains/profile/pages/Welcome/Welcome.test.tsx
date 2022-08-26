@@ -415,27 +415,6 @@ describe("Welcome with deeplink", () => {
 		toastWarningSpy.mockRestore();
 	});
 
-	it("should clear the profile validation timeout", async () => {
-		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout").mockImplementation();
-
-		const { unmount } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-				withProviders: true,
-			},
-		);
-
-		unmount();
-
-		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Number));
-
-		clearTimeoutSpy.mockRestore();
-	});
-
 	it.each([
 		["createProfile", ProfilePaths.CreateProfile],
 		["importProfile", ProfilePaths.ImportProfile],
@@ -462,6 +441,27 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
 
 		toastWarningSpy.mockRestore();
+	});
+
+	it("should clear the profile validation timeout", async () => {
+		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout").mockImplementation();
+
+		const { unmount } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		unmount();
+
+		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Number));
+
+		clearTimeoutSpy.mockRestore();
 	});
 });
 
