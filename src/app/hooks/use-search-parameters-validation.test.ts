@@ -48,7 +48,7 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toBeUndefined();
 	});
 
-	it("should throw for invalid coin", async () => {
+	it("should return error for invalid coin", async () => {
 		const parameters = new URLSearchParams("coin=custom&network=ark.devnet&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -58,7 +58,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for coin mismatch", async () => {
+	it("should return error for coin mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -71,7 +71,7 @@ describe("useSearchParametersValidation", () => {
 		).resolves.toStrictEqual({ error: { type: "COIN_MISMATCH" } });
 	});
 
-	it("should throw for missing method", async () => {
+	it("should return error for missing method", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -81,7 +81,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for invalid method", async () => {
+	it("should return error for invalid method", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -91,7 +91,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for missing network or nethash", async () => {
+	it("should return error for missing network or nethash", async () => {
 		const parameters = new URLSearchParams("coin=ARK&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -101,7 +101,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for invalid network", async () => {
+	it("should return error for invalid network", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=custom&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -111,7 +111,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for invalid nethash", async () => {
+	it("should return error for invalid nethash", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=custom&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -121,7 +121,7 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
-	it("should throw for network mismatch", async () => {
+	it("should return error for network mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ark&method=transfer&network=ark.devnet");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -135,7 +135,7 @@ describe("useSearchParametersValidation", () => {
 		).resolves.toStrictEqual({ error: { type: "NETWORK_MISMATCH" } });
 	});
 
-	it("should throw for nethash mismatch", async () => {
+	it("should return error for nethash mismatch", async () => {
 		const parameters = new URLSearchParams("coin=ARK&nethash=1&method=transfer");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -149,7 +149,7 @@ describe("useSearchParametersValidation", () => {
 		).resolves.toStrictEqual({ error: { type: "NETWORK_MISMATCH" } });
 	});
 
-	it("should throw if recipient does not correspond to network", async () => {
+	it("should return error if recipient does not correspond to network", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
@@ -305,7 +305,7 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
-	it("should throw if no available wallets found in network (with network)", async () => {
+	it("should return error if no available wallets found in network (with network)", async () => {
 		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
@@ -321,7 +321,7 @@ describe("useSearchParametersValidation", () => {
 		mockAvailableWallets.mockRestore();
 	});
 
-	it("should throw if no available wallets found in network (with nethash)", async () => {
+	it("should return error if no available wallets found in network (with nethash)", async () => {
 		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
@@ -341,5 +341,16 @@ describe("useSearchParametersValidation", () => {
 		});
 
 		mockAvailableWallets.mockRestore();
+	});
+
+	it("should build error message", () => {
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		expect(result.current.buildSearchParametersError({ type: "AMBIGUOUS_DELEGATE" })).toMatchInlineSnapshot(`
+		<Trans
+		  i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"
+		  parent={[Function]}
+		/>
+	`);
 	});
 });

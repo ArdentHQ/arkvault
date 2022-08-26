@@ -219,6 +219,7 @@ export const useSearchParametersValidation = () => {
 
 			network = defaultNetworks.find((item) => item.meta().nethash === nethash);
 
+			/* istanbul ignore if */
 			if (network && !network.meta().enabled) {
 				return { error: { type: SearchParametersError.NethashNotEnabled, value: network.displayName() } };
 			}
@@ -245,6 +246,7 @@ export const useSearchParametersValidation = () => {
 		return await methods[method].validate({ env, network, parameters, profile });
 	};
 
+	/* istanbul ignore next */
 	const buildSearchParametersError = ({ type, value }: { type: SearchParametersError; value?: string }) => {
 		if (type === SearchParametersError.AmbiguousDelegate) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY" />;
@@ -352,11 +354,14 @@ export const useSearchParametersValidation = () => {
 
 		if (type === SearchParametersError.NetworkNoWallets) {
 			return (
-				<Trans parent={ErrorWrapper} i18nKey="TRANSACTION.NETWORK_NO_WALLETS." values={{ network: value }} />
+				<Trans
+					parent={ErrorWrapper}
+					i18nKey="TRANSACTION.VALIDATION.NETWORK_NO_WALLETS"
+					values={{ network: value }}
+				/>
 			);
 		}
 
-		/* istanbul ignore next */
 		return "Invalid URI: Unknown Error";
 	};
 
