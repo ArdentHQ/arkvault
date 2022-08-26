@@ -7,9 +7,10 @@ import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as commonTranslations, translations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
+import { ProfilePaths } from "@/router/paths";
 import { StubStorage } from "@/tests/mocks";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
@@ -48,7 +49,6 @@ describe("Welcome with deeplink", () => {
 		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
 
 	let toastUpdateSpy: jest.SpyInstance;
-
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
 
@@ -361,6 +361,76 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
 
 		mockDelegateName.mockRestore();
+	});
+
+	it("should redirect to profile if only one available", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it("should prompt the user to select a profile", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it.each([
+		["createProfile", ProfilePaths.CreateProfile],
+		["importProfile", ProfilePaths.ImportProfile],
+	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE, { delay: 500 });
+		});
+
+		history.push(path);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
+
+		toastWarningSpy.mockRestore();
 	});
 });
 

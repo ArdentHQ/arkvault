@@ -356,6 +356,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	USING_PROFILE: "Using profile {{profileName}}",
 	VALIDATING_URI: "Validating URI. Please wait...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",

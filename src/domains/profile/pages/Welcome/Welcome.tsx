@@ -180,6 +180,32 @@ export const Welcome = () => {
 
 	const hasProfiles = profiles.length > 0;
 
+	useEffect(() => {
+		// The timeout prevents this action from running twice (apparently caused
+		// by lazy loading of this page). If removed a toast with an error quickly
+		// appears and disappears.
+		let navigateTimeout: ReturnType<typeof setTimeout> | undefined;
+
+		if (!isDeeplink()) {
+			return;
+		}
+
+		navigateTimeout = setTimeout(() => {
+			if (profiles.length === 1) {
+				toasts.warning(t("COMMON.USING_PROFILE", { profileName: profiles[0].name() }), { delay: 500 });
+				navigateToProfile(profiles[0]);
+			} else {
+				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
+			}
+		}, 1);
+
+		return () => {
+			if (navigateTimeout) {
+				clearTimeout(navigateTimeout);
+			}
+		};
+	}, []);
+
 	if (!isThemeLoaded) {
 		return <></>;
 	}
