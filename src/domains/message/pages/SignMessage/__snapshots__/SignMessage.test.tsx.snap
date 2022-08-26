@@ -501,7 +501,7 @@ exports[`SignMessage Sign with Wallet should render (lg) 1`] = `
                       type="button"
                     >
                       <span
-                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1130,7 +1130,7 @@ exports[`SignMessage Sign with Wallet should render (xs) 1`] = `
                       type="button"
                     >
                       <span
-                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1759,7 +1759,7 @@ exports[`SignMessage Sign with Wallet should render for ledger wallets 1`] = `
                       type="button"
                     >
                       <span
-                        class="absolute inset-0 flex w-full items-center border border-transparent pl-14 pr-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
                           class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

@@ -205,6 +205,16 @@ describe("useSearchParametersValidation", () => {
 		);
 	});
 
+	it("should validate sign", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=test",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+	});
+
 	it("should validate vote", async () => {
 		const mockFindDelegateByName = jest
 			.spyOn(env.delegates(), "findByUsername")
