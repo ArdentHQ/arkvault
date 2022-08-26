@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, screen } from "@/utils/testing-librar
 const history = createHashHistory();
 
 const mainnetDeepLink =
-	"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
+	"/?method=transfer&coin=ark&network=ark.mainnet&recipient=AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX&amount=1.2&memo=ARK";
 
 describe("useDeeplink hook", () => {
 	let profile: Contracts.IProfile;
@@ -55,7 +55,7 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should use the method parameter to detect deeplink", () => {
-		history.push("/?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK");
+		history.push("/?coin=ark&network=ark.mainnet&recipient=AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX&amount=1.2&memo=ARK");
 
 		render(
 			<Route>
@@ -109,7 +109,7 @@ describe("useDeeplink hook", () => {
 		userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
 		expect(historySpy).toHaveBeenCalledWith(
-			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.mainnet&recipient=AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX&amount=1.2&memo=ARK",
 		);
 
 		historySpy.mockRestore();

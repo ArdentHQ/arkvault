@@ -21,10 +21,10 @@ export const useDeeplink = () => {
 	};
 
 	const validateDeeplink = async (profile: Contracts.IProfile) => {
-		const { error } = await validateSearchParameters(profile, env, queryParameters);
+		const result = await validateSearchParameters(profile, env, queryParameters);
 
-		if (error) {
-			return buildSearchParametersError(error);
+		if (result?.error) {
+			return buildSearchParametersError(result.error);
 		}
 	};
 
