@@ -208,8 +208,8 @@ export const useSearchParametersValidation = () => {
 
 			network = profile.availableNetworks().find((item) => item.id() === networkId);
 
-			if (network && !network.meta().enabled) {
-				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
+			if (!network) {
+				return { error: { type: SearchParametersError.NetworkNotEnabled, value: defaultNetworks[networkId].displayName } };
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
