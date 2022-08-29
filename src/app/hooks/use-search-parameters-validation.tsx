@@ -2,7 +2,7 @@
 import React from "react";
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { generatePath } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { assertNetwork, assertProfile } from "@/utils/assertions";
@@ -130,9 +130,18 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 };
 
 /* istanbul ignore next */
-const WrapperQR = ({ children }) => <span>Invalid QR: {children}</span>;
+const WrapperQR = ({ children }) => {
+	const { t } = useTranslation();
+
+	return <span>{t("TRANSACTION.VALIDATION.INVALID_QR")}: {children}</span>;
+};
+
 /* istanbul ignore next */
-const WrapperURI = ({ children }) => <span>Invalid URI: {children}</span>;
+const WrapperURI = ({ children }) => {
+	const { t } = useTranslation();
+
+	return <span>{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children}</span>;
+};
 
 export const useSearchParametersValidation = () => {
 	const methods = {
@@ -379,7 +388,7 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
-		return "Invalid URI: Unknown Error";
+		return <WrapperURI>{t("COMMON.ERRORS.UNKOWN")}</WrapperURI>;
 	};
 
 	return { buildSearchParametersError, methods, validateSearchParameters };

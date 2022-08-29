@@ -227,7 +227,7 @@ export const SendTransfer: React.VFC = () => {
 		try {
 			qrData = urlSearchParameters(url);
 		} catch {
-			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.INVALID_URL") }));
+			toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
 			return;
 		}
 

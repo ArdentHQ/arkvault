@@ -44,23 +44,6 @@ describe("SendTransfer QRModal", () => {
 
 		profile.coins().set("ARK", "ark.devnet");
 
-		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
-			const networks = profile.coins().availableNetworks();
-
-			for (const network of networks) {
-				const meta = network.meta();
-
-				if (network.id().startsWith("ark.")) {
-					network.meta = () => ({
-						...meta,
-						enabled: true,
-					});
-				}
-			}
-
-			return networks;
-		});
-
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
@@ -181,7 +164,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
-				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.INVALID_URL") }),
+				t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }),
 			),
 		);
 	});

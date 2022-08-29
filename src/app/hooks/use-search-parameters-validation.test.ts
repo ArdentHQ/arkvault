@@ -20,25 +20,6 @@ describe("useSearchParametersValidation", () => {
 		mockProfileWithPublicAndTestNetworks(profile);
 	});
 
-	beforeEach(() => {
-		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
-			const networks = profile.coins().availableNetworks();
-
-			for (const network of networks) {
-				const meta = network.meta();
-
-				if (network.id() === "ark.devnet") {
-					network.meta = () => ({
-						...meta,
-						enabled: true,
-					});
-				}
-			}
-
-			return networks;
-		});
-	});
-
 	it("should validate search parameters without errors (with network)", async () => {
 		const parameters = new URLSearchParams(
 			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
@@ -131,22 +112,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for disabled network", async () => {
-		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
-			const networks = profile.coins().availableNetworks();
-
-			for (const network of networks) {
-				const meta = network.meta();
-
-				if (network.id() === "ark.devnet") {
-					network.meta = () => ({
-						...meta,
-						enabled: false,
-					});
-				}
-			}
-
-			return networks;
-		});
+		const networkSpy = jest.spyOn(profile, "availableNetworks").mockReturnValue(profile.availableNetworks().filter((network) => network.id() === "ark.mainnet"));
 
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer");
 
@@ -155,6 +121,8 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
 			error: { type: "NETWORK_NOT_ENABLED", value: "ARK Devnet" },
 		});
+
+		networkSpy.mockRestore();
 	});
 
 	it("should return error for invalid nethash", async () => {

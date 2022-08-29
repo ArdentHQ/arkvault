@@ -407,8 +407,10 @@ export const translations = {
 		DELEGATE_OR_PUBLICKEY:
 			"both delegate name and public key were provided in url. Please use either one or the other.",
 		DELEGATE_RESIGNED: "delegate <strong>{{delegate}}</strong> is resigned.",
-		FAILED_QRCODE_READ: "Invalid QR: {{reason}}",
 		FEE_NEGATIVE: "Fee cannot be negative",
+		INVALID_QR: "Invalid QR",
+		INVALID_QR_REASON: "Invalid QR: {{reason}}",
+		INVALID_URI: "Invalid URI",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 		METHOD_MISSING: "method parameter is missing",

@@ -112,6 +112,7 @@ export const translations = {
 		INVALID_IMAGE: "File is not an image",
 		INVALID_URL: "The link could not be opened: '{{url}}' is not a valid URL",
 		TOO_BIG: "File is bigger than 1 MB",
+		UNKOWN: "Unkown Error",
 	},
 	EXCHANGE: "Exchange",
 	EXPIRATION: "Expiration",

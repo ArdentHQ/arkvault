@@ -25,23 +25,6 @@ describe("useDeeplink hook", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		mockProfileWithPublicAndTestNetworks(profile);
-
-		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
-			const networks = profile.coins().availableNetworks();
-
-			for (const network of networks) {
-				const meta = network.meta();
-
-				if (network.id() === "ark.devnet") {
-					network.meta = () => ({
-						...meta,
-						enabled: true,
-					});
-				}
-			}
-
-			return networks;
-		});
 	});
 
 	const TestComponent: React.FC = () => {

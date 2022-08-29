@@ -57,23 +57,6 @@ describe("Welcome with deeplink", () => {
 
 	beforeAll(() => {
 		profile = env.profiles().findById(fixtureProfileId);
-
-		jest.spyOn(profile, "availableNetworks").mockImplementation(() => {
-			const networks = profile.coins().availableNetworks();
-
-			for (const network of networks) {
-				const meta = network.meta();
-
-				if (network.id().startsWith("ark.")) {
-					network.meta = () => ({
-						...meta,
-						enabled: true,
-					});
-				}
-			}
-
-			return networks;
-		});
 	});
 
 	beforeEach(() => {
