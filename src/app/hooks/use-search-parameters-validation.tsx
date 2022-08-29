@@ -141,12 +141,12 @@ const WrapperQR = ({ children }) => {
 };
 
 /* istanbul ignore next */
-const WrapperURI = ({ children }) => {
+const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 	const { t } = useTranslation();
 
 	return (
 		<span>
-			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children}
+			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children ?? t("COMMON.ERRORS.UNKOWN")}
 		</span>
 	);
 };
@@ -396,7 +396,7 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
-		return <WrapperURI>{t("COMMON.ERRORS.UNKOWN")}</WrapperURI>;
+		return <WrapperURI />;
 	};
 
 	return { buildSearchParametersError, methods, validateSearchParameters };
