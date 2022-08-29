@@ -192,7 +192,6 @@ export const Welcome = () => {
 
 		navigateTimeout = setTimeout(() => {
 			if (profiles.length === 1) {
-				toasts.warning(t("COMMON.USING_PROFILE", { profileName: profiles[0].name() }), { delay: 500 });
 				navigateToProfile(profiles[0]);
 			} else {
 				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });

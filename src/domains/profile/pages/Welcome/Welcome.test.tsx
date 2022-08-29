@@ -366,7 +366,10 @@ describe("Welcome with deeplink", () => {
 	it("should redirect to profile if only one available", async () => {
 		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
 
-		const profilesSpy = jest.spyOn(env.profiles(), "values").mockReturnValue([profile]);
+		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+			findById: () => profile,
+			values: () => [profile],
+		}));
 
 		render(
 			<Route path="/">
@@ -380,12 +383,7 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(toastWarningSpy).toHaveBeenCalledWith(
-				commonTranslations.USING_PROFILE.replace("{{profileName}}", profile.name()),
-				{ delay: 500 },
-			),
-		);
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
 		// Automatically redirects to transfer page
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
