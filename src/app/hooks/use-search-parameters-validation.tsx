@@ -206,7 +206,7 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkInvalid, value: networkId } };
 			}
 
-			network = profile.availableNetworks().find((item) => item.id() === networkId);
+			network = allEnabledNetworks.find((item) => item.id() === networkId);
 
 			if (!network) {
 				return { error: { type: SearchParametersError.NetworkNotEnabled, value: defaultNetworks[networkId].displayName } };
