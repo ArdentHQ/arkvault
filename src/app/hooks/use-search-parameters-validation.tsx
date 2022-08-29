@@ -209,13 +209,18 @@ export const useSearchParametersValidation = () => {
 			network = allEnabledNetworks.find((item) => item.id() === networkId);
 
 			if (!network) {
-				return { error: { type: SearchParametersError.NetworkNotEnabled, value: defaultNetworks[networkId].displayName } };
+				return {
+					error: {
+						type: SearchParametersError.NetworkNotEnabled,
+						value: defaultNetworks[networkId].displayName,
+					},
+				};
 			}
 
 			const availableWallets = profile.wallets().findByCoinWithNetwork(coin, networkId);
 
 			if (availableWallets.length === 0) {
-				return { error: { type: SearchParametersError.NetworkNoWallets, value: network!.displayName() } };
+				return { error: { type: SearchParametersError.NetworkNoWallets, value: network.displayName() } };
 			}
 		}
 
