@@ -192,6 +192,7 @@ export const Welcome = () => {
 
 		navigateTimeout = setTimeout(() => {
 			if (profiles.length === 1) {
+				isProfileCardClickedOnce.current = true;
 				navigateToProfile(profiles[0]);
 			} else {
 				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
