@@ -133,14 +133,22 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
 
-	return <span>{t("TRANSACTION.VALIDATION.INVALID_QR")}: {children}</span>;
+	return (
+		<span>
+			{t("TRANSACTION.VALIDATION.INVALID_QR")}: {children}
+		</span>
+	);
 };
 
 /* istanbul ignore next */
 const WrapperURI = ({ children }) => {
 	const { t } = useTranslation();
 
-	return <span>{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children}</span>;
+	return (
+		<span>
+			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children}
+		</span>
+	);
 };
 
 export const useSearchParametersValidation = () => {

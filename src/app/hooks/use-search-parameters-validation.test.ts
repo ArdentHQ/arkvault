@@ -112,7 +112,9 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for disabled network", async () => {
-		const networkSpy = jest.spyOn(profile, "availableNetworks").mockReturnValue(profile.availableNetworks().filter((network) => network.id() === "ark.mainnet"));
+		const networkSpy = jest
+			.spyOn(profile, "availableNetworks")
+			.mockReturnValue(profile.availableNetworks().filter((network) => network.id() === "ark.mainnet"));
 
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer");
 
