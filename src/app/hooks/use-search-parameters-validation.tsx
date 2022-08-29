@@ -229,13 +229,6 @@ export const useSearchParametersValidation = () => {
 				return { error: { type: SearchParametersError.NetworkMismatch } };
 			}
 
-			network = profile.availableNetworks().find((item) => item.meta().nethash === nethash);
-
-			/* istanbul ignore if */
-			if (network && !network.meta().enabled) {
-				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
-			}
-
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
 			if (!network) {
@@ -245,7 +238,14 @@ export const useSearchParametersValidation = () => {
 						return { error: { type: SearchParametersError.NetworkNotEnabled, value: displayName } };
 					}
 				}
+			}
 
+			/* istanbul ignore if */
+			if (network && !network.meta().enabled) {
+				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
+			}
+
+			if (!network) {
 				return {
 					error: {
 						type: SearchParametersError.NethashNotEnabled,
