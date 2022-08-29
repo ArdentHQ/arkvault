@@ -257,7 +257,7 @@ export const useSearchParametersValidation = () => {
 				}
 			}
 
-			/* istanbul ignore if */
+			/* istanbul ignore next */
 			if (network && !defaultNetworks[network.id()] && !network.meta().enabled) {
 				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
 			}
