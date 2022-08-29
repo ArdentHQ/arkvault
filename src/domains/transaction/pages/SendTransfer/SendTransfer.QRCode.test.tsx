@@ -19,6 +19,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { LedgerProvider } from "@/app/contexts";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
 
 jest.mock("react-qr-reader", () => ({
@@ -163,7 +164,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
-				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.INVALID_URL") }),
+				t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }),
 			),
 		);
 	});
@@ -174,8 +175,8 @@ describe("SendTransfer QRModal", () => {
 			.mockResolvedValue({ data: "http://localhost:3000/#/?coin=ark" });
 
 		const toastSpy = jest.spyOn(toasts, "error");
-		const { result } = renderHook(() => useTranslation());
-		const { t } = result.current;
+
+		const { result } = renderHook(() => useSearchParametersValidation());
 
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer`;
 		history.push(transferURL);
@@ -200,9 +201,7 @@ describe("SendTransfer QRModal", () => {
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(
-				t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", {
-					reason: t("TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING"),
-				}),
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH", value: "DOGE" }, true),
 			),
 		);
 	});

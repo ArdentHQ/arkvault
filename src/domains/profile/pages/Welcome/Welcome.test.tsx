@@ -5,13 +5,14 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
+import { renderHook } from "@testing-library/react-hooks";
 import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	act,
 	env,
@@ -40,14 +41,16 @@ const submitPassword = async () => {
 	userEvent.click(screen.getByTestId(submitTestID));
 };
 
-const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
+let toastUpdateSpy: jest.SpyInstance;
+
+const expectToast = async (text: string) => {
+	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
+};
 
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
 	const mainnetDeepLink =
 		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
-
-	let toastUpdateSpy: jest.SpyInstance;
 
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
@@ -105,17 +108,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }));
 	});
 
 	it("should ignore multiple clicks", async () => {
@@ -129,6 +128,8 @@ describe("Welcome with deeplink", () => {
 				withProviders: true,
 			},
 		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
 
 		expect(container).toBeInTheDocument();
 
@@ -150,7 +151,7 @@ describe("Welcome with deeplink", () => {
 				1,
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH", value: "DOGE" }),
 			),
 		);
 	});
@@ -167,19 +168,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "METHOD_NOT_SUPPORTED", value: "nuke" }));
 	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
@@ -194,17 +189,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }));
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
@@ -219,17 +210,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }));
 	});
 
 	it("should show a warning if there are no available senders for network", async () => {
@@ -244,19 +231,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
 
 	it("should show a warning if there is no network for the given nethash", async () => {
@@ -272,6 +253,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -281,15 +264,7 @@ describe("Welcome with deeplink", () => {
 			omissionPosition: "middle",
 		});
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }));
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
@@ -305,24 +280,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		const truncated = truncate(nethash, {
-			length: 20,
-			omissionPosition: "middle",
-		});
-
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {

@@ -2,12 +2,17 @@ import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { isAllowedNetwork } from "@/app/hooks/use-search-parameters-validation";
 
 export const useQueryParameters = () => {
 	const { search } = useLocation();
 
 	return useMemo(() => new URLSearchParams(search), [search]);
+};
+
+const isAllowedNetwork = (network: string) => {
+	const allowedNetworks = new Set(["ark.devnet", "ark.mainnet"]);
+
+	return allowedNetworks.has(network);
 };
 
 export const useNetworkFromQueryParameters = (profile: Contracts.IProfile): Networks.Network | undefined => {

@@ -66,7 +66,7 @@ export const SendTransfer: React.VFC = () => {
 
 	const [wallet, setWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 	const { urlSearchParameters } = useTransactionURL();
-	const { validateSearchParameters } = useSearchParametersValidation();
+	const { buildSearchParametersError, validateSearchParameters } = useSearchParametersValidation();
 
 	const {
 		form,
@@ -227,18 +227,18 @@ export const SendTransfer: React.VFC = () => {
 		try {
 			qrData = urlSearchParameters(url);
 		} catch {
-			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: t("TRANSACTION.INVALID_URL") }));
+			toasts.error(t("TRANSACTION.VALIDATION.INVALID_QR_REASON", { reason: t("TRANSACTION.INVALID_URL") }));
 			return;
 		}
 
-		try {
-			await validateSearchParameters(activeProfile, env, qrData, {
-				coin: network?.coin(),
-				nethash: network?.meta().nethash,
-				network: network?.id(),
-			});
-		} catch (error) {
-			toasts.error(t("TRANSACTION.VALIDATION.FAILED_QRCODE_READ", { reason: error.message }));
+		const result = await validateSearchParameters(activeProfile, env, qrData, {
+			coin: network?.coin(),
+			nethash: network?.meta().nethash,
+			network: network?.id(),
+		});
+
+		if (result?.error) {
+			toasts.error(buildSearchParametersError(result.error, true));
 			return;
 		}
 
