@@ -146,7 +146,7 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 
 	return (
 		<span>
-			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children ?? t("COMMON.ERRORS.UNKOWN")}
+			{t("TRANSACTION.VALIDATION.INVALID_URI")}: {children ?? t("COMMON.ERRORS.UNKNOWN")}
 		</span>
 	);
 };
