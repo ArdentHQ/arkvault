@@ -13,9 +13,6 @@ const requiredParameters = {
 	network: "ark.devnet",
 };
 
-const buildMissingParameterMessage = (t: TFunction, parameter: string) =>
-	t("TRANSACTION.VALIDATION.PARAMETER_MISSING", { parameter });
-
 describe("useSearchParametersValidation", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
