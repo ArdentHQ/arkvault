@@ -113,6 +113,7 @@ export const translations = {
 		INVALID_IMAGE: "File is not an image",
 		INVALID_URL: "The link could not be opened: '{{url}}' is not a valid URL",
 		TOO_BIG: "File is bigger than 1 MB",
+		UNKNOWN: "Unknown Error",
 	},
 	EXCHANGE: "Exchange",
 	EXPIRATION: "Expiration",
@@ -359,6 +360,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
+	VALIDATING_URI: "Validating URI. Please wait...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",
 		EXISTS: "{{field}} already exists",

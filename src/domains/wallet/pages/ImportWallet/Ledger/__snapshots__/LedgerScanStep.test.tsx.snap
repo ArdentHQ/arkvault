@@ -55,7 +55,7 @@ exports[`LedgerScanStep should render compact table 1`] = `
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -438,7 +438,7 @@ exports[`LedgerScanStep should render responsive (lg) 1`] = `
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -821,7 +821,7 @@ exports[`LedgerScanStep should render responsive (xs) 1`] = `
       </div>
     </div>
     <fieldset
-      class="flex flex-col css-1bcidjh"
+      class="flex min-w-0 flex-col css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

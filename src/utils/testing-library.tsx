@@ -415,7 +415,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
 		},
-		ramdom: {
+		random: {
 			...customNetworksStub["random-enabled"],
 			...customNetworksStub["random"],
 		},

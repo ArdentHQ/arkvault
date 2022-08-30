@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
 
@@ -13,17 +13,20 @@ import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useTheme } from "@/app/hooks";
+import { useAccentColor, useDeeplink, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
+import { toasts } from "@/app/services";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
 	const history = useHistory<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
+	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
+	const { handleDeepLink, isDeeplink, validateDeeplink } = useDeeplink();
 
 	const profileCardActions = useMemo(
 		() => [
@@ -66,12 +69,38 @@ export const Welcome = () => {
 	}, [resetTheme]);
 
 	const navigateToProfile = useCallback(
-		(profile: Contracts.IProfile, subPath = "dashboard") => {
+		async (profile: Contracts.IProfile, subPath = "dashboard") => {
+			if (isDeeplink()) {
+				toasts.dismiss();
+				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
+
+				const password = profile.usesPassword() ? profile.password().get() : undefined;
+
+				await context.env.profiles().restore(profile, password);
+				const error = await validateDeeplink(profile);
+				profile.status().reset();
+
+				if (error) {
+					toasts.update(validatingToastId, "error", error);
+					isProfileCardClickedOnce.current = false;
+
+					history.push("/");
+					return;
+				}
+
+				setProfileTheme(profile);
+				setProfileAccentColor(profile);
+
+				handleDeepLink(profile);
+				return;
+			}
+
 			setProfileTheme(profile);
 			setProfileAccentColor(profile);
+
 			history.push(`/profiles/${profile.id()}/${subPath}`);
 		},
-		[history],
+		[history, isDeeplink],
 	);
 
 	const navigateToPreviousPage = useCallback(
@@ -85,15 +114,23 @@ export const Welcome = () => {
 
 	const closeDeleteProfileModal = useCallback(() => {
 		setDeletingProfileId(undefined);
+		isProfileCardClickedOnce.current = false;
 	}, []);
 
 	const closeSignInModal = useCallback(() => {
 		setSelectedProfile(undefined);
 		setRequestedAction(undefined);
+		isProfileCardClickedOnce.current = false;
 	}, []);
 
 	const handleClick = useCallback(
 		(profile: Contracts.IProfile) => {
+			if (isProfileCardClickedOnce.current) {
+				return;
+			}
+
+			isProfileCardClickedOnce.current = true;
+
 			if (profile.usesPassword()) {
 				setSelectedProfile(profile);
 				setRequestedAction({ label: "Homepage", value: "home" });
@@ -101,7 +138,7 @@ export const Welcome = () => {
 				navigateToProfile(profile);
 			}
 		},
-		[navigateToProfile],
+		[navigateToProfile, selectedProfile],
 	);
 
 	const handleRequestedAction = useCallback(

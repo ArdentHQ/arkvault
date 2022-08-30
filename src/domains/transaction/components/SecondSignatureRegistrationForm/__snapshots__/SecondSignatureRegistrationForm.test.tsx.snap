@@ -286,7 +286,7 @@ exports[`SecondSignatureRegistrationForm should not generate mnemonic if already
           class="pt-6"
         >
           <fieldset
-            class="flex flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -494,7 +494,7 @@ exports[`SecondSignatureRegistrationForm should render generation step 1`] = `
           class="pt-6"
         >
           <fieldset
-            class="flex flex-col css-1bcidjh"
+            class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
               class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

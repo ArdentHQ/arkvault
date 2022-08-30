@@ -56,7 +56,7 @@ exports[`UpdateContact should render responsive 1`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-1bcidjh"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -86,7 +86,7 @@ exports[`UpdateContact should render responsive 1`] = `
                   class="css-pwc11e"
                 >
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -190,7 +190,7 @@ exports[`UpdateContact should render responsive 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -419,7 +419,7 @@ exports[`UpdateContact should render responsive 2`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-1bcidjh"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -449,7 +449,7 @@ exports[`UpdateContact should render responsive 2`] = `
                   class="css-pwc11e"
                 >
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -553,7 +553,7 @@ exports[`UpdateContact should render responsive 2`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                     data-testid="ContactForm__address"
                   >
                     <label
@@ -809,7 +809,7 @@ exports[`UpdateContact should render responsive 3`] = `
                 data-testid="contact-form"
               >
                 <fieldset
-                  class="flex flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-1bcidjh"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -839,7 +839,7 @@ exports[`UpdateContact should render responsive 3`] = `
                   class="css-pwc11e"
                 >
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -943,7 +943,7 @@ exports[`UpdateContact should render responsive 3`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                     data-testid="ContactForm__address"
                   >
                     <label

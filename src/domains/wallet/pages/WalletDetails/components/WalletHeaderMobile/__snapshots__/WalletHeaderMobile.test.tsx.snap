@@ -3,7 +3,7 @@
 exports[`WalletHeaderMobile should render 1`] = `
 <DocumentFragment>
   <div
-    class="-mx-8 -mt-8 flex h-13 items-center justify-between bg-black px-8 py-4"
+    class="h-13 -mx-8 -mt-8 flex items-center justify-between bg-black px-8 py-4"
   >
     <div
       class="flex items-center space-x-2"
