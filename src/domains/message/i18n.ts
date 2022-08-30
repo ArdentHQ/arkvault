@@ -22,7 +22,10 @@ export const translations = {
 			DESCRIPTION_LEDGER: "Provide a message below and sign with your ledger.",
 			DESCRIPTION_MNEMONIC: "Provide a message below and sign with your mnemonic passphrase.",
 			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
+			DESCRIPTION_SELECT_WALLET: "Select an address and sign",
 			JSON_STRING: "JSON String",
+			SELECT_ADDRESS_DESCRIPTION: "Find and select the address from your wallets",
+			SELECT_ADDRESS_TITLE: "Select Address",
 			TITLE: "Sign Message",
 		},
 

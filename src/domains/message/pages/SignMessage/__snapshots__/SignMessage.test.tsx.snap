@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignMessage should render (lg) 1`] = `
+exports[`SignMessage Sign with Wallet should render (lg) 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -494,38 +494,60 @@ exports[`SignMessage should render (lg) 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -607,7 +629,7 @@ exports[`SignMessage should render (lg) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should render (xs) 1`] = `
+exports[`SignMessage Sign with Wallet should render (xs) 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -1101,38 +1123,60 @@ exports[`SignMessage should render (xs) 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -1214,7 +1258,7 @@ exports[`SignMessage should render (xs) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should render for ledger wallets 1`] = `
+exports[`SignMessage Sign with Wallet should render for ledger wallets 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -1708,38 +1752,60 @@ exports[`SignMessage should render for ledger wallets 1`] = `
                     >
                       Signatory
                     </label>
-                    <div
-                      class="css-n29l73"
+                    <button
+                      class="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 cursor-default"
+                      data-testid="SelectAddress__wrapper"
                       disabled=""
+                      type="button"
                     >
-                      <div
-                        class="shrink-0 css-8zckym"
-                        data-testid="Avatar"
+                      <span
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <img
-                            alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
-                            title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                          <span
+                            class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                          </span>
+                        </div>
+                      </span>
+                      <div
+                        class="css-n29l73"
+                        disabled=""
+                      >
+                        <div
+                          class="shrink-0 css-8zckym"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="relative flex h-full flex-1 invisible"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                            data-testid="SelectAddress__input"
+                            disabled=""
+                            name="signatory-address"
+                            readonly=""
+                            type="text"
+                            value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                           />
                         </div>
                       </div>
-                      <div
-                        class="relative flex h-full flex-1"
-                      >
-                        <input
-                          autocomplete="off"
-                          class="no-ligatures w-full border-none font-semibold text-theme-secondary-text css-1nupw50"
-                          data-testid="Input"
-                          disabled=""
-                          name="signatory-address"
-                          type="text"
-                          value="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                        />
-                      </div>
-                    </div>
+                    </button>
                   </fieldset>
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -1821,7 +1887,7 @@ exports[`SignMessage should render for ledger wallets 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should sign message with encrypted mnemonic 1`] = `
+exports[`SignMessage Sign with Wallet should sign message with encrypted mnemonic 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"
@@ -2466,7 +2532,7 @@ exports[`SignMessage should sign message with encrypted mnemonic 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SignMessage should sign message with encrypted secret 1`] = `
+exports[`SignMessage Sign with Wallet should sign message with encrypted secret 1`] = `
 <DocumentFragment>
   <div
     class="css-w3nefz"

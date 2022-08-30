@@ -215,6 +215,49 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
+	it("should throw if sign and no message", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "MESSAGE_MISSING" },
+		});
+	});
+
+	it("should validate sign", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=test",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+	});
+
+	it("should generate sign path", () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=test",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		expect(
+			result.current.methods.sign.path({
+				env,
+				network: profile.wallets().first().network(),
+				profile,
+				searchParameters: parameters,
+			}),
+		).toBe(
+			`/profiles/${profile.id()}/sign-message?coin=ARK&nethash=${
+				profile.wallets().first().network().meta().nethash
+			}&method=sign&message=test`,
+		);
+	});
+
 	it("should validate vote", async () => {
 		const mockFindDelegateByName = jest
 			.spyOn(env.delegates(), "findByUsername")
@@ -245,6 +288,18 @@ describe("useSearchParametersValidation", () => {
 		mockFindDelegateByPublicKey.mockRestore();
 	});
 
+	it("should throw for nethash mismatch if sign with invalid address", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=1",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETWORK_MISMATCH" },
+		});
+	});
+
 	it("should fail to find delegate by public key", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=vote&publicKey=1");
 
@@ -273,6 +328,16 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
 			error: { type: "DELEGATE_NOT_FOUND", value: "custom" },
 		});
+	});
+
+	it("should accept a valid address", async () => {
+		const parameters = new URLSearchParams(
+			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=DL8d1p4XL1k4VvkQfZp2PBx38epXdm1Tve",
+		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
+
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
 	it("should require delegate parameter if it is a vote link", async () => {

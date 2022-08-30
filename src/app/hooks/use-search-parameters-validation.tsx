@@ -47,6 +47,7 @@ enum SearchParametersError {
 	NetworkMismatch = "NETWORK_MISMATCH",
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
+	MessageMissing = "MESSAGE_MISSING",
 }
 
 const defaultNetworks = {
@@ -150,6 +151,27 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 	}
 };
 
+const validateSign = async ({ parameters, profile, network }: ValidateParameters) => {
+	const message = parameters.get("message");
+	const address = parameters.get("address");
+
+	if (!message) {
+		return { error: { type: SearchParametersError.MessageMissing } };
+	}
+
+	if (address) {
+		const coin: Coins.Coin = profile.coins().set(network.coin(), network.id());
+
+		await coin.__construct();
+
+		const isValid = await coin.address().validate(address);
+
+		if (!isValid) {
+			return { error: { type: SearchParametersError.NetworkMismatch } };
+		}
+	}
+};
+
 /* istanbul ignore next */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
@@ -174,6 +196,13 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 
 export const useSearchParametersValidation = () => {
 	const methods = {
+		sign: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
@@ -434,6 +463,10 @@ export const useSearchParametersValidation = () => {
 					values={{ network: value }}
 				/>
 			);
+		}
+
+		if (type === SearchParametersError.MessageMissing) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
 		}
 
 		return <WrapperURI />;

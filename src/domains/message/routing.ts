@@ -12,6 +12,11 @@ export const MessageRoutes: RouteItem[] = [
 		path: ProfilePaths.SignMessageWallet,
 	},
 	{
+		component: SignMessage,
+		exact: true,
+		path: ProfilePaths.SignMessage,
+	},
+	{
 		component: VerifyMessage,
 		exact: true,
 		path: ProfilePaths.VerifyMessage,
