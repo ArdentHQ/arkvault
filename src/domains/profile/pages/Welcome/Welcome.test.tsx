@@ -5,13 +5,15 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
+import { renderHook } from "@testing-library/react-hooks";
 import { Welcome } from "./Welcome";
+import { ProfilePaths } from "@/router/paths";
 import { EnvironmentProvider } from "@/app/contexts";
+import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
-import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	act,
 	env,
@@ -40,14 +42,16 @@ const submitPassword = async () => {
 	userEvent.click(screen.getByTestId(submitTestID));
 };
 
-const buildToastMessage = (message: string) => `Invalid URI: ${message}`;
+let toastUpdateSpy: jest.SpyInstance;
+
+const expectToast = async (text: string) => {
+	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
+};
 
 describe("Welcome with deeplink", () => {
 	const history = createHashHistory();
 	const mainnetDeepLink =
 		"/?method=transfer&coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK";
-
-	let toastUpdateSpy: jest.SpyInstance;
 
 	let resetProfileNetworksMock: () => void;
 	let profile: Contracts.IProfile;
@@ -68,6 +72,70 @@ describe("Welcome with deeplink", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should navigate to vote page", async () => {
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+		mockDelegateName.mockRestore();
+	});
+
+	it("should use entered password when using deeplink for a password protected profile", async () => {
+		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
+		const mockPasswordGetter = jest
+			.spyOn(passwordProtectedProfile.password(), "get")
+			.mockReturnValue(getDefaultPassword());
+
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByText(passwordProtectedProfile.name()));
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await act(async () => {
+			await submitPassword();
+		});
+
+		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
+
+		mockDelegateName.mockRestore();
+		mockPasswordGetter.mockRestore();
+	});
+
 	it("should show a warning if the coin is not supported", async () => {
 		const { container } = render(
 			<Route path="/">
@@ -80,17 +148,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.COIN_NOT_SUPPORTED.replace("{{coin}}", "DOGE")),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "COIN_NOT_SUPPORTED", value: "DOGE" }));
 	});
 
 	it("should ignore multiple clicks", async () => {
@@ -104,6 +168,8 @@ describe("Welcome with deeplink", () => {
 				withProviders: true,
 			},
 		);
+
+		const { result } = renderHook(() => useSearchParametersValidation());
 
 		expect(container).toBeInTheDocument();
 
@@ -125,7 +191,7 @@ describe("Welcome with deeplink", () => {
 				1,
 				expect.any(String),
 				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
+				result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH", value: "DOGE" }),
 			),
 		);
 	});
@@ -142,19 +208,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.METHOD_NOT_SUPPORTED.replace("{{method}}", "nuke"),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "METHOD_NOT_SUPPORTED", value: "nuke" }));
 	});
 
 	it("should show a warning if the network and nethash are both missing", async () => {
@@ -169,17 +229,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_OR_NETHASH_MISSING),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "MISSING_NETWORK_OR_NETHASH" }));
 	});
 
 	it("should show a warning if the network parameter is invalid", async () => {
@@ -194,17 +250,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(transactionTranslations.VALIDATION.NETWORK_INVALID.replace("{{network}}", "custom")),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_INVALID", value: "custom" }));
 	});
 
 	it("should show a warning if there are no available senders for network", async () => {
@@ -219,19 +271,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETWORK_NO_WALLETS.replace("{{network}}", "ark.mainnet"),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
 
 	it("should show a warning if there is no network for the given nethash", async () => {
@@ -247,6 +293,8 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
@@ -256,15 +304,7 @@ describe("Welcome with deeplink", () => {
 			omissionPosition: "middle",
 		});
 
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NOT_ENABLED.replace("{{nethash}}", truncated),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETHASH_NOT_ENABLED", value: truncated }));
 	});
 
 	it("should show a warning if there are no available senders for the network with the given nethash", async () => {
@@ -280,24 +320,13 @@ describe("Welcome with deeplink", () => {
 			},
 		);
 
+		const { result } = renderHook(() => useSearchParametersValidation());
+
 		expect(container).toBeInTheDocument();
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		const truncated = truncate(nethash, {
-			length: 20,
-			omissionPosition: "middle",
-		});
-
-		await waitFor(() =>
-			expect(toastUpdateSpy).toHaveBeenCalledWith(
-				expect.any(String),
-				"error",
-				buildToastMessage(
-					transactionTranslations.VALIDATION.NETHASH_NO_WALLETS.replace("{{nethash}}", truncated),
-				),
-			),
-		);
+		await expectToast(result.current.buildSearchParametersError({ type: "NETWORK_NO_WALLETS", value: "ARK" }));
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
@@ -338,29 +367,145 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 	});
 
-	it("should navigate to vote page", async () => {
-		const mockDelegateName = jest
-			.spyOn(env.delegates(), "findByUsername")
-			.mockReturnValue(profile.wallets().first());
+	it("should redirect to profile if only one available", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
 
-		const { container } = render(
+		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+			findById: () => profile,
+			values: () => [profile],
+		}));
+
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				// Using transfer page as an example
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 				withProviders: true,
 			},
 		);
 
-		expect(container).toBeInTheDocument();
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
 
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		// Automatically redirects to transfer page
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 
-		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+		toastWarningSpy.mockRestore();
+		profilesSpy.mockRestore();
+	});
 
-		mockDelegateName.mockRestore();
+	it("should redirect to password protected profile if only one available", async () => {
+		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
+
+		const mockPasswordGetter = jest
+			.spyOn(passwordProtectedProfile.password(), "get")
+			.mockReturnValue(getDefaultPassword());
+
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+			findById: () => passwordProtectedProfile,
+			values: () => [passwordProtectedProfile],
+		}));
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				// Using transfer page as an example
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await act(async () => {
+			await submitPassword();
+		});
+
+		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+
+		mockPasswordGetter.mockRestore();
+		toastWarningSpy.mockRestore();
+		profilesSpy.mockRestore();
+	});
+
+	it("should prompt the user to select a profile", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it.each([
+		["createProfile", ProfilePaths.CreateProfile],
+		["importProfile", ProfilePaths.ImportProfile],
+	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
+		});
+
+		history.push(path);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it("should clear the profile validation timeout", async () => {
+		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout");
+
+		const { unmount } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		unmount();
+
+		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Number));
+
+		clearTimeoutSpy.mockRestore();
 	});
 
 	it("should navigate to sign page", async () => {
