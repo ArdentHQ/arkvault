@@ -38,6 +38,7 @@ export const SignMessage: React.VFC = () => {
 	const activeProfile = useActiveProfile();
 	const queryParameters = useQueryParameters();
 	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
+	const isDeeplink = !!activeNetwork;
 
 	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
 	const walletFromDeeplink = useMemo(() => {
@@ -171,7 +172,7 @@ export const SignMessage: React.VFC = () => {
 						<StepsProvider steps={3} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
-									disabled={!!selectedWallet}
+									disabled={!isDeeplink}
 									profile={activeProfile}
 									wallets={wallets}
 									disableMessageInput={false}
