@@ -13,7 +13,7 @@ import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor, useDeeplink, useProfileRestore, useTheme } from "@/app/hooks";
+import { useAccentColor, useDeeplink, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
 import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
@@ -23,7 +23,6 @@ export const Welcome = () => {
 	const context = useEnvironmentContext();
 	const history = useHistory<LocationState>();
 	const [isThemeLoaded, setThemeLoaded] = useState(false);
-	const { restoreProfile } = useProfileRestore();
 	const isProfileCardClickedOnce = useRef(false);
 
 	const { t } = useTranslation();
@@ -75,8 +74,11 @@ export const Welcome = () => {
 				toasts.dismiss();
 				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
-				await restoreProfile(profile);
+				const password = profile.usesPassword() ? profile.password().get() : undefined;
+
+				await context.env.profiles().restore(profile, password);
 				const error = await validateDeeplink(profile);
+				profile.status().reset();
 
 				if (error) {
 					toasts.update(validatingToastId, "error", error);
