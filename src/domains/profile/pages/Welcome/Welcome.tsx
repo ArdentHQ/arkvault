@@ -192,8 +192,15 @@ export const Welcome = () => {
 
 		navigateTimeout = setTimeout(() => {
 			if (profiles.length === 1) {
+				const firstProfile = profiles[0];
 				isProfileCardClickedOnce.current = true;
-				navigateToProfile(profiles[0]);
+
+				if (firstProfile.usesPassword()) {
+					setSelectedProfile(firstProfile);
+					setRequestedAction({ label: "Homepage", value: "home" });
+				} else {
+					navigateToProfile(firstProfile);
+				}
 			} else {
 				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
 			}
