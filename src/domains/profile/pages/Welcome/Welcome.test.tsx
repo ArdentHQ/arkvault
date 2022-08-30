@@ -112,7 +112,9 @@ describe("Welcome with deeplink", () => {
 
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
-		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`));
+		await waitFor(() =>
+			expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`),
+		);
 	});
 
 	it("should use entered password when using deeplink for a password protected profile", async () => {

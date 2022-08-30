@@ -165,7 +165,6 @@ describe("useSearchParametersValidation", () => {
 		).resolves.toStrictEqual({ error: { type: "NETWORK_MISMATCH" } });
 	});
 
-
 	it("should return error if recipient does not correspond to network", async () => {
 		const parameters = new URLSearchParams("coin=ARK&network=ark.devnet&method=transfer&recipient=custom");
 

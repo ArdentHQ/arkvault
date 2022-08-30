@@ -3,8 +3,6 @@ import { Route } from "react-router-dom";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import { renderHook } from "@testing-library/react-hooks";
-import { useTranslation } from "react-i18next";
 import { useDeeplink } from "./use-deeplink";
 import {
 	env,
