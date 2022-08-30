@@ -424,7 +424,7 @@ describe("Welcome with deeplink", () => {
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("Modal__inner")).toBeInTheDocument());
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		await act(async () => {
 			await submitPassword();
