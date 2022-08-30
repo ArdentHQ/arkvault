@@ -182,6 +182,37 @@ export const Welcome = () => {
 
 	const hasProfiles = profiles.length > 0;
 
+	useEffect(() => {
+		// The timeout prevents this action from running twice (apparently caused
+		// by lazy loading of this page). If removed, a toast with an error quickly
+		// appears and disappears.
+		let navigateTimeout: ReturnType<typeof setTimeout> | undefined;
+
+		if (!isDeeplink()) {
+			return;
+		}
+
+		navigateTimeout = setTimeout(() => {
+			if (profiles.length === 1) {
+				const firstProfile = profiles[0];
+				isProfileCardClickedOnce.current = true;
+
+				if (firstProfile.usesPassword()) {
+					setSelectedProfile(firstProfile);
+					setRequestedAction({ label: "Homepage", value: "home" });
+				} else {
+					navigateToProfile(firstProfile);
+				}
+			} else {
+				toasts.warning(t("COMMON.SELECT_A_PROFILE"), { delay: 500 });
+			}
+		}, 1);
+
+		return () => {
+			clearTimeout(navigateTimeout!);
+		};
+	}, []);
+
 	if (!isThemeLoaded) {
 		return <></>;
 	}

@@ -261,7 +261,7 @@ export const translations = {
 	PROFILE_SYNC_COMPLETED: "Data updated successfully",
 	PROFILE_SYNC_FAILED:
 		"There has been a network problem on <NetworkNames/> while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click <RetryLink/> to retry.",
-	PROFILE_SYNC_STARTED: "Synchronizing your wallets data. Please wait...",
+	PROFILE_SYNC_STARTED: "Synchronizing your wallets data. Please wait ...",
 	PUBLIC_KEY: "Public Key",
 	PUBLIC_NETWORKS: "Public Networks",
 	QR_CODE: "QR Code",
@@ -360,7 +360,7 @@ export const translations = {
 	UPDATE_NOW: "Update Now",
 	UPDATING: "Updating...",
 	URL: "URL",
-	VALIDATING_URI: "Validating URI. Please wait...",
+	VALIDATING_URI: "Validating URI. Please wait ...",
 	VALIDATION: {
 		CONFIRM_PASSWORD_REQUIRED: "Password confirmation is required",
 		EXISTS: "{{field}} already exists",

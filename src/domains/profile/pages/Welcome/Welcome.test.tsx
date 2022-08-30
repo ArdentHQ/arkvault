@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import { Welcome } from "./Welcome";
+import { ProfilePaths } from "@/router/paths";
 import { EnvironmentProvider } from "@/app/contexts";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -153,6 +154,7 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
 
 		mockDelegateName.mockRestore();
+		mockPasswordGetter.mockRestore();
 	});
 
 	it("should show a warning if the coin is not supported", async () => {
@@ -384,6 +386,147 @@ describe("Welcome with deeplink", () => {
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+	});
+
+	it("should redirect to profile if only one available", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+			findById: () => profile,
+			values: () => [profile],
+		}));
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				// Using transfer page as an example
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+
+		// Automatically redirects to transfer page
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
+
+		toastWarningSpy.mockRestore();
+		profilesSpy.mockRestore();
+	});
+
+	it("should redirect to password protected profile if only one available", async () => {
+		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
+
+		const mockPasswordGetter = jest
+			.spyOn(passwordProtectedProfile.password(), "get")
+			.mockReturnValue(getDefaultPassword());
+
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+			findById: () => passwordProtectedProfile,
+			values: () => [passwordProtectedProfile],
+		}));
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				// Using transfer page as an example
+				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		await act(async () => {
+			await submitPassword();
+		});
+
+		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+
+		mockPasswordGetter.mockRestore();
+		toastWarningSpy.mockRestore();
+		profilesSpy.mockRestore();
+	});
+
+	it("should prompt the user to select a profile", async () => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it.each([
+		["createProfile", ProfilePaths.CreateProfile],
+		["importProfile", ProfilePaths.ImportProfile],
+	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
+		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		await waitFor(() => {
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 });
+		});
+
+		history.push(path);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledTimes(1));
+
+		toastWarningSpy.mockRestore();
+	});
+
+	it("should clear the profile validation timeout", async () => {
+		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout");
+
+		const { unmount } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+				withProviders: true,
+			},
+		);
+
+		unmount();
+
+		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Number));
+
+		clearTimeoutSpy.mockRestore();
 	});
 });
 
