@@ -106,7 +106,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(env.delegates(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
