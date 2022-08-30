@@ -4,6 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
+import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;
 
@@ -185,9 +186,9 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.MESSAGE_MISSING"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "MESSAGE_MISSING" },
+		});
 	});
 
 	it("should validate sign", async () => {
@@ -261,9 +262,9 @@ describe("useSearchParametersValidation", () => {
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
-		await expect(result.current.validateSearchParameters(profile, env, parameters)).rejects.toThrow(
-			t("TRANSACTION.VALIDATION.NETWORK_MISMATCH"),
-		);
+		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+			error: { type: "NETWORK_MISMATCH" },
+		});
 	});
 
 	it("should fail to find delegate by public key", async () => {
