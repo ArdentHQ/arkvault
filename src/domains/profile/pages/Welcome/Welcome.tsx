@@ -74,7 +74,7 @@ export const Welcome = () => {
 				toasts.dismiss();
 				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
-				await context.env.profiles().restore(profile);
+				await context.env.profiles().restore(profile, profile.password().get());
 				const error = await validateDeeplink(profile);
 				profile.status().reset();
 
