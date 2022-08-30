@@ -71,6 +71,69 @@ describe("Welcome with deeplink", () => {
 		resetProfileNetworksMock();
 	});
 
+	it("should navigate to vote page", async () => {
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
+
+		mockDelegateName.mockRestore();
+	});
+
+	it("should use entered password when using deeplink for a password protected profile", async () => {
+		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
+		const mockPasswordGetter = jest
+			.spyOn(passwordProtectedProfile.password(), "get")
+			.mockReturnValue(getDefaultPassword());
+
+		const mockDelegateName = jest
+			.spyOn(env.delegates(), "findByUsername")
+			.mockReturnValue(profile.wallets().first());
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByText(passwordProtectedProfile.name()));
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await act(async () => {
+			await submitPassword();
+		});
+
+		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
+
+		mockDelegateName.mockRestore();
+	});
+
 	it("should show a warning if the coin is not supported", async () => {
 		const { container } = render(
 			<Route path="/">
@@ -300,31 +363,6 @@ describe("Welcome with deeplink", () => {
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
-	});
-
-	it("should navigate to vote page", async () => {
-		const mockDelegateName = jest
-			.spyOn(env.delegates(), "findByUsername")
-			.mockReturnValue(profile.wallets().first());
-
-		const { container } = render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
-				withProviders: true,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`));
-
-		mockDelegateName.mockRestore();
 	});
 });
 
