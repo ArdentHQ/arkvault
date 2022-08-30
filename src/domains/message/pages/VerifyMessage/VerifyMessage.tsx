@@ -57,7 +57,7 @@ export const VerifyMessage: React.VFC = () => {
 	});
 
 	const { errors, formState, setValue, watch } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting } = formState;
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
 
