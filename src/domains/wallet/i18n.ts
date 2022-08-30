@@ -107,7 +107,7 @@ export const translations = {
 
 	PAGE_IMPORT_WALLET: {
 		CANCELLING_STATE: {
-			TITLE: "Cancelling Ledger Import, please wait...",
+			TITLE: "Cancelling Ledger Import, please wait ...",
 		},
 
 		ENCRYPT_PASSWORD_STEP: {

@@ -21,7 +21,7 @@ exports[`LedgerScanStep should render cancelling screen 1`] = `
       <span
         class="animate-pulse font-semibold text-theme-secondary-text"
       >
-        Cancelling Ledger Import, please wait...
+        Cancelling Ledger Import, please wait ...
       </span>
     </div>
   </div>
