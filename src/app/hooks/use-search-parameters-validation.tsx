@@ -425,6 +425,10 @@ export const useSearchParametersValidation = () => {
 			);
 		}
 
+		if (type === SearchParametersError.MessageMissing) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
+		}
+
 		return <WrapperURI />;
 	};
 
