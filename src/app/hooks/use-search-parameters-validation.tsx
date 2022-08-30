@@ -175,6 +175,13 @@ const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 
 export const useSearchParametersValidation = () => {
 	const methods = {
+		sign: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.SignMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateSign,
+		},
 		transfer: {
 			path: ({ profile, searchParameters }: PathProperties) =>
 				`${generatePath(ProfilePaths.SendTransfer, {
@@ -196,13 +203,6 @@ export const useSearchParametersValidation = () => {
 				})}?${searchParameters.toString()}`;
 			},
 			validate: validateVote,
-		},
-		sign: {
-			path: ({ profile, searchParameters }: PathProperties) =>
-				`${generatePath(ProfilePaths.SignMessage, {
-					profileId: profile.id(),
-				})}?${searchParameters.toString()}`,
-			validate: validateSign,
 		},
 	};
 

@@ -4,7 +4,6 @@ import { renderHook } from "@testing-library/react-hooks";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { useSearchParametersValidation } from "./use-search-parameters-validation";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
-import { useTranslation } from "react-i18next";
 
 let profile: Contracts.IProfile;
 
@@ -181,9 +180,6 @@ describe("useSearchParametersValidation", () => {
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign",
 		);
 
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
-
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
@@ -256,9 +252,6 @@ describe("useSearchParametersValidation", () => {
 		const parameters = new URLSearchParams(
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=1",
 		);
-
-		const { result: translation } = renderHook(() => useTranslation());
-		const { t } = translation.current;
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
