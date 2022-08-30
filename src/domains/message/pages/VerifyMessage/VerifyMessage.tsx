@@ -56,7 +56,7 @@ export const VerifyMessage: React.VFC = () => {
 		mode: "onChange",
 	});
 
-	const { formState, setValue, watch } = form;
+	const { errors, formState, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
@@ -142,7 +142,7 @@ export const VerifyMessage: React.VFC = () => {
 		}
 
 		if (isDirty || Object.values(initialState).every(Boolean)) {
-			return !isValid;
+			return Object.values(errors).length > 0;
 		}
 
 		return true;
