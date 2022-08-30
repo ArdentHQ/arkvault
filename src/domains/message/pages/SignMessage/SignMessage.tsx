@@ -1,8 +1,9 @@
 import { Services } from "@ardenthq/sdk";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Clipboard } from "@/app/components/Clipboard";
@@ -12,12 +13,13 @@ import { Icon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider, useLedgerContext } from "@/app/contexts";
-import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useValidation } from "@/app/hooks";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
-
 import { useMessageSigner } from "@/domains/message/hooks/use-message-signer";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { TransactionSender, TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
+import { useNetworkFromQueryParameters, useQueryParameters } from "@/app/hooks/use-query-parameters";
+import { ProfilePaths } from "@/router/paths";
 
 enum Step {
 	FormStep = 1,
@@ -31,13 +33,40 @@ export const SignMessage: React.VFC = () => {
 
 	const history = useHistory();
 
+	const { walletId } = useParams<{ walletId: string }>();
+
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+	const queryParameters = useQueryParameters();
+	const activeNetwork = useNetworkFromQueryParameters(activeProfile);
+	const isDeeplink = !!activeNetwork;
+
+	const walletFromPath = useActiveWalletWhenNeeded(!!walletId);
+	const walletFromDeeplink = useMemo(() => {
+		const address = queryParameters.get("address");
+
+		if (!address || !activeNetwork) {
+			return;
+		}
+
+		return activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork.id());
+	}, [queryParameters]);
+
+	const activeWallet = useMemo(() => walletFromPath || walletFromDeeplink, [walletFromPath, walletFromDeeplink]);
+
+	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet | undefined>(activeWallet);
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 
+	const wallets = useMemo(
+		() =>
+			activeNetwork
+				? activeProfile.wallets().findByCoinWithNetwork(activeNetwork.coin(), activeNetwork.id())
+				: [],
+		[activeNetwork, activeProfile],
+	);
+
 	const initialState: Services.SignedMessage = {
-		message: "",
+		message: queryParameters.get("message") || "",
 		signatory: "",
 		signature: "",
 	};
@@ -45,16 +74,30 @@ export const SignMessage: React.VFC = () => {
 	const [signedMessage, setSignedMessage] = useState<Services.SignedMessage>(initialState);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-	const form = useForm({ mode: "onChange" });
+	const form = useForm({
+		defaultValues: {
+			encryptionPassword: "",
+			message: initialState.message,
+			mnemonic: "",
+			secret: "",
+		},
+		mode: "onChange",
+	});
 
-	const { formState, getValues, handleSubmit, register } = form;
+	const { formState, getValues, handleSubmit, register, trigger } = form;
 	const { isSubmitting, isValid } = formState;
 
 	const { signMessage } = useValidation();
 
 	useEffect(() => {
-		register("message", signMessage.message(activeWallet.isLedger()));
-	}, [register, signMessage]);
+		register("message", signMessage.message(selectedWallet?.isLedger()));
+	}, [selectedWallet, register, signMessage]);
+
+	useEffect(() => {
+		if (initialState.message) {
+			trigger("message");
+		}
+	}, [trigger]);
 
 	const { hasDeviceAvailable, isConnected, connect } = useLedgerContext();
 
@@ -62,9 +105,9 @@ export const SignMessage: React.VFC = () => {
 	const { sign } = useMessageSigner();
 
 	const connectLedger = useCallback(async () => {
-		await connect(activeProfile, activeWallet.coinId(), activeWallet.networkId());
+		await connect(activeProfile, selectedWallet!.coinId(), selectedWallet!.networkId());
 		handleSubmit(submitForm)();
-	}, [activeWallet, activeProfile, connect]);
+	}, [selectedWallet, activeProfile, connect]);
 
 	const handleBack = () => {
 		// Abort any existing listener
@@ -74,7 +117,11 @@ export const SignMessage: React.VFC = () => {
 			return setActiveTab(activeTab - 1);
 		}
 
-		return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+		if (selectedWallet) {
+			return history.push(`/profiles/${activeProfile.id()}/wallets/${selectedWallet.id()}`);
+		}
+
+		return history.push(ProfilePaths.Welcome);
 	};
 
 	const handleNext = () => {
@@ -82,7 +129,7 @@ export const SignMessage: React.VFC = () => {
 
 		const newIndex = activeTab + 1;
 
-		if (newIndex === Step.AuthenticationStep && activeWallet.isLedger()) {
+		if (newIndex === Step.AuthenticationStep && selectedWallet!.isLedger()) {
 			connectLedger();
 		}
 
@@ -90,12 +137,12 @@ export const SignMessage: React.VFC = () => {
 	};
 
 	const submitForm = async () => {
-		const abortSignal = abortReference.current?.signal;
+		const abortSignal = abortReference.current.signal;
 
 		const { message, mnemonic, encryptionPassword, secret } = getValues();
 
 		try {
-			const signedMessageResult = await sign(activeWallet, message, mnemonic, encryptionPassword, secret, {
+			const signedMessageResult = await sign(selectedWallet!, message, mnemonic, encryptionPassword, secret, {
 				abortSignal,
 			});
 
@@ -108,7 +155,14 @@ export const SignMessage: React.VFC = () => {
 		}
 	};
 
-	const hideStepNavigation = activeTab === Step.AuthenticationStep && activeWallet.isLedger();
+	const hideStepNavigation = activeTab === Step.AuthenticationStep && selectedWallet && selectedWallet.isLedger();
+
+	const handleSelectAddress: any = useCallback(
+		(address: string) => {
+			setSelectedWallet(activeProfile.wallets().findByAddressWithNetwork(address, activeNetwork!.id()));
+		},
+		[activeProfile, activeNetwork],
+	);
 
 	return (
 		<Page pageTitle={t("MESSAGE.PAGE_SIGN_MESSAGE.TITLE")}>
@@ -118,40 +172,46 @@ export const SignMessage: React.VFC = () => {
 						<StepsProvider steps={3} activeStep={activeTab}>
 							<TabPanel tabId={Step.FormStep}>
 								<FormStep
+									disabled={!isDeeplink}
+									profile={activeProfile}
+									wallets={wallets}
 									disableMessageInput={false}
 									maxLength={signMessage.message().maxLength?.value}
-									wallet={activeWallet}
+									wallet={selectedWallet}
+									handleSelectAddress={handleSelectAddress}
 								/>
 							</TabPanel>
 
-							<TabPanel tabId={Step.AuthenticationStep}>
-								<AuthenticationStep
-									wallet={activeWallet}
-									ledgerDetails={
-										<>
-											<TransactionSender
-												address={activeWallet.address()}
-												network={activeWallet.network()}
-												paddingPosition="bottom"
-												border={false}
-											/>
+							{selectedWallet && (
+								<>
+									<TabPanel tabId={Step.AuthenticationStep}>
+										<AuthenticationStep
+											wallet={selectedWallet}
+											ledgerDetails={
+												<>
+													<TransactionSender
+														address={selectedWallet.address()}
+														network={selectedWallet.network()}
+														paddingPosition="bottom"
+														border={false}
+													/>
 
-											<TransactionDetail label={t("COMMON.MESSAGE")}>
-												<p className="min-w-0 whitespace-pre-line break-words">
-													{getValues("message")}
-												</p>
-											</TransactionDetail>
-										</>
-									}
-									ledgerIsAwaitingDevice={!hasDeviceAvailable}
-									ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
-									subject="message"
-								/>
-							</TabPanel>
+													<TransactionDetail label={t("COMMON.MESSAGE")}>
+														{getValues("message")}
+													</TransactionDetail>
+												</>
+											}
+											ledgerIsAwaitingDevice={!hasDeviceAvailable}
+											ledgerIsAwaitingApp={hasDeviceAvailable && !isConnected}
+											subject="message"
+										/>
+									</TabPanel>
 
-							<TabPanel tabId={Step.SuccessStep}>
-								<SuccessStep signedMessage={signedMessage} wallet={activeWallet} />
-							</TabPanel>
+									<TabPanel tabId={Step.SuccessStep}>
+										<SuccessStep signedMessage={signedMessage} wallet={selectedWallet} />
+									</TabPanel>
+								</>
+							)}
 
 							<TabPanel tabId={Step.ErrorStep}>
 								<ErrorStep
@@ -167,14 +227,13 @@ export const SignMessage: React.VFC = () => {
 									<Button
 										data-testid="SignMessage__back-button"
 										variant="secondary"
-										disabled={!activeWallet}
 										onClick={handleBack}
 									>
 										{t("COMMON.BACK")}
 									</Button>
 
 									<Button
-										disabled={!isValid}
+										disabled={!isValid || !selectedWallet}
 										onClick={handleNext}
 										data-testid="SignMessage__continue-button"
 									>

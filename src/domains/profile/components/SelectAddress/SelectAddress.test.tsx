@@ -36,9 +36,34 @@ describe("SelectAddress", () => {
 	});
 
 	it("should render without user icon", () => {
-		const { container } = render(<SelectAddress addUserIcon={false} wallets={wallets} profile={profile} />);
+		const { container } = render(<SelectAddress showUserIcon={false} wallets={wallets} profile={profile} />);
 
 		expect(container).toMatchSnapshot();
+	});
+
+	it("should render with wallet name by default", () => {
+		render(
+			<SelectAddress
+				wallets={wallets}
+				profile={profile}
+				wallet={{ address: wallet.address(), network: wallet.network() }}
+			/>,
+		);
+
+		expect(screen.getByTestId("Address__alias")).toBeInTheDocument();
+	});
+
+	it("should render without wallet name", () => {
+		render(
+			<SelectAddress
+				showWalletName={false}
+				wallets={wallets}
+				profile={profile}
+				wallet={{ address: wallet.address(), network: wallet.network() }}
+			/>,
+		);
+
+		expect(screen.queryByTestId("Address__alias")).not.toBeInTheDocument();
 	});
 
 	it("should render invalid", () => {

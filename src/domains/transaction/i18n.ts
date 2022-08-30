@@ -413,6 +413,7 @@ export const translations = {
 		INVALID_URI: "Invalid URI",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
+		MESSAGE_MISSING: "message parameter is missing.",
 		METHOD_MISSING: "method parameter is missing",
 		METHOD_NOT_SUPPORTED: "method <strong>{{method}}</strong> is not supported.",
 		NETHASH_NOT_ENABLED: "network with nethash <strong>{{nethash}}</strong> is not enabled or available.",

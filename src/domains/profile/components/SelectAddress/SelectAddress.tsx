@@ -17,9 +17,13 @@ type SelectAddressProperties = {
 	wallet?: SelectedWallet;
 	wallets: Contracts.IReadWriteWallet[];
 	profile: Contracts.IProfile;
-	addUserIcon?: boolean;
+	showUserIcon?: boolean;
 	disabled?: boolean;
 	isInvalid?: boolean;
+	title?: string;
+	description?: string;
+	showWalletName?: boolean;
+	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
 	onChange?: (address: string) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -38,7 +42,19 @@ const WalletAvatar = ({ address }: any) => {
 
 export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressProperties>(
 	(
-		{ wallet, wallets, profile, disabled, isInvalid, addUserIcon = true, onChange }: SelectAddressProperties,
+		{
+			wallet,
+			wallets,
+			profile,
+			disabled,
+			isInvalid,
+			showUserIcon = true,
+			showWalletName = true,
+			onChange,
+			title,
+			description,
+			disableAction = (wallet: Contracts.IReadWriteWallet) => !wallet.balance(),
+		}: SelectAddressProperties,
 		reference,
 	) => {
 		const [searchWalletIsOpen, setSearchWalletIsOpen] = useState(false);
@@ -86,14 +102,14 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					<span
 						className={cn(
 							"absolute inset-y-0 left-14 flex items-center border border-transparent",
-							addUserIcon ? "right-13" : "right-4",
+							showUserIcon ? "right-13" : "right-4",
 							{
-								"right-13": !addUserIcon && isInvalidField,
-								"right-24": addUserIcon && isInvalidField,
+								"right-13": !showUserIcon && isInvalidField,
+								"right-24": showUserIcon && isInvalidField,
 							},
 						)}
 					>
-						<Address address={selectedWallet?.address} walletName={alias} />
+						<Address address={selectedWallet?.address} walletName={showWalletName ? alias : undefined} />
 					</span>
 
 					<Input
@@ -105,7 +121,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 						disabled={disabled}
 						isInvalid={isInvalidField}
 						addons={
-							addUserIcon
+							showUserIcon
 								? {
 										end: {
 											content: (
@@ -130,9 +146,9 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 				<SearchWallet
 					isOpen={searchWalletIsOpen}
 					profile={profile}
-					title={t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
-					description={t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
-					disableAction={(wallet: Contracts.IReadWriteWallet) => !wallet.balance()}
+					title={title || t("PROFILE.MODAL_SELECT_SENDER.TITLE")}
+					description={description || t("PROFILE.MODAL_SELECT_SENDER.DESCRIPTION")}
+					disableAction={disableAction}
 					searchPlaceholder={t("PROFILE.MODAL_SELECT_SENDER.SEARCH_PLACEHOLDER")}
 					wallets={wallets}
 					size="4xl"
