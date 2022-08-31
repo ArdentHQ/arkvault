@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
 import { StepHeader } from "@/app/components/StepHeader";
@@ -11,19 +11,12 @@ import { Switch } from "@/app/components/Switch";
 
 const JsonForm = () => {
 	const { t } = useTranslation();
-	const jsonReference = useRef();
 
-	const { register, unregister, setValue } = useFormContext();
+	const { register, unregister } = useFormContext();
 
 	const { verifyMessage } = useValidation();
 
-	useEffect(() => {
-		register("jsonString", verifyMessage.jsonString());
-	}, [register, verifyMessage]);
-
-	useEffect(() => {
-		unregister(["signatory", "message", "signature"]);
-	}, [unregister]);
+	useEffect(() => () => unregister("jsonString"), [unregister]);
 
 	return (
 		<div data-testid="VerifyMessage__json" className="mt-4">
@@ -33,14 +26,8 @@ const JsonForm = () => {
 					data-testid="VerifyMessage__json-jsonString"
 					className="py-4"
 					initialHeight={90}
-					placeholder={'{"signatory": "...", "signature": "...", "message": "..."}'}
-					onChange={(event: ChangeEvent<HTMLInputElement>) =>
-						setValue("jsonString", event.target.value, {
-							shouldDirty: true,
-							shouldValidate: true,
-						})
-					}
-					ref={jsonReference}
+					placeholder={'{"signatory": "...", "message": "...", "signature": "..."}'}
+					ref={register(verifyMessage.jsonString())}
 				/>
 			</FormField>
 		</div>
@@ -52,46 +39,25 @@ const ManualForm = () => {
 
 	const { register, unregister } = useFormContext();
 
-	useEffect(() => {
-		unregister("jsonString");
-	}, [unregister]);
+	const { verifyMessage } = useValidation();
+
+	useEffect(() => () => unregister(["signatory", "message", "signature"]), [unregister]);
 
 	return (
 		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
 			<FormField name="signatory">
 				<FormLabel label={t("COMMON.SIGNATORY")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-signatory"
-					ref={register({
-						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-							field: t("COMMON.SIGNATORY"),
-						}).toString(),
-					})}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
 			</FormField>
 
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-message"
-					ref={register({
-						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-							field: t("COMMON.MESSAGE"),
-						}).toString(),
-					})}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
 			</FormField>
 
 			<FormField name="signature">
 				<FormLabel label={t("COMMON.SIGNATURE")} />
-				<InputDefault
-					data-testid="VerifyMessage__manual-signature"
-					ref={register({
-						required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
-							field: t("COMMON.SIGNATURE"),
-						}).toString(),
-					})}
-				/>
+				<InputDefault data-testid="VerifyMessage__manual-signature" ref={register(verifyMessage.signature())} />
 			</FormField>
 		</div>
 	);

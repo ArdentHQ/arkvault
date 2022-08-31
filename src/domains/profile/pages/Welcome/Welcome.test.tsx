@@ -97,6 +97,27 @@ describe("Welcome with deeplink", () => {
 		mockDelegateName.mockRestore();
 	});
 
+	it("should navigate to verify message page", async () => {
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
+				withProviders: true,
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await waitFor(() =>
+			expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`),
+		);
+	});
+
 	it("should use entered password when using deeplink for a password protected profile", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 		const mockPasswordGetter = jest

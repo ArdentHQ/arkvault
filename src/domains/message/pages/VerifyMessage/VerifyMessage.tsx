@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import { Coins, Services } from "@ardenthq/sdk";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
-import { Services } from "@ardenthq/sdk";
+import { useHistory, useParams } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { SuccessStep } from "./SuccessStep";
 import { Page, Section } from "@/app/components/Layout";
 import { Tabs, TabPanel } from "@/app/components/Tabs";
 import { StepsProvider } from "@/app/contexts";
-
 import { Form, FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
-import { useActiveProfile, useActiveWallet } from "@/app/hooks";
+import { useActiveProfile, useActiveWalletWhenNeeded, useQueryParameters } from "@/app/hooks";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { ProfilePaths } from "@/router/paths";
 
 enum Step {
 	FormStep = 1,
@@ -25,20 +25,39 @@ export enum VerificationMethod {
 	Json,
 }
 
+interface VerifyMessageFormState {
+	message: string;
+	signatory: string;
+	signature: string;
+	jsonString: string;
+}
+
 export type VerificationResult = { verified?: boolean } & Services.SignedMessage;
 
 export const VerifyMessage: React.VFC = () => {
 	const { t } = useTranslation();
 
+	const { walletId } = useParams<{ walletId: string }>();
+	const queryParameters = useQueryParameters();
+
 	const activeProfile = useActiveProfile();
-	const activeWallet = useActiveWallet();
+	const activeWallet = useActiveWalletWhenNeeded(!!walletId);
 
 	const history = useHistory();
 
-	const form = useForm({ mode: "onChange" });
+	const initialState: Services.SignedMessage = {
+		message: queryParameters.get("message") || "",
+		signatory: queryParameters.get("signatory") || "",
+		signature: queryParameters.get("signature") || "",
+	};
 
-	const { formState, getValues } = form;
-	const { isDirty, isSubmitting, isValid } = formState;
+	const form = useForm<VerifyMessageFormState>({
+		defaultValues: initialState,
+		mode: "onChange",
+	});
+
+	const { errors, formState, setValue, watch } = form;
+	const { isDirty, isSubmitting } = formState;
 
 	const [verificationMethod, setVerificationMethod] = useState<VerificationMethod>(VerificationMethod.Manual);
 
@@ -46,18 +65,67 @@ export const VerifyMessage: React.VFC = () => {
 	const [verificationResult, setVerificationResult] = useState<VerificationResult | undefined>();
 	const [activeTab, setActiveTab] = useState(Step.FormStep);
 
-	const handleBack = () => history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+	const { jsonString, message, signatory, signature } = watch();
+
+	const [storedMessage, setStoredMessage] = useState(initialState);
+
+	useEffect(() => {
+		if (verificationMethod === VerificationMethod.Json && (message || signatory || signature)) {
+			setValue("jsonString", JSON.stringify(storedMessage), { shouldDirty: isDirty, shouldValidate: isDirty });
+		}
+
+		if (verificationMethod === VerificationMethod.Manual && jsonString) {
+			setValue("signatory", storedMessage.signatory, { shouldDirty: isDirty, shouldValidate: isDirty });
+			setValue("message", storedMessage.message, { shouldDirty: isDirty, shouldValidate: isDirty });
+			setValue("signature", storedMessage.signature, { shouldDirty: isDirty, shouldValidate: isDirty });
+		}
+	}, [verificationMethod, setValue]);
+
+	useEffect(() => {
+		if (jsonString) {
+			try {
+				setStoredMessage(JSON.parse(jsonString));
+			} catch {
+				// invalid json
+			}
+		}
+	}, [jsonString]);
+
+	useEffect(() => {
+		if (message || signatory || signature) {
+			setStoredMessage({
+				message,
+				signatory,
+				signature,
+			});
+		}
+	}, [message, signatory, signature]);
+
+	const handleBack = () => {
+		if (activeWallet) {
+			return history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`);
+		}
+
+		return history.push(ProfilePaths.Welcome);
+	};
 
 	const submitForm = async () => {
 		try {
-			const signedMessage: VerificationResult =
-				verificationMethod === VerificationMethod.Json
-					? JSON.parse(getValues("jsonString"))
-					: getValues(["signatory", "message", "signature"]);
+			let result: boolean;
 
-			const result = await activeWallet.message().verify(signedMessage);
+			if (activeWallet) {
+				result = await activeWallet.message().verify(storedMessage);
+			} else {
+				const coin: Coins.Coin = activeProfile
+					.coins()
+					.set("ARK", activeProfile.networks().allByCoin("ARK")[0].id);
 
-			setVerificationResult({ ...signedMessage, verified: result });
+				await coin.__construct();
+
+				result = await coin.message().verify(storedMessage);
+			}
+
+			setVerificationResult({ ...storedMessage, verified: result });
 
 			setActiveTab(Step.SuccessStep);
 		} catch (error) {
@@ -66,6 +134,18 @@ export const VerifyMessage: React.VFC = () => {
 			setVerificationResult(undefined);
 			setActiveTab(Step.ErrorStep);
 		}
+	};
+
+	const isSubmitDisabled = () => {
+		if (isSubmitting) {
+			return true;
+		}
+
+		if (isDirty || Object.values(initialState).every(Boolean)) {
+			return Object.values(errors).length > 0;
+		}
+
+		return true;
 	};
 
 	return (
@@ -107,7 +187,7 @@ export const VerifyMessage: React.VFC = () => {
 									<Button
 										data-testid="VerifyMessage__verify-button"
 										type="submit"
-										disabled={isSubmitting || (isDirty ? !isValid : true)}
+										disabled={isSubmitDisabled()}
 									>
 										{t("MESSAGE.PAGE_VERIFY_MESSAGE.VERIFY")}
 									</Button>
@@ -117,9 +197,10 @@ export const VerifyMessage: React.VFC = () => {
 							{activeTab === Step.SuccessStep && (
 								<FormButtons>
 									<Button
-										onClick={handleBack}
 										data-testid="VerifyMessage__back-to-wallet-button"
 										variant="secondary"
+										disabled={!activeWallet?.id()}
+										onClick={handleBack}
 									>
 										<div className="whitespace-nowrap">{t("COMMON.BACK_TO_WALLET")}</div>
 									</Button>
