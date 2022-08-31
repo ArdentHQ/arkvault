@@ -175,6 +175,67 @@ describe("useSearchParametersValidation", () => {
 		});
 	});
 
+	describe("Message Verification", () => {
+		it("should validate verify message", async () => {
+			const parameters = new URLSearchParams(
+				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+			);
+
+			const { result } = renderHook(() => useSearchParametersValidation());
+
+			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
+		});
+
+		it("should generate verify message path", () => {
+			const parameters = new URLSearchParams(
+				"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+			);
+
+			const { result } = renderHook(() => useSearchParametersValidation());
+
+			expect(
+				result.current.methods.verify.path({
+					env,
+					network: profile.wallets().first().network(),
+					profile,
+					searchParameters: parameters,
+				}),
+			).toBe(
+				`/profiles/${profile.id()}/verify-message?coin=ARK&nethash=${
+					profile.wallets().first().network().meta().nethash
+				}&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d`,
+			);
+		});
+
+		it("should throw if message, signatory or signature is missing", async () => {
+			const { result } = renderHook(() => useSearchParametersValidation());
+
+			let parameters = new URLSearchParams(
+				"coin=ARK&network=ark.devnet&method=verify&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+			);
+
+			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+				error: { type: "MISSING_MESSAGE" },
+			});
+
+			parameters = new URLSearchParams(
+				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signature=22f8ef55e8120fbf51e2407c808a1cc98d7ef961646226a3d3fad606437f8ba49ab68dc33c6d4a478f954c72e9bac2b4a4fe48baa70121a311a875dba1527d9d",
+			);
+
+			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+				error: { type: "MISSING_SIGNATORY" },
+			});
+
+			parameters = new URLSearchParams(
+				"coin=ARK&network=ark.devnet&method=verify&message=hello+world&signatory=025f81956d5826bad7d30daed2b5c8c98e72046c1ec8323da336445476183fb7ca",
+			);
+
+			await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
+				error: { type: "MISSING_SIGNATURE" },
+			});
+		});
+	});
+
 	it("should throw if sign and no message", async () => {
 		const parameters = new URLSearchParams(
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign",
@@ -197,7 +258,7 @@ describe("useSearchParametersValidation", () => {
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.not.toThrow();
 	});
 
-	it("should generate sign path", () => {
+	it("should generate sign message path", () => {
 		const parameters = new URLSearchParams(
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=test",
 		);

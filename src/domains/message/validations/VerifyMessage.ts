@@ -12,7 +12,7 @@ export const verifyMessage = (t: any) => ({
 				try {
 					const data = JSON.parse(jsonString);
 
-					if (data.signatory === undefined || data.message === undefined || data.signature === undefined) {
+					if (!data.signatory || !data.message || !data.signature) {
 						return invalidError;
 					}
 				} catch {
@@ -22,5 +22,20 @@ export const verifyMessage = (t: any) => ({
 				return true;
 			},
 		},
+	}),
+	message: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.MESSAGE"),
+		}),
+	}),
+	signatory: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.SIGNATORY"),
+		}),
+	}),
+	signature: () => ({
+		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			field: t("COMMON.SIGNATURE"),
+		}),
 	}),
 });
