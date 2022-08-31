@@ -53,7 +53,7 @@ export const UpdateWalletName: React.VFC<UpdateWalletNameProperties> = ({ onAfte
 			isOpen
 			title={t("WALLETS.MODAL_NAME_WALLET.TITLE")}
 			description={t("WALLETS.MODAL_NAME_WALLET.DESCRIPTION")}
-			size="lg"
+			size="2xl"
 			onClose={onCancel}
 		>
 			<Form context={form} onSubmit={onSubmit} className="mt-8">

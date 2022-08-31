@@ -92,7 +92,7 @@ export const SignIn: React.VFC<SignInProperties> = ({ isOpen, profile, onCancel,
 		<Modal
 			title={t("PROFILE.MODAL_SIGN_IN.TITLE")}
 			description={t("PROFILE.MODAL_SIGN_IN.DESCRIPTION")}
-			size="md"
+			size="2xl"
 			isOpen={isOpen}
 			onClose={onClose}
 		>
