@@ -418,7 +418,9 @@ export const useProfileSynchronizer = ({
 
 				await persist();
 				setStatus("synced");
-			} catch {
+			} catch (error) {
+				console.log(error);
+
 				const { erroredNetworks } = getErroredNetworks(profile);
 				if (erroredNetworks.length > 0) {
 					onProfileSyncError?.(erroredNetworks, () => {
