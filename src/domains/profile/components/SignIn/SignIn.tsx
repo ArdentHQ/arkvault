@@ -113,7 +113,7 @@ export const SignIn: React.VFC<SignInProperties> = ({ isOpen, profile, onCancel,
 
 			<Divider dashed={true} />
 
-			<Form context={methods} onSubmit={handleSubmit} className="mt-8">
+			<Form context={methods} onSubmit={handleSubmit} className={undefined}>
 				<FormField name="password">
 					<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSWORD")} />
 					<InputPassword

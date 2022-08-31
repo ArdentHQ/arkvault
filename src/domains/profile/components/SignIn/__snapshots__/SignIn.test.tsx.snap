@@ -105,7 +105,6 @@ exports[`SignIn should render a modal 1`] = `
               type="horizontal"
             />
             <form
-              class="mt-8"
               data-testid="Form"
             >
               <fieldset
