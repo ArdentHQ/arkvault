@@ -25,7 +25,7 @@ export const PasswordModal = ({ isOpen, title, description, onClose, onSubmit }:
 			title={title}
 			titleClass="items-left"
 			description={description}
-			size="md"
+			size="2xl"
 			isOpen={isOpen}
 			onClose={onClose}
 		>

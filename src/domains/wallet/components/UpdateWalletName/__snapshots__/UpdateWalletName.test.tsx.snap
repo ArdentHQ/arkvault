@@ -7,7 +7,7 @@ exports[`UpdateWalletName should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -132,7 +132,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -276,7 +276,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -420,7 +420,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -564,7 +564,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -708,7 +708,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -852,7 +852,7 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
