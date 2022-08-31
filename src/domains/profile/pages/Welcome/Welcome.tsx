@@ -72,12 +72,16 @@ export const Welcome = () => {
 		async (profile: Contracts.IProfile, subPath = "dashboard") => {
 			if (isDeeplink()) {
 				toasts.dismiss();
+
 				const validatingToastId = toasts.warning(t("COMMON.VALIDATING_URI"));
 
 				const password = profile.usesPassword() ? profile.password().get() : undefined;
 
 				await context.env.profiles().restore(profile, password);
+				await profile.sync();
+
 				const error = await validateDeeplink(profile);
+
 				profile.status().reset();
 
 				if (error) {
