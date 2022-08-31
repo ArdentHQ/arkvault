@@ -19,7 +19,7 @@ const baseStyle = (size?: Size, noShadow?: boolean) => {
 };
 
 const shape = "flex border-2 rounded-full justify-center items-center align-middle";
-const colors = "bg-theme-background border-transparent";
+const colors = "bg-theme-background";
 
 export const defaultClasses = `${shape} ${colors}`;
 

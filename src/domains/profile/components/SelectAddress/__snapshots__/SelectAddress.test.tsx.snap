@@ -9,7 +9,7 @@ exports[`SelectAddress should render disabled 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -70,7 +70,7 @@ exports[`SelectAddress should render empty 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -129,7 +129,7 @@ exports[`SelectAddress should render invalid 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 right-24"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -202,7 +202,7 @@ exports[`SelectAddress should render with preselected address 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -290,7 +290,7 @@ exports[`SelectAddress should render without user icon 1`] = `
     type="button"
   >
     <span
-      class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+      class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
     >
       <div
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

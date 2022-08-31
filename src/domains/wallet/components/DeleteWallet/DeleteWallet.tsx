@@ -31,7 +31,7 @@ export const DeleteWallet = ({ onClose, onCancel, onDelete, wallet }: DeleteWall
 						network: wallet.network(),
 					}}
 					wallets={[]}
-					addUserIcon={false}
+					showUserIcon={false}
 					profile={wallet.profile()}
 					disabled={true}
 				/>

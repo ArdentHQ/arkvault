@@ -437,7 +437,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -741,7 +741,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -1547,7 +1547,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2177,7 +2177,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                     class="space-y-6 pt-6"
                   >
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2313,7 +2313,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2331,7 +2331,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2483,7 +2483,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                             class="space-y-5"
                           >
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <div>
                                 <div
@@ -2603,7 +2603,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col css-5kz4tk"
+                              class="flex min-w-0 flex-col css-5kz4tk"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -2741,7 +2741,7 @@ exports[`SendTransfer should render form and use location state with nethash par
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3417,7 +3417,7 @@ exports[`SendTransfer should render form and use location state with network par
                     class="space-y-6 pt-6"
                   >
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3553,7 +3553,7 @@ exports[`SendTransfer should render form and use location state with network par
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3571,7 +3571,7 @@ exports[`SendTransfer should render form and use location state with network par
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3723,7 +3723,7 @@ exports[`SendTransfer should render form and use location state with network par
                             class="space-y-5"
                           >
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <div>
                                 <div
@@ -3843,7 +3843,7 @@ exports[`SendTransfer should render form and use location state with network par
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col css-5kz4tk"
+                              class="flex min-w-0 flex-col css-5kz4tk"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -3981,7 +3981,7 @@ exports[`SendTransfer should render form and use location state with network par
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4657,7 +4657,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                     class="space-y-6 pt-6"
                   >
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4793,7 +4793,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -4811,7 +4811,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           type="button"
                         >
                           <span
-                            class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+                            class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
                           >
                             <div
                               class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4963,7 +4963,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                             class="space-y-5"
                           >
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <div>
                                 <div
@@ -5072,7 +5072,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                             </fieldset>
                             <fieldset
-                              class="flex flex-col css-1bcidjh"
+                              class="flex min-w-0 flex-col css-1bcidjh"
                             >
                               <label
                                 class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5190,7 +5190,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                       </div>
                     </fieldset>
                     <fieldset
-                      class="flex flex-col css-1bcidjh"
+                      class="flex min-w-0 flex-col css-1bcidjh"
                     >
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5441,7 +5441,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5577,7 +5577,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5595,7 +5595,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5718,7 +5718,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -5829,7 +5829,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -5938,7 +5938,7 @@ exports[`SendTransfer should render form step (lg) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6155,7 +6155,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6291,7 +6291,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6309,7 +6309,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -6432,7 +6432,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -6543,7 +6543,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6652,7 +6652,7 @@ exports[`SendTransfer should render form step (xs) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6828,7 +6828,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6964,7 +6964,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -6982,7 +6982,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7134,7 +7134,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -7254,7 +7254,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7372,7 +7372,7 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7590,7 +7590,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7726,7 +7726,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -7744,7 +7744,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7896,7 +7896,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -8016,7 +8016,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -8134,7 +8134,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -8352,7 +8352,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -8488,7 +8488,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -8506,7 +8506,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8629,7 +8629,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -8740,7 +8740,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -8800,7 +8800,7 @@ exports[`SendTransfer should render form step without memo input 1`] = `
         </div>
       </div>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9017,7 +9017,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
       class="space-y-6 pt-6"
     >
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9153,7 +9153,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9171,7 +9171,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
             >
               <div
                 class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -9294,7 +9294,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               class="space-y-5"
             >
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <div>
                   <div
@@ -9405,7 +9405,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="flex flex-col css-1bcidjh"
+                class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
                   class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -9514,7 +9514,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="flex flex-col css-1bcidjh"
+        class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
           class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -12458,7 +12458,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -12762,7 +12762,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -13250,7 +13250,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -13554,7 +13554,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -14464,7 +14464,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -14768,7 +14768,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -15334,7 +15334,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -15638,7 +15638,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -16204,7 +16204,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                   </div>
                   <div>
                     <div
-                      class="no-ligatures css-9iovq0"
+                      class="no-ligatures css-1v497ib"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -16508,7 +16508,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19d5ufe"
+                      class="no-ligatures css-fezbvb"
                       data-testid="TransactionFee"
                     >
                       <div
@@ -17127,7 +17127,7 @@ exports[`SendTransfer should show error step and go back 1`] = `
                             <span
                               class="hidden sm:block"
                             >
-                              Copy
+                              Copy Error
                             </span>
                           </div>
                         </button>

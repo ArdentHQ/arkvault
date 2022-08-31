@@ -57,48 +57,6 @@ export const translations = {
 		TITLE: "Select Account",
 	},
 
-	MODAL_SIGN_MESSAGE: {
-		COPY_SIGNATURE: "Copy Signature",
-		FORM_STEP: {
-			DESCRIPTION_ENCRYPTION_PASSWORD: "Provide a message below and sign with your encryption password.",
-			DESCRIPTION_LEDGER: "Provide a message below and sign with your ledger.",
-			DESCRIPTION_MNEMONIC: "Provide a message below and sign with your mnemonic passphrase.",
-			DESCRIPTION_SECRET: "Provide a message below and sign with your secret.",
-			TITLE: "Sign Message",
-		},
-
-		LEDGER_CONFIRMATION_STEP: {
-			TITLE: "Confirm Your Signature",
-		},
-
-		SIGN: "Sign",
-
-		SIGNED_STEP: {
-			TITLE: "Message Successfully Signed",
-		},
-	},
-
-	MODAL_VERIFY_MESSAGE: {
-		DESCRIPTION: "Authenticate a message from an address below.",
-		ERROR: {
-			DESCRIPTION: "Message could not be verified.",
-			TITLE: "Failure",
-		},
-		JSON_STRING: "JSON String",
-		SUCCESS: {
-			DESCRIPTION: "Message has been verified successfully.",
-			TITLE: "Success",
-		},
-		TITLE: "Verify",
-		VERIFICATION_METHOD: {
-			DESCRIPTION: "Input fields manually or provide a JSON string.",
-			JSON: "JSON",
-			MANUAL: "Manual",
-			TITLE: "Verification Method",
-		},
-		VERIFY: "Verify",
-	},
-
 	MODAL_WALLET_ENCRYPTION: {
 		DESCRIPTION:
 			"You are about to register a second passphrase while having your current {{importType}} encrypted with a custom password. Continuing with the second signature registration will automatically remove the encryption once the transaction is sent. Ensure your {{importType}} is backed up before proceeding. You will have to re-import your wallet if you want to use an encryption password again.",
@@ -149,7 +107,7 @@ export const translations = {
 
 	PAGE_IMPORT_WALLET: {
 		CANCELLING_STATE: {
-			TITLE: "Cancelling Ledger Import, please wait...",
+			TITLE: "Cancelling Ledger Import, please wait ...",
 		},
 
 		ENCRYPT_PASSWORD_STEP: {
@@ -172,6 +130,7 @@ export const translations = {
 		},
 
 		LEDGER_SCAN_STEP: {
+			ADD_NEW_ADDRESS: "Add New Address",
 			LOADED_SINGLE_WALLET: "Loaded <strong>1</strong> Wallet",
 			LOADED_WALLETS: "Loaded <strong>{{count}}</strong> Wallets",
 			SUBTITLE: "Select the addresses that you want to import.",
@@ -271,8 +230,6 @@ export const translations = {
 
 		YOUR_WALLETS: "Your Wallets",
 	},
-
-	SIGNATORY: "Signatory",
 
 	SIGNATURE: "Signature",
 

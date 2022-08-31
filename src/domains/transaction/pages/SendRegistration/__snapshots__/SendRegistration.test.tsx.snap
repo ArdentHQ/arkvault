@@ -500,7 +500,7 @@ exports[`Registration should register second signature 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1171,7 +1171,7 @@ exports[`Registration should show error step and go back 1`] = `
                             <span
                               class="hidden sm:block"
                             >
-                              Copy
+                              Copy Error
                             </span>
                           </div>
                         </button>
@@ -1710,7 +1710,7 @@ exports[`Registration should show mnemonic error 1`] = `
                     </div>
                   </div>
                   <fieldset
-                    class="flex flex-col css-1bcidjh"
+                    class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1762,7 +1762,7 @@ exports[`Registration should show mnemonic error 1`] = `
                     </div>
                   </fieldset>
                   <fieldset
-                    class="flex flex-col css-5kz4tk"
+                    class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
                       class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

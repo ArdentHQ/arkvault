@@ -410,18 +410,24 @@ export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) =
 };
 
 export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile) => {
-	const mock = jest.spyOn(profile.networks(), "all").mockReturnValue({
+	const networks = {
 		ark: {
 			...publicNetworksStub["ark"],
 			...testNetworksStub["ark"],
 		},
-		ramdom: {
+		random: {
 			...customNetworksStub["random-enabled"],
 			...customNetworksStub["random"],
 		},
-	});
+	};
+
+	const allMock = jest.spyOn(profile.networks(), "all").mockReturnValue(networks);
+	const allByCoinMock = jest
+		.spyOn(profile.networks(), "allByCoin")
+		.mockImplementation((coin: string) => Object.values(networks[coin.toLowerCase()] ?? []));
 
 	return () => {
-		mock.mockRestore();
+		allMock.mockRestore();
+		allByCoinMock.mockRestore();
 	};
 };

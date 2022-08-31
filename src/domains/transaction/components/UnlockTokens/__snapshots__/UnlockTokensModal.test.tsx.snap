@@ -449,7 +449,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                 </div>
               </div>
               <div
-                class="no-ligatures css-19d5ufe"
+                class="no-ligatures css-fezbvb"
                 data-testid="TransactionAmount"
               >
                 <div
@@ -496,7 +496,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                 </div>
               </div>
               <div
-                class="no-ligatures css-19d5ufe"
+                class="no-ligatures css-fezbvb"
                 data-testid="TransactionFee"
               >
                 <div
@@ -625,7 +625,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 3`]
                   </div>
                 </div>
                 <fieldset
-                  class="flex flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-1bcidjh"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -878,7 +878,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 4`]
                           <span
                             class="hidden sm:block"
                           >
-                            Copy
+                            Copy Error
                           </span>
                         </div>
                       </button>
@@ -1359,7 +1359,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                 </div>
               </div>
               <div
-                class="no-ligatures css-19d5ufe"
+                class="no-ligatures css-fezbvb"
                 data-testid="TransactionAmount"
               >
                 <div
@@ -1406,7 +1406,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                 </div>
               </div>
               <div
-                class="no-ligatures css-19d5ufe"
+                class="no-ligatures css-fezbvb"
                 data-testid="TransactionFee"
               >
                 <div
@@ -1535,7 +1535,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 3
                   </div>
                 </div>
                 <fieldset
-                  class="flex flex-col css-1bcidjh"
+                  class="flex min-w-0 flex-col css-1bcidjh"
                 >
                   <label
                     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -1735,7 +1735,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                 </div>
                 <div>
                   <div
-                    class="no-ligatures css-9iovq0"
+                    class="no-ligatures css-1v497ib"
                     data-testid="TransactionDetail"
                   >
                     <div

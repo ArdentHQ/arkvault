@@ -28,7 +28,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -73,7 +73,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -142,7 +142,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -211,7 +211,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -280,7 +280,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -349,7 +349,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -398,6 +398,75 @@ jobs:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
 
+    e2e-message:
+        needs: build-and-upload
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [16.9.1]
+
+        concurrency:
+            group: ${{ github.head_ref }}-e2e-message
+            cancel-in-progress: true
+
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 7
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+
+            - name: Update System
+              run: sudo apt-get update
+
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+
+            - name: Set up Microsoft Edge
+              run: |
+                  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+                  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+                  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+                  sudo apt update
+                  sudo apt install microsoft-edge-beta
+
+            - name: Download Build Artifact
+              uses: actions/download-artifact@v2
+              with:
+                  name: dist
+                  path: ${{ github.workspace }}/dist
+
+            - name: Start Server
+              run: pnpm serve &
+
+            - name: Chromium
+              run: pnpm test:e2e:ci src/domains/message/cucumber
+
+            - name: Firefox
+              run: pnpm test:e2e:ci:firefox src/domains/message/cucumber
+
+            - name: Edge
+              run: pnpm test:e2e:ci:edge src/domains/message/cucumber
+
+            - name: Upload Screenshots
+              if: ${{ failure() }}
+              uses: actions/upload-artifact@v2
+              with:
+                  name: ${{ github.job }}-screenshots
+                  path: ${{ github.workspace }}/screenshots/**/*
+
     e2e-news:
         needs: build-and-upload
 
@@ -418,7 +487,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -487,7 +556,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:
@@ -556,7 +625,7 @@ jobs:
 
             - uses: pnpm/action-setup@v2
               with:
-                  version: 6.24.4
+                  version: 7
 
             - uses: actions/setup-node@v2
               with:

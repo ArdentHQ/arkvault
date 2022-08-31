@@ -39,7 +39,7 @@ export const WalletHeaderMobile: React.VFC<WalletHeaderProperties> = ({ profile,
 
 	return (
 		<>
-			<div className="-mx-8 -mt-8 flex h-13 items-center justify-between bg-black px-8 py-4">
+			<div className="h-13 -mx-8 -mt-8 flex items-center justify-between bg-black px-8 py-4">
 				<div className="flex items-center space-x-2">
 					<NetworkIcon
 						network={wallet.network()}

@@ -4,15 +4,14 @@ import "jest-extended";
 
 import { Signatories } from "@ardenthq/sdk";
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
+import { toasts } from "@/app/services";
 import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
@@ -118,6 +117,8 @@ describe("SendVote", () => {
 
 		nock.disableNetConnect();
 
+		jest.spyOn(wallet.synchroniser(), "votes").mockImplementation(jest.fn());
+
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
 			.reply(200, voteFixture)
@@ -136,151 +137,37 @@ describe("SendVote", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should return to the select a delegate page to vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
-		userEvent.click(backButton());
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should return to the select a delegate page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
-
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				{" "}
 				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+					{" "}
+					<SendVote />{" "}
+				</LedgerProvider>{" "}
 			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
+			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled()); userEvent.click(backButton()); expect(container).toMatchSnapshot(); }); it("should return to the select a delegate page to unvote/vote", async () => { const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`; const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`); const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ]; appendParameters(parameters, "unvote", unvotes); const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ]; appendParameters(parameters, "vote", votes); const { container } = render( <Route path="/profiles/:profileId/wallets/:walletId/send-vote"> <LedgerProvider> <SendVote /> </LedgerProvider> </Route>, { route: { pathname: voteURL, search: `?${parameters}`, }, },); expect(screen.getByTestId(formStepID)).toBeInTheDocument(); await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled());
 		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should return to the select a delegate page to unvote/vote", async () => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
-		appendParameters(parameters, "unvote", unvotes);
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		// Back to select a delegate page
-		await waitFor(() => expect(backButton()).not.toBeDisabled());
-
-		userEvent.click(backButton());
-
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should send a unvote & vote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+	it("should send a vote transaction", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
-
-		const unvotes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[1].address,
-			},
-		];
-
-		appendParameters(parameters, "unvote", unvotes);
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -322,24 +209,12 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signUnvoteMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastUnvoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [unvoteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionUnvoteMock = createVoteTransactionMock(wallet);
-
 		const signVoteMock = jest
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastVoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
+		const broadcastVoteMock = jest
+			.spyOn(wallet.transaction(), "broadcast")
+			.mockResolvedValue({ accepted: [voteFixture.data.id], errors: {}, rejected: [] });
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
@@ -353,16 +228,11 @@ describe("SendVote", () => {
 			userEvent.click(sendButton());
 		});
 
+		votesMock.mockRestore();
+		const votingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+
 		act(() => {
 			jest.advanceTimersByTime(1000);
-		});
-
-		setTimeout(() => {
-			votesMock.mockRestore();
-		}, 3000);
-
-		act(() => {
-			jest.runOnlyPendingTimers();
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -378,22 +248,76 @@ describe("SendVote", () => {
 
 		historySpy.mockRestore();
 
-		signUnvoteMock.mockRestore();
-		broadcastUnvoteMock.mockRestore();
-		transactionUnvoteMock.mockRestore();
-
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
+		votingMock.mockRestore();
+	});
+
+	it("should warning in toast if wallet is already voting the delegate", async () => {
+		await wallet.synchroniser().votes();
+
+		const toastMock = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[0].publicKey,
+					rank: 1,
+					username: "arkx",
+				}),
+			},
+		]);
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const votes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "vote", votes);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(toastMock).toHaveBeenCalledWith("ARK Wallet 1 is already voting for arkx.");
+		});
+
+		votesMock.mockRestore();
+		toastMock.mockRestore();
 	});
 
 	it("should send a unvote & vote transaction and use split voting method", async () => {
 		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -497,7 +421,7 @@ describe("SendVote", () => {
 					unvotes: [
 						{
 							amount: 10,
-							id: delegateData[1].publicKey,
+							id: delegateData[1].address,
 						},
 					],
 				},
@@ -534,35 +458,15 @@ describe("SendVote", () => {
 		splitVotingMethodMock.mockRestore();
 	});
 
-	it.each(["with keyboard", "without keyboard"])("should send a vote transaction %s", async (inputMethod) => {
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+	it("should select sender", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		const parameters = new URLSearchParams();
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0.1",
-				},
-			}),
-		);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<LedgerProvider>
-						<SendVote />
-					</LedgerProvider>
-				</FormProvider>
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
 			</Route>,
 			{
 				route: {
@@ -574,87 +478,109 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
-		// Fee
-		expect(screen.getAllByRole("radio")[1]).toBeChecked();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
+		userEvent.click(firstAddress);
 
-		expect(screen.getAllByRole("radio")[2]).toBeChecked();
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().last().address(),
+		);
+	});
 
-		// remove focus from fee button
-		userEvent.click(document.body);
+	it("should redirect to dashboard when clicking back and wallet is not provided in url", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
 
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		const { history } = render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
 
-		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+		const historySpy = jest.spyOn(history, "push");
 
-		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
-		} else {
-			userEvent.click(continueButton());
-		}
+		userEvent.click(backButton());
 
-		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+	});
 
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createVoteTransactionMock(wallet);
+	it("should select sender wallet and sync if not yet synced", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
+		const walletSyncMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
-		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
 
-		await waitFor(() => {
-			expect(passwordInput).toHaveValue(passphrase);
-		});
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		act(() => {
-			jest.advanceTimersByTime(1000);
-		});
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await act(async () => {
-			if (inputMethod === "with keyboard") {
-				userEvent.keyboard("{enter}");
-			} else {
-				userEvent.click(sendButton());
-			}
-		});
+		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+		userEvent.click(firstAddress);
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue(
+			profile.wallets().first().address(),
+		);
 
-		expect(container).toMatchSnapshot();
+		walletSyncMock.mockRestore();
+	});
 
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
+	it("should render without selected wallet", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
+		const parameters = new URLSearchParams(`?&nethash=${wallet.network().meta().nethash}`);
+
+		render(
+			<Route path="/profiles/:profileId/send-vote">
+				<LedgerProvider>
+					<SendVote />
+				</LedgerProvider>
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		await expect(screen.findByTestId("SelectAddress__input")).resolves.toHaveValue("");
 	});
 
 	it("should keep the fee when user step back", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -676,7 +602,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -707,13 +633,12 @@ describe("SendVote", () => {
 
 	it("should move back and forth between steps", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -735,7 +660,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		userEvent.click(screen.getAllByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED)[0]);
 
@@ -782,14 +707,39 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote transaction", async () => {
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[0].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[0].publicKey,
+					username: delegateData[0].username,
+				}),
+			},
+			{
+				amount: 10,
+				wallet: new ReadOnlyWallet({
+					address: delegateData[1].address,
+					explorerLink: "",
+					governanceIdentifier: "address",
+					isDelegate: true,
+					isResignedDelegate: false,
+					publicKey: delegateData[1].publicKey,
+					username: delegateData[1].username,
+				}),
+			},
+		]);
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -811,7 +761,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -856,12 +806,12 @@ describe("SendVote", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		votesMock.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -896,9 +846,9 @@ describe("SendVote", () => {
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		userEvent.paste(inputElement, "5");
 
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
+		await waitFor(() => expect(inputElement).toHaveValue("5"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -918,8 +868,7 @@ describe("SendVote", () => {
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -976,8 +925,7 @@ describe("SendVote", () => {
 
 	it("should show error if wrong mnemonic", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -1036,9 +984,9 @@ describe("SendVote", () => {
 		jest.useRealTimers();
 
 		const history = createHashHistory();
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
-		const parameters = new URLSearchParams();
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const votes: VoteDelegateProperties[] = [
 			{
@@ -1117,8 +1065,7 @@ describe("SendVote", () => {
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
@@ -1212,13 +1159,12 @@ describe("SendVote", () => {
 		});
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
 		const unvotes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
-				delegateAddress: delegateData[1].address,
+				delegateAddress: delegateData[0].address,
 			},
 		];
 
@@ -1240,7 +1186,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 		userEvent.click(continueButton());
@@ -1298,96 +1244,5 @@ describe("SendVote", () => {
 		voteTransactionMock.mockRestore();
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
-	});
-
-	it("should send a vote transaction using encryption password", async () => {
-		jest.useRealTimers();
-
-		const actsWithMnemonicMock = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
-
-		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
-
-		const parameters = new URLSearchParams();
-
-		const votes: VoteDelegateProperties[] = [
-			{
-				amount: 10,
-				delegateAddress: delegateData[0].address,
-			},
-		];
-
-		appendParameters(parameters, "vote", votes);
-
-		// eslint-disable-next-line sonarjs/no-identical-functions
-		const { result: form } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0.1",
-				},
-			}),
-		);
-
-		render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<FormProvider {...form.current}>
-					<LedgerProvider>
-						<SendVote />
-					</LedgerProvider>
-				</FormProvider>
-			</Route>,
-			{
-				route: {
-					pathname: voteURL,
-					search: `?${parameters}`,
-				},
-			},
-		);
-
-		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
-
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
-
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
-
-		// Review Step
-		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-
-		userEvent.click(continueButton());
-
-		// AuthenticationStep
-		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
-
-		const signMock = jest
-			.spyOn(wallet.transaction(), "signVote")
-			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [voteFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createVoteTransactionMock(wallet);
-
-		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		userEvent.paste(passwordInput, "password");
-
-		await waitFor(() => expect(passwordInput).toHaveValue("password"));
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		await act(async () => {
-			userEvent.click(sendButton());
-		});
-
-		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
 	});
 });

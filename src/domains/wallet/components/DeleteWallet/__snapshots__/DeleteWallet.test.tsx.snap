@@ -7,7 +7,7 @@ exports[`DeleteWallet should render a modal 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-x6jl3y"
+      class="css-amqh1w"
       tabindex="-1"
     >
       <div
@@ -95,7 +95,7 @@ exports[`DeleteWallet should render a modal 1`] = `
                 type="button"
               >
                 <span
-                  class="absolute inset-0 flex w-full items-center border border-transparent px-14"
+                  class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
                 >
                   <div
                     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

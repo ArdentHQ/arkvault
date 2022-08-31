@@ -8,7 +8,7 @@ import { GlobalStyles as BaseStyles } from "twin.macro";
 
 import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 import { useEnvironmentContext, useNavigationContext } from "@/app/contexts";
-import { useAccentColor, useDeeplink, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
+import { useAccentColor, useNetworkStatus, useProfileSynchronizer, useTheme } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
@@ -127,8 +127,6 @@ const Main: React.VFC = () => {
 			history.replace("/");
 		},
 	});
-
-	useDeeplink();
 
 	const handleError = useErrorHandler();
 

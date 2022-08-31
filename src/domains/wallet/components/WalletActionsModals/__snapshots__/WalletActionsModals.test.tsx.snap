@@ -8,12 +8,8 @@ exports[`WalletActionsModals should render \`second-signature\` modal 1`] = `[Fu
 
 exports[`WalletActionsModals should render \`second-signature\` modal with mnemonic encryption wallet 1`] = `[Function]`;
 
-exports[`WalletActionsModals should render \`sign-message\` modal 1`] = `[Function]`;
-
 exports[`WalletActionsModals should render \`transaction-history\` modal 1`] = `[Function]`;
 
 exports[`WalletActionsModals should render \`unlockable-balances\` modal 1`] = `[Function]`;
-
-exports[`WalletActionsModals should render \`verify-message\` modal 1`] = `[Function]`;
 
 exports[`WalletActionsModals should render \`wallet-name\` modal 1`] = `[Function]`;

@@ -7,7 +7,6 @@ import { AppRouter, Main } from "./App.blocks";
 import { getDefaultProfileId, render, screen, waitFor, within, env, defaultNetMocks } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
-
 const history = createHashHistory();
 
 jest.setTimeout(7000);
