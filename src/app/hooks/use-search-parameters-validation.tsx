@@ -37,8 +37,11 @@ enum SearchParametersError {
 	DelegateResigned = "DELEGATE_RESIGNED",
 	MethodNotSupported = "METHOD_NOT_SUPPORTED",
 	MissingDelegate = "MISSING_DELEGATE",
+	MissingMessage = "MISSING_MESSAGE",
 	MissingMethod = "MISSING_METHOD",
 	MissingNetworkOrNethash = "MISSING_NETWORK_OR_NETHASH",
+	MissingSignatory = "MISSING_SIGNATORY",
+	MissingSignature = "MISSING_SIGNATURE",
 	NethashNotEnabled = "NETHASH_NOT_ENABLED",
 	NetworkInvalid = "NETWORK_INVALID",
 	NetworkMismatch = "NETWORK_MISMATCH",
@@ -76,6 +79,24 @@ const delegateFromSearchParameters = ({ env, network, searchParameters }: PathPr
 		} catch {
 			//
 		}
+	}
+};
+
+const validateVerify = ({ parameters }: ValidateParameters) => {
+	const message = parameters.get("message");
+	const signatory = parameters.get("signatory");
+	const signature = parameters.get("signature");
+
+	if (!message) {
+		return { error: { type: SearchParametersError.MissingMessage } };
+	}
+
+	if (!signatory) {
+		return { error: { type: SearchParametersError.MissingSignatory } };
+	}
+
+	if (!signature) {
+		return { error: { type: SearchParametersError.MissingSignature } };
 	}
 };
 
@@ -188,6 +209,13 @@ export const useSearchParametersValidation = () => {
 					profileId: profile.id(),
 				})}?${searchParameters.toString()}`,
 			validate: validateTransfer,
+		},
+		verify: {
+			path: ({ profile, searchParameters }: PathProperties) =>
+				`${generatePath(ProfilePaths.VerifyMessage, {
+					profileId: profile.id(),
+				})}?${searchParameters.toString()}`,
+			validate: validateVerify,
 		},
 		vote: {
 			path: ({ profile, searchParameters, env }: PathProperties) => {
@@ -373,12 +401,24 @@ export const useSearchParametersValidation = () => {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.DELEGATE_MISSING" />;
 		}
 
+		if (type === SearchParametersError.MissingMessage) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
+		}
+
 		if (type === SearchParametersError.MissingMethod) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.METHOD_MISSING" />;
 		}
 
 		if (type === SearchParametersError.MissingNetworkOrNethash) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.NETWORK_OR_NETHASH_MISSING" />;
+		}
+
+		if (type === SearchParametersError.MissingSignatory) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATORY_MISSING" />;
+		}
+
+		if (type === SearchParametersError.MissingSignature) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.SIGNATURE_MISSING" />;
 		}
 
 		if (type === SearchParametersError.NethashNotEnabled) {

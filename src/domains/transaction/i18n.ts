@@ -423,6 +423,8 @@ export const translations = {
 		NETWORK_NO_WALLETS:
 			"the current profile has no wallets available for the <strong>{{network}}</strong> network.",
 		NETWORK_OR_NETHASH_MISSING: "network or nethash parameter is missing.",
+		SIGNATORY_MISSING: "signatory is missing",
+		SIGNATURE_MISSING: "signature is missing",
 	},
 	VIEW_RECIPIENTS_LIST: "View Full List",
 	VOTER: "Voter",
