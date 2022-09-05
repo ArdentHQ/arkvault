@@ -22,6 +22,7 @@ export const App: React.VFC = () => {
 
 	const emotionCache = createCache({ key: "emotion-cache" });
 	emotionCache.compat = true;
+	console.log("loading app")
 
 	return (
 		<I18nextProvider i18n={index18n}>
