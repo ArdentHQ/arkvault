@@ -12,11 +12,7 @@ export const usePwa = () => {
 	const [showIOSInstructions, setShowIOSInstructions] = useState(false);
 
 	// @README: For options see: https://vite-plugin-pwa.netlify.app/frameworks/react.html#react
-	useRegisterSW({
-		onRegisterError(error) {
-			console.log("pwa registration error");
-		},
-	});
+	useRegisterSW();
 
 	const dontAskAgain = () => {
 		localStorage.setItem(HIDE_PWA_INSTALL_ALERT, "true");
