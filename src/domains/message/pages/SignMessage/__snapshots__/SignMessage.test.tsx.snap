@@ -2448,24 +2448,31 @@ exports[`SignMessage Sign with Wallet should sign message with encrypted mnemoni
                         JSON String
                       </label>
                       <div
-                        class="py-4 css-qner8f"
-                        disabled=""
+                        class="relative inline-block"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="pointer-events-none absolute bottom-4 right-3 z-10 h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700"
+                        />
+                        <div
+                          class="py-4 css-qner8f"
+                          disabled=""
                         >
-                          <textarea
-                            autocomplete="off"
-                            class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-                            data-testid="TextArea"
-                            disabled=""
-                            name="json-signature"
-                            style="height: 4px;"
-                            type="text"
-                            wrap="hard"
+                          <div
+                            class="relative flex h-full flex-1"
                           >
-                            {"message":"Hello World","signatory":"03694318d1907367906f4b2174b999d134a25d1b285724a375818a45c686c2533c","signature":"c49bb7f00737c78783169e10cad933cb1e9ac6033628b2c6b649ba85f161eedcac68a2c160f0efbeb020a75f3b1af10eaf72445781f5b43c5853a301bd1a413f"}
-                          </textarea>
+                            <textarea
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+                              data-testid="TextArea"
+                              disabled=""
+                              name="json-signature"
+                              style="height: 4px;"
+                              type="text"
+                              wrap="hard"
+                            >
+                              {"message":"Hello World","signatory":"03694318d1907367906f4b2174b999d134a25d1b285724a375818a45c686c2533c","signature":"c49bb7f00737c78783169e10cad933cb1e9ac6033628b2c6b649ba85f161eedcac68a2c160f0efbeb020a75f3b1af10eaf72445781f5b43c5853a301bd1a413f"}
+                            </textarea>
+                          </div>
                         </div>
                       </div>
                     </fieldset>
@@ -3093,24 +3100,31 @@ exports[`SignMessage Sign with Wallet should sign message with encrypted secret 
                         JSON String
                       </label>
                       <div
-                        class="py-4 css-qner8f"
-                        disabled=""
+                        class="relative inline-block"
                       >
                         <div
-                          class="relative flex h-full flex-1"
+                          class="pointer-events-none absolute bottom-4 right-3 z-10 h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700"
+                        />
+                        <div
+                          class="py-4 css-qner8f"
+                          disabled=""
                         >
-                          <textarea
-                            autocomplete="off"
-                            class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-                            data-testid="TextArea"
-                            disabled=""
-                            name="json-signature"
-                            style="height: 4px;"
-                            type="text"
-                            wrap="hard"
+                          <div
+                            class="relative flex h-full flex-1"
                           >
-                            {"message":"Hello World","signatory":"03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933","signature":"dd373d859dc8d982de49532d55a654058cc18a79116677a09debf7a2b59b35ef27cf44c935a7b8685c359964b4a88dc602d20e52f7fae83f7482b221ba00179a"}
-                          </textarea>
+                            <textarea
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
+                              data-testid="TextArea"
+                              disabled=""
+                              name="json-signature"
+                              style="height: 4px;"
+                              type="text"
+                              wrap="hard"
+                            >
+                              {"message":"Hello World","signatory":"03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933","signature":"dd373d859dc8d982de49532d55a654058cc18a79116677a09debf7a2b59b35ef27cf44c935a7b8685c359964b4a88dc602d20e52f7fae83f7482b221ba00179a"}
+                            </textarea>
+                          </div>
                         </div>
                       </div>
                     </fieldset>
