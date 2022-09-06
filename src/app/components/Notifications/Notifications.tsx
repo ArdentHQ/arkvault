@@ -20,6 +20,11 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	const { releases, transactions, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
 	const wrapperReference = useRef();
 
+	useEffect(() => {
+		markAllTransactionsAsRead(true);
+		persist();
+	}, []);
+
 	if (transactions.length === 0 && releases.length === 0) {
 		return (
 			<NotificationsWrapper>
@@ -30,11 +35,6 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 			</NotificationsWrapper>
 		);
 	}
-
-	useEffect(() => {
-		markAllTransactionsAsRead(true);
-		persist();
-	}, []);
 
 	return (
 		<NotificationsWrapper
