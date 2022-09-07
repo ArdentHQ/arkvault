@@ -2289,6 +2289,9 @@ exports[`SendTransfer should render form and use location state with nethash par
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
+                                          class="absolute inset-0 block cursor-pointer md:hidden"
+                                        />
+                                        <div
                                           class="transition-transform text-theme-secondary-500 css-15txs7d"
                                           height="10"
                                           width="10"
@@ -3528,6 +3531,9 @@ exports[`SendTransfer should render form and use location state with network par
                                         class="flex items-center justify-center py-2 px-1"
                                         data-testid="SelectDropdown__caret"
                                       >
+                                        <div
+                                          class="absolute inset-0 block cursor-pointer md:hidden"
+                                        />
                                         <div
                                           class="transition-transform text-theme-secondary-500 css-15txs7d"
                                           height="10"
@@ -4769,6 +4775,9 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
+                                          class="absolute inset-0 block cursor-pointer md:hidden"
+                                        />
+                                        <div
                                           class="transition-transform text-theme-secondary-500 css-15txs7d"
                                           height="10"
                                           width="10"
@@ -5553,6 +5562,9 @@ exports[`SendTransfer should render form step (lg) 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -6267,6 +6279,9 @@ exports[`SendTransfer should render form step (xs) 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -6939,6 +6954,9 @@ exports[`SendTransfer should render form step with deeplink values and handle ca
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
@@ -7702,6 +7720,9 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -8464,6 +8485,9 @@ exports[`SendTransfer should render form step without memo input 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -9128,6 +9152,9 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
@@ -10405,6 +10432,9 @@ exports[`SendTransfer should render network step with dropdown 1`] = `
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
