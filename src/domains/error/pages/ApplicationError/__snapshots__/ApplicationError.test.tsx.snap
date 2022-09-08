@@ -81,21 +81,28 @@ exports[`ApplicationError should render with error message and reload 1`] = `
               class="mx-auto mt-8 max-w-md"
             >
               <div
-                class="py-4 css-qner8f"
-                disabled=""
+                class="relative inline-block"
               >
                 <div
-                  class="relative flex h-full flex-1"
+                  class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+                />
+                <div
+                  class="py-4 css-qner8f"
+                  disabled=""
                 >
-                  <textarea
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-                    data-testid="ErrorStep__errorMessage"
-                    disabled=""
-                    type="text"
+                  <div
+                    class="relative flex h-full flex-1"
                   >
-                    some error
-                  </textarea>
+                    <textarea
+                      autocomplete="off"
+                      class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                      data-testid="ErrorStep__errorMessage"
+                      disabled=""
+                      type="text"
+                    >
+                      some error
+                    </textarea>
+                  </div>
                 </div>
               </div>
             </div>
