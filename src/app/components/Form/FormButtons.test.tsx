@@ -1,8 +1,8 @@
 import React from "react";
 
+import userEvent from "@testing-library/user-event";
 import { FormButtons } from "./FormButtons";
 import { renderResponsive, screen } from "@/utils/testing-library";
-import userEvent from "@testing-library/user-event";
 
 describe("FormButtons", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
