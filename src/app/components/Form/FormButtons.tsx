@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import tw, { styled, css } from "twin.macro";
 import { useNavigationContext } from "@/app/contexts";
-import { useInputFocus, useBreakpoint } from "@/app/hooks";
 
 const FormButtonsWrapper = styled.div<{
 	showMobileNavigation?: boolean;
@@ -39,8 +38,6 @@ const FormButtons: React.FC<{
 	children: React.ReactNode;
 }> = ({ children }) => {
 	const { showMobileNavigation, setHasFixedFormButtons } = useNavigationContext();
-	const { isInputElementFocused } = useInputFocus();
-	const { isXs, isSm } = useBreakpoint();
 
 	useEffect(() => {
 		setHasFixedFormButtons(true);
@@ -48,10 +45,6 @@ const FormButtons: React.FC<{
 			setHasFixedFormButtons(false);
 		};
 	});
-
-	if (isInputElementFocused && (isXs || isSm)) {
-		return null;
-	}
 
 	return <FormButtonsWrapper showMobileNavigation={showMobileNavigation}>{children}</FormButtonsWrapper>;
 };
