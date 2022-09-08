@@ -2,7 +2,6 @@ import cn from "classnames";
 import React, { useEffect } from "react";
 
 import { Input } from "@/app/components/Input";
-import { useBreakpoint } from "@/app/hooks";
 
 type TextareaProperties = {
 	isInvalid?: boolean;
