@@ -4,7 +4,8 @@ export const useInputFocus = () => {
 	const [isInputElementFocused, setIsInputElementFocused] = useState(false);
 
 	const handleFocusIn = (event) => {
-		if (!["textarea", "text"].includes(event.target.type.toLowerCase())) {
+		console.log(event.target.type.toLowerCase());
+		if (!["textarea", "text", "password"].includes(event.target.type.toLowerCase())) {
 			return;
 		}
 
@@ -14,7 +15,7 @@ export const useInputFocus = () => {
 	};
 
 	const handleFocusOut = (event) => {
-		if (!["textarea", "text"].includes(event.target.type.toLowerCase())) {
+		if (!["textarea", "text", "password"].includes(event.target.type.toLowerCase())) {
 			return;
 		}
 
