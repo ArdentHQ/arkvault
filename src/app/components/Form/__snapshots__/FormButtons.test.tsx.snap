@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormButtons should adjust offset if input is focused in lg 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should adjust offset if input is focused in md 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should adjust offset if input is focused in sm 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-1tkbsa1"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should adjust offset if input is focused in xl 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should adjust offset if input is focused in xs 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-1tkbsa1"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should hide if input is focused in lg 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should hide if input is focused in md 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should hide if input is focused in sm 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-1tkbsa1"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should hide if input is focused in xl 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-2wyvkd"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should hide if input is focused in xs 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      data-testid="input"
+    />
+    <div
+      class="css-1tkbsa1"
+    >
+      buttons
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should render in lg 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    button
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should render in md 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    button
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should render in sm 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    button
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should render in xl 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    button
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormButtons should render in xs 1`] = `
+<DocumentFragment>
+  <div
+    class="css-2wyvkd"
+  >
+    button
+  </div>
+</DocumentFragment>
+`;
