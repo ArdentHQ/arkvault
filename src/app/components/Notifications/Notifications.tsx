@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useNotifications } from "./hooks/use-notifications";
@@ -19,6 +19,11 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 
 	const { releases, transactions, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
 	const wrapperReference = useRef();
+
+	useEffect(() => {
+		markAllTransactionsAsRead(true);
+		persist();
+	}, []);
 
 	if (transactions.length === 0 && releases.length === 0) {
 		return (
@@ -64,10 +69,6 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 					isLoading={profile.notifications().transactions().isSyncing() || transactions.length === 0}
 					transactions={transactions}
 					onClick={onTransactionClick}
-					onVisibilityChange={(isVisible) => {
-						markAllTransactionsAsRead(isVisible);
-						persist();
-					}}
 				/>
 			)}
 		</NotificationsWrapper>

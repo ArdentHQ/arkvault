@@ -85,6 +85,11 @@ export default defineConfig({
 		PkgConfig(),
 		OptimizationPersist(),
 		VitePWA({
+			workbox: {
+				// Prevent from precaching html files. Caching index.html causes white-screen after each deployment.
+				// See: https://vite-plugin-pwa.netlify.app/guide/static-assets.html#globpatterns
+				globPatterns: ["**/*.{js,css}"],
+			},
 			includeAssets: [
 				"favicon.svg",
 				"favicon.ico",
