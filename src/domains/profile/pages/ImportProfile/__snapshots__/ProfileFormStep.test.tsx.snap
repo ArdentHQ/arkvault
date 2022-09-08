@@ -483,6 +483,9 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                                     data-testid="SelectDropdown__caret"
                                   >
                                     <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
+                                    <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"
                                       width="10"
@@ -1030,6 +1033,9 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                                     data-testid="SelectDropdown__caret"
                                   >
                                     <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
+                                    <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"
                                       width="10"
@@ -1576,6 +1582,9 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                                     class="flex items-center justify-center py-2 px-1"
                                     data-testid="SelectDropdown__caret"
                                   >
+                                    <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
                                     <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"
@@ -2148,6 +2157,9 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                                     data-testid="SelectDropdown__caret"
                                   >
                                     <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
+                                    <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"
                                       width="10"
@@ -2699,6 +2711,9 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                                     class="flex items-center justify-center py-2 px-1"
                                     data-testid="SelectDropdown__caret"
                                   >
+                                    <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
                                     <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"
@@ -3252,6 +3267,9 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                                     class="flex items-center justify-center py-2 px-1"
                                     data-testid="SelectDropdown__caret"
                                   >
+                                    <div
+                                      class="absolute inset-0 block cursor-pointer md:hidden"
+                                    />
                                     <div
                                       class="transition-transform text-theme-secondary-500 css-15txs7d"
                                       height="10"

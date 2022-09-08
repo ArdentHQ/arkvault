@@ -166,6 +166,9 @@ exports[`UpdateContact should render responsive 1`] = `
                                       data-testid="SelectDropdown__caret"
                                     >
                                       <div
+                                        class="absolute inset-0 block cursor-pointer md:hidden"
+                                      />
+                                      <div
                                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                                         height="10"
                                         width="10"
@@ -528,6 +531,9 @@ exports[`UpdateContact should render responsive 2`] = `
                                       class="flex items-center justify-center py-2 px-1"
                                       data-testid="SelectDropdown__caret"
                                     >
+                                      <div
+                                        class="absolute inset-0 block cursor-pointer md:hidden"
+                                      />
                                       <div
                                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                                         height="10"
@@ -918,6 +924,9 @@ exports[`UpdateContact should render responsive 3`] = `
                                       class="flex items-center justify-center py-2 px-1"
                                       data-testid="SelectDropdown__caret"
                                     >
+                                      <div
+                                        class="absolute inset-0 block cursor-pointer md:hidden"
+                                      />
                                       <div
                                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                                         height="10"
