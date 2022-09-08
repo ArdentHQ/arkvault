@@ -125,6 +125,9 @@ exports[`ImportWallet import with private key when is not valid 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -371,6 +374,9 @@ exports[`ImportWallet import with private key when is valid 1`] = `
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
@@ -619,6 +625,9 @@ exports[`ImportWallet import with wif with invalid wif 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -866,6 +875,9 @@ exports[`ImportWallet import with wif with valid wif 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -1112,6 +1124,9 @@ exports[`ImportWallet should import with encryped wif 1`] = `
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
@@ -1933,6 +1948,9 @@ exports[`ImportWallet should render method step 1`] = `
                           data-testid="SelectDropdown__caret"
                         >
                           <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
+                          <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"
                             width="10"
@@ -2166,6 +2184,9 @@ exports[`ImportWallet should render network step 1`] = `
                           class="flex items-center justify-center py-2 px-1"
                           data-testid="SelectDropdown__caret"
                         >
+                          <div
+                            class="absolute inset-0 block cursor-pointer md:hidden"
+                          />
                           <div
                             class="transition-transform text-theme-secondary-500 css-15txs7d"
                             height="10"

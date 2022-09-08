@@ -631,6 +631,9 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                                         data-testid="SelectDropdown__caret"
                                       >
                                         <div
+                                          class="absolute inset-0 block cursor-pointer md:hidden"
+                                        />
+                                        <div
                                           class="transition-transform text-theme-secondary-500 css-15txs7d"
                                           height="10"
                                           width="10"

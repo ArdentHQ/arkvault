@@ -70,5 +70,10 @@ describe("useNotifications", () => {
 
 		expect(profile.notifications().transactions().recent()[0].read_at).toBeTruthy();
 		expect(profile.notifications().transactions().recent()[1].read_at).toBeTruthy();
+
+		result.current.markAllTransactionsAsRead(false);
+
+		expect(profile.notifications().transactions().recent()[0].read_at).toBeTruthy();
+		expect(profile.notifications().transactions().recent()[1].read_at).toBeTruthy();
 	});
 });
