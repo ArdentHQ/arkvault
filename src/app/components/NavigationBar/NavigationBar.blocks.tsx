@@ -18,7 +18,7 @@ import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
 import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useNetworks, useScroll } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useInputFocus, useNetworks, useScroll } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -112,60 +112,68 @@ const NavigationBarMobile: React.VFC<{
 	homeButtonHandler: () => void;
 	disabled: boolean;
 	hasFixedFormButtons: boolean;
-}> = ({ sendButtonClickHandler, receiveButtonClickHandler, homeButtonHandler, disabled, hasFixedFormButtons }) => (
-	<NavigationBarMobileWrapper data-testid="NavigationBarMobile" hasFixedFormButtons={hasFixedFormButtons}>
-		{hasFixedFormButtons && (
-			<div
-				data-testid="NavigationBar__buttons-separator"
-				className="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-			/>
-		)}
+}> = ({ sendButtonClickHandler, receiveButtonClickHandler, homeButtonHandler, disabled, hasFixedFormButtons }) => {
+	const { isInputElementFocused } = useInputFocus();
 
-		<div className="flex h-14 items-center justify-center space-x-4">
-			<Button
-				data-testid="NavigationBar__buttons__mobile--receive"
-				disabled={disabled}
-				size="icon"
-				variant="transparent"
-				onClick={receiveButtonClickHandler}
-				className={cn({
-					"cursor-not-allowed text-theme-secondary-500": disabled,
-					"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
-				})}
-			>
-				<Icon name="Received" size="lg" />
-			</Button>
+	if (isInputElementFocused) {
+		return null;
+	}
 
-			<Divider type="vertical" size="md" />
+	return (
+		<NavigationBarMobileWrapper data-testid="NavigationBarMobile" hasFixedFormButtons={hasFixedFormButtons}>
+			{hasFixedFormButtons && (
+				<div
+					data-testid="NavigationBar__buttons-separator"
+					className="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+				/>
+			)}
 
-			<Button
-				data-testid="NavigationBar__buttons__mobile--home"
-				size="icon"
-				variant="transparent"
-				onClick={homeButtonHandler}
-				className="text-theme-secondary-700 dark:text-theme-secondary-600"
-			>
-				<Icon name="Dashboard" size="lg" />
-			</Button>
+			<div className="flex h-14 items-center justify-center space-x-4">
+				<Button
+					data-testid="NavigationBar__buttons__mobile--receive"
+					disabled={disabled}
+					size="icon"
+					variant="transparent"
+					onClick={receiveButtonClickHandler}
+					className={cn({
+						"cursor-not-allowed text-theme-secondary-500": disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+					})}
+				>
+					<Icon name="Received" size="lg" />
+				</Button>
 
-			<Divider type="vertical" size="md" />
+				<Divider type="vertical" size="md" />
 
-			<Button
-				data-testid="NavigationBar__buttons__mobile--send"
-				disabled={disabled}
-				size="icon"
-				variant="transparent"
-				onClick={sendButtonClickHandler}
-				className={cn({
-					"cursor-not-allowed text-theme-secondary-500": disabled,
-					"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
-				})}
-			>
-				<Icon name="Sent" size="lg" />
-			</Button>
-		</div>
-	</NavigationBarMobileWrapper>
-);
+				<Button
+					data-testid="NavigationBar__buttons__mobile--home"
+					size="icon"
+					variant="transparent"
+					onClick={homeButtonHandler}
+					className="text-theme-secondary-700 dark:text-theme-secondary-600"
+				>
+					<Icon name="Dashboard" size="lg" />
+				</Button>
+
+				<Divider type="vertical" size="md" />
+
+				<Button
+					data-testid="NavigationBar__buttons__mobile--send"
+					disabled={disabled}
+					size="icon"
+					variant="transparent"
+					onClick={sendButtonClickHandler}
+					className={cn({
+						"cursor-not-allowed text-theme-secondary-500": disabled,
+						"text-theme-secondary-700 dark:text-theme-secondary-600": !disabled,
+					})}
+				>
+					<Icon name="Sent" size="lg" />
+				</Button>
+			</div>
+		</NavigationBarMobileWrapper>
+	);
+};
 
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,

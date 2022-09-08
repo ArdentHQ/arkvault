@@ -25,3 +25,4 @@ export * from "./use-wallet-alias";
 export * from "./use-breakpoint";
 export * from "./use-accordion";
 export * from "./use-server-health-status";
+export * from "./use-input-focus";
