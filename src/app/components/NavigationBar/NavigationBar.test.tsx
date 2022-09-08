@@ -411,4 +411,24 @@ describe("NavigationBar", () => {
 		profileSettingsMock.mockRestore();
 		resetProfileNetworksMock();
 	});
+
+	it("should hide the mobile menu if an input is focused", async () => {
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId/dashboard">
+				<div>
+					<input data-testid="input" />
+					<NavigationBar />
+				</div>
+			</Route>,
+			"xs",
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.type(screen.getByTestId("input"), "text");
+
+		await expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
+	});
 });
