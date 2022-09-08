@@ -29,7 +29,7 @@ export const TextArea = React.forwardRef(
 					isTextArea
 					ref={reference}
 					{...properties}
-					innerClassName={cn("resize-none min-h-[8rem] md:min-h-full md:resize-y", {
+					innerClassName={cn("resize-none min-h-[8rem] md:min-h-auto md:resize-y", {
 						"resize-none": properties.disabled,
 					})}
 				/>
