@@ -49,8 +49,6 @@ const FormButtons: React.FC<{
 		};
 	});
 
-	console.log({ isInputElementFocused });
-
 	if (isInputElementFocused && (isXs || isSm)) {
 		return <FormButtonsWrapper>{children}</FormButtonsWrapper>;
 	}
