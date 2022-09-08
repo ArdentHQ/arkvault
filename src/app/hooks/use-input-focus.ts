@@ -11,7 +11,7 @@ export const useInputFocus = () => {
 		setIsInputElementFocused(true);
 	};
 
-	const handleFocusOut = (event) => {
+	const handleFocusOut = () => {
 		setIsInputElementFocused(false);
 	};
 
