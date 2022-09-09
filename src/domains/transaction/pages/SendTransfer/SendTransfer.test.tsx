@@ -45,6 +45,10 @@ const fixtureWalletId = getDefaultWalletId();
 // of steps to make a transaction
 jest.setTimeout(10_000);
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
