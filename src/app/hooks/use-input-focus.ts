@@ -21,7 +21,7 @@ export const useInputFocus = () => {
 	};
 
 	const handleFocusOut = () => {
-		setIsInputElementFocused(false);
+		delay(() => setIsInputElementFocused(false), 300);
 	};
 
 	useEffect(() => {
