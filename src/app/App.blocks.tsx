@@ -133,6 +133,8 @@ const Main: React.VFC = () => {
 	useLayoutEffect(() => {
 		const boot = async () => {
 			try {
+				screen?.orientation?.lock?.("portrait-primary");
+
 				/* istanbul ignore next */
 				if (isE2E() || isUnit()) {
 					await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: isUnit() });
