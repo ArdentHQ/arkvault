@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { useInputFocus } from "@/app/hooks/use-input-focus";
-import { render, screen } from "@/utils/testing-library";
+import { renderResponsive, screen } from "@/utils/testing-library";
 
 describe("useInputFocus", () => {
 	const Component = () => {
@@ -18,16 +18,21 @@ describe("useInputFocus", () => {
 		);
 	};
 
-	it("should handle input focus and unfocus", () => {
-		render(<Component />);
+	it.each(["xs", "sm", "md", "lg", "xl"])(
+		"should handle input focus and unfocus in %s",
+		async (breakpoint: string) => {
+			const onTransactionClick = jest.fn();
 
-		userEvent.type(screen.getByTestId("input"), "text");
-		userEvent.type(screen.getByTestId("textarea"), "text");
-		userEvent.type(screen.getByTestId("password"), "password");
-		userEvent.click(screen.getByTestId("button"));
+			renderResponsive(<Component />, breakpoint);
 
-		expect(screen.getByTestId("input")).toHaveValue("text");
-		expect(screen.getByTestId("textarea")).toHaveValue("text");
-		expect(screen.getByTestId("password")).toHaveValue("password");
-	});
+			userEvent.type(screen.getByTestId("input"), "text");
+			userEvent.type(screen.getByTestId("textarea"), "text");
+			userEvent.type(screen.getByTestId("password"), "password");
+			userEvent.click(screen.getByTestId("button"));
+
+			expect(screen.getByTestId("input")).toHaveValue("text");
+			expect(screen.getByTestId("textarea")).toHaveValue("text");
+			expect(screen.getByTestId("password")).toHaveValue("password");
+		},
+	);
 });

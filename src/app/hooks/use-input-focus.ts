@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
+import { useBreakpoint } from "./use-breakpoint";
 
 export const useInputFocus = () => {
 	const [isInputElementFocused, setIsInputElementFocused] = useState(false);
+	const { isXs, isSm } = useBreakpoint();
 
 	const handleFocusIn = (event) => {
 		if (!["textarea", "text", "password"].includes(event?.target?.type?.toLowerCase?.())) {
 			return;
+		}
+
+		if (isXs || isSm) {
+			event?.target?.scrollIntoView?.({ behavior: "smooth", block: "center" });
 		}
 
 		setIsInputElementFocused(true);
