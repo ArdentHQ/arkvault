@@ -74,12 +74,14 @@ export const WalletHeaderMobile: React.VFC<WalletHeaderProperties> = ({ profile,
 
 			<div className="flex flex-col items-center pt-4 text-white">
 				<div className="mx-auto flex w-full items-center justify-center space-x-2">
-					<Address
-						alignment="center"
-						address={wallet.address()}
-						walletName={alias}
-						walletNameClass="text-theme-secondary-200"
-					/>
+					<div className="w-full">
+						<Address
+							alignment="center"
+							address={wallet.address()}
+							walletName={alias}
+							walletNameClass="text-theme-secondary-200"
+						/>
+					</div>
 
 					<div className="flex items-center space-x-3 text-theme-secondary-text">
 						<Clipboard

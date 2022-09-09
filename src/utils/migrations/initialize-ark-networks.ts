@@ -1,5 +1,5 @@
 import { ARK } from "@ardenthq/sdk-ark";
-import { isE2E } from "@/utils/test-helpers";
+import { isE2E, isPreview } from "@/utils/test-helpers";
 
 export const initializeArkNetworks = ({ data }) => {
 	if (typeof data.networks === "object" && !!data.networks.ark) {
@@ -15,11 +15,7 @@ export const initializeArkNetworks = ({ data }) => {
 		mainnet: ARK.manifest.networks["ark.mainnet"],
 	};
 
-	if (
-		isE2E() ||
-		process.env.NODE_ENV === "development" ||
-		["development", "preview"].includes(String(import.meta.env.VITE_VERCEL_ENV))
-	) {
+	if (isE2E() || isPreview()) {
 		data.networks.ark.devnet = ARK.manifest.networks["ark.devnet"];
 	}
 };
