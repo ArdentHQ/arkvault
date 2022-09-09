@@ -1,3 +1,4 @@
+import { delay } from "@/utils/delay";
 import { useEffect, useState } from "react";
 import { useBreakpoint } from "./use-breakpoint";
 
@@ -11,7 +12,9 @@ export const useInputFocus = () => {
 		}
 
 		if (isXs || isSm) {
-			event?.target?.scrollIntoView?.({ behavior: "smooth", block: "center" });
+			delay(() => {
+				event?.target?.scrollIntoView?.({ behavior: "smooth", block: "center" });
+			}, 500);
 		}
 
 		setIsInputElementFocused(true);
