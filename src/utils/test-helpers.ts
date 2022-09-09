@@ -57,3 +57,8 @@ export const bootEnvironmentWithProfileFixtures = async ({
 export const isE2E = () => !!["true", "1"].includes(process.env.REACT_APP_IS_E2E?.toLowerCase() || "");
 
 export const isUnit = () => !!["true", "1"].includes(process.env.REACT_APP_IS_UNIT?.toLowerCase() || "");
+
+export const isPreview = () =>
+	isE2E() ||
+	process.env.NODE_ENV === "development" ||
+	["development", "preview"].includes(String(import.meta.env.VITE_VERCEL_ENV));
