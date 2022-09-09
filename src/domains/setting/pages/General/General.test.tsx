@@ -32,6 +32,10 @@ const avatarIdenticon = () => screen.getByTestId("SelectProfileImage__avatar-ide
 
 const resetSubmitID = "ResetProfile__submit-button";
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("General Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
