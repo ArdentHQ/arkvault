@@ -18,21 +18,16 @@ describe("useInputFocus", () => {
 		);
 	};
 
-	it.each(["xs", "sm", "md", "lg", "xl"])(
-		"should handle input focus and unfocus in %s",
-		async (breakpoint: string) => {
-			const onTransactionClick = jest.fn();
+	it.each(["xs", "sm", "md", "lg", "xl"])("should handle input focus and unfocus in %s", (breakpoint: string) => {
+		renderResponsive(<Component />, breakpoint);
 
-			renderResponsive(<Component />, breakpoint);
+		userEvent.type(screen.getByTestId("input"), "text");
+		userEvent.type(screen.getByTestId("textarea"), "text");
+		userEvent.type(screen.getByTestId("password"), "password");
+		userEvent.click(screen.getByTestId("button"));
 
-			userEvent.type(screen.getByTestId("input"), "text");
-			userEvent.type(screen.getByTestId("textarea"), "text");
-			userEvent.type(screen.getByTestId("password"), "password");
-			userEvent.click(screen.getByTestId("button"));
-
-			expect(screen.getByTestId("input")).toHaveValue("text");
-			expect(screen.getByTestId("textarea")).toHaveValue("text");
-			expect(screen.getByTestId("password")).toHaveValue("password");
-		},
-	);
+		expect(screen.getByTestId("input")).toHaveValue("text");
+		expect(screen.getByTestId("textarea")).toHaveValue("text");
+		expect(screen.getByTestId("password")).toHaveValue("password");
+	});
 });
