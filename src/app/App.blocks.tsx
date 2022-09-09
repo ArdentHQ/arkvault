@@ -133,7 +133,7 @@ const Main: React.VFC = () => {
 	useLayoutEffect(() => {
 		const boot = async () => {
 			try {
-				screen?.orientation?.lock?.("portrait-primary");
+				screen?.orientation?.lock?.("portrait");
 
 				/* istanbul ignore next */
 				if (isE2E() || isUnit()) {
