@@ -67,6 +67,10 @@ const history = createHashHistory();
 
 jest.setTimeout(20_000);
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("SendTransfer Fee Handling", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

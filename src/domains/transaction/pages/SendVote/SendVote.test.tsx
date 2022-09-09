@@ -86,6 +86,10 @@ const votingMockImplementation = () => [
 	},
 ];
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const backButton = () => screen.getByTestId("StepNavigation__back-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");

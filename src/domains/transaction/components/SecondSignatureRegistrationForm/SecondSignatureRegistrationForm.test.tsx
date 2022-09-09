@@ -33,6 +33,10 @@ const backupStepId = "SecondSignatureRegistrationForm__backup-step";
 const verificationStepId = "SecondSignatureRegistrationForm__verification-step";
 const reviewStepId = "SecondSignatureRegistrationForm__review-step";
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("SecondSignatureRegistrationForm", () => {
 	const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
 	let profile: ProfilesContracts.IProfile;

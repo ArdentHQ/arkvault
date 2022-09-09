@@ -43,6 +43,10 @@ const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
 };
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("MultiSignatureDetail", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
