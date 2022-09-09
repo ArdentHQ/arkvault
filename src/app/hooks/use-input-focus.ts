@@ -1,6 +1,6 @@
-import { delay } from "@/utils/delay";
 import { useEffect, useState } from "react";
 import { useBreakpoint } from "./use-breakpoint";
+import { delay } from "@/utils/delay";
 
 export const useInputFocus = () => {
 	const [isInputElementFocused, setIsInputElementFocused] = useState(false);
