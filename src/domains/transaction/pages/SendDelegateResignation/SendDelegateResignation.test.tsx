@@ -27,6 +27,10 @@ let resignationUrl: string;
 const passphrase = MNEMONICS[0];
 const history = createHashHistory();
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 const renderPage = () => {
 	const path = "/profiles/:profileId/wallets/:walletId/send-delegate-resignation";
 
