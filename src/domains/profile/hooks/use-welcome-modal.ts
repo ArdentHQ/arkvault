@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { useConfiguration } from "@/app/contexts";
 import { WelcomeModalStep } from "@/domains/profile/components/WelcomeModal/WelcomeModal.contracts";
+import { isPreview } from "@/utils/test-helpers";
 
 export const useWelcomeModal = (environment: Environment, profile: Contracts.IProfile) => {
 	const [show, setShow] = useState<boolean>(false);
@@ -12,6 +13,10 @@ export const useWelcomeModal = (environment: Environment, profile: Contracts.IPr
 
 	useEffect(() => {
 		if (profileIsSyncing) {
+			return;
+		}
+
+		if (isPreview()) {
 			return;
 		}
 
