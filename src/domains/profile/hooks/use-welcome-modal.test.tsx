@@ -22,6 +22,18 @@ describe("useWelcomeModal", () => {
 		profile.flush();
 	});
 
+	it("should not show if in preview mode", async () => {
+		process.env.NODE_ENV = "development";
+		const wrapper = ({ children }: any) => (
+			<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>{children}</ConfigurationProvider>
+		);
+
+		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
+
+		await waitFor(() => expect(result.current.show).toBeFalsy(), { timeout: 4000 });
+		process.env.NODE_ENV = "production";
+	});
+
 	it("should show tutorial for the new profile", () => {
 		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
