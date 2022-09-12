@@ -59,6 +59,10 @@ const formStep = () => screen.findByTestId("SendIpfs__form-step");
 const feeWarningContinueID = "FeeWarning__continue-button";
 const reviewStepID = "SendIpfs__review-step";
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
 

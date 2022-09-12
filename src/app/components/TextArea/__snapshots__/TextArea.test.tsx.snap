@@ -3,18 +3,25 @@
 exports[`TextArea should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-15amhun"
+    class="relative inline-block"
   >
     <div
-      class="relative flex h-full flex-1"
+      class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+    />
+    <div
+      class="css-15amhun"
     >
-      <textarea
-        autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
-        data-testid="TextArea"
-        style="height: 4px;"
-        type="text"
-      />
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <textarea
+          autocomplete="off"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1nupw50"
+          data-testid="TextArea"
+          style="height: 4px;"
+          type="text"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -23,19 +30,26 @@ exports[`TextArea should render 1`] = `
 exports[`TextArea should render as disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-qner8f"
-    disabled=""
+    class="relative inline-block"
   >
     <div
-      class="relative flex h-full flex-1"
+      class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+    />
+    <div
+      class="css-qner8f"
+      disabled=""
     >
-      <textarea
-        autocomplete="off"
-        class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-        data-testid="TextArea"
-        disabled=""
-        type="text"
-      />
+      <div
+        class="relative flex h-full flex-1"
+      >
+        <textarea
+          autocomplete="off"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+          data-testid="TextArea"
+          disabled=""
+          type="text"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -44,36 +58,43 @@ exports[`TextArea should render as disabled 1`] = `
 exports[`TextArea should render as invalid 1`] = `
 <DocumentFragment>
   <div
-    class="css-1r3caq6"
+    class="relative inline-block"
   >
     <div
-      class="relative flex h-full flex-1"
-    >
-      <textarea
-        aria-invalid="true"
-        autocomplete="off"
-        class="no-ligatures w-full border-none css-1nupw50"
-        data-testid="TextArea"
-        type="text"
-      />
-    </div>
+      class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+    />
     <div
-      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 absolute bottom-full right-0 mb-2 text-theme-danger-500"
-      data-testid="Input__addon-end"
+      class="css-1r3caq6"
     >
-      <span
-        data-testid="Input__error"
+      <div
+        class="relative flex h-full flex-1"
       >
-        <div
-          class="text-theme-danger-500 css-1i4b0eq"
-          height="20"
-          width="20"
+        <textarea
+          aria-invalid="true"
+          autocomplete="off"
+          class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y css-1nupw50"
+          data-testid="TextArea"
+          type="text"
+        />
+      </div>
+      <div
+        class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 absolute bottom-full right-0 mb-2 text-theme-danger-500"
+        data-testid="Input__addon-end"
+      >
+        <span
+          data-testid="Input__error"
         >
-          <svg>
-            circle-exclamation-mark.svg
-          </svg>
-        </div>
-      </span>
+          <div
+            class="text-theme-danger-500 css-1i4b0eq"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>

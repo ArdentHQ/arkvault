@@ -668,6 +668,9 @@ exports[`InputFee simple view type should change fee option with converted value
                       data-testid="SelectDropdown__caret"
                     >
                       <div
+                        class="absolute inset-0 block cursor-pointer md:hidden"
+                      />
+                      <div
                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                         height="10"
                         width="10"
@@ -834,6 +837,9 @@ exports[`InputFee simple view type should change fee option with converted value
                       class="flex items-center justify-center py-2 px-1"
                       data-testid="SelectDropdown__caret"
                     >
+                      <div
+                        class="absolute inset-0 block cursor-pointer md:hidden"
+                      />
                       <div
                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                         height="10"
@@ -1800,6 +1806,9 @@ exports[`InputFee simple view type should render simple view in xs 1`] = `
                       data-testid="SelectDropdown__caret"
                     >
                       <div
+                        class="absolute inset-0 block cursor-pointer md:hidden"
+                      />
+                      <div
                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                         height="10"
                         width="10"
@@ -2506,6 +2515,9 @@ exports[`InputFee simple view type should render simple view with converted valu
                       class="flex items-center justify-center py-2 px-1"
                       data-testid="SelectDropdown__caret"
                     >
+                      <div
+                        class="absolute inset-0 block cursor-pointer md:hidden"
+                      />
                       <div
                         class="transition-transform text-theme-secondary-500 css-15txs7d"
                         height="10"

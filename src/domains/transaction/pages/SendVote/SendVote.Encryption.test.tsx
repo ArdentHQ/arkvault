@@ -57,6 +57,10 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 

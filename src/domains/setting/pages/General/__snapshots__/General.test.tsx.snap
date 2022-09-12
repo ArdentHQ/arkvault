@@ -853,6 +853,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -971,6 +974,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -1095,6 +1101,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -1214,6 +1223,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -1332,6 +1344,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -1475,6 +1490,9 @@ exports[`General Settings should disable submit button when profile is not resto
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -2472,6 +2490,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -2590,6 +2611,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -2714,6 +2738,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -2833,6 +2860,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -2951,6 +2981,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -3094,6 +3127,9 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -4072,6 +4108,9 @@ exports[`General Settings should render 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -4190,6 +4229,9 @@ exports[`General Settings should render 1`] = `
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -4314,6 +4356,9 @@ exports[`General Settings should render 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -4433,6 +4478,9 @@ exports[`General Settings should render 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -4551,6 +4599,9 @@ exports[`General Settings should render 1`] = `
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -4694,6 +4745,9 @@ exports[`General Settings should render 1`] = `
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -5673,6 +5727,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -5791,6 +5848,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -5915,6 +5975,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -6034,6 +6097,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -6152,6 +6218,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -6295,6 +6364,9 @@ exports[`General Settings should show identicon when removing image if name is s
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -7274,6 +7346,9 @@ exports[`General Settings should update profile 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -7392,6 +7467,9 @@ exports[`General Settings should update profile 1`] = `
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -7516,6 +7594,9 @@ exports[`General Settings should update profile 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -7635,6 +7716,9 @@ exports[`General Settings should update profile 1`] = `
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -7753,6 +7837,9 @@ exports[`General Settings should update profile 1`] = `
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -7896,6 +7983,9 @@ exports[`General Settings should update profile 1`] = `
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -8875,6 +8965,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -8993,6 +9086,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -9117,6 +9213,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -9236,6 +9335,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -9354,6 +9456,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -9497,6 +9602,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"
@@ -10468,6 +10576,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -10586,6 +10697,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -10710,6 +10824,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -10829,6 +10946,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             data-testid="SelectDropdown__caret"
                                           >
                                             <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
+                                            <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
                                               width="10"
@@ -10947,6 +11067,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                             class="flex items-center justify-center py-2 px-1"
                                             data-testid="SelectDropdown__caret"
                                           >
+                                            <div
+                                              class="absolute inset-0 block cursor-pointer md:hidden"
+                                            />
                                             <div
                                               class="transition-transform text-theme-secondary-500 css-15txs7d"
                                               height="10"
@@ -11090,6 +11213,9 @@ exports[`General Settings should update the avatar when removing focus from name
                                               class="flex items-center justify-center py-2 px-1"
                                               data-testid="SelectDropdown__caret"
                                             >
+                                              <div
+                                                class="absolute inset-0 block cursor-pointer md:hidden"
+                                              />
                                               <div
                                                 class="transition-transform text-theme-secondary-500 css-15txs7d"
                                                 height="10"

@@ -61,22 +61,29 @@ exports[`ErrorStep should display error details 1`] = `
           </div>
         </div>
         <div
-          class="py-4 css-qner8f"
-          disabled=""
+          class="relative inline-block"
         >
           <div
-            class="relative flex h-full flex-1"
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
           >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
+            <div
+              class="relative flex h-full flex-1"
             >
-              Display error details
-            </textarea>
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="ErrorStep__errorMessage"
+                disabled=""
+                style="height: 4px;"
+                type="text"
+              >
+                Display error details
+              </textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -182,22 +189,29 @@ exports[`ErrorStep should emit onBack 1`] = `
           </div>
         </div>
         <div
-          class="py-4 css-qner8f"
-          disabled=""
+          class="relative inline-block"
         >
           <div
-            class="relative flex h-full flex-1"
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
           >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
+            <div
+              class="relative flex h-full flex-1"
             >
-              test
-            </textarea>
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="ErrorStep__errorMessage"
+                disabled=""
+                style="height: 4px;"
+                type="text"
+              >
+                test
+              </textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -318,22 +332,29 @@ exports[`ErrorStep should emit onRepeat 1`] = `
           </div>
         </div>
         <div
-          class="py-4 css-qner8f"
-          disabled=""
+          class="relative inline-block"
         >
           <div
-            class="relative flex h-full flex-1"
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
           >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
+            <div
+              class="relative flex h-full flex-1"
             >
-              test
-            </textarea>
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="ErrorStep__errorMessage"
+                disabled=""
+                style="height: 4px;"
+                type="text"
+              >
+                test
+              </textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -454,22 +475,29 @@ exports[`ErrorStep should render with custom title 1`] = `
           </div>
         </div>
         <div
-          class="py-4 css-qner8f"
-          disabled=""
+          class="relative inline-block"
         >
           <div
-            class="relative flex h-full flex-1"
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
           >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
+            <div
+              class="relative flex h-full flex-1"
             >
-              test
-            </textarea>
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="ErrorStep__errorMessage"
+                disabled=""
+                style="height: 4px;"
+                type="text"
+              >
+                test
+              </textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -575,22 +603,29 @@ exports[`ErrorStep should render with default texts 1`] = `
           </div>
         </div>
         <div
-          class="py-4 css-qner8f"
-          disabled=""
+          class="relative inline-block"
         >
           <div
-            class="relative flex h-full flex-1"
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
           >
-            <textarea
-              autocomplete="off"
-              class="no-ligatures w-full border-none resize-none text-theme-secondary-text css-1nupw50"
-              data-testid="ErrorStep__errorMessage"
-              disabled=""
-              style="height: 4px;"
-              type="text"
+            <div
+              class="relative flex h-full flex-1"
             >
-              test
-            </textarea>
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="ErrorStep__errorMessage"
+                disabled=""
+                style="height: 4px;"
+                type="text"
+              >
+                test
+              </textarea>
+            </div>
           </div>
         </div>
       </div>

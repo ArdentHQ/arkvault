@@ -27,6 +27,10 @@ jest.mock("react-router-dom", () => ({
 	useHistory: jest.fn(),
 }));
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;

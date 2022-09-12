@@ -135,6 +135,8 @@ const SelectDropdown = ({
 								toggleMenu();
 							}}
 						>
+							<div className="absolute inset-0 block cursor-pointer md:hidden" />
+
 							<Icon
 								name="CaretDown"
 								className={cn(
