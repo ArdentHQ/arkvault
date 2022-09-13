@@ -61,7 +61,7 @@ exports[`ErrorStep should display error details 1`] = `
           </div>
         </div>
         <div
-          class="relative inline-block"
+          class="relative"
         >
           <div
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -189,7 +189,7 @@ exports[`ErrorStep should emit onBack 1`] = `
           </div>
         </div>
         <div
-          class="relative inline-block"
+          class="relative"
         >
           <div
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -332,7 +332,7 @@ exports[`ErrorStep should emit onRepeat 1`] = `
           </div>
         </div>
         <div
-          class="relative inline-block"
+          class="relative"
         >
           <div
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -475,7 +475,7 @@ exports[`ErrorStep should render with custom title 1`] = `
           </div>
         </div>
         <div
-          class="relative inline-block"
+          class="relative"
         >
           <div
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -603,7 +603,7 @@ exports[`ErrorStep should render with default texts 1`] = `
           </div>
         </div>
         <div
-          class="relative inline-block"
+          class="relative"
         >
           <div
             class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
