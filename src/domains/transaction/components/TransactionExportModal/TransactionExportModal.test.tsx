@@ -23,7 +23,7 @@ describe("TransactionExportModal", () => {
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
 			.get("/api/transactions")
-			.query({ orderBy: "timestamp:asc", address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
+			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});

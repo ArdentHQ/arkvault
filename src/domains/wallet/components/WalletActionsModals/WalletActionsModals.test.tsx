@@ -30,7 +30,7 @@ describe("WalletActionsModals", () => {
 
 		nock("https://ark-live.arkvault.io")
 			.get("/api/transactions")
-			.query({ orderBy: "timestamp:asc", address: mainnetWallet.address() })
+			.query({ address: mainnetWallet.address(), orderBy: "timestamp:asc" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 

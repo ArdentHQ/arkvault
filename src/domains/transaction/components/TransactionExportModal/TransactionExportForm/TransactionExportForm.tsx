@@ -13,7 +13,9 @@ export const TransactionExportForm = ({ wallet, onCancel, onExport }: Transactio
 
 	useEffect(() => {
 		const fetchFirstTransaction = async () => {
-			let date: Date | undefined = new Date(wallet.manifest().get<object>("networks")[wallet.networkId()].constants.epoch);
+			let date: Date | undefined = new Date(
+				wallet.manifest().get<object>("networks")[wallet.networkId()].constants.epoch,
+			);
 
 			try {
 				const transactions = await wallet.transactionIndex().all({ orderBy: "timestamp:asc" });
