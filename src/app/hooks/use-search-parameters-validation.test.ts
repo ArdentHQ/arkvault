@@ -171,7 +171,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "NETWORK_MISMATCH" },
+			error: { type: "INVALID_ADDRESS_OR_NETWORK_MISMATCH" },
 		});
 	});
 
@@ -317,7 +317,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "INVALID_ADDRESS" },
+			error: { type: "INVALID_ADDRESS_OR_NETWORK_MISMATCH" },
 		});
 	});
 

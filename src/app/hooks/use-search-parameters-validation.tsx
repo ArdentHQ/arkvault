@@ -48,7 +48,7 @@ enum SearchParametersError {
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
-	InvalidAddress = "INVALID_ADDRESS",
+	InvalidAddress = "INVALID_ADDRESS_OR_NETWORK_MISMATCH",
 }
 
 const defaultNetworks = {
@@ -471,7 +471,7 @@ export const useSearchParametersValidation = () => {
 		}
 
 		if (type === SearchParametersError.InvalidAddress) {
-			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS" />;
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS_OR_NETWORK_MISMATCH" />;
 		}
 
 		return <WrapperURI />;
