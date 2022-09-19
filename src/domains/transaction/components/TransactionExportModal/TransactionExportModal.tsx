@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useTransactionExport } from "./hooks";
 import {
@@ -42,7 +42,7 @@ export const TransactionExportModal = ({
 		>
 			<Tabs activeId={status}>
 				<TabPanel tabId={ExportProgressStatus.Idle}>
-					<TransactionExportForm onCancel={onClose} onExport={startExport} wallet={wallet} />
+					<TransactionExportForm wallet={wallet} onCancel={onClose} onExport={startExport} />
 				</TabPanel>
 
 				<TabPanel tabId={ExportProgressStatus.Progress}>

@@ -13,6 +13,7 @@ import {
 	screen,
 	syncDelegates,
 	waitFor,
+	within,
 	renderResponsive,
 } from "@/utils/testing-library";
 
@@ -43,6 +44,9 @@ describe("TransactionExportForm", () => {
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
+			.get("/api/transactions")
+			.query({ orderBy: "timestamp:asc", address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});
 
@@ -57,7 +61,7 @@ describe("TransactionExportForm", () => {
 		await profile.sync();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", async (breakpoint: string) => {
 		const { asFragment } = renderResponsive(
 			<TransactionExportForm wallet={profile.wallets().first()} />,
 			breakpoint,
@@ -68,10 +72,19 @@ describe("TransactionExportForm", () => {
 		);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit cancel", () => {
+	it("should emit cancel", async () => {
 		const onCancel = jest.fn();
 
 		render(
@@ -86,12 +99,20 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
+
 		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
 
-	it("should render fiat column if wallet is live", () => {
+	it("should render fiat column if wallet is live", async () => {
 		const onCancel = jest.fn();
 		jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
@@ -106,6 +127,14 @@ describe("TransactionExportForm", () => {
 		);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -125,6 +154,14 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
+
 		userEvent.click(screen.getByTestId(ExportButton));
 		await waitFor(() => expect(onExport).toHaveBeenCalledWith(expect.objectContaining(defaultSettings)));
 	});
@@ -143,6 +180,14 @@ describe("TransactionExportForm", () => {
 		);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 
@@ -172,6 +217,14 @@ describe("TransactionExportForm", () => {
 		);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
@@ -205,6 +258,14 @@ describe("TransactionExportForm", () => {
 		);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(
+				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+					"CollapseToggleButton",
+				),
+			).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
