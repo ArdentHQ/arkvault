@@ -1,6 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { screen } from "@testing-library/react";
 import { createHashHistory } from "history";
+import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { WalletActionsModals } from "./WalletActionsModals";
@@ -26,6 +27,12 @@ describe("WalletActionsModals", () => {
 		});
 
 		profile.wallets().push(mainnetWallet);
+
+		nock("https://ark-live.arkvault.io")
+			.get("/api/transactions")
+			.query({ orderBy: "timestamp:asc", address: mainnetWallet.address() })
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
+			.persist();
 
 		await syncDelegates(profile);
 

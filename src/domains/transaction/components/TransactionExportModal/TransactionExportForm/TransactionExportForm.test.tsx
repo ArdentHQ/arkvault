@@ -34,6 +34,9 @@ const defaultSettings = {
 };
 
 const ExportButton = "TransactionExport__submit-button";
+const dateToggle = () => within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
+	"CollapseToggleButton",
+);
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
@@ -74,11 +77,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -100,11 +99,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
@@ -129,11 +124,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -155,11 +146,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getByTestId(ExportButton));
@@ -182,11 +169,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
@@ -219,11 +202,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
@@ -260,11 +239,7 @@ describe("TransactionExportForm", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId(
-					"CollapseToggleButton",
-				),
-			).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
