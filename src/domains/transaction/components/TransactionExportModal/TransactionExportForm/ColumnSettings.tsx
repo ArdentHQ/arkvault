@@ -6,16 +6,19 @@ import { ListDivided } from "@/app/components/ListDivided";
 
 export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) => {
 	const { t } = useTranslation();
+
 	const form = useFormContext();
+	const { setValue, watch } = form;
 
 	const columnToggles = [
 		{
 			label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_ID"),
 			value: (
 				<Toggle
-					ref={form.register()}
-					name="includeTransactionId"
-					defaultChecked={!!form.getValues("includeTransactionId")}
+					checked={!!watch("includeTransactionId")}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setValue("includeTransactionId", event.target.checked);
+					}}
 					data-testid="TransactionExportForm__toggle-include-tx-id"
 				/>
 			),
@@ -25,9 +28,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 			label: t("TRANSACTION.EXPORT.FORM.TRANSACTION_DATE"),
 			value: (
 				<Toggle
-					ref={form.register()}
-					name="includeDate"
-					defaultChecked={!!form.getValues("includeDate")}
+					checked={!!watch("includeDate")}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setValue("includeDate", event.target.checked);
+					}}
 					data-testid="TransactionExportForm__toggle-include-date"
 				/>
 			),
@@ -37,9 +41,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 			label: t("TRANSACTION.EXPORT.FORM.SENDER_RECIPIENT"),
 			value: (
 				<Toggle
-					ref={form.register()}
-					name="includeSenderRecipient"
-					defaultChecked={!!form.getValues("includeSenderRecipient")}
+					checked={!!watch("includeSenderRecipient")}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setValue("includeSenderRecipient", event.target.checked);
+					}}
 					data-testid="TransactionExportForm__toggle-include-sender-recipient"
 				/>
 			),
@@ -49,9 +54,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 			label: t("TRANSACTION.EXPORT.FORM.CRYPTO_AMOUNT"),
 			value: (
 				<Toggle
-					ref={form.register()}
-					name="includeCryptoAmount"
-					defaultChecked={!!form.getValues("includeCryptoAmount")}
+					checked={!!watch("includeCryptoAmount")}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setValue("includeCryptoAmount", event.target.checked);
+					}}
 					data-testid="TransactionExportForm__toggle-include-crypto-amount"
 				/>
 			),
@@ -64,11 +70,11 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 			label: t("TRANSACTION.EXPORT.FORM.FIAT_AMOUNT"),
 			value: (
 				<Toggle
-					ref={form.register()}
-					name="includeFiatAmount"
-					defaultChecked={!!form.getValues("includeFiatAmount")}
+					checked={!!watch("includeFiatAmount")}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setValue("includeFiatAmount", event.target.checked);
+					}}
 					data-testid="TransactionExportForm__toggle-include-fiat-amount"
-					value={form.getValues("includeFiatAmount")}
 				/>
 			),
 			wrapperClass: "pt-4",

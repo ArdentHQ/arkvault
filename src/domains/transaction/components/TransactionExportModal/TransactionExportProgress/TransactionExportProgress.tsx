@@ -5,9 +5,9 @@ import { FormButtons } from "@/app/components/Form";
 import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
-import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
+import { TransactionExportProgressProperties } from "@/domains/transaction/components/TransactionExportModal";
 
-export const TransactionExportProgress = ({ onCancel, file }: TransactionExportStatusProperties) => {
+export const TransactionExportProgress = ({ file, onCancel }: TransactionExportProgressProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -21,11 +21,7 @@ export const TransactionExportProgress = ({ onCancel, file }: TransactionExportS
 			<FilePreview file={file} variant="loading" />
 
 			<FormButtons>
-				<Button
-					variant="secondary"
-					onClick={() => onCancel?.()}
-					data-testid="TransactionExportProgress__cancel-button"
-				>
+				<Button variant="secondary" onClick={onCancel} data-testid="TransactionExportProgress__cancel-button">
 					{t("COMMON.CANCEL")}
 				</Button>
 

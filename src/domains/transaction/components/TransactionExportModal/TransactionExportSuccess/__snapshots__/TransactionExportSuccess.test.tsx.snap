@@ -33,13 +33,13 @@ exports[`TransactionExportForm should render in lg 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button
@@ -91,13 +91,13 @@ exports[`TransactionExportForm should render in md 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button
@@ -149,13 +149,13 @@ exports[`TransactionExportForm should render in sm 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button
@@ -207,13 +207,13 @@ exports[`TransactionExportForm should render in xl 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button
@@ -265,13 +265,13 @@ exports[`TransactionExportForm should render in xs 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button
@@ -328,13 +328,13 @@ exports[`TransactionExportForm should render warnigg if count is zero 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportSuccess__close-button"
+        data-testid="TransactionExportSuccess__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Cancel
+          Back
         </div>
       </button>
       <button

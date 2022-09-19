@@ -7,7 +7,7 @@ import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportErrorProperties } from "@/domains/transaction/components/TransactionExportModal";
 
-export const TransactionExportError = ({ onClose, onRetry, file, error }: TransactionExportErrorProperties) => {
+export const TransactionExportError = ({ error, file, onBack, onRetry }: TransactionExportErrorProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -23,10 +23,10 @@ export const TransactionExportError = ({ onClose, onRetry, file, error }: Transa
 			<FormButtons>
 				<Button
 					variant="secondary"
-					onClick={() => onClose?.()}
-					data-testid="TransactionExportError__close-button"
+					onClick={onBack}
+					data-testid="TransactionExportError__back-button"
 				>
-					{t("COMMON.CLOSE")}
+					{t("COMMON.BACK")}
 				</Button>
 
 				<Button variant="primary" data-testid="TransactionExportError__retry-button" onClick={onRetry}>

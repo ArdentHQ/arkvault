@@ -72,6 +72,9 @@ export const useTransactionExport = ({
 		count,
 		error,
 		file,
+		resetStatus: () => {
+			setStatus(ExportProgressStatus.Idle);
+		},
 		retry: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},

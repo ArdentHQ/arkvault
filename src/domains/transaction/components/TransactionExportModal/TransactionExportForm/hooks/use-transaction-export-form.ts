@@ -29,14 +29,22 @@ export const useTransactionExportForm = () => {
 		mode: "onChange",
 	});
 
+	const { clearErrors, register, setError, watch } = form;
+
 	useEffect(() => {
-		form.register("transactionType");
-		form.register("delimiter");
-		form.register("dateRange");
-	}, []);
+		register("transactionType");
+		register("delimiter");
+		register("dateRange");
+		register("includeHeaderRow");
+		register("includeTransactionId");
+		register("includeDate");
+		register("includeSenderRecipient");
+		register("includeCryptoAmount");
+		register("includeFiatAmount");
+	}, [register]);
 
 	const { includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId } =
-		form.watch();
+		watch();
 
 	useEffect(() => {
 		// Trigger invalid state.
@@ -45,11 +53,11 @@ export const useTransactionExportForm = () => {
 				Boolean,
 			).length === 0
 		) {
-			form.setError("includeCryptoAmount", {});
+			setError("includeCryptoAmount", {});
 			return;
 		}
 
-		form.clearErrors("includeCryptoAmount");
+		clearErrors("includeCryptoAmount");
 	}, [includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId]);
 
 	return form;

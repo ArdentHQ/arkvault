@@ -8,7 +8,7 @@ import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
 
-export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: TransactionExportStatusProperties) => {
+export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: TransactionExportStatusProperties) => {
 	const { t } = useTranslation();
 
 	const { download } = useFileDownload();
@@ -42,12 +42,8 @@ export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: 
 			<FilePreview file={file} variant="success" />
 
 			<FormButtons>
-				<Button
-					variant="secondary"
-					onClick={() => onCancel?.()}
-					data-testid="TransactionExportSuccess__close-button"
-				>
-					{t("COMMON.CANCEL")}
+				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportSuccess__back-button">
+					{t("COMMON.BACK")}
 				</Button>
 
 				<Button

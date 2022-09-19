@@ -39,7 +39,7 @@ describe("TransactionExportModal", () => {
 	it("should render", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -52,15 +52,13 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render progress status", async () => {
-		const onClose = jest.fn();
-
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
 					initialStatus={ExportProgressStatus.Progress}
-					onClose={onClose}
+					onClose={jest.fn()}
 				/>
 			</Route>,
 			{
@@ -73,21 +71,19 @@ describe("TransactionExportModal", () => {
 
 		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
 
-		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render error status", async () => {
-		const onClose = jest.fn();
-
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
 					initialStatus={ExportProgressStatus.Error}
-					onClose={onClose}
+					onClose={jest.fn()}
 				/>
 			</Route>,
 			{
@@ -98,22 +94,21 @@ describe("TransactionExportModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportError__close-button"));
+		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
-		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render success status", async () => {
-		const onClose = jest.fn();
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
 					initialStatus={ExportProgressStatus.Success}
-					onClose={onClose}
+					onClose={jest.fn()}
 				/>
 			</Route>,
 			{
@@ -124,9 +119,9 @@ describe("TransactionExportModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__close-button"));
+		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
-		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
