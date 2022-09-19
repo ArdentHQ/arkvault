@@ -21,11 +21,7 @@ export const TransactionExportError = ({ error, file, onBack, onRetry }: Transac
 			<FilePreview file={file} variant="danger" />
 
 			<FormButtons>
-				<Button
-					variant="secondary"
-					onClick={onBack}
-					data-testid="TransactionExportError__back-button"
-				>
+				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportError__back-button">
 					{t("COMMON.BACK")}
 				</Button>
 

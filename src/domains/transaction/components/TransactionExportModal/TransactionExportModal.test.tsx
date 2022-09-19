@@ -71,7 +71,7 @@ describe("TransactionExportModal", () => {
 
 		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
 
-		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -96,7 +96,7 @@ describe("TransactionExportModal", () => {
 
 		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
-		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -121,7 +121,7 @@ describe("TransactionExportModal", () => {
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
-		expect(await screen.findByTestId("TransactionExport__submit-button")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
