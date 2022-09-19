@@ -80,7 +80,9 @@ export const WalletsGroupsList: React.VFC = () => {
 			return filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
 				<WalletsGroup
 					key={network.id()}
-					network={network}
+					network={profile
+						.availableNetworks()
+						.find((profileNetwork) => profileNetwork.id() === (network.id() as string))}
 					wallets={wallets}
 					maxWidthReferences={{ balance: balanceMaxWidthReference, currency: currencyMaxWidthReference }}
 				/>
