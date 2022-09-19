@@ -48,6 +48,7 @@ enum SearchParametersError {
 	NetworkNotEnabled = "NETWORK_NOT_ENABLED",
 	NetworkNoWallets = "NETWORK_NO_WALLETS",
 	MessageMissing = "MESSAGE_MISSING",
+	InvalidAddress = "INVALID_ADDRESS",
 }
 
 const defaultNetworks = {
@@ -146,7 +147,7 @@ const validateTransfer = async ({ profile, network, parameters }: ValidateParame
 		const isValid = await coin.address().validate(recipient);
 
 		if (!isValid) {
-			return { error: { type: SearchParametersError.NetworkMismatch } };
+			return { error: { type: SearchParametersError.InvalidAddress } };
 		}
 	}
 };
@@ -167,7 +168,7 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 		const isValid = await coin.address().validate(address);
 
 		if (!isValid) {
-			return { error: { type: SearchParametersError.NetworkMismatch } };
+			return { error: { type: SearchParametersError.InvalidAddress } };
 		}
 	}
 };
@@ -467,6 +468,10 @@ export const useSearchParametersValidation = () => {
 
 		if (type === SearchParametersError.MessageMissing) {
 			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.MESSAGE_MISSING" />;
+		}
+
+		if (type === SearchParametersError.InvalidAddress) {
+			return <Trans parent={ErrorWrapper} i18nKey="TRANSACTION.VALIDATION.INVALID_ADDRESS" />;
 		}
 
 		return <WrapperURI />;

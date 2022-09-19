@@ -411,6 +411,7 @@ export const translations = {
 		INVALID_QR: "Invalid QR",
 		INVALID_QR_REASON: "Invalid QR: {{reason}}",
 		INVALID_URI: "Invalid URI",
+		INVALID_ADDRESS: "Invalid Address",
 		LOW_BALANCE: "The balance is too low",
 		LOW_BALANCE_AMOUNT: "The balance is too low ({{balance}} {{ coinId }})",
 		MESSAGE_MISSING: "message parameter is missing.",
