@@ -87,7 +87,17 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render custom date range", () => {
-		renderWithForm(<TransactionExportForm onCancel={jest.fn()} />);
+		renderWithForm(<TransactionExportForm onCancel={jest.fn()} />, {
+			defaultValues: {
+				from: new Date(),
+				to: new Date(),
+			},
+			registerCallback: ({ register }) => {
+				register("dateRange");
+				register("from");
+				register("to");
+			},
+		});
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -99,7 +109,11 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select tab delimiter", () => {
-		renderWithForm(<TransactionExportForm />);
+		renderWithForm(<TransactionExportForm />, {
+			defaultValues: {
+				delimiter: ",",
+			},
+		});
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 

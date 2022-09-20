@@ -112,7 +112,7 @@ export const BasicSettings = () => {
 	const { isXs } = useBreakpoint();
 	const form = useFormContext();
 
-	const isCustom = form.watch("dateRange") == DateRange.Custom;
+	const isCustom = form.watch("dateRange") === DateRange.Custom;
 
 	const items = [
 		{

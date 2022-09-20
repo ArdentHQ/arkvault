@@ -53,6 +53,26 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with fiat column", () => {
+		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+
+		walletSpy.mockRestore();
+	});
+
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -211,6 +231,8 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should disable export button if all column toggles are off", async () => {
+		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
@@ -229,13 +251,18 @@ describe("TransactionExportModal", () => {
 			expect(exportButton()).toBeEnabled();
 		});
 
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-header-row"));
+
 		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-tx-id"));
 		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-date"));
 		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-sender-recipient"));
 		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-crypto-amount"));
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount"));
 
 		await waitFor(() => {
 			expect(exportButton()).toBeDisabled();
 		});
+
+		walletSpy.mockRestore();
 	});
 });
