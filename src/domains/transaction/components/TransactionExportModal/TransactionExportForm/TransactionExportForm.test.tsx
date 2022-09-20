@@ -36,7 +36,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
-		const { asFragment } = renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />, {
+		const { asFragment } = renderWithForm(<TransactionExportForm />, {
 			breakpoint,
 		});
 
@@ -47,7 +47,7 @@ describe("TransactionExportForm", () => {
 	it("should emit cancel", () => {
 		const onCancel = jest.fn();
 
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={onCancel} />);
+		renderWithForm(<TransactionExportForm onCancel={onCancel} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -56,13 +56,11 @@ describe("TransactionExportForm", () => {
 		expect(onCancel).toHaveBeenCalledWith();
 	});
 
-	it("should render fiat column if wallet is live", () => {
+	it("should render fiat column", () => {
 		const onCancel = jest.fn();
 
-		jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
-
 		const { asFragment } = renderWithForm(
-			<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />,
+			<TransactionExportForm onCancel={onCancel} showFiatColumn={true} />,
 		);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
@@ -71,7 +69,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select outgoing transactions", () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -79,7 +77,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select last month", () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -91,7 +89,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render custom date range", () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm onCancel={jest.fn()} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
@@ -103,7 +101,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should select tab delimiter", () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
+		renderWithForm(<TransactionExportForm />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 

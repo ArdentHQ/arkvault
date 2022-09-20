@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransactionExportForm should render fiat column if wallet is live 1`] = `
+exports[`TransactionExportForm should render fiat column 1`] = `
 <DocumentFragment>
   <div
     data-testid="TransactionExportForm"
