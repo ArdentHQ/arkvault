@@ -26,7 +26,7 @@ export const TransactionExportModal = ({
 
 	const profile = useActiveProfile();
 
-	const { count, file, startExport, cancelExport, status, resetStatus, error, retry } = useTransactionExport({
+	const { count, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
 		initialStatus,
 		profile,
 		wallet,
