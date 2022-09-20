@@ -16,14 +16,14 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 	const renderAlert = () => {
 		if (count === 0) {
 			return (
-				<Alert className="my-6" variant="warning">
+				<Alert className="mb-6" variant="warning">
 					{t("TRANSACTION.EXPORT.EMPTY.DESCRIPTION")}
 				</Alert>
 			);
 		}
 
 		return (
-			<Alert className="my-6" variant="success">
+			<Alert className="mb-6" variant="success">
 				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION")}
 			</Alert>
 		);
@@ -34,7 +34,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 			<Image
 				name={count === 0 ? "Warning" : "Success"}
 				useAccentColor={count !== undefined && count > 0}
-				className="my-6 mx-auto hidden h-32 w-full md:block"
+				className="mx-auto mb-6 hidden h-26 md:block"
 			/>
 
 			{renderAlert()}

@@ -75,9 +75,6 @@ export const useTransactionExport = ({
 		resetStatus: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},
-		retry: () => {
-			setStatus(ExportProgressStatus.Idle);
-		},
 		startExport: async (settings: ExportSettings) => {
 			setStatus(ExportProgressStatus.Progress);
 

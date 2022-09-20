@@ -12,9 +12,9 @@ export const TransactionExportProgress = ({ file, onCancel }: TransactionExportP
 
 	return (
 		<div>
-			<Image name="Info" className="my-6 mx-auto hidden h-32 w-2/5 md:block" />
+			<Image name="Info" className="mx-auto mb-6 hidden h-26 md:block" />
 
-			<Alert className="my-6" variant="info">
+			<Alert className="mb-6" variant="info">
 				{t("TRANSACTION.EXPORT.PROGRESS.DESCRIPTION")}
 			</Alert>
 

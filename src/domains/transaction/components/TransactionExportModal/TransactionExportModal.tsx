@@ -34,6 +34,10 @@ export const TransactionExportModal = ({
 
 	const form = useTransactionExportForm();
 
+	const handleSubmit = () => {
+		startExport(form.getValues());
+	};
+
 	return (
 		<Modal
 			title={t("TRANSACTION.EXPORT.TITLE")}
@@ -44,12 +48,7 @@ export const TransactionExportModal = ({
 				onClose();
 			}}
 		>
-			<Form
-				data-testid="TransactionExportForm"
-				context={form}
-				onSubmit={() => startExport(form.getValues())}
-				className="mt-8"
-			>
+			<Form data-testid="TransactionExportForm" context={form} onSubmit={handleSubmit} className="mt-8">
 				<Tabs activeId={status}>
 					<TabPanel tabId={ExportProgressStatus.Idle}>
 						<TransactionExportForm wallet={wallet} onCancel={onClose} />
@@ -74,7 +73,7 @@ export const TransactionExportModal = ({
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Error}>
-						<TransactionExportError error={error} file={file} onBack={resetStatus} onRetry={retry} />
+						<TransactionExportError error={error} file={file} onBack={resetStatus} onRetry={handleSubmit} />
 					</TabPanel>
 				</Tabs>
 			</Form>
