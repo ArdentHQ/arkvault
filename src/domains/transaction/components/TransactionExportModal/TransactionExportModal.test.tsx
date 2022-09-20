@@ -13,6 +13,8 @@ const history = createHashHistory();
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
+const exportButton = () => screen.getByTestId("TransactionExport__submit-button");
+
 describe("TransactionExportModal", () => {
 	let profile: Contracts.IProfile;
 
@@ -206,5 +208,34 @@ describe("TransactionExportModal", () => {
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
+	});
+
+	it("should disable export button if all column toggles are off", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(exportButton()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-tx-id"));
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-date"));
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-sender-recipient"));
+		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-crypto-amount"));
+
+		await waitFor(() => {
+			expect(exportButton()).toBeDisabled();
+		});
 	});
 });

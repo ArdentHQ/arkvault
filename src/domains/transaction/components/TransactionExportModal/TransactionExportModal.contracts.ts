@@ -16,9 +16,8 @@ export interface TransactionExportModalProperties {
 }
 
 export interface TransactionExportFormProperties {
-	onCancel?: () => void;
-	onExport?: (exportSettings: ExportSettings) => void;
-	wallet: Contracts.IReadWriteWallet;
+	showFiatColumn: boolean;
+	onCancel: () => void;
 }
 
 export interface TransactionExportProgressProperties {

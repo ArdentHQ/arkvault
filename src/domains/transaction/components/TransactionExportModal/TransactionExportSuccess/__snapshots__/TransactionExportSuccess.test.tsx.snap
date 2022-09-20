@@ -4,7 +4,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-1dwg83m"
@@ -62,7 +62,7 @@ exports[`TransactionExportForm should render in md 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-1dwg83m"
@@ -120,7 +120,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-1dwg83m"
@@ -178,7 +178,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-1dwg83m"
@@ -236,7 +236,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-1dwg83m"
@@ -294,12 +294,12 @@ exports[`TransactionExportForm should render warnigg if count is zero 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-full md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
       warning-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-pra96q"

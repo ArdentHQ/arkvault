@@ -17,7 +17,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 				<Toggle
 					checked={!!watch("includeTransactionId")}
 					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						setValue("includeTransactionId", event.target.checked);
+						setValue("includeTransactionId", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
 					}}
 					data-testid="TransactionExportForm__toggle-include-tx-id"
 				/>
@@ -30,7 +33,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 				<Toggle
 					checked={!!watch("includeDate")}
 					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						setValue("includeDate", event.target.checked);
+						setValue("includeDate", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
 					}}
 					data-testid="TransactionExportForm__toggle-include-date"
 				/>
@@ -43,7 +49,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 				<Toggle
 					checked={!!watch("includeSenderRecipient")}
 					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						setValue("includeSenderRecipient", event.target.checked);
+						setValue("includeSenderRecipient", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
 					}}
 					data-testid="TransactionExportForm__toggle-include-sender-recipient"
 				/>
@@ -56,7 +65,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 				<Toggle
 					checked={!!watch("includeCryptoAmount")}
 					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						setValue("includeCryptoAmount", event.target.checked);
+						setValue("includeCryptoAmount", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
 					}}
 					data-testid="TransactionExportForm__toggle-include-crypto-amount"
 				/>
@@ -72,7 +84,10 @@ export const ColumnSettings = ({ showFiatColumn }: { showFiatColumn: boolean }) 
 				<Toggle
 					checked={!!watch("includeFiatAmount")}
 					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						setValue("includeFiatAmount", event.target.checked);
+						setValue("includeFiatAmount", event.target.checked, {
+							shouldDirty: true,
+							shouldValidate: true,
+						});
 					}}
 					data-testid="TransactionExportForm__toggle-include-fiat-amount"
 				/>

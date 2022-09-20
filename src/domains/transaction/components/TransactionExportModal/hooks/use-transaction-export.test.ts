@@ -160,11 +160,11 @@ describe("useTransactionExport hook", () => {
 		transactionIndexMock.mockRestore();
 	});
 
-	it("should set idle status on retry", async () => {
+	it("should set idle status on resetStatus", async () => {
 		const { result } = renderExportHook();
 
 		act(() => {
-			result.current.retry();
+			result.current.resetStatus();
 		});
 
 		await waitFor(() => expect(result.current.status).toBe(ExportProgressStatus.Idle));

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useTransactionExport } from "./hooks";
 import { useTransactionExportForm } from "./TransactionExportForm/hooks";
@@ -34,6 +34,14 @@ export const TransactionExportModal = ({
 
 	const form = useTransactionExportForm();
 
+	const showFiatColumn = wallet.network().isLive();
+
+	useEffect(() => {
+		if (showFiatColumn) {
+			form.register("includeFiatAmount");
+		}
+	}, [showFiatColumn]);
+
 	const handleSubmit = () => {
 		startExport(form.getValues());
 	};
@@ -48,10 +56,10 @@ export const TransactionExportModal = ({
 				onClose();
 			}}
 		>
-			<Form data-testid="TransactionExportForm" context={form} onSubmit={handleSubmit} className="mt-8">
+			<Form context={form} onSubmit={handleSubmit} className="mt-8">
 				<Tabs activeId={status}>
 					<TabPanel tabId={ExportProgressStatus.Idle}>
-						<TransactionExportForm wallet={wallet} onCancel={onClose} />
+						<TransactionExportForm showFiatColumn={showFiatColumn} onCancel={onClose} />
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Progress}>

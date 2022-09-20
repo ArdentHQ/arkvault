@@ -8,11 +8,15 @@ import {
 	DateRange,
 } from "@/domains/transaction/components/TransactionExportModal";
 
+interface ExportFormErrors {
+	noColumns?: never;
+}
+
 export const useTransactionExportForm = () => {
 	const startDate = new Date();
 	startDate.setDate(startDate.getDate() - 7);
 
-	const form = useForm<ExportSettings>({
+	const form = useForm<ExportSettings & ExportFormErrors>({
 		defaultValues: {
 			dateRange: DateRange.CurrentMonth,
 			delimiter: CsvDelimiter.Comma,
@@ -40,7 +44,6 @@ export const useTransactionExportForm = () => {
 		register("includeDate");
 		register("includeSenderRecipient");
 		register("includeCryptoAmount");
-		register("includeFiatAmount");
 	}, [register]);
 
 	const { includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId } =
@@ -53,11 +56,11 @@ export const useTransactionExportForm = () => {
 				Boolean,
 			).length === 0
 		) {
-			setError("includeCryptoAmount", {});
+			setError("noColumns", { type: "manual" });
 			return;
 		}
 
-		clearErrors("includeCryptoAmount");
+		clearErrors("noColumns");
 	}, [includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId]);
 
 	return form;

@@ -6,22 +6,26 @@ import { TransactionExportFormProperties } from "@/domains/transaction/component
 import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 
-export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFormProperties) => {
+export const TransactionExportForm = ({ showFiatColumn, onCancel }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
 
 	const form = useFormContext();
 	const { isDirty, isSubmitting, isValid } = form.formState;
 
 	return (
-		<>
+		<div data-testid="TransactionExportForm">
 			<BasicSettings />
 
 			<CSVSettings />
 
-			<ColumnSettings showFiatColumn={wallet.network().isLive()} />
+			<ColumnSettings showFiatColumn={showFiatColumn} />
 
 			<FormButtons>
-				<Button variant="secondary" onClick={onCancel} data-testid="TransactionExportForm__cancel-button">
+				<Button
+					variant="secondary"
+					onClick={() => onCancel()}
+					data-testid="TransactionExportForm__cancel-button"
+				>
 					{t("COMMON.CANCEL")}
 				</Button>
 
@@ -34,6 +38,6 @@ export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFor
 					{t("COMMON.EXPORT")}
 				</Button>
 			</FormButtons>
-		</>
+		</div>
 	);
 };
