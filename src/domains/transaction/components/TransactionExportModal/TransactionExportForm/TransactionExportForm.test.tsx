@@ -59,9 +59,7 @@ describe("TransactionExportForm", () => {
 	it("should render fiat column", () => {
 		const onCancel = jest.fn();
 
-		const { asFragment } = renderWithForm(
-			<TransactionExportForm onCancel={onCancel} showFiatColumn={true} />,
-		);
+		const { asFragment } = renderWithForm(<TransactionExportForm onCancel={onCancel} showFiatColumn={true} />);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
 
