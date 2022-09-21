@@ -11,6 +11,27 @@ interface TransactionExporterFetchProperties {
 	cursor?: number;
 }
 
+const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
+	transactions.filter((transaction) => {
+		if (transaction.isTransfer()) {
+			return transaction.sender() !== transaction.recipient();
+		}
+
+		if (transaction.isMultiPayment()) {
+			let amount = BigNumber.make(transaction.amount());
+
+			for (const recipient of transaction.recipients()) {
+				if (transaction.sender() === recipient.address) {
+					amount = amount.minus(recipient.amount);
+				}
+			}
+
+			return !amount.isZero();
+		}
+
+		return false;
+	});
+
 export const TransactionExporter = ({
 	profile,
 	wallet,
@@ -55,25 +76,7 @@ export const TransactionExporter = ({
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
 		if (page.items().length < limit) {
 			if (type === "received") {
-				transactions = transactions.filter((transaction) => {
-					if (transaction.isTransfer()) {
-						return transaction.sender() !== transaction.recipient();
-					}
-
-					if (transaction.isMultiPayment()) {
-						let amount = BigNumber.make(transaction.amount());
-
-						for (const recipient of transaction.recipients()) {
-							if (transaction.sender() === recipient.address) {
-								amount = amount.minus(recipient.amount);
-							}
-						}
-
-						return !amount.isZero();
-					}
-
-					return false;
-				});
+				transactions = filterTransactions(transactions);
 			}
 
 			return transactions.length;
