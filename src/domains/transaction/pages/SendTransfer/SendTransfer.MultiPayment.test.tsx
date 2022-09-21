@@ -25,8 +25,6 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
-jest.setTimeout(20_000);
-
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 
@@ -167,21 +165,21 @@ describe("SendTransfer MultiPayment", () => {
 		// // Fee
 		// userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		// await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
-        //
+		//
 		// expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.1");
-        //
+		//
 		// // Step 2
-		// expect(continueButton()).not.toBeDisabled();
-        //
+		expect(continueButton()).not.toBeDisabled();
+		//
 		// userEvent.click(continueButton());
-        //
+		//
 		// await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-        //
+		//
 		// // Step 3
 		// expect(continueButton()).not.toBeDisabled();
-        //
+		//
 		// userEvent.click(continueButton());
-        //
+		//
 		// await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
