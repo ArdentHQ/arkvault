@@ -408,6 +408,7 @@ export const translations = {
 			"both delegate name and public key were provided in url. Please use either one or the other.",
 		DELEGATE_RESIGNED: "delegate <strong>{{delegate}}</strong> is resigned.",
 		FEE_NEGATIVE: "Fee cannot be negative",
+		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
 		INVALID_QR: "Invalid QR",
 		INVALID_QR_REASON: "Invalid QR: {{reason}}",
 		INVALID_URI: "Invalid URI",
