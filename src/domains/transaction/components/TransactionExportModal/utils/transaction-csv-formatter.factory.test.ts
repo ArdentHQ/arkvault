@@ -98,7 +98,7 @@ describe("CsvFormatter", () => {
 		expect(fields.recipient()).toBe("Multiple (3)");
 		expect(fields.sender()).toBe(profile.wallets().first().address());
 		expect(fields.timestamp()).toBe(1_595_491_400);
-		expect(fields.total()).toBe(-400_000.1);
+		expect(fields.total()).toBe(-399_999.1);
 	});
 
 	it("should format multipayment transaction fields for recipient wallet", () => {

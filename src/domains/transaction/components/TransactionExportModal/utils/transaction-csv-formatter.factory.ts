@@ -71,14 +71,6 @@ const transactionFee = (transaction: DTO.ExtendedConfirmedTransactionData): numb
 	return 0;
 };
 
-const transactionTotal = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
-	if (transaction.isSent()) {
-		return BigNumber.make(transaction.total()).times(-1).toNumber();
-	}
-
-	return transactionAmount(transaction);
-};
-
 const converted = (value: number, rate: number) => BigNumber.make(value).times(rate).toNumber();
 
 const truncate = (value: number, currency: string) => {
@@ -90,7 +82,8 @@ const truncate = (value: number, currency: string) => {
 export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, timeFormat: string) => {
 	const amount = transactionAmount(transaction);
 	const fee = transactionFee(transaction);
-	const total = transactionTotal(transaction);
+
+	const total = BigNumber.make(amount).plus(fee).toNumber();
 
 	const currency = transaction.wallet().currency();
 	const exchangeCurrency = transaction.wallet().exchangeCurrency();
