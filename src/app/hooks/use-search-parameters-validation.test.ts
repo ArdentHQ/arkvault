@@ -171,7 +171,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "NETWORK_MISMATCH" },
+			error: { type: "INVALID_ADDRESS_OR_NETWORK_MISMATCH" },
 		});
 	});
 
@@ -309,7 +309,7 @@ describe("useSearchParametersValidation", () => {
 		mockFindDelegateByPublicKey.mockRestore();
 	});
 
-	it("should throw for nethash mismatch if sign with invalid address", async () => {
+	it("should throw for invalid address if sign with invalid address", async () => {
 		const parameters = new URLSearchParams(
 			"coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=hello&address=1",
 		);
@@ -317,7 +317,7 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		await expect(result.current.validateSearchParameters(profile, env, parameters)).resolves.toStrictEqual({
-			error: { type: "NETWORK_MISMATCH" },
+			error: { type: "INVALID_ADDRESS_OR_NETWORK_MISMATCH" },
 		});
 	});
 
