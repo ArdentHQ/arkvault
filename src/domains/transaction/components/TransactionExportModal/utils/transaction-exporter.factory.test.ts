@@ -108,7 +108,7 @@ describe("CsvFormatter", () => {
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
 
-		expect(exporter.transactions().items()).toHaveLength(17);
+		expect(exporter.transactions().items()).toHaveLength(19);
 	});
 
 	it("should sync transactions", async () => {
@@ -124,7 +124,7 @@ describe("CsvFormatter", () => {
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "received" });
 
-		expect(exporter.transactions().items()).toHaveLength(2);
+		expect(exporter.transactions().items()).toHaveLength(3);
 	});
 
 	it("should sync sent transactions", async () => {
