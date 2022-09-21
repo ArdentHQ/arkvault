@@ -7,7 +7,7 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	const { COMMON } = buildTranslations();
 
 	if (transaction.isMultiPayment()) {
-		return COMMON.MULTIPLE;
+		return `${COMMON.MULTIPLE} (${transaction.recipients().length})`;
 	}
 
 	if (transaction.isTransfer()) {
@@ -21,26 +21,42 @@ const recipient = (transaction: DTO.ExtendedConfirmedTransactionData) => {
 	return COMMON.OTHER;
 };
 
-const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
-	if (transaction.sender() !== transaction.wallet().address()) {
-		let totalReceived = BigNumber.ZERO;
-
-		for (const recipient of transaction.recipients()) {
-			if (recipient.address === transaction.wallet().address()) {
-				totalReceived = totalReceived.plus(recipient.amount);
-			}
-		}
-
-		return totalReceived.toNumber();
+const transferAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	if (transaction.sender() === transaction.recipient()) {
+		return 0;
 	}
 
 	return transaction.amount();
 };
 
-const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
-	const amount = transaction.isMultiPayment() ? multiPaymentAmount(transaction) : transaction.amount();
+const multiPaymentAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	if (transaction.sender() === transaction.wallet().address()) {
+		let totalSent = BigNumber.make(transaction.amount());
 
-	if (transaction.isSent()) {
+		for (const recipient of transaction.recipients()) {
+			if (recipient.address === transaction.wallet().address()) {
+				totalSent = totalSent.minus(recipient.amount);
+			}
+		}
+
+		return totalSent.toNumber();
+	}
+
+	let totalReceived = BigNumber.ZERO;
+
+	for (const recipient of transaction.recipients()) {
+		if (recipient.address === transaction.wallet().address()) {
+			totalReceived = totalReceived.plus(recipient.amount);
+		}
+	}
+
+	return totalReceived.toNumber();
+};
+
+const transactionAmount = (transaction: DTO.ExtendedConfirmedTransactionData): number => {
+	const amount = transaction.isMultiPayment() ? multiPaymentAmount(transaction) : transferAmount(transaction);
+
+	if (amount > 0 && transaction.isSent()) {
 		return BigNumber.make(amount).times(-1).toNumber();
 	}
 
