@@ -61,6 +61,22 @@ describe("CsvFormatter", () => {
 		expect(exporter.transactions().items()).toHaveLength(15);
 	});
 
+	it("should sync received transactions", async () => {
+		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "received" });
+
+		expect(exporter.transactions().items()).toHaveLength(2);
+	});
+
+	it("should sync sent transactions", async () => {
+		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
+		//@ts-ignore
+		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() }, type: "sent" });
+
+		expect(exporter.transactions().items()).toHaveLength(15);
+	});
+
 	it("should abort sync", async () => {
 		const exporter = TransactionExporter({ profile, wallet: profile.wallets().first() });
 		exporter.transactions().abortSync();

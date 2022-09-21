@@ -53,6 +53,10 @@ export const TransactionExporter = ({
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
 		if (page.items().length < limit) {
+			if (type === "received") {
+				transactions = transactions.filter((transaction) => transaction.amount() > 0);
+			}
+
 			return transactions.length;
 		}
 
