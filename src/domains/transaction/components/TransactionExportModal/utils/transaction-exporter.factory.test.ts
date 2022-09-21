@@ -44,13 +44,13 @@ describe("CsvFormatter", () => {
 								payments: [
 									{
 										amount: "1000000000000",
-										recipientId: "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd"
+										recipientId: "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd",
 									},
 									{
 										amount: "1000000000000",
 										recipientId: profile.wallets().first().address(),
 									},
-								]
+								],
 							},
 							blockId: "65e1f34a8e0edba9c04eec5d35b140245b4d14e063446a65477b28fc719faab5",
 							confirmations: 1_325_777,
@@ -60,11 +60,12 @@ describe("CsvFormatter", () => {
 							recipient: profile.wallets().first().address(),
 							sender: profile.wallets().first().address(),
 							senderPublicKey: profile.wallets().first().publicKey(),
-							signature: "bf517b27ec1b74bcf63af7abea93ec1947f810e7c42f2737133e8cae1ab8517f3d9a59ffcfd31525c3b0b46de144b49070584d83c92c9f7de6cf3ae9d0fc273e",
+							signature:
+								"bf517b27ec1b74bcf63af7abea93ec1947f810e7c42f2737133e8cae1ab8517f3d9a59ffcfd31525c3b0b46de144b49070584d83c92c9f7de6cf3ae9d0fc273e",
 							timestamp: {
 								epoch: 96_231_320,
 								human: "2020-04-08T07:55:20.000Z",
-								unix: 1_586_332_520
+								unix: 1_586_332_520,
 							},
 							type: 6,
 							typeGroup: 1,
@@ -73,7 +74,7 @@ describe("CsvFormatter", () => {
 						{
 							amount: "0",
 							asset: {
-								votes: ["+034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"]
+								votes: ["+034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
 							},
 							blockId: "61d188ac6e127c7a9fd2f71be6cc96d839b1b3a36ac50ede7ccced92fa6588aa",
 							confirmations: 1,
@@ -83,11 +84,12 @@ describe("CsvFormatter", () => {
 							recipient: profile.wallets().first().address(),
 							sender: profile.wallets().first().address(),
 							senderPublicKey: profile.wallets().first().publicKey(),
-							signature: "81a67df443a8903afb1a703befd7a0bdc4e85290d2cbbeeb5b999869f1d8b4e7fa66391abaf1c23088dde5e5b4da121afd2dd964c09e5d9dbf7a53fd7a6330b4",
+							signature:
+								"81a67df443a8903afb1a703befd7a0bdc4e85290d2cbbeeb5b999869f1d8b4e7fa66391abaf1c23088dde5e5b4da121afd2dd964c09e5d9dbf7a53fd7a6330b4",
 							timestamp: {
 								epoch: 109_814_312,
 								human: "2020-09-12T12:58:32.000Z",
-								unix: 1_599_915_512
+								unix: 1_599_915_512,
 							},
 							type: 3,
 							typeGroup: 1,
