@@ -76,7 +76,7 @@ const converted = (value: number, rate: number) => BigNumber.make(value).times(r
 const truncate = (value: number, currency: string) => {
 	const decimals = CURRENCIES[currency]?.decimals ?? 8;
 
-	return Math.trunc(value * 10 ** decimals) / 10 ** decimals;
+	return Math.round(value * 10 ** decimals) / 10 ** decimals;
 };
 
 export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, timeFormat: string) => {
