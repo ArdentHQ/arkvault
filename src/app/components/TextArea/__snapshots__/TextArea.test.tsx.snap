@@ -3,7 +3,7 @@
 exports[`TextArea should render 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-block"
+    class="relative"
   >
     <div
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -30,7 +30,7 @@ exports[`TextArea should render 1`] = `
 exports[`TextArea should render as disabled 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-block"
+    class="relative"
   >
     <div
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
@@ -58,7 +58,7 @@ exports[`TextArea should render as disabled 1`] = `
 exports[`TextArea should render as invalid 1`] = `
 <DocumentFragment>
   <div
-    class="relative inline-block"
+    class="relative"
   >
     <div
       class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
