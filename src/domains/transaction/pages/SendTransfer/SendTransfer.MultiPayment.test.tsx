@@ -18,7 +18,6 @@ import {
 	screen,
 	syncFees,
 	waitFor,
-	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
@@ -28,11 +27,6 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let mockProfileNetworkReset: () => void;
 
-const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
-const selectRecipient = () =>
-	userEvent.click(within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
-const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
-
 const formStepID = "SendTransfer__form-step";
 
 const history = createHashHistory();
@@ -40,8 +34,6 @@ const history = createHashHistory();
 jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
-
-jest.setTimeout(5000);
 
 describe("SendTransfer MultiPayment", () => {
 	beforeAll(async () => {
@@ -105,37 +97,20 @@ describe("SendTransfer MultiPayment", () => {
 		// Select multiple type
 		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
-		selectRecipient();
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		selectFirstRecipient();
-		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
-		);
-
+		// 1st recipient.
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().first().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
-		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
-		selectRecipient();
-
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		selectFirstRecipient();
-
-		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
-		);
-
+		// 1st recipient.
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
-
-		expect(continueButton()).not.toBeDisabled();
 	});
 });
