@@ -213,7 +213,7 @@ export const FormStep = ({
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						{!!network && (
 							<FeeField
-								type={getFeeType(recipients.length)}
+								type={getFeeType(recipients?.length)}
 								data={feeTransactionData}
 								network={network}
 								profile={profile}
