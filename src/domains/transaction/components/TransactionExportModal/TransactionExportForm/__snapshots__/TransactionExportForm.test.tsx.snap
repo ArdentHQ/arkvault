@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransactionExportForm should render fiat column 1`] = `
+exports[`TransactionExportForm should render fiat column if wallets network is live 1`] = `
 <DocumentFragment>
   <div
     data-testid="TransactionExportForm"
@@ -128,6 +128,7 @@ exports[`TransactionExportForm should render fiat column 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -252,6 +253,7 @@ exports[`TransactionExportForm should render fiat column 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -687,6 +689,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -811,6 +814,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -1200,6 +1204,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -1324,6 +1329,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -1713,6 +1719,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -1837,6 +1844,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -2226,6 +2234,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -2350,6 +2359,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -2738,6 +2748,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"
@@ -2862,6 +2873,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
                     <button
                       class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                       data-testid="CollapseToggleButton"
+                      type="button"
                     >
                       <span
                         class="flex items-center space-x-1"

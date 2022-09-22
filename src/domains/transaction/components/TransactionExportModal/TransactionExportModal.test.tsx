@@ -6,7 +6,15 @@ import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 import { TransactionExportModal, ExportProgressStatus } from ".";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	render,
+	screen,
+	syncDelegates,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 
 const history = createHashHistory();
 
@@ -14,6 +22,8 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
 const exportButton = () => screen.getByTestId("TransactionExport__submit-button");
+const dateToggle = () =>
+	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportModal", () => {
 	let profile: Contracts.IProfile;
@@ -24,6 +34,9 @@ describe("TransactionExportModal", () => {
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
+			.get("/api/transactions")
+			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});
 
@@ -38,7 +51,7 @@ describe("TransactionExportModal", () => {
 		await profile.sync();
 	});
 
-	it("should render", () => {
+	it("should render", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
@@ -50,10 +63,15 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with fiat column", () => {
+	it("should render with fiat column", async () => {
 		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
 		const { asFragment } = render(
@@ -67,6 +85,11 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
@@ -95,6 +118,10 @@ describe("TransactionExportModal", () => {
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -120,6 +147,10 @@ describe("TransactionExportModal", () => {
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -144,6 +175,10 @@ describe("TransactionExportModal", () => {
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
 		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -210,7 +245,7 @@ describe("TransactionExportModal", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it("should cancel export on close", async () => {
+	it("should emit onClose", async () => {
 		const onClose = jest.fn();
 
 		render(
@@ -224,6 +259,12 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
@@ -248,7 +289,7 @@ describe("TransactionExportModal", () => {
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(exportButton()).toBeEnabled();
+			expect(dateToggle()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getByTestId("TransactionExportForm__toggle-include-header-row"));

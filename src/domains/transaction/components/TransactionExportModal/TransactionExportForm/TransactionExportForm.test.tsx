@@ -5,12 +5,23 @@ import nock from "nock";
 import React from "react";
 
 import { TransactionExportForm } from ".";
-import { env, getDefaultProfileId, renderWithForm, screen, syncDelegates } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	renderWithForm,
+	screen,
+	syncDelegates,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 
 const history = createHashHistory();
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
+
+const dateToggle = () =>
+	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
@@ -21,6 +32,9 @@ describe("TransactionExportForm", () => {
 			.get("/api/delegates")
 			.query({ page: "1" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
+			.get("/api/transactions")
+			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});
 
@@ -35,49 +49,74 @@ describe("TransactionExportForm", () => {
 		await profile.sync();
 	});
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
-		const { asFragment } = renderWithForm(<TransactionExportForm />, {
+	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", async (breakpoint: string) => {
+		const { asFragment } = renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />, {
 			breakpoint,
 		});
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit cancel", () => {
+	it("should emit cancel", async () => {
 		const onCancel = jest.fn();
 
-		renderWithForm(<TransactionExportForm onCancel={onCancel} />);
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={onCancel} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
 
-	it("should render fiat column", () => {
+	it("should render fiat column if wallets network is live", async () => {
+		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+
 		const onCancel = jest.fn();
 
-		const { asFragment } = renderWithForm(<TransactionExportForm onCancel={onCancel} showFiatColumn={true} />);
+		const { asFragment } = renderWithForm(<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
+
+		walletSpy.mockRestore();
 	});
 
-	it("should select outgoing transactions", () => {
-		renderWithForm(<TransactionExportForm />);
+	it("should select outgoing transactions", async () => {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 	});
 
-	it("should select last month", () => {
-		renderWithForm(<TransactionExportForm />);
+	it("should select last month", async () => {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />);
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
@@ -86,8 +125,8 @@ describe("TransactionExportForm", () => {
 		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 	});
 
-	it("should render custom date range", () => {
-		renderWithForm(<TransactionExportForm onCancel={jest.fn()} />, {
+	it("should render custom date range", async () => {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={jest.fn()} />, {
 			defaultValues: {
 				from: new Date(),
 				to: new Date(),
@@ -101,6 +140,10 @@ describe("TransactionExportForm", () => {
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
 
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
@@ -108,14 +151,18 @@ describe("TransactionExportForm", () => {
 		userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
 	});
 
-	it("should select tab delimiter", () => {
-		renderWithForm(<TransactionExportForm />, {
+	it("should select tab delimiter", async () => {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} />, {
 			defaultValues: {
 				delimiter: ",",
 			},
 		});
 
 		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
