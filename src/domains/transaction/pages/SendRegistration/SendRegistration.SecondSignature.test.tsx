@@ -237,6 +237,10 @@ describe("Second Signature Registration", () => {
 
 		const transactionMock = createSecondSignatureRegistrationMock(wallet);
 
+		const mnemonicValidationMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		userEvent.click(sendButton());
 
 		await waitFor(() =>
@@ -256,5 +260,6 @@ describe("Second Signature Registration", () => {
 
 		bip39GenerateMock.mockRestore();
 		nanoXTransportMock.mockRestore();
+		mnemonicValidationMock.mockRestore();
 	});
 });
