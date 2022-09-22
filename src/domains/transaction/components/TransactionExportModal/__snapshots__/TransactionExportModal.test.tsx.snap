@@ -184,6 +184,8 @@ exports[`TransactionExportModal should render 1`] = `
                                   <button
                                     class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
+                                    disabled=""
+                                    type="button"
                                   >
                                     <span
                                       class="flex items-center space-x-1"
@@ -195,7 +197,7 @@ exports[`TransactionExportModal should render 1`] = `
                                       </div>
                                     </span>
                                     <span
-                                      class="css-e3wx3i"
+                                      class="css-5xpdfb"
                                     >
                                       <div
                                         class="p-1 css-15txs7d"
@@ -312,6 +314,7 @@ exports[`TransactionExportModal should render 1`] = `
                                   <button
                                     class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
+                                    type="button"
                                   >
                                     <span
                                       class="flex items-center space-x-1"
@@ -936,6 +939,8 @@ exports[`TransactionExportModal should render progress status 1`] = `
                                   <button
                                     class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
+                                    disabled=""
+                                    type="button"
                                   >
                                     <span
                                       class="flex items-center space-x-1"
@@ -947,7 +952,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                                       </div>
                                     </span>
                                     <span
-                                      class="css-e3wx3i"
+                                      class="css-5xpdfb"
                                     >
                                       <div
                                         class="p-1 css-15txs7d"
@@ -1064,6 +1069,7 @@ exports[`TransactionExportModal should render progress status 1`] = `
                                   <button
                                     class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden"
                                     data-testid="CollapseToggleButton"
+                                    type="button"
                                   >
                                     <span
                                       class="flex items-center space-x-1"
