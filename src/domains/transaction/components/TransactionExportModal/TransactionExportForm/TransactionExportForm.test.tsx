@@ -84,7 +84,9 @@ describe("TransactionExportForm", () => {
 
 		const onCancel = jest.fn();
 
-		const { asFragment } = renderWithForm(<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />);
+		const { asFragment } = renderWithForm(
+			<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />,
+		);
 
 		expect(screen.getByTestId("TransactionExportForm__toggle-include-fiat-amount")).toBeInTheDocument();
 

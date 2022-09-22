@@ -6,15 +6,7 @@ import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 import { TransactionExportModal, ExportProgressStatus } from ".";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	syncDelegates,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
