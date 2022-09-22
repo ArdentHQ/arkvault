@@ -99,6 +99,7 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
 const multisignatureTitle = "Multisignature Registration";
+let signatory: any;
 
 describe("Multisignature Registration", () => {
 	beforeAll(async () => {
@@ -134,6 +135,10 @@ describe("Multisignature Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
+
+		signatory = await wallet.signatoryFactory().make({
+			mnemonic: passphrase,
+		});
 	});
 
 	afterAll(() => {
@@ -184,7 +189,6 @@ describe("Multisignature Registration", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
 		// Review step
@@ -195,6 +199,13 @@ describe("Multisignature Registration", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
+
+		const mnemonicValidationMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+		const signatoryMock = jest.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		const transactionSyncMock = jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
+
 		userEvent.paste(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
@@ -206,5 +217,8 @@ describe("Multisignature Registration", () => {
 		multiSignatureRegistrationMock.mockRestore();
 		addSignatureMock.mockRestore();
 		nanoXTransportMock.mockRestore();
+		transactionSyncMock.mockRestore();
+		signatoryMock.mockRestore();
+		mnemonicValidationMock.mockRestore();
 	});
 });
