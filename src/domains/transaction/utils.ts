@@ -25,10 +25,8 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 	throw new Error(allErrors[0]);
 };
 
-export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" => {
-	const isMultiPayment = recipients.length > 1;
-	return isMultiPayment ? "multiPayment" : "transfer";
-};
+export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" =>
+	recipients.length > 1 ? "multiPayment" : "transfer";
 
 export const withAbortPromise =
 	(signal?: AbortSignal, callback?: () => void) =>
