@@ -6,6 +6,7 @@ exports[`CollapseToggleButton should render disabled 1`] = `
     class="flex items-center space-x-2 font-semibold focus:outline-none rounded text-theme-secondary-500"
     data-testid="CollapseToggleButton"
     disabled=""
+    type="button"
   >
     <span
       class="flex items-center space-x-1"

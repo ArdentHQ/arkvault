@@ -63,6 +63,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -147,6 +148,7 @@ exports[`Transactions should fetch more transactions 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -1789,6 +1791,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -1873,6 +1876,7 @@ exports[`Transactions should hide view more button when there are no next pages 
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -2816,6 +2820,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -2900,6 +2905,7 @@ exports[`Transactions should open detail modal on transaction row click 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -3843,6 +3849,7 @@ exports[`Transactions should render 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -3927,6 +3934,7 @@ exports[`Transactions should render 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -4883,6 +4891,7 @@ exports[`Transactions should render with custom title 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
@@ -4967,6 +4976,7 @@ exports[`Transactions should render with custom title 1`] = `
             <button
               class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:py-2 md:px-0"
               data-testid="CollapseToggleButton"
+              type="button"
             >
               <span
                 class="flex items-center space-x-1"
