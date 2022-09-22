@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
+import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
@@ -17,7 +18,6 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { getFeeType } from "./utils";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}

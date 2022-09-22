@@ -105,7 +105,7 @@ describe("SendTransfer MultiPayment", () => {
 
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
-		// 1st recipient.
+		// 2nd recipient.
 		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], profile.wallets().last().address());
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
