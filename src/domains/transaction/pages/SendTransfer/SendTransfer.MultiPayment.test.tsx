@@ -88,6 +88,8 @@ describe("SendTransfer MultiPayment", () => {
 			},
 		);
 
+		const coinValidateMock = jest.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
+
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		await waitFor(() => {
@@ -112,5 +114,6 @@ describe("SendTransfer MultiPayment", () => {
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
+		coinValidateMock.mockRestore();
 	});
 });
