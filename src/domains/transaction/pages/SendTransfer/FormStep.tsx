@@ -17,6 +17,7 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
+import { getFeeType } from "./utils";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
@@ -212,7 +213,7 @@ export const FormStep = ({
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						{!!network && (
 							<FeeField
-								type={recipients?.length > 1 ? "multiPayment" : "transfer"}
+								type={getFeeType(recipients.length)}
 								data={feeTransactionData}
 								network={network}
 								profile={profile}
