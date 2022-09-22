@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransactionExportForm } from "./hooks";
 import { BasicSettings, CSVSettings, ColumnSettings } from ".";
@@ -8,6 +8,27 @@ import { TransactionExportFormProperties } from "@/domains/transaction/component
 
 export const TransactionExportForm = ({ wallet, onCancel, onExport }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
+
+	const [minStartDate, setMinStartDate] = useState<Date | undefined>();
+
+	useEffect(() => {
+		const fetchFirstTransaction = async () => {
+			let date: Date | undefined = new Date(
+				wallet.manifest().get<object>("networks")[wallet.networkId()].constants.epoch,
+			);
+
+			try {
+				const transactions = await wallet.transactionIndex().all({ orderBy: "timestamp:asc" });
+				date = transactions.first().timestamp()?.toDate();
+			} catch {
+				//
+			}
+
+			setMinStartDate(date);
+		};
+
+		fetchFirstTransaction();
+	}, [wallet]);
 
 	const form = useTransactionExportForm();
 	const { isDirty, isSubmitting, isValid } = form.formState;
@@ -21,7 +42,7 @@ export const TransactionExportForm = ({ wallet, onCancel, onExport }: Transactio
 			}}
 			className="mt-8"
 		>
-			<BasicSettings />
+			<BasicSettings minStartDate={minStartDate} />
 
 			<CSVSettings />
 
