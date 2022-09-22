@@ -35,6 +35,8 @@ jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+jest.setTimeout(6_000);
+
 describe("SendTransfer MultiPayment", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
