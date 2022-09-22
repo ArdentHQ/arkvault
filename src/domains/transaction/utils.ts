@@ -1,4 +1,5 @@
 import { Services } from "@ardenthq/sdk";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const isNoDeviceError = (error: any) => {
 	if (!error) {
@@ -22,6 +23,11 @@ export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => 
 	}
 
 	throw new Error(allErrors[0]);
+};
+
+export const getTransferType = ({ recipients }: { recipients: RecipientItem[] }): "multiPayment" | "transfer" => {
+	const isMultiPayment = recipients.length > 1;
+	return isMultiPayment ? "multiPayment" : "transfer";
 };
 
 export const withAbortPromise =
