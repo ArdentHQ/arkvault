@@ -66,7 +66,6 @@ export const useTransactionExport = ({
 
 	return {
 		cancelExport: () => {
-			setStatus(ExportProgressStatus.Idle);
 			exporter.transactions().abortSync();
 		},
 		count,
@@ -84,6 +83,11 @@ export const useTransactionExport = ({
 				const transactionCount = await exporter
 					.transactions()
 					.sync({ dateRange, type: settings.transactionType });
+
+				if (transactionCount === undefined) {
+					setStatus(ExportProgressStatus.Idle);
+					return;
+				}
 
 				setCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);
