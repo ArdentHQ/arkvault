@@ -67,6 +67,7 @@ export const useTransactionExport = ({
 	return {
 		cancelExport: () => {
 			exporter.transactions().abortSync();
+			setStatus(ExportProgressStatus.Idle);
 		},
 		count,
 		error,
@@ -85,7 +86,6 @@ export const useTransactionExport = ({
 					.sync({ dateRange, type: settings.transactionType });
 
 				if (transactionCount === undefined) {
-					setStatus(ExportProgressStatus.Idle);
 					return;
 				}
 
