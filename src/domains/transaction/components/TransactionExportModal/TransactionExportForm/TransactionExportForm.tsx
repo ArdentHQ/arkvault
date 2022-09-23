@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { useTransactionExportForm } from "./hooks";
 import { BasicSettings, CSVSettings, ColumnSettings } from ".";
-import { Button } from "@/app/components/Button";
-import { Form, FormButtons } from "@/app/components/Form";
 import { TransactionExportFormProperties } from "@/domains/transaction/components/TransactionExportModal";
+import { Button } from "@/app/components/Button";
+import { FormButtons } from "@/app/components/Form";
 
-export const TransactionExportForm = ({ wallet, onCancel, onExport }: TransactionExportFormProperties) => {
+export const TransactionExportForm = ({ wallet, onCancel }: TransactionExportFormProperties) => {
 	const { t } = useTranslation();
+
+	const form = useFormContext();
+	const { isDirty, isSubmitting, isValid } = form.formState;
 
 	const [minStartDate, setMinStartDate] = useState<Date | undefined>();
 
@@ -30,28 +33,20 @@ export const TransactionExportForm = ({ wallet, onCancel, onExport }: Transactio
 		fetchFirstTransaction();
 	}, [wallet]);
 
-	const form = useTransactionExportForm();
-	const { isDirty, isSubmitting, isValid } = form.formState;
+	const showFiatColumn = wallet.network().isLive();
 
 	return (
-		<Form
-			data-testid="TransactionExportForm"
-			context={form}
-			onSubmit={() => {
-				onExport?.(form.getValues());
-			}}
-			className="mt-8"
-		>
+		<div data-testid="TransactionExportForm">
 			<BasicSettings minStartDate={minStartDate} />
 
 			<CSVSettings />
 
-			<ColumnSettings showFiatColumn={wallet.network().isLive()} />
+			<ColumnSettings showFiatColumn={showFiatColumn} />
 
 			<FormButtons>
 				<Button
 					variant="secondary"
-					onClick={() => onCancel?.()}
+					onClick={() => onCancel()}
 					data-testid="TransactionExportForm__cancel-button"
 				>
 					{t("COMMON.CANCEL")}
@@ -66,6 +61,6 @@ export const TransactionExportForm = ({ wallet, onCancel, onExport }: Transactio
 					{t("COMMON.EXPORT")}
 				</Button>
 			</FormButtons>
-		</Form>
+		</div>
 	);
 };

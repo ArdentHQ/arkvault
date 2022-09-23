@@ -1,5 +1,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { assertString } from "@/utils/assertions";
@@ -9,6 +10,27 @@ interface TransactionExporterFetchProperties {
 	dateRange?: Services.RangeCriteria;
 	cursor?: number;
 }
+
+const filterTransactions = (transactions: DTO.ExtendedConfirmedTransactionData[]) =>
+	transactions.filter((transaction) => {
+		if (transaction.isTransfer()) {
+			return transaction.sender() !== transaction.recipient();
+		}
+
+		if (transaction.isMultiPayment()) {
+			let amount = BigNumber.make(transaction.amount());
+
+			for (const recipient of transaction.recipients()) {
+				if (transaction.sender() === recipient.address) {
+					amount = amount.minus(recipient.amount);
+				}
+			}
+
+			return !amount.isZero();
+		}
+
+		return false;
+	});
 
 export const TransactionExporter = ({
 	profile,
@@ -53,6 +75,10 @@ export const TransactionExporter = ({
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
 		if (page.items().length < limit) {
+			if (type === "received") {
+				transactions = filterTransactions(transactions);
+			}
+
 			return transactions.length;
 		}
 

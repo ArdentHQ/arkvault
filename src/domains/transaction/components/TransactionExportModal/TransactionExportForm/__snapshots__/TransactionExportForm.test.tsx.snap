@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransactionExportForm should render fiat column if wallet is live 1`] = `
+exports[`TransactionExportForm should render fiat column if wallets network is live 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -43,7 +42,7 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                   role="radiogroup"
                 >
                   <button
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-label="Incoming"
                     class="css-12yryft"
                     data-testid="ButtonGroupOption"
@@ -136,9 +135,7 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -201,10 +198,8 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -263,13 +258,11 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -337,10 +330,8 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -385,10 +376,8 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -433,10 +422,8 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -481,10 +468,8 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -529,12 +514,9 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-fiat-amount"
-                  name="includeFiatAmount"
                   type="checkbox"
-                  value="true"
                 />
                 <div
                   class="css-7lwhds toggle-handle"
@@ -575,14 +557,13 @@ exports[`TransactionExportForm should render fiat column if wallet is live 1`] =
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`TransactionExportForm should render in lg 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -622,7 +603,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                   role="radiogroup"
                 >
                   <button
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-label="Incoming"
                     class="css-12yryft"
                     data-testid="ButtonGroupOption"
@@ -715,9 +696,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -780,10 +759,8 @@ exports[`TransactionExportForm should render in lg 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -842,13 +819,11 @@ exports[`TransactionExportForm should render in lg 1`] = `
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -916,10 +891,8 @@ exports[`TransactionExportForm should render in lg 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -964,10 +937,8 @@ exports[`TransactionExportForm should render in lg 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -1012,10 +983,8 @@ exports[`TransactionExportForm should render in lg 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -1060,10 +1029,8 @@ exports[`TransactionExportForm should render in lg 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -1105,14 +1072,13 @@ exports[`TransactionExportForm should render in lg 1`] = `
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`TransactionExportForm should render in md 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -1152,7 +1118,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                   role="radiogroup"
                 >
                   <button
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-label="Incoming"
                     class="css-12yryft"
                     data-testid="ButtonGroupOption"
@@ -1245,9 +1211,7 @@ exports[`TransactionExportForm should render in md 1`] = `
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -1310,10 +1274,8 @@ exports[`TransactionExportForm should render in md 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -1372,13 +1334,11 @@ exports[`TransactionExportForm should render in md 1`] = `
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -1446,10 +1406,8 @@ exports[`TransactionExportForm should render in md 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -1494,10 +1452,8 @@ exports[`TransactionExportForm should render in md 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -1542,10 +1498,8 @@ exports[`TransactionExportForm should render in md 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -1590,10 +1544,8 @@ exports[`TransactionExportForm should render in md 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -1635,14 +1587,13 @@ exports[`TransactionExportForm should render in md 1`] = `
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`TransactionExportForm should render in sm 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -1682,7 +1633,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                   role="radiogroup"
                 >
                   <button
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-label="Incoming"
                     class="css-12yryft"
                     data-testid="ButtonGroupOption"
@@ -1775,9 +1726,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -1840,10 +1789,8 @@ exports[`TransactionExportForm should render in sm 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -1902,13 +1849,11 @@ exports[`TransactionExportForm should render in sm 1`] = `
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -1976,10 +1921,8 @@ exports[`TransactionExportForm should render in sm 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -2024,10 +1967,8 @@ exports[`TransactionExportForm should render in sm 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -2072,10 +2013,8 @@ exports[`TransactionExportForm should render in sm 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -2120,10 +2059,8 @@ exports[`TransactionExportForm should render in sm 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -2165,14 +2102,13 @@ exports[`TransactionExportForm should render in sm 1`] = `
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`TransactionExportForm should render in xl 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -2212,7 +2148,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                   role="radiogroup"
                 >
                   <button
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-label="Incoming"
                     class="css-12yryft"
                     data-testid="ButtonGroupOption"
@@ -2305,9 +2241,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -2370,10 +2304,8 @@ exports[`TransactionExportForm should render in xl 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -2432,13 +2364,11 @@ exports[`TransactionExportForm should render in xl 1`] = `
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -2506,10 +2436,8 @@ exports[`TransactionExportForm should render in xl 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -2554,10 +2482,8 @@ exports[`TransactionExportForm should render in xl 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -2602,10 +2528,8 @@ exports[`TransactionExportForm should render in xl 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -2650,10 +2574,8 @@ exports[`TransactionExportForm should render in xl 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -2695,14 +2617,13 @@ exports[`TransactionExportForm should render in xl 1`] = `
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`TransactionExportForm should render in xs 1`] = `
 <DocumentFragment>
-  <form
-    class="mt-8"
+  <div
     data-testid="TransactionExportForm"
   >
     <ul
@@ -2743,7 +2664,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
               role="radiogroup"
             >
               <button
-                aria-checked="true"
+                aria-checked="false"
                 aria-label="Incoming"
                 class="css-12yryft"
                 data-testid="ButtonGroupOption"
@@ -2834,9 +2755,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
                       >
                         <div
                           class="whitespace-nowrap leading-tight"
-                        >
-                          Month to Date
-                        </div>
+                        />
                       </span>
                       <span
                         class="css-e3wx3i"
@@ -2899,10 +2818,8 @@ exports[`TransactionExportForm should render in xs 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-header-row"
-                  name="includeHeaderRow"
                   type="checkbox"
                 />
                 <div
@@ -2961,13 +2878,11 @@ exports[`TransactionExportForm should render in xs 1`] = `
                       <span
                         class="flex items-center space-x-1"
                       >
-                        Comma
                         <span
                           class="px-1 leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
                           (
                         </span>
-                        ,
                         <span
                           class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
                         >
@@ -3035,10 +2950,8 @@ exports[`TransactionExportForm should render in xs 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-tx-id"
-                  name="includeTransactionId"
                   type="checkbox"
                 />
                 <div
@@ -3083,10 +2996,8 @@ exports[`TransactionExportForm should render in xs 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-date"
-                  name="includeDate"
                   type="checkbox"
                 />
                 <div
@@ -3131,10 +3042,8 @@ exports[`TransactionExportForm should render in xs 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-sender-recipient"
-                  name="includeSenderRecipient"
                   type="checkbox"
                 />
                 <div
@@ -3179,10 +3088,8 @@ exports[`TransactionExportForm should render in xs 1`] = `
                 class="css-xklln0"
               >
                 <input
-                  checked=""
                   class="css-1r71f0z toggle-input"
                   data-testid="TransactionExportForm__toggle-include-crypto-amount"
-                  name="includeCryptoAmount"
                   type="checkbox"
                 />
                 <div
@@ -3224,6 +3131,6 @@ exports[`TransactionExportForm should render in xs 1`] = `
         </div>
       </button>
     </div>
-  </form>
+  </div>
 </DocumentFragment>
 `;

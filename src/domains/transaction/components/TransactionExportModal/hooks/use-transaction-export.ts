@@ -66,13 +66,13 @@ export const useTransactionExport = ({
 
 	return {
 		cancelExport: () => {
-			setStatus(ExportProgressStatus.Idle);
 			exporter.transactions().abortSync();
+			setStatus(ExportProgressStatus.Idle);
 		},
 		count,
 		error,
 		file,
-		retry: () => {
+		resetStatus: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: async (settings: ExportSettings) => {
@@ -84,6 +84,11 @@ export const useTransactionExport = ({
 				const transactionCount = await exporter
 					.transactions()
 					.sync({ dateRange, type: settings.transactionType });
+
+				/* istanbul ignore if */
+				if (transactionCount === undefined) {
+					return;
+				}
 
 				setCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);
