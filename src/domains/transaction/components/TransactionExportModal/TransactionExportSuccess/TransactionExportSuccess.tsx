@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { formatNumber } from "@ardenthq/sdk-helpers";
 import { useFileDownload } from "./hooks/use-file-download";
 import { Alert } from "@/app/components/Alert";
 import { FormButtons } from "@/app/components/Form";
@@ -7,7 +8,6 @@ import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
-import { formatNumber } from "@ardenthq/sdk-helpers";
 
 export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: TransactionExportStatusProperties) => {
 	const { t } = useTranslation();

@@ -1,10 +1,10 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { Services } from "@ardenthq/sdk";
 import { BigNumber } from "@ardenthq/sdk-helpers";
+import { useState } from "react";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { assertString } from "@/utils/assertions";
-import { useState } from "react";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";

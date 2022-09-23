@@ -71,8 +71,8 @@ export const translations = {
 			TRANSACTION_ID: "Transaction ID",
 		},
 		PROGRESS: {
-			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
 			DESCRIPTION: "{{count}} transactions have been retrieved so far, please wait.",
+			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
 		},
 		SUCCESS: {
 			DESCRIPTION: "{{count}} transactions have been retrieved and are ready to be exported.",
