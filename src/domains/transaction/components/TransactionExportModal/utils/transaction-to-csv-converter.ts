@@ -11,13 +11,29 @@ const getHeaders = (settings: CsvSettings, exchangeCurrency: string) => {
 			(header: string) => `${header} [${exchangeCurrency}]`,
 		);
 
-	return [
-		...(settings.includeTransactionId ? [COMMON.ID] : []),
-		...(settings.includeDate ? [`${COMMON.DATE} & ${COMMON.TIME}`] : []),
-		...(settings.includeSenderRecipient ? [COMMON.SENDER, COMMON.RECIPIENT] : []),
-		...(settings.includeCryptoAmount ? [COMMON.AMOUNT, COMMON.FEE, COMMON.TOTAL] : []),
-		...(settings.includeFiatAmount ? [...buildFiatHeaders(exchangeCurrency), COMMON.RATE] : []),
-	].join(settings.delimiter);
+	const headers: string[] = [];
+
+	if (settings.includeTransactionId) {
+		headers.push(COMMON.ID);
+	}
+
+	if (settings.includeDate) {
+		headers.push(`${COMMON.DATE} & ${COMMON.TIME}`);
+	}
+
+	if (settings.includeSenderRecipient) {
+		headers.push(COMMON.SENDER, COMMON.RECIPIENT);
+	}
+
+	if (settings.includeCryptoAmount) {
+		headers.push(COMMON.AMOUNT, COMMON.FEE, COMMON.TOTAL);
+	}
+
+	if (settings.includeFiatAmount) {
+		headers.push(...buildFiatHeaders(exchangeCurrency), COMMON.RATE);
+	}
+
+	return headers.join(settings.delimiter);
 };
 
 const transactionToCsv = (
@@ -27,15 +43,29 @@ const transactionToCsv = (
 ) => {
 	const fields = CsvFormatter(transaction, timeFormat);
 
-	return [
-		...(settings.includeTransactionId ? [transaction.id()] : []),
-		...(settings.includeDate ? [fields.datetime()] : []),
-		...(settings.includeSenderRecipient ? [fields.sender(), fields.recipient()] : []),
-		...(settings.includeCryptoAmount ? [fields.amount(), fields.fee(), fields.total()] : []),
-		...(settings.includeFiatAmount
-			? [fields.convertedAmount(), fields.convertedFee(), fields.convertedTotal(), fields.rate()]
-			: []),
-	].join(settings.delimiter);
+	const row: any[] = [];
+
+	if (settings.includeTransactionId) {
+		row.push(transaction.id());
+	}
+
+	if (settings.includeDate) {
+		row.push(fields.datetime());
+	}
+
+	if (settings.includeSenderRecipient) {
+		row.push(fields.sender(), fields.recipient());
+	}
+
+	if (settings.includeCryptoAmount) {
+		row.push(fields.amount(), fields.fee(), fields.total());
+	}
+
+	if (settings.includeFiatAmount) {
+		row.push(fields.convertedAmount(), fields.convertedFee(), fields.convertedTotal(), fields.rate());
+	}
+
+	return row.join(settings.delimiter);
 };
 
 export const convertToCsv = (

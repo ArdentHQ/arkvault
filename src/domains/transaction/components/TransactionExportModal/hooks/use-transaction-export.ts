@@ -85,6 +85,7 @@ export const useTransactionExport = ({
 					.transactions()
 					.sync({ dateRange, type: settings.transactionType });
 
+				/* istanbul ignore if */
 				if (transactionCount === undefined) {
 					return;
 				}
