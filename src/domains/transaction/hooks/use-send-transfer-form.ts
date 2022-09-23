@@ -10,7 +10,7 @@ import { useActiveProfile, useNetworks, useValidation } from "@/app/hooks";
 import { useTransactionBuilder } from "@/domains/transaction/hooks/use-transaction-builder";
 import { SendTransferForm } from "@/domains/transaction/pages/SendTransfer";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { handleBroadcastError } from "@/domains/transaction/utils";
+import { getTransferType, handleBroadcastError } from "@/domains/transaction/utils";
 import { precisionRound } from "@/utils/precision-round";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";
@@ -82,8 +82,6 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 				secret,
 				secondSecret,
 			} = getValues();
-			const isMultiPayment = recipients.length > 1;
-			const transactionType = isMultiPayment ? "multiPayment" : "transfer";
 
 			const signatory = await wallet.signatoryFactory().make({
 				encryptionPassword,
@@ -106,9 +104,14 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 			const transactionInput: Services.TransactionInputs = { data, fee: +fee, signatory };
 
 			const abortSignal = abortReference.current.signal;
-			const { uuid, transaction } = await transactionBuilder.build(transactionType, transactionInput, wallet, {
-				abortSignal,
-			});
+			const { uuid, transaction } = await transactionBuilder.build(
+				getTransferType({ recipients }),
+				transactionInput,
+				wallet,
+				{
+					abortSignal,
+				},
+			);
 
 			const response = await wallet.transaction().broadcast(uuid);
 
