@@ -26,7 +26,7 @@ export const TransactionExportModal = ({
 
 	const profile = useActiveProfile();
 
-	const { count, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
+	const { count, finalCount, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
 		initialStatus,
 		profile,
 		wallet,
@@ -63,12 +63,12 @@ export const TransactionExportModal = ({
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Progress}>
-						<TransactionExportProgress file={file} onCancel={cancelExport} />
+						<TransactionExportProgress count={count} file={file} onCancel={cancelExport} />
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Success}>
 						<TransactionExportSuccess
-							count={count}
+							count={finalCount}
 							file={file}
 							onBack={resetStatus}
 							onDownload={(filename: string) => {

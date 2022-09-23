@@ -71,10 +71,11 @@ export const translations = {
 			TRANSACTION_ID: "Transaction ID",
 		},
 		PROGRESS: {
-			DESCRIPTION: "The data is being prepared. This might take a while, please wait.",
+			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
+			DESCRIPTION: "{{count}} transactions have been retrieved so far, please wait.",
 		},
 		SUCCESS: {
-			DESCRIPTION: "The transaction history is now ready, download it below.",
+			DESCRIPTION: "{{count}} transactions have been retrieved and are ready to be exported.",
 		},
 		TITLE: "Transaction History",
 	},

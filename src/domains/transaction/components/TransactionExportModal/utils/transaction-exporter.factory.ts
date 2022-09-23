@@ -4,6 +4,7 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { CsvSettings } from "@/domains/transaction/components/TransactionExportModal";
 import { assertString } from "@/utils/assertions";
+import { useState } from "react";
 
 interface TransactionExporterFetchProperties {
 	type: "all" | "received" | "sent";
@@ -44,6 +45,8 @@ export const TransactionExporter = ({
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	const timeFormat = profile.settings().get<string>(Contracts.ProfileSetting.TimeFormat);
 
+	const [count, setCount] = useState(0);
+
 	assertString(exchangeCurrency);
 	assertString(timeFormat);
 
@@ -71,6 +74,8 @@ export const TransactionExporter = ({
 		transactions.push(...page.items());
 		cursor = cursor + 1;
 
+		setCount(transactions.length);
+
 		// Last page.
 		// TODO: Not relying on totalCount because it is an estimate
 		//        and is not giving accurate pagination info. Address this issue after initial implementation.
@@ -88,6 +93,7 @@ export const TransactionExporter = ({
 	return {
 		transactions: () => ({
 			abortSync: () => (requestedSyncAbort = true),
+			count: () => count,
 			items: () => transactions,
 			sync,
 			toCsv: (settings: CsvSettings) => convertToCsv(transactions, settings, exchangeCurrency, timeFormat),

@@ -53,7 +53,7 @@ export const useTransactionExport = ({
 	initialStatus: ExportProgressStatus;
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
-	const [count, setCount] = useState<number>();
+	const [finalCount, setFinalCount] = useState<number>();
 	const [error, setError] = useState<string>();
 
 	const [file] = useState({
@@ -62,14 +62,15 @@ export const useTransactionExport = ({
 		name: wallet.address(),
 	});
 
-	const exporter = useMemo(() => TransactionExporter({ profile, wallet }), [profile, wallet]);
+	const exporter = TransactionExporter({ profile, wallet });
 
 	return {
 		cancelExport: () => {
 			exporter.transactions().abortSync();
 			setStatus(ExportProgressStatus.Idle);
 		},
-		count,
+		count: exporter.transactions().count(),
+		finalCount,
 		error,
 		file,
 		resetStatus: () => {
@@ -90,7 +91,7 @@ export const useTransactionExport = ({
 					return;
 				}
 
-				setCount(transactionCount);
+				setFinalCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);
 
 				file.content = exporter.transactions().toCsv(settings);

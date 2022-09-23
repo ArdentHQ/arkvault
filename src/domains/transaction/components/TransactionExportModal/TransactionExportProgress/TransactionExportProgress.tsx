@@ -6,17 +6,32 @@ import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportProgressProperties } from "@/domains/transaction/components/TransactionExportModal";
+import { formatNumber } from "@ardenthq/sdk-helpers";
 
-export const TransactionExportProgress = ({ file, onCancel }: TransactionExportProgressProperties) => {
+export const TransactionExportProgress = ({ count, file, onCancel }: TransactionExportProgressProperties) => {
 	const { t } = useTranslation();
+
+	const renderAlert = () => {
+		if (count === 0) {
+			return (
+				<Alert className="mb-6" variant="info">
+					{t("TRANSACTION.EXPORT.PROGRESS.DESCRIPTION_START")}
+				</Alert>
+			);
+		}
+
+		return (
+			<Alert className="mb-6" variant="info">
+				{t("TRANSACTION.EXPORT.PROGRESS.DESCRIPTION", { count: formatNumber(count) as never })}
+			</Alert>
+		);
+	};
 
 	return (
 		<div>
 			<Image name="Info" className="mx-auto mb-6 hidden h-26 md:block" />
 
-			<Alert className="mb-6" variant="info">
-				{t("TRANSACTION.EXPORT.PROGRESS.DESCRIPTION")}
-			</Alert>
+			{renderAlert()}
 
 			<FilePreview file={file} variant="loading" />
 

@@ -7,6 +7,7 @@ import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
+import { formatNumber } from "@ardenthq/sdk-helpers";
 
 export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: TransactionExportStatusProperties) => {
 	const { t } = useTranslation();
@@ -24,7 +25,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 		return (
 			<Alert className="mb-6" variant="success">
-				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION")}
+				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION", { count: formatNumber(count) as never })}
 			</Alert>
 		);
 	};
