@@ -14,6 +14,8 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
 const exportButton = () => screen.getByTestId("TransactionExport__submit-button");
+const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
+
 const dateToggle = () =>
 	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
 
@@ -121,7 +123,7 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(exportButton());
 
 		await expect(screen.findByTestId("TransactionExportProgress__cancel-button")).resolves.toBeInTheDocument();
 
@@ -158,7 +160,7 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(exportButton());
 
 		await expect(screen.findByTestId("TransactionExportError__cancel-button")).resolves.toBeInTheDocument();
 
@@ -194,10 +196,10 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(exportButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+			expect(downloadButton()).toBeEnabled();
 		});
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
@@ -235,13 +237,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(exportButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
+		userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 
@@ -276,13 +278,13 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+		userEvent.click(exportButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+			expect(downloadButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
+		userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).not.toHaveBeenCalledWith());
 
