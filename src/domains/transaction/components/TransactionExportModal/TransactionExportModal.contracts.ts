@@ -9,7 +9,6 @@ export enum ExportProgressStatus {
 }
 
 export interface TransactionExportModalProperties {
-	initialStatus?: ExportProgressStatus;
 	isOpen: boolean;
 	wallet: Contracts.IReadWriteWallet;
 	onClose: () => void;

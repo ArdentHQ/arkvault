@@ -29,6 +29,18 @@ describe("TransactionExportModal", () => {
 			.get("/api/transactions")
 			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
+			.get("/api/transactions")
+			.query((query) => query.page === "1")
+			.reply(200, () => {
+				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
+				return {
+					data: Array.from({ length: 100 }).fill(data[0]),
+					meta,
+				};
+			})
+			.get("/api/transactions")
+			.query(true)
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});
 
@@ -94,7 +106,6 @@ describe("TransactionExportModal", () => {
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Progress}
 					onClose={jest.fn()}
 				/>
 			</Route>,
@@ -105,6 +116,14 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await expect(screen.findByTestId("TransactionExportProgress__cancel-button")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
 
@@ -117,13 +136,13 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render error status", async () => {
+	// missing mocks
+	it.skip("should render error status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Error}
 					onClose={jest.fn()}
 				/>
 			</Route>,
@@ -134,6 +153,14 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await expect(screen.findByTestId("TransactionExportError__cancel-button")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
@@ -152,7 +179,6 @@ describe("TransactionExportModal", () => {
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
 					onClose={jest.fn()}
 				/>
 			</Route>,
@@ -163,6 +189,16 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
@@ -175,8 +211,7 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// missing mocks
-	it.skip("should render success and download file", async () => {
+	it("should render success and download file", async () => {
 		const onClose = jest.fn();
 		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
 
@@ -185,7 +220,6 @@ describe("TransactionExportModal", () => {
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
 					onClose={onClose}
 				/>
 			</Route>,
@@ -196,6 +230,16 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
 
@@ -217,7 +261,6 @@ describe("TransactionExportModal", () => {
 				<TransactionExportModal
 					isOpen
 					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
 					onClose={onClose}
 				/>
 			</Route>,
@@ -228,6 +271,16 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("TransactionExport__submit-button"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("TransactionExportSuccess__download-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
 

@@ -1838,13 +1838,13 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                     <svg
                       class="mx-auto mb-6 hidden h-26 md:block"
                     >
-                      error-banner-light-green.svg
+                      success-banner-light-green.svg
                     </svg>
                     <div
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-ic0qlc"
+                        class="css-1dwg83m"
                       >
                         <div
                           class="css-v0ob3f"
@@ -1852,37 +1852,17 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                           width="16"
                         >
                           <svg>
-                            circle-cross.svg
+                            circle-check-mark.svg
                           </svg>
                         </div>
                         <span>
-                          Error
+                          Success
                         </span>
                       </div>
                       <div
-                        class="css-6o9bco"
+                        class="css-k5jr4t"
                       >
-                        request to https://ark-test.arkvault.io/api/transactions?page=1&limit=100&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&timestamp.from=103460400 failed, reason: Nock: No match for request {
-  "method": "GET",
-  "url": "https://ark-test.arkvault.io/api/transactions?page=1&limit=100&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&timestamp.from=103460400",
-  "headers": {
-    "content-type": [
-      "application/json"
-    ],
-    "accept": [
-      "application/json"
-    ],
-    "user-agent": [
-      "node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"
-    ],
-    "accept-encoding": [
-      "gzip,deflate"
-    ],
-    "connection": [
-      "close"
-    ]
-  }
-}
+                        110 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
@@ -1910,7 +1890,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                           </div>
                         </div>
                         <div
-                          class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500"
+                          class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500"
                         >
                           <div
                             class="css-15txs7d"
@@ -1918,7 +1898,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                             width="10"
                           >
                             <svg>
-                              cross-small.svg
+                              check-mark-small.svg
                             </svg>
                           </div>
                         </div>
@@ -1929,7 +1909,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                     >
                       <button
                         class="css-1jhy6v9"
-                        data-testid="TransactionExportError__back-button"
+                        data-testid="TransactionExportSuccess__back-button"
                         type="button"
                       >
                         <div
@@ -1940,13 +1920,13 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                       </button>
                       <button
                         class="css-1bx0hyc"
-                        data-testid="TransactionExportError__retry-button"
-                        type="button"
+                        data-testid="TransactionExportSuccess__download-button"
+                        type="submit"
                       >
                         <div
                           class="flex items-center space-x-2"
                         >
-                          Retry
+                          Download
                         </div>
                       </button>
                     </div>
@@ -2027,13 +2007,13 @@ exports[`TransactionExportModal should render success and stay open if download 
                     <svg
                       class="mx-auto mb-6 hidden h-26 md:block"
                     >
-                      warning-light.svg
+                      success-banner-light-green.svg
                     </svg>
                     <div
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-pra96q"
+                        class="css-1dwg83m"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2041,17 +2021,17 @@ exports[`TransactionExportModal should render success and stay open if download 
                           width="16"
                         >
                           <svg>
-                            circle-exclamation-mark.svg
+                            circle-check-mark.svg
                           </svg>
                         </div>
                         <span>
-                          Warning
+                          Success
                         </span>
                       </div>
                       <div
-                        class="css-1pvpof3"
+                        class="css-k5jr4t"
                       >
-                        No transactions could be found for the selected period.
+                        110 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
@@ -2108,9 +2088,8 @@ exports[`TransactionExportModal should render success and stay open if download 
                         </div>
                       </button>
                       <button
-                        class="css-1yqe28v"
+                        class="css-1bx0hyc"
                         data-testid="TransactionExportSuccess__download-button"
-                        disabled=""
                         type="submit"
                       >
                         <div

@@ -46,13 +46,11 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 export const useTransactionExport = ({
 	profile,
 	wallet,
-	initialStatus,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
-	initialStatus: ExportProgressStatus;
 }) => {
-	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
+	const [status, setStatus] = useState<ExportProgressStatus>(ExportProgressStatus.Idle);
 	const [finalCount, setFinalCount] = useState<number>(0);
 	const [error, setError] = useState<string>();
 

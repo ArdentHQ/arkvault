@@ -17,7 +17,6 @@ import { useActiveProfile } from "@/app/hooks";
 import { Form } from "@/app/components/Form";
 
 export const TransactionExportModal = ({
-	initialStatus = ExportProgressStatus.Idle,
 	wallet,
 	isOpen,
 	onClose,
@@ -27,7 +26,6 @@ export const TransactionExportModal = ({
 	const profile = useActiveProfile();
 
 	const { count, finalCount, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
-		initialStatus,
 		profile,
 		wallet,
 	});
