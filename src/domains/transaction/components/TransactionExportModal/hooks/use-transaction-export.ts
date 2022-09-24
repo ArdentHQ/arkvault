@@ -53,7 +53,7 @@ export const useTransactionExport = ({
 	initialStatus: ExportProgressStatus;
 }) => {
 	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
-	const [finalCount, setFinalCount] = useState<number>();
+	const [finalCount, setFinalCount] = useState<number>(0);
 	const [error, setError] = useState<string>();
 
 	const [file] = useState({
