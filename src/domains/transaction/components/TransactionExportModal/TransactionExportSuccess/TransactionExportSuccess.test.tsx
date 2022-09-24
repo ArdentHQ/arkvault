@@ -1,10 +1,9 @@
 import nock from "nock";
 import React from "react";
 
+import { TransactionExportSuccess } from "./TransactionExportSuccess";
 import { translations } from "@/domains/transaction/i18n";
 import { screen, renderResponsive, render } from "@/utils/testing-library";
-
-import { TransactionExportSuccess } from "./TransactionExportSuccess";
 
 const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
 
