@@ -138,8 +138,13 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// missing mocks
-	it.skip("should render error status", async () => {
+	it("should render error status", async () => {
+		const transactionIndexMock = jest
+			.spyOn(profile.wallets().first(), "transactionIndex")
+			.mockImplementation(() => {
+				throw new Error("error");
+			});
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal
@@ -162,7 +167,7 @@ describe("TransactionExportModal", () => {
 
 		userEvent.click(exportButton());
 
-		await expect(screen.findByTestId("TransactionExportError__cancel-button")).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
@@ -173,6 +178,8 @@ describe("TransactionExportModal", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+
+		transactionIndexMock.mockRestore();
 	});
 
 	it("should render success status", async () => {
