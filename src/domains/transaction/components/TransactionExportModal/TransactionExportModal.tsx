@@ -16,11 +16,7 @@ import { toasts } from "@/app/services";
 import { useActiveProfile } from "@/app/hooks";
 import { Form } from "@/app/components/Form";
 
-export const TransactionExportModal = ({
-	wallet,
-	isOpen,
-	onClose,
-}: TransactionExportModalProperties) => {
+export const TransactionExportModal = ({ wallet, isOpen, onClose }: TransactionExportModalProperties) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();

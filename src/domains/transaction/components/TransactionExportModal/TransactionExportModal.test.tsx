@@ -5,7 +5,7 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
-import { TransactionExportModal, ExportProgressStatus } from ".";
+import { TransactionExportModal } from ".";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -105,11 +105,7 @@ describe("TransactionExportModal", () => {
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -147,11 +143,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -185,11 +177,7 @@ describe("TransactionExportModal", () => {
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -226,11 +214,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					onClose={onClose}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -267,11 +251,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					onClose={onClose}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
 			</Route>,
 			{
 				history,
