@@ -45,7 +45,7 @@ export const TransactionExporter = ({
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	const timeFormat = profile.settings().get<string>(Contracts.ProfileSetting.TimeFormat);
 
-	const [count, setCount] = useState(0);
+	let count = 0;
 
 	assertString(exchangeCurrency);
 	assertString(timeFormat);
@@ -74,7 +74,7 @@ export const TransactionExporter = ({
 		transactions.push(...page.items());
 		cursor = cursor + 1;
 
-		setCount(transactions.length);
+		count = transactions.length;
 
 		// Last page.
 		// TODO: Not relying on totalCount because it is an estimate

@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { kebabCase, upperFirst } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import {
@@ -62,7 +62,7 @@ export const useTransactionExport = ({
 		name: wallet.address(),
 	});
 
-	const exporter = TransactionExporter({ profile, wallet });
+	const exporter = useMemo(() => TransactionExporter({ profile, wallet }), [profile, wallet]);
 
 	return {
 		cancelExport: () => {
