@@ -13,11 +13,13 @@ import {
 	syncDelegates,
 	waitFor,
 	renderResponsiveWithRoute,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
+let resetProfileNetworksMock: () => void;
 
 const Wrapper = ({ children }) => {
 	const { setConfiguration } = useConfiguration();
@@ -32,6 +34,8 @@ const Wrapper = ({ children }) => {
 describe("AddressTable", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
+		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -49,10 +53,14 @@ describe("AddressTable", () => {
 		await wallet.synchroniser().votes();
 	});
 
+	afterAll(() => {
+		resetProfileNetworksMock();
+	});
+
 	it("should render", async () => {
 		const { asFragment, container } = render(
 			<Wrapper>
-				<AddressTable wallets={[wallet]} />
+				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -69,7 +77,7 @@ describe("AddressTable", () => {
 	it("should render in xs screen", async () => {
 		const { asFragment, container } = renderResponsiveWithRoute(
 			<Wrapper>
-				<AddressTable wallets={[wallet]} />
+				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
 			"xs",
 			{
@@ -93,7 +101,7 @@ describe("AddressTable", () => {
 
 		const { asFragment, container } = renderResponsiveWithRoute(
 			<Wrapper>
-				<AddressTable wallets={[wallet]} />
+				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
 			"xs",
 			{
@@ -118,7 +126,7 @@ describe("AddressTable", () => {
 		const maxVotesMock = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
 		const { asFragment, container } = render(
 			<Wrapper>
-				<AddressTable wallets={[wallet]} />
+				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -138,7 +146,7 @@ describe("AddressTable", () => {
 
 		const { asFragment, container } = render(
 			<Wrapper>
-				<AddressTable wallets={[wallet]} />
+				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
 			{
 				route: `/profiles/${profile.id()}`,

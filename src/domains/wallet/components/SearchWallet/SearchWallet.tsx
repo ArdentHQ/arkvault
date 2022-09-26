@@ -38,6 +38,7 @@ const SearchWalletListItem = ({
 	onAction,
 	selectedAddress,
 	isCompact,
+	profile,
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -73,7 +74,7 @@ const SearchWalletListItem = ({
 	return (
 		<TableRow>
 			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4" className="w-full">
-				<SearchWalletAvatar wallet={wallet} isCompact={isCompact} showNetwork={showNetwork} />
+				<SearchWalletAvatar wallet={wallet} isCompact={isCompact} showNetwork={showNetwork} profile={profile} />
 
 				{/* avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900" */}
 				<Address walletName={alias} address={wallet.address()} truncateOnTable />
@@ -107,6 +108,7 @@ const SearchWalletAvatar = ({
 	avatarShadowClassName,
 	networkIconShadowClassName,
 	networkIconClassName,
+	profile,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	isCompact: boolean;
@@ -114,14 +116,20 @@ const SearchWalletAvatar = ({
 	avatarShadowClassName?: string;
 	networkIconShadowClassName?: string;
 	networkIconClassName?: string;
+	profile: Contracts.IProfile;
 }) => {
+	const network = useMemo(
+		() => profile.availableNetworks().find((network) => network.id() === wallet?.networkId()),
+		[wallet, profile],
+	);
+
 	if (isCompact) {
 		return (
 			<div data-testid="SearchWalletAvatar--compact" className="flex shrink-0 space-x-3">
 				{showNetwork && (
 					<NetworkIcon
 						size="xs"
-						network={wallet.network()}
+						network={network}
 						className="border-transparent dark:border-transparent"
 						shadowClassName={networkIconShadowClassName}
 					/>
@@ -152,6 +160,7 @@ const SearchWalletListItemResponsive = ({
 	onAction,
 	selectedAddress,
 	showNetwork,
+	profile,
 }: SearchWalletListItemResponsiveProperties) => {
 	const handleButtonClick = useCallback(
 		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
@@ -174,6 +183,7 @@ const SearchWalletListItemResponsive = ({
 							avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
 							networkIconClassName="text-theme-primary-300 dark:text-theme-secondary-800"
 							networkIconShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
+							profile={profile}
 						/>
 					}
 					details={<WalletItemDetails wallet={wallet} />}
@@ -309,6 +319,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 						showNetwork={showNetwork}
 						onAction={onSelectWallet}
 						selectedAddress={selectedAddress}
+						profile={profile}
 					/>
 				);
 			}
@@ -328,6 +339,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					onAction={onSelectWallet}
 					selectedAddress={selectedAddress}
 					isCompact={isCompact}
+					profile={profile}
 				/>
 			);
 		},
