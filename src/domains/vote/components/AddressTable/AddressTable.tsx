@@ -2,6 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+import cn from "classnames";
 import { AddressTableProperties } from "./AddressTable.contracts";
 import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
@@ -13,7 +14,6 @@ import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { networkDisplayName } from "@/utils/network-utils";
 import { assertNetwork } from "@/utils/assertions";
-import cn from "classnames";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
