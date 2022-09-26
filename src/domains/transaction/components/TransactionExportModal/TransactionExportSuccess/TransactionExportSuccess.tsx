@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { formatNumber } from "@ardenthq/sdk-helpers";
 import { useFileDownload } from "./hooks/use-file-download";
 import { Alert } from "@/app/components/Alert";
 import { FormButtons } from "@/app/components/Form";
@@ -24,7 +25,7 @@ export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: Tr
 
 		return (
 			<Alert className="mb-6" variant="success">
-				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION")}
+				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION", { count: formatNumber(count) as never })}
 			</Alert>
 		);
 	};

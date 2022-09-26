@@ -46,14 +46,12 @@ const getTimestampRange = (dateRange: DateRange, from?: Date, to?: Date) => {
 export const useTransactionExport = ({
 	profile,
 	wallet,
-	initialStatus,
 }: {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
-	initialStatus: ExportProgressStatus;
 }) => {
-	const [status, setStatus] = useState<ExportProgressStatus>(initialStatus);
-	const [count, setCount] = useState<number>();
+	const [status, setStatus] = useState<ExportProgressStatus>(ExportProgressStatus.Idle);
+	const [finalCount, setFinalCount] = useState<number>(0);
 	const [error, setError] = useState<string>();
 
 	const [file] = useState({
@@ -69,9 +67,10 @@ export const useTransactionExport = ({
 			exporter.transactions().abortSync();
 			setStatus(ExportProgressStatus.Idle);
 		},
-		count,
+		count: exporter.transactions().count(),
 		error,
 		file,
+		finalCount,
 		resetStatus: () => {
 			setStatus(ExportProgressStatus.Idle);
 		},
@@ -85,12 +84,11 @@ export const useTransactionExport = ({
 					.transactions()
 					.sync({ dateRange, type: settings.transactionType });
 
-				/* istanbul ignore if */
 				if (transactionCount === undefined) {
 					return;
 				}
 
-				setCount(transactionCount);
+				setFinalCount(transactionCount);
 				setStatus(ExportProgressStatus.Success);
 
 				file.content = exporter.transactions().toCsv(settings);

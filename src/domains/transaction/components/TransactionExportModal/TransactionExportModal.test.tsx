@@ -5,7 +5,7 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
-import { TransactionExportModal, ExportProgressStatus } from ".";
+import { TransactionExportModal } from ".";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -14,6 +14,8 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
 const exportButton = () => screen.getByTestId("TransactionExport__submit-button");
+const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
+
 const dateToggle = () =>
 	within(screen.getByTestId("TransactionExportForm--daterange-options")).getByTestId("CollapseToggleButton");
 
@@ -28,6 +30,18 @@ describe("TransactionExportModal", () => {
 			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
 			.get("/api/transactions")
 			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
+			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
+			.get("/api/transactions")
+			.query((query) => query.page === "1")
+			.reply(200, () => {
+				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
+				return {
+					data: Array.from({ length: 100 }).fill(data[0]),
+					meta,
+				};
+			})
+			.get("/api/transactions")
+			.query(true)
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
 			.persist();
 	});
@@ -91,12 +105,7 @@ describe("TransactionExportModal", () => {
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Progress}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -105,6 +114,14 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(exportButton());
+
+		await expect(screen.findByTestId("TransactionExportProgress__cancel-button")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
 
@@ -118,14 +135,15 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render error status", async () => {
+		const transactionIndexMock = jest
+			.spyOn(profile.wallets().first(), "transactionIndex")
+			.mockImplementation(() => {
+				throw new Error("error");
+			});
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Error}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -134,6 +152,14 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(exportButton());
+
+		await expect(screen.findByTestId("TransactionExportError__back-button")).resolves.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("TransactionExportError__back-button"));
 
@@ -144,17 +170,14 @@ describe("TransactionExportModal", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+
+		transactionIndexMock.mockRestore();
 	});
 
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
-					onClose={jest.fn()}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
 			</Route>,
 			{
 				history,
@@ -163,6 +186,16 @@ describe("TransactionExportModal", () => {
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(exportButton());
+
+		await waitFor(() => {
+			expect(downloadButton()).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("TransactionExportSuccess__back-button"));
 
@@ -181,12 +214,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
-					onClose={onClose}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -196,7 +224,17 @@ describe("TransactionExportModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(exportButton());
+
+		await waitFor(() => {
+			expect(downloadButton()).toBeEnabled();
+		});
+
+		userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 
@@ -213,12 +251,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal
-					isOpen
-					wallet={profile.wallets().first()}
-					initialStatus={ExportProgressStatus.Success}
-					onClose={onClose}
-				/>
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
 			</Route>,
 			{
 				history,
@@ -228,7 +261,17 @@ describe("TransactionExportModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("TransactionExportSuccess__download-button"));
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(exportButton());
+
+		await waitFor(() => {
+			expect(downloadButton()).toBeEnabled();
+		});
+
+		userEvent.click(downloadButton());
 
 		await waitFor(() => expect(onClose).not.toHaveBeenCalledWith());
 
