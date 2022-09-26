@@ -75,6 +75,8 @@ export const useTransactionExport = ({
 			setStatus(ExportProgressStatus.Idle);
 		},
 		startExport: async (settings: ExportSettings) => {
+			setFinalCount(0);
+
 			setStatus(ExportProgressStatus.Progress);
 
 			const dateRange = getTimestampRange(settings.dateRange, settings.from, settings.to);
