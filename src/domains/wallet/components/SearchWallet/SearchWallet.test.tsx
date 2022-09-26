@@ -70,6 +70,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+
 		networkMocksRestore();
 	});
 
