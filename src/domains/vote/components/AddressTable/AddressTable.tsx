@@ -13,6 +13,7 @@ import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { networkDisplayName } from "@/utils/network-utils";
 import { assertNetwork } from "@/utils/assertions";
+import cn from "classnames";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
@@ -137,7 +138,10 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 						<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
 							<div className="flex h-8 w-full flex-grow items-center space-x-3">
 								<Icon
-									className={network.isLive() ? "text-theme-primary-600" : "text-theme-secondary-700"}
+									className={cn({
+										"text-theme-primary-600": network.isLive(),
+										"text-theme-secondary-700": !network.isLive(),
+									})}
 									name={network.ticker()}
 									size="lg"
 								/>
