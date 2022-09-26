@@ -30,8 +30,6 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let unvotedWallet: Contracts.IReadWriteWallet;
 
-let wallet2: Contracts.IReadWriteWallet;
-
 const renderPage = async ({ waitForTopSection = true } = {}) => {
 	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId/wallets/:walletId">

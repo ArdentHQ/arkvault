@@ -8,22 +8,18 @@ import { Route } from "react-router-dom";
 
 import { WalletDetails } from "./WalletDetails";
 import { LedgerProvider } from "@/app/contexts";
-import { buildTranslations } from "@/app/i18n/helpers";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
 	env,
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
-	renderResponsiveWithRoute,
 	RenderResult,
 	screen,
 	syncDelegates,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-const translations = buildTranslations();
 
 const history = createHashHistory();
 let walletUrl: string;
@@ -84,16 +80,6 @@ describe("WalletDetails", () => {
 		transfer: undefined,
 		unvote: undefined,
 		vote: undefined,
-	};
-
-	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
-			[fixtures.transfer.id()]: fixtures.transfer,
-		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 	};
 
 	beforeAll(async () => {
