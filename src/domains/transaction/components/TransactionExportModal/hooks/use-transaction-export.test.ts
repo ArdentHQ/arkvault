@@ -11,7 +11,6 @@ describe("useTransactionExport hook", () => {
 	const renderExportHook = () =>
 		renderHook(() =>
 			useTransactionExport({
-				initialStatus: ExportProgressStatus.Idle,
 				profile,
 				wallet: profile.wallets().first(),
 			}),

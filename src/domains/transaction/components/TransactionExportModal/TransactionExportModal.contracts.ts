@@ -9,7 +9,6 @@ export enum ExportProgressStatus {
 }
 
 export interface TransactionExportModalProperties {
-	initialStatus?: ExportProgressStatus;
 	isOpen: boolean;
 	wallet: Contracts.IReadWriteWallet;
 	onClose: () => void;
@@ -21,12 +20,13 @@ export interface TransactionExportFormProperties {
 }
 
 export interface TransactionExportProgressProperties {
+	count: number;
 	file: ReadableFile;
 	onCancel: () => void;
 }
 
 export interface TransactionExportStatusProperties {
-	count?: number;
+	count: number;
 	file: ReadableFile;
 	onBack: () => void;
 	onDownload?: (filename: string) => void;

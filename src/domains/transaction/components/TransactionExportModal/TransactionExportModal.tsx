@@ -16,18 +16,12 @@ import { toasts } from "@/app/services";
 import { useActiveProfile } from "@/app/hooks";
 import { Form } from "@/app/components/Form";
 
-export const TransactionExportModal = ({
-	initialStatus = ExportProgressStatus.Idle,
-	wallet,
-	isOpen,
-	onClose,
-}: TransactionExportModalProperties) => {
+export const TransactionExportModal = ({ wallet, isOpen, onClose }: TransactionExportModalProperties) => {
 	const { t } = useTranslation();
 
 	const profile = useActiveProfile();
 
-	const { count, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
-		initialStatus,
+	const { count, finalCount, file, startExport, cancelExport, status, resetStatus, error } = useTransactionExport({
 		profile,
 		wallet,
 	});
@@ -63,12 +57,12 @@ export const TransactionExportModal = ({
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Progress}>
-						<TransactionExportProgress file={file} onCancel={cancelExport} />
+						<TransactionExportProgress count={count} file={file} onCancel={cancelExport} />
 					</TabPanel>
 
 					<TabPanel tabId={ExportProgressStatus.Success}>
 						<TransactionExportSuccess
-							count={count}
+							count={finalCount}
 							file={file}
 							onBack={resetStatus}
 							onDownload={(filename: string) => {

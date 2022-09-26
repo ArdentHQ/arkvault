@@ -3,6 +3,11 @@
 exports[`TransactionExportForm should render in lg 1`] = `
 <DocumentFragment>
   <div>
+    <svg
+      class="mx-auto mb-6 hidden h-26 md:block"
+    >
+      success-banner-light-green.svg
+    </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
@@ -25,7 +30,7 @@ exports[`TransactionExportForm should render in lg 1`] = `
       <div
         class="css-k5jr4t"
       >
-        The transaction history is now ready, download it below.
+        10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
@@ -61,6 +66,11 @@ exports[`TransactionExportForm should render in lg 1`] = `
 exports[`TransactionExportForm should render in md 1`] = `
 <DocumentFragment>
   <div>
+    <svg
+      class="mx-auto mb-6 hidden h-26 md:block"
+    >
+      success-banner-light-green.svg
+    </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
@@ -83,7 +93,7 @@ exports[`TransactionExportForm should render in md 1`] = `
       <div
         class="css-k5jr4t"
       >
-        The transaction history is now ready, download it below.
+        10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
@@ -119,6 +129,11 @@ exports[`TransactionExportForm should render in md 1`] = `
 exports[`TransactionExportForm should render in sm 1`] = `
 <DocumentFragment>
   <div>
+    <svg
+      class="mx-auto mb-6 hidden h-26 md:block"
+    >
+      success-banner-light-green.svg
+    </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
@@ -141,7 +156,7 @@ exports[`TransactionExportForm should render in sm 1`] = `
       <div
         class="css-k5jr4t"
       >
-        The transaction history is now ready, download it below.
+        10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
@@ -177,6 +192,11 @@ exports[`TransactionExportForm should render in sm 1`] = `
 exports[`TransactionExportForm should render in xl 1`] = `
 <DocumentFragment>
   <div>
+    <svg
+      class="mx-auto mb-6 hidden h-26 md:block"
+    >
+      success-banner-light-green.svg
+    </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
@@ -199,7 +219,7 @@ exports[`TransactionExportForm should render in xl 1`] = `
       <div
         class="css-k5jr4t"
       >
-        The transaction history is now ready, download it below.
+        10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
@@ -235,6 +255,11 @@ exports[`TransactionExportForm should render in xl 1`] = `
 exports[`TransactionExportForm should render in xs 1`] = `
 <DocumentFragment>
   <div>
+    <svg
+      class="mx-auto mb-6 hidden h-26 md:block"
+    >
+      success-banner-light-green.svg
+    </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
@@ -257,7 +282,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
       <div
         class="css-k5jr4t"
       >
-        The transaction history is now ready, download it below.
+        10 transactions have been retrieved and are ready to be exported.
       </div>
     </div>
     <div
@@ -290,7 +315,7 @@ exports[`TransactionExportForm should render in xs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionExportForm should render warnigg if count is zero 1`] = `
+exports[`TransactionExportForm should render warning if count is zero 1`] = `
 <DocumentFragment>
   <div>
     <svg
