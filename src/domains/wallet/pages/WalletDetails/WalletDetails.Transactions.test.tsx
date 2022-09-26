@@ -195,103 +195,37 @@ describe("WalletDetails", () => {
 		history.push(walletUrl);
 	});
 
-	it("should render responsive", async () => {
-		mockPendingTransfers(wallet);
+	it("should open detail modal on transaction row click", async () => {
+		await renderPage({
+			waitForTopSection: true,
+			waitForTransactions: true,
+			withProfileSynchronizer: true,
+		});
 
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<LedgerProvider>
-					<WalletDetails />
-				</LedgerProvider>
-				,
-			</Route>,
-			"xs",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow__mobile")[0]);
+		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
-		jest.restoreAllMocks();
 	});
 
-	it("should render as not compact if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+	it("should fetch more transactions", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
 
-		mockPendingTransfers(wallet);
-
-		await renderPage();
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
-
-		await expect(screen.findByTestId("TableRemoveButton")).resolves.toBeVisible();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-
-		jest.restoreAllMocks();
-	});
-
-	it("should render as compact on md screen even if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		mockPendingTransfers(wallet);
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<LedgerProvider>
-					<WalletDetails />
-				</LedgerProvider>
-				,
-			</Route>,
-			"md",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
-
-		await expect(screen.findByTestId("TableRemoveButton--compact")).resolves.toBeVisible();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-
-		jest.restoreAllMocks();
-	});
-
-	it("should not render wallet vote when the network does not support votes", async () => {
-		const networkFeatureSpy = jest.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
-
-		await renderPage({ waitForTopSection: false });
-
-		await waitFor(() => {
-			expect(screen.queryByTestId("WalletVote")).not.toBeInTheDocument();
+		await renderPage({
+			waitForTopSection: true,
+			waitForTransactions: true,
+			withProfileSynchronizer: true,
 		});
 
-		networkFeatureSpy.mockRestore();
-	});
+		const fetchMoreTransactionsButton = screen.getByTestId("transactions__fetch-more-button");
 
-	it("should render when wallet not found for votes", async () => {
-		jest.spyOn(blankWallet, "isMultiSignature").mockReturnValue(false);
+		userEvent.click(fetchMoreTransactionsButton);
 
-		walletUrl = `/profiles/${profile.id()}/wallets/${blankWallet.id()}`;
-		history.push(walletUrl);
-
-		await renderPage({ waitForTopSection: true, waitForTransactions: false });
-
-		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(within(screen.getAllByTestId("TransactionTable")[0]).queryAllByTestId("TableRow")).toHaveLength(2);
+		});
 	});
 });
