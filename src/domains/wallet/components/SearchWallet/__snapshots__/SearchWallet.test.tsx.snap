@@ -605,21 +605,9 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -710,21 +698,9 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -1012,21 +988,9 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -1117,21 +1081,9 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -3635,21 +3587,9 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -3754,21 +3694,9 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -4102,21 +4030,9 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -4221,21 +4137,9 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -4569,21 +4473,9 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
@@ -4688,21 +4580,9 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                             data-testid="SearchWalletAvatar--compact"
                           >
                             <div
-                              aria-label="ARK Devnet"
                               class="border-transparent dark:border-transparent ring-theme-background duration-100 css-1jea4xx"
-                              data-testid="NetworkIcon-ARK-ark.devnet"
-                            >
-                              <div
-                                class="css-1i4b0eq"
-                                data-testid="NetworkIcon__icon"
-                                height="20"
-                                width="20"
-                              >
-                                <svg>
-                                  ark.svg
-                                </svg>
-                              </div>
-                            </div>
+                              data-testid="NetworkIcon__placeholder"
+                            />
                             <div
                               class="shrink-0 css-1vy2z2u"
                               data-testid="Avatar"
