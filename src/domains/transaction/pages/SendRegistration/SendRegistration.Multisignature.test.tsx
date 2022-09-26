@@ -34,6 +34,8 @@ jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+jest.setTimeout(6_000);
+
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
 const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRegistration") => {
@@ -109,14 +111,7 @@ describe("Multisignature Registration", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
-		// secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
-		secondWallet = profile.wallets().push(
-			await profile.walletFactory().fromAddress({
-				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-				coin: "ARK",
-				network: "ark.devnet",
-			}),
-		);
+		secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
 
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
@@ -203,6 +198,7 @@ describe("Multisignature Registration", () => {
 		const mnemonicValidationMock = jest
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
+
 		const signatoryMock = jest.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 		const transactionSyncMock = jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
 
