@@ -19,6 +19,7 @@ export interface SearchWalletListItemProperties {
 	wallet: Contracts.IReadWriteWallet;
 	isCompact: boolean;
 	onAction: (wallet: SelectedWallet) => void;
+	profile: Contracts.IProfile;
 }
 export interface SearchWalletListItemResponsiveProperties {
 	selectedAddress?: string;
@@ -26,6 +27,7 @@ export interface SearchWalletListItemResponsiveProperties {
 	alias?: string;
 	showNetwork?: boolean;
 	onAction: (wallet: SelectedWallet) => void;
+	profile: Contracts.IProfile;
 }
 
 export interface SearchWalletProperties {

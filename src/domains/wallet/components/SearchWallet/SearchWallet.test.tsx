@@ -17,6 +17,7 @@ import {
 	waitFor,
 	within,
 	renderResponsiveWithRoute,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -28,6 +29,7 @@ const walletAlias = "Sample Wallet";
 
 describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
 	beforeAll(() => {
+		// mockProfileWithPublicAndTestNetworks(profile);
 		history.push(dashboardURL);
 	});
 
@@ -39,6 +41,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render", async () => {
+		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -66,6 +70,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+
+		networkMocksRestore();
 	});
 
 	it("should render compact on md screen", async () => {
