@@ -67,7 +67,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	const borderClasses = () =>
 		isLast ? "" : "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
 
-	const network = env
+	const network = profile
 		.availableNetworks()
 		.find((network: Networks.Network) => network.coin() === address.coin() && network.id() === address.network());
 
