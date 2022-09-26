@@ -216,6 +216,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		[history],
 	);
 
+	const network = useMemo(
+		() => profile.availableNetworks().find((network) => network.id() === selectedWallet?.network.id()),
+		[selectedWallet, profile],
+	);
+
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
@@ -408,11 +413,11 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					onClose={() => setSearchWalletIsOpen(false)}
 				/>
 
-				{selectedWallet && (
+				{selectedWallet && network && (
 					<ReceiveFunds
 						address={selectedWallet.address}
 						name={selectedWallet.name}
-						network={selectedWallet.network}
+						network={network}
 						onClose={handleCloseReceiveFunds}
 					/>
 				)}

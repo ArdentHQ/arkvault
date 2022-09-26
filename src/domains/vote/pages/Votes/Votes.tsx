@@ -159,6 +159,7 @@ export const Votes: FC = () => {
 					walletsByCoin={filteredWalletsByCoin}
 					onSelectAddress={handleSelectAddress}
 					isCompact={useCompactTables}
+					profile={activeProfile}
 				/>
 			)}
 

@@ -12,14 +12,19 @@ import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/compo
 import { useAccordion, useBreakpoint } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { networkDisplayName } from "@/utils/network-utils";
+import { assertNetwork } from "@/utils/assertions";
 
-export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false }) => {
+export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
 	const { isExpanded, handleHeaderClick } = useAccordion();
 	const wallet = useMemo(() => wallets[0], [wallets]);
 	const maxVotes = wallet.network().maximumVotesPerWallet();
 	const { isXs, isSm } = useBreakpoint();
 	const memoizedWallets = useMemo(() => wallets, [wallets]);
+
+	const network = profile.availableNetworks().find((network) => network.id() === wallet.network().id());
+	assertNetwork(network);
+
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
 			{
@@ -132,17 +137,13 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 						<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
 							<div className="flex h-8 w-full flex-grow items-center space-x-3">
 								<Icon
-									className={
-										wallet.network().isLive()
-											? "text-theme-primary-600"
-											: "text-theme-secondary-700"
-									}
-									name={wallet.network().ticker()}
+									className={network.isLive() ? "text-theme-primary-600" : "text-theme-secondary-700"}
+									name={network.ticker()}
 									size="lg"
 								/>
 
 								<div className="flex space-x-2">
-									<h2 className="mb-0 text-lg font-bold">{networkDisplayName(wallet.network())}</h2>
+									<h2 className="mb-0 text-lg font-bold">{networkDisplayName(network)}</h2>
 									<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
 										{wallets.length}
 									</span>
@@ -168,9 +169,9 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				<Section>
 					<div data-testid="AddressTable">
 						<div className="flex items-center space-x-4 py-5">
-							<NetworkIcon size="lg" network={wallet.network()} />
+							<NetworkIcon size="lg" network={network} />
 							<div className="flex space-x-2">
-								<h2 className="mb-0 text-lg font-bold">{networkDisplayName(wallet.network())}</h2>
+								<h2 className="mb-0 text-lg font-bold">{networkDisplayName(network)}</h2>
 								<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
 									{wallets.length}
 								</span>
