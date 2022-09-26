@@ -15,7 +15,6 @@ import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
-import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
@@ -34,8 +33,6 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	onSend,
 }) => {
 	const profileAvailableNetworks = useNetworks({ profile });
-
-	const { env } = useEnvironmentContext();
 
 	const { t } = useTranslation();
 
