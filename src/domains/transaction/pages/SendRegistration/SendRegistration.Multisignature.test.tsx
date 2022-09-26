@@ -34,7 +34,7 @@ jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.setTimeout(6_000);
+jest.setTimeout(6000);
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
