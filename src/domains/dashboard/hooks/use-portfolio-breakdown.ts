@@ -17,6 +17,20 @@ type UsePortfolioBreakdownHook = (input: {
 	walletsCount: number;
 };
 
+const getSyncStatus = (wallets: Contracts.IReadWriteWallet[]): boolean => {
+	let synced = true;
+
+	for (const wallet of wallets) {
+		synced = synced && wallet.hasSyncedWithNetwork();
+
+		if (!synced) {
+			return false;
+		}
+	}
+
+	return synced;
+};
+
 export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 	profile,
 	profileIsSyncingExchangeRates,
@@ -59,8 +73,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 			return true;
 		});
 
-	const allSynced = wallets
-		.reduce((synced, wallet) => wallet.hasSyncedWithNetwork() && synced, true);
+	const allSynced = getSyncStatus(wallets);
 
 	const walletIds = wallets
 		.map((wallet) => wallet.id())
