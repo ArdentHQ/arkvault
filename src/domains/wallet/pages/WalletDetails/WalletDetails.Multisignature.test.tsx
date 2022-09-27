@@ -8,14 +8,13 @@ import { Route } from "react-router-dom";
 
 import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
+	defaultNetMocks,
 	env,
 	getDefaultProfileId,
-	MNEMONICS,
 	render,
-	renderResponsiveWithRoute,
-	RenderResult,
 	screen,
 	syncDelegates,
 	waitFor,
@@ -29,48 +28,17 @@ let walletUrl: string;
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let blankWallet: Contracts.IReadWriteWallet;
-let unvotedWallet: Contracts.IReadWriteWallet;
 
-let emptyProfile: Contracts.IProfile;
-let wallet2: Contracts.IReadWriteWallet;
-
-const passphrase2 = MNEMONICS[3];
-
-const renderPage = async ({
-	waitForTopSection = true,
-	waitForTransactions = true,
-	withProfileSynchronizer = false,
-} = {}) => {
-	const utils: RenderResult = render(
+const renderPage = () =>
+	render(
 		<Route path="/profiles/:profileId/wallets/:walletId">
 			<WalletDetails />,
 		</Route>,
 		{
 			history,
 			route: walletUrl,
-			withProfileSynchronizer,
 		},
 	);
-
-	if (waitForTopSection) {
-		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
-	}
-
-	if (waitForTransactions) {
-		if (withProfileSynchronizer) {
-			await waitFor(() =>
-				expect(within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow")).toHaveLength(1),
-			);
-		} else {
-			await waitFor(() =>
-				expect(within(screen.getByTestId("TransactionTable")).queryAllByTestId("TableRow")).not.toHaveLength(0),
-			);
-		}
-	}
-
-	return utils;
-};
 
 describe("WalletDetails", () => {
 	const fixtures: Record<string, any> = {
@@ -99,50 +67,13 @@ describe("WalletDetails", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
-		blankWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: passphrase2,
-			network: "ark.devnet",
-		});
-
-		unvotedWallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
-		});
-
-		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-
-		wallet2 = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[1],
-			network: "ark.devnet",
-		});
-
-		profile.wallets().push(blankWallet);
-		profile.wallets().push(unvotedWallet);
-		emptyProfile.wallets().push(wallet2);
 
 		await syncDelegates(profile);
 
 		nock("https://ark-test.arkvault.io")
 			.get("/api/delegates")
 			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get(`/api/wallets/${unvotedWallet.address()}`)
 			.reply(200, walletMock)
-			.get(`/api/wallets/${blankWallet.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.get(`/api/wallets/${wallet2.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
 			.get("/api/transactions")
 			.query((parameters) => !!parameters.address)
 			.reply(200, (url) => {
@@ -160,7 +91,6 @@ describe("WalletDetails", () => {
 			})
 			.persist();
 
-		// Mock musig server requests
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
@@ -189,25 +119,16 @@ describe("WalletDetails", () => {
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
+
+		mockPendingTransfers(wallet);
 	});
 
-	it("should render responsive", async () => {
-		mockPendingTransfers(wallet);
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletDetails />,
-			</Route>,
-			"xs",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+	it("should render pending multiSignatures and view details in modal", async () => {
+		renderPage();
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow__mobile")[0]);
+		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -217,39 +138,27 @@ describe("WalletDetails", () => {
 		jest.restoreAllMocks();
 	});
 
-	it("should render as not compact if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+	it("shows the transaction detail modal when click in a pending transfer row", async () => {
+		jest.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
+		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
-		mockPendingTransfers(wallet);
-
-		await renderPage();
+		renderPage();
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
-		await expect(screen.findByTestId("TableRemoveButton")).resolves.toBeVisible();
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
 		jest.restoreAllMocks();
 	});
 
-	it("should render as compact on md screen even if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		mockPendingTransfers(wallet);
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletDetails />,
-			</Route>,
-			"md",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+	it("should remove pending multisignature transactions", async () => {
+		renderPage();
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
@@ -257,31 +166,31 @@ describe("WalletDetails", () => {
 
 		await expect(screen.findByTestId("TableRemoveButton--compact")).resolves.toBeVisible();
 
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+		userEvent.click(screen.getByTestId("TableRemoveButton--compact"));
+
+		await expect(
+			screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction"),
+		).resolves.toBeVisible();
 
 		jest.restoreAllMocks();
-	});
+		defaultNetMocks();
 
-	it("should not render wallet vote when the network does not support votes", async () => {
-		const networkFeatureSpy = jest.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
+		nock("https://ark-test-musig.arkvault.io/")
+			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
+			.reply(200, []);
 
-		await renderPage({ waitForTopSection: false });
+		nock("https://ark-test-musig.arkvault.io")
+			.post("/")
+			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } });
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("WalletVote")).not.toBeInTheDocument();
-		});
+		const toastsMock = jest.spyOn(toasts, "success");
 
-		networkFeatureSpy.mockRestore();
-	});
+		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
-	it("should render when wallet not found for votes", async () => {
-		jest.spyOn(blankWallet, "isMultiSignature").mockReturnValue(false);
+		await waitFor(() => expect(screen.queryByTestId("PendingTransactions")).not.toBeInTheDocument());
 
-		walletUrl = `/profiles/${profile.id()}/wallets/${blankWallet.id()}`;
-		history.push(walletUrl);
+		expect(toastsMock).toHaveBeenCalledWith(translations.TRANSACTION.TRANSACTION_REMOVED);
 
-		await renderPage({ waitForTopSection: true, waitForTransactions: false });
-
-		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
+		toastsMock.mockRestore();
 	});
 });
