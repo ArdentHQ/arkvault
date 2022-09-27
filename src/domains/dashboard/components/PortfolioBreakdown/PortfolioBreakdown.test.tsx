@@ -20,6 +20,9 @@ describe("PortfolioBreakdown", () => {
 	let portfolioBreakdownMock: jest.SpyInstance;
 	let isRestoredMock: jest.SpyInstance;
 
+	let firstWalletSyncedMock: jest.SpyInstance;
+	let secondWalletSyncedMock: jest.SpyInstance;
+
 	let useGraphWidthMock: jest.SpyInstance;
 
 	const liveNetworkIds = ["ark.mainnet", "lsk.mainnet"];
@@ -45,10 +48,6 @@ describe("PortfolioBreakdown", () => {
 		profile.wallets().push(firstWallet);
 		profile.wallets().push(secondWallet);
 
-		jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
-
-		jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
-
 		// Mock graph width to a value that would use 5% as minimum threshold for visible data points.
 		useGraphWidthMock = jest
 			.spyOn(sharedGraphUtils, "useGraphWidth")
@@ -70,6 +69,9 @@ describe("PortfolioBreakdown", () => {
 		]);
 
 		isRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(true);
+
+		firstWalletSyncedMock = jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		secondWalletSyncedMock = jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 	});
 
 	afterEach(() => {
@@ -121,6 +123,40 @@ describe("PortfolioBreakdown", () => {
 
 	it("should render loading when profile is not restored yet", () => {
 		isRestoredMock.mockReturnValue(false);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.getByTestId("PortfolioBreakdownSkeleton")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render loading when no wallets have synced with the network", () => {
+		firstWalletSyncedMock.mockReturnValue(false);
+		secondWalletSyncedMock.mockReturnValue(false);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.getByTestId("PortfolioBreakdownSkeleton")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render loading when some wallets have not synced with the network", () => {
+		firstWalletSyncedMock.mockReturnValue(false);
+		secondWalletSyncedMock.mockReturnValue(true);
 
 		const { asFragment } = render(
 			<PortfolioBreakdown
