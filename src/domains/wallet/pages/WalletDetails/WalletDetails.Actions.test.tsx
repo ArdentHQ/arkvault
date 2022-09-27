@@ -7,7 +7,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { WalletDetails } from "./WalletDetails";
-import { LedgerProvider } from "@/app/contexts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
@@ -33,10 +32,7 @@ let unvotedWallet: Contracts.IReadWriteWallet;
 const renderPage = async ({ waitForTopSection = true } = {}) => {
 	const utils: RenderResult = render(
 		<Route path="/profiles/:profileId/wallets/:walletId">
-			<LedgerProvider>
-				<WalletDetails />
-			</LedgerProvider>
-			,
+			<WalletDetails />,
 		</Route>,
 		{
 			history,
