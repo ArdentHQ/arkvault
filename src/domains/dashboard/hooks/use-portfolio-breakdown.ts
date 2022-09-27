@@ -44,7 +44,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 		[profile, isRestored], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
-	const walletIds = profile
+	const wallets = profile
 		.wallets()
 		.values()
 		.filter((wallet) => {
@@ -57,7 +57,12 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 			}
 
 			return true;
-		})
+		});
+
+	const allSynced = wallets
+		.reduce((synced, wallet) => wallet.hasSyncedWithNetwork() && synced, true);
+
+	const walletIds = wallets
 		.map((wallet) => wallet.id())
 		.sort()
 		.join(".");
@@ -68,7 +73,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 			return;
 		}
 
-		if (!isRestored || (profileIsSyncingExchangeRates && isEmpty)) {
+		if (!allSynced || !isRestored || (profileIsSyncingExchangeRates && isEmpty)) {
 			setLoading(true);
 			return;
 		}
@@ -100,7 +105,7 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 		setBalance(balance);
 		setAssets(portfolioItems);
 		setLoading(false);
-	}, [isEmpty, isRestored, profile, profileIsSyncingExchangeRates, walletIds, selectedNetworkIds]);
+	}, [allSynced, isEmpty, isRestored, profile, profileIsSyncingExchangeRates, walletIds, selectedNetworkIds]);
 
 	const walletsCount = useMemo(() => {
 		if (!walletIds) {
