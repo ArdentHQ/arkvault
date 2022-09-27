@@ -185,7 +185,9 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const scroll = useScroll();
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
-const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
+
+	const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
+
 	const modalSize = useMemo<Size>(() => {
 		if (isLg) {
 			return "4xl";
@@ -276,8 +278,6 @@ const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
 		if (!isProfileRestored) {
 			return [];
 		}
-
-		const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
 
 		return profile
 			.wallets()
