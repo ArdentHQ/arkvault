@@ -283,7 +283,7 @@ const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
 			.wallets()
 			.values()
 			.filter((wallet) => enabledNetworkIds.includes(wallet.network().id()));
-	}, [profile, isProfileRestored, profileAllEnabledNetworkIds]);
+	}, [profile, isProfileRestored, enabledNetworkIds]);
 
 	const handleSelectWallet = (wallet: SelectedWallet) => {
 		setSearchWalletIsOpen(false);
