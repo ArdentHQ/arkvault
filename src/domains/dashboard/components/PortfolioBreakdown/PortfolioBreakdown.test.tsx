@@ -45,13 +45,9 @@ describe("PortfolioBreakdown", () => {
 		profile.wallets().push(firstWallet);
 		profile.wallets().push(secondWallet);
 
-		jest
-			.spyOn(firstWallet, "hasSyncedWithNetwork")
-			.mockReturnValue(true);
+		jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 
-		jest
-			.spyOn(secondWallet, "hasSyncedWithNetwork")
-			.mockReturnValue(true);
+		jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 
 		// Mock graph width to a value that would use 5% as minimum threshold for visible data points.
 		useGraphWidthMock = jest
