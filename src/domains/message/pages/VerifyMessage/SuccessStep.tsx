@@ -44,7 +44,11 @@ export const SuccessStep = ({ verificationResult }: { verificationResult?: Verif
 			<StepHeader title={getTitle()} />
 
 			<SmAndAbove>
-				<Image name={isVerified ? "SuccessBanner" : "ErrorBanner"} className="mt-8 w-full" />
+				<Image
+					name={isVerified ? "Success" : "Error"}
+					className="mx-auto mt-8 h-26"
+					useAccentColor={isVerified}
+				/>
 			</SmAndAbove>
 
 			<Alert className="mt-6 sm:mt-8" variant={isVerified ? "success" : "danger"}>
