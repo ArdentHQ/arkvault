@@ -45,6 +45,14 @@ describe("PortfolioBreakdown", () => {
 		profile.wallets().push(firstWallet);
 		profile.wallets().push(secondWallet);
 
+		jest
+			.spyOn(firstWallet, "hasSyncedWithNetwork")
+			.mockReturnValue(true);
+
+		jest
+			.spyOn(secondWallet, "hasSyncedWithNetwork")
+			.mockReturnValue(true);
+
 		// Mock graph width to a value that would use 5% as minimum threshold for visible data points.
 		useGraphWidthMock = jest
 			.spyOn(sharedGraphUtils, "useGraphWidth")
@@ -162,7 +170,7 @@ describe("PortfolioBreakdown", () => {
 			/>,
 		);
 
-		expect(asFragment()).toMatchInlineSnapshot("<DocumentFragment />");
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render empty block when portfolio is empty and there are filtered networks", () => {

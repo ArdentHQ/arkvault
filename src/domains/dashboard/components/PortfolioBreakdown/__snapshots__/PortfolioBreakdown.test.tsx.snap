@@ -1136,3 +1136,5 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
   </div>
 </DocumentFragment>
 `;
+
+exports[`PortfolioBreakdown should return nothing when portfolio is empty and there are no filtered networks 1`] = `<DocumentFragment />`;
