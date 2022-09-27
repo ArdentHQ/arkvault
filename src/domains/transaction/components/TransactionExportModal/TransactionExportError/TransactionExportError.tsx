@@ -12,7 +12,7 @@ export const TransactionExportError = ({ error, file, onBack, onRetry }: Transac
 
 	return (
 		<div>
-			<Image name="ErrorBanner" className="mx-auto mb-6 hidden h-26 md:block" />
+			<Image name="Error" className="mx-auto mb-6 hidden h-26 md:block" useAccentColor={false} />
 
 			<Alert className="mb-6" variant="danger">
 				{error}

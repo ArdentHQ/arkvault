@@ -1838,7 +1838,7 @@ exports[`TransactionExportModal should render success and download file 1`] = `
                     <svg
                       class="mx-auto mb-6 hidden h-26 md:block"
                     >
-                      success-banner-light-green.svg
+                      success-light-green.svg
                     </svg>
                     <div
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -2007,7 +2007,7 @@ exports[`TransactionExportModal should render success and stay open if download 
                     <svg
                       class="mx-auto mb-6 hidden h-26 md:block"
                     >
-                      success-banner-light-green.svg
+                      success-light-green.svg
                     </svg>
                     <div
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
