@@ -7,27 +7,21 @@ import { ReactComponent as EmptyNotificationsDarkGreen } from "./empty-notificat
 import { ReactComponent as EmptyNotificationsDarkNavy } from "./empty-notifications-dark-navy.svg";
 import { ReactComponent as EmptyNotificationsLightGreen } from "./empty-notifications-light-green.svg";
 import { ReactComponent as EmptyNotificationsLightNavy } from "./empty-notifications-light-navy.svg";
+import { ReactComponent as ErrorDark } from "./error-dark.svg";
+import { ReactComponent as ErrorLight } from "./error-light.svg";
 import { ReactComponent as ErrorSmall } from "./error-small.svg";
-import { ReactComponent as ErrorBannerDarkGreen } from "./error-banner-dark-green.svg";
-import { ReactComponent as ErrorBannerDarkNavy } from "./error-banner-dark-navy.svg";
-import { ReactComponent as ErrorBannerLightGreen } from "./error-banner-light-green.svg";
-import { ReactComponent as ErrorBannerLightNavy } from "./error-banner-light-navy.svg";
 import { ReactComponent as GenericWarningDarkGreen } from "./generic-warning-dark-green.svg";
 import { ReactComponent as GenericWarningDarkNavy } from "./generic-warning-dark-navy.svg";
 import { ReactComponent as GenericWarningLightGreen } from "./generic-warning-light-green.svg";
 import { ReactComponent as GenericWarningLightNavy } from "./generic-warning-light-navy.svg";
+import { ReactComponent as SuccessDarkGreen } from "./success-dark-green.svg";
+import { ReactComponent as SuccessDarkNavy } from "./success-dark-navy.svg";
+import { ReactComponent as SuccessLightGreen } from "./success-light-green.svg";
+import { ReactComponent as SuccessLightNavy } from "./success-light-navy.svg";
 import { ReactComponent as NoResultsDarkGreen } from "./no-results-dark-green.svg";
 import { ReactComponent as NoResultsDarkNavy } from "./no-results-dark-navy.svg";
 import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.svg";
 import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
-import { ReactComponent as SuccessBannerDarkGreen } from "./success-banner-dark-green.svg";
-import { ReactComponent as SuccessBannerDarkNavy } from "./success-banner-dark-navy.svg";
-import { ReactComponent as SuccessBannerLightGreen } from "./success-banner-light-green.svg";
-import { ReactComponent as SuccessBannerLightNavy } from "./success-banner-light-navy.svg";
-import { ReactComponent as WarningBannerDarkGreen } from "./warning-banner-dark-green.svg";
-import { ReactComponent as WarningBannerDarkNavy } from "./warning-banner-dark-navy.svg";
-import { ReactComponent as WarningBannerLightGreen } from "./warning-banner-light-green.svg";
-import { ReactComponent as WarningBannerLightNavy } from "./warning-banner-light-navy.svg";
 import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
 import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
 import {
@@ -79,14 +73,8 @@ export const images = {
 		EmptyNotificationsDarkNavy,
 		EmptyNotificationsLightGreen,
 		EmptyNotificationsLightNavy,
-		ErrorBannerDarkGreen,
-		ErrorBannerDarkNavy,
-		ErrorBannerLightGreen,
-		ErrorBannerLightNavy,
-		ErrorDarkGreen: ErrorBannerDarkGreen,
-		ErrorDarkNavy: ErrorBannerDarkGreen,
-		ErrorLightGreen: ErrorBannerLightGreen,
-		ErrorLightNavy: ErrorBannerLightGreen,
+		ErrorDark,
+		ErrorLight,
 		ErrorSmall,
 		GenericWarningDarkGreen,
 		GenericWarningDarkNavy,
@@ -114,20 +102,12 @@ export const images = {
 		NoResultsDarkNavy,
 		NoResultsLightGreen,
 		NoResultsLightNavy,
-		SuccessBannerDarkGreen,
-		SuccessBannerDarkNavy,
-		SuccessBannerLightGreen,
-		SuccessBannerLightNavy,
-		SuccessDarkGreen: SuccessBannerDarkGreen,
-		SuccessDarkNavy: SuccessBannerDarkGreen,
-		SuccessLightGreen: SuccessBannerLightGreen,
-		SuccessLightNavy: SuccessBannerLightGreen,
+		SuccessDarkGreen,
+		SuccessDarkNavy,
+		SuccessLightGreen,
+		SuccessLightNavy,
 		TrashDark,
 		TrashLight,
-		WarningBannerDarkGreen,
-		WarningBannerDarkNavy,
-		WarningBannerLightGreen,
-		WarningBannerLightNavy,
 		WarningDark,
 		WarningLight,
 		WelcomeBannerDark,

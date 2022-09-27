@@ -6,7 +6,7 @@ exports[`TransactionExportError should render in lg 1`] = `
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -67,7 +67,7 @@ exports[`TransactionExportError should render in md 1`] = `
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -128,7 +128,7 @@ exports[`TransactionExportError should render in sm 1`] = `
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -189,7 +189,7 @@ exports[`TransactionExportError should render in xl 1`] = `
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -250,7 +250,7 @@ exports[`TransactionExportError should render in xs 1`] = `
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
