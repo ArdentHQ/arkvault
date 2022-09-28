@@ -64,8 +64,8 @@ jest.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) => {
 		return async function (...arguments_: any) {
 			return new Promise((resolve) => {
-				setTimeout(async () => {
-					resolve(await callback.apply(this, arguments_));
+				setTimeout(() => {
+					resolve(callback.apply(this, arguments_));
 				}, 0);
 			});
 		};
