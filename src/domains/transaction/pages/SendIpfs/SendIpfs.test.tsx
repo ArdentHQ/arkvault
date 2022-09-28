@@ -10,7 +10,7 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendIpfs } from "./SendIpfs";
 import { SummaryStep } from "./SummaryStep";
-import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
+import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
@@ -211,9 +211,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -272,9 +270,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment, history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -371,9 +367,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -456,9 +450,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -507,9 +499,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -557,9 +547,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -631,9 +619,7 @@ describe("SendIpfs", () => {
 
 		const { history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -660,9 +646,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment, history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -736,9 +720,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -763,9 +745,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -869,9 +849,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
