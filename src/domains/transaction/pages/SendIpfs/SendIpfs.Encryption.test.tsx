@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
-import { Route, Router } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import { SendIpfs } from "./SendIpfs";
-import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
@@ -41,7 +39,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
-let getVersionSpy: jest.SpyInstance;
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
@@ -84,17 +81,9 @@ describe("SendIpfs", () => {
 
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 
-		getVersionSpy = jest
-			.spyOn(wallet.coin().ledger(), "getVersion")
-			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
 		await wallet.synchroniser().identity();
 
 		await syncFees(profile);
-	});
-
-	afterAll(() => {
-		getVersionSpy.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -117,9 +106,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
