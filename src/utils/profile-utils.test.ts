@@ -7,6 +7,7 @@ import {
 	isValidProfileUrl,
 } from "./profile-utils";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
 
 describe("Profile utils", () => {
 	it("#getProfileById", async () => {
@@ -64,12 +65,15 @@ describe("Profile utils", () => {
 
 	it("should have errored networks", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(true);
 		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(1);
 
 		walletRestoreMock.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	it("#isValidProfileUrl", async () => {
