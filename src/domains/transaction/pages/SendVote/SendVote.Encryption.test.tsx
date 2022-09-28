@@ -61,15 +61,14 @@ jest.mock("@/utils/delay", () => ({
 }));
 
 jest.mock("@/utils/debounce", () => ({
-	debounceAsync: (callback: () => void) => {
-		return async function (...arguments_: any) {
+	debounceAsync: (callback: () => void) =>
+		async function (...arguments_: any) {
 			return new Promise((resolve) => {
 				setTimeout(() => {
 					resolve(callback.apply(this, arguments_));
 				}, 0);
 			});
-		};
-	},
+		},
 }));
 
 describe("SendVote", () => {
