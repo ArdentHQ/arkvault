@@ -70,7 +70,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 
 	const groupedByNetwork = useMemo(() => groupWalletsByNetwork(wallets), [wallets]);
 
-	const availableNetworks = useMemo(() => profile.availableNetworks(), [profile]);
+	const availableNetworks = useMemo(() => [...groupedByNetwork.keys()], [groupedByNetwork]);
 
 	const filteredGroupedByNetwork = useMemo(() => {
 		const filteredByDisplayTypeAndNetwork = filteredByDisplayType.filter((wallet) =>
