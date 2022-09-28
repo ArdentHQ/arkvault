@@ -493,6 +493,8 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const mockWalletSyncStatus = jest
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
@@ -512,6 +514,8 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
+		resetProfileNetworksMock();
+
 		jest.useRealTimers();
 		jest.clearAllTimers();
 	});
@@ -974,7 +978,10 @@ describe("useProfileStatusWatcher", () => {
 	it("should trigger sync error callback if profile has errored wallet networks", async () => {
 		const onProfileSyncComplete = jest.fn();
 		const onProfileSyncError = jest.fn();
+
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const mockWalletSyncStatus = jest
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
@@ -1004,6 +1011,7 @@ describe("useProfileStatusWatcher", () => {
 		);
 
 		mockWalletSyncStatus.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	it("should stay idle if network status has not changed", async () => {
