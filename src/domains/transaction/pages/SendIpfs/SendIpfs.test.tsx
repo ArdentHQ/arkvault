@@ -358,6 +358,7 @@ describe("SendIpfs", () => {
 		historySpy.mockRestore();
 
 		expect(asFragment()).toMatchSnapshot();
+
 		addressFromMnemonicMock.mockRestore();
 	});
 
@@ -497,6 +498,7 @@ describe("SendIpfs", () => {
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
+
 		addressFromMnemonicMock.mockRestore();
 	});
 
