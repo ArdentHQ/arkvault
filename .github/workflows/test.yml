@@ -41,7 +41,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/app/ --env=./src/tests/custom-env.js --forceExit --maxWorkers=2
@@ -79,7 +79,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/contact --env=./src/tests/custom-env.js
@@ -118,7 +118,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/dashboard --env=./src/tests/custom-env.js
@@ -157,7 +157,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/error --env=./src/tests/custom-env.js
@@ -196,7 +196,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/exchange --env=./src/tests/custom-env.js
@@ -235,7 +235,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/message --env=./src/tests/custom-env.js
@@ -274,7 +274,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/network --env=./src/tests/custom-env.js
@@ -313,7 +313,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/news --env=./src/tests/custom-env.js
@@ -352,7 +352,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/profile --env=./src/tests/custom-env.js
@@ -391,7 +391,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/setting --env=./src/tests/custom-env.js
@@ -430,7 +430,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/transaction --env=./src/tests/custom-env.js
@@ -469,7 +469,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/vote --env=./src/tests/custom-env.js
@@ -508,7 +508,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/wallet --env=./src/tests/custom-env.js
@@ -547,7 +547,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/router --env=./src/tests/custom-env.js --forceExit
@@ -586,7 +586,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               with:
-                  timeout_minutes: 10
+                  timeout_minutes: 20
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/utils --env=./src/tests/custom-env.js --forceExit
