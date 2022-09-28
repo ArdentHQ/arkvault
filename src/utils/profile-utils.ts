@@ -38,7 +38,12 @@ export const getProfileStoredPassword = (profile: Contracts.IProfile) => {
 export const getErroredNetworks = (profile: Contracts.IProfile) => {
 	const erroredNetworks: string[] = [];
 
-	for (const wallet of profile.wallets().values()) {
+	const availableNetworkIds = profile.availableNetworks().map((network) => network.id());
+
+	const wallets = profile.wallets().values()
+		.filter((wallet) => availableNetworkIds.includes(wallet.networkId()));
+
+	for (const wallet of wallets) {
 		const name = `${wallet.network().coin()} ${wallet.network().name()}`;
 
 		if (erroredNetworks.includes(name)) {
