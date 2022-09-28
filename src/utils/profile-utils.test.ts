@@ -6,8 +6,8 @@ import {
 	getErroredNetworks,
 	isValidProfileUrl,
 } from "./profile-utils";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Profile utils", () => {
 	it("#getProfileById", async () => {
