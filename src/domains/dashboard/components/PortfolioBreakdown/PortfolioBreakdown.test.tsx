@@ -20,6 +20,12 @@ describe("PortfolioBreakdown", () => {
 	let portfolioBreakdownMock: jest.SpyInstance;
 	let isRestoredMock: jest.SpyInstance;
 
+	let firstWalletColdMock: jest.SpyInstance;
+	let secondWalletColdMock: jest.SpyInstance;
+
+	let firstWalletSyncedMock: jest.SpyInstance;
+	let secondWalletSyncedMock: jest.SpyInstance;
+
 	let useGraphWidthMock: jest.SpyInstance;
 
 	const liveNetworkIds = ["ark.mainnet", "lsk.mainnet"];
@@ -66,6 +72,12 @@ describe("PortfolioBreakdown", () => {
 		]);
 
 		isRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(true);
+
+		firstWalletColdMock = jest.spyOn(firstWallet, "isCold").mockReturnValue(false);
+		secondWalletColdMock = jest.spyOn(secondWallet, "isCold").mockReturnValue(false);
+
+		firstWalletSyncedMock = jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		secondWalletSyncedMock = jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 	});
 
 	afterEach(() => {
@@ -131,6 +143,40 @@ describe("PortfolioBreakdown", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render loading when no wallets have synced with the network", () => {
+		firstWalletSyncedMock.mockReturnValue(false);
+		secondWalletSyncedMock.mockReturnValue(false);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.getByTestId("PortfolioBreakdownSkeleton")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render loading when some wallets have not synced with the network", () => {
+		firstWalletSyncedMock.mockReturnValue(false);
+		secondWalletSyncedMock.mockReturnValue(true);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.getByTestId("PortfolioBreakdownSkeleton")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render loading when items converted balance contain a NaN value", () => {
 		portfolioBreakdownMock = jest.spyOn(profile.portfolio(), "breakdown").mockReturnValue([
 			{ coin: firstWallet.coin(), shares: 85, source: 85, target: 85 },
@@ -150,6 +196,23 @@ describe("PortfolioBreakdown", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render when some wallets are cold", () => {
+		firstWalletColdMock.mockReturnValue(true);
+		secondWalletColdMock.mockReturnValue(false);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.queryByTestId("PortfolioBreakdownSkeleton")).not.toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should return nothing when portfolio is empty and there are no filtered networks", () => {
 		portfolioBreakdownMock.mockReturnValue([]);
 
@@ -162,7 +225,7 @@ describe("PortfolioBreakdown", () => {
 			/>,
 		);
 
-		expect(asFragment()).toMatchInlineSnapshot("<DocumentFragment />");
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render empty block when portfolio is empty and there are filtered networks", () => {
