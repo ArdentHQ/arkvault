@@ -60,6 +60,17 @@ jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+jest.mock("@/utils/debounce", () => ({
+	debounceAsync: (callback: () => void) =>
+		async function (...arguments_: any) {
+			return new Promise((resolve) => {
+				setTimeout(() => {
+					resolve(callback.apply(this, arguments_));
+				}, 0);
+			});
+		},
+}));
+
 describe("SendVote", () => {
 	let resetProfileNetworksMock: () => void;
 
