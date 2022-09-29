@@ -18,21 +18,17 @@ type UsePortfolioBreakdownHook = (input: {
 };
 
 const getSyncStatus = (wallets: Contracts.IReadWriteWallet[]): boolean => {
-	let synced = true;
-
 	for (const wallet of wallets) {
 		if (wallet.isCold()) {
 			continue;
 		}
 
-		synced = synced && wallet.hasSyncedWithNetwork();
-
-		if (!synced) {
+		if (!wallet.hasSyncedWithNetwork()) {
 			return false;
 		}
 	}
 
-	return synced;
+	return true;
 };
 
 export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
