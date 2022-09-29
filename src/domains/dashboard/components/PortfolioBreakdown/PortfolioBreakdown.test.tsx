@@ -198,6 +198,7 @@ describe("PortfolioBreakdown", () => {
 
 	it("should render when some wallets are cold", () => {
 		firstWalletColdMock.mockReturnValue(true);
+		secondWalletColdMock.mockReturnValue(false);
 
 		const { asFragment } = render(
 			<PortfolioBreakdown
