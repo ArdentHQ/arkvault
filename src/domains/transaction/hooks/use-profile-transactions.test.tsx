@@ -192,19 +192,14 @@ describe("useProfileTransactions", () => {
 
 		jest.useFakeTimers();
 
-		const mockDefaultTransactions = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => items,
-			};
-			return Promise.resolve(response);
-		});
+		let mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => true,
+			items: () => items,
+		} as any);
 
 		hook = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
 			wrapper,
 		});
-
-		mockDefaultTransactions.mockRestore();
 
 		jest.advanceTimersByTime(30_000);
 
@@ -212,7 +207,7 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(30));
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => items,
 		} as any);
