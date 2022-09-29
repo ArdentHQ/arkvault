@@ -21,6 +21,10 @@ const getSyncStatus = (wallets: Contracts.IReadWriteWallet[]): boolean => {
 	let synced = true;
 
 	for (const wallet of wallets) {
+		if (wallet.isCold()) {
+			continue;
+		}
+
 		synced = synced && wallet.hasSyncedWithNetwork();
 
 		if (!synced) {
