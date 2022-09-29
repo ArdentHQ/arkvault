@@ -450,6 +450,8 @@ export const requestMocks = {
 		...searchAddressesMocks(),
 	],
 	wallets: [
+		mockRequest("https://ark-live.arkvault.io/api/wallets?limit=1&nonce=0", {}),
+		mockRequest("https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0", {}),
 		mockRequest(
 			"https://ark-test.arkvault.io/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes",
 			"coins/ark/devnet/votes",
