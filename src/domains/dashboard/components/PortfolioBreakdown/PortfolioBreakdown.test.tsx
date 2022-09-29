@@ -20,6 +20,9 @@ describe("PortfolioBreakdown", () => {
 	let portfolioBreakdownMock: jest.SpyInstance;
 	let isRestoredMock: jest.SpyInstance;
 
+	let firstWalletColdMock: jest.SpyInstance;
+	let secondWalletColdMock: jest.SpyInstance;
+
 	let firstWalletSyncedMock: jest.SpyInstance;
 	let secondWalletSyncedMock: jest.SpyInstance;
 
@@ -69,6 +72,9 @@ describe("PortfolioBreakdown", () => {
 		]);
 
 		isRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(true);
+
+		firstWalletColdMock = jest.spyOn(firstWallet, "isCold").mockReturnValue(false);
+		secondWalletColdMock = jest.spyOn(secondWallet, "isCold").mockReturnValue(false);
 
 		firstWalletSyncedMock = jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 		secondWalletSyncedMock = jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
@@ -187,6 +193,22 @@ describe("PortfolioBreakdown", () => {
 		);
 
 		expect(screen.getByTestId("PortfolioBreakdownSkeleton")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render when some wallets are cold", () => {
+		firstWalletColdMock.mockReturnValue(true);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={liveNetworkIds}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
+		expect(screen.queryByTestId("PortfolioBreakdownSkeleton")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
