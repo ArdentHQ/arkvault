@@ -77,7 +77,7 @@ describe("useDisplayWallets", () => {
 		expect(current.availableWallets[0].address()).toBe(wallets[2].address());
 		expect(current.availableWallets[1].alias()).toBe(wallets[0].alias());
 
-		expect(current.availableNetworks).toHaveLength(3);
+		expect(current.availableNetworks).toHaveLength(2);
 		expect(current.availableNetworks[0].id()).toBe(mainNetwork);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(1);
@@ -108,7 +108,7 @@ describe("useDisplayWallets", () => {
 
 		expect(current.availableWallets).toHaveLength(3);
 
-		expect(current.availableNetworks).toHaveLength(3);
+		expect(current.availableNetworks).toHaveLength(2);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(2);
 		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe(mainNetwork);
@@ -159,7 +159,7 @@ describe("useDisplayWallets", () => {
 
 		expect(current.availableWallets).toHaveLength(3);
 
-		expect(current.availableNetworks).toHaveLength(3);
+		expect(current.availableNetworks).toHaveLength(2);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(0);
 
@@ -184,7 +184,7 @@ describe("useDisplayWallets", () => {
 
 		expect(current.availableWallets).toHaveLength(3);
 
-		expect(current.availableNetworks).toHaveLength(3);
+		expect(current.availableNetworks).toHaveLength(2);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(1);
 		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe(mainNetwork);
