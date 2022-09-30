@@ -16,14 +16,14 @@ describe("UnlockTokensSummary", () => {
 						...TransactionFixture,
 						wallet: () => ({
 							...TransactionFixture.wallet(),
-							currency: () => "LSK",
+							currency: () => "ARK",
 							network: () => ({
-								coin: () => "LSK",
-								displayName: () => "LISK Testnet",
-								id: () => "lsk.testnet",
+								coin: () => "ARK",
+								displayName: () => "ARK Devnet",
+								id: () => "ark.devnet",
 								isLive: () => false,
 								isTest: () => true,
-								ticker: () => "LSK",
+								ticker: () => "DARK",
 							}),
 						}),
 					}}
