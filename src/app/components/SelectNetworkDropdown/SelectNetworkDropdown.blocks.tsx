@@ -3,8 +3,7 @@ import { Networks } from "@ardenthq/sdk";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
-import { isCustomNetwork, networkDisplayName } from "@/utils/network-utils";
-import { Size } from "@/types";
+import { networkDisplayName } from "@/utils/network-utils";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 export const NetworkTestnetCodeIcon = () => {

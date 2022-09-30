@@ -20,10 +20,7 @@ export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) =>
 		}
 
 		return (
-			<Circle
-				size="lg"
-				className="relative border-theme-secondary-300 dark:border-theme-secondary-800"
-			>
+			<Circle size="lg" className="relative border-theme-secondary-300 dark:border-theme-secondary-800">
 				<NetworkIcon iconClassName="text-theme-secondary-300" network={network} isCompact />
 				<Badge className="border-theme-secondary-300 dark:border-theme-secondary-800" />
 			</Circle>

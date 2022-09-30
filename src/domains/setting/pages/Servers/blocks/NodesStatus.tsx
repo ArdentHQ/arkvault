@@ -52,7 +52,13 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 			)}
 		>
 			<div className="flex shrink-0">
-				<NetworkIcon network={network} size="sm" className="text-theme-secondary-700 dark:text-theme-secondary-500" showTooltip={false}	isCompact />
+				<NetworkIcon
+					network={network}
+					size="sm"
+					className="text-theme-secondary-700 dark:text-theme-secondary-500"
+					showTooltip={false}
+					isCompact
+				/>
 			</div>
 
 			<div className="flex-grow font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">

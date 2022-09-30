@@ -30,7 +30,9 @@ export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNe
 				ref={reference}
 				addons={{
 					start: {
-						content: selectedNetwork && <NetworkIcon network={selectedNetwork} showTooltip={false} isCompact />,
+						content: selectedNetwork && (
+							<NetworkIcon network={selectedNetwork} showTooltip={false} isCompact />
+						),
 					},
 				}}
 			/>
