@@ -192,7 +192,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -402,7 +402,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -804,7 +804,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1014,7 +1014,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1416,7 +1416,7 @@ exports[`Portfolio grouped networks should render without testnet wallets 1`] = 
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div

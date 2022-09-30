@@ -58,6 +58,7 @@ describe("NetworkIcon", () => {
 			coinName: () => "Custom Network",
 			id: () => "whatever.custom",
 			isLive: () => false,
+			ticker: () => "WTH",
 		};
 
 		render(<NetworkIcon size="lg" network={customNetwork} />, {});
