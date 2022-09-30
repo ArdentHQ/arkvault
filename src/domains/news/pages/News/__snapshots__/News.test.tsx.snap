@@ -568,7 +568,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -1676,7 +1676,7 @@ exports[`News should render responsive (md) 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div
@@ -2752,7 +2752,7 @@ exports[`News should render responsive (xs) 1`] = `
                           >
                             <div
                               aria-label="ARK"
-                              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
                               data-testid="NetworkIcon-ARK-ark.mainnet"
                             >
                               <div

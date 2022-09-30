@@ -53,10 +53,12 @@ describe("SelectNetworkDropdown", () => {
 				networks={[
 					...networks,
 					{
+						coin: () => "ARK",
 						coinName: () => "Custom Network",
 						id: () => "whatever.custom",
 						isLive: () => true,
 						isTest: () => false,
+						ticker: () => "WTH",
 					},
 				]}
 				selectedNetwork={networks[0]}
@@ -82,10 +84,12 @@ describe("SelectNetworkDropdown", () => {
 
 	it("should render custom network initials", () => {
 		const customNetworkMock = {
+			coin: () => "ARK",
 			coinName: () => "My Coin name",
-			id: "whatever.custom",
+			id: () => "whatever.custom",
 			isLive: () => false,
 			isTest: () => false,
+			ticker: () => "MYC",
 		};
 
 		render(<NetworkOptionLabel network={customNetworkMock} value="tests" />);

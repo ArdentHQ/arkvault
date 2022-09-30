@@ -651,7 +651,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -826,7 +826,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -989,7 +989,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1152,7 +1152,7 @@ exports[`Contacts should render compact on md screen 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -1960,7 +1960,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2135,7 +2135,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2298,7 +2298,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -2461,7 +2461,7 @@ exports[`Contacts should render compact on md screen if uses expanded tables 1`]
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -3901,7 +3901,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -4076,7 +4076,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -4239,7 +4239,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div
@@ -4402,7 +4402,7 @@ exports[`Contacts should render with contacts 1`] = `
                       >
                         <div
                           aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                           data-testid="NetworkIcon-ARK-ark.devnet"
                         >
                           <div

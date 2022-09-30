@@ -192,7 +192,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -402,7 +402,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -801,7 +801,7 @@ exports[`WalletsGroup should render group with different widths 1`] = `
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1016,7 +1016,7 @@ exports[`WalletsGroup should render group with different widths 2`] = `
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1231,7 +1231,7 @@ exports[`WalletsGroup should render group with different widths 3`] = `
         >
           <div
             aria-label="ARK"
-            class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
             data-testid="NetworkIcon-ARK-ark.mainnet"
           >
             <div
@@ -1451,7 +1451,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1661,7 +1661,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1892,7 +1892,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -2102,7 +2102,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2335,7 +2335,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -2889,7 +2889,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div

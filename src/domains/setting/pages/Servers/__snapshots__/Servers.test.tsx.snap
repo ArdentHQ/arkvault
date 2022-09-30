@@ -754,17 +754,18 @@ exports[`Servers Settings should render servers settings 1`] = `
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -817,17 +818,18 @@ exports[`Servers Settings should render servers settings 1`] = `
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -1729,17 +1731,18 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -1796,17 +1799,18 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -2011,13 +2015,20 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -2180,13 +2191,20 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK Devnet"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                            data-testid="NetworkIcon-ARK-ark.devnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                           <span
                                             class="absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-theme-background"
@@ -2364,13 +2382,20 @@ exports[`Servers Settings with servers should ping the servers in an interval 1`
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -3329,17 +3354,18 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -3392,17 +3418,18 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -3603,13 +3630,20 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -3767,13 +3801,20 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK Devnet"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                            data-testid="NetworkIcon-ARK-ark.devnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                           <span
                                             class="absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-theme-background"
@@ -3946,13 +3987,20 @@ exports[`Servers Settings with servers should render custom servers 1`] = `
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -4906,17 +4954,18 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -4969,17 +5018,18 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -5092,13 +5142,20 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -5191,13 +5248,20 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK Devnet"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                          data-testid="NetworkIcon-ARK-ark.devnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -5301,13 +5365,20 @@ exports[`Servers Settings with servers should render customs servers in xs 1`] =
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -6194,17 +6265,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -6261,17 +6333,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -6476,13 +6549,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -6645,13 +6725,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK Devnet"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                            data-testid="NetworkIcon-ARK-ark.devnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                           <span
                                             class="absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-theme-background"
@@ -6829,13 +6916,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -7794,17 +7888,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -7861,17 +7956,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -7988,13 +8084,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -8092,13 +8195,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK Devnet"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                          data-testid="NetworkIcon-ARK-ark.devnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -8207,13 +8317,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -9105,17 +9222,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -9172,17 +9290,18 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -9299,13 +9418,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -9580,13 +9706,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK Devnet"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                          data-testid="NetworkIcon-ARK-ark.devnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -9695,13 +9828,20 @@ exports[`Servers Settings with servers should show status ok after ping the serv
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -10593,17 +10733,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -10660,17 +10801,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -10875,13 +11017,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -11044,13 +11193,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-secondary-100 text-theme-secondary-700 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK Devnet"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                            data-testid="NetworkIcon-ARK-ark.devnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                           <span
                                             class="absolute bottom-0 right-0 -mb-2 -mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-theme-background"
@@ -11228,13 +11384,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                           class="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl dark:border-2 dark:border-theme-secondary-800 bg-theme-primary-100 text-theme-primary-600 dark:bg-transparent"
                                         >
                                           <div
-                                            class="css-1i4b0eq"
-                                            height="20"
-                                            width="20"
+                                            aria-label="ARK"
+                                            class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                            data-testid="NetworkIcon-ARK-ark.mainnet"
                                           >
-                                            <svg>
-                                              ark.svg
-                                            </svg>
+                                            <div
+                                              class="css-1i4b0eq"
+                                              data-testid="NetworkIcon__icon"
+                                              height="20"
+                                              width="20"
+                                            >
+                                              <svg>
+                                                ark.svg
+                                              </svg>
+                                            </div>
                                           </div>
                                         </div>
                                         <div
@@ -12193,17 +12356,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -12260,17 +12424,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -12387,13 +12552,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -12491,13 +12663,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK Devnet"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                          data-testid="NetworkIcon-ARK-ark.devnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -12606,13 +12785,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -13504,17 +13690,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -13571,17 +13758,18 @@ exports[`Servers Settings with unreachable servers should show status error if r
                             data-testid="NodesStatus--node"
                           >
                             <div
-                              class="shrink-0"
+                              class="flex shrink-0"
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700 text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
-                                  class="css-v0ob3f"
+                                  class="css-1i4b0eq"
                                   data-testid="NetworkIcon__icon"
-                                  height="16"
-                                  width="16"
+                                  height="20"
+                                  width="20"
                                 >
                                   <svg>
                                     ark.svg
@@ -13698,13 +13886,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -13979,13 +14174,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK Devnet"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                          data-testid="NetworkIcon-ARK-ark.devnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div
@@ -14094,13 +14296,20 @@ exports[`Servers Settings with unreachable servers should show status error if r
                                         class="shrink-0"
                                       >
                                         <div
-                                          class="css-1i4b0eq"
-                                          height="20"
-                                          width="20"
+                                          aria-label="ARK"
+                                          class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                          data-testid="NetworkIcon-ARK-ark.mainnet"
                                         >
-                                          <svg>
-                                            ark.svg
-                                          </svg>
+                                          <div
+                                            class="css-1i4b0eq"
+                                            data-testid="NetworkIcon__icon"
+                                            height="20"
+                                            width="20"
+                                          >
+                                            <svg>
+                                              ark.svg
+                                            </svg>
+                                          </div>
                                         </div>
                                       </div>
                                       <div

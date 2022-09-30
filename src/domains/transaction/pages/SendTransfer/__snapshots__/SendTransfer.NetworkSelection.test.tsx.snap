@@ -575,13 +575,14 @@ exports[`SendTransfer Network Selection should select a cryptoasset and select s
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
-                                    class="css-v0ob3f"
+                                    class="css-1i4b0eq"
                                     data-testid="NetworkIcon__icon"
-                                    height="16"
-                                    width="16"
+                                    height="20"
+                                    width="20"
                                   >
                                     <svg>
                                       ark.svg
@@ -1730,7 +1731,8 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                             >
                               <div
                                 aria-label="ARK"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                data-testid="NetworkIcon-ARK-ark.mainnet"
                               >
                                 <div
                                   class="css-1i4b0eq"
@@ -1765,7 +1767,8 @@ exports[`SendTransfer Network Selection should select cryptoasset 1`] = `
                             >
                               <div
                                 aria-label="ARK Devnet"
-                                class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                data-testid="NetworkIcon-ARK-ark.devnet"
                               >
                                 <div
                                   class="css-1i4b0eq"

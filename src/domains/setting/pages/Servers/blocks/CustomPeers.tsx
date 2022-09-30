@@ -22,6 +22,7 @@ import { useServerStatus } from "@/domains/setting/pages/Servers/hooks/use-serve
 import { useEnvironmentContext } from "@/app/contexts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { networkDisplayName } from "@/utils/network-utils";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 interface PeerRowProperties {
 	name: string;
@@ -79,7 +80,7 @@ const PeerRow = ({
 							},
 						)}
 					>
-						<Icon name={network.ticker()} size="lg" />
+						<NetworkIcon network={network} showTooltip={false} isCompact />
 
 						{network.isTest() && (
 							<Tooltip content={t("COMMON.TEST_NETWORK")}>
@@ -281,7 +282,7 @@ const CustomPeersPeer: React.VFC<{
 							})}
 						>
 							<div className="shrink-0">
-								<Icon name={network.ticker()} size="lg" />
+								<NetworkIcon network={network} showTooltip={false} isCompact />
 							</div>
 
 							<div

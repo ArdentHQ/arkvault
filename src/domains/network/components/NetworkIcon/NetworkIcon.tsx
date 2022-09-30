@@ -6,13 +6,12 @@ import { Circle, CircleProperties } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
-import { isCustomNetwork, networkDisplayName } from "@/utils/network-utils";
-import { NetworkIconContent } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown.blocks";
+import { networkDisplayName } from "@/utils/network-utils";
 
 interface NetworkIconProperties {
 	network?: Networks.Network;
 	as?: React.ElementType;
-	size: Size;
+	size?: Size;
 	className?: string;
 	shadowClassName?: string;
 	iconClassName?: string;
@@ -58,27 +57,26 @@ export const NetworkIcon: React.VFC<NetworkIconProperties> = ({
 	};
 
 	const renderIcon = () => {
-		const TickerIcon = () => {
-			if (isCustomNetwork(network)) {
-				return <NetworkIconContent network={network} />;
-			}
-
-			return (
-				<Icon
-					className={iconClassName}
-					data-testid="NetworkIcon__icon"
-					name={network.ticker()}
-					size={iconSize}
-				/>
-			);
-		};
+		const TickerIcon = () => (
+			<Icon
+				className={iconClassName}
+				data-testid="NetworkIcon__icon"
+				name={network.ticker()}
+				fallback={
+					<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
+						{networkDisplayName(network).slice(0, 2).toUpperCase()}
+					</span>
+				}
+				size={iconSize}
+			/>
+		);
 
 		if (isCompact) {
 			return (
 				<div
 					aria-label={networkDisplayName(network)}
 					data-testid={`NetworkIcon-${network.coin()}-${network.id()}`}
-					className={cn("inline-flex h-5 w-5 items-center", getClassName())}
+					className={cn("inline-flex h-5 w-5 items-center justify-center", getClassName())}
 				>
 					<TickerIcon />
 				</div>
