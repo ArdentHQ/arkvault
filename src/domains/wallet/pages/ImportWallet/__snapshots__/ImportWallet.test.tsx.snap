@@ -2299,7 +2299,7 @@ exports[`ImportWallet should render success step (lg) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2595,7 +2595,7 @@ exports[`ImportWallet should render success step (xs) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div

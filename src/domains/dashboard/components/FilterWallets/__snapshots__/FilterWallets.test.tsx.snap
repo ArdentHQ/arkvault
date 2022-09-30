@@ -113,17 +113,23 @@ exports[`FilterWallets should render with networks selection 1`] = `
             data-testid="NetworkOption__ark.devnet"
           >
             <div
-              class="relative border-theme-secondary-300 text-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
+              class="relative border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
             >
               <div
-                class="css-v0ob3f"
-                data-testid="NetworkIcon__icon"
-                height="16"
-                width="16"
+                aria-label="ARK Devnet"
+                class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                data-testid="NetworkIcon-ARK-ark.devnet"
               >
-                <svg>
-                  ark.svg
-                </svg>
+                <div
+                  class="text-theme-secondary-300 css-1i4b0eq"
+                  data-testid="NetworkIcon__icon"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    ark.svg
+                  </svg>
+                </div>
               </div>
               <span
                 class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-theme-secondary-300 dark:border-theme-secondary-800 css-19jfgr"
