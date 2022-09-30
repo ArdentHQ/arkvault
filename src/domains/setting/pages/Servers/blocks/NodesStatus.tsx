@@ -8,7 +8,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { pingServerAddress } from "@/utils/peers";
 import { Spinner } from "@/app/components/Spinner";
 import { networkDisplayName } from "@/utils/network-utils";
-import { NetworkIcon } from "@/app/components/SelectNetworkDropdown/SelectNetworkDropdown.blocks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }> = ({ network, lastRow }) => {
 	const { t } = useTranslation();
@@ -51,8 +51,8 @@ const NodeStatusNode: React.VFC<{ network: Networks.Network; lastRow: boolean }>
 				},
 			)}
 		>
-			<div className="shrink-0">
-				<NetworkIcon network={network} className="text-theme-secondary-700 dark:text-theme-secondary-500" />
+			<div className="flex shrink-0">
+				<NetworkIcon network={network} size="sm" className="text-theme-secondary-700 dark:text-theme-secondary-500" showTooltip={false}	isCompact />
 			</div>
 
 			<div className="flex-grow font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
