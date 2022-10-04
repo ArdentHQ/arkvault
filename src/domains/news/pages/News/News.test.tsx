@@ -26,7 +26,7 @@ const newsURL = `/profiles/${getDefaultProfileId()}/news`;
 
 const translations = buildTranslations();
 
-jest.setTimeout(30_000);
+vi.setTimeout(30_000);
 
 const firstPageReply = () => {
 	const { meta, data } = page1Fixture;
@@ -83,7 +83,7 @@ describe("News", () => {
 				};
 			});
 
-		jest.spyOn(window, "scrollTo").mockImplementation();
+		vi.spyOn(window, "scrollTo").mockImplementation();
 	});
 
 	beforeEach(() => {
@@ -100,7 +100,7 @@ describe("News", () => {
 	});
 
 	it("should show error toast if news cannot be fetched", async () => {
-		const toastSpy = jest.spyOn(toasts, "error");
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = renderPage();
 
@@ -200,7 +200,7 @@ describe("News", () => {
 	it("should show warning toast when trying to deselect all categories", async () => {
 		renderPage();
 
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 

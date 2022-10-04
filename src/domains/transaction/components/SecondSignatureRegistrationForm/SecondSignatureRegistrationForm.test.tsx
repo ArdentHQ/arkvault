@@ -33,7 +33,7 @@ const backupStepId = "SecondSignatureRegistrationForm__backup-step";
 const verificationStepId = "SecondSignatureRegistrationForm__verification-step";
 const reviewStepId = "SecondSignatureRegistrationForm__review-step";
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -51,7 +51,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 	const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 		// @ts-ignore
-		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 			amount: () => secondSignatureFixture.data.amount / 1e8,
 			data: () => ({ data: () => secondSignatureFixture.data }),
 			explorerLink: () => `https://test.arkscan.io/transaction/${secondSignatureFixture.data.id}`,
@@ -65,7 +65,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		history.push(dashboardURL);
 
 		const passphrase = "mock bip39 passphrase";
-		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		const { form, asFragment } = renderWithForm(
 			<Router history={history}>
@@ -91,7 +91,7 @@ describe("SecondSignatureRegistrationForm", () => {
 	it("should not generate mnemonic if already set", async () => {
 		history.push(dashboardURL);
 
-		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockImplementation();
+		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockImplementation();
 
 		const { form, asFragment } = renderWithForm(
 			<Router history={history}>
@@ -177,7 +177,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			const writeTextMock = jest.fn();
+			const writeTextMock = vi.fn();
 			const clipboardOriginal = navigator.clipboard;
 			(navigator as any).clipboard = { writeText: writeTextMock };
 
@@ -193,7 +193,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		it("should show success toast on successful download when non-legacy save method is used", async () => {
 			const useFilesOutput = useFilesHook.useFiles();
 
-			const isLegacyMock = jest.spyOn(useFilesHook, "useFiles").mockReturnValue({
+			const isLegacyMock = vi.spyOn(useFilesHook, "useFiles").mockReturnValue({
 				...useFilesOutput,
 				isLegacy: () => false,
 			});
@@ -214,7 +214,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			const toastSpy = jest.spyOn(toasts, "success");
+			const toastSpy = vi.spyOn(toasts, "success");
 
 			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
@@ -247,7 +247,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			const toastSpy = jest.spyOn(toasts, "success");
+			const toastSpy = vi.spyOn(toasts, "success");
 
 			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
@@ -257,11 +257,11 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 		it("should not show error toast on cancelled download", async () => {
-			const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+			const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
 
 			const useFilesOutput = useFilesHook.useFiles();
 
-			const showSaveDialogMock = jest.spyOn(useFilesHook, "useFiles").mockReturnValue({
+			const showSaveDialogMock = vi.spyOn(useFilesHook, "useFiles").mockReturnValue({
 				...useFilesOutput,
 				showSaveDialog: () => {
 					throw new Error("The user aborted a request");
@@ -297,7 +297,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		it("should show error toast on error", async () => {
 			const useFilesOutput = useFilesHook.useFiles();
 
-			const showSaveDialogMock = jest.spyOn(useFilesHook, "useFiles").mockReturnValue({
+			const showSaveDialogMock = vi.spyOn(useFilesHook, "useFiles").mockReturnValue({
 				...useFilesOutput,
 				showSaveDialog: () => {
 					throw new Error("error opening save dialog");
@@ -320,7 +320,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			const toastSpy = jest.spyOn(toasts, "error");
+			const toastSpy = vi.spyOn(toasts, "error");
 
 			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
@@ -409,7 +409,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 	it("should sign transaction", async () => {
 		const form = {
-			clearErrors: jest.fn(),
+			clearErrors: vi.fn(),
 			getValues: () => ({
 				fee: "1",
 				mnemonic: MNEMONICS[0],
@@ -417,13 +417,13 @@ describe("SecondSignatureRegistrationForm", () => {
 				secondMnemonic: MNEMONICS[1],
 				senderAddress: wallet.address(),
 			}),
-			setError: jest.fn(),
-			setValue: jest.fn(),
+			setError: vi.fn(),
+			setValue: vi.fn(),
 		};
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signSecondSignature")
 			.mockReturnValue(Promise.resolve(secondSignatureFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [secondSignatureFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -446,31 +446,31 @@ describe("SecondSignatureRegistrationForm", () => {
 	});
 
 	it("should sign transaction using encryption password", async () => {
-		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const form = {
-			clearErrors: jest.fn(),
+			clearErrors: vi.fn(),
 			getValues: () => ({
 				encryptionPassword: "password",
 				fee: "1",
 				network: wallet.network(),
 				senderAddress: wallet.address(),
 			}),
-			setError: jest.fn(),
-			setValue: jest.fn(),
+			setError: vi.fn(),
+			setValue: vi.fn(),
 		};
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signSecondSignature")
 			.mockReturnValue(Promise.resolve(secondSignatureFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [secondSignatureFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
-		const mutatorMock = jest.spyOn(wallet.mutator(), "removeEncryption").mockImplementation();
+		const mutatorMock = vi.spyOn(wallet.mutator(), "removeEncryption").mockImplementation();
 
 		await signSecondSignatureRegistration({
 			env,

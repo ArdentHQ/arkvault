@@ -31,7 +31,7 @@ describe("ApplicationError", () => {
 
 		Object.defineProperty(window, "location", {
 			value: {
-				reload: jest.fn(),
+				reload: vi.fn(),
 			},
 		});
 

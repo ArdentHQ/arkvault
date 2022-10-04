@@ -13,7 +13,7 @@ describe("DotNavigation", () => {
 	});
 
 	it("handles click on a dot", () => {
-		const clickMock = jest.fn();
+		const clickMock = vi.fn();
 		render(<DotNavigation onClick={clickMock} />);
 
 		userEvent.click(screen.getByTestId("DotNavigation-Step-1"));

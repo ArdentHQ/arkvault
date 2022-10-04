@@ -32,7 +32,7 @@ describe("TableRow", () => {
 		const { container } = render(
 			<table>
 				<tbody>
-					<TableRow onClick={jest.fn()} />
+					<TableRow onClick={vi.fn()} />
 				</tbody>
 			</table>,
 		);

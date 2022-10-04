@@ -28,13 +28,13 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
-let getVersionSpy: jest.SpyInstance;
+let getVersionSpy: vi.SpyInstance;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.setTimeout(6000);
+vi.setTimeout(6000);
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
@@ -73,7 +73,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 };
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
@@ -113,7 +113,7 @@ describe("Multisignature Registration", () => {
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
 		secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
@@ -158,11 +158,11 @@ describe("Multisignature Registration", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet, "multiSignature");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
 			accepted: [MultisignatureRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -195,12 +195,12 @@ describe("Multisignature Registration", () => {
 
 		const mnemonic = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		const mnemonicValidationMock = jest
+		const mnemonicValidationMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		const signatoryMock = jest.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
-		const transactionSyncMock = jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
+		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+		const transactionSyncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
 
 		userEvent.paste(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));

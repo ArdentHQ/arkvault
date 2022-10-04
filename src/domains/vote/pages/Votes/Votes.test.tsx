@@ -131,7 +131,7 @@ describe("Votes", () => {
 
 	it("should render and handle wallet current voting exception", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		const currentMock = jest.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
+		const currentMock = vi.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
 			throw new Error("Error");
 		});
 
@@ -271,7 +271,7 @@ describe("Votes", () => {
 
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -334,7 +334,7 @@ describe("Votes", () => {
 
 	it("should select an address and delegate", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -417,7 +417,7 @@ describe("Votes", () => {
 	it("should handle wallet vote error and show empty delegates", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 
-		const walletVoteMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
+		const walletVoteMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("delegate error");
 		});
 
@@ -441,7 +441,7 @@ describe("Votes", () => {
 
 	it("should handle resigned delegate and show empty results", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -479,12 +479,12 @@ describe("Votes", () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
-		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
+		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 
 		const history = createHashHistory();
 		history.push(route);
 
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncError = vi.fn();
 		const Component = () => {
 			useProfileStatusWatcher({ env, onProfileSyncError, profile });
 			return (
@@ -667,7 +667,7 @@ describe("Votes", () => {
 
 	it("should show resigned delegate notice", async () => {
 		const currentWallet = profile.wallets().first();
-		const walletSpy = jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({

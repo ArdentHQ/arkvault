@@ -171,7 +171,7 @@ describe("TransactionDetailModal", () => {
 	});
 
 	it.each(["unvote", "vote", "voteCombination"])("should render a %s modal", (transactionType) => {
-		jest.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore
@@ -325,7 +325,7 @@ describe("TransactionDetailModal", () => {
 
 	it("should throw an error for unknown types", () => {
 		// disable console to throw to avoid break the CI (this is added because we don't have error boundaries)
-		jest.spyOn(console, "error").mockImplementation();
+		vi.spyOn(console, "error").mockImplementation();
 
 		expect(() =>
 			render(

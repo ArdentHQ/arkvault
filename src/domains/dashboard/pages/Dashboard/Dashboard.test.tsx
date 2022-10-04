@@ -63,7 +63,7 @@ describe("Dashboard", () => {
 
 		await syncDelegates(profile);
 
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
 
 	afterAll(() => {
@@ -106,7 +106,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should show introductory tutorial", async () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
@@ -222,7 +222,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);

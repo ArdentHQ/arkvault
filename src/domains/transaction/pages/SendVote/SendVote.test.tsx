@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import "jest-extended";
+import "vi-extended";
 
 import { Signatories } from "@ardenthq/sdk";
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
@@ -39,7 +39,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
@@ -54,7 +54,7 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 
 const createUnvoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => unvoteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${unvoteFixture.data.id}`,
@@ -86,7 +86,7 @@ const votingMockImplementation = () => [
 	},
 ];
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -109,7 +109,7 @@ describe("SendVote", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		jest.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
 		await syncDelegates(profile);
 		await syncFees(profile);
@@ -121,7 +121,7 @@ describe("SendVote", () => {
 
 		nock.disableNetConnect();
 
-		jest.spyOn(wallet.synchroniser(), "votes").mockImplementation(jest.fn());
+		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
 
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
@@ -132,12 +132,12 @@ describe("SendVote", () => {
 	});
 
 	beforeEach(() => {
-		jest.useFakeTimers("legacy");
+		vi.useFakeTimers("legacy");
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 		resetProfileNetworksMock();
 	});
 
@@ -166,7 +166,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a vote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -213,10 +213,10 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signVoteMock = jest
+		const signVoteMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastVoteMock = jest
+		const broadcastVoteMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
 			.mockResolvedValue({ accepted: [voteFixture.data.id], errors: {}, rejected: [] });
 		const transactionVoteMock = createVoteTransactionMock(wallet);
@@ -233,17 +233,17 @@ describe("SendVote", () => {
 		});
 
 		votesMock.mockRestore();
-		const votingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+		const votingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
 		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
@@ -261,8 +261,8 @@ describe("SendVote", () => {
 	it("should warning in toast if wallet is already voting the delegate", async () => {
 		await wallet.synchroniser().votes();
 
-		const toastMock = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const toastMock = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
@@ -316,7 +316,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote & vote transaction and use split voting method", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 
 		await wallet.synchroniser().votes();
 
@@ -372,12 +372,12 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValueOnce(Promise.resolve(unvoteFixture.data.id))
 			.mockReturnValueOnce(Promise.resolve(voteFixture.data.id));
 
-		const broadcastMock = jest
+		const broadcastMock = vi
 			.spyOn(wallet.transaction(), "broadcast")
 			.mockResolvedValueOnce({
 				accepted: [unvoteFixture.data.id],
@@ -390,7 +390,7 @@ describe("SendVote", () => {
 				rejected: [],
 			});
 
-		const splitVotingMethodMock = jest.spyOn(wallet.network(), "votingMethod").mockReturnValue("split");
+		const splitVotingMethodMock = vi.spyOn(wallet.network(), "votingMethod").mockReturnValue("split");
 
 		const transactionUnvoteMock = createUnvoteTransactionMock(wallet);
 		const transactionVoteMock = createVoteTransactionMock(wallet);
@@ -407,7 +407,7 @@ describe("SendVote", () => {
 		});
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		setTimeout(() => {
@@ -415,7 +415,7 @@ describe("SendVote", () => {
 		}, 3000);
 
 		act(() => {
-			jest.runOnlyPendingTimers();
+			vi.runOnlyPendingTimers();
 		});
 
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
@@ -514,7 +514,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		userEvent.click(backButton());
 
@@ -524,7 +524,7 @@ describe("SendVote", () => {
 	it("should select sender wallet and sync if not yet synced", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/send-vote`;
 		const parameters = new URLSearchParams(`&nethash=${wallet.network().meta().nethash}`);
-		const walletSyncMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+		const walletSyncMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		render(
 			<Route path="/profiles/:profileId/send-vote">
@@ -711,7 +711,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => [
 			{
 				amount: 10,
 				wallet: new ReadOnlyWallet({
@@ -778,10 +778,10 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [unvoteFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -800,7 +800,7 @@ describe("SendVote", () => {
 		});
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -985,7 +985,7 @@ describe("SendVote", () => {
 	});
 
 	it("should show error step and go back", async () => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 
 		const history = createHashHistory();
 
@@ -1035,7 +1035,7 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		const signMock = jest.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
+		const signMock = vi.spyOn(wallet.transaction(), "signVote").mockImplementation(() => {
 			throw new Error("broadcast error");
 		});
 
@@ -1043,7 +1043,7 @@ describe("SendVote", () => {
 		userEvent.paste(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		userEvent.click(sendButton());
@@ -1063,8 +1063,8 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote transaction with a multisignature wallet", async () => {
-		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-		const multisignatureSpy = jest
+		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		const multisignatureSpy = vi
 			.spyOn(wallet.multiSignature(), "all")
 			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
 
@@ -1104,10 +1104,10 @@ describe("SendVote", () => {
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [unvoteFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -1121,7 +1121,7 @@ describe("SendVote", () => {
 		});
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
@@ -1144,19 +1144,19 @@ describe("SendVote", () => {
 
 	it("should send a vote transaction with a ledger wallet", async () => {
 		const nanoXMock = mockNanoXTransport();
-		const isLedgerSpy = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionSpy = jest
+		const signTransactionSpy = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
 
 		const voteTransactionMock = createVoteTransactionMock(wallet);
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [voteFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -1204,7 +1204,7 @@ describe("SendVote", () => {
 		const votes = wallet.voting().current();
 		const publicKey = wallet.publicKey();
 
-		const mockWalletData = jest.spyOn(wallet.data(), "get").mockImplementation((key) => {
+		const mockWalletData = vi.spyOn(wallet.data(), "get").mockImplementation((key) => {
 			if (key == Contracts.WalletData.Address) {
 				return address;
 			}
@@ -1236,7 +1236,7 @@ describe("SendVote", () => {
 		});
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();

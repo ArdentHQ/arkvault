@@ -17,12 +17,12 @@ describe("QRFileUpload", () => {
 	});
 
 	it("should read qr code", async () => {
-		const onRead = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		const onRead = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 
-		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
-		render(<QRFileUpload onError={jest.fn()} onRead={onRead} />);
+		render(<QRFileUpload onError={vi.fn()} onRead={onRead} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
@@ -32,12 +32,12 @@ describe("QRFileUpload", () => {
 	});
 
 	it("should stay idle if qr code file is not selected from file dialog", async () => {
-		const onRead = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
+		const onRead = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
 
-		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 
-		render(<QRFileUpload onError={jest.fn()} onRead={onRead} />);
+		render(<QRFileUpload onError={vi.fn()} onRead={onRead} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onRead).not.toHaveBeenCalled());
@@ -47,16 +47,16 @@ describe("QRFileUpload", () => {
 	});
 
 	it("should stay idle if use closed file dialog", async () => {
-		const onRead = jest.fn();
-		const onError = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockImplementation(() => {
+		const onRead = vi.fn();
+		const onError = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockImplementation(() => {
 			const error = new Error("AbortError");
 			error.name = "AbortError";
 
 			throw error;
 		});
 
-		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
 		render(<QRFileUpload onRead={onRead} onError={onError} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
@@ -69,15 +69,15 @@ describe("QRFileUpload", () => {
 	});
 
 	it("should emit error if qr code read fails", async () => {
-		const onError = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		const onError = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 		const errorMessage = "InvalidQR";
 
-		const scanImageMock = jest.spyOn(QRScanner, "scanImage").mockImplementation(() => {
+		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockImplementation(() => {
 			throw new Error(errorMessage);
 		});
 
-		render(<QRFileUpload onError={onError} onRead={jest.fn()} />);
+		render(<QRFileUpload onError={onError} onRead={vi.fn()} />);
 
 		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 		await waitFor(() => expect(onError).toHaveBeenCalledWith(new Error(errorMessage)));

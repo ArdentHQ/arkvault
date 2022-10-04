@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, screen, within, waitFor } from "@/uti
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
-let dateNowSpy: jest.SpyInstance;
+let dateNowSpy: vi.SpyInstance;
 
 const stubData = {
 	input: {
@@ -38,7 +38,7 @@ const WrapperWithProviders = ({ children }) => {
 
 describe("ExchangeTransactionsRowMobile", () => {
 	beforeAll(() => {
-		dateNowSpy = jest.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
+		dateNowSpy = vi.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		exchangeTransaction = profile.exchangeTransactions().create(stubData);
@@ -81,7 +81,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 	});
 
 	it("should execute onClick callback", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(
 			<Wrapper>
@@ -97,7 +97,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 	});
 
 	it("should execute onRemove callback", () => {
-		const onRemove = jest.fn();
+		const onRemove = vi.fn();
 
 		render(
 			<Wrapper>
@@ -128,7 +128,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 	});
 
 	it("should render NA if no orderId", async () => {
-		const exchangeTransactionSpy = jest.spyOn(exchangeTransaction, "orderId").mockImplementation(() => null);
+		const exchangeTransactionSpy = vi.spyOn(exchangeTransaction, "orderId").mockImplementation(() => null);
 
 		const { container } = render(
 			<ExchangeProvider>

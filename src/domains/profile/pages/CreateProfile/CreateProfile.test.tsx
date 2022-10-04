@@ -11,7 +11,7 @@ import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
 import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
-let browserAccessMock: jest.SpyInstance;
+let browserAccessMock: vi.SpyInstance;
 
 const fileOpenParameters = {
 	extensions: [".png", ".jpg", ".jpeg", ".bmp"],
@@ -70,7 +70,7 @@ describe("CreateProfile", () => {
 	});
 
 	beforeEach(() => {
-		browserAccessMock = jest
+		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
 	});
@@ -88,7 +88,7 @@ describe("CreateProfile", () => {
 	});
 
 	it("should select currency based on locale", async () => {
-		const intlMock = jest.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
+		const intlMock = vi.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
 			locale: "de-DE",
 		});
 
@@ -100,11 +100,11 @@ describe("CreateProfile", () => {
 	});
 
 	it("should select currency based on navigator.language if country code is missing in the locale options", async () => {
-		const intlMock = jest.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
+		const intlMock = vi.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
 			locale: "en", // no country code, just locale
 		});
 
-		const languageMock = jest.spyOn(window.navigator, "language", "get").mockReturnValue("en-GB");
+		const languageMock = vi.spyOn(window.navigator, "language", "get").mockReturnValue("en-GB");
 
 		await renderComponent();
 
@@ -115,11 +115,11 @@ describe("CreateProfile", () => {
 	});
 
 	it.each(["en-AE", "sr-CS"])("should fall back to USD if currency is not found", async (locale) => {
-		const intlMock = jest.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
+		const intlMock = vi.spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions").mockReturnValue({
 			locale: "en", // no country code, just locale
 		});
 
-		const languageMock = jest.spyOn(window.navigator, "language", "get").mockReturnValue(locale);
+		const languageMock = vi.spyOn(window.navigator, "language", "get").mockReturnValue(locale);
 
 		await renderComponent();
 
@@ -389,7 +389,7 @@ describe("CreateProfile", () => {
 
 		const profileCount = env.profiles().count();
 
-		browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockRejectedValue(new Error("Error"));
+		browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockRejectedValue(new Error("Error"));
 
 		userEvent.click(uploadButton());
 
@@ -406,7 +406,7 @@ describe("CreateProfile", () => {
 	});
 
 	it.each([true, false])("should set viewing mode based on system preferences", async (shouldUseDarkColors) => {
-		const shouldUseDarkColorsSpy = jest
+		const shouldUseDarkColorsSpy = vi
 			.spyOn(themeUtils, "shouldUseDarkColors")
 			.mockReturnValue(shouldUseDarkColors);
 
@@ -429,7 +429,7 @@ describe("CreateProfile", () => {
 	});
 
 	it("should change theme when selecting viewing mode", async () => {
-		const shouldUseDarkColorsSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(true);
+		const shouldUseDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(true);
 
 		await renderComponent();
 

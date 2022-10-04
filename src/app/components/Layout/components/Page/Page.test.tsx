@@ -84,8 +84,8 @@ describe("Page", () => {
 	it.each(["Contacts", "Votes", "Settings", "Support"])(
 		"should handle '%s' click on user actions dropdown",
 		async (label) => {
-			const windowSpy = jest.spyOn(window, "open").mockImplementation();
-			const historySpy = jest.spyOn(history, "push").mockImplementation();
+			const windowSpy = vi.spyOn(window, "open").mockImplementation();
+			const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 			render(
 				<Route path="/profiles/:profileId/dashboard">
@@ -129,7 +129,7 @@ describe("Page", () => {
 			},
 		);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 

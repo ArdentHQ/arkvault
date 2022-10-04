@@ -13,7 +13,7 @@ describe("UrlValidationMiddleware", () => {
 		const location = {
 			pathname: "/",
 		};
-		const redirect = jest.fn();
+		const redirect = vi.fn();
 		const parameters = { env, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(true);
@@ -23,8 +23,8 @@ describe("UrlValidationMiddleware", () => {
 		const location = {
 			pathname: "/unknown",
 		};
-		const redirect = jest.fn();
-		const parameters = { env, history: { replace: jest.fn() }, location, redirect };
+		const redirect = vi.fn();
+		const parameters = { env, history: { replace: vi.fn() }, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
 		expect(parameters.history.replace).toHaveBeenCalledWith("/");
@@ -34,8 +34,8 @@ describe("UrlValidationMiddleware", () => {
 		const location = {
 			pathname: `/profiles/${getDefaultProfileId()}/dashboard`,
 		};
-		const redirect = jest.fn();
-		const parameters = { env, history: { replace: jest.fn() }, location, redirect };
+		const redirect = vi.fn();
+		const parameters = { env, history: { replace: vi.fn() }, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(true);
 	});
@@ -44,8 +44,8 @@ describe("UrlValidationMiddleware", () => {
 		const location = {
 			pathname: "/profiles/1/dashboard",
 		};
-		const redirect = jest.fn();
-		const parameters = { env, history: { replace: jest.fn() }, location, redirect };
+		const redirect = vi.fn();
+		const parameters = { env, history: { replace: vi.fn() }, location, redirect };
 
 		expect(subject.handler(parameters)).toBe(false);
 		expect(parameters.history.replace).toHaveBeenCalledWith("/");

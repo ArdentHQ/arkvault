@@ -34,7 +34,7 @@ describe("useNetworks", () => {
 	});
 
 	it("should return an empty array if profile is not restored", () => {
-		const isRestoredSpy = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const isRestoredSpy = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		const {
 			result: { current },
@@ -58,7 +58,7 @@ describe("useNetworks", () => {
 	});
 
 	it("should prioritize default networks", () => {
-		const mock = jest.spyOn(profile.networks(), "all").mockReturnValue({
+		const mock = vi.spyOn(profile.networks(), "all").mockReturnValue({
 			ark: {
 				cdevnet: {
 					...DefaultManifest,

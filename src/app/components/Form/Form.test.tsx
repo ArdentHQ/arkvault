@@ -8,7 +8,7 @@ import { fireEvent, render, screen } from "@/utils/testing-library";
 describe("Form", () => {
 	it("should render with provider", async () => {
 		const { result: form, waitForNextUpdate } = renderHook(() => useForm());
-		const onSubmit = jest.fn();
+		const onSubmit = vi.fn();
 
 		render(
 			<Form context={form.current} onSubmit={onSubmit}>

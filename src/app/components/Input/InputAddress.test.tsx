@@ -44,7 +44,7 @@ describe("InputAddress", () => {
 	});
 
 	it("should validate a valid address and emit event", async () => {
-		const onValidAddress = jest.fn();
+		const onValidAddress = vi.fn();
 		const { result, waitForNextUpdate } = renderHook(() => useForm({ mode: "onChange" }));
 		const { register, errors } = result.current;
 		const validAddress = "DT11QcbKqTXJ59jrUTpcMyggTcwmyFYRTM";

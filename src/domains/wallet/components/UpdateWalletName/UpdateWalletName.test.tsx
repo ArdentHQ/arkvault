@@ -19,7 +19,7 @@ describe("UpdateWalletName", () => {
 
 	it("should render", () => {
 		const { asFragment } = render(
-			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -30,10 +30,10 @@ describe("UpdateWalletName", () => {
 	});
 
 	it("should rename wallet", async () => {
-		const aliasSpy = jest.spyOn(wallet.mutator(), "alias");
-		const onAfterSave = jest.fn();
+		const aliasSpy = vi.spyOn(wallet.mutator(), "alias");
+		const onAfterSave = vi.fn();
 
-		render(<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={onAfterSave} onCancel={jest.fn()} />);
+		render(<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={onAfterSave} onCancel={vi.fn()} />);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.TITLE);
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
@@ -60,7 +60,7 @@ describe("UpdateWalletName", () => {
 
 	it("should show an error message for duplicate name", async () => {
 		const { asFragment } = render(
-			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
 		const nameVariations = ["ARK Wallet 2", "ark wallet 2", " ARK Wallet 2", "ARK Wallet 2 "];
@@ -84,7 +84,7 @@ describe("UpdateWalletName", () => {
 
 	it("should show error message when name consists only of whitespace", async () => {
 		const { asFragment } = render(
-			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
 		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
@@ -99,7 +99,7 @@ describe("UpdateWalletName", () => {
 
 	it("should show error message when name exceeds 42 characters", async () => {
 		const { asFragment } = render(
-			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
+			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
 		userEvent.paste(

@@ -1,4 +1,4 @@
-import "jest-extended";
+import "vi-extended";
 
 import { lowerCaseEquals } from "./equals";
 

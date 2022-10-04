@@ -95,7 +95,7 @@ describe("TransactionMultisignatureStatus", () => {
 	});
 
 	it("should not render delegate icon", () => {
-		const delegateMock = jest.spyOn(env.delegates(), "findByAddress").mockReturnValue({
+		const delegateMock = vi.spyOn(env.delegates(), "findByAddress").mockReturnValue({
 			username: () => "delegate username",
 		} as any);
 

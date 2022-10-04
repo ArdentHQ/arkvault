@@ -7,7 +7,7 @@ import { render, screen } from "@/utils/testing-library";
 const mnemonic = "ark btc usd bnb eth ltc";
 const mnemonicWords = mnemonic.split(" ");
 const limit = 6;
-const handleComplete = jest.fn();
+const handleComplete = vi.fn();
 
 describe("MnemonicVerification", () => {
 	it("should render", () => {
@@ -103,7 +103,7 @@ describe("MnemonicVerification", () => {
 		let wordCounter = 0;
 
 		// @ts-ignore
-		const arrayIncludesSpy = jest.spyOn(Array.prototype, "includes").mockImplementation(function () {
+		const arrayIncludesSpy = vi.spyOn(Array.prototype, "includes").mockImplementation(function () {
 			if (wordCounter === 3) {
 				return false;
 			}

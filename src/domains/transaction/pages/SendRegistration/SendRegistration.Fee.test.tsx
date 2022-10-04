@@ -26,9 +26,9 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
-let getVersionSpy: jest.SpyInstance;
+let getVersionSpy: vi.SpyInstance;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -90,7 +90,7 @@ describe("Registration Fee", () => {
 			}),
 		);
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 

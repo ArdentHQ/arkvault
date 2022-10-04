@@ -85,8 +85,8 @@ describe("Password Settings", () => {
 
 	it("should show an error toast if the current password does not match", async () => {
 		profile.auth().setPassword(password);
-		const toastSpy = jest.spyOn(toasts, "error");
-		const authMock = jest.spyOn(profile, "auth").mockImplementation(() => {
+		const toastSpy = vi.spyOn(toasts, "error");
+		const authMock = vi.spyOn(profile, "auth").mockImplementation(() => {
 			throw new Error("mismatch");
 		});
 
@@ -239,8 +239,8 @@ describe("Password Settings", () => {
 	it("should allow to remove the password", async () => {
 		profile.auth().setPassword(password);
 
-		const toastSpy = jest.spyOn(toasts, "success");
-		const forgetPasswordSpy = jest.spyOn(profile.auth(), "forgetPassword").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success");
+		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation();
 
 		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
@@ -289,9 +289,9 @@ describe("Password Settings", () => {
 	it("should not allow password removal if current password does not match", async () => {
 		profile.auth().setPassword(password);
 
-		const toastSpy = jest.spyOn(toasts, "error");
+		const toastSpy = vi.spyOn(toasts, "error");
 
-		jest.spyOn(profile.auth(), "forgetPassword").mockImplementationOnce(() => {
+		vi.spyOn(profile.auth(), "forgetPassword").mockImplementationOnce(() => {
 			throw new Error("password mismatch");
 		});
 

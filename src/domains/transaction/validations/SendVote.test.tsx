@@ -28,7 +28,7 @@ describe("Send Vote Validation", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		translationMock = jest.fn((index18nString: string) => index18nString);
+		translationMock = vi.fn((index18nString: string) => index18nString);
 		network = env.profiles().first().wallets().first().network();
 	});
 
@@ -41,7 +41,7 @@ describe("Send Vote Validation", () => {
 
 		expect(validator.validate("1")).toBe(true);
 
-		const mockWalletVotingDelegate = jest
+		const mockWalletVotingDelegate = vi
 			.spyOn(profile.wallets().first().voting(), "current")
 			.mockReturnValue(votes);
 

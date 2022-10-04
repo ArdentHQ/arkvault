@@ -51,13 +51,13 @@ describe("WalletDetails", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 	};
 
 	beforeAll(async () => {
@@ -91,7 +91,7 @@ describe("WalletDetails", () => {
 			})
 			.persist();
 
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
@@ -135,12 +135,12 @@ describe("WalletDetails", () => {
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("shows the transaction detail modal when click in a pending transfer row", async () => {
-		jest.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		renderPage();
 
@@ -154,7 +154,7 @@ describe("WalletDetails", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should remove pending multisignature transactions", async () => {
@@ -172,7 +172,7 @@ describe("WalletDetails", () => {
 			screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction"),
 		).resolves.toBeVisible();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
@@ -183,7 +183,7 @@ describe("WalletDetails", () => {
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } });
 
-		const toastsMock = jest.spyOn(toasts, "success");
+		const toastsMock = vi.spyOn(toasts, "success");
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 

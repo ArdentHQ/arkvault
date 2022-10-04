@@ -15,7 +15,7 @@ const history = createHashHistory();
 describe("WalletActionsModals", () => {
 	let profile: Contracts.IProfile;
 	let mainnetWallet: Contracts.IReadWriteWallet;
-	const setActiveModal = jest.fn();
+	const setActiveModal = vi.fn();
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -36,7 +36,7 @@ describe("WalletActionsModals", () => {
 
 		await syncDelegates(profile);
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	beforeEach(() => {
@@ -134,7 +134,7 @@ describe("WalletActionsModals", () => {
 	});
 
 	it("should render `second-signature` modal with mnemonic encryption wallet", async () => {
-		const walletWithEncryptionMock = jest
+		const walletWithEncryptionMock = vi
 			.spyOn(mainnetWallet, "actsWithMnemonicWithEncryption")
 			.mockReturnValue(true);
 

@@ -51,7 +51,7 @@ describe("Notifications", () => {
 	});
 
 	it("should emit onNotificationAction event", async () => {
-		const onNotificationAction = jest.fn();
+		const onNotificationAction = vi.fn();
 
 		render(<Notifications profile={profile} onNotificationAction={onNotificationAction} />);
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
@@ -63,7 +63,7 @@ describe("Notifications", () => {
 	});
 
 	it("should emit transactionClick event", async () => {
-		const onTransactionClick = jest.fn();
+		const onTransactionClick = vi.fn();
 
 		const { container } = render(<Notifications profile={profile} onTransactionClick={onTransactionClick} />);
 

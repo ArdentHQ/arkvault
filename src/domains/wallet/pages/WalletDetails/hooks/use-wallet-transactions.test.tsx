@@ -23,13 +23,13 @@ describe("Wallet Transactions Hook", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 			[fixtures.multiSignatureTransfer.id()]: fixtures.multiSignatureTransfer,
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 	};
 
 	beforeAll(() => {
@@ -137,8 +137,8 @@ describe("Wallet Transactions Hook", () => {
 				signatory,
 			});
 
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
 
 		render(<Component />);
 
@@ -147,16 +147,16 @@ describe("Wallet Transactions Hook", () => {
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should not sync pending transfers if wallet has not been fully restored", async () => {
 		mockPendingTransfers(wallet);
 
-		const spySync = jest.spyOn(wallet.transaction(), "sync");
-		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const spySync = vi.spyOn(wallet.transaction(), "sync");
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 
 		render(<Component />);
 
@@ -166,13 +166,13 @@ describe("Wallet Transactions Hook", () => {
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 		await waitFor(() => expect(spySync).not.toHaveBeenCalled());
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should sync pending multiSignature transactions", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
 		let allPendingTransactions: PendingTransaction[];
 		const Component = () => {
@@ -192,14 +192,14 @@ describe("Wallet Transactions Hook", () => {
 
 	it("should sync pending transactions", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
-		jest.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(
+		vi.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(
 			false,
 		);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
 
 		let allPendingTransactions: PendingTransaction[];
 		// eslint-disable-next-line sonarjs/no-identical-functions
@@ -219,15 +219,15 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should prevent from rendering transaction if not found in wallet", async () => {
-		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "pending").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
 			throw new Error("not found");
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		let allPendingTransactions: PendingTransaction[];
 		const Component = () => {
@@ -246,8 +246,8 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should run periodically", async () => {
-		jest.useFakeTimers();
-		const spySync = jest.spyOn(wallet.transaction(), "sync");
+		vi.useFakeTimers();
+		const spySync = vi.spyOn(wallet.transaction(), "sync");
 
 		const Component = () => {
 			const { pendingTransactions, startSyncingPendingTransactions, stopSyncingPendingTransactions } =
@@ -263,11 +263,11 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		jest.advanceTimersByTime(5000);
+		vi.advanceTimersByTime(5000);
 
 		await waitFor(() => expect(spySync).toHaveBeenCalledWith());
 
 		spySync.mockRestore();
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 });

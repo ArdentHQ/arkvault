@@ -6,7 +6,7 @@ import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-li
 describe("Persist App Validation", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let ledgerListenSpy: jest.SpyInstance;
+	let ledgerListenSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -26,7 +26,7 @@ describe("Persist App Validation", () => {
 	});
 
 	it("should have minimum required app version", async () => {
-		const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+		const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 		await expect(hasRequiredAppVersion(wallet.coin())).resolves.toBe(true);
 
@@ -34,7 +34,7 @@ describe("Persist App Validation", () => {
 	});
 
 	it("should not have minimum required app version", async () => {
-		const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+		const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
 
 		await expect(hasRequiredAppVersion(wallet.coin())).resolves.toBe(false);
 
@@ -42,7 +42,7 @@ describe("Persist App Validation", () => {
 	});
 
 	it("should ignore version validation if coin is not in the minimum version list", async () => {
-		const coinSpy = jest.spyOn(wallet.coin().network(), "coin").mockReturnValue("BTC");
+		const coinSpy = vi.spyOn(wallet.coin().network(), "coin").mockReturnValue("BTC");
 
 		await expect(hasRequiredAppVersion(wallet.coin())).resolves.toBe(true);
 

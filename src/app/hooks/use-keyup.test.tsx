@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { useKeyup } from "@/app/hooks/use-keyup";
+import { useKeyup } from "./use-keyup";
 import { render } from "@/utils/testing-library";
 
 describe("useKeyup", () => {
@@ -12,7 +12,7 @@ describe("useKeyup", () => {
 	};
 
 	it("should run a callback when mapped button is pressed", () => {
-		const callback = jest.fn();
+		const callback = vi.fn();
 
 		render(<Component keyName="Enter" callback={callback} />);
 
@@ -22,7 +22,7 @@ describe("useKeyup", () => {
 	});
 
 	it("should do nothing when not mapped button is pressed", () => {
-		const callback = jest.fn();
+		const callback = vi.fn();
 
 		render(<Component keyName="Escape" callback={callback} />);
 

@@ -13,22 +13,22 @@ describe("isFullySynced", () => {
 	});
 
 	it("returns true when wallet was fully restored and synced", () => {
-		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(true);
-		jest.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(true);
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(true);
 
 		expect(isFullySynced(wallet)).toBe(true);
 	});
 
 	it("returns true when wallet was fully restored and balance is 0", () => {
-		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(true);
-		jest.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(false);
-		jest.spyOn(wallet, "balance").mockReturnValueOnce(0);
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(true);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(false);
+		vi.spyOn(wallet, "balance").mockReturnValueOnce(0);
 
 		expect(isFullySynced(wallet)).toBe(true);
 	});
 
 	it("returns false when wallet was not fully restored", () => {
-		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(false);
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValueOnce(false);
 
 		expect(isFullySynced(wallet)).toBe(false);
 	});

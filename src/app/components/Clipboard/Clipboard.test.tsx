@@ -9,7 +9,7 @@ type VariantType = "icon" | "button";
 describe("Clipboard", () => {
 	beforeAll(() => {
 		(navigator as any).clipboard = {
-			writeText: jest.fn().mockResolvedValue("test"),
+			writeText: vi.fn().mockResolvedValue("test"),
 		};
 	});
 
@@ -40,9 +40,9 @@ describe("Clipboard", () => {
 		["string", "test string"],
 		["object", { hello: "world" }],
 	])("should work with data with type '%s'", async (dataType, data) => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onError = jest.fn();
+		const onError = vi.fn();
 
 		render(
 			<Clipboard variant="icon" data={data} options={{ onError, resetAfter: 1000 }}>
@@ -53,7 +53,7 @@ describe("Clipboard", () => {
 		userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
-			jest.runOnlyPendingTimers();
+			vi.runOnlyPendingTimers();
 		});
 
 		await waitFor(() => expect(onError).not.toHaveBeenCalled());
@@ -63,7 +63,7 @@ describe("Clipboard", () => {
 		it.each<VariantType>(["icon", "button"])(
 			"should execute the onSuccess callback if given in variant type '%s'",
 			async (variant) => {
-				const onSuccess = jest.fn();
+				const onSuccess = vi.fn();
 
 				render(
 					<Clipboard variant={variant} data="" options={{ onSuccess }}>
@@ -80,7 +80,7 @@ describe("Clipboard", () => {
 		it.each<VariantType>(["icon", "button"])(
 			"should execute no callback if missing in variant type '%s'",
 			async (variant) => {
-				const onSuccess = jest.fn();
+				const onSuccess = vi.fn();
 
 				render(
 					<Clipboard variant={variant} data="">
@@ -98,14 +98,14 @@ describe("Clipboard", () => {
 	describe("on error", () => {
 		beforeAll(() => {
 			(navigator as any).clipboard = {
-				writeText: jest.fn().mockRejectedValue(new Error("writeText rejected.")),
+				writeText: vi.fn().mockRejectedValue(new Error("writeText rejected.")),
 			};
 		});
 
 		it.each<VariantType>(["icon", "button"])(
 			"should execute the onError callback if given in variant type '%s'",
 			async (variant) => {
-				const onError = jest.fn();
+				const onError = vi.fn();
 
 				render(
 					<Clipboard variant={variant} data="" options={{ onError }}>
@@ -122,7 +122,7 @@ describe("Clipboard", () => {
 		it.each<VariantType>(["icon", "button"])(
 			"should execute no callback if missing in variant type '%s'",
 			async (variant) => {
-				const onError = jest.fn();
+				const onError = vi.fn();
 
 				render(
 					<Clipboard variant={variant} data="">

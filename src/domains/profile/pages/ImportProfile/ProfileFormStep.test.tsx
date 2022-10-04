@@ -11,7 +11,7 @@ import * as themeUtils from "@/utils/theme";
 import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
-let browserAccessMock: jest.SpyInstance;
+let browserAccessMock: vi.SpyInstance;
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 const passwordConfirmationInput = () => screen.getByTestId("PasswordValidation__confirmPassword");
@@ -25,7 +25,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	beforeEach(() => {
 		// @ts-ignore
-		browserAccessMock = jest
+		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
 	});
@@ -43,9 +43,9 @@ describe("Import Profile - Profile Form Step", () => {
 				<ImportProfileForm
 					env={env}
 					profile={profile}
-					onSubmit={jest.fn()}
+					onSubmit={vi.fn()}
 					shouldValidate={false}
-					onBack={jest.fn()}
+					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
 		);
@@ -65,9 +65,9 @@ describe("Import Profile - Profile Form Step", () => {
 				<ImportProfileForm
 					env={env}
 					profile={emptyProfile}
-					onSubmit={jest.fn()}
+					onSubmit={vi.fn()}
 					shouldValidate={false}
-					onBack={jest.fn()}
+					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
 		);
@@ -84,9 +84,9 @@ describe("Import Profile - Profile Form Step", () => {
 				<ImportProfileForm
 					env={env}
 					profile={emptyProfile}
-					onSubmit={jest.fn()}
+					onSubmit={vi.fn()}
 					shouldValidate={false}
-					onBack={jest.fn()}
+					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
 		);
@@ -140,9 +140,9 @@ describe("Import Profile - Profile Form Step", () => {
 				<ImportProfileForm
 					env={env}
 					profile={emptyProfile}
-					onSubmit={jest.fn()}
+					onSubmit={vi.fn()}
 					shouldValidate={false}
-					onBack={jest.fn()}
+					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
 		);
@@ -181,16 +181,16 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should update the avatar when removing focus from name input", async () => {
 		const emptyProfile = await env.profiles().create("test6");
-		const shouldUseDarkColorsSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(false);
+		const shouldUseDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm
 					env={env}
 					profile={emptyProfile}
-					onSubmit={jest.fn()}
+					onSubmit={vi.fn()}
 					shouldValidate={true}
-					onBack={jest.fn()}
+					onBack={vi.fn()}
 				/>
 			</EnvironmentProvider>,
 		);

@@ -56,7 +56,7 @@ describe("FilterWallets", () => {
 	});
 
 	it("should emit onChange for network selection", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<FilterWallets
@@ -73,7 +73,7 @@ describe("FilterWallets", () => {
 	});
 
 	it("should emit onChange for wallets display type change", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<FilterWallets
@@ -92,7 +92,7 @@ describe("FilterWallets", () => {
 	});
 
 	it("should not emit onChange for wallet display type change", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<FilterWallets

@@ -56,7 +56,7 @@ describe("NetworkOption", () => {
 	});
 
 	it("should call onSelect callback", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		render(<NetworkOption network={network} onSelect={onSelect} />, {});
 
@@ -72,7 +72,7 @@ describe("NetworkOption", () => {
 	});
 
 	it("should not call onSelect callback if disabled", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		render(<NetworkOption network={network} onSelect={onSelect} disabled />, {});
 
@@ -88,7 +88,7 @@ describe("NetworkOption", () => {
 	});
 
 	it("should call onDeselect callback if is already selected", () => {
-		const onDeselect = jest.fn();
+		const onDeselect = vi.fn();
 
 		render(<NetworkOption network={network} onDeselect={onDeselect} isSelected />, {});
 
@@ -136,7 +136,7 @@ describe("NetworkOption", () => {
 	});
 
 	it("should select network option", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		const { asFragment } = render(<NetworkOptions networks={[networkTestnet, network]} onSelect={onSelect} />, {});
 
 		expect(screen.getAllByTestId("NetworkOption")).toHaveLength(2);
@@ -148,7 +148,7 @@ describe("NetworkOption", () => {
 	});
 
 	it("should deselect network option", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
 			<NetworkOptions networks={[networkTestnet, network]} onSelect={onSelect} selected={networkTestnet} />,

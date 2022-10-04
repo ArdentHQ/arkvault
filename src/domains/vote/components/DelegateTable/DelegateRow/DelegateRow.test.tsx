@@ -39,9 +39,9 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -53,7 +53,7 @@ describe("DelegateRow", () => {
 	});
 
 	it("should emit action on select button", () => {
-		const toggleVotesSelected = jest.fn();
+		const toggleVotesSelected = vi.fn();
 		const { container, asFragment } = render(
 			<table>
 				<tbody>
@@ -63,8 +63,8 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={toggleVotesSelected}
 						selectedWallet={wallet}
 					/>
@@ -96,9 +96,9 @@ describe("DelegateRow", () => {
 						selectedVotes={selected}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -144,9 +144,9 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
@@ -156,9 +156,9 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
@@ -169,9 +169,9 @@ describe("DelegateRow", () => {
 						selectedUnvotes={[]}
 						isVoteDisabled={true}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 						isCompact={isCompact}
 					/>
@@ -209,9 +209,9 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={selectedUnvotes}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -225,7 +225,7 @@ describe("DelegateRow", () => {
 	});
 
 	it("should render when network requires vote amount", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const { container, asFragment } = render(
 			<table>
@@ -236,9 +236,9 @@ describe("DelegateRow", () => {
 						selectedVotes={[]}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 					/>
 				</tbody>
@@ -254,7 +254,7 @@ describe("DelegateRow", () => {
 	});
 
 	it("should render changed style when network requires vote amount", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const selectedVotes: VoteDelegateProperties[] = [
 			{
@@ -277,9 +277,9 @@ describe("DelegateRow", () => {
 						selectedVotes={selectedVotes}
 						selectedUnvotes={[]}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						selectedWallet={wallet}
 					/>
 				</tbody>

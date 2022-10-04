@@ -24,7 +24,7 @@ describe("ResetProfile", () => {
 	});
 
 	it("should reset profile", async () => {
-		const onReset = jest.fn();
+		const onReset = vi.fn();
 
 		render(<ResetProfile isOpen profile={profile} onReset={onReset} />);
 

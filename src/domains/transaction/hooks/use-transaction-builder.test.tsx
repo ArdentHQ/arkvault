@@ -57,8 +57,8 @@ describe("Use Transaction Builder Hook", () => {
 	it("should sign transfer with multisignature wallet", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		jest.spyOn(wallet.multiSignature(), "all").mockReturnValue({
+		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
+		vi.spyOn(wallet.multiSignature(), "all").mockReturnValue({
 			min: 2,
 			publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 		});
@@ -83,6 +83,6 @@ describe("Use Transaction Builder Hook", () => {
 
 		expect(transaction.id()).toBe("6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

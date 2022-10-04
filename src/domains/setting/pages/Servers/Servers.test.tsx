@@ -159,8 +159,8 @@ describe("Servers Settings", () => {
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		coin = (profile.coins().all().ARK as any).ark.devnet;
-		coinSpy = jest.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
-		profileCoinSpy = jest.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
+		coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
+		profileCoinSpy = vi.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
 	});
 
 	afterEach(() => {
@@ -189,7 +189,7 @@ describe("Servers Settings", () => {
 	});
 
 	it("should update profile fallback to default nodes setting", async () => {
-		const settingsSetSpy = jest.spyOn(profile.settings(), "set");
+		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/servers">
@@ -270,10 +270,10 @@ describe("Servers Settings", () => {
 		});
 
 		describe("Node statuses", () => {
-			let availableNetworksSpy: jest.SpyInstance;
+			let availableNetworksSpy: vi.SpyInstance;
 
 			beforeEach(() => {
-				availableNetworksSpy = jest.spyOn(profile, "availableNetworks").mockReturnValue([network]);
+				availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([network]);
 
 				nock.cleanAll();
 			});
@@ -316,7 +316,7 @@ describe("Servers Settings", () => {
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
 
-				const setIntervalSpy = jest
+				const setIntervalSpy = vi
 					.spyOn(global, "setInterval")
 					.mockImplementationOnce((intervalFunction, time) => {
 						intervalPingFunction = intervalFunction;
@@ -411,7 +411,7 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({});
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({});
 		});
 
 		afterEach(() => {
@@ -453,7 +453,7 @@ describe("Servers Settings", () => {
 
 				mockPeerHeight();
 
-				const serverPushSpy = jest.spyOn(profile.hosts(), "push");
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -485,7 +485,7 @@ describe("Servers Settings", () => {
 			it("can fill the form with an ip host", async () => {
 				nock.cleanAll();
 
-				const hostsMock = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 				nock("https://127.0.0.1").persist().get(/.*/).reply(200, musigResponse);
 
 				render(
@@ -512,9 +512,9 @@ describe("Servers Settings", () => {
 				mockPeerNetwork();
 				mockPeerHeight();
 
-				const settingsSetSpy = jest.spyOn(profile.settings(), "set");
-				const serverPushSpy = jest.spyOn(profile.hosts(), "push");
-				const hostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
+				const settingsSetSpy = vi.spyOn(profile.settings(), "set");
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -566,7 +566,7 @@ describe("Servers Settings", () => {
 
 		describe("with invalid server", () => {
 			it("shows an error if the server is reachable but invalid", async () => {
-				const hostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 				nock.cleanAll();
 
 				nock(musigHostTest).persist().get(/.*/).reply(200, { foo: "bar" });
@@ -600,7 +600,7 @@ describe("Servers Settings", () => {
 
 				mockPeerNetwork();
 
-				coinSpy = jest.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
+				coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -712,7 +712,7 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			nock.cleanAll();
 
@@ -774,7 +774,7 @@ describe("Servers Settings", () => {
 		});
 
 		it("can fill the form and generate a name", async () => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -832,7 +832,7 @@ describe("Servers Settings", () => {
 				},
 			};
 
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networks);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networks);
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -1134,7 +1134,7 @@ describe("Servers Settings", () => {
 
 			const intervalPingFunction: (() => void)[] = [];
 
-			const setIntervalSpy = jest.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
+			const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
 				intervalPingFunction.push(intervalFunction);
 				return originalSetInterval(intervalFunction, time);
 			});
@@ -1338,7 +1338,7 @@ describe("Servers Settings", () => {
 		});
 
 		it("can check and uncheck a server", async () => {
-			const serverPushSpy = jest.spyOn(profile.hosts(), "push");
+			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -1365,7 +1365,7 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			nock.cleanAll();
 

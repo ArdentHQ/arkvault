@@ -79,7 +79,7 @@ beforeEach(() => {
 		.spyOn(Storage.prototype, "getItem")
 		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
 
-	tippyMock = jest.spyOn(Tippy, "render").mockImplementation((context) => {
+	tippyMock = vi.spyOn(Tippy, "render").mockImplementation((context) => {
 		if (context?.render?.name === "renderDropdownContent") {
 			return context.render({
 				className: "absolute z-10 w-full",

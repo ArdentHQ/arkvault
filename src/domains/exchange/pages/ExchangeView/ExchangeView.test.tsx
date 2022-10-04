@@ -70,7 +70,7 @@ describe("ExchangeView", () => {
 	});
 
 	it.each(["light", "dark"])("should render %s theme", async (theme) => {
-		jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
+		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
 
 		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
 

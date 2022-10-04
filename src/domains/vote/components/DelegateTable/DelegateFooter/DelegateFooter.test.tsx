@@ -60,7 +60,7 @@ describe("DelegateFooter", () => {
 
 		expect(screen.queryByTestId("DelegateTable__available-balance")).not.toBeInTheDocument();
 
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		rerender(
 			<DelegateFooter
@@ -78,7 +78,7 @@ describe("DelegateFooter", () => {
 	});
 
 	it("should calculate remaining balance show it", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		render(
 			<DelegateFooter
@@ -118,7 +118,7 @@ describe("DelegateFooter", () => {
 				selectedVotes={[]}
 				selectedUnvotes={[]}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
-				onContinue={jest.fn()}
+				onContinue={vi.fn()}
 			/>,
 		);
 
@@ -158,7 +158,7 @@ describe("DelegateFooter", () => {
 	});
 
 	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const selectedDelegate: VoteDelegateProperties[] = [
 			{
@@ -174,7 +174,7 @@ describe("DelegateFooter", () => {
 				selectedVotes={selectedDelegate}
 				selectedUnvotes={[]}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
-				onContinue={jest.fn()}
+				onContinue={vi.fn()}
 			/>,
 		);
 

@@ -28,11 +28,11 @@ describe("Profile utils", () => {
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		const passwordLessProfile = env.profiles().findById(getDefaultProfileId());
 
-		const mockUsesPassword = jest.spyOn(profile, "usesPassword").mockImplementation(() => true);
+		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockImplementation(() => true);
 
-		const mockPasswordLessProfile = jest.spyOn(passwordLessProfile, "usesPassword").mockImplementation(() => false);
+		const mockPasswordLessProfile = vi.spyOn(passwordLessProfile, "usesPassword").mockImplementation(() => false);
 
-		const memoryPasswordMock = jest.spyOn(profile.password(), "get").mockImplementation(() => {
+		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
 			throw new Error("password not found");
 		});
 
@@ -41,7 +41,7 @@ describe("Profile utils", () => {
 
 		memoryPasswordMock.mockRestore();
 
-		const passwordMock = jest.spyOn(profile.password(), "get").mockImplementation(() => "password");
+		const passwordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => "password");
 
 		expect(getProfileStoredPassword(profile)).toBe("password");
 
@@ -52,19 +52,19 @@ describe("Profile utils", () => {
 
 	it("#getErroredNetworks", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		jest.spyOn(profile.wallets().first(), "isCold").mockReturnValue(true);
+		vi.spyOn(profile.wallets().first(), "isCold").mockReturnValue(true);
 
 		await profile.wallets().restore();
 
 		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(false);
 		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(0);
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should have errored networks", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
+		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(true);
 		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(1);

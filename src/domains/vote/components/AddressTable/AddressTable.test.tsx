@@ -97,7 +97,7 @@ describe("AddressTable", () => {
 	});
 
 	it.each([true, false])("should render in xs screen when wallet network is live", async (isLive) => {
-		const isLiveSpy = jest.spyOn(wallet.network(), "isLive").mockReturnValue(isLive);
+		const isLiveSpy = vi.spyOn(wallet.network(), "isLive").mockReturnValue(isLive);
 
 		const { asFragment, container } = renderResponsiveWithRoute(
 			<Wrapper>
@@ -123,7 +123,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
-		const maxVotesMock = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
+		const maxVotesMock = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
 		const { asFragment, container } = render(
 			<Wrapper>
 				<AddressTable wallets={[wallet]} profile={profile} />
@@ -140,7 +140,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render with voting delegates and handle exception", async () => {
-		const walletVotingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
+		const walletVotingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("error");
 		});
 

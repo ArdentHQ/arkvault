@@ -9,13 +9,13 @@ import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 const history = createHashHistory();
 
-jest.setTimeout(7000);
+vi.setTimeout(7000);
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.mock("@/domains/news/routing", () => {
+vi.mock("@/domains/news/routing", () => {
 	const page = require("@/domains/news/pages/News");
 	const { ProfilePaths } = require("@/router/paths");
 
@@ -30,7 +30,7 @@ jest.mock("@/domains/news/routing", () => {
 	};
 });
 
-jest.mock("@/domains/profile/routing", () => {
+vi.mock("@/domains/profile/routing", () => {
 	const page = require("@/domains/profile/pages/Welcome");
 	const { ProfilePaths } = require("@/router/paths");
 
@@ -138,20 +138,20 @@ describe("App Main", () => {
 	});
 
 	it("should fail to sync and retry", async () => {
-		const dismissToastSpy = jest.spyOn(toasts, "dismiss").mockImplementation();
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation();
 		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
 
 		const profile = env.profiles().first();
 		await env.profiles().restore(profile);
 
-		const walletSyncErrorMock = jest
+		const walletSyncErrorMock = vi
 			.spyOn(profile.wallets().first(), "hasSyncedWithNetwork")
 			.mockReturnValue(false);
-		const walletRestoreErrorMock = jest
+		const walletRestoreErrorMock = vi
 			.spyOn(profile.wallets().last(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
 
-		const profileSyncMock = jest.spyOn(profile, "sync").mockImplementation(() => {
+		const profileSyncMock = vi.spyOn(profile, "sync").mockImplementation(() => {
 			throw new Error("sync test");
 		});
 
@@ -184,9 +184,9 @@ describe("App Main", () => {
 	});
 
 	it("should enter profile and sync", async () => {
-		const successToastSpy = jest.spyOn(toasts, "success").mockImplementation(jest.fn());
-		const warningToastSpy = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
-		const dismissToastSpy = jest.spyOn(toasts, "dismiss").mockImplementation(jest.fn());
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
+		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
 		history.push(profileUrl);
@@ -213,7 +213,7 @@ describe("App Main", () => {
 		let onProfileUpdated: () => void;
 		const { useProfileSynchronizer } = useProfileSynchronizerHook;
 
-		jest.spyOn(useProfileSynchronizerHook, "useProfileSynchronizer").mockImplementation((parameters: any) => {
+		vi.spyOn(useProfileSynchronizerHook, "useProfileSynchronizer").mockImplementation((parameters: any) => {
 			onProfileUpdated = parameters.onProfileUpdated as () => void;
 			return useProfileSynchronizer(useProfileSynchronizer);
 		});

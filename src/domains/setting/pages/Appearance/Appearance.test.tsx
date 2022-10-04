@@ -60,7 +60,7 @@ describe("Appearance Settings", () => {
 	});
 
 	it("should allow to change the accent color", async () => {
-		const toastSuccess = jest.spyOn(toasts, "success");
+		const toastSuccess = vi.spyOn(toasts, "success");
 
 		renderPage();
 
@@ -91,7 +91,7 @@ describe("Appearance Settings", () => {
 	});
 
 	it("should allow to change the viewing mode", async () => {
-		const toastSuccess = jest.spyOn(toasts, "success");
+		const toastSuccess = vi.spyOn(toasts, "success");
 
 		profile.settings().set(Contracts.ProfileSetting.Theme, "light");
 
@@ -131,7 +131,7 @@ describe("Appearance Settings", () => {
 		Contracts.ProfileSetting.UseNetworkWalletNames,
 		Contracts.ProfileSetting.UseExpandedTables,
 	])("should allow to toggle %s setting", async (key) => {
-		const toastSuccess = jest.spyOn(toasts, "success");
+		const toastSuccess = vi.spyOn(toasts, "success");
 
 		profile.settings().set(key, true);
 

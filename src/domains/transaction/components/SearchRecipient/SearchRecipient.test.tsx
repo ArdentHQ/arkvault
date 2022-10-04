@@ -41,7 +41,7 @@ describe("SearchRecipient", () => {
 
 	it("should not render if not open", () => {
 		const { asFragment } = render(
-			<SearchRecipient profile={profile} isOpen={false} recipients={recipients} onAction={jest.fn} />,
+			<SearchRecipient profile={profile} isOpen={false} recipients={recipients} onAction={vi.fn} />,
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -50,7 +50,7 @@ describe("SearchRecipient", () => {
 
 	it("should render a modal", () => {
 		const { asFragment } = render(
-			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={jest.fn} />,
+			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />,
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE);
@@ -59,7 +59,7 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should handle close", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(
 			<SearchRecipient
@@ -67,7 +67,7 @@ describe("SearchRecipient", () => {
 				isOpen={true}
 				recipients={recipients}
 				onClose={onClose}
-				onAction={jest.fn}
+				onAction={vi.fn}
 			/>,
 		);
 
@@ -86,7 +86,7 @@ describe("SearchRecipient", () => {
 				recipients={recipients}
 				title={title}
 				description={description}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -96,7 +96,7 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should render with selected address", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		const { asFragment } = render(
 			<SearchRecipient
@@ -120,7 +120,7 @@ describe("SearchRecipient", () => {
 	it("should render with selected address when no compact", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		const { asFragment } = render(
 			<SearchRecipient
@@ -155,7 +155,7 @@ describe("SearchRecipient", () => {
 					},
 				]}
 				selectedAddress={recipients[0].address}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 			"xs",
 		);
@@ -166,7 +166,7 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should render with selected address on mobile", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
@@ -195,7 +195,7 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should render with selected address on md screen", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
@@ -217,9 +217,9 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should filter recipients by address", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={jest.fn} />);
+		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
@@ -238,17 +238,17 @@ describe("SearchRecipient", () => {
 		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should filter recipients by alias", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={jest.fn} />);
+		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
@@ -267,17 +267,17 @@ describe("SearchRecipient", () => {
 		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should reset recipient search", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={jest.fn} />);
+		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
@@ -296,7 +296,7 @@ describe("SearchRecipient", () => {
 		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
@@ -307,13 +307,13 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should not find recipient and show empty results screen", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={jest.fn} />);
+		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
@@ -332,7 +332,7 @@ describe("SearchRecipient", () => {
 		userEvent.paste(searchInput, "non-existent recipient address");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
@@ -340,7 +340,7 @@ describe("SearchRecipient", () => {
 
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it.each(["xs", "sm"])("has a search input on responsive screen", (breakpoint) => {

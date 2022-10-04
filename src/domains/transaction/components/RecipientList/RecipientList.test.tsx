@@ -145,7 +145,7 @@ describe("RecipientList", () => {
 	});
 
 	it("should call onRemove callback to remove recipient", async () => {
-		const onRemove = jest.fn();
+		const onRemove = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -173,7 +173,7 @@ describe("RecipientList", () => {
 	});
 
 	it("should not call onRemove callback if not provided", async () => {
-		const onRemove = jest.fn();
+		const onRemove = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -200,8 +200,8 @@ describe("RecipientList", () => {
 	});
 
 	it("should render exchange amount", async () => {
-		const exchangeMock = jest.spyOn(env.exchangeRates(), "exchange").mockReturnValue(5);
-		const exchangeCurrencyMock = jest.spyOn(profile.settings(), "get").mockReturnValue("USD");
+		const exchangeMock = vi.spyOn(env.exchangeRates(), "exchange").mockReturnValue(5);
+		const exchangeCurrencyMock = vi.spyOn(profile.settings(), "get").mockReturnValue("USD");
 
 		const recipients: RecipientItem[] = [
 			{

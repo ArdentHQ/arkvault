@@ -15,9 +15,9 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
-const onSave = jest.fn();
-const onCancel = jest.fn();
-const onChange = jest.fn();
+const onSave = vi.fn();
+const onCancel = vi.fn();
+const onChange = vi.fn();
 
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
@@ -135,7 +135,7 @@ describe("ContactForm", () => {
 	it("should handle onChange event", async () => {
 		const name = "Sample name";
 
-		const onChangeFunction = jest.fn();
+		const onChangeFunction = vi.fn();
 
 		render(
 			<ContactForm
@@ -281,7 +281,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should handle save", async () => {
-		const onSave = jest.fn();
+		const onSave = vi.fn();
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 

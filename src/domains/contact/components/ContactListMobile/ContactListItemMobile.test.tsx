@@ -40,9 +40,9 @@ describe("ContactListItemMobile", () => {
 				profile={profile}
 				availableNetworks={[]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -55,9 +55,9 @@ describe("ContactListItemMobile", () => {
 				profile={profile}
 				availableNetworks={[]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -71,7 +71,7 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should execute onSend callback", async () => {
-		const onSend = jest.fn();
+		const onSend = vi.fn();
 
 		render(
 			<ContactListItemMobile
@@ -80,7 +80,7 @@ describe("ContactListItemMobile", () => {
 				contact={contact}
 				onSend={onSend}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -100,7 +100,7 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should not execute onSend callback if button is disabled", async () => {
-		const onSend = jest.fn();
+		const onSend = vi.fn();
 
 		render(
 			<ContactListItemMobile
@@ -109,7 +109,7 @@ describe("ContactListItemMobile", () => {
 				contact={contact}
 				onSend={onSend}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -129,14 +129,14 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should execute onAction callback", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		render(
 			<ContactListItemMobile
 				profile={profile}
 				availableNetworks={[{ hasBalance: true, id: "ark.devnet" }]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
 				onAction={onAction}
 			/>,

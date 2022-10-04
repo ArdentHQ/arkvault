@@ -39,7 +39,7 @@ describe("useTransaction", () => {
 	});
 
 	it("should return an empty list if lookup fails", async () => {
-		const walletSpy = jest
+		const walletSpy = vi
 			.spyOn(wallet.transactionIndex(), "sent")
 			.mockRejectedValue(new Error("transaction rejected."));
 

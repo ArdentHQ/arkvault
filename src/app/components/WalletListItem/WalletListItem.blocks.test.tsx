@@ -71,14 +71,14 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	it("should render StarredCell", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<table>
 					<tbody>
 						<tr>
-							<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
+							<Starred wallet={wallet} onToggleStar={vi.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -100,11 +100,11 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	it("should render StarredCell in small screen", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Starred wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
+				<Starred wallet={wallet} onToggleStar={vi.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -125,7 +125,7 @@ describe("WalletListItem.blocks", () => {
 				<table>
 					<tbody>
 						<tr>
-							<WalletCell wallet={wallet} onToggleStar={jest.fn()} isCompact={true} />
+							<WalletCell wallet={wallet} onToggleStar={vi.fn()} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -143,11 +143,11 @@ describe("WalletListItem.blocks", () => {
 
 	it("should render Currency", () => {
 		const useConfigurationReturn = { profileIsSyncingExchangeRates: true };
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(useConfigurationModule, "useConfiguration")
 			.mockReturnValue(useConfigurationReturn);
 
-		let walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+		let walletSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 
 		const { asFragment, rerender } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -203,7 +203,7 @@ describe("WalletListItem.blocks", () => {
 
 		expect(screen.getByTestId("Amount")).toBeInTheDocument();
 
-		walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+		walletSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		rerender(
 			<Route path="/profiles/:profileId/dashboard">
@@ -240,8 +240,8 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	it("should avoid click on ButtonsCell when Send button is disabled", () => {
-		const walletSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
-		const handleSend = jest.fn();
+		const walletSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
+		const handleSend = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -251,7 +251,7 @@ describe("WalletListItem.blocks", () => {
 							<ButtonsCell
 								wallet={wallet}
 								isCompact={true}
-								onSelectOption={jest.fn()}
+								onSelectOption={vi.fn()}
 								onSend={handleSend}
 							/>
 						</tr>
@@ -274,11 +274,11 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	it("should render Info in small screen", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Info wallet={wallet} onToggleStar={jest.fn()} isCompact={true} isLargeScreen={false} />
+				<Info wallet={wallet} onToggleStar={vi.fn()} isCompact={true} isLargeScreen={false} />
 			</Route>,
 			{
 				history,
@@ -292,7 +292,7 @@ describe("WalletListItem.blocks", () => {
 	});
 
 	it("should render Balance in small screen", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(false);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -302,7 +302,7 @@ describe("WalletListItem.blocks", () => {
 							<td>
 								<Balance
 									wallet={wallet}
-									onToggleStar={jest.fn()}
+									onToggleStar={vi.fn()}
 									isCompact={true}
 									isLargeScreen={false}
 								/>

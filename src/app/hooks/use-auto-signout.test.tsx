@@ -16,13 +16,13 @@ describe("useAutoSignOut", () => {
 	});
 
 	afterEach(() => {
-		jest.clearAllTimers();
-		jest.useRealTimers();
+		vi.clearAllTimers();
+		vi.useRealTimers();
 	});
 
 	it("should redirect to home when idle", () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
@@ -49,17 +49,17 @@ describe("useAutoSignOut", () => {
 		userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		expect(history.location.pathname).toBe("/");
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should not redirect if already in home", () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
@@ -83,11 +83,11 @@ describe("useAutoSignOut", () => {
 		userEvent.click(screen.getByTestId("StartIdleTimer"));
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		expect(history.location.pathname).toBe("/");
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 });

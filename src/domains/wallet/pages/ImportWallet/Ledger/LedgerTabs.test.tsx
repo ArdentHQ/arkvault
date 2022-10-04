@@ -31,8 +31,8 @@ describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths: Map<string, string>;
-	let onClickEditWalletName: jest.Mock;
-	let getVersionSpy: jest.SpyInstance;
+	let onClickEditWalletName: vi.Mock;
+	let getVersionSpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
@@ -74,13 +74,13 @@ describe("LedgerTabs", () => {
 
 		wallet = profile.wallets().first();
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
 
-		onClickEditWalletName = jest.fn();
+		onClickEditWalletName = vi.fn();
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -95,8 +95,8 @@ describe("LedgerTabs", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -140,7 +140,7 @@ describe("LedgerTabs", () => {
 	};
 
 	it("should render scan step", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -166,9 +166,9 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should load more address", async () => {
-		const scanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -210,14 +210,14 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should filter unallowed network", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const mainNetwork = profile.availableNetworks()[0];
 		const developmentNetwork = profile.availableNetworks()[1];
-		const networkAllowsSpy = jest.spyOn(mainNetwork, "allows").mockReturnValue(false);
-		const profileAvailableNetworksMock = jest
+		const networkAllowsSpy = vi.spyOn(mainNetwork, "allows").mockReturnValue(false);
+		const profileAvailableNetworksMock = vi
 			.spyOn(profile, "availableNetworks")
 			.mockReturnValue([mainNetwork, developmentNetwork]);
 
@@ -234,7 +234,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render connection step", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -271,7 +271,7 @@ describe("LedgerTabs", () => {
 
 		expect(container).toMatchSnapshot();
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(backSelector());
 
@@ -292,7 +292,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -322,7 +322,7 @@ describe("LedgerTabs", () => {
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(screen.getByTestId("Paginator__finish-button"));
 
@@ -334,11 +334,11 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step multiple", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const scannerMock = jest.spyOn(scanner, "scannerReducer").mockReturnValue({
+		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
 			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
 			wallets: [
 				{
@@ -374,7 +374,7 @@ describe("LedgerTabs", () => {
 
 		expect(profile.wallets().count()).toBe(walletsCountBefore + 2);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.keyboard("{enter}");
 
@@ -387,9 +387,9 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render scan step with failing fetch", async () => {
-		jest.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
+		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -426,7 +426,7 @@ describe("LedgerTabs", () => {
 
 		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -450,7 +450,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("redirects user to dashboard if device not available", async () => {
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -466,12 +466,12 @@ describe("LedgerTabs", () => {
 		getPublicKeySpy.mockReset();
 
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	describe("Enter key handling", () => {
 		it("should go to the next step", async () => {
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -491,7 +491,7 @@ describe("LedgerTabs", () => {
 		});
 
 		it("does not go to the next step if a button is the active element", async () => {
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -515,7 +515,7 @@ describe("LedgerTabs", () => {
 		it("does not go to the next step if is submitting", async () => {
 			const originalUseFormContext = reactHookForm.useFormContext;
 
-			const formContextSpy = jest.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {
+			const formContextSpy = vi.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {
 				const result = originalUseFormContext(...parameters);
 
 				result.formState.isSubmitting = true;
@@ -523,7 +523,7 @@ describe("LedgerTabs", () => {
 				return result;
 			});
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 

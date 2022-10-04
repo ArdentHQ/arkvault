@@ -80,7 +80,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should render for ledger wallets", async () => {
-			const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -102,7 +102,7 @@ describe("SignMessage", () => {
 		});
 
 		it("should show waiting state for ledger if device available but not connected", async () => {
-			const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 			mockNanoXTransport();
 
@@ -183,7 +183,7 @@ describe("SignMessage", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-			const writeTextMock = jest.fn();
+			const writeTextMock = vi.fn();
 			const clipboardOriginal = navigator.clipboard;
 
 			// @ts-ignore
@@ -249,14 +249,14 @@ describe("SignMessage", () => {
 		});
 
 		it("should sign message with secret", async () => {
-			const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(false);
-			const walletHasSigningKey = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
-			const walletActsWithSecret = jest.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
-			const walletActsWithMnemonic = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-			const walletActsWithWithEncryption = jest
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(false);
+			const walletHasSigningKey = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(false);
+			const walletActsWithSecret = vi.spyOn(wallet, "actsWithSecret").mockReturnValue(true);
+			const walletActsWithMnemonic = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+			const walletActsWithWithEncryption = vi
 				.spyOn(wallet, "actsWithMnemonicWithEncryption")
 				.mockReturnValue(false);
-			const fromSecret = jest.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
+			const fromSecret = vi.spyOn(wallet.coin().address(), "fromSecret").mockResolvedValue({
 				address: wallet.address(),
 				type: "bip39",
 			});
@@ -318,7 +318,7 @@ describe("SignMessage", () => {
 
 			history.push(walletUrl(encryptedWallet.id()));
 
-			// const signMock = jest.spyOn(encryptedWallet.message(), "sign").mockResolvedValue("asd");
+			// const signMock = vi.spyOn(encryptedWallet.message(), "sign").mockResolvedValue("asd");
 
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
@@ -362,9 +362,9 @@ describe("SignMessage", () => {
 		});
 
 		it("should sign message with a ledger wallet", async () => {
-			const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-			const signMessageSpy = jest
+			const signMessageSpy = vi
 				.spyOn(wallet.coin().ledger(), "signMessage")
 				.mockImplementation(() => new Promise((resolve) => setTimeout(() => resolve("signature"), 300)));
 
@@ -374,11 +374,11 @@ describe("SignMessage", () => {
 				["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
 			]);
 
-			const getPublicKeyMock = jest
+			const getPublicKeyMock = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const getVersionMock = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+			const getVersionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
 
 			const ledgerListenMock = mockNanoXTransport();
 
@@ -416,17 +416,17 @@ describe("SignMessage", () => {
 		});
 
 		it("should display error step if user rejects", async () => {
-			const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+			const isLedgerMock = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
-			const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => void 0);
+			const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => void 0);
 
-			const signMessageSpy = jest.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(() => {
+			const signMessageSpy = vi.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(() => {
 				throw new Error("Condition of use not satisfied");
 			});
 
-			const getVersionMock = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
+			const getVersionMock = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.1.0");
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(wallet.publicKey()!);
 
@@ -452,7 +452,7 @@ describe("SignMessage", () => {
 
 			await waitFor(() => expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.ERROR_STEP.TITLE));
 
-			const historySpy = jest.spyOn(history, "push");
+			const historySpy = vi.spyOn(history, "push");
 
 			userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
 
@@ -571,7 +571,7 @@ describe("SignMessage", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			const historySpy = jest.spyOn(history, "push");
+			const historySpy = vi.spyOn(history, "push");
 
 			userEvent.click(screen.getByTestId("SignMessage__back-button"));
 

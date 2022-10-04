@@ -19,7 +19,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
-jest.setTimeout(30_000);
+vi.setTimeout(30_000);
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
@@ -33,7 +33,7 @@ describe("CreateWallet", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(() => {
-		bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 	});
 
 	afterAll(() => {
@@ -47,7 +47,7 @@ describe("CreateWallet", () => {
 			profile.wallets().forget(wallet.id());
 		}
 
-		bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -79,7 +79,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		expect(backButton).toBeEnabled();
 
@@ -193,7 +193,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -229,7 +229,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		expect(backButton).toBeEnabled();
 
@@ -393,7 +393,7 @@ describe("CreateWallet", () => {
 
 	it("should show an error message if wallet generation failed", async () => {
 		bip39GenerateMock.mockRestore();
-		bip39GenerateMock = jest.spyOn(BIP39, "generate").mockImplementation(() => {
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockImplementation(() => {
 			throw new Error("test");
 		});
 

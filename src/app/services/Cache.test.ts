@@ -14,7 +14,7 @@ describe("Cache", () => {
 	it("should remember a value if it is a function", async () => {
 		subject.flush();
 
-		const valueFunction = jest.fn(() => "value");
+		const valueFunction = vi.fn(() => "value");
 
 		await expect(subject.remember("cacheKey", valueFunction)).resolves.toBe("value");
 		await expect(subject.remember("cacheKey", valueFunction)).resolves.toBe("value");

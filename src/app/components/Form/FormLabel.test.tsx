@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/vi-dom/extend-expect";
 
 import userEvent from "@testing-library/user-event";
 import React from "react";

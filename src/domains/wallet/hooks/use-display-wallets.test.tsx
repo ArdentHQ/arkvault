@@ -49,8 +49,8 @@ describe("useDisplayWallets", () => {
 
 		emptyProfile = await env.profiles().create("Empty");
 
-		jest.spyOn(mainnetWallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(mainnetWallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	beforeEach(() => {
@@ -62,7 +62,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should return list of wallets by only one selected network", () => {
-		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
+		const useWalletFiltersSpy = vi.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
 			selectedNetworkIds: [testNetwork],
 			walletsDisplayType: "all",
 		} as FilterWalletsHookProperties);
@@ -95,7 +95,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should return all list wallets", async () => {
-		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
+		const useWalletFiltersSpy = vi.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
 			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "all",
 		} as FilterWalletsHookProperties);
@@ -122,8 +122,8 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should return properly sorted wallets", () => {
-		const developmentWallet0AliasSpy = jest.spyOn(wallets[0], "alias").mockReturnValue(undefined);
-		const developmentWallet1AliasSpy = jest.spyOn(wallets[1], "alias").mockReturnValue(undefined);
+		const developmentWallet0AliasSpy = vi.spyOn(wallets[0], "alias").mockReturnValue(undefined);
+		const developmentWallet1AliasSpy = vi.spyOn(wallets[1], "alias").mockReturnValue(undefined);
 
 		const {
 			result: { current },
@@ -146,7 +146,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should filter starred wallet types", async () => {
-		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
+		const useWalletFiltersSpy = vi.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
 			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "starred",
 		} as FilterWalletsHookProperties);
@@ -171,7 +171,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should filter ledger wallet type", async () => {
-		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
+		const useWalletFiltersSpy = vi.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
 			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "ledger",
 		} as FilterWalletsHookProperties);
@@ -198,7 +198,7 @@ describe("useDisplayWallets", () => {
 	});
 
 	it("should return empty values", async () => {
-		const useActiveProfileSpy = jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(emptyProfile);
+		const useActiveProfileSpy = vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(emptyProfile);
 
 		const { result } = renderHook(() => useDisplayWallets(), {
 			wrapper,

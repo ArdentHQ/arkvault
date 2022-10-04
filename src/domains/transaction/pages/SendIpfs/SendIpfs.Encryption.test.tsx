@@ -23,7 +23,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +ipfsFixture.data.amount / 1e8,
 		data: () => ({ data: () => ipfsFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
@@ -47,11 +47,11 @@ const formStep = () => screen.findByTestId("SendIpfs__form-step");
 const feeWarningContinueID = "FeeWarning__continue-button";
 const reviewStepID = "SendIpfs__review-step";
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.mock("@/utils/debounce", () => ({
+vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
 		async function (...arguments_: any) {
 			return new Promise((resolve) => {
@@ -95,11 +95,11 @@ describe("SendIpfs", () => {
 
 	it("should send an IPFS transaction using encryption password", async () => {
 		const encryptedWallet = profile.wallets().first();
-		const actsWithMnemonicMock = jest.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest
+		const actsWithMnemonicMock = vi.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
+		const actsWithWifWithEncryptionMock = vi
 			.spyOn(encryptedWallet, "actsWithWifWithEncryption")
 			.mockReturnValue(true);
-		const wifGetMock = jest.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
+		const wifGetMock = vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${encryptedWallet.id()}/send-ipfs`;
 
@@ -155,11 +155,11 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(encryptedWallet.transaction(), "signIpfs")
 			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [ipfsFixture.data.id],
 			errors: {},
 			rejected: [],

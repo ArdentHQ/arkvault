@@ -43,8 +43,8 @@ describe("ContactListItem", () => {
 					<ContactListItem
 						profile={profile}
 						options={options}
-						onAction={jest.fn()}
-						onSend={jest.fn()}
+						onAction={vi.fn()}
+						onSend={vi.fn()}
 						item={contact}
 						availableNetworks={[{ hasBalance: true, id: devnet }]}
 					/>
@@ -55,7 +55,7 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	const renderContactList = ({ options, onAction = jest.fn(), onSend = jest.fn(), item = contact }) =>
+	const renderContactList = ({ options, onAction = vi.fn(), onSend = vi.fn(), item = contact }) =>
 		render(
 			<table>
 				<tbody>
@@ -123,7 +123,7 @@ describe("ContactListItem", () => {
 	});
 
 	it("should call onAction callback", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		renderContactList({ onAction, options });
 
@@ -134,7 +134,7 @@ describe("ContactListItem", () => {
 	});
 
 	it("should not call onAction callback", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		renderContactList({ options });
 
@@ -145,7 +145,7 @@ describe("ContactListItem", () => {
 	});
 
 	it("should call send", () => {
-		const onSend = jest.fn();
+		const onSend = vi.fn();
 
 		renderContactList({ onSend: onSend, options });
 

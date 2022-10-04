@@ -45,7 +45,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should go back", async () => {
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -156,7 +156,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should successfully import profile and return to home screen", async () => {
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -203,7 +203,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -389,7 +389,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and go back to home screen", async () => {
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		render(
 			<EnvironmentProvider env={env}>

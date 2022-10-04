@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
-import { when } from "jest-when";
+import { when } from "vi-when";
 import React from "react";
 import { Router } from "react-router-dom";
 
@@ -33,7 +33,7 @@ describe("useTimeFormat", () => {
 	});
 
 	it("should return format from profile", () => {
-		const settingsSpy = jest.spyOn(profile.settings(), "get");
+		const settingsSpy = vi.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce("format");
 
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });
@@ -42,7 +42,7 @@ describe("useTimeFormat", () => {
 	});
 
 	it("should return default format if profile has not setting", () => {
-		const settingsSpy = jest.spyOn(profile.settings(), "get");
+		const settingsSpy = vi.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce();
 
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });

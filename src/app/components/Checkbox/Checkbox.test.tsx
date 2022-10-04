@@ -5,10 +5,10 @@ import { Color } from "@/types";
 import { render } from "@/utils/testing-library";
 
 describe("Checkbox", () => {
-	let consoleSpy: jest.SpyInstance;
+	let consoleSpy: vi.SpyInstance;
 
 	beforeAll(() => {
-		consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 	});
 
 	afterAll(() => {

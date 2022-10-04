@@ -53,7 +53,7 @@ describe("useLatestTransactions", () => {
 		const sent = await profile.transactionAggregate().all({ limit: 10 });
 		const items = sent.items();
 
-		const mockTransactionsAggregate = jest
+		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
@@ -71,9 +71,9 @@ describe("useLatestTransactions", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const mockTransactionsAggregate = jest
+		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
@@ -82,13 +82,13 @@ describe("useLatestTransactions", () => {
 			{ wrapper },
 		);
 
-		jest.runOnlyPendingTimers();
+		vi.runOnlyPendingTimers();
 
 		await waitForNextUpdate();
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
 
 		mockTransactionsAggregate.mockRestore();
 
-		jest.clearAllTimers();
+		vi.clearAllTimers();
 	});
 });

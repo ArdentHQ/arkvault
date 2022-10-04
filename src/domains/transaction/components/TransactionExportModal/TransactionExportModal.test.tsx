@@ -60,7 +60,7 @@ describe("TransactionExportModal", () => {
 	it("should render", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -78,11 +78,11 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render with fiat column", async () => {
-		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -105,7 +105,7 @@ describe("TransactionExportModal", () => {
 	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -135,7 +135,7 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render error status", async () => {
-		const transactionIndexMock = jest
+		const transactionIndexMock = vi
 			.spyOn(profile.wallets().first(), "transactionIndex")
 			.mockImplementation(() => {
 				throw new Error("error");
@@ -143,7 +143,7 @@ describe("TransactionExportModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -177,7 +177,7 @@ describe("TransactionExportModal", () => {
 	it("should render success status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,
@@ -209,8 +209,8 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render success and download file", async () => {
-		const onClose = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
+		const onClose = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -244,8 +244,8 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render success and stay open if download fails", async () => {
-		const onClose = jest.fn();
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockImplementation(() => {
+		const onClose = vi.fn();
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("error");
 		});
 
@@ -281,7 +281,7 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should emit onClose", async () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -307,11 +307,11 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should disable export button if all column toggles are off", async () => {
-		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={jest.fn()} />
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
 			</Route>,
 			{
 				history,

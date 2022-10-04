@@ -17,8 +17,8 @@ describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths: Map<string, string>;
-	let onClickEditWalletName: jest.Mock;
-	let getVersionSpy: jest.SpyInstance;
+	let onClickEditWalletName: vi.Mock;
+	let getVersionSpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
@@ -60,13 +60,13 @@ describe("LedgerTabs", () => {
 
 		wallet = profile.wallets().first();
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
 
-		onClickEditWalletName = jest.fn();
+		onClickEditWalletName = vi.fn();
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -81,8 +81,8 @@ describe("LedgerTabs", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 	});
 
 	afterAll(() => {
@@ -124,7 +124,7 @@ describe("LedgerTabs", () => {
 
 	it("should cancel and redirect to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -151,12 +151,12 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should click back and go to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -168,12 +168,12 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render with listen ledger step as default active step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
@@ -184,6 +184,6 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

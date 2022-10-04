@@ -10,7 +10,7 @@ const itemArea = () => screen.getAllByTestId("LineGraph__item-hover-area");
 
 describe("LineGraph", () => {
 	let data: GraphDataPoint[];
-	let useWidthMock: jest.SpyInstance;
+	let useWidthMock: vi.SpyInstance;
 
 	beforeAll(() => {
 		data = [
@@ -20,7 +20,7 @@ describe("LineGraph", () => {
 		];
 
 		// Mock graph width to 100.
-		useWidthMock = jest.spyOn(sharedGraphUtils, "useGraphWidth").mockReturnValue([undefined as never, 100]);
+		useWidthMock = vi.spyOn(sharedGraphUtils, "useGraphWidth").mockReturnValue([undefined as never, 100]);
 	});
 
 	afterAll(() => {

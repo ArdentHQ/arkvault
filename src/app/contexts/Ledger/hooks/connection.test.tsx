@@ -26,7 +26,7 @@ describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths: Map<string, string>;
-	let getVersionSpy: jest.SpyInstance;
+	let getVersionSpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		publicKeyPaths = new Map<string, string>();
@@ -40,7 +40,7 @@ describe("Use Ledger Connection", () => {
 
 		wallet = profile.wallets().first();
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
@@ -52,12 +52,12 @@ describe("Use Ledger Connection", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		jest.runOnlyPendingTimers();
-		jest.useRealTimers();
+		vi.runOnlyPendingTimers();
+		vi.useRealTimers();
 		getVersionSpy.mockRestore();
 	});
 
@@ -133,11 +133,11 @@ describe("Use Ledger Connection", () => {
 
 	describe("Ledger Connection", () => {
 		beforeEach(() => {
-			jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+			vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 		});
 
 		afterEach(() => {
-			jest.clearAllMocks();
+			vi.clearAllMocks();
 		});
 
 		const Component = ({
@@ -192,7 +192,7 @@ describe("Use Ledger Connection", () => {
 		};
 
 		it("should succeed in connecting without retries", async () => {
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -214,7 +214,7 @@ describe("Use Ledger Connection", () => {
 		});
 
 		it("should disconnect", async () => {
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -240,7 +240,7 @@ describe("Use Ledger Connection", () => {
 		});
 
 		it("should set busy", async () => {
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -266,9 +266,9 @@ describe("Use Ledger Connection", () => {
 		});
 
 		it("should show disconnected warning message upon disconnecting device", async () => {
-			const toastSpy = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -296,9 +296,9 @@ describe("Use Ledger Connection", () => {
 		});
 
 		it("should add default device model id", async () => {
-			const toastSpy = jest.spyOn(toasts, "warning").mockImplementation(jest.fn());
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
@@ -328,7 +328,7 @@ describe("Use Ledger Connection", () => {
 		it("should abort connection retries", async () => {
 			const listenSpy = mockNanoXTransport();
 
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
 
@@ -362,7 +362,7 @@ describe("Use Ledger Connection", () => {
 		it("should fail to connect with retries", async () => {
 			const listenSpy = mockNanoXTransport();
 
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
 
@@ -398,7 +398,7 @@ describe("Use Ledger Connection", () => {
 		it("should fail to connect unknown connection error and show generic connection error", async () => {
 			const listenSpy = mockNanoXTransport();
 
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw { statusText: "UNKNOWN_ERROR" };
 			});
 
@@ -434,7 +434,7 @@ describe("Use Ledger Connection", () => {
 		it("should fail to connect with unknown error", async () => {
 			const listenSpy = mockNanoXTransport();
 
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("some error");
 			});
 
@@ -467,12 +467,12 @@ describe("Use Ledger Connection", () => {
 			const { result } = renderHook(() => useTranslation());
 			const { t } = result.current;
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
-			const disconnectSpy = jest.spyOn(wallet.coin().ledger(), "disconnect").mockImplementation(() => {
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+			const disconnectSpy = vi.spyOn(wallet.coin().ledger(), "disconnect").mockImplementation(() => {
 				throw new Error("Disconnect error");
 			});
 
@@ -505,11 +505,11 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			const getPublicKeySpy = jest
+			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const coinSpy = jest.spyOn(wallet.coin().network(), "coin").mockReturnValue("BTC");
+			const coinSpy = vi.spyOn(wallet.coin().network(), "coin").mockReturnValue("BTC");
 
 			render(
 				<Component

@@ -41,7 +41,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])(
 		"should render sender's address as generated address when musig address derivation is not supported in %s",
 		async (breakpoint) => {
-			jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
+			vi.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
 			const { container } = renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId">
@@ -69,7 +69,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 
 			expect(container).toMatchSnapshot();
 
-			jest.restoreAllMocks();
+			vi.restoreAllMocks();
 		},
 	);
 });

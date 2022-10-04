@@ -38,7 +38,7 @@ describe("useWalletAlias", () => {
 	it("should return isDelegate = `true` when network is set and delegate is found even when no wallet or contact found", () => {
 		const { result } = renderHook(() => useWalletAlias(), { wrapper });
 
-		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
+		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
 			username: () => "delegate_username",
 		} as any);
 
@@ -81,7 +81,7 @@ describe("useWalletAlias", () => {
 	});
 
 	it("should return displayName and isDelegate = true when address is also a delegate", () => {
-		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
+		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
 			username: () => "delegate username",
 		} as any);
 
@@ -103,8 +103,8 @@ describe("useWalletAlias", () => {
 	it("should return delegate name", async () => {
 		await syncDelegates(profile);
 
-		const walletsSpy = jest.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
-		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
+		const walletsSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue(undefined);
+		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		const delegate = env.delegates().all(wallet.coinId(), wallet.networkId())[0];
 
@@ -129,7 +129,7 @@ describe("useWalletAlias", () => {
 	it("should choose delegate name over alias if enabled in preferences", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, true);
 
-		jest.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
+		vi.spyOn(env.delegates(), "findByAddress").mockReturnValueOnce({
 			username: () => "delegate username",
 		} as any);
 

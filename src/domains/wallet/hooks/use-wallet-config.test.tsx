@@ -48,7 +48,7 @@ describe("useWalletConfig", () => {
 	});
 
 	it("should render with ledger wallet display type", async () => {
-		const walletIsLedgerSpy = jest.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
+		const walletIsLedgerSpy = vi.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
 		profile.wallets().first().toggleStarred();
 
 		const { result } = renderHook(

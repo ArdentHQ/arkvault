@@ -17,16 +17,16 @@ describe("PortfolioBreakdown", () => {
 	let firstWallet: Contracts.IReadWriteWallet;
 	let secondWallet: Contracts.IReadWriteWallet;
 
-	let portfolioBreakdownMock: jest.SpyInstance;
-	let isRestoredMock: jest.SpyInstance;
+	let portfolioBreakdownMock: vi.SpyInstance;
+	let isRestoredMock: vi.SpyInstance;
 
-	let firstWalletColdMock: jest.SpyInstance;
-	let secondWalletColdMock: jest.SpyInstance;
+	let firstWalletColdMock: vi.SpyInstance;
+	let secondWalletColdMock: vi.SpyInstance;
 
-	let firstWalletSyncedMock: jest.SpyInstance;
-	let secondWalletSyncedMock: jest.SpyInstance;
+	let firstWalletSyncedMock: vi.SpyInstance;
+	let secondWalletSyncedMock: vi.SpyInstance;
 
-	let useGraphWidthMock: jest.SpyInstance;
+	let useGraphWidthMock: vi.SpyInstance;
 
 	const liveNetworkIds = ["ark.mainnet", "lsk.mainnet"];
 
@@ -52,7 +52,7 @@ describe("PortfolioBreakdown", () => {
 		profile.wallets().push(secondWallet);
 
 		// Mock graph width to a value that would use 5% as minimum threshold for visible data points.
-		useGraphWidthMock = jest
+		useGraphWidthMock = vi
 			.spyOn(sharedGraphUtils, "useGraphWidth")
 			.mockReturnValue([undefined as never, GRAPH_MIN_VALUE.line / 5]);
 	});
@@ -66,18 +66,18 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	beforeEach(() => {
-		portfolioBreakdownMock = jest.spyOn(profile.portfolio(), "breakdown").mockReturnValue([
+		portfolioBreakdownMock = vi.spyOn(profile.portfolio(), "breakdown").mockReturnValue([
 			{ coin: firstWallet.coin(), shares: 85, source: 85, target: 85 },
 			{ coin: secondWallet.coin(), shares: 15, source: 15, target: 15 },
 		]);
 
-		isRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(true);
+		isRestoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(true);
 
-		firstWalletColdMock = jest.spyOn(firstWallet, "isCold").mockReturnValue(false);
-		secondWalletColdMock = jest.spyOn(secondWallet, "isCold").mockReturnValue(false);
+		firstWalletColdMock = vi.spyOn(firstWallet, "isCold").mockReturnValue(false);
+		secondWalletColdMock = vi.spyOn(secondWallet, "isCold").mockReturnValue(false);
 
-		firstWalletSyncedMock = jest.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		secondWalletSyncedMock = jest.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		firstWalletSyncedMock = vi.spyOn(firstWallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		secondWalletSyncedMock = vi.spyOn(secondWallet, "hasSyncedWithNetwork").mockReturnValue(true);
 	});
 
 	afterEach(() => {
@@ -86,7 +86,7 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	it.each([true, false])("should render with dark mode = %s", (isDarkMode) => {
-		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
 		const { asFragment } = render(
 			<PortfolioBreakdown
@@ -178,7 +178,7 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	it("should render loading when items converted balance contain a NaN value", () => {
-		portfolioBreakdownMock = jest.spyOn(profile.portfolio(), "breakdown").mockReturnValue([
+		portfolioBreakdownMock = vi.spyOn(profile.portfolio(), "breakdown").mockReturnValue([
 			{ coin: firstWallet.coin(), shares: 85, source: 85, target: 85 },
 			{ coin: secondWallet.coin(), shares: 15, source: 15, target: Number.NaN },
 		]);
@@ -269,9 +269,9 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	it.each([true, false])("should render zero balance state with dark mode = %s", (isDarkMode) => {
-		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
-		portfolioBreakdownMock = jest
+		portfolioBreakdownMock = vi
 			.spyOn(profile.portfolio(), "breakdown")
 			.mockReturnValue([{ coin: firstWallet.coin(), shares: 0, source: 0, target: 0 }]);
 
@@ -317,7 +317,7 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	it.each([true, false])("should show tooltip when hovering graph elements when dark mode is = %s", (isDarkMode) => {
-		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
 		render(
 			<PortfolioBreakdown

@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 let contact: Contracts.IContact;
 let profile: Contracts.IProfile;
 
-const onDelete = jest.fn();
+const onDelete = vi.fn();
 
 describe("DeleteContact", () => {
 	beforeAll(() => {
@@ -24,8 +24,8 @@ describe("DeleteContact", () => {
 	it("should render a modal", () => {
 		const { asFragment } = render(
 			<DeleteContact
-				onClose={jest.fn()}
-				onCancel={jest.fn()}
+				onClose={vi.fn()}
+				onCancel={vi.fn()}
 				contact={contact}
 				onDelete={onDelete}
 				profile={profile}
@@ -40,8 +40,8 @@ describe("DeleteContact", () => {
 	it("should delete contact", async () => {
 		render(
 			<DeleteContact
-				onClose={jest.fn()}
-				onCancel={jest.fn()}
+				onClose={vi.fn()}
+				onCancel={vi.fn()}
 				onDelete={onDelete}
 				profile={profile}
 				contact={contact}

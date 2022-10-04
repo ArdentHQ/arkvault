@@ -42,13 +42,13 @@ describe("UnlockTokensModal", () => {
 			network: "ark.devnet",
 		});
 
-		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: fee, max: fee, min: fee, static: fee }),
 		});
 
 		// items mock
 
-		jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
+		vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
 			objects: [unlockableBalanceItemMock],
 			pending: BigNumber.make(0),
@@ -56,14 +56,14 @@ describe("UnlockTokensModal", () => {
 
 		// wallet mocks
 
-		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-		jest.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
-		jest.spyOn(wallet, "isDelegate").mockReturnValue(false);
-		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
 
 		// transaction mocks
 
-		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 			amount: () => 30,
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
@@ -81,7 +81,7 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it("should render", async () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -107,7 +107,7 @@ describe("UnlockTokensModal", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<LedgerProvider>
-					<UnlockTokensModal wallet={wallet} onClose={jest.fn()} profile={profile} />
+					<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
 				</LedgerProvider>
 			</Route>,
 			{
@@ -184,11 +184,11 @@ describe("UnlockTokensModal", () => {
 
 		// send transaction
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signUnlockToken")
 			.mockResolvedValue(transactionFixture.data.id);
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
 						accepted: [transactionFixture.data.id],

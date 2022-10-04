@@ -21,7 +21,7 @@ describe("SearchBar", () => {
 	});
 
 	it("should call onSearch callback on button click", async () => {
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(<SearchBar onSearch={onSearch} />);
 

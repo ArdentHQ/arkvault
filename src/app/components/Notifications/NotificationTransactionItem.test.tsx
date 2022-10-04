@@ -71,7 +71,7 @@ describe("Notifications", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should emit events onTransactionClick in xs", async (breakpoint) => {
-		const onTransactionClick = jest.fn();
+		const onTransactionClick = vi.fn();
 
 		renderResponsive(
 			<table>

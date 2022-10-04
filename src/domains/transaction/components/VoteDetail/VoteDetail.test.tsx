@@ -14,7 +14,7 @@ const history = createHashHistory();
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-jest.setTimeout(10_000);
+vi.setTimeout(10_000);
 
 describe("VoteDetail", () => {
 	beforeAll(async () => {
@@ -36,7 +36,7 @@ describe("VoteDetail", () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(dashboardURL);
 
-		jest.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore

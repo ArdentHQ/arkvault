@@ -7,7 +7,7 @@ import { mockNanoXTransport, render, screen, waitFor } from "@/utils/testing-lib
 
 describe("LedgerWaitingDevice", () => {
 	it("should call the onClose callback if given", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(<LedgerWaitingDevice isOpen={true} onClose={onClose} />);
 
@@ -17,7 +17,7 @@ describe("LedgerWaitingDevice", () => {
 	});
 
 	it("should emit true when devices is available", async () => {
-		const onDeviceAvailable = jest.fn();
+		const onDeviceAvailable = vi.fn();
 
 		const nanoXTransportMock = mockNanoXTransport();
 

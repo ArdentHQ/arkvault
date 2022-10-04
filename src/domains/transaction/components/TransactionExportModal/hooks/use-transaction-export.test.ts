@@ -131,7 +131,7 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should start export and fail", async () => {
-		const transactionIndexMock = jest
+		const transactionIndexMock = vi
 			.spyOn(profile.wallets().first(), "transactionIndex")
 			.mockImplementation(() => {
 				throw new Error("error");

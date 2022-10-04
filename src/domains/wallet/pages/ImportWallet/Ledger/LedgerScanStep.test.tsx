@@ -72,11 +72,11 @@ describe("LedgerScanStep", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(publicKeyPaths.get(path)!),
 		);
 
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -180,11 +180,11 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should update the toast messages if already added", async () => {
-		const toastUpdateSpy = jest.spyOn(toasts, "update");
+		const toastUpdateSpy = vi.spyOn(toasts, "update");
 
-		jest.spyOn(toasts, "isActive").mockReturnValueOnce(false);
+		vi.spyOn(toasts, "isActive").mockReturnValueOnce(false);
 
-		jest.spyOn(toasts, "isActive").mockReturnValueOnce(true);
+		vi.spyOn(toasts, "isActive").mockReturnValueOnce(true);
 
 		render(<Component />);
 
@@ -198,7 +198,7 @@ describe("LedgerScanStep", () => {
 
 		expect(toastUpdateSpy).toHaveBeenCalledWith("wallet-loading", "success", expect.anything());
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render cancelling screen", async () => {

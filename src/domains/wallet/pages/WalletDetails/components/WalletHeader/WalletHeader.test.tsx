@@ -37,8 +37,8 @@ describe("WalletHeader", () => {
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 
-		jest.spyOn(useQRCodeHook, "useQRCode").mockImplementation(() => ({}));
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(useQRCodeHook, "useQRCode").mockImplementation(() => ({}));
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	afterAll(() => {
@@ -54,7 +54,7 @@ describe("WalletHeader", () => {
 	});
 
 	it("should use empty string in clipboard copy if publickey is undefined", async () => {
-		const mockpublicKey = jest.spyOn(wallet, "publicKey").mockReturnValue(undefined);
+		const mockpublicKey = vi.spyOn(wallet, "publicKey").mockReturnValue(undefined);
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
@@ -65,7 +65,7 @@ describe("WalletHeader", () => {
 	});
 
 	it("should render amount for wallet in live network", async () => {
-		const mockTestNetwork = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+		const mockTestNetwork = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
@@ -76,8 +76,8 @@ describe("WalletHeader", () => {
 	});
 
 	it("should hide second signature option", async () => {
-		const mockIsSecondSignature = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-		const mockAllowsSecondSignature = jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
+		const mockIsSecondSignature = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		const mockAllowsSecondSignature = vi.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -98,8 +98,8 @@ describe("WalletHeader", () => {
 	});
 
 	it("should trigger onSend callback if provided", async () => {
-		const handleSend = jest.fn();
-		const useWalletActionsSpy = jest.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue({
+		const handleSend = vi.fn();
+		const useWalletActionsSpy = vi.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue({
 			handleSend,
 		} as unknown as ReturnType<typeof useWalletActionsModule.useWalletActions>);
 
@@ -117,7 +117,7 @@ describe("WalletHeader", () => {
 	});
 
 	it("send button should be disabled if wallet has no balance", async () => {
-		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -129,8 +129,8 @@ describe("WalletHeader", () => {
 	});
 
 	it("should show modifiers", async () => {
-		const ledgerSpy = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		const ledgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const multisigSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -145,7 +145,7 @@ describe("WalletHeader", () => {
 	});
 
 	it("should hide converted balance if wallet belongs to test network", async () => {
-		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+		const networkSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -236,7 +236,7 @@ describe("WalletHeader", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -259,7 +259,7 @@ describe("WalletHeader", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -282,7 +282,7 @@ describe("WalletHeader", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -306,7 +306,7 @@ describe("WalletHeader", () => {
 	it("should handle second signature registration", () => {
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -330,7 +330,7 @@ describe("WalletHeader", () => {
 	it("should handle delegate registration", () => {
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -354,8 +354,8 @@ describe("WalletHeader", () => {
 	it("should handle delegate resignation", () => {
 		history.push(walletUrl);
 
-		const walletSpy = jest.spyOn(wallet, "isDelegate").mockReturnValue(true);
-		const historySpy = jest.spyOn(history, "push");
+		const walletSpy = vi.spyOn(wallet, "isDelegate").mockReturnValue(true);
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -380,7 +380,7 @@ describe("WalletHeader", () => {
 	it("should handle store hash option", () => {
 		history.push(walletUrl);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId">
@@ -402,7 +402,7 @@ describe("WalletHeader", () => {
 	it("should handle isMultiSignature exception", async () => {
 		await wallet.synchroniser().identity();
 
-		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementationOnce(() => {
+		const multisigSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementationOnce(() => {
 			throw new Error("error");
 		});
 
@@ -416,12 +416,12 @@ describe("WalletHeader", () => {
 	});
 
 	it("should handle locked balance", async () => {
-		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
-		const balance = jest.spyOn(wallet, "balance").mockReturnValue(10);
-		const unlockableBalances = jest
+		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
+		const unlockableBalances = vi
 			.spyOn(wallet.coin().client(), "unlockableBalances")
 			.mockResolvedValue({ objects: [] } as any);
-		const allowsLockedBalance = jest.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		const allowsLockedBalance = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
 
@@ -445,13 +445,13 @@ describe("WalletHeader", () => {
 	});
 
 	it("should handle locked balance when is ledger", async () => {
-		const ledgerSpy = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
-		const balance = jest.spyOn(wallet, "balance").mockReturnValue(10);
-		const unlockableBalances = jest
+		const ledgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
+		const unlockableBalances = vi
 			.spyOn(wallet.coin().client(), "unlockableBalances")
 			.mockResolvedValue({ objects: [] } as any);
-		const allowsLockedBalance = jest.spyOn(wallet.network(), "allows").mockReturnValue(true);
+		const allowsLockedBalance = vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
 
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
 

@@ -14,7 +14,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render with tooltip in the dark mode", () => {
-		const walletSpy = jest.spyOn(wallet, "isKnown").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isKnown").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} tooltipDarkTheme />);
 
@@ -26,7 +26,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the verified icon", () => {
-		const walletSpy = jest.spyOn(wallet, "isKnown").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isKnown").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -37,7 +37,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the ledger icon", () => {
-		const walletSpy = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -48,8 +48,8 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the second signature icon", () => {
-		const hasSyncedWithNetworkSpy = jest.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		const walletSpy = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
+		const hasSyncedWithNetworkSpy = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -60,7 +60,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the star icon", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -71,8 +71,8 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the multisignature icon", () => {
-		const hasSyncedWithNetworkSpy = jest.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
-		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+		const hasSyncedWithNetworkSpy = vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValue(true);
+		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -84,7 +84,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should render the test network icon", () => {
-		const walletSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		render(<WalletIcons wallet={wallet} />);
 
@@ -95,7 +95,7 @@ describe("WalletIcons", () => {
 	});
 
 	it("should not render excluded icons", () => {
-		const walletSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(true);
+		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
 		const { container } = render(<WalletIcons wallet={wallet} exclude={["isStarred"]} />);
 

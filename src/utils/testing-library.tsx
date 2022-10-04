@@ -402,7 +402,7 @@ const customNetworksStub: any = {
 };
 
 export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) => {
-	const mock = jest.spyOn(profile.networks(), "all").mockReturnValue(publicNetworksStub);
+	const mock = vi.spyOn(profile.networks(), "all").mockReturnValue(publicNetworksStub);
 
 	return () => {
 		mock.mockRestore();
@@ -421,8 +421,8 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 		},
 	};
 
-	const allMock = jest.spyOn(profile.networks(), "all").mockReturnValue(networks);
-	const allByCoinMock = jest
+	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
+	const allByCoinMock = vi
 		.spyOn(profile.networks(), "allByCoin")
 		.mockImplementation((coin: string) => Object.values(networks[coin.toLowerCase()] ?? []));
 

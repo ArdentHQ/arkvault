@@ -6,9 +6,9 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("DevelopmentNetwork", () => {
 	const methods = {
-		onCancel: jest.fn(),
-		onClose: jest.fn(),
-		onContinue: jest.fn(),
+		onCancel: vi.fn(),
+		onClose: vi.fn(),
+		onContinue: vi.fn(),
 	};
 
 	it("should not render if not open", () => {

@@ -156,7 +156,7 @@ describe("Contacts", () => {
 	});
 
 	it("should render without contacts", () => {
-		const contactsSpy = jest.spyOn(profile.contacts(), "values").mockReturnValue([]);
+		const contactsSpy = vi.spyOn(profile.contacts(), "values").mockReturnValue([]);
 
 		const { asFragment } = renderComponent();
 
@@ -242,7 +242,7 @@ describe("Contacts", () => {
 	it("should successfully delete contact", async () => {
 		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
-		const contactsSpy = jest
+		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
 			.mockReturnValue([profile.contacts().findById(newContact.id())]);
 
@@ -371,7 +371,7 @@ describe("Contacts", () => {
 	it("should successfully delete contact from update modal", async () => {
 		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
-		const contactsSpy = jest
+		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
 			.mockReturnValue([profile.contacts().findById(newContact.id())]);
 
@@ -415,7 +415,7 @@ describe("Contacts", () => {
 
 		const newContact = createContact(profile, "New Contact", "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
-		const contactsSpy = jest
+		const contactsSpy = vi
 			.spyOn(profile.contacts(), "values")
 			.mockReturnValue([profile.contacts().findById(newContact.id())]);
 
@@ -455,7 +455,7 @@ describe("Contacts", () => {
 			false,
 		);
 
-		const contactsSpy = jest
+		const contactsSpy = vi
 			.spyOn(blankProfile.contacts(), "values")
 			.mockReturnValue([contactMainnet, contactDevnet]);
 
@@ -480,7 +480,7 @@ describe("Contacts", () => {
 			network: mainnet,
 		});
 
-		const balanceSpy = jest.spyOn(walletMainnet, "balance");
+		const balanceSpy = vi.spyOn(walletMainnet, "balance");
 
 		balanceSpy.mockReturnValue(0);
 

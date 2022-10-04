@@ -44,14 +44,14 @@ describe("Signatures", () => {
 	});
 
 	it("should render", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) => {
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) => {
 			if (wallet.publicKey() === publicKey) {
 				return true;
 			}
 			return false;
 		});
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
 		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
 
@@ -66,11 +66,11 @@ describe("Signatures", () => {
 	it.each([true, false])(
 		"should not require signature if waiting for final signature in registration with isAwaitingOurSignature=%s",
 		async (isAwaitingOurSignature) => {
-			jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(isAwaitingOurSignature);
-			jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-			jest.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
-			jest.spyOn(multisignatureTransactionMock, "isMultiSignatureRegistration").mockReturnValue(true);
-			jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) =>
+			vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(isAwaitingOurSignature);
+			vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+			vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
+			vi.spyOn(multisignatureTransactionMock, "isMultiSignatureRegistration").mockReturnValue(true);
+			vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation((_, publicKey) =>
 				[wallet.publicKey()].includes(publicKey),
 			);
 
@@ -85,7 +85,7 @@ describe("Signatures", () => {
 	);
 
 	it("should handle exception when checking if participant is awaiting signature", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => {
+		vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockImplementation(() => {
 			throw new Error("Failed");
 		});
 
@@ -99,7 +99,7 @@ describe("Signatures", () => {
 	});
 
 	it("should show all participants as signed when all signatures are added", async () => {
-		jest.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
+		vi.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
 			if (key === "multiSignature") {
 				return { publicKeys: [wallet.publicKey(), wallet2.publicKey()] };
 			}
@@ -119,7 +119,7 @@ describe("Signatures", () => {
 	});
 
 	it("should render with waiting badge", async () => {
-		jest.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
+		vi.spyOn(multisignatureTransactionMock, "get").mockImplementation((key) => {
 			if (key === "multiSignature") {
 				return { publicKeys: [wallet.publicKey(), wallet2.publicKey()] };
 			}
@@ -128,8 +128,8 @@ describe("Signatures", () => {
 				return []; // Only checking lengths
 			}
 		});
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
 
 		const { container } = render(<Signatures transaction={multisignatureTransactionMock} wallet={wallet} />);
 
@@ -139,6 +139,6 @@ describe("Signatures", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

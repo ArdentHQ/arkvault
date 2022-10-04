@@ -18,7 +18,7 @@ let resetProfileNetworksMock: () => void;
 
 describe("SelectNetworkDropdown", () => {
 	beforeEach(() => {
-		jest.spyOn(Tippy as any, "render").mockRestore();
+		vi.spyOn(Tippy as any, "render").mockRestore();
 
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -45,7 +45,7 @@ describe("SelectNetworkDropdown", () => {
 
 	it("should change network", () => {
 		const networks = profile.availableNetworks();
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		const { container } = render(
 			<SelectNetworkDropdown

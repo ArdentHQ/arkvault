@@ -31,7 +31,7 @@ import {
 const history = createHashHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -39,7 +39,7 @@ describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
@@ -180,13 +180,13 @@ describe("useProfileSynchronizer", () => {
 
 		await syncDelegates(profile);
 
-		jest.spyOn(toasts, "success").mockImplementation();
-		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		vi.spyOn(toasts, "success").mockImplementation();
+		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 	});
 
 	afterEach(() => {
-		jest.clearAllTimers();
-		jest.useRealTimers();
+		vi.clearAllTimers();
+		vi.useRealTimers();
 	});
 
 	it("should clear last profile sync jobs", async () => {
@@ -216,7 +216,7 @@ describe("useProfileSynchronizer", () => {
 	it("should not sync if not in profile's url", async () => {
 		history.push("/");
 
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 		render(
 			<Route path="/">
 				<div data-testid="RenderedContent">test</div>
@@ -230,7 +230,7 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("RenderedContent")).resolves.toBeVisible();
 
-		jest.clearAllTimers();
+		vi.clearAllTimers();
 	});
 
 	it("should sync only valid profiles from url", async () => {
@@ -281,7 +281,7 @@ describe("useProfileSynchronizer", () => {
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		profile.wallets().flush();
 
-		const memoryPasswordMock = jest.spyOn(profile.password(), "get").mockImplementation(() => {
+		const memoryPasswordMock = vi.spyOn(profile.password(), "get").mockImplementation(() => {
 			throw new Error("password not found");
 		});
 
@@ -325,7 +325,7 @@ describe("useProfileSynchronizer", () => {
 
 	it("should not start syncing for empty profile", async () => {
 		let configuration: any;
-		const onProfileSyncStart = jest.fn();
+		const onProfileSyncStart = vi.fn();
 
 		const emptyProfile = await env.profiles().create("empty profile");
 
@@ -417,7 +417,7 @@ describe("useProfileSynchronizer", () => {
 
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		const profileNotificationsSyncSpy = jest.spyOn(profile.notifications().transactions(), "sync");
+		const profileNotificationsSyncSpy = vi.spyOn(profile.notifications().transactions(), "sync");
 
 		const Component = () => {
 			const { syncProfileWallets } = useProfileJobs(profile);
@@ -457,17 +457,17 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should sync profile and handle resync with errored networks", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 		history.push(dashboardURL);
 
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
 
-		const onProfileSyncError = jest.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
+		const onProfileSyncError = vi.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
 			profileErroredNetworks = erroredNetworks;
 			retrySync();
 		});
-		const onProfileSyncStart = jest.fn();
+		const onProfileSyncStart = vi.fn();
 
 		const Component = () => {
 			configuration = useConfiguration();
@@ -493,7 +493,7 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const mockWalletSyncStatus = jest
+		const mockWalletSyncStatus = vi
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
 
@@ -512,23 +512,23 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
-		jest.useRealTimers();
-		jest.clearAllTimers();
+		vi.useRealTimers();
+		vi.clearAllTimers();
 	});
 
 	it("should sync profile and handle resync with sync error", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		history.push(dashboardURL);
 		let configuration: any;
 
-		const onProfileSyncError = jest.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
+		const onProfileSyncError = vi.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
 			retrySync();
 		});
-		const onProfileSyncStart = jest.fn();
+		const onProfileSyncStart = vi.fn();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const profileSyncSpy = jest.spyOn(profile, "sync").mockImplementationOnce(() => {
+		const profileSyncSpy = vi.spyOn(profile, "sync").mockImplementationOnce(() => {
 			throw new Error("unknown");
 		});
 
@@ -555,7 +555,7 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
-		const mockWalletSyncStatus = jest
+		const mockWalletSyncStatus = vi
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
 
@@ -567,12 +567,12 @@ describe("useProfileSynchronizer", () => {
 
 		mockWalletSyncStatus.mockRestore();
 		profileSyncSpy.mockRestore();
-		jest.clearAllTimers();
-		jest.useRealTimers();
+		vi.clearAllTimers();
+		vi.useRealTimers();
 	});
 
 	it("should call on profile updated if new profile id", async () => {
-		const onProfileUpdated = jest.fn();
+		const onProfileUpdated = vi.fn();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const profile2 = await env.profiles().create("new profile 2");
@@ -611,7 +611,7 @@ describe("useProfileSynchronizer", () => {
 	});
 
 	it("should not call on profile updated if profile id changes from dashboard", async () => {
-		const onProfileUpdated = jest.fn();
+		const onProfileUpdated = vi.fn();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
@@ -669,11 +669,11 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 		profile.wallets().flush();
 
-		const profileFromUrlMock = jest.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue(profile);
-		const passwordMock = jest.spyOn(profileUtils, "getProfileStoredPassword").mockImplementation(() => void 0);
+		const profileFromUrlMock = vi.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue(profile);
+		const passwordMock = vi.spyOn(profileUtils, "getProfileStoredPassword").mockImplementation(() => void 0);
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
@@ -704,10 +704,10 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
-		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
-		const profileFromUrlMock = jest.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue(profile);
-		const passwordMock = jest.spyOn(profileUtils, "getProfileStoredPassword").mockReturnValue("password");
+		const profileFromUrlMock = vi.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue(profile);
+		const passwordMock = vi.spyOn(profileUtils, "getProfileStoredPassword").mockReturnValue("password");
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
@@ -741,8 +741,8 @@ describe("useProfileRestore", () => {
 		profile.status().reset();
 		profile.wallets().flush();
 
-		const profileFromUrlMock = jest.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue({ id: () => "1" });
-		const passwordMock = jest.spyOn(profileUtils, "getProfileStoredPassword").mockReturnValue({});
+		const profileFromUrlMock = vi.spyOn(profileUtils, "getProfileFromUrl").mockReturnValue({ id: () => "1" });
+		const passwordMock = vi.spyOn(profileUtils, "getProfileStoredPassword").mockReturnValue({});
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
@@ -800,7 +800,7 @@ describe("useProfileRestore", () => {
 	});
 
 	it("should sync profile and handle sync error", async () => {
-		const dismissToastSpy = jest.spyOn(toasts, "dismiss").mockImplementation();
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation();
 		history.push(dashboardURL);
 
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -823,7 +823,7 @@ describe("useProfileRestore", () => {
 			}),
 		);
 
-		const profileSyncMock = jest.spyOn(profile, "sync").mockImplementation(() => {
+		const profileSyncMock = vi.spyOn(profile, "sync").mockImplementation(() => {
 			throw new Error("sync test");
 		});
 
@@ -854,7 +854,7 @@ describe("useProfileRestore", () => {
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, 1);
 		await env.persist();
 
-		const profileStatusMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const profileStatusMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		history.push(`/profiles/${profile.id()}/dashboard`);
 
@@ -869,7 +869,7 @@ describe("useProfileRestore", () => {
 			},
 		);
 
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		await expect(screen.findByTestId("ProfileRestored", undefined, { timeout: 4000 })).resolves.toBeVisible();
 
@@ -877,14 +877,14 @@ describe("useProfileRestore", () => {
 
 		profileStatusMock.mockRestore();
 		historyMock.mockRestore();
-		jest.clearAllTimers();
+		vi.clearAllTimers();
 	});
 });
 
 describe("useProfileStatusWatcher", () => {
 	it("should not monitor for network status if profile is undefined", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
@@ -905,8 +905,8 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should not monitor for network status if profile has not finished syncing", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const wrapper = ({ children }: any) => (
@@ -928,8 +928,8 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should not monitor for network status if profile is still syncing wallets", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		const wrapper = ({ children }: any) => (
@@ -949,10 +949,10 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should not monitor for network status if profile has no wallets", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const walletCountMock = jest.spyOn(profile.wallets(), "count").mockReturnValue(0);
+		const walletCountMock = vi.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		const wrapper = ({ children }: any) => (
@@ -972,10 +972,10 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should trigger sync error callback if profile has errored wallet networks", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const mockWalletSyncStatus = jest
+		const mockWalletSyncStatus = vi
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
 
@@ -1007,8 +1007,8 @@ describe("useProfileStatusWatcher", () => {
 	});
 
 	it("should stay idle if network status has not changed", async () => {
-		const onProfileSyncComplete = jest.fn();
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncComplete = vi.fn();
+		const onProfileSyncError = vi.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
@@ -1027,8 +1027,8 @@ describe("useProfileStatusWatcher", () => {
 			</EnvironmentProvider>
 		);
 
-		const setState = jest.fn();
-		const useStateSpy = jest.spyOn(React, "useState");
+		const setState = vi.fn();
+		const useStateSpy = vi.spyOn(React, "useState");
 		//@ts-ignore
 		useStateSpy.mockImplementation((initialState, setActualState) => {
 			// Use actual state if it's not `isInitialSync` in useProfileStatusWatcher

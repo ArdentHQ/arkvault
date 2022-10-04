@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
+import "vi-extended";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -26,7 +26,7 @@ import {
 } from "@/utils/testing-library";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
@@ -65,9 +65,9 @@ const sendAllID = "AddRecipient__send-all";
 
 const history = createHashHistory();
 
-jest.setTimeout(20_000);
+vi.setTimeout(20_000);
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -163,9 +163,9 @@ describe("SendTransfer Fee Handling", () => {
 
 		const selectedWallet = profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0];
 
-		const selectedWalletSpy = jest.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const selectedWalletSpy = vi.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		const walletSyncSpy = jest.spyOn(selectedWallet.synchroniser(), "identity");
+		const walletSyncSpy = vi.spyOn(selectedWallet.synchroniser(), "identity");
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
@@ -363,7 +363,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = jest.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -419,8 +419,8 @@ describe("SendTransfer Fee Handling", () => {
 			network: "ark.devnet",
 		});
 
-		jest.spyOn(arkWallet, "balance").mockReturnValue(10);
-		jest.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(arkWallet, "balance").mockReturnValue(10);
+		vi.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
 
 		profile.wallets().push(arkWallet);
 
@@ -428,7 +428,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		history.push(transferURL);
 
-		const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: 0.1, isDynamic: true, max: 0.1, min: 0.1, static: 0.1 }),
 		});
 
@@ -446,7 +446,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
 
-		const goSpy = jest.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation();
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -648,7 +648,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			userEvent.click(continueButton());
 
-			const profileSpy = jest.spyOn(profile.settings(), "set").mockImplementation();
+			const profileSpy = vi.spyOn(profile.settings(), "set").mockImplementation();
 
 			// Fee warning
 			await expect(screen.findByTestId("FeeWarning__suppressWarning-toggle")).resolves.toBeVisible();
@@ -743,10 +743,10 @@ describe("SendTransfer Fee Handling", () => {
 		);
 
 		// Summary Step (skip ledger confirmation for now)
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -765,7 +765,7 @@ describe("SendTransfer Fee Handling", () => {
 		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
-		const pushSpy = jest.spyOn(history, "push");
+		const pushSpy = vi.spyOn(history, "push");
 		userEvent.click(backToWalletButton());
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);

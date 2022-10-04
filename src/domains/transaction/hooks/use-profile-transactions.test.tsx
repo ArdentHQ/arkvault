@@ -86,7 +86,7 @@ describe("useProfileTransactions", () => {
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
 
-		const mockEmpty = jest.spyOn(profile.transactionAggregate(), "sent").mockResolvedValue({
+		const mockEmpty = vi.spyOn(profile.transactionAggregate(), "sent").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -114,9 +114,9 @@ describe("useProfileTransactions", () => {
 		const sent = await profile.transactionAggregate().all({ limit: 30 });
 		const items = sent.items();
 
-		const mockIsConfirmed = jest.spyOn(items[0], "isConfirmed").mockReturnValue(false);
+		const mockIsConfirmed = vi.spyOn(items[0], "isConfirmed").mockReturnValue(false);
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => true,
 			items: () => items,
 		} as any);
@@ -163,7 +163,7 @@ describe("useProfileTransactions", () => {
 
 		await waitFor(() => expect(result.current.transactions).toHaveLength(30), { timeout: 4000 });
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -190,9 +190,9 @@ describe("useProfileTransactions", () => {
 		const all = await profile.transactionAggregate().all({});
 		const items = all.items();
 
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		let mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		let mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => true,
 			items: () => items,
 		} as any);
@@ -201,13 +201,13 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		jest.advanceTimersByTime(30_000);
+		vi.advanceTimersByTime(30_000);
 
 		await hook.waitForNextUpdate();
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(30));
 
-		mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => items,
 		} as any);
@@ -216,7 +216,7 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		jest.advanceTimersByTime(30_000);
+		vi.advanceTimersByTime(30_000);
 
 		await hook.waitForNextUpdate();
 
@@ -234,7 +234,7 @@ describe("useProfileTransactions", () => {
 
 		mockTransactionsAggregate.mockRestore();
 
-		const mockEmptyTransactions = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockEmptyTransactions = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -243,13 +243,13 @@ describe("useProfileTransactions", () => {
 			wrapper,
 		});
 
-		jest.advanceTimersByTime(30_000);
+		vi.advanceTimersByTime(30_000);
 
 		await hook.waitForNextUpdate();
 
 		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(0));
 
 		mockEmptyTransactions.mockRestore();
-		jest.clearAllTimers();
+		vi.clearAllTimers();
 	});
 });

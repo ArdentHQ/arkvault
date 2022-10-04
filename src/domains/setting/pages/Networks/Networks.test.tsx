@@ -140,7 +140,7 @@ describe("Network Settings", () => {
 	});
 
 	it("shows a warning if user tries to unselect all items", () => {
-		const toastSpy = jest.spyOn(toasts, "warning");
+		const toastSpy = vi.spyOn(toasts, "warning");
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/networks">
@@ -163,9 +163,9 @@ describe("Network Settings", () => {
 	});
 
 	it("stores the selected networks", async () => {
-		const toastSpy = jest.spyOn(toasts, "success");
-		const networksFillSpy = jest.spyOn(profile.networks(), "fill").mockImplementation();
-		const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success");
+		const networksFillSpy = vi.spyOn(profile.networks(), "fill").mockImplementation();
+		const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation();
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/networks">
@@ -396,10 +396,10 @@ describe("Network Settings", () => {
 		it.each(["mainnet", "testnet"])(
 			"stores the new network with data that came from the request",
 			async (networkName) => {
-				const uuidSpy = jest.spyOn(UUID, "random").mockReturnValue("random-uuid");
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksFillSpy = jest.spyOn(profile.networks(), "fill").mockImplementation();
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const uuidSpy = vi.spyOn(UUID, "random").mockReturnValue("random-uuid");
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksFillSpy = vi.spyOn(profile.networks(), "fill").mockImplementation();
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation();
 
 				nockServerCryptoConfiguration(customServerAddress, networkName);
 
@@ -563,7 +563,7 @@ describe("Network Settings", () => {
 		});
 
 		describe("with custom networks", () => {
-			let customNetworksMock: jest.SpyInstance;
+			let customNetworksMock: vi.SpyInstance;
 
 			const customNetworksStub: any = {
 				test: {
@@ -627,7 +627,7 @@ describe("Network Settings", () => {
 			};
 
 			beforeEach(() => {
-				customNetworksMock = jest.spyOn(profile.networks(), "all").mockReturnValue(customNetworksStub);
+				customNetworksMock = vi.spyOn(profile.networks(), "all").mockReturnValue(customNetworksStub);
 			});
 
 			afterEach(() => {
@@ -770,15 +770,15 @@ describe("Network Settings", () => {
 			});
 
 			it("removes deleted custom network contacts and addresses", async () => {
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation();
 
 				const firstContact = profile.contacts().values()[0];
 				const firstContactAddress = firstContact.addresses().values()[0];
 
-				const addressNetworkSpy = jest.spyOn(firstContactAddress, "network").mockReturnValue("test.custom");
-				const forgetAddressSpy = jest.spyOn(firstContact.addresses(), "forget");
-				const forgetContactSpy = jest.spyOn(profile.contacts(), "forget");
+				const addressNetworkSpy = vi.spyOn(firstContactAddress, "network").mockReturnValue("test.custom");
+				const forgetAddressSpy = vi.spyOn(firstContact.addresses(), "forget");
+				const forgetContactSpy = vi.spyOn(profile.contacts(), "forget");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -825,12 +825,12 @@ describe("Network Settings", () => {
 			});
 
 			it("removes deleted custom network wallets", async () => {
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation();
 
 				const firstWallet = profile.wallets().values()[0];
-				const walletNetworkSpy = jest.spyOn(firstWallet.network(), "id").mockReturnValue("test.custom");
-				const forgetWalletSpy = jest.spyOn(profile.wallets(), "forget");
+				const walletNetworkSpy = vi.spyOn(firstWallet.network(), "id").mockReturnValue("test.custom");
+				const forgetWalletSpy = vi.spyOn(profile.wallets(), "forget");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1190,7 +1190,7 @@ describe("Network Settings", () => {
 			it("fill network form considering optional data", async () => {
 				customNetworksMock.mockRestore();
 
-				customNetworksMock = jest.spyOn(profile.networks(), "all").mockReturnValue({
+				customNetworksMock = vi.spyOn(profile.networks(), "all").mockReturnValue({
 					test: {
 						custom: {
 							...customNetworksStub.test.custom,

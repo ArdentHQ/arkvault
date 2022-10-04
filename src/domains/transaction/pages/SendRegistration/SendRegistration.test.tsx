@@ -35,9 +35,9 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
-let getVersionSpy: jest.SpyInstance;
+let getVersionSpy: vi.SpyInstance;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -79,7 +79,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +DelegateRegistrationFixture.data.amount / 1e8,
 		data: () => ({ data: () => DelegateRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
@@ -94,7 +94,7 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 	});
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ toSignedData: () => MultisignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${MultisignatureRegistrationFixture.data.id}`,
@@ -143,7 +143,7 @@ describe("Registration", () => {
 			}),
 		);
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
@@ -267,10 +267,10 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signDelegateRegistration")
 			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [DelegateRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -302,7 +302,7 @@ describe("Registration", () => {
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		// Go back to wallet
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
@@ -319,18 +319,18 @@ describe("Registration", () => {
 		await renderPage(wallet, "multiSignature");
 
 		// Ledger mocks
-		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 
-		const getPublicKeyMock = jest
+		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
 			accepted: [MultisignatureRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -354,7 +354,7 @@ describe("Registration", () => {
 		// Step 2
 		userEvent.click(continueButton());
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
+		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		userEvent.click(continueButton());
 
@@ -370,10 +370,10 @@ describe("Registration", () => {
 	});
 
 	it.skip("should reset authentication when a supported Nano X is added", async () => {
-		const unsubscribe = jest.fn();
+		const unsubscribe = vi.fn();
 		let observer: Observer<any>;
 
-		const listenSpy = jest.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
+		const listenSpy = vi.spyOn(ledgerTransport, "listen").mockImplementationOnce((obv) => {
 			observer = obv;
 			return { unsubscribe };
 		});
@@ -385,18 +385,18 @@ describe("Registration", () => {
 		});
 
 		// Ledger mocks
-		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 
-		const getPublicKeyMock = jest
+		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
 			accepted: [MultisignatureRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -420,7 +420,7 @@ describe("Registration", () => {
 		// Step 2
 		userEvent.click(continueButton());
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
+		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		userEvent.click(continueButton());
 
@@ -447,11 +447,11 @@ describe("Registration", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { container } = await renderPage(secondWallet);
 
-		const actsWithMnemonicMock = jest.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
+		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
 		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
-		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
+		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -518,10 +518,10 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signDelegateRegistration")
 			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [DelegateRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -559,7 +559,7 @@ describe("Registration", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -575,11 +575,11 @@ describe("Registration", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { asFragment } = await renderPage(secondWallet);
 
-		const actsWithMnemonicMock = jest.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
+		const actsWithMnemonicMock = vi.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
 		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
-		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
+		const secondPublicKeyMock = vi.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -607,11 +607,11 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		const broadcastMock = jest.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
+		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");
 		});
 
-		const historyMock = jest.spyOn(history, "push").mockReturnValue();
+		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
 		userEvent.click(sendButton());
 
@@ -633,21 +633,21 @@ describe("Registration", () => {
 	});
 
 	it("should send multisignature registration with ledger wallet", async () => {
-		const envPersistMock = jest.spyOn(env, "persist").mockImplementation(jest.fn());
+		const envPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
 		// Ledger mocks
 		const nanoXTransportMock = mockNanoXTransport();
-		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
+		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 
-		const getPublicKeyMock = jest
+		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
-		const addSignatureMock = jest.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
 			accepted: [MultisignatureRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -673,7 +673,7 @@ describe("Registration", () => {
 		// Step 2
 		userEvent.click(continueButton());
 
-		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
+		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
 		userEvent.click(continueButton());
 

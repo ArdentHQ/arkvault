@@ -22,8 +22,8 @@ describe("useWalletSync", () => {
 		const wallet = profile.wallets().first();
 		const network = wallet.network();
 
-		jest.spyOn(network, "allowsVoting").mockReturnValueOnce(false);
-		jest.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(true);
+		vi.spyOn(network, "allowsVoting").mockReturnValueOnce(false);
+		vi.spyOn(wallet, "hasSyncedWithNetwork").mockReturnValueOnce(true);
 
 		await act(async () => {
 			await expect(current.syncAll(wallet)).resolves.toBeTruthy();

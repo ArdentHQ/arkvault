@@ -14,7 +14,7 @@ describe("useUnlockableBalances", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
-		jest.useFakeTimers("legacy");
+		vi.useFakeTimers("legacy");
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 
@@ -22,11 +22,11 @@ describe("useUnlockableBalances", () => {
 	});
 
 	afterAll(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should fetch unlockable balances every 60 seconds", async () => {
-		const unlockableBalances = jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
+		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
 			objects: [
 				{
@@ -49,7 +49,7 @@ describe("useUnlockableBalances", () => {
 		expect(result.current.isFirstLoad).toBe(true);
 
 		act(() => {
-			jest.advanceTimersByTime(POLLING_INTERVAL + 500);
+			vi.advanceTimersByTime(POLLING_INTERVAL + 500);
 		});
 
 		await waitForNextUpdate();
@@ -61,11 +61,11 @@ describe("useUnlockableBalances", () => {
 	});
 
 	it("should handle fetch error and retry", async () => {
-		const unlockableBalances = jest
+		const unlockableBalances = vi
 			.spyOn(wallet.coin().client(), "unlockableBalances")
 			.mockImplementation(() => Promise.reject(new Error("unable to fetch")));
 
-		const toastWarning = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastWarning = vi.spyOn(toasts, "warning").mockImplementation();
 
 		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
 
@@ -80,7 +80,7 @@ describe("useUnlockableBalances", () => {
 	});
 
 	it("should return items sorted by date desc", async () => {
-		const unlockableBalances = jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
+		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
 			objects: [
 				{
@@ -124,7 +124,7 @@ describe("useUnlockableBalances", () => {
 
 describe("useUnlockTokensSelectTableColumns", () => {
 	it("should return columns", () => {
-		const { result } = renderHook(() => useUnlockTokensSelectTableColumns(false, false, jest.fn()));
+		const { result } = renderHook(() => useUnlockTokensSelectTableColumns(false, false, vi.fn()));
 
 		expect(result.current).toHaveLength(3);
 

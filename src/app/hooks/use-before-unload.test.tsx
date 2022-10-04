@@ -23,7 +23,7 @@ describe("useBeforeunload", () => {
 
 	it("should `beforeunloadEventListener` be the event function in Chrome", () => {
 		const event = new Event("beforeunload", { cancelable: true });
-		const eventSpy = jest.spyOn(event, "defaultPrevented", "get").mockReturnValue(false);
+		const eventSpy = vi.spyOn(event, "defaultPrevented", "get").mockReturnValue(false);
 
 		const result = beforeunloadEventListener(event);
 
@@ -44,8 +44,8 @@ describe("useBeforeunload", () => {
 			);
 		};
 
-		const addEventListenerSpy = jest.spyOn(window, "addEventListener").mockImplementation(jest.fn());
-		const removeEventListenerSpy = jest.spyOn(window, "removeEventListener").mockImplementation(jest.fn());
+		const addEventListenerSpy = vi.spyOn(window, "addEventListener").mockImplementation(vi.fn());
+		const removeEventListenerSpy = vi.spyOn(window, "removeEventListener").mockImplementation(vi.fn());
 
 		render(<Component />);
 

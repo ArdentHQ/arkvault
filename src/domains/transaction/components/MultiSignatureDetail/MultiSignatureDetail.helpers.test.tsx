@@ -57,7 +57,7 @@ describe("MultiSignatureDetail Helpers", () => {
 	});
 
 	it("should extract multisignature info mapping mandatoryKeys and numberOfSignatures to min and publicKeys", () => {
-		jest.spyOn(transaction, "get").mockReturnValue({
+		vi.spyOn(transaction, "get").mockReturnValue({
 			mandatoryKeys: [],
 			numberOfSignatures: 2,
 			optionalKeys: [],

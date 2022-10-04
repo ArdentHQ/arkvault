@@ -102,7 +102,7 @@ describe("CsvFormatter", () => {
 	});
 
 	afterEach(() => {
-		jest.resetAllMocks();
+		vi.resetAllMocks();
 	});
 
 	it("should sync all transactions recursively", async () => {

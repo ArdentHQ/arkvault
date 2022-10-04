@@ -5,7 +5,7 @@ import { screen, render } from "@/utils/testing-library";
 
 describe("CopyOrDownload", () => {
 	it("should render", () => {
-		const onClickDownload = jest.fn();
+		const onClickDownload = vi.fn();
 
 		const { asFragment } = render(
 			<CopyOrDownload

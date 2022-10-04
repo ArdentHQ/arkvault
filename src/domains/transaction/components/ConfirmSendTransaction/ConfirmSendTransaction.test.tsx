@@ -31,7 +31,7 @@ describe("ConfirmSendTransaction", () => {
 	});
 
 	it("should confirm", () => {
-		const onConfirm = jest.fn();
+		const onConfirm = vi.fn();
 		render(
 			<ConfirmSendTransaction
 				isOpen={true}
@@ -49,7 +49,7 @@ describe("ConfirmSendTransaction", () => {
 	});
 
 	it("should cancel", () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 		render(
 			<ConfirmSendTransaction isOpen={true} profile={profile} unconfirmedTransactions={[]} onClose={onCancel} />,
 		);

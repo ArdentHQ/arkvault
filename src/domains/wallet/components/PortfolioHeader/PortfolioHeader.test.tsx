@@ -38,21 +38,21 @@ let resetProfileNetworksMock: () => void;
 
 const useWalletActionReturn = {
 	activeModal: undefined,
-	handleConfirmEncryptionWarning: jest.fn(),
-	handleCreate: jest.fn(),
-	handleDelete: jest.fn(),
-	handleImport: jest.fn(),
-	handleImportLedger: jest.fn(),
-	handleOpen: jest.fn(),
-	handleSelectOption: jest.fn(),
-	handleSend: jest.fn(),
-	handleToggleStar: jest.fn(),
-	setActiveModal: jest.fn(),
+	handleConfirmEncryptionWarning: vi.fn(),
+	handleCreate: vi.fn(),
+	handleDelete: vi.fn(),
+	handleImport: vi.fn(),
+	handleImportLedger: vi.fn(),
+	handleOpen: vi.fn(),
+	handleSelectOption: vi.fn(),
+	handleSend: vi.fn(),
+	handleToggleStar: vi.fn(),
+	setActiveModal: vi.fn(),
 };
 
 describe("Portfolio grouped networks", () => {
 	beforeAll(async () => {
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
 		nock("https://neoscan.io/api/main_net/v1/")
 			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
@@ -127,7 +127,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet creation", () => {
-		const useWalletActionSpy = jest
+		const useWalletActionSpy = vi
 			.spyOn(useWalletAction, "useWalletActions")
 			.mockReturnValue(useWalletActionReturn);
 		render(
@@ -151,7 +151,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet import", () => {
-		const useWalletActionSpy = jest
+		const useWalletActionSpy = vi
 			.spyOn(useWalletAction, "useWalletActions")
 			.mockReturnValue(useWalletActionReturn);
 
@@ -264,7 +264,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should apply ledger import", () => {
-		const useWalletActionSpy = jest
+		const useWalletActionSpy = vi
 			.spyOn(useWalletAction, "useWalletActions")
 			.mockReturnValue(useWalletActionReturn);
 
@@ -304,13 +304,13 @@ describe("Portfolio grouped networks", () => {
 		const useWalletFiltersReturn = {
 			walletsDisplayType: "all",
 		} as unknown as ReturnType<typeof filterWalletsHooks.useWalletFilters>;
-		const useDisplayWalletsSpy = jest
+		const useDisplayWalletsSpy = vi
 			.spyOn(useDisplayWallets, "useDisplayWallets")
 			.mockReturnValue(useDisplayWalletsReturn);
-		const useWalletFiltersSpy = jest
+		const useWalletFiltersSpy = vi
 			.spyOn(filterWalletsHooks, "useWalletFilters")
 			.mockReturnValue(useWalletFiltersReturn);
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false });
 
@@ -378,7 +378,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should render empty profile wallets", async () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false });
 

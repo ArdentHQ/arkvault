@@ -23,15 +23,15 @@ describe("PreloadMiddleware", () => {
 
 	it("preloads dashboard, profile, setting, and contact routes when path is root", () => {
 		const rootSpies = [...DashboardRoutes, ...ProfileRoutes, ...SettingRoutes, ...ContactRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const profileSpies = [...ExchangeRoutes, ...NewsRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const canActivate = subject.handler({ location: { pathname: "/" } } as any);
@@ -53,15 +53,15 @@ describe("PreloadMiddleware", () => {
 
 	it("preloads exchange, news, wallet, transaction, and vote routes when path starts with /profile", () => {
 		const rootSpies = [...DashboardRoutes, ...ProfileRoutes, ...SettingRoutes, ...ContactRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const profileSpies = [...ExchangeRoutes, ...NewsRoutes, ...WalletRoutes, ...VoteRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const commonSpies = [...TransactionRoutes, ...MessageRoutes].map((route) =>
-			jest.spyOn(route.component as any, "preload"),
+			vi.spyOn(route.component as any, "preload"),
 		);
 
 		const canActivate = subject.handler({ location: { pathname: "/profiles" } } as any);

@@ -9,7 +9,7 @@ const translations = buildTranslations();
 
 describe("UnlockTokensFetchError", () => {
 	it("should render", () => {
-		const onRetry = jest.fn();
+		const onRetry = vi.fn();
 
 		const { asFragment } = render(<UnlockTokensFetchError onRetry={onRetry} />);
 

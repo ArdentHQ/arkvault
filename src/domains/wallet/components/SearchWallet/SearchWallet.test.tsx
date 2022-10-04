@@ -192,7 +192,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it.each(["xs", "sm"])("should handle wallet selection on responsive items", async (breakpoint) => {
-		const onSelectWalletMock = jest.fn();
+		const onSelectWalletMock = vi.fn();
 
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
@@ -221,7 +221,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render with the default exchange currency enabled from profile settings", async () => {
-		const walletWithExchangeCurrencyMock = jest
+		const walletWithExchangeCurrencyMock = vi
 			.spyOn(wallets[0], "exchangeCurrency")
 			.mockReturnValue(undefined as any);
 		const { asFragment } = render(
@@ -256,7 +256,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render with selected address", async () => {
-		const onSelectWallet = jest.fn();
+		const onSelectWallet = vi.fn();
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -306,7 +306,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render compact with selected address", async () => {
-		const onSelectWallet = jest.fn();
+		const onSelectWallet = vi.fn();
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
@@ -359,7 +359,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should render responsive with selected address", async () => {
-		const onSelectWallet = jest.fn();
+		const onSelectWallet = vi.fn();
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
@@ -387,7 +387,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should handle close", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -413,7 +413,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should filter wallets by address", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -452,15 +452,15 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should filter wallets by alias", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -499,16 +499,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should reset wallet search", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -548,7 +548,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
@@ -559,11 +559,11 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should not find search wallet and show empty results screen", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -602,7 +602,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		userEvent.paste(screen.getByTestId("Input"), "non existent wallet name");
 
 		act(() => {
-			jest.advanceTimersByTime(100);
+			vi.advanceTimersByTime(100);
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non existent wallet name"));
@@ -610,7 +610,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should disable the `Select` button if the wallet fulfills the condition", async () => {

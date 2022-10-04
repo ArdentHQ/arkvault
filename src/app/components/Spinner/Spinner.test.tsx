@@ -4,10 +4,10 @@ import { Spinner } from "./Spinner";
 import { render } from "@/utils/testing-library";
 
 describe("Spinner", () => {
-	let consoleSpy: jest.SpyInstance;
+	let consoleSpy: vi.SpyInstance;
 
 	beforeAll(() => {
-		consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 	});
 
 	afterAll(() => {

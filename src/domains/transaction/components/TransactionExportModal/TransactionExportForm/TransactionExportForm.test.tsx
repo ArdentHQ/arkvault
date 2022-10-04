@@ -64,7 +64,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should emit cancel", async () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
 		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={onCancel} />);
 
@@ -80,9 +80,9 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render fiat column if wallets network is live", async () => {
-		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
 		const { asFragment } = renderWithForm(
 			<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />,
@@ -128,7 +128,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render custom date range", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={jest.fn()} />, {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={vi.fn()} />, {
 			defaultValues: {
 				from: new Date(),
 				to: new Date(),

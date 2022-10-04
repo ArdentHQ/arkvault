@@ -25,7 +25,7 @@ describe("Confirmation Modal", () => {
 	});
 
 	it("should trigger cancel", () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
 		render(<ConfirmationModal onCancel={onCancel} isOpen />);
 
@@ -35,7 +35,7 @@ describe("Confirmation Modal", () => {
 	});
 
 	it("should trigger confirm", () => {
-		const onConfirm = jest.fn();
+		const onConfirm = vi.fn();
 
 		render(<ConfirmationModal onConfirm={onConfirm} isOpen />);
 

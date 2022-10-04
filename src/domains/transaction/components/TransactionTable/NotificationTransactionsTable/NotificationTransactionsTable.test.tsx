@@ -26,7 +26,7 @@ describe("NotificationsTransactionTable", () => {
 			.query(true)
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));
 
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
 
 	afterAll(() => {
@@ -81,7 +81,7 @@ describe("NotificationsTransactionTable", () => {
 	});
 
 	it("should emit on visibility change event", async () => {
-		const onVisibilityChange = jest.fn();
+		const onVisibilityChange = vi.fn();
 		render(
 			<NotificationTransactionsTable
 				transactions={transactions}
@@ -97,7 +97,7 @@ describe("NotificationsTransactionTable", () => {
 	});
 
 	it("should emit on click event", async () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		render(
 			<NotificationTransactionsTable
 				transactions={transactions}

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
+import "vi-extended";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -31,11 +31,11 @@ const formStepID = "SendTransfer__form-step";
 
 const history = createHashHistory();
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.setTimeout(6000);
+vi.setTimeout(6000);
 
 describe("SendTransfer MultiPayment", () => {
 	beforeAll(async () => {
@@ -90,7 +90,7 @@ describe("SendTransfer MultiPayment", () => {
 			},
 		);
 
-		const coinValidateMock = jest.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
+		const coinValidateMock = vi.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 

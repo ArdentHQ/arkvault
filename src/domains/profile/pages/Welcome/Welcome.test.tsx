@@ -42,7 +42,7 @@ const submitPassword = async () => {
 	userEvent.click(screen.getByTestId(submitTestID));
 };
 
-let toastUpdateSpy: jest.SpyInstance;
+let toastUpdateSpy: vi.SpyInstance;
 
 const expectToast = async (text: string) => {
 	await waitFor(() => expect(toastUpdateSpy).toHaveBeenCalledWith(expect.any(String), "error", text));
@@ -61,7 +61,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	beforeEach(() => {
-		toastUpdateSpy = jest.spyOn(toasts, "update").mockImplementation();
+		toastUpdateSpy = vi.spyOn(toasts, "update").mockImplementation();
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -73,7 +73,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockDelegateName = jest
+		const mockDelegateName = vi
 			.spyOn(env.delegates(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
@@ -120,11 +120,11 @@ describe("Welcome with deeplink", () => {
 
 	it("should use entered password when using deeplink for a password protected profile", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
-		const mockPasswordGetter = jest
+		const mockPasswordGetter = vi
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const mockDelegateName = jest
+		const mockDelegateName = vi
 			.spyOn(env.delegates(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
@@ -389,9 +389,9 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should redirect to profile if only one available", async () => {
-		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
 
-		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+		const profilesSpy = vi.spyOn(env, "profiles").mockImplementationOnce(() => ({
 			findById: () => profile,
 			values: () => [profile],
 		}));
@@ -420,13 +420,13 @@ describe("Welcome with deeplink", () => {
 	it("should redirect to password protected profile if only one available", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
-		const mockPasswordGetter = jest
+		const mockPasswordGetter = vi
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
 
-		const profilesSpy = jest.spyOn(env, "profiles").mockImplementationOnce(() => ({
+		const profilesSpy = vi.spyOn(env, "profiles").mockImplementationOnce(() => ({
 			findById: () => passwordProtectedProfile,
 			values: () => [passwordProtectedProfile],
 		}));
@@ -460,7 +460,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should prompt the user to select a profile", async () => {
-		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
 
 		render(
 			<Route path="/">
@@ -484,7 +484,7 @@ describe("Welcome with deeplink", () => {
 		["createProfile", ProfilePaths.CreateProfile],
 		["importProfile", ProfilePaths.ImportProfile],
 	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
-		const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
 
 		render(
 			<Route path="/">
@@ -509,7 +509,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should clear the profile validation timeout", async () => {
-		const clearTimeoutSpy = jest.spyOn(window, "clearTimeout");
+		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
 		const { unmount } = render(
 			<Route path="/">
@@ -769,7 +769,7 @@ describe("Welcome", () => {
 	});
 
 	it("should not restart the timeout when closing the modal to retry the profile password", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		const { container } = render(<Welcome />);
 
@@ -799,7 +799,7 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(passwordTestID)).toBeDisabled();
 
 		act(() => {
-			jest.advanceTimersByTime(15_000);
+			vi.advanceTimersByTime(15_000);
 		});
 
 		// Close
@@ -812,8 +812,8 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
 		act(() => {
-			jest.advanceTimersByTime(50_000);
-			jest.clearAllTimers();
+			vi.advanceTimersByTime(50_000);
+			vi.clearAllTimers();
 		});
 
 		// wait for form to be updated
@@ -826,7 +826,7 @@ describe("Welcome", () => {
 			},
 		);
 
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should change route to create profile", () => {
@@ -861,7 +861,7 @@ describe("Welcome", () => {
 	it("should use the system theme", () => {
 		const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 		// eslint-disable-next-line testing-library/no-node-access
-		const spy = jest.spyOn(document.querySelector("html").classList, "add");
+		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
 		render(<Welcome />);
 

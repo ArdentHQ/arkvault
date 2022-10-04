@@ -43,7 +43,7 @@ describe("useWalletImport", () => {
 				result: { current },
 			} = renderHook(() => useWalletImport({ profile }));
 
-			const mockMnemonicMethod = jest
+			const mockMnemonicMethod = vi
 				.spyOn(profile.walletFactory(), `fromMnemonicWith${mnemonicType.toUpperCase()}` as never)
 				.mockImplementation(() => {
 					throw new Error("error");
@@ -70,7 +70,7 @@ describe("useWalletImport", () => {
 			} = renderHook(() => useWalletImport({ profile }));
 
 			const methodName = `from${importType.charAt(0).toUpperCase()}${importType.slice(1)}` as never;
-			const mockEncryptedWif = jest.spyOn(profile.walletFactory(), methodName).mockImplementation(() => {
+			const mockEncryptedWif = vi.spyOn(profile.walletFactory(), methodName).mockImplementation(() => {
 				throw new Error("error");
 			});
 
@@ -92,7 +92,7 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }));
 
-		const mockEncryptedWif = jest.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
+		const mockEncryptedWif = vi.spyOn(profile.walletFactory(), "fromWIF").mockImplementation(() => {
 			throw new Error("error");
 		});
 
@@ -120,7 +120,7 @@ describe("useWalletImport", () => {
 
 		const countBefore = profile.wallets().count();
 
-		const mockEncryptedWif = jest
+		const mockEncryptedWif = vi
 			.spyOn(profile.walletFactory(), "fromWIF")
 			.mockImplementation(() => Promise.resolve(newWallet));
 
@@ -162,7 +162,7 @@ describe("useWalletImport", () => {
 			result: { current },
 		} = renderHook(() => useWalletImport({ profile }));
 
-		const mockEncryptedWif = jest
+		const mockEncryptedWif = vi
 			.spyOn(profile.walletFactory(), "fromWIF")
 			.mockImplementation(() => Promise.reject(new Error("error")));
 

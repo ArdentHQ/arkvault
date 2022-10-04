@@ -12,7 +12,7 @@ describe("useKeydown", () => {
 	};
 
 	it("should run a callback when mapped button is pressed", () => {
-		const callback = jest.fn();
+		const callback = vi.fn();
 
 		render(<Component keyName="Enter" callback={callback} />);
 
@@ -22,7 +22,7 @@ describe("useKeydown", () => {
 	});
 
 	it("should do nothing when not mapped button is pressed", () => {
-		const callback = jest.fn();
+		const callback = vi.fn();
 
 		render(<Component keyName="Escape" callback={callback} />);
 

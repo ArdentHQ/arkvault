@@ -83,13 +83,13 @@ describe("WalletDetails", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 	};
 
 	beforeAll(async () => {
@@ -161,7 +161,7 @@ describe("WalletDetails", () => {
 			.persist();
 
 		// Mock musig server requests
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
@@ -214,7 +214,7 @@ describe("WalletDetails", () => {
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render as not compact if user uses expanded tables", async () => {
@@ -232,7 +232,7 @@ describe("WalletDetails", () => {
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render as compact on md screen even if user uses expanded tables", async () => {
@@ -259,11 +259,11 @@ describe("WalletDetails", () => {
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should not render wallet vote when the network does not support votes", async () => {
-		const networkFeatureSpy = jest.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
+		const networkFeatureSpy = vi.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
 
 		await renderPage({ waitForTopSection: false });
 
@@ -275,7 +275,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should render when wallet not found for votes", async () => {
-		jest.spyOn(blankWallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(blankWallet, "isMultiSignature").mockReturnValue(false);
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${blankWallet.id()}`;
 		history.push(walletUrl);

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
+import "vi-extended";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -34,7 +34,7 @@ const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 
 const history = createHashHistory();
 
-jest.setTimeout(10_000);
+vi.setTimeout(10_000);
 
 describe("SendTransfer Network Selection", () => {
 	beforeAll(async () => {

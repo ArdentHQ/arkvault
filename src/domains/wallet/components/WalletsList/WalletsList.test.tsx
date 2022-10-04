@@ -42,7 +42,7 @@ describe("WalletsList", () => {
 
 		history.push(dashboardURL);
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	it("should render", () => {

@@ -65,7 +65,7 @@ describe("UnlockTokensSelect", () => {
 
 		wallet = profile.wallets().first();
 
-		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: fee, max: fee, min: fee, static: fee }),
 		});
 	});
@@ -92,7 +92,7 @@ describe("UnlockTokensSelect", () => {
 	};
 
 	it("should render", async () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = render(
 			<Wrapper>
@@ -102,7 +102,7 @@ describe("UnlockTokensSelect", () => {
 					wallet={wallet}
 					profile={profile}
 					onClose={onClose}
-					onUnlock={jest.fn()}
+					onUnlock={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -124,8 +124,8 @@ describe("UnlockTokensSelect", () => {
 					loading={true}
 					wallet={wallet}
 					profile={profile}
-					onClose={jest.fn()}
-					onUnlock={jest.fn()}
+					onClose={vi.fn()}
+					onUnlock={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -144,8 +144,8 @@ describe("UnlockTokensSelect", () => {
 					loading={false}
 					wallet={wallet}
 					profile={profile}
-					onClose={jest.fn()}
-					onUnlock={jest.fn()}
+					onClose={vi.fn()}
+					onUnlock={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -164,8 +164,8 @@ describe("UnlockTokensSelect", () => {
 					loading={false}
 					wallet={wallet}
 					profile={profile}
-					onClose={jest.fn()}
-					onUnlock={jest.fn()}
+					onClose={vi.fn()}
+					onUnlock={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -176,7 +176,7 @@ describe("UnlockTokensSelect", () => {
 	});
 
 	it("should allow selection of unlockable items", async () => {
-		const onUnlock = jest.fn();
+		const onUnlock = vi.fn();
 
 		render(
 			<Wrapper>
@@ -185,7 +185,7 @@ describe("UnlockTokensSelect", () => {
 					loading={false}
 					wallet={wallet}
 					profile={profile}
-					onClose={jest.fn()}
+					onClose={vi.fn()}
 					onUnlock={onUnlock}
 				/>
 			</Wrapper>,

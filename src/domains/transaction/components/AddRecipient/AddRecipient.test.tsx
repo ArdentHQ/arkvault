@@ -84,7 +84,7 @@ describe("AddRecipient", () => {
 		return (
 			<Route path="/profiles/:profileId">
 				<FormProvider {...form}>
-					<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />
+					<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
 				</FormProvider>
 			</Route>
 		);
@@ -92,7 +92,7 @@ describe("AddRecipient", () => {
 
 	it("should render", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -105,7 +105,7 @@ describe("AddRecipient", () => {
 		};
 
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 			values,
 		);
 
@@ -120,7 +120,7 @@ describe("AddRecipient", () => {
 	it("should render with multiple recipients switch", async () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient
-				onChange={jest.fn()}
+				onChange={vi.fn()}
 				profile={profile}
 				recipients={[]}
 				showMultiPaymentOption
@@ -136,7 +136,7 @@ describe("AddRecipient", () => {
 	it("should render without the single & multiple switch", async () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient
-				onChange={jest.fn()}
+				onChange={vi.fn()}
 				profile={profile}
 				recipients={[]}
 				showMultiPaymentOption={false}
@@ -148,8 +148,8 @@ describe("AddRecipient", () => {
 	});
 
 	it("should set amount", async () => {
-		const onChange = jest.fn();
-		const findDelegateSpy = jest.spyOn(env.delegates(), "findByAddress").mockImplementation(
+		const onChange = vi.fn();
+		const findDelegateSpy = vi.spyOn(env.delegates(), "findByAddress").mockImplementation(
 			() =>
 				({
 					username: () => "delegate username",
@@ -176,7 +176,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should select recipient", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -195,7 +195,7 @@ describe("AddRecipient", () => {
 
 	it("should set available amount", async () => {
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
+			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
 		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
@@ -214,13 +214,13 @@ describe("AddRecipient", () => {
 			network: "ark.devnet",
 		});
 
-		jest.spyOn(emptyWallet, "balance").mockReturnValue(0);
-		jest.spyOn(emptyWallet.network(), "isTest").mockReturnValue(false);
+		vi.spyOn(emptyWallet, "balance").mockReturnValue(0);
+		vi.spyOn(emptyWallet.network(), "isTest").mockReturnValue(false);
 
 		emptyProfile.wallets().push(emptyWallet);
 
 		const { container } = renderWithFormProvider(
-			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={jest.fn()} />,
+			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
 		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
@@ -231,7 +231,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should toggle between single and multiple recipients", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -250,9 +250,9 @@ describe("AddRecipient", () => {
 	});
 
 	it("should clear the value when changing from multiple to single if more than one wallet is added", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		let form: ReturnType<typeof useForm>;
 
@@ -323,7 +323,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should keep values while toggling between single and multiple recipients", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />);
 
 		const singleButton = screen.getByText(translations.TRANSACTION.SINGLE);
 		const multipleButton = screen.getByText(translations.TRANSACTION.MULTIPLE);
@@ -348,7 +348,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should prevent adding invalid recipient address in multiple type", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		const values = {
 			amount: 1,
@@ -375,7 +375,7 @@ describe("AddRecipient", () => {
 						<AddRecipient
 							profile={profile}
 							wallet={wallet}
-							onChange={jest.fn()}
+							onChange={vi.fn()}
 							recipients={[
 								{
 									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
@@ -431,7 +431,7 @@ describe("AddRecipient", () => {
 		};
 
 		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
+			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
 			values,
 		);
 
@@ -449,7 +449,7 @@ describe("AddRecipient", () => {
 		};
 
 		renderWithFormProvider(
-			<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />,
+			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />,
 			values,
 		);
 
@@ -492,7 +492,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for low balance", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -510,9 +510,9 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for zero balance", async () => {
-		const mockWalletBalance = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const mockWalletBalance = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -532,7 +532,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show error for invalid address", async () => {
-		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
+		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -579,7 +579,7 @@ describe("AddRecipient", () => {
 						<AddRecipient
 							profile={profile}
 							wallet={wallet}
-							onChange={jest.fn()}
+							onChange={vi.fn()}
 							recipients={[
 								{
 									address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
@@ -634,7 +634,7 @@ describe("AddRecipient", () => {
 
 			return (
 				<FormProvider {...form}>
-					<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />
+					<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} recipients={[]} />
 				</FormProvider>
 			);
 		};
@@ -670,7 +670,7 @@ describe("AddRecipient", () => {
 	});
 
 	it("should prevent adding more recipients than the coin supports", async () => {
-		const mockMultiPaymentRecipients = jest.spyOn(wallet.network(), "multiPaymentRecipients").mockReturnValue(1);
+		const mockMultiPaymentRecipients = vi.spyOn(wallet.network(), "multiPaymentRecipients").mockReturnValue(1);
 
 		renderWithFormProvider(
 			<AddRecipient
@@ -682,7 +682,7 @@ describe("AddRecipient", () => {
 				]}
 				profile={profile}
 				wallet={wallet}
-				onChange={jest.fn()}
+				onChange={vi.fn()}
 			/>,
 		);
 

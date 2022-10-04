@@ -5,7 +5,7 @@ import { Switch, SwitchOption } from "./Switch";
 import { render, screen } from "@/utils/testing-library";
 
 describe("Switch", () => {
-	const onChange = jest.fn();
+	const onChange = vi.fn();
 
 	const leftOption: SwitchOption = { label: "Option A", value: "a" };
 	const rightOption: SwitchOption = { label: "Option B", value: "b" };
@@ -22,7 +22,7 @@ describe("Switch", () => {
 	};
 
 	beforeEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should render", () => {

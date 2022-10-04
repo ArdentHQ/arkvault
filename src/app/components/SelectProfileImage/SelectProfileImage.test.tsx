@@ -13,7 +13,7 @@ const uploadButton = () => screen.getByTestId("SelectProfileImage__upload-button
 
 describe("SelectProfileImage", () => {
 	it("should render", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(<SelectProfileImage onSelect={onSelect} />);
 
@@ -21,7 +21,7 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should render with value svg", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(<SelectProfileImage value="<svg>test</svg>" onSelect={onSelect} />);
 
@@ -29,7 +29,7 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should render without value svg", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 
@@ -41,11 +41,11 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should handle upload file", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File([""], "test.png", { type: "image/png" }));
 
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 		const { result: useFilesResult } = renderHook(() => useFiles());
@@ -67,14 +67,14 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should not allow to upload an invalid file image", async () => {
-		const onSelect = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "error");
+		const onSelect = vi.fn();
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File(["123"], "not-an-image.png"));
 
@@ -97,14 +97,14 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should not handle upload file", async () => {
-		const onSelect = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "error");
+		const onSelect = vi.fn();
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
 
 		userEvent.click(uploadButton());
 
@@ -116,14 +116,14 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should not allow to upload when user aborted a request", async () => {
-		const onSelect = jest.fn();
-		const toastSpy = jest.spyOn(toasts, "error");
+		const onSelect = vi.fn();
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockRejectedValue(new Error("The user aborted a request."));
 

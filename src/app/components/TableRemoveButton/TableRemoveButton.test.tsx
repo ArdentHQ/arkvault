@@ -6,7 +6,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("TableRemoveButton", () => {
 	it("should render", () => {
-		const { container } = render(<TableRemoveButton onClick={jest.fn()} />);
+		const { container } = render(<TableRemoveButton onClick={vi.fn()} />);
 
 		expect(screen.getByTestId("TableRemoveButton")).toHaveTextContent("trash.svg");
 
@@ -14,7 +14,7 @@ describe("TableRemoveButton", () => {
 	});
 
 	it("should render compact", () => {
-		const { container } = render(<TableRemoveButton onClick={jest.fn()} isCompact />);
+		const { container } = render(<TableRemoveButton onClick={vi.fn()} isCompact />);
 
 		expect(screen.getByTestId("TableRemoveButton--compact")).toHaveTextContent("trash.svg");
 
@@ -22,7 +22,7 @@ describe("TableRemoveButton", () => {
 	});
 
 	it("should execute onClick callback", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(<TableRemoveButton onClick={onClick} />);
 

@@ -21,7 +21,7 @@ describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
 	it("should throw without provider", () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		const Test = () => {
 			const { exchangeProviders } = useExchangeContext();

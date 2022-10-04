@@ -147,7 +147,7 @@ describe("WalletDetails", () => {
 			.persist();
 
 		// Mock musig server requests
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {

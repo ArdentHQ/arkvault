@@ -39,7 +39,7 @@ describe("Link", () => {
 	});
 
 	it("should do nothing on click when disabled", () => {
-		const windowSpy = jest.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation();
 		const externalLink = "https://app.arkvault.io/";
 
 		const { asFragment } = render(
@@ -65,7 +65,7 @@ describe("Link", () => {
 	});
 
 	it("should open an external link", () => {
-		const windowSpy = jest.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation();
 
 		const externalLink = "https://app.arkvault.io/";
 
@@ -80,7 +80,7 @@ describe("Link", () => {
 	it("should show a toast when trying to open an invalid external link", () => {
 		const externalLink = "invalid-url";
 
-		const toastSpy = jest.spyOn(toasts, "error");
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = render(<Link to={externalLink} isExternal />);
 

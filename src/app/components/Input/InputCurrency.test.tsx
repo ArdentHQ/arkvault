@@ -13,7 +13,7 @@ describe("InputCurrency", () => {
 	});
 
 	it("should emit formatted value", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		render(<InputCurrency onChange={onChange} />);
 		const input = screen.getByTestId("InputCurrency");
 
@@ -23,7 +23,7 @@ describe("InputCurrency", () => {
 	});
 
 	it("should not allow letters", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		render(<InputCurrency onChange={onChange} />);
 		const input = screen.getByTestId("InputCurrency");
 

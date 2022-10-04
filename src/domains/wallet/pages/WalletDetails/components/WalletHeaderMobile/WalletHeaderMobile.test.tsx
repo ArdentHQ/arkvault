@@ -23,7 +23,7 @@ describe("WalletHeaderMobile", () => {
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 
@@ -46,7 +46,7 @@ describe("WalletHeaderMobile", () => {
 	});
 
 	it("should render for starred wallets", async () => {
-		const starredSpy = jest.spyOn(wallet, "isStarred").mockReturnValue(true);
+		const starredSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
 		const { container } = renderResponsiveWithRoute(
 			<WalletHeaderMobile profile={profile} wallet={wallet} />,
@@ -65,7 +65,7 @@ describe("WalletHeaderMobile", () => {
 	});
 
 	it("should show converted balance if wallet does not belongs to test network", async () => {
-		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+		const networkSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 
 		renderResponsiveWithRoute(<WalletHeaderMobile profile={profile} wallet={wallet} />, "xs", {
 			history,
@@ -80,8 +80,8 @@ describe("WalletHeaderMobile", () => {
 	});
 
 	it("should call the onUpdate method when wallet name is updated", async () => {
-		const onUpdateSpy = jest.fn();
-		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
+		const onUpdateSpy = vi.fn();
+		const networkSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 
 		renderResponsiveWithRoute(
 			<WalletHeaderMobile profile={profile} wallet={wallet} onUpdate={onUpdateSpy} />,

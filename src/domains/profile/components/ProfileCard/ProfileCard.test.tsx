@@ -60,7 +60,7 @@ describe("ProfileCard", () => {
 	});
 
 	it("should select an option in the settings", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<ProfileCard profile={profile} actions={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 

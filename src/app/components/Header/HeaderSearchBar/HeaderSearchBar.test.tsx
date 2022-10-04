@@ -39,7 +39,7 @@ describe("HeaderSearchBar", () => {
 	});
 
 	it("should reset fields by prop", async () => {
-		const onReset = jest.fn();
+		const onReset = vi.fn();
 		const { rerender } = render(<HeaderSearchBar onReset={onReset} />);
 
 		userEvent.click(screen.getByRole("button"));
@@ -66,7 +66,7 @@ describe("HeaderSearchBar", () => {
 	});
 
 	it("should hide the searchbar when clicked outside", () => {
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(
 			<div>
@@ -92,7 +92,7 @@ describe("HeaderSearchBar", () => {
 	});
 
 	it("should reset the query", () => {
-		const onReset = jest.fn();
+		const onReset = vi.fn();
 		render(<HeaderSearchBar onReset={onReset} />);
 
 		userEvent.click(screen.getByRole("button"));
@@ -110,9 +110,9 @@ describe("HeaderSearchBar", () => {
 	});
 
 	it("should call onSearch", () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(<HeaderSearchBar onSearch={onSearch} />);
 
@@ -121,16 +121,16 @@ describe("HeaderSearchBar", () => {
 		userEvent.paste(screen.getByTestId("Input"), "test");
 
 		act(() => {
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 
 	it("should set custom debounce timeout form props", () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(<HeaderSearchBar onSearch={onSearch} debounceTimeout={100} />);
 
@@ -139,7 +139,7 @@ describe("HeaderSearchBar", () => {
 		userEvent.paste(screen.getByTestId("Input"), "test");
 
 		act(() => {
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(onSearch).toHaveBeenCalledWith("test");

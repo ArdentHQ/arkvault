@@ -14,7 +14,7 @@ describe("UserMenu", () => {
 	it("should render with svg image", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<UserMenu avatarImage={profile.avatar()} onUserAction={jest.fn()} />
+				<UserMenu avatarImage={profile.avatar()} onUserAction={vi.fn()} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -30,7 +30,7 @@ describe("UserMenu", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<UserMenu avatarImage={avatarImage} onUserAction={jest.fn()} />
+				<UserMenu avatarImage={avatarImage} onUserAction={vi.fn()} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,

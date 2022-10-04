@@ -35,11 +35,11 @@ describe("MultiSignatureSuccessful", () => {
 			wallet: () => wallet,
 		};
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
 
-		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
+		vi.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
@@ -57,7 +57,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render with delegate sender wallet", async () => {
@@ -66,14 +66,14 @@ describe("MultiSignatureSuccessful", () => {
 			wallet: () => wallet,
 		};
 
-		jest.spyOn(wallet, "isDelegate").mockReturnValue(true);
-		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
+		vi.spyOn(wallet, "isDelegate").mockReturnValue(true);
+		vi.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
 
-		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
+		vi.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -90,7 +90,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should handle empty wallet and transation props", async () => {
@@ -113,11 +113,11 @@ describe("MultiSignatureSuccessful", () => {
 			wallet: () => wallet,
 		};
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+		vi.spyOn(transaction, "get").mockImplementation((attribute) =>
 			transactionMockImplementation(attribute, transaction),
 		);
 
-		jest.spyOn(transaction.wallet().coin().address(), "fromMultiSignature").mockResolvedValue({
+		vi.spyOn(transaction.wallet().coin().address(), "fromMultiSignature").mockResolvedValue({
 			address: undefined,
 		});
 
@@ -136,7 +136,7 @@ describe("MultiSignatureSuccessful", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render with ledger sender wallet", async () => {
@@ -147,9 +147,9 @@ describe("MultiSignatureSuccessful", () => {
 
 		const derivationPath = "m/44'/1'/1'/0/0";
 		const publicKey = wallet.publicKey();
-		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) => {
+		vi.spyOn(transaction, "get").mockImplementation((attribute) => {
 			if (attribute === "multiSignature") {
 				return {
 					min: 2,
@@ -165,15 +165,15 @@ describe("MultiSignatureSuccessful", () => {
 			return transaction[attribute]();
 		});
 
-		jest.spyOn(wallet.data(), "get").mockImplementation((attribute) => {
+		vi.spyOn(wallet.data(), "get").mockImplementation((attribute) => {
 			if (attribute === Contracts.WalletData.DerivationPath) {
 				return derivationPath;
 			}
 		});
 
-		jest.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(publicKey!);
+		vi.spyOn(wallet.ledger(), "getPublicKey").mockResolvedValue(publicKey!);
 
-		jest.spyOn(transaction.wallet().coin().address(), "fromMultiSignature").mockResolvedValue({
+		vi.spyOn(transaction.wallet().coin().address(), "fromMultiSignature").mockResolvedValue({
 			address: undefined,
 		});
 
@@ -192,6 +192,6 @@ describe("MultiSignatureSuccessful", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

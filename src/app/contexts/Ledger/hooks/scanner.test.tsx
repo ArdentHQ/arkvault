@@ -23,8 +23,8 @@ describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let legacyPublicKeyPaths: Map<string, string>;
-	let getPublicKeySpy: Jest.SpyInstance;
-	let getExtendedPublicKeySpy: Jest.SpyInstance;
+	let getPublicKeySpy: vi.SpyInstance;
+	let getExtendedPublicKeySpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		legacyPublicKeyPaths = new Map<string, string>();
@@ -93,11 +93,11 @@ describe("Use Ledger Scanner", () => {
 			["m/44'/1'/10'/0/0", "0349e7e2afb470994a8323e9623a6dab227c69d5f09f1a59991fd92880123ffe75"],
 		]);
 
-		getPublicKeySpy = jest
+		getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(legacyPublicKeyPaths.get(path)!));
 
-		getExtendedPublicKeySpy = jest
+		getExtendedPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockResolvedValue(wallet.publicKey()!);
 	});
@@ -108,7 +108,7 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	afterAll(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should render", async () => {
@@ -219,11 +219,11 @@ describe("Use Ledger Scanner", () => {
 		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
 		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
 	])("should load with last import path", async (path1, path2) => {
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const profileWallets = profile.wallets().values();
-		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
-		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
+		const walletSpy1 = vi.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = vi.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
 
 		const Component = () => {
 			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
@@ -287,7 +287,7 @@ describe("Use Ledger Scanner", () => {
 
 		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
 
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		userEvent.click(screen.getByTestId("scanMore"));
 
@@ -300,7 +300,7 @@ describe("Use Ledger Scanner", () => {
 
 	it("should dispatch failed", async () => {
 		getExtendedPublicKeySpy.mockRestore();
-		getExtendedPublicKeySpy = jest
+		getExtendedPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockRejectedValue(new Error("Failed"));
 

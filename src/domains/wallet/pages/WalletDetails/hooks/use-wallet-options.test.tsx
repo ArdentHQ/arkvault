@@ -60,7 +60,7 @@ describe("Wallet Options Hook", () => {
 
 	it("should get registration options for wallet without mnemonic", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
-		jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 
 		const { result } = renderHook(() => useWalletOptions(wallet));
 
@@ -73,14 +73,14 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render options for ledger wallet and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(wallet.network(), "allows").mockImplementation((key) => {
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.network(), "allows").mockImplementation((key) => {
 			if (
 				[
 					Enums.FeatureFlag.TransactionMultiSignatureLedgerS,
@@ -101,13 +101,13 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render options for wallet of custom network and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		jest.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
+		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
 		const { result } = renderHook(() => useWalletOptions(wallet));
 
 		expect(result.current.registrationOptions).toStrictEqual({
@@ -119,6 +119,6 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

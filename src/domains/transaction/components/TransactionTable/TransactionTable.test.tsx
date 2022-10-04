@@ -63,10 +63,10 @@ describe("TransactionTable", () => {
 	});
 
 	describe("loading state", () => {
-		let useRandomNumberSpy: jest.SpyInstance;
+		let useRandomNumberSpy: vi.SpyInstance;
 
 		beforeAll(() => {
-			useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+			useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 		});
 
 		afterAll(() => {
@@ -108,7 +108,7 @@ describe("TransactionTable", () => {
 	});
 
 	it("should emit action on the row click", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
 		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
@@ -119,7 +119,7 @@ describe("TransactionTable", () => {
 	});
 
 	it("should emit action on the compact row click", async () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} />);
 

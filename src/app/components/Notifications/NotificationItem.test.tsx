@@ -35,7 +35,7 @@ describe("Notifications", () => {
 	});
 
 	it("should emit onAction event", async () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 		render(
 			<table>
 				<tbody>
@@ -50,7 +50,7 @@ describe("Notifications", () => {
 	});
 
 	it("should emit onVisibilityChange event", async () => {
-		const onVisibilityChange = jest.fn();
+		const onVisibilityChange = vi.fn();
 		render(
 			<table>
 				<tbody>
@@ -63,7 +63,7 @@ describe("Notifications", () => {
 	});
 
 	it("should render with custom action name", () => {
-		const onVisibilityChange = jest.fn();
+		const onVisibilityChange = vi.fn();
 
 		profile.notifications().releases().push({
 			action: "custom action name",

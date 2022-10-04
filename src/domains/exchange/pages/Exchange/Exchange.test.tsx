@@ -1,4 +1,4 @@
-import "jest-extended";
+import "vi-extended";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -164,7 +164,7 @@ describe("Exchange", () => {
 			expect(screen.getAllByTestId("Card")).toHaveLength(2);
 		});
 
-		const historyMock = jest.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(screen.getByText("ChangeNOW"));
 
@@ -309,7 +309,7 @@ describe("Exchange", () => {
 	});
 
 	it("should update exchange transaction status", async () => {
-		const updateSpy = jest.spyOn(profile.exchangeTransactions(), "update");
+		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
 		nock(exchangeBaseURL)
@@ -389,7 +389,7 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		const historyMock = jest.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
@@ -401,7 +401,7 @@ describe("Exchange", () => {
 	});
 
 	it("should delete exchange transaction", async () => {
-		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success").mockImplementation();
 
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 		profile

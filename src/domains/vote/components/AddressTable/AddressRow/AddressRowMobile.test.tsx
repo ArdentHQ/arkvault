@@ -110,7 +110,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render for a multisignature wallet", async () => {
-		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
+		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
 		const { asFragment, container } = render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} />
@@ -148,7 +148,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render when wallet not loaded", () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 			},
@@ -190,7 +190,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render with active delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -225,7 +225,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render with standby delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -260,7 +260,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render with resigned delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -299,7 +299,7 @@ describe("AddressRowMobile", () => {
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().coin();
 
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		const { asFragment, container } = render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={onSelect} />
@@ -320,7 +320,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 		const { asFragment, container } = render(
 			<AddressWrapper>
@@ -338,7 +338,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render when the wallet has many votes", () => {
-		const votesMock = jest
+		const votesMock = vi
 			.spyOn(wallet.voting(), "current")
 			.mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 

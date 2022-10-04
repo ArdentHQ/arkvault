@@ -185,7 +185,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should work with an imported wallet", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<AddParticipant profile={profile} wallet={wallet} onChange={onChange} />
@@ -311,7 +311,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should remove participant", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId">

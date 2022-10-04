@@ -10,7 +10,7 @@ const clipboardCheckmarkID = "clipboard-button__checkmark";
 describe("ClipboardButton", () => {
 	beforeAll(() => {
 		(navigator as any).clipboard = {
-			writeText: jest.fn().mockResolvedValue("test"),
+			writeText: vi.fn().mockResolvedValue("test"),
 		};
 	});
 

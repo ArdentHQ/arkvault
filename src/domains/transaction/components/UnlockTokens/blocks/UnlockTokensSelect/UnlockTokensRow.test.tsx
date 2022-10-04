@@ -24,7 +24,7 @@ describe("UnlockTokensRow", () => {
 		render(
 			<table>
 				<tbody>
-					<UnlockTokensRow loading item={{}} ticker="LSK" checked={false} onToggle={jest.fn()} />
+					<UnlockTokensRow loading item={{}} ticker="LSK" checked={false} onToggle={vi.fn()} />
 				</tbody>
 			</table>,
 		);
@@ -33,7 +33,7 @@ describe("UnlockTokensRow", () => {
 	});
 
 	it.each([true, false])("should render with isReady = %s", (isReady) => {
-		const onToggle = jest.fn();
+		const onToggle = vi.fn();
 
 		const { asFragment } = render(
 			<table>

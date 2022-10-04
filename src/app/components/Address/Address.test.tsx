@@ -41,7 +41,7 @@ describe("Formatted Address", () => {
 	});
 
 	it.each(["horizontal", "vertical"])("should render with %s orientation", (orientation) => {
-		const useResizeDetectorSpy = jest.spyOn(useResizeDetectorModule, "useResizeDetector");
+		const useResizeDetectorSpy = vi.spyOn(useResizeDetectorModule, "useResizeDetector");
 		useResizeDetectorSpy.mockReturnValueOnce({ ref: null, width: 50 }).mockReturnValue({ ref: null, width: 30 });
 
 		const { container } = render(

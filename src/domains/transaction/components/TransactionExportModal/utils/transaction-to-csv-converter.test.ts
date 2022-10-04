@@ -47,7 +47,7 @@ describe("CsvFormatter", () => {
 	});
 
 	afterEach(() => {
-		jest.resetAllMocks();
+		vi.resetAllMocks();
 	});
 
 	it("should convert to csv including header row", async () => {

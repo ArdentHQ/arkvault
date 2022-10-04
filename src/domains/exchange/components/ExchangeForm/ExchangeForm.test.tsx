@@ -24,7 +24,7 @@ const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: HashHistory;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => setTimeout(callback, 200),
 }));
 
@@ -133,7 +133,7 @@ describe("ExchangeForm", () => {
 		);
 
 	it("should render exchange form", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -165,7 +165,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of pending order", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -206,7 +206,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of finished order", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -245,7 +245,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should go back to exchange page", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -269,7 +269,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
@@ -286,7 +286,7 @@ describe("ExchangeForm", () => {
 			.get("/api/changenow/tickers/btc/eth")
 			.reply(422, { error: { message: "Unavailable Pair" } });
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -309,7 +309,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show and hide refund address input", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -361,7 +361,7 @@ describe("ExchangeForm", () => {
 
 		nock(exchangeBaseURL).get(exchangeETHURL).reply(200, currency);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -402,7 +402,7 @@ describe("ExchangeForm", () => {
 			.get(exchangeETHURL)
 			.reply(200, currency);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -443,7 +443,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should swap currencies", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -476,7 +476,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should calculate amounts", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -531,7 +531,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove amount if removing currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -574,7 +574,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payout amount if removing payin amount", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -614,7 +614,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payin amount if removing payout amount", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -654,7 +654,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payin amount when there is no from currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -693,7 +693,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payout amount when there is no to currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -738,7 +738,7 @@ describe("ExchangeForm", () => {
 			.get("/api/changenow/currencies/eth/payoutAddress")
 			.reply(200, { data: false });
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -784,7 +784,7 @@ describe("ExchangeForm", () => {
 			.get("/api/changenow/currencies/eth/payoutAddress")
 			.reply(200, { data: false });
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -833,7 +833,7 @@ describe("ExchangeForm", () => {
 
 		nock(exchangeBaseURL).post("/api/changenow/orders").reply(500, "Server Error");
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -908,7 +908,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
 		userEvent.click(continueButton());
@@ -928,7 +928,7 @@ describe("ExchangeForm", () => {
 			.post("/api/changenow/orders")
 			.reply(422, { error: { message: "Invalid Address" } });
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -987,7 +987,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1007,7 +1007,7 @@ describe("ExchangeForm", () => {
 			.post("/api/changenow/orders")
 			.reply(422, { error: { message: "Invalid Refund Address" } });
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -1078,7 +1078,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1125,7 +1125,7 @@ describe("ExchangeForm", () => {
 				},
 			});
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -1230,7 +1230,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(
 			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),
@@ -1373,7 +1373,7 @@ describe("StatusStep", () => {
 		const { container } = render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={jest.fn()} />
+					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={vi.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 		);
@@ -1386,7 +1386,7 @@ describe("StatusStep", () => {
 	});
 
 	it("should execute onUpdate callback on status change", async () => {
-		const onUpdate = jest.fn();
+		const onUpdate = vi.fn();
 
 		const exchangeTransactionData = {
 			input: {

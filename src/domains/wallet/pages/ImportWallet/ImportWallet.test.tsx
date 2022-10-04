@@ -47,7 +47,7 @@ const route = `/profiles/${fixtureProfileId}/wallets/import`;
 const routeLedger = `/profiles/${fixtureProfileId}/wallets/import/ledger`;
 const history = createHashHistory();
 
-jest.setTimeout(30_000);
+vi.setTimeout(30_000);
 
 const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
@@ -237,7 +237,7 @@ describe("ImportWallet", () => {
 
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
-		const onClickEditAlias = jest.fn();
+		const onClickEditAlias = vi.fn();
 		const importedWallet = profile.wallets().first();
 
 		const Component = () => {
@@ -270,7 +270,7 @@ describe("ImportWallet", () => {
 	it("should go back to portfolio", async () => {
 		const history = createHashHistory();
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -295,7 +295,7 @@ describe("ImportWallet", () => {
 	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		resetProfileNetworksMock();
 
@@ -715,7 +715,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
-		const findAdressSpy = jest.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
+		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
 
 		userEvent.paste(publicKeyInput(), randomPublicKey);
 
@@ -960,7 +960,7 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const profileForgetWalletSpy = jest.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
 
 		userEvent.click(backButton());
 
@@ -1026,7 +1026,7 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const fromSecretMock = jest.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
+		const fromSecretMock = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
@@ -1247,7 +1247,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
@@ -1386,7 +1386,7 @@ describe("ImportWallet", () => {
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		const coin = profile.coins().get("ARK", testNetwork);
-		const coinMock = jest.spyOn(coin, "__construct").mockImplementationOnce(() => {
+		const coinMock = vi.spyOn(coin, "__construct").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
@@ -1395,7 +1395,7 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
-		const toastDismissMock = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastDismissMock = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
@@ -1458,7 +1458,7 @@ describe("ImportWallet", () => {
 
 		it("when is valid", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
+			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -1487,7 +1487,7 @@ describe("ImportWallet", () => {
 
 		it("when is not valid", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
+			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
 				throw new Error("test");
 			});
 
@@ -1567,7 +1567,7 @@ describe("ImportWallet", () => {
 
 		it("with valid wif", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest
+			const coinMock = vi
 				.spyOn(coin.address(), "fromWIF")
 				.mockResolvedValue({ address: "whatever", type: "bip39" });
 
@@ -1603,7 +1603,7 @@ describe("ImportWallet", () => {
 		it("with invalid wif", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
 
-			const coinMock = jest.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
+			const coinMock = vi.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
 				throw new Error("Something went wrong");
 			});
 

@@ -10,13 +10,13 @@ import { browser } from "@/utils/platform";
 describe("useTheme", () => {
 	describe("theme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
-			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
+			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
 			expect(useTheme().theme).toBe("dark");
 		});
 
 		it("should return 'light' if shouldUseDarkColors is false", () => {
-			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
+			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
 			expect(useTheme().theme).toBe("light");
 		});
@@ -24,13 +24,13 @@ describe("useTheme", () => {
 
 	describe("isDarkMode", () => {
 		it("should return true if dark mode", () => {
-			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
+			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
 			expect(useTheme().isDarkMode).toBe(true);
 		});
 
 		it("should return false if not dark mode", () => {
-			jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
+			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
 			expect(useTheme().isDarkMode).toBe(false);
 		});
@@ -48,16 +48,16 @@ describe("useTheme", () => {
 		});
 
 		it("should set system theme", () => {
-			const overflowOverlayMock = jest.spyOn(browser, "supportsOverflowOverlay").mockReturnValue(false);
+			const overflowOverlayMock = vi.spyOn(browser, "supportsOverflowOverlay").mockReturnValue(false);
 
 			Object.defineProperty(window, "matchMedia", {
-				value: jest.fn().mockImplementation((query) => ({
+				value: vi.fn().mockImplementation((query) => ({
 					// Deprecated
-					addEventListener: jest.fn(),
+					addEventListener: vi.fn(),
 
-					addListener: jest.fn(),
+					addListener: vi.fn(),
 
-					dispatchEvent: jest.fn(),
+					dispatchEvent: vi.fn(),
 
 					matches: "dark",
 
@@ -65,9 +65,9 @@ describe("useTheme", () => {
 
 					onchange: null,
 
-					removeEventListener: jest.fn(),
+					removeEventListener: vi.fn(),
 					// Deprecated
-					removeListener: jest.fn(),
+					removeListener: vi.fn(),
 				})),
 				writable: true,
 			});
@@ -83,7 +83,7 @@ describe("useTheme", () => {
 		});
 
 		it("should add firefox classes to the html element if overflow overlay is not supported", () => {
-			const overflowOverlayMock = jest.spyOn(browser, "supportsOverflowOverlay");
+			const overflowOverlayMock = vi.spyOn(browser, "supportsOverflowOverlay");
 
 			overflowOverlayMock.mockReturnValue(false);
 
@@ -129,7 +129,7 @@ describe("useTheme", () => {
 
 			themeHook.setTheme("light");
 
-			const themeSpy = jest.spyOn(themeHook, "setTheme");
+			const themeSpy = vi.spyOn(themeHook, "setTheme");
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
@@ -149,7 +149,7 @@ describe("useTheme", () => {
 			["dark", "light"],
 		])("should reset profile %s theme to defaults", async (profileTheme, systemTheme) => {
 			Object.defineProperty(window, "matchMedia", {
-				value: jest.fn().mockImplementation(() => ({
+				value: vi.fn().mockImplementation(() => ({
 					matches: systemTheme === "dark",
 				})),
 			});

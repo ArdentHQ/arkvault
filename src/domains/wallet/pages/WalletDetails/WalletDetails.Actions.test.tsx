@@ -90,7 +90,7 @@ describe("WalletDetails", () => {
 			.persist();
 
 		// Mock musig server requests
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
@@ -101,7 +101,7 @@ describe("WalletDetails", () => {
 	it("should navigate to send transfer", async () => {
 		await renderPage({ waitForTopSection: true });
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
 
@@ -117,8 +117,8 @@ describe("WalletDetails", () => {
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
 		await profile.sync();
 
-		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
-		const historySpy = jest.spyOn(history, "push");
+		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
+		const historySpy = vi.spyOn(history, "push");
 
 		await renderPage();
 
@@ -135,7 +135,7 @@ describe("WalletDetails", () => {
 	});
 
 	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
-		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -157,8 +157,8 @@ describe("WalletDetails", () => {
 				}),
 			},
 		]);
-		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
-		const historySpy = jest.spyOn(history, "push");
+		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
+		const historySpy = vi.spyOn(history, "push");
 
 		await renderPage();
 
@@ -210,7 +210,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should open wallet in explorer", async () => {
-		const windowSpy = jest.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation();
 
 		await renderPage();
 
@@ -279,7 +279,7 @@ describe("WalletDetails", () => {
 
 		await newWallet.synchroniser().identity();
 
-		const syncVotesSpy = jest.spyOn(newWallet.synchroniser(), "votes").mockImplementation();
+		const syncVotesSpy = vi.spyOn(newWallet.synchroniser(), "votes").mockImplementation();
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${newWallet.id()}`;
 		history.push(walletUrl);

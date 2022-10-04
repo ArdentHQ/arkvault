@@ -5,7 +5,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("Range", () => {
 	it("should render", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		const { asFragment } = render(<Range values={[10]} onChange={onChange} />);
 
 		expect(screen.getByTestId("Range")).toBeInTheDocument();
@@ -16,7 +16,7 @@ describe("Range", () => {
 	});
 
 	it("should render invalid", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		const { asFragment } = render(<Range values={[10]} isInvalid onChange={onChange} />);
 
 		expect(screen.getByTestId("Range")).toBeInTheDocument();

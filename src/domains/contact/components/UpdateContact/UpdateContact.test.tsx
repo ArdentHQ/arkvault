@@ -18,10 +18,10 @@ let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
 let resetProfileNetworksMock: () => void;
 
-const onCancel = jest.fn();
-const onClose = jest.fn();
-const onDelete = jest.fn();
-const onSave = jest.fn();
+const onCancel = vi.fn();
+const onClose = vi.fn();
+const onDelete = vi.fn();
+const onSave = vi.fn();
 
 const nameInput = () => screen.getByTestId("contact-form__name-input");
 
@@ -58,7 +58,7 @@ describe("UpdateContact", () => {
 	});
 
 	it("should cancel contact update", async () => {
-		const onCancelFunction = jest.fn();
+		const onCancelFunction = vi.fn();
 
 		render(
 			<UpdateContact
@@ -81,7 +81,7 @@ describe("UpdateContact", () => {
 	});
 
 	it("should not update contact if provided name already exists", async () => {
-		const onSaveFunction = jest.fn();
+		const onSaveFunction = vi.fn();
 
 		const newContact = profile.contacts().create("New name", [
 			{
@@ -144,9 +144,9 @@ describe("UpdateContact", () => {
 	});
 
 	it("should call onDelete callback", async () => {
-		const deleteSpy = jest.spyOn(profile.contacts(), "forget").mockImplementation();
+		const deleteSpy = vi.spyOn(profile.contacts(), "forget").mockImplementation();
 
-		const onDeleteFunction = jest.fn();
+		const onDeleteFunction = vi.fn();
 
 		render(
 			<UpdateContact
@@ -175,7 +175,7 @@ describe("UpdateContact", () => {
 	});
 
 	it("should update contact name and address", async () => {
-		const onSaveFunction = jest.fn();
+		const onSaveFunction = vi.fn();
 
 		const newName = "Updated name";
 		const newAddress = {

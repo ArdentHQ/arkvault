@@ -9,10 +9,10 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("AppearanceViewingMode", () => {
 	it("should render", () => {
-		const watch = jest.fn();
-		const setValue = jest.fn();
+		const watch = vi.fn();
+		const setValue = vi.fn();
 
-		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
+		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
 			() => ({ setValue, watch } as unknown as UseFormMethods),
 		);
 
@@ -23,10 +23,10 @@ describe("AppearanceViewingMode", () => {
 	});
 
 	it.each(["light", "dark"])("should allow to change the value", (viewingMode: string) => {
-		const watch = jest.fn();
-		const setValue = jest.fn();
+		const watch = vi.fn();
+		const setValue = vi.fn();
 
-		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
+		vi.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
 			() => ({ setValue, watch } as unknown as UseFormMethods),
 		);
 

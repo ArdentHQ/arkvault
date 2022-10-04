@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import "jest-extended";
+import "vi-extended";
 
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -32,7 +32,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
@@ -82,7 +82,7 @@ describe("SendVote Combined", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		jest.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
 		await syncDelegates(profile);
 		await syncFees(profile);
@@ -103,17 +103,17 @@ describe("SendVote Combined", () => {
 	});
 
 	beforeEach(() => {
-		jest.useFakeTimers("legacy");
+		vi.useFakeTimers("legacy");
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 		resetProfileNetworksMock();
 	});
 
 	it("should send a unvote & vote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
@@ -169,20 +169,20 @@ describe("SendVote Combined", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signUnvoteMock = jest
+		const signUnvoteMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(unvoteFixture.data.id));
-		const broadcastUnvoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastUnvoteMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [unvoteFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
 		const transactionUnvoteMock = createVoteTransactionMock(wallet);
 
-		const signVoteMock = jest
+		const signVoteMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastVoteMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastVoteMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [voteFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -201,7 +201,7 @@ describe("SendVote Combined", () => {
 		});
 
 		act(() => {
-			jest.advanceTimersByTime(1000);
+			vi.advanceTimersByTime(1000);
 		});
 
 		setTimeout(() => {
@@ -209,14 +209,14 @@ describe("SendVote Combined", () => {
 		}, 3000);
 
 		act(() => {
-			jest.runOnlyPendingTimers();
+			vi.runOnlyPendingTimers();
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
 		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));

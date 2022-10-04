@@ -24,11 +24,11 @@ import {
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
-jest.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
+vi.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
 	mockedTestEnvironment.profiles().findById(getDefaultProfileId()),
 );
 
-jest.spyOn(navigation, "getNavigationMenu").mockReturnValue([
+vi.spyOn(navigation, "getNavigationMenu").mockReturnValue([
 	{
 		mountPath: (profileId: string) => `/profiles/${profileId}/dashboard`,
 		title: "Portfolio",
@@ -75,7 +75,7 @@ describe("NavigationBar", () => {
 	});
 
 	it.each([true, false])("should render full variant when profile restored is %s", (isRestored) => {
-		const isRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(isRestored);
+		const isRestoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(isRestored);
 
 		const { container, asFragment } = render(<NavigationBar />);
 
@@ -93,7 +93,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render with shadow if there is a scroll", () => {
-		const scrollSpy = jest.spyOn(useScrollHook, "useScroll").mockImplementation(() => 1);
+		const scrollSpy = vi.spyOn(useScrollHook, "useScroll").mockImplementation(() => 1);
 
 		const { container, asFragment } = render(<NavigationBar />);
 
@@ -158,7 +158,7 @@ describe("NavigationBar", () => {
 	it("should handle logo click", () => {
 		const { history } = render(<NavigationBar />);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
@@ -170,7 +170,7 @@ describe("NavigationBar", () => {
 	it("should redirect to home by default on logo click", () => {
 		const { history } = render(<NavigationBar variant="logo-only" />);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation();
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
@@ -203,7 +203,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should open user actions dropdown on click", () => {
-		const getUserMenuActionsMock = jest.spyOn(navigation, "getUserMenuActions").mockReturnValue([
+		const getUserMenuActionsMock = vi.spyOn(navigation, "getUserMenuActions").mockReturnValue([
 			{ label: "Option 1", mountPath: () => "/test", title: "test", value: "/test" },
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
 		]);
@@ -392,7 +392,7 @@ describe("NavigationBar", () => {
 	it("should disable send transfer button when no Live wallets in test network", () => {
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 		const mockProfile = environmentHooks.useActiveProfile();
-		const profileSettingsMock = jest.spyOn(mockProfile.settings(), "get").mockImplementation((key: string) => {
+		const profileSettingsMock = vi.spyOn(mockProfile.settings(), "get").mockImplementation((key: string) => {
 			if (key === Contracts.ProfileSetting.Name) {
 				return "John Doe";
 			}

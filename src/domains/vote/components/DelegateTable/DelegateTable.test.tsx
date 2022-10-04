@@ -9,7 +9,7 @@ import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-let useRandomNumberSpy: jest.SpyInstance;
+let useRandomNumberSpy: vi.SpyInstance;
 
 let wallet: Contracts.IReadWriteWallet;
 let delegates: Contracts.IReadOnlyWallet[];
@@ -22,7 +22,7 @@ const footerVotes = () => screen.getByTestId("DelegateTable__footer--vote");
 
 describe("DelegateTable", () => {
 	beforeAll(() => {
-		useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().values()[0];
@@ -69,7 +69,7 @@ describe("DelegateTable", () => {
 	});
 
 	it("should render vote amount column", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const { container, asFragment } = render(
 			<DelegateTable
@@ -90,7 +90,7 @@ describe("DelegateTable", () => {
 
 	describe.each(["base", "requiresAmount"])("loading state for %s", (voteType) => {
 		it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {
-			const votesAmountMinimumMock = jest
+			const votesAmountMinimumMock = vi
 				.spyOn(wallet.network(), "votesAmountMinimum")
 				.mockReturnValue(voteType === "requiresAmount" ? 10 : 0);
 
@@ -219,7 +219,7 @@ describe("DelegateTable", () => {
 	});
 
 	it("should select a delegate with vote amount and make it unvote", () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const votes: Contracts.VoteRegistryItem[] = [
 			{
@@ -253,8 +253,8 @@ describe("DelegateTable", () => {
 	});
 
 	it("should select a changed delegate to unvote", async () => {
-		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		const votesAmountStepMock = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		const votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 
 		const votes: Contracts.VoteRegistryItem[] = [
 			{
@@ -408,7 +408,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -446,7 +446,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { asFragment, rerender } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -488,7 +488,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -518,7 +518,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -554,7 +554,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}
@@ -586,7 +586,7 @@ describe("DelegateTable", () => {
 			},
 		];
 
-		const onContinue = jest.fn();
+		const onContinue = vi.fn();
 		const { container, asFragment } = render(
 			<DelegateTable
 				delegates={delegates}

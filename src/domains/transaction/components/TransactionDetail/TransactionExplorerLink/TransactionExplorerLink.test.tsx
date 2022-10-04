@@ -22,7 +22,7 @@ describe("TransactionExplorerLink", () => {
 	});
 
 	it("should render a transaction link responsive after the width has calculated", () => {
-		jest.spyOn(reactResizeDetector, "useResizeDetector").mockReturnValue({ width: 100 });
+		vi.spyOn(reactResizeDetector, "useResizeDetector").mockReturnValue({ width: 100 });
 
 		const { container } = render(
 			<TransactionExplorerLink

@@ -6,11 +6,11 @@ import { ValidationRule } from ".";
 
 const validPassword = "S3cUr3!Pas#w0rd";
 
-let pwnd: jest.SpyInstance;
+let pwnd: vi.SpyInstance;
 
 describe("usePasswordValidation", () => {
 	beforeEach(() => {
-		pwnd = jest.spyOn(passwordPwnd, "pwned").mockResolvedValue(0);
+		pwnd = vi.spyOn(passwordPwnd, "pwned").mockResolvedValue(0);
 	});
 
 	afterEach(() => pwnd.mockRestore());
@@ -105,7 +105,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-			pwnd = jest.spyOn(passwordPwnd, "pwned").mockResolvedValue(1);
+			pwnd = vi.spyOn(passwordPwnd, "pwned").mockResolvedValue(1);
 
 			await result.current.validatePassword(validPassword);
 

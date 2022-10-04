@@ -20,7 +20,7 @@ describe("TransactionRow", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
 
 	afterAll(() => {
