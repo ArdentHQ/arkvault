@@ -24,7 +24,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: 4,
+		maxWorkers: 2,
 	},
 	"domains/contact": {
 		coverageThreshold: {
@@ -33,7 +33,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/dashboard": {
 		coverageThreshold: {
@@ -42,7 +42,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/error": {
 		coverageThreshold: {
@@ -51,7 +51,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/exchange": {
 		coverageThreshold: {
@@ -60,7 +60,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/message": {
 		coverageThreshold: {
@@ -69,7 +69,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/network": {
 		coverageThreshold: {
@@ -78,7 +78,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/news": {
 		coverageThreshold: {
@@ -87,7 +87,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/profile": {
 		coverageThreshold: {
@@ -96,7 +96,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/setting": {
 		coverageThreshold: {
@@ -105,7 +105,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/transaction": {
 		coverageThreshold: {
@@ -114,7 +114,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: 3,
+		maxWorkers: 2,
 	},
 	"domains/vote": {
 		coverageThreshold: {
@@ -123,7 +123,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	"domains/wallet": {
 		coverageThreshold: {
@@ -132,7 +132,7 @@ const directories = {
 			lines: 60,
 			statements: 60,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	router: {
 		coverageThreshold: {
@@ -141,7 +141,7 @@ const directories = {
 			lines: 100,
 			statements: 100,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 	utils: {
 		coverageThreshold: {
@@ -150,7 +150,7 @@ const directories = {
 			lines: 50,
 			statements: 46.94,
 		},
-		maxWorkers: "50%",
+		maxWorkers: 2,
 	},
 };
 
