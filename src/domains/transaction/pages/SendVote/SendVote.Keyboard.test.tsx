@@ -128,7 +128,7 @@ describe("SendVote", () => {
 			}),
 		);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
 				<FormProvider {...form.current}>
 					<LedgerProvider>
