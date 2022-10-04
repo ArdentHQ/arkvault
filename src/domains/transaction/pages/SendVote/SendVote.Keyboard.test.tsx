@@ -107,6 +107,10 @@ describe("SendVote", () => {
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 		const walletVoteSyncMock = jest.spyOn(wallet.synchroniser(), "votes").mockResolvedValue(undefined);
 
+		const mnemonicMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		const votes: VoteDelegateProperties[] = [
 			{
 				amount: 10,
@@ -207,11 +211,10 @@ describe("SendVote", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		expect(container).toMatchSnapshot();
-
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		walletVoteSyncMock.mockRestore();
+		mnemonicMock.mockRestore();
 	});
 });
