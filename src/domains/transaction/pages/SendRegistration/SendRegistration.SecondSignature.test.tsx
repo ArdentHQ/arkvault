@@ -5,11 +5,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
-import React, { useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
-import { LedgerProvider, minVersionList, useLedgerContext } from "@/app/contexts";
+import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
@@ -44,19 +44,9 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const SendRegistrationWrapper = () => {
-		const { listenDevice } = useLedgerContext();
-
-		useEffect(() => {
-			listenDevice();
-		}, []);
-
-		return <SendRegistration />;
-	};
-
 	const utils = render(
 		<Route path={path}>
-			<SendRegistrationWrapper />
+			<SendRegistration />
 		</Route>,
 		{
 			history,
@@ -97,10 +87,10 @@ describe("Second Signature Registration", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
-		await profile.sync();
+		// await profile.sync();
 
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
-		// secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
+
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
 				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
@@ -112,9 +102,6 @@ describe("Second Signature Registration", () => {
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-		await wallet.synchroniser().identity();
-		await secondWallet.synchroniser().identity();
 
 		profile.wallets().push(
 			await profile.walletFactory().fromAddress({
@@ -132,7 +119,7 @@ describe("Second Signature Registration", () => {
 		getVersionSpy.mockRestore();
 	});
 
-	beforeEach(() => {
+	beforeAll(() => {
 		nock.cleanAll();
 		defaultNetMocks();
 
