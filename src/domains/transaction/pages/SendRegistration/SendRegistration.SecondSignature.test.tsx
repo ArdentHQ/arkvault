@@ -99,6 +99,9 @@ describe("Second Signature Registration", () => {
 			}),
 		);
 
+		await wallet.synchroniser().identity();
+		await secondWallet.synchroniser().identity();
+
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
