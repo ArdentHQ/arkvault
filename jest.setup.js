@@ -5,6 +5,10 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 
+jest.mock("@/utils/debounce", () => ({
+	debounceAsync: (promise) => promise,
+}));
+
 jest.mock(
 	"virtual:pwa-register/react",
 	() => {
