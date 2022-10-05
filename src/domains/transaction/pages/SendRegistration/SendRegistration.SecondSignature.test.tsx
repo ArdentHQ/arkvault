@@ -5,11 +5,11 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
-import React, { useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
-import { LedgerProvider, minVersionList, useLedgerContext } from "@/app/contexts";
+import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
@@ -44,19 +44,9 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const SendRegistrationWrapper = () => {
-		const { listenDevice } = useLedgerContext();
-
-		useEffect(() => {
-			listenDevice();
-		}, []);
-
-		return <SendRegistration />;
-	};
-
 	const utils = render(
 		<Route path={path}>
-			<SendRegistrationWrapper />
+			<SendRegistration />
 		</Route>,
 		{
 			history,
@@ -101,7 +91,6 @@ describe("Second Signature Registration", () => {
 
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
 
-		// secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
 				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
@@ -116,9 +105,6 @@ describe("Second Signature Registration", () => {
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-		await wallet.synchroniser().identity();
-		await secondWallet.synchroniser().identity();
 
 		profile.wallets().push(
 			await profile.walletFactory().fromAddress({
@@ -136,7 +122,7 @@ describe("Second Signature Registration", () => {
 		getVersionSpy.mockRestore();
 	});
 
-	beforeEach(() => {
+	beforeAll(() => {
 		nock.cleanAll();
 		defaultNetMocks();
 
@@ -148,31 +134,6 @@ describe("Second Signature Registration", () => {
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
 			.persist();
-	});
-
-	it.each([
-		["delegateRegistration", "Register Delegate"],
-		["secondSignature", "Register Second Signature"],
-		["multiSignature", multisignatureTitle],
-	])("should handle registrationType param (%s)", async (type, label) => {
-		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
-		history.push(registrationPath);
-
-		render(
-			<Route path={path}>
-				<LedgerProvider>
-					<SendRegistration />
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-				route: registrationPath,
-			},
-		);
-
-		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
 	it("should register second signature", async () => {
@@ -265,5 +226,30 @@ describe("Second Signature Registration", () => {
 		bip39GenerateMock.mockRestore();
 		nanoXTransportMock.mockRestore();
 		mnemonicValidationMock.mockRestore();
+	});
+
+	it.each([
+		["delegateRegistration", "Register Delegate"],
+		["secondSignature", "Register Second Signature"],
+		["multiSignature", multisignatureTitle],
+	])("should handle registrationType param (%s)", async (type, label) => {
+		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
+		history.push(registrationPath);
+
+		render(
+			<Route path={path}>
+				<LedgerProvider>
+					<SendRegistration />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: registrationPath,
+			},
+		);
+
+		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 });
