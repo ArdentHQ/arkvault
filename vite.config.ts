@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config"
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import svgrPlugin from "vite-plugin-svgr";
@@ -10,11 +10,6 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	test: {
-		globals: true,
-		environment: "jsdom",
-		setupFiles: "@testing-library/jest-dom",
-	},
 	build: {
 		target: "esnext",
 		rollupOptions: {
