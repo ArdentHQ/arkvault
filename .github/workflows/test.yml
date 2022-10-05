@@ -83,7 +83,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/contact --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/contact/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/contact/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -122,7 +122,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/dashboard --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/dashboard/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/dashboard/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -161,7 +161,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/error --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/error/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/error/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -200,7 +200,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/exchange --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/exchange/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/exchange/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -239,7 +239,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/message --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/message/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/message/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -278,7 +278,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/network --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/network/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/network/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -317,7 +317,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/news --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/news/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/news/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -356,7 +356,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/profile --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/profile/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/profile/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -395,7 +395,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/setting --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/setting/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/setting/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -434,7 +434,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/transaction --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=3 --logHeapUsage --watchAll=false
+                      --forceExit --maxWorkers=2 --logHeapUsage --watchAll=false
                       --coverage
                       --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -473,7 +473,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/vote --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/vote/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/vote/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -512,7 +512,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/domains/wallet --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
+                      --forceExit --maxWorkers=2 --logHeapUsage
                       --watchAll=false --coverage
                       --collectCoverageFrom='["src/domains/wallet/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/domains/wallet/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -551,7 +551,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/router --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=50% --logHeapUsage --watchAll=false
+                      --maxWorkers=2 --logHeapUsage --watchAll=false
                       --coverage
                       --collectCoverageFrom='["src/router/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/router/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
@@ -590,7 +590,7 @@ jobs:
                   max_attempts: 1
                   command: node --expose-gc ./node_modules/jest/bin/jest.js
                       src/utils --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=50% --logHeapUsage --watchAll=false
+                      --maxWorkers=2 --logHeapUsage --watchAll=false
                       --coverage
                       --collectCoverageFrom='["src/utils/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
                       --coverageThreshold='{"./src/utils/":{"branches":0,"functions":0,"lines":0,"statements":0}}'
