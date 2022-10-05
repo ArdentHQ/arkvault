@@ -15,7 +15,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-build-and-upload
@@ -60,7 +60,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-vote
@@ -129,7 +129,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-transaction
@@ -198,7 +198,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-contact
@@ -267,7 +267,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-dashboard
@@ -336,7 +336,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-profile
@@ -405,7 +405,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-message
@@ -474,7 +474,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-news
@@ -543,7 +543,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-wallet
@@ -612,7 +612,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [16.9.1]
+                node-version: [18.10.0]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-settings
