@@ -1,3 +1,4 @@
+import path from "path";
 import { mergeConfig } from "vite";
 import { defineConfig } from "vitest/config";
 
@@ -9,4 +10,9 @@ export default mergeConfig(viteConfig, defineConfig({
 		environment: "jsdom",
 		setupFiles: "@testing-library/jest-dom",
 	},
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 }));
