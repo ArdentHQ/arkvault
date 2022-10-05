@@ -100,6 +100,7 @@ describe("Second Signature Registration", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
+
 		// secondWallet = profile.wallets().findByAddressWithNetwork("D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb", "ark.devnet")!;
 		secondWallet = profile.wallets().push(
 			await profile.walletFactory().fromAddress({
@@ -108,6 +109,9 @@ describe("Second Signature Registration", () => {
 				network: "ark.devnet",
 			}),
 		);
+
+		await wallet.synchroniser().identity();
+		await secondWallet.synchroniser().identity();
 
 		getVersionSpy = jest
 			.spyOn(wallet.coin().ledger(), "getVersion")
