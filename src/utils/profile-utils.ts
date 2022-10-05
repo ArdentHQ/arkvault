@@ -1,6 +1,8 @@
 import { matchPath } from "react-router-dom";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 
+import { profileAllEnabledNetworkIds } from "./network-utils";
+
 export const getProfileById = (env: Environment, id: string) => {
 	if (!id) {
 		return;
@@ -36,14 +38,14 @@ export const getProfileStoredPassword = (profile: Contracts.IProfile) => {
 };
 
 export const getErroredNetworks = (profile: Contracts.IProfile) => {
-	const erroredNetworks: string[] = [];
-
-	const availableNetworkIds = new Set(profile.availableNetworks().map((network) => network.id()));
+	const enabledNetworksIds = profileAllEnabledNetworkIds(profile);
 
 	const wallets = profile
 		.wallets()
 		.values()
-		.filter((wallet) => availableNetworkIds.has(wallet.networkId()));
+		.filter((wallet) => enabledNetworksIds.includes(wallet.networkId()));
+
+	const erroredNetworks: string[] = [];
 
 	for (const wallet of wallets) {
 		const name = `${wallet.network().coin()} ${wallet.network().name()}`;
