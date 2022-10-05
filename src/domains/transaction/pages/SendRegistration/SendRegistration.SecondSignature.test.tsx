@@ -87,7 +87,7 @@ describe("Second Signature Registration", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
-		// await profile.sync();
+		await profile.sync();
 
 		wallet = profile.wallets().findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", "ark.devnet")!;
 
@@ -131,31 +131,6 @@ describe("Second Signature Registration", () => {
 			.post("/")
 			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
 			.persist();
-	});
-
-	it.each([
-		["delegateRegistration", "Register Delegate"],
-		["secondSignature", "Register Second Signature"],
-		["multiSignature", multisignatureTitle],
-	])("should handle registrationType param (%s)", async (type, label) => {
-		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
-		history.push(registrationPath);
-
-		render(
-			<Route path={path}>
-				<LedgerProvider>
-					<SendRegistration />
-				</LedgerProvider>
-			</Route>,
-			{
-				history,
-				route: registrationPath,
-			},
-		);
-
-		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
 	it("should register second signature", async () => {
@@ -248,5 +223,30 @@ describe("Second Signature Registration", () => {
 		bip39GenerateMock.mockRestore();
 		nanoXTransportMock.mockRestore();
 		mnemonicValidationMock.mockRestore();
+	});
+
+	it.each([
+		["delegateRegistration", "Register Delegate"],
+		["secondSignature", "Register Second Signature"],
+		["multiSignature", multisignatureTitle],
+	])("should handle registrationType param (%s)", async (type, label) => {
+		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
+		history.push(registrationPath);
+
+		render(
+			<Route path={path}>
+				<LedgerProvider>
+					<SendRegistration />
+				</LedgerProvider>
+			</Route>,
+			{
+				history,
+				route: registrationPath,
+			},
+		);
+
+		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
+
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 });
