@@ -3,7 +3,9 @@ import { Cache } from "./Cache";
 let subject: Cache;
 
 describe("Cache", () => {
-	beforeAll(() => (subject = new Cache(10)));
+	beforeAll(() => {
+		subject = new Cache(10);
+	});
 
 	it("should remember a value if it is a string", async () => {
 		subject.flush();

@@ -280,7 +280,9 @@ describe("WalletVote", () => {
 
 		let maxVotesSpy: vi.SpyInstance;
 
-		beforeEach(() => (maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101)));
+		beforeEach(() => {
+			maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
+		});
 
 		afterEach(() => maxVotesSpy.mockRestore());
 

@@ -7,7 +7,9 @@ import { env, getDefaultProfileId, render, screen } from "@/utils/testing-librar
 let profile: Contracts.IProfile;
 
 describe("Avatar", () => {
-	beforeAll(() => (profile = env.profiles().findById(getDefaultProfileId())));
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
 
 	it("should render with svg", () => {
 		const { asFragment } = render(<ProfileAvatar profile={profile} />);

@@ -60,7 +60,9 @@ describe("VerifyMessage", () => {
 		});
 	});
 
-	beforeEach(() => history.push(walletUrl));
+	beforeEach(() => {
+		history.push(walletUrl);
+	});
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(

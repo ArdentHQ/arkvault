@@ -8,7 +8,9 @@ let subject: ExchangeService;
 const provider = "changenow";
 
 describe("ExchangeService", () => {
-	beforeAll(() => nock.disableNetConnect());
+	beforeAll(() => {
+		nock.disableNetConnect();
+	});
 
 	beforeEach(() => {
 		subject = new ExchangeService(provider, httpClient);

@@ -56,7 +56,9 @@ describe("SignMessage", () => {
 	});
 
 	describe("Sign with Wallet", () => {
-		beforeEach(() => history.push(walletUrl(wallet.id())));
+		beforeEach(() => {
+			history.push(walletUrl(wallet.id()));
+		});
 
 		it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 			await wallet.synchroniser().identity();
