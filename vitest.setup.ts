@@ -17,24 +17,24 @@ vi.mock(
 	},
 );
 
-// vi.mock("@/app/hooks/use-synchronizer", () => {
-// 	const { useSynchronizer } = vi.requireActual("@/app/hooks/use-synchronizer");
+vi.mock("@/app/hooks/use-synchronizer", async () => {
+	const { useSynchronizer } = await vi.importActual("@/app/hooks/use-synchronizer");
 
-// 	return {
-// 		useSynchronizer: (jobs) => {
-// 			if (process.env.MOCK_SYNCHRONIZER) {
-// 				return {
-// 					start: vi.fn(),
-// 					stop: vi.fn(),
-// 					runAll: vi.fn(),
-// 					error: undefined,
-// 				};
-// 			}
+	return {
+		useSynchronizer: (jobs) => {
+			if (process.env.MOCK_SYNCHRONIZER) {
+				return {
+					start: vi.fn(),
+					stop: vi.fn(),
+					runAll: vi.fn(),
+					error: undefined,
+				};
+			}
 
-// 			return useSynchronizer(jobs);
-// 		},
-// 	};
-// });
+			return useSynchronizer(jobs);
+		},
+	};
+});
 
 vi.mock("react-idle-timer", () => {
 	return {
@@ -51,10 +51,13 @@ vi.mock("react-idle-timer", () => {
 });
 
 // Reduce ledger connection retries to 2 in all tests.
-// vi.mock("async-retry", () => {
-// 	const retry = vi.requireActual("async-retry");
-// 	return (fn, options) => retry(fn, { ...options, retries: 2 });
-// });
+vi.mock("async-retry", async () => {
+	const retry = await vi.importActual("async-retry");
+
+	return {
+    default: (fn, options) => retry(fn, { ...options, retries: 2 }),
+  };
+});
 
 vi.mock("browser-fs-access");
 
@@ -127,7 +130,7 @@ class ResizeObserverMock {
 
 window.ResizeObserver = ResizeObserverMock;
 
-global.BroadcastChannel = class BroadcastChannel {
+class BroadcastChannelMock {
 	postMessage = vi.fn();
 	onMessage = vi.fn();
 	onMessageError = vi.fn();
@@ -136,6 +139,8 @@ global.BroadcastChannel = class BroadcastChannel {
 	close = vi.fn();
 };
 
-global.CSS = {
+vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
+
+vi.stubGlobal("CSS", {
   supports: () => true,
-};
+});
