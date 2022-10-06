@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "vi-extended";
+import "jest-extended";
 
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";

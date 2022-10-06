@@ -10,7 +10,6 @@ import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	render,
@@ -115,7 +114,6 @@ describe("Registration Fee", () => {
 
 	beforeEach(() => {
 		nock.cleanAll();
-		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")

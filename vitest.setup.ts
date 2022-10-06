@@ -5,6 +5,12 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 
+import { server } from "./src/tests/mocks/server";
+
+vi.mock("@/utils/debounce", () => ({
+	debounceAsync: (promise) => promise,
+}));
+
 vi.mock(
 	"virtual:pwa-register/react",
 	() => {
@@ -68,6 +74,8 @@ const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
 beforeAll(async () => {
+	server.listen({ onUnhandledRequest: "error" });
+
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
@@ -94,12 +102,16 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+	server.resetHandlers();
+
 	MockDate.reset();
 
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
 });
+
+afterAll(() => server.close())
 
 Object.defineProperty(HTMLImageElement.prototype, "decode", {
 	writable: true,

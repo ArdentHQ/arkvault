@@ -1,9 +1,6 @@
-import "vi-extended";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory, HashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
@@ -21,11 +18,13 @@ import {
 	within,
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
+import { rest } from "msw";
+import { server } from "@/tests/mocks/server";
 
 let history: HashHistory;
 let profile: Contracts.IProfile;
 
-const exchangeBaseURL = "https://exchanges.arkvault.io";
+const exchangeBaseURL = "https://exchanges.arkvault.io/api";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 const stubData = {
@@ -66,7 +65,6 @@ describe("Exchange", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		history = createHashHistory();
-		nock.cleanAll();
 	});
 
 	beforeEach(() => {
@@ -74,14 +72,17 @@ describe("Exchange", () => {
 	});
 
 	afterEach(() => {
-		nock.cleanAll();
 		httpClient.clearCache();
 
 		profile.exchangeTransactions().flush();
 	});
 
 	it("should render empty", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, { data: [] });
+		server.use(
+			rest.get(exchangeBaseURL, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: [] }));
+			})
+		);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
@@ -109,8 +110,6 @@ describe("Exchange", () => {
 	});
 
 	it("should render with exchanges", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -140,8 +139,6 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to exchange", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -176,8 +173,6 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to history tab", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -207,8 +202,6 @@ describe("Exchange", () => {
 
 	it("should show exchange transaction history", async () => {
 		profile.exchangeTransactions().create(stubData);
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -244,8 +237,6 @@ describe("Exchange", () => {
 
 		profile.exchangeTransactions().create(stubData);
 
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -276,8 +267,6 @@ describe("Exchange", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
 		profile.exchangeTransactions().create(stubData);
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/exchange">
@@ -312,12 +301,11 @@ describe("Exchange", () => {
 		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
-		nock(exchangeBaseURL)
-			.get("/api")
-			.reply(200, require("tests/fixtures/exchange/exchanges.json"))
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "finished" } });
+		server.use(
+			rest.get(`${exchangeBaseURL}/changenow/orders/id`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: { id: exchangeTransaction.orderId(), status: "finished" } }));
+			}),
+		);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -362,8 +350,6 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -407,8 +393,6 @@ describe("Exchange", () => {
 		profile
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -468,8 +452,6 @@ describe("Exchange", () => {
 		profile
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">

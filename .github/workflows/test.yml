@@ -159,7 +159,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage --dir src/domains/error
+                  command: pnpm test:coverage -- --dir src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
         strategy:

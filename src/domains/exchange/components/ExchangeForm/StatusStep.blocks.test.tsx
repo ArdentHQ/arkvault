@@ -35,7 +35,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Failed);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-cross.svg");
+		// expect(container).toHaveTextContent("circle-cross.svg");
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.FAILED"));
 
 		expect(container).toMatchSnapshot();
@@ -48,7 +48,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Refunded);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-exclamation-mark.svg");
+		// expect(container).toHaveTextContent("circle-exclamation-mark.svg");
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.REFUNDED"));
 
 		expect(container).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Verifying);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-exclamation-mark.svg");
+		// expect(container).toHaveTextContent("circle-exclamation-mark.svg");
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.VERIFYING"));
 
 		expect(container).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Expired);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-cross.svg");
+		// expect(container).toHaveTextContent("circle-cross.svg");
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.EXPIRED"));
 
 		expect(container).toMatchSnapshot();

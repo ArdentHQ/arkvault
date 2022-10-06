@@ -16,7 +16,6 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	within,
 } from "@/utils/testing-library";
@@ -31,8 +30,6 @@ const API_BASE_URL = "https://ark-test.arkvault.io";
 
 describe("Transactions", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
 		const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
 
 		nock("https://neoscan.io/api/main_net/v1/")

@@ -13,7 +13,6 @@ import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -124,7 +123,6 @@ describe("Second Signature Registration", () => {
 
 	beforeAll(() => {
 		nock.cleanAll();
-		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")

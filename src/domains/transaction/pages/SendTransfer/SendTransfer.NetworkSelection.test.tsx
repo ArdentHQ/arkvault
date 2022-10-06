@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "vi-extended";
+import "jest-extended";
 
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";

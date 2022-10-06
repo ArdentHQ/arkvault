@@ -1,11 +1,12 @@
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
+import { server } from "../../../tests/mocks/server";
+import { rest } from "msw";
 
 const Test = () => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
@@ -48,9 +49,11 @@ describe("Exchange Context", () => {
 	});
 
 	it("should handle error when fetching providers", async () => {
-		nock.cleanAll();
-
-		nock("https://exchanges.arkvault.io").get("/api").reply(404);
+		server.use(
+			rest.get("https://exchanges.arkvault.io/api", (req, res, ctx) => {
+				return res(ctx.status(404));
+			})
+		);
 
 		const { container } = render(
 			<ExchangeProvider>

@@ -9,7 +9,6 @@ import {
 	env,
 	getDefaultProfileId,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
@@ -31,8 +30,6 @@ describe("useLatestTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		useDefaultNetMocks();
 
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")

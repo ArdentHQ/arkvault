@@ -8,7 +8,6 @@ import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -38,7 +37,6 @@ describe("Use Transaction Builder with Ledger", () => {
 	);
 
 	beforeAll(() => {
-		defaultNetMocks();
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 	});

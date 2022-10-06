@@ -11,7 +11,6 @@ import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	render,
@@ -139,7 +138,6 @@ describe("Registration", () => {
 
 	beforeEach(() => {
 		nock.cleanAll();
-		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")

@@ -16,7 +16,6 @@ import {
 	render,
 	screen,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	within,
 	mockNanoXTransport,
@@ -32,8 +31,6 @@ let dashboardURL: string;
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)

@@ -5,7 +5,7 @@ import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -15,8 +15,6 @@ const wrapper = ({ children }: any) => (
 
 describe("useProfileTransactions", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
 		nock("https://ark-test.arkvault.io")
 			.get("/api/transactions")
 			.query(true)

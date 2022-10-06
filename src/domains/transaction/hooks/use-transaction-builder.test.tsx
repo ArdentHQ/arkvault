@@ -6,7 +6,6 @@ import React from "react";
 import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -23,7 +22,6 @@ describe("Use Transaction Builder Hook", () => {
 	);
 
 	beforeAll(async () => {
-		defaultNetMocks();
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 

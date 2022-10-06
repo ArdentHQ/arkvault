@@ -14,7 +14,6 @@ import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/trans
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import {
 	act,
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -147,7 +146,6 @@ describe("Registration", () => {
 
 	beforeEach(() => {
 		nock.cleanAll();
-		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")

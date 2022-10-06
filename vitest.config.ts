@@ -8,6 +8,7 @@ export default mergeConfig(viteConfig, defineConfig({
   test: {
 		globals: true,
 		environment: "jsdom",
+    isolate: true,
 		setupFiles: [
       "./vitest.setup.ts",
     ],
@@ -34,7 +35,7 @@ export default mergeConfig(viteConfig, defineConfig({
         "src/tests/**/*",
         "src/utils/e2e-utils.ts",
       ],
-      provider: "istanbul",
+      provider: "c8",
       reporter: ["json", "lcov", "text", "clover", "html"],
       lines: 100,
       functions: 100,

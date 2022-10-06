@@ -11,7 +11,6 @@ import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	render,
@@ -173,7 +172,6 @@ describe("WalletDetails", () => {
 		).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
-		defaultNetMocks();
 
 		nock("https://ark-test-musig.arkvault.io/")
 			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")

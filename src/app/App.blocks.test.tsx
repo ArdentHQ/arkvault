@@ -5,7 +5,6 @@ import userEvent from "@testing-library/user-event";
 import { Route, useHistory, Prompt } from "react-router-dom";
 import { AppRouter, Main } from "./App.blocks";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	mockProfileWithPublicAndTestNetworks,
@@ -122,7 +121,6 @@ describe("App Main", () => {
 		history.push("/");
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
-		defaultNetMocks();
 	});
 
 	afterAll(() => {
