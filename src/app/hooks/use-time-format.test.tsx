@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { createHashHistory } from "history";
-import { when } from "vi-when";
+import { when } from "jest-when";
 import React from "react";
 import { Router } from "react-router-dom";
 

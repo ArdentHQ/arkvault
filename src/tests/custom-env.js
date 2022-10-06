@@ -1,4 +1,4 @@
-const Environment = require("vi-environment-jsdom");
+const Environment = require("jest-environment-jsdom");
 const crypto = require("crypto");
 
 /**

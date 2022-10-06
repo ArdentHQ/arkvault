@@ -15,7 +15,7 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
@@ -43,17 +43,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/app/ --env=./src/tests/custom-env.js --forceExit --maxWorkers=2
-                      --logHeapUsage --watchAll=false --coverage
-                      --collectCoverageFrom='["src/app/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/app/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/app
     domains-contact:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
@@ -81,18 +77,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/contact --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/contact/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/contact/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/contact
     domains-dashboard:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
@@ -120,18 +111,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/dashboard --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/dashboard/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/dashboard/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/dashboard
     domains-error:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
@@ -159,13 +145,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage -- --dir src/domains/error
+                  command: pnpm vitest run --coverage --dir src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
@@ -193,18 +179,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/exchange --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/exchange/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/exchange/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
@@ -232,18 +213,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/message --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/message/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/message/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/message
     domains-network:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
@@ -271,18 +247,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/network --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/network/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/network/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/network
     domains-news:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-news
             cancel-in-progress: true
@@ -310,18 +281,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/news --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/news/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/news/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/news
     domains-profile:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
@@ -349,18 +315,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/profile --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/profile/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/profile/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/profile
     domains-setting:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
@@ -388,18 +349,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/setting --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/setting/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/setting/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/setting
     domains-transaction:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
@@ -427,18 +383,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/transaction --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/transaction
     domains-vote:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
@@ -466,18 +417,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/vote --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/vote/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/vote/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/vote
     domains-wallet:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
@@ -505,18 +451,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/wallet --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/wallet/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/wallet/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/domains/wallet
     router:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
@@ -544,18 +485,13 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/router --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/router/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/router/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm vitest run --coverage --dir src/router
     utils:
         runs-on: ubuntu-latest
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
@@ -583,9 +519,4 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/utils --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/utils/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/utils/":{"branches":0,"functions":0,"lines":0,"statements":0}}'
+                  command: pnpm vitest run --coverage --dir src/utils

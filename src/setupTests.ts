@@ -1,4 +1,4 @@
-import "@testing-library/vi-dom/extend-expect";
+import "@testing-library/jest-dom/extend-expect";
 import "mutationobserver-shim";
 
 describe("setup", () => {
@@ -27,4 +27,4 @@ describe("setup", () => {
 	});
 });
 
-global.fetch = require("vi-fetch-mock");
+global.fetch = require("jest-fetch-mock");

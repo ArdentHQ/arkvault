@@ -154,30 +154,12 @@ const directories = {
 	},
 };
 
-for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(directories)) {
-	const collectCoverageFrom = [
-		`src/${directory}/**/*.{js,jsx,ts,tsx}`,
-		"!<rootDir>/build/*",
-		"!<rootDir>/dist/*",
-		"!jest.setup.js",
-		"!src/**/e2e/*.ts",
-		"!src/**/cucumber/*.ts",
-		"!src/**/*.e2e.ts",
-		"!src/**/*.models.{js,jsx,ts,tsx}",
-		"!src/**/*.stories.{js,jsx,ts,tsx}",
-		"!src/**/*.styles.{js,jsx,ts,tsx}",
-		"!src/i18n/**/*",
-		"!src/tests/**/*",
-		"!src/tailwind.config.js",
-		"!src/utils/e2e-utils.ts",
-		"!src/polyfill/**/*",
-	];
-
+for (const [directory] of Object.entries(directories)) {
 	const job = {
 		"runs-on": "ubuntu-latest",
 		strategy: {
 			matrix: {
-				"node-version": ["16.x"],
+				"node-version": ["16.17.1"],
 			},
 		},
 		concurrency: {
@@ -194,7 +176,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			{
 				uses: "pnpm/action-setup@v2",
 				with: {
-					version: "6.24.4",
+					version: 7,
 				},
 			},
 			{
@@ -214,7 +196,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			},
 			{
 				name: "Install (pnpm)",
-				run: "pnpm install",
+				run: "pnpm install --frozen-lockfile",
 			},
 			{
 				name: "Rebuild",
@@ -224,13 +206,9 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 				name: "Test",
 				uses: "nick-invision/retry@v2",
 				with: {
-					timeout_minutes: 10,
+					timeout_minutes: 20,
 					max_attempts: 1,
-					command: `.pnpm test --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
-						collectCoverageFrom,
-					)}' --coverageThreshold='${JSON.stringify({
-						[`./src/${directory}/`]: coverageThreshold,
-					})}'`,
+					command: `pnpm vitest run --coverage --dir src/${directory}`,
 				},
 			},
 		],
