@@ -96,11 +96,11 @@ describe("SendDelegateResignation", () => {
 			resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationUrl);
 
-			mnemonicMock = jest
+			mnemonicMock = vi
 				.spyOn(wallet.coin().address(), "fromMnemonic")
 				.mockResolvedValue({ address: wallet.address() });
 
-			secondMnemonicMock = jest
+			secondMnemonicMock = vi
 				.spyOn(wallet.coin().publicKey(), "fromMnemonic")
 				.mockResolvedValue({ publicKey: wallet.publicKey() });
 		});

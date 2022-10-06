@@ -114,7 +114,7 @@ describe("Registration", () => {
 			}),
 		);
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
@@ -159,11 +159,11 @@ describe("Registration", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 
-		const getPublicKeyMock = jest
+		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
@@ -213,11 +213,11 @@ describe("Registration", () => {
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
 
-		const getPublicKeyMock = jest
+		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
 
-		const signTransactionMock = jest
+		const signTransactionMock = vi
 			.spyOn(wallet.transaction(), "signMultiSignature")
 			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
 
