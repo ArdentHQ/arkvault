@@ -127,6 +127,7 @@ specifiers:
   vite-plugin-package-config: ^0.1.1
   vite-plugin-pwa: ^0.12.0
   vite-plugin-svgr: ^0.6.0
+  vite-require: ^0.2.3
   vite-tsconfig-paths: ^3.4.1
   vitest: ^0.23.4
   workbox-window: ^6.5.3
@@ -262,6 +263,7 @@ devDependencies:
   vite-plugin-package-config: 0.1.1_vite@2.9.5
   vite-plugin-pwa: 0.12.0_nmh4z3meiw4zjeje3ieza3n4yq
   vite-plugin-svgr: 0.6.0_vite@2.9.5
+  vite-require: 0.2.3
   vite-tsconfig-paths: 3.4.1_vite@2.9.5
   vitest: 0.23.4
   workbox-window: 6.5.3
@@ -2351,12 +2353,40 @@ packages:
       chalk: 4.1.2
     dev: true
 
+  /@jridgewell/gen-mapping/0.3.2:
+    resolution: {integrity: sha512-mh65xKQAzI6iBcFzwv28KVWSmCkdRBWoOh+bYQGW3+6OZvbbN3TqMGo5hqYxQniRcH9F2VZIoJCm4pa3BPDK/A==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      '@jridgewell/set-array': 1.1.2
+      '@jridgewell/sourcemap-codec': 1.4.11
+      '@jridgewell/trace-mapping': 0.3.15
+    dev: true
+
   /@jridgewell/resolve-uri/3.0.5:
     resolution: {integrity: sha512-VPeQ7+wH0itvQxnG+lIzWgkysKIr3L9sslimFW55rHMdGu/qCQ5z5h9zq4gI8uBtqkpHhsF4Z/OwExufUCThew==}
     engines: {node: '>=6.0.0'}
 
+  /@jridgewell/set-array/1.1.2:
+    resolution: {integrity: sha512-xnkseuNADM0gt2bs+BvhO0p78Mk762YnZdsuzFV018NoG1Sj1SCQvpSqa7XUaTam5vAGasABV9qXASMKnFMwMw==}
+    engines: {node: '>=6.0.0'}
+    dev: true
+
+  /@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
+      '@jridgewell/trace-mapping': 0.3.15
+    dev: true
+
   /@jridgewell/sourcemap-codec/1.4.11:
     resolution: {integrity: sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg==}
+
+  /@jridgewell/trace-mapping/0.3.15:
+    resolution: {integrity: sha512-oWZNOULl+UbhsgB51uuZzglikfIKSUBO/M9W2OfEjn7cmqoAiCgmv9lyACTUacZwBz0ITnJ2NqjU8Tx0DHL88g==}
+    dependencies:
+      '@jridgewell/resolve-uri': 3.0.5
+      '@jridgewell/sourcemap-codec': 1.4.11
+    dev: true
 
   /@jridgewell/trace-mapping/0.3.9:
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
@@ -6550,12 +6580,12 @@ packages:
     dev: true
 
   /is-extglob/1.0.0:
-    resolution: {integrity: sha1-rEaBd8SUNAWgkvyPKXYMb/xiBsA=}
+    resolution: {integrity: sha512-7Q+VbVafe6x2T+Tu6NcOf6sRklazEPmBoB3IWk3WdGZM2iGUwU/Oe3Wtq5lSEkDTTlpp8yx+5t4pzO/i9Ty1ww==}
     engines: {node: '>=0.10.0'}
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
 
   /is-finite/1.1.0:
@@ -7456,7 +7486,7 @@ packages:
     dev: true
 
   /jsesc/0.5.0:
-    resolution: {integrity: sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=}
+    resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
     hasBin: true
     dev: true
 
@@ -7488,7 +7518,7 @@ packages:
     dev: true
 
   /json5/0.5.1:
-    resolution: {integrity: sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=}
+    resolution: {integrity: sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw==}
     hasBin: true
     dev: true
 
@@ -7745,7 +7775,7 @@ packages:
     dev: true
 
   /lru-cache/2.6.3:
-    resolution: {integrity: sha1-UczQtPwMhDWH16VwnOTTt2Kb7cU=}
+    resolution: {integrity: sha512-qkisDmHMe8gxKujmC1BdaqgkoFlioLDCUwaFBA3lX8Ilhr3YzsasbGYaiADMjxQnj+aiZUKgGKe/BN3skMwXWw==}
     dev: true
 
   /lru-cache/6.0.0:
@@ -7799,7 +7829,7 @@ packages:
     dev: false
 
   /merge-stream/1.0.1:
-    resolution: {integrity: sha1-QEEgLVCKNCugAXQAjfDCUbjBNeE=}
+    resolution: {integrity: sha512-e6RM36aegd4f+r8BZCcYXlO2P3H6xbUM6ktL2Xmf45GAOit9bI4z6/3VU7JwllVO1L7u0UDSg/EhzQ5lmMLolA==}
     dependencies:
       readable-stream: 2.3.7
     dev: true
@@ -9350,7 +9380,7 @@ packages:
       jest-worker: 26.6.2
       rollup: 2.78.1
       serialize-javascript: 4.0.0
-      terser: 5.13.1
+      terser: 5.15.1
     dev: true
 
   /rollup-plugin-visualizer/5.6.0_rollup@2.70.2:
@@ -9614,19 +9644,19 @@ packages:
     dev: true
 
   /source-map/0.1.43:
-    resolution: {integrity: sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=}
+    resolution: {integrity: sha512-VtCvB9SIQhk3aF6h+N85EaqIaBFIAfZ9Cu+NJHHVvc8BbEcnvDcFw6sqQ2dQrT6SlOrZq3tIvyD9+EGq/lJryQ==}
     engines: {node: '>=0.8.0'}
     dependencies:
       amdefine: 1.0.1
     dev: true
 
   /source-map/0.5.6:
-    resolution: {integrity: sha1-dc449SvwczxafwwRjYEzSiu19BI=}
+    resolution: {integrity: sha512-MjZkVp0NHr5+TPihLcadqnlVoGIoWo4IBHptutGh9wI3ttUYvCG26HkSuDi+K6lsZ25syXJXcctwgyVCt//xqA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map/0.5.7:
-    resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=}
+    resolution: {integrity: sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==}
     engines: {node: '>=0.10.0'}
 
   /source-map/0.6.1:
@@ -10040,14 +10070,14 @@ packages:
       supports-hyperlinks: 2.2.0
     dev: true
 
-  /terser/5.13.1:
-    resolution: {integrity: sha512-hn4WKOfwnwbYfe48NgrQjqNOH9jzLqRcIfbYytOXCOv46LBfWr9bDS17MQqOi+BWGD0sJK3Sj5NC/gJjiojaoA==}
+  /terser/5.15.1:
+    resolution: {integrity: sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
+      '@jridgewell/source-map': 0.3.2
       acorn: 8.8.0
       commander: 2.20.3
-      source-map: 0.8.0-beta.0
       source-map-support: 0.5.21
     dev: true
 
@@ -10373,7 +10403,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
   /to-regex-range/5.0.1:
@@ -10734,6 +10764,10 @@ packages:
       - supports-color
     dev: true
 
+  /vite-plugin-dynamic-import/1.2.2:
+    resolution: {integrity: sha512-50m5Whh9ZLzJouIcHhSzlcrieXx3YUiWAel4twcaNvZIlV9AbRud8e1qAunzpHZKTKPwujhkZps3O6XwebRGLg==}
+    dev: true
+
   /vite-plugin-optimize-persist/0.1.2_h75giynhgnxftd6km3bdnt7a2q:
     resolution: {integrity: sha512-H/Ebn2kZO8PvwUF08SsT5K5xMJNCWKoGX71+e9/ER3yNj7GHiFjNQlvGg5ih/zEx09MZ9m7WCxOwmEKbeIVzww==}
     peerDependencies:
@@ -10786,6 +10820,13 @@ packages:
       vite: 2.9.5
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-require/0.2.3:
+    resolution: {integrity: sha512-Lpeg5mxXiLAVrylKK9FMF8d6yxLBm6YtHXmtWpJSDSWBdl12tBsMGHOBC/fsLzATj+Zp9FHjqwzE1JayOPi9dQ==}
+    dependencies:
+      fast-glob: 3.2.11
+      vite-plugin-dynamic-import: 1.2.2
     dev: true
 
   /vite-tsconfig-paths/3.4.1_vite@2.9.5:

@@ -9,6 +9,9 @@ export default mergeConfig(viteConfig, defineConfig({
 		globals: true,
 		environment: "jsdom",
 		setupFiles: "@testing-library/jest-dom",
+    deps: {
+      fallbackCJS: true,
+    },
 	},
   resolve: {
     alias: {
