@@ -116,6 +116,10 @@ describe("SendVote Combined", () => {
 		const votesMock = vi.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
+		const mnemonicMock = vi.spyOn(wallet.coin().address(), "fromMnemonic").mockResolvedValue({
+			address: wallet.address(),
+		});
+
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
@@ -232,5 +236,6 @@ describe("SendVote Combined", () => {
 		signVoteMock.mockRestore();
 		broadcastVoteMock.mockRestore();
 		transactionVoteMock.mockRestore();
+		mnemonicMock.mockRestore();
 	});
 });

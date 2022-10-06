@@ -5,11 +5,10 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
-import React, { useEffect } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
-import { LedgerProvider, minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
@@ -26,7 +25,6 @@ import {
 	syncFees,
 	waitFor,
 	within,
-	mockNanoSTransport,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
 
@@ -35,7 +33,6 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
-let getVersionSpy: vi.SpyInstance;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -48,19 +45,9 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 
 	history.push(registrationURL);
 
-	const SendRegistrationWrapper = () => {
-		const { listenDevice } = useLedgerContext();
-
-		useEffect(() => {
-			listenDevice();
-		}, []);
-
-		return <SendRegistration />;
-	};
-
 	const utils = render(
 		<Route path={path}>
-			<SendRegistrationWrapper />
+			<SendRegistration />
 		</Route>,
 		{
 			history,
@@ -143,10 +130,6 @@ describe("Registration", () => {
 			}),
 		);
 
-		getVersionSpy = vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
-			.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
@@ -160,10 +143,6 @@ describe("Registration", () => {
 
 		await syncDelegates(profile);
 		await syncFees(profile);
-	});
-
-	afterAll(() => {
-		getVersionSpy.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -190,9 +169,7 @@ describe("Registration", () => {
 
 		render(
 			<Route path={path}>
-				<LedgerProvider>
-					<SendRegistration />
-				</LedgerProvider>
+				<SendRegistration />
 			</Route>,
 			{
 				history,
@@ -312,61 +289,6 @@ describe("Registration", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		nanoXTransportMock.mockRestore();
-	});
-
-	it("should show ledger error screen in authentication if nanoS is connected", async () => {
-		const nanoSSpy = mockNanoSTransport();
-		await renderPage(wallet, "multiSignature");
-
-		// Ledger mocks
-		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
-
-		const getPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
-
-		const signTransactionMock = vi
-			.spyOn(wallet.transaction(), "signMultiSignature")
-			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
-
-		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
-			accepted: [MultisignatureRegistrationFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
-
-		const wallet2 = profile.wallets().last();
-
-		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
-
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
-
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		// Step 2
-		userEvent.click(continueButton());
-
-		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
-		// Skip Authentication Step
-		userEvent.click(continueButton());
-
-		await waitFor(() => expect(screen.getByTestId("LedgerDeviceError")).toBeVisible());
-
-		isLedgerMock.mockRestore();
-		getPublicKeyMock.mockRestore();
-		signTransactionMock.mockRestore();
-		multiSignatureRegistrationMock.mockRestore();
-		addSignatureMock.mockRestore();
-		mockDerivationPath.mockRestore();
-		nanoSSpy.mockRestore();
 	});
 
 	it.skip("should reset authentication when a supported Nano X is added", async () => {
@@ -630,64 +552,5 @@ describe("Registration", () => {
 		actsWithMnemonicMock.mockRestore();
 		secondPublicKeyMock.mockRestore();
 		nanoXTransportMock.mockRestore();
-	});
-
-	it("should send multisignature registration with ledger wallet", async () => {
-		const envPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
-		// Ledger mocks
-		const nanoXTransportMock = mockNanoXTransport();
-		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
-
-		const getPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
-
-		const signTransactionMock = vi
-			.spyOn(wallet.transaction(), "signMultiSignature")
-			.mockReturnValue(Promise.resolve(MultisignatureRegistrationFixture.data.id));
-
-		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue({
-			accepted: [MultisignatureRegistrationFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const multiSignatureRegistrationMock = createMultiSignatureRegistrationMock(wallet);
-
-		const wallet2 = profile.wallets().last();
-
-		await renderPage(wallet, "multiSignature");
-
-		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
-
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
-
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-
-		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		// Step 2
-		userEvent.click(continueButton());
-
-		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
-		// Skip Authentication Step
-		userEvent.click(continueButton());
-
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		isLedgerMock.mockRestore();
-		getPublicKeyMock.mockRestore();
-		signTransactionMock.mockRestore();
-		multiSignatureRegistrationMock.mockRestore();
-		addSignatureMock.mockRestore();
-		mockDerivationPath.mockRestore();
-		nanoXTransportMock.mockRestore();
-		envPersistMock.mockRestore();
 	});
 });

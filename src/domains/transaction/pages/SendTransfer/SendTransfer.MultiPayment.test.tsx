@@ -4,7 +4,6 @@ import "vi-extended";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -16,12 +15,9 @@ import {
 	getDefaultProfileId,
 	render,
 	screen,
-	syncFees,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-
-const fixtureProfileId = getDefaultProfileId();
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -35,46 +31,21 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.setTimeout(6000);
-
 describe("SendTransfer MultiPayment", () => {
 	beforeAll(async () => {
-		profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
-
-		await env.profiles().restore(profile);
-		await profile.sync();
-
+		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
-		profile.coins().set("ARK", "ark.devnet");
-
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, { data: [], meta: {} })
-			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T.json"))
-			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
-
-		await syncFees(profile);
-	});
-
-	beforeEach(() => {
 		mockProfileNetworkReset = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
-	afterEach(() => {
+	afterAll(() => {
 		mockProfileNetworkReset();
 	});
 
 	it("should select two recipients", async () => {
-		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
+		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
+		const profileSetCoinMock = vi.spyOn(profile.coins(), "set").mockReturnValue(wallet.coin());
 
 		history.push(transferURL);
 
@@ -116,6 +87,8 @@ describe("SendTransfer MultiPayment", () => {
 		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
+
 		coinValidateMock.mockRestore();
+		profileSetCoinMock.mockRestore();
 	});
 });

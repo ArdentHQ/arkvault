@@ -463,10 +463,11 @@ describe("useProfileSynchronizer", () => {
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
 
-		const onProfileSyncError = vi.fn().mockImplementation((erroredNetworks: string[], retrySync) => {
+		const onProfileSyncError = (erroredNetworks: string[], retrySync) => {
 			profileErroredNetworks = erroredNetworks;
 			retrySync();
-		});
+		};
+
 		const onProfileSyncStart = vi.fn();
 
 		const Component = () => {
@@ -493,6 +494,8 @@ describe("useProfileSynchronizer", () => {
 		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const mockWalletSyncStatus = vi
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
@@ -512,6 +515,8 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
+		resetProfileNetworksMock();
+
 		vi.useRealTimers();
 		vi.clearAllTimers();
 	});
@@ -686,7 +691,7 @@ describe("useProfileRestore", () => {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
 
-		let isRestored: boolean;
+		let isRestored: boolean | undefined;
 
 		await act(async () => {
 			isRestored = await current.restoreProfile(profile);
@@ -720,7 +725,7 @@ describe("useProfileRestore", () => {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
 
-		let isRestored: boolean;
+		let isRestored: boolean | undefined;
 
 		await act(async () => {
 			isRestored = await current.restoreProfile(profile, "password");
@@ -755,7 +760,7 @@ describe("useProfileRestore", () => {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
 
-		let isRestored: boolean;
+		let isRestored: boolean | undefined;
 
 		await act(async () => {
 			isRestored = await current.restoreProfile(profile);
@@ -788,7 +793,7 @@ describe("useProfileRestore", () => {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
 
-		let isRestored: boolean;
+		let isRestored: boolean | undefined;
 
 		await act(async () => {
 			isRestored = await current.restoreProfile(profile);
@@ -848,7 +853,9 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		const profile = await env.profiles().create("new profile");
+		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		await env.profiles().restore(profile);
 
 		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, 1);
@@ -877,6 +884,8 @@ describe("useProfileRestore", () => {
 
 		profileStatusMock.mockRestore();
 		historyMock.mockRestore();
+		resetProfileNetworksMock();
+
 		vi.clearAllTimers();
 	});
 });
@@ -974,7 +983,10 @@ describe("useProfileStatusWatcher", () => {
 	it("should trigger sync error callback if profile has errored wallet networks", async () => {
 		const onProfileSyncComplete = vi.fn();
 		const onProfileSyncError = vi.fn();
+
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const mockWalletSyncStatus = vi
 			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
 			.mockReturnValue(false);
@@ -1004,6 +1016,7 @@ describe("useProfileStatusWatcher", () => {
 		);
 
 		mockWalletSyncStatus.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	it("should stay idle if network status has not changed", async () => {

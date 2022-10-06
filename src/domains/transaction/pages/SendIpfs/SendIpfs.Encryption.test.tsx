@@ -1,5 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
+import { BIP39 } from "@ardenthq/sdk-cryptography";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -94,11 +95,17 @@ describe("SendIpfs", () => {
 	});
 
 	it("should send an IPFS transaction using encryption password", async () => {
+		const bip39ValidateMock = vi.spyOn(BIP39, "validate").mockReturnValue(true);
 		const encryptedWallet = profile.wallets().first();
 		const actsWithMnemonicMock = vi.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
 		const actsWithWifWithEncryptionMock = vi
 			.spyOn(encryptedWallet, "actsWithWifWithEncryption")
 			.mockReturnValue(true);
+
+		const fromMnemonicMock = vi
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		const wifGetMock = vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${encryptedWallet.id()}/send-ipfs`;
@@ -172,6 +179,7 @@ describe("SendIpfs", () => {
 		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+		expect(asFragment()).toMatchSnapshot();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -179,7 +187,7 @@ describe("SendIpfs", () => {
 		actsWithMnemonicMock.mockRestore();
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
-
-		expect(asFragment()).toMatchSnapshot();
+		bip39ValidateMock.mockRestore();
+		fromMnemonicMock.mockRestore();
 	});
 });

@@ -6,6 +6,7 @@ import {
 	getErroredNetworks,
 	isValidProfileUrl,
 } from "./profile-utils";
+import { mockProfileWithPublicAndTestNetworks } from "./testing-library";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Profile utils", () => {
@@ -64,12 +65,15 @@ describe("Profile utils", () => {
 
 	it("should have errored networks", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		expect(getErroredNetworks(profile).hasErroredNetworks).toBe(true);
 		expect(getErroredNetworks(profile).erroredNetworks).toHaveLength(1);
 
 		walletRestoreMock.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	it("#isValidProfileUrl", async () => {
