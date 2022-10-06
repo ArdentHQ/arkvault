@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { formatNumber } from "@ardenthq/sdk-helpers";
 import { useFileDownload } from "./hooks/use-file-download";
 import { Alert } from "@/app/components/Alert";
 import { FormButtons } from "@/app/components/Form";
@@ -8,7 +9,7 @@ import { Image } from "@/app/components/Image";
 import { FilePreview } from "@/domains/profile/components/FilePreview";
 import { TransactionExportStatusProperties } from "@/domains/transaction/components/TransactionExportModal";
 
-export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: TransactionExportStatusProperties) => {
+export const TransactionExportSuccess = ({ count, file, onBack, onDownload }: TransactionExportStatusProperties) => {
 	const { t } = useTranslation();
 
 	const { download } = useFileDownload();
@@ -16,15 +17,15 @@ export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: 
 	const renderAlert = () => {
 		if (count === 0) {
 			return (
-				<Alert className="my-6" variant="warning">
+				<Alert className="mb-6" variant="warning">
 					{t("TRANSACTION.EXPORT.EMPTY.DESCRIPTION")}
 				</Alert>
 			);
 		}
 
 		return (
-			<Alert className="my-6" variant="success">
-				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION")}
+			<Alert className="mb-6" variant="success">
+				{t("TRANSACTION.EXPORT.SUCCESS.DESCRIPTION", { count: formatNumber(count) as never })}
 			</Alert>
 		);
 	};
@@ -34,7 +35,7 @@ export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: 
 			<Image
 				name={count === 0 ? "Warning" : "Success"}
 				useAccentColor={count !== undefined && count > 0}
-				className="my-6 mx-auto hidden h-32 w-full md:block"
+				className="mx-auto mb-6 hidden h-26 md:block"
 			/>
 
 			{renderAlert()}
@@ -42,12 +43,8 @@ export const TransactionExportSuccess = ({ count, file, onCancel, onDownload }: 
 			<FilePreview file={file} variant="success" />
 
 			<FormButtons>
-				<Button
-					variant="secondary"
-					onClick={() => onCancel?.()}
-					data-testid="TransactionExportSuccess__close-button"
-				>
-					{t("COMMON.CANCEL")}
+				<Button variant="secondary" onClick={onBack} data-testid="TransactionExportSuccess__back-button">
+					{t("COMMON.BACK")}
 				</Button>
 
 				<Button

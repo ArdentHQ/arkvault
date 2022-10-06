@@ -30,6 +30,7 @@ describe("NetworkOption", () => {
 			coinName: () => "Custom Network",
 			id: () => "whatever.custom",
 			isLive: () => false,
+			ticker: () => "WTH",
 		};
 		networkTestnet = profile.wallets().first().network();
 	});

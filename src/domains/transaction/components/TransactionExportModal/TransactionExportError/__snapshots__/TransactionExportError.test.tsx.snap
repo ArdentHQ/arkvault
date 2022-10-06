@@ -4,12 +4,12 @@ exports[`TransactionExportError should render in lg 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-ic0qlc"
@@ -36,13 +36,13 @@ exports[`TransactionExportError should render in lg 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportError__close-button"
+        data-testid="TransactionExportError__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Close
+          Back
         </div>
       </button>
       <button
@@ -65,12 +65,12 @@ exports[`TransactionExportError should render in md 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-ic0qlc"
@@ -97,13 +97,13 @@ exports[`TransactionExportError should render in md 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportError__close-button"
+        data-testid="TransactionExportError__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Close
+          Back
         </div>
       </button>
       <button
@@ -126,12 +126,12 @@ exports[`TransactionExportError should render in sm 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-ic0qlc"
@@ -158,13 +158,13 @@ exports[`TransactionExportError should render in sm 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportError__close-button"
+        data-testid="TransactionExportError__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Close
+          Back
         </div>
       </button>
       <button
@@ -187,12 +187,12 @@ exports[`TransactionExportError should render in xl 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-ic0qlc"
@@ -219,13 +219,13 @@ exports[`TransactionExportError should render in xl 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportError__close-button"
+        data-testid="TransactionExportError__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Close
+          Back
         </div>
       </button>
       <button
@@ -248,12 +248,12 @@ exports[`TransactionExportError should render in xs 1`] = `
 <DocumentFragment>
   <div>
     <svg
-      class="my-6 mx-auto hidden h-32 w-2/4 md:block"
+      class="mx-auto mb-6 hidden h-26 md:block"
     >
-      error-banner-light-green.svg
+      error-light.svg
     </svg>
     <div
-      class="flex flex-col overflow-hidden rounded-xl my-6"
+      class="flex flex-col overflow-hidden rounded-xl mb-6"
     >
       <div
         class="css-ic0qlc"
@@ -280,13 +280,13 @@ exports[`TransactionExportError should render in xs 1`] = `
     >
       <button
         class="css-1jhy6v9"
-        data-testid="TransactionExportError__close-button"
+        data-testid="TransactionExportError__back-button"
         type="button"
       >
         <div
           class="flex items-center space-x-2"
         >
-          Close
+          Back
         </div>
       </button>
       <button

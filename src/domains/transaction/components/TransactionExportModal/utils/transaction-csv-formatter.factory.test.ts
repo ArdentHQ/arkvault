@@ -57,24 +57,48 @@ describe("CsvFormatter", () => {
 		expect(fields.total()).toBe(400_000);
 	});
 
+	it("should set amount to for transfer type if sender is recipient", () => {
+		jest.spyOn(transaction, "recipient").mockReturnValue(transaction.sender());
+
+		const fields = CsvFormatter(transaction, "HH");
+
+		expect(fields.amount()).toBe(0);
+		expect(fields.recipient()).toBe("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
+		expect(fields.sender()).toBe("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
+	});
+
 	it("should format transaction fields for multipayment type", () => {
 		jest.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
+		jest.spyOn(transaction, "recipients").mockReturnValue([
+			{
+				address: transaction.wallet().address(),
+				amount: 1,
+			},
+			{
+				address: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
+				amount: 10,
+			},
+			{
+				address: "D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv",
+				amount: 10,
+			},
+		]);
 		jest.spyOn(transaction, "sender").mockReturnValue(profile.wallets().first().address());
 		jest.spyOn(transaction, "isSent").mockReturnValue(true);
 
 		const fields = CsvFormatter(transaction, "HH");
 
-		expect(fields.amount()).toBe(-400_000);
+		expect(fields.amount()).toBe(-399_999);
 		expect(fields.convertedAmount()).toBe(-0);
 		expect(fields.convertedFee()).toBe(-0);
 		expect(fields.convertedTotal()).toBe(-0);
 		expect(fields.datetime()).toBe(dateTime);
 		expect(fields.fee()).toBe(-0.1);
 		expect(fields.rate()).toBe(0);
-		expect(fields.recipient()).toBe("Multiple");
+		expect(fields.recipient()).toBe("Multiple (3)");
 		expect(fields.sender()).toBe(profile.wallets().first().address());
 		expect(fields.timestamp()).toBe(1_595_491_400);
-		expect(fields.total()).toBe(-400_000.1);
+		expect(fields.total()).toBe(-399_999.1);
 	});
 
 	it("should format multipayment transaction fields for recipient wallet", () => {
@@ -103,7 +127,7 @@ describe("CsvFormatter", () => {
 		expect(fields.datetime()).toBe(dateTime);
 		expect(fields.fee()).toBe(0);
 		expect(fields.rate()).toBe(0);
-		expect(fields.recipient()).toBe("Multiple");
+		expect(fields.recipient()).toBe("Multiple (3)");
 		expect(fields.sender()).toBe("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		expect(fields.timestamp()).toBe(1_595_491_400);
 		expect(fields.total()).toBe(1);

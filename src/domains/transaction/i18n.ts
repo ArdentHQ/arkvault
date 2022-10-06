@@ -71,10 +71,11 @@ export const translations = {
 			TRANSACTION_ID: "Transaction ID",
 		},
 		PROGRESS: {
-			DESCRIPTION: "The data is being prepared. This might take a while, please wait.",
+			DESCRIPTION: "{{count}} transactions have been retrieved so far, please wait.",
+			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
 		},
 		SUCCESS: {
-			DESCRIPTION: "The transaction history is now ready, download it below.",
+			DESCRIPTION: "{{count}} transactions have been retrieved and are ready to be exported.",
 		},
 		TITLE: "Transaction History",
 	},
@@ -408,6 +409,7 @@ export const translations = {
 			"both delegate name and public key were provided in url. Please use either one or the other.",
 		DELEGATE_RESIGNED: "delegate <strong>{{delegate}}</strong> is resigned.",
 		FEE_NEGATIVE: "Fee cannot be negative",
+		INVALID_ADDRESS_OR_NETWORK_MISMATCH: "The provided address is invalid or belongs to another network",
 		INVALID_QR: "Invalid QR",
 		INVALID_QR_REASON: "Invalid QR: {{reason}}",
 		INVALID_URI: "Invalid URI",

@@ -67,6 +67,9 @@ const continueButton = () => screen.getByTestId("StepNavigation__continue-button
 const formStep = () => screen.findByTestId("SendDelegateResignation__form-step");
 const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 
+let mnemonicMock;
+let secondMnemonicMock;
+
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -92,6 +95,14 @@ describe("SendDelegateResignation", () => {
 		beforeEach(() => {
 			resignationUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationUrl);
+
+			mnemonicMock = jest
+				.spyOn(wallet.coin().address(), "fromMnemonic")
+				.mockResolvedValue({ address: wallet.address() });
+
+			secondMnemonicMock = jest
+				.spyOn(wallet.coin().publicKey(), "fromMnemonic")
+				.mockResolvedValue({ publicKey: wallet.publicKey() });
 		});
 
 		it("should render 1st step", async () => {
@@ -243,6 +254,9 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should show mnemonic authentication error", async () => {
+			mnemonicMock.mockRestore();
+			secondMnemonicMock.mockRestore();
+
 			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
 			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);

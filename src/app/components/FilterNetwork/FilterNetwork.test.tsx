@@ -162,9 +162,11 @@ describe("FilterNetworks", () => {
 					{
 						isSelected: false,
 						network: {
+							coin: () => "ARK",
 							coinName: () => "Custom Network",
 							id: () => "whatever.custom",
 							isLive: () => true,
+							ticker: () => "WTH",
 						},
 					},
 					networkOptions[0],

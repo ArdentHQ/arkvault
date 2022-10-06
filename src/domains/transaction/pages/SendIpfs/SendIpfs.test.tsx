@@ -10,7 +10,7 @@ import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendIpfs } from "./SendIpfs";
 import { SummaryStep } from "./SummaryStep";
-import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
+import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
@@ -211,9 +211,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -266,11 +264,13 @@ describe("SendIpfs", () => {
 	it("should send an IPFS transaction and go back to wallet page", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
+		const addressFromMnemonicMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		const { asFragment, history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -354,16 +354,20 @@ describe("SendIpfs", () => {
 		historySpy.mockRestore();
 
 		expect(asFragment()).toMatchSnapshot();
+
+		addressFromMnemonicMock.mockRestore();
 	});
 
 	it("should send an IPFS transaction navigating with keyboard", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
+		const addressFromMnemonicMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -435,16 +439,18 @@ describe("SendIpfs", () => {
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		addressFromMnemonicMock.mockRestore();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
+		const addressFromMnemonicMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -484,6 +490,8 @@ describe("SendIpfs", () => {
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
+
+		addressFromMnemonicMock.mockRestore();
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
@@ -491,9 +499,7 @@ describe("SendIpfs", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -541,9 +547,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -615,9 +619,7 @@ describe("SendIpfs", () => {
 
 		const { history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -638,11 +640,13 @@ describe("SendIpfs", () => {
 	it("should show error step and go back", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
+		const addressFromMnemonicMock = jest
+			.spyOn(wallet.coin().address(), "fromMnemonic")
+			.mockResolvedValue({ address: wallet.address() });
+
 		const { asFragment, history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -708,6 +712,7 @@ describe("SendIpfs", () => {
 		expect(historyMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`);
 
 		signMock.mockRestore();
+		addressFromMnemonicMock.mockRestore();
 	});
 
 	it("should show an error if an invalid IPFS hash is entered", async () => {
@@ -715,9 +720,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -742,9 +745,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -848,9 +849,7 @@ describe("SendIpfs", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/transactions/:walletId/ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
+				<SendIpfs />
 			</Route>,
 			{
 				route: ipfsURL,
@@ -933,98 +932,6 @@ describe("SendIpfs", () => {
 		mockWalletData.mockRestore();
 		isNanoXMock.mockRestore();
 		nanoXTransportMock.mockRestore();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should send an IPFS transaction using encryption password", async () => {
-		const encryptedWallet = profile.wallets().first();
-		const actsWithMnemonicMock = jest.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest
-			.spyOn(encryptedWallet, "actsWithWifWithEncryption")
-			.mockReturnValue(true);
-		const wifGetMock = jest.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
-
-		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${encryptedWallet.id()}/send-ipfs`;
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
-				<LedgerProvider>
-					<SendIpfs />
-				</LedgerProvider>
-			</Route>,
-			{
-				route: ipfsURL,
-			},
-		);
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
-		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSender")).toHaveTextContent(encryptedWallet.address()),
-		);
-
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
-		await waitFor(() =>
-			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
-		);
-
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		inputElement.select();
-		userEvent.paste(inputElement, "10");
-
-		await waitFor(() => expect(inputElement).toHaveValue("10"));
-
-		expect(continueButton()).not.toBeDisabled();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-		);
-
-		const signMock = jest
-			.spyOn(encryptedWallet.transaction(), "signIpfs")
-			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
-
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [ipfsFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const transactionMock = createTransactionMock(encryptedWallet);
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		userEvent.click(sendButton());
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

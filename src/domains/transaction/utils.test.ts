@@ -1,4 +1,4 @@
-import { handleBroadcastError, isNoDeviceError, isRejectionError } from "./utils";
+import { handleBroadcastError, isNoDeviceError, isRejectionError, getTransferType } from "./utils";
 
 describe("Transaction utils", () => {
 	describe("isNoDeviceError", () => {
@@ -38,6 +38,27 @@ describe("Transaction utils", () => {
 
 		it("should not throw if accepted", () => {
 			expect(() => handleBroadcastError({ accepted: ["id"], errors: {}, rejected: [] })).not.toThrow();
+		});
+	});
+
+	describe("transactionType", () => {
+		it("should return multipayment type if recipients are more that one", () => {
+			expect(
+				getTransferType({
+					recipients: [
+						{ address: "1", amount: 0 },
+						{ address: "1", amount: 0 },
+					],
+				}),
+			).toBe("multiPayment");
+		});
+
+		it("should return transfer type if recipient is one", () => {
+			expect(
+				getTransferType({
+					recipients: [{ address: "1", amount: 0 }],
+				}),
+			).toBe("transfer");
 		});
 	});
 });

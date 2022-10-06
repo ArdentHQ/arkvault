@@ -115,13 +115,14 @@ exports[`LedgerScanStep should render compact table 1`] = `
                 >
                   <div
                     aria-label="ARK Devnet"
-                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
-                      class="css-v0ob3f"
+                      class="css-1i4b0eq"
                       data-testid="NetworkIcon__icon"
-                      height="16"
-                      width="16"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         ark.svg
@@ -501,13 +502,14 @@ exports[`LedgerScanStep should render responsive (lg) 1`] = `
                 >
                   <div
                     aria-label="ARK Devnet"
-                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
-                      class="css-v0ob3f"
+                      class="css-1i4b0eq"
                       data-testid="NetworkIcon__icon"
-                      height="16"
-                      width="16"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         ark.svg
@@ -887,13 +889,14 @@ exports[`LedgerScanStep should render responsive (xs) 1`] = `
                 >
                   <div
                     aria-label="ARK Devnet"
-                    class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
                   >
                     <div
-                      class="css-v0ob3f"
+                      class="css-1i4b0eq"
                       data-testid="NetworkIcon__icon"
-                      height="16"
-                      width="16"
+                      height="20"
+                      width="20"
                     >
                       <svg>
                         ark.svg

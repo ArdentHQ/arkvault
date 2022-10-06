@@ -139,7 +139,233 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
 </DocumentFragment>
 `;
 
+exports[`PortfolioBreakdown should render loading when no wallets have synced with the network 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    data-testid="PortfolioBreakdownSkeleton"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Your Balance
+        </span>
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l"
+      >
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Assets
+          </span>
+          <div
+            class="flex h-7 items-center justify-end lg:justify-start"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 20px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallets
+          </span>
+          <div
+            class="flex h-7 items-center justify-end lg:justify-start"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 20px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-3 w-full max-w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="height: 8px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`PortfolioBreakdown should render loading when profile is not restored yet 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
+    data-testid="PortfolioBreakdownSkeleton"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Your Balance
+        </span>
+        <div
+          class="flex h-7 items-center"
+        >
+          <span>
+            <span
+              class="flex max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                style="width: 100px; height: 18px;"
+              >
+                ‌
+              </span>
+              ‌
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l"
+      >
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Assets
+          </span>
+          <div
+            class="flex h-7 items-center justify-end lg:justify-start"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 20px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallets
+          </span>
+          <div
+            class="flex h-7 items-center justify-end lg:justify-start"
+          >
+            <span>
+              <span
+                class="flex max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  style="width: 20px; height: 18px;"
+                >
+                  ‌
+                </span>
+                ‌
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-3 w-full max-w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0"
+    >
+      <span>
+        <span
+          class="flex max-w-full items-center overflow-hidden leading-none"
+        >
+          <span
+            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+            style="height: 8px;"
+          >
+            ‌
+          </span>
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render loading when some wallets have not synced with the network 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -360,6 +586,287 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
           ‌
         </span>
       </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PortfolioBreakdown should render when some wallets are cold 1`] = `
+<DocumentFragment>
+  <div
+    class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+    data-testid="PortfolioBreakdown"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+      >
+        <span
+          class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Your Balance
+        </span>
+        <span
+          class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+          data-testid="Amount"
+        >
+          $100.00
+        </span>
+      </div>
+      <div
+        class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 text-right dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l lg:text-left"
+      >
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Assets
+          </span>
+          <span
+            class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+            data-testid="PortfolioBreakdown__assets"
+          >
+            2
+          </span>
+        </div>
+        <div
+          class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+        >
+          <span
+            class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallets
+          </span>
+          <span
+            class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+            data-testid="PortfolioBreakdown__wallets"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-3 w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0"
+    >
+      <div
+        class="flex flex-col-reverse sm:flex-col"
+      >
+        <div
+          class="absolute z-10 hidden opacity-0 transition-opacity duration-200"
+          data-testid="TooltipContainer"
+        />
+        <div
+          class="mt-3 flex justify-center sm:mb-1 sm:mt-0 sm:justify-start lg:justify-end"
+          data-testid="LineGraph__legend"
+        >
+          <div
+            class="mb-1 flex w-full justify-between lg:justify-end"
+          >
+            <div
+              class="mr-4 flex space-x-4 border-theme-secondary-300 dark:border-theme-secondary-800 lg:border-r lg:pr-4"
+            >
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-success-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  ARK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  85%
+                </span>
+              </div>
+              <div
+                class="flex items-center space-x-1 text-sm font-semibold"
+              >
+                <span
+                  class="h-3 w-1 rounded bg-theme-warning-600"
+                />
+                <span
+                  class="text-theme-secondary-700 dark:text-theme-secondary-200"
+                >
+                  ARK
+                </span>
+                <span
+                  class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  15%
+                </span>
+              </div>
+            </div>
+            <button
+              class="mx-auto text-sm font-semibold sm:mx-0 link"
+              type="button"
+            >
+              More Details
+            </button>
+          </div>
+        </div>
+        <svg
+          class="h-5 w-full"
+          data-testid="LineGraph__svg"
+        >
+          <g
+            data-testid="LineGraph__item"
+          >
+            <rect
+              class="fill-current text-theme-success-600"
+              data-testid="LineGraph__item-hover-area"
+              height="20"
+              id="rectHoverArea__0"
+              opacity="0"
+              pointer-events="visiblePainted"
+              rx="0"
+              width="536"
+              x="0"
+              y="0"
+            />
+            <rect
+              class="fill-current text-theme-success-600"
+              height="8"
+              pointer-events="none"
+              rx="4"
+              width="536"
+              x="0"
+              y="8"
+            >
+              <animate
+                attributeName="height"
+                begin="rectHoverArea__0.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="8"
+                to="16"
+              />
+              <animate
+                attributeName="height"
+                begin="rectHoverArea__0.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="16"
+                to="8"
+              />
+              <animate
+                attributeName="rx"
+                begin="rectHoverArea__0.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="4"
+                to="8"
+              />
+              <animate
+                attributeName="rx"
+                begin="rectHoverArea__0.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="8"
+                to="4"
+              />
+              <animate
+                attributeName="y"
+                begin="rectHoverArea__0.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="8"
+                to="0"
+              />
+              <animate
+                attributeName="y"
+                begin="rectHoverArea__0.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="0"
+                to="8"
+              />
+            </rect>
+          </g>
+          <g
+            data-testid="LineGraph__item"
+          >
+            <rect
+              class="fill-current text-theme-warning-600"
+              data-testid="LineGraph__item-hover-area"
+              height="20"
+              id="rectHoverArea__1"
+              opacity="0"
+              pointer-events="visiblePainted"
+              rx="0"
+              width="96"
+              x="544"
+              y="0"
+            />
+            <rect
+              class="fill-current text-theme-warning-600"
+              height="8"
+              pointer-events="none"
+              rx="4"
+              width="96"
+              x="544"
+              y="8"
+            >
+              <animate
+                attributeName="height"
+                begin="rectHoverArea__1.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="8"
+                to="16"
+              />
+              <animate
+                attributeName="height"
+                begin="rectHoverArea__1.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="16"
+                to="8"
+              />
+              <animate
+                attributeName="rx"
+                begin="rectHoverArea__1.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="4"
+                to="8"
+              />
+              <animate
+                attributeName="rx"
+                begin="rectHoverArea__1.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="8"
+                to="4"
+              />
+              <animate
+                attributeName="y"
+                begin="rectHoverArea__1.mouseover"
+                dur="0.1s"
+                fill="freeze"
+                from="8"
+                to="0"
+              />
+              <animate
+                attributeName="y"
+                begin="rectHoverArea__1.mouseleave"
+                dur="0.15s"
+                fill="freeze"
+                from="0"
+                to="8"
+              />
+            </rect>
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1136,3 +1643,5 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
   </div>
 </DocumentFragment>
 `;
+
+exports[`PortfolioBreakdown should return nothing when portfolio is empty and there are no filtered networks 1`] = `<DocumentFragment />`;

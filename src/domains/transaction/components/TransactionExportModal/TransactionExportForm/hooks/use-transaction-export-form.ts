@@ -8,11 +8,15 @@ import {
 	DateRange,
 } from "@/domains/transaction/components/TransactionExportModal";
 
+interface ExportFormErrors {
+	noColumns?: never;
+}
+
 export const useTransactionExportForm = () => {
 	const startDate = new Date();
 	startDate.setDate(startDate.getDate() - 7);
 
-	const form = useForm<ExportSettings>({
+	const form = useForm<ExportSettings & ExportFormErrors>({
 		defaultValues: {
 			dateRange: DateRange.CurrentMonth,
 			delimiter: CsvDelimiter.Comma,
@@ -29,14 +33,21 @@ export const useTransactionExportForm = () => {
 		mode: "onChange",
 	});
 
+	const { clearErrors, register, setError, watch } = form;
+
 	useEffect(() => {
-		form.register("transactionType");
-		form.register("delimiter");
-		form.register("dateRange");
-	}, []);
+		register("transactionType");
+		register("delimiter");
+		register("dateRange");
+		register("includeHeaderRow");
+		register("includeTransactionId");
+		register("includeDate");
+		register("includeSenderRecipient");
+		register("includeCryptoAmount");
+	}, [register]);
 
 	const { includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId } =
-		form.watch();
+		watch();
 
 	useEffect(() => {
 		// Trigger invalid state.
@@ -45,11 +56,11 @@ export const useTransactionExportForm = () => {
 				Boolean,
 			).length === 0
 		) {
-			form.setError("includeCryptoAmount", {});
+			setError("noColumns", { type: "manual" });
 			return;
 		}
 
-		form.clearErrors("includeCryptoAmount");
+		clearErrors("noColumns");
 	}, [includeCryptoAmount, includeDate, includeFiatAmount, includeSenderRecipient, includeTransactionId]);
 
 	return form;

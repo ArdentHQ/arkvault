@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
+import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
 import { useBreakpoint } from "@/app/hooks";
@@ -212,7 +213,7 @@ export const FormStep = ({
 						<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
 						{!!network && (
 							<FeeField
-								type={recipients?.length > 1 ? "multiPayment" : "transfer"}
+								type={getFeeType(recipients?.length)}
 								data={feeTransactionData}
 								network={network}
 								profile={profile}

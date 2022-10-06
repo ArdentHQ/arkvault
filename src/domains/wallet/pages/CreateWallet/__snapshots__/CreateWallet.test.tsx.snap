@@ -506,7 +506,8 @@ exports[`CreateWallet should create a wallet 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -541,7 +542,8 @@ exports[`CreateWallet should create a wallet 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -636,9 +638,8 @@ exports[`CreateWallet should create a wallet 2`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -683,9 +684,8 @@ exports[`CreateWallet should create a wallet 2`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -917,9 +917,8 @@ exports[`CreateWallet should create a wallet 2`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -948,9 +947,8 @@ exports[`CreateWallet should create a wallet 2`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -1159,7 +1157,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -1855,7 +1853,8 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -1890,7 +1889,8 @@ exports[`CreateWallet should create a wallet with encryption 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -1985,9 +1985,8 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--receive"
-          disabled=""
           type="button"
         >
           <div
@@ -2032,9 +2031,8 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
           data-testid="NavigationBar__buttons__mobile--send"
-          disabled=""
           type="button"
         >
           <div
@@ -2266,9 +2264,8 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--receive"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2297,9 +2294,8 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                   class="css-1ietn6u"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-12xyeiw"
                     data-testid="NavigationBar__buttons--send"
-                    disabled=""
                     type="button"
                   >
                     <div
@@ -2511,7 +2507,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                           >
                             <div
                               aria-label="ARK Devnet"
-                              class="inline-flex h-5 w-5 items-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
                               data-testid="NetworkIcon-ARK-ark.devnet"
                             >
                               <div
@@ -3209,7 +3205,8 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -3244,7 +3241,8 @@ exports[`CreateWallet should remove pending wallet if not submitted 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -3826,7 +3824,8 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -3861,7 +3860,8 @@ exports[`CreateWallet should show an error message for duplicate name 1`] = `
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -4474,7 +4474,8 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                               >
                                 <div
                                   aria-label="ARK"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-primary-600"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                                  data-testid="NetworkIcon-ARK-ark.mainnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"
@@ -4509,7 +4510,8 @@ exports[`CreateWallet should show an error message if wallet generation failed 1
                               >
                                 <div
                                   aria-label="ARK Devnet"
-                                  class="flex items-center justify-center rounded-xl p-1 text-theme-secondary-700"
+                                  class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                                  data-testid="NetworkIcon-ARK-ark.devnet"
                                 >
                                   <div
                                     class="css-1i4b0eq"

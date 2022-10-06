@@ -46,7 +46,9 @@ const SelectDelimiter = ({ value, onSelect }: { value: CsvDelimiter; onSelect?: 
 
 export const CSVSettings = () => {
 	const { t } = useTranslation();
+
 	const form = useFormContext();
+	const { setValue, watch } = form;
 
 	return (
 		<>
@@ -58,10 +60,11 @@ export const CSVSettings = () => {
 						label: t("TRANSACTION.EXPORT.FORM.INCLUDE_HEADER_ROW"),
 						value: (
 							<Toggle
-								ref={form.register()}
-								name="includeHeaderRow"
-								defaultChecked={!!form.getValues("includeHeaderRow")}
+								checked={!!watch("includeHeaderRow")}
 								data-testid="TransactionExportForm__toggle-include-header-row"
+								onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+									setValue("includeHeaderRow", event.target.checked);
+								}}
 							/>
 						),
 						wrapperClass: "pb-4",
@@ -70,8 +73,8 @@ export const CSVSettings = () => {
 						label: t("TRANSACTION.EXPORT.FORM.DELIMITER"),
 						value: (
 							<SelectDelimiter
-								value={form.watch("delimiter")}
-								onSelect={(delimiter) => form.setValue("delimiter", delimiter)}
+								value={watch("delimiter")}
+								onSelect={(delimiter) => setValue("delimiter", delimiter)}
 							/>
 						),
 						wrapperClass: "pt-4",

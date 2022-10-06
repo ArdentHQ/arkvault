@@ -13,7 +13,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { DateRange } from "@/domains/transaction/components/TransactionExportModal/TransactionExportModal.contracts";
 import { InputDate } from "@/app/components/Input";
 
-const DateRangeSelection = ({ className }: { className?: string }) => {
+const DateRangeSelection = ({ className, minStartDate }: { className?: string; minStartDate?: Date }) => {
 	const form = useFormContext();
 
 	return (
@@ -26,7 +26,12 @@ const DateRangeSelection = ({ className }: { className?: string }) => {
 			<div className="md:flex-1">
 				<FormField name="from">
 					<FormLabel label={t("COMMON.FROM")} />
-					<InputDate selectsStart endDate={form.watch("to")} rules={{ required: true }} />
+					<InputDate
+						selectsStart
+						minDate={minStartDate}
+						endDate={form.watch("to")}
+						rules={{ required: true }}
+					/>
 				</FormField>
 			</div>
 
@@ -80,7 +85,7 @@ const TransactionTypeOptions = () => {
 	);
 };
 
-const DateRangeOptions = () => {
+const DateRangeOptions = ({ isDisabled }: { isDisabled: boolean }) => {
 	const form = useFormContext();
 
 	const { options, selected } = useDateRangeOptions({
@@ -94,9 +99,11 @@ const DateRangeOptions = () => {
 				data-testid="TransactionExportForm--daterange-options"
 				options={options}
 				onSelect={(option) => form.setValue("dateRange", option.value)}
+				disableToggle={isDisabled}
 				toggleContent={(isOpen: boolean) => (
 					<CollapseToggleButton
 						isOpen={isOpen}
+						disabled={isDisabled}
 						className="w-full cursor-pointer justify-between space-x-4 overflow-hidden"
 						label={<div className="whitespace-nowrap leading-tight">{selected?.label}</div>}
 					/>
@@ -106,13 +113,13 @@ const DateRangeOptions = () => {
 	);
 };
 
-export const BasicSettings = () => {
+export const BasicSettings = ({ minStartDate }: { minStartDate?: Date }) => {
 	const { t } = useTranslation();
 
 	const { isXs } = useBreakpoint();
 	const form = useFormContext();
 
-	const isCustom = form.watch("dateRange") == DateRange.Custom;
+	const isCustom = form.watch("dateRange") === DateRange.Custom;
 
 	const items = [
 		{
@@ -122,9 +129,9 @@ export const BasicSettings = () => {
 			wrapperClass: "pb-4",
 		},
 		{
-			content: isCustom && <DateRangeSelection className="mt-4" />,
+			content: isCustom && <DateRangeSelection minStartDate={minStartDate} className="mt-4" />,
 			label: t("TRANSACTION.EXPORT.FORM.DATE_RANGE"),
-			value: <DateRangeOptions />,
+			value: <DateRangeOptions isDisabled={!minStartDate} />,
 			wrapperClass: "pt-4",
 		},
 	];
