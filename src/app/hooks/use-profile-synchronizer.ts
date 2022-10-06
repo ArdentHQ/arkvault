@@ -15,6 +15,7 @@ import { delay } from "@/utils/delay";
 import { getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
+import { useZendesk } from "../contexts/Zendesk";
 
 enum Intervals {
 	VeryShort = 15_000,
@@ -356,6 +357,7 @@ export const useProfileSynchronizer = ({
 	const { setConfiguration, profileIsSyncing, profileHasSyncedOnce } = useConfiguration();
 	const { restoreProfile } = useProfileRestore();
 	const profile = useProfileWatcher();
+	const { hideSupportChat } = useZendesk();
 
 	const { shouldRestore, shouldSync, shouldMarkCompleted, setStatus, status, markAsRestored, resetStatuses } =
 		useProfileSyncStatus();
@@ -448,6 +450,7 @@ export const useProfileSynchronizer = ({
 				return;
 			}
 
+			hideSupportChat();
 			resetTheme();
 			resetIdleTimer();
 			resetAccentColor();

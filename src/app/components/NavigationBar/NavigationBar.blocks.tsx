@@ -28,6 +28,7 @@ import { ProfilePaths } from "@/router/paths";
 import { Size } from "@/types";
 import { Logo } from "@/app/components/Logo";
 import { profileAllEnabledNetworkIds } from "@/utils/network-utils";
+import { useZendesk } from "@/app/contexts/Zendesk";
 
 const NavWrapper = styled.nav<{ noBorder?: boolean; noShadow?: boolean; scroll?: number }>`
 	${defaultStyle}
@@ -185,6 +186,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const scroll = useScroll();
 	const { openExternal } = useLink();
 	const { isLg, isMd } = useBreakpoint();
+	const { showSupportChat } = useZendesk();
 
 	const enabledNetworkIds = profileAllEnabledNetworkIds(profile);
 
@@ -393,6 +395,10 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							userInitials={userInitials}
 							avatarImage={profile.avatar()}
 							onUserAction={(action: DropdownOption) => {
+								if (action.value === "contact") {
+									return showSupportChat();
+								}
+
 								if (action.isExternal) {
 									return openExternal(action.mountPath());
 								}

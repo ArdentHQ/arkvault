@@ -43,10 +43,16 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 		icon: "ArrowExternal",
 		iconClassName: "text-theme-primary-600",
 		isExternal: true,
-		label: t("COMMON.SUPPORT"),
+		label: t("COMMON.DOCUMENTATION"),
 		mountPath: () => "https://arkvault.io/docs",
 		title: "support",
 		value: "support",
+	},
+	{
+		label: t("COMMON.CONTACT_US"),
+		mountPath: () => `/`,
+		title: "sign-out",
+		value: "contact",
 	},
 	{
 		label: t("COMMON.SIGN_OUT"),
