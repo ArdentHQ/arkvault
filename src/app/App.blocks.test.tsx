@@ -4,7 +4,16 @@ import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route, useHistory, Prompt } from "react-router-dom";
 import { AppRouter, Main } from "./App.blocks";
-import { getDefaultProfileId, render, screen, waitFor, within, env, defaultNetMocks } from "@/utils/testing-library";
+import {
+	defaultNetMocks,
+	env,
+	getDefaultProfileId,
+	mockProfileWithPublicAndTestNetworks,
+	render,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 const history = createHashHistory();
@@ -142,6 +151,8 @@ describe("App Main", () => {
 		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
 
 		const profile = env.profiles().first();
+		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
 		await env.profiles().restore(profile);
 
 		const walletSyncErrorMock = jest
@@ -181,6 +192,7 @@ describe("App Main", () => {
 		await waitFor(() => expect(dismissToastSpy).toHaveBeenCalledWith());
 
 		dismissToastSpy.mockRestore();
+		resetProfileNetworksMock();
 	});
 
 	it("should enter profile and sync", async () => {
