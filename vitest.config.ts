@@ -14,6 +14,33 @@ export default mergeConfig(viteConfig, defineConfig({
     deps: {
       fallbackCJS: true,
     },
+    coverage: {
+      all: false,
+      include: ["src/"],
+      exclude: [
+        "**/build/*",
+        "**/dist/*",
+        "data.ts",
+        "index.ts",
+        "index.tsx",
+        "src/**/*.e2e.ts",
+        "src/**/*.models.{js,jsx,ts,tsx}",
+        "src/**/*.styles.{js,jsx,ts,tsx}",
+        "src/**/cucumber/*.ts",
+        "src/**/e2e/*.ts",
+        "src/i18n/**/*",
+        "src/polyfill/**/*",
+        "src/tailwind.config.js",
+        "src/tests/**/*",
+        "src/utils/e2e-utils.ts",
+      ],
+      provider: "istanbul",
+      reporter: ["json", "lcov", "text", "clover", "html"],
+      lines: 100,
+      functions: 100,
+      branches: 100,
+      statements: 100,
+    },
 	},
   resolve: {
     alias: {
