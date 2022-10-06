@@ -159,12 +159,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/error --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=50% --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/error/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/error/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage --dir src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
         strategy:
