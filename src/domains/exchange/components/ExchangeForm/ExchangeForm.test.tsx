@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { HashHistory, createHashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -16,6 +15,10 @@ import { StatusStep } from "./StatusStep";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
+import { rest } from "msw";
+import { server } from "@/tests/mocks/server";
+
+import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 
 let profile: Contracts.IProfile;
 
@@ -103,8 +106,6 @@ const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
 	beforeAll(() => {
-		nock.disableNetConnect();
-
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
@@ -149,8 +150,6 @@ describe("ExchangeForm", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -184,10 +183,11 @@ describe("ExchangeForm", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
+		server.use(
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }));
+			}),
+		);
 
 		const { container } = renderComponent(
 			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
@@ -280,11 +280,14 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/tickers/btc/eth")
-			.reply(422, { error: { message: "Unavailable Pair" } });
+		server.use(
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(currencyEth));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, (req, res, ctx) => {
+				return res(ctx.status(422), ctx.json({ error: { message: "Unavailable Pair" } }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -325,8 +328,6 @@ describe("ExchangeForm", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -354,12 +355,16 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input if supported", async () => {
-		const currency = require("tests/fixtures/exchange/changenow/currency-eth.json");
+		const currency = { ...currencyEth };
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock(exchangeBaseURL).get(exchangeETHURL).reply(200, currency);
+		server.use(
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(currency));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -391,16 +396,19 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input for refund if supported", async () => {
-		const currency = require("tests/fixtures/exchange/changenow/currency-eth.json");
+		const currency = { ...currencyEth };
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: true })
-			.get(exchangeETHURL)
-			.reply(200, currency);
+		server.use(
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: true }));
+			}),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(currency));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -732,11 +740,14 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear recipient address error when unsetting to currency", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: false });
+		server.use(
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(currencyEth));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: false }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -778,11 +789,14 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear refund address error when unsetting from currency", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: false });
+		server.use(
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(currencyEth));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: false }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -831,7 +845,11 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL).post("/api/changenow/orders").reply(500, "Server Error");
+		server.use(
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (req, res, ctx) => {
+				return res(ctx.status(500), ctx.json("Server Error"));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -924,9 +942,11 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(422, { error: { message: "Invalid Address" } });
+		server.use(
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (req, res, ctx) => {
+				return res(ctx.status(422), ctx.json({ error: { message: "Invalid Address" } }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -1003,9 +1023,14 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(422, { error: { message: "Invalid Refund Address" } });
+		server.use(
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (req, res, ctx) => {
+				return res(ctx.status(422), ctx.json({ error: { message: "Invalid Refund Address" } }));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: true }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -1090,7 +1115,7 @@ describe("ExchangeForm", () => {
 		toastSpy.mockRestore();
 	});
 
-	it("should perform an exchange", async () => {
+	it.only("should perform an exchange", async () => {
 		const baseStatus = {
 			amountFrom: 1,
 			amountTo: 100,
@@ -1102,28 +1127,28 @@ describe("ExchangeForm", () => {
 			to: "ark",
 		};
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(200, () => require("tests/fixtures/exchange/changenow/order.json"))
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: baseStatus })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: { ...baseStatus, status: "exchanging" } })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: { ...baseStatus, status: "sending" } })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, {
-				data: {
+		server.use(
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json(require("tests/fixtures/exchange/changenow/order.json")));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (req, res, ctx) => {
+				return res.once(ctx.status(200), ctx.json({ data: baseStatus }));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (req, res, ctx) => {
+				return res.once(ctx.status(200), ctx.json({ data: { ...baseStatus, status: "exchanging" } }));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (req, res, ctx) => {
+				return res.once(ctx.status(200), ctx.json({ data: { ...baseStatus, status: "sending" } }));
+			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (req, res, ctx) => {
+				return res.once(ctx.status(200), ctx.json({ data: {
 					...baseStatus,
 					payinHash: "payinHash",
 					payoutHash: "payoutHash",
 					status: "finished",
-				},
-			});
+				} }));
+			}),
+		);
 
 		const onReady = vi.fn();
 
@@ -1365,10 +1390,11 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
+		server.use(
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }));
+			}),
+		);
 
 		const { container } = render(
 			<ExchangeProvider>
@@ -1409,10 +1435,11 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get(`/api/changenow/orders/${exchangeTransaction.orderId()}`)
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "sending" } });
+		server.use(
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/${exchangeTransaction.orderId()}`, (req, res, ctx) => {
+				return res(ctx.status(200), ctx.json({ data: { id: exchangeTransaction.orderId(), status: "sending" } }));
+			}),
+		);
 
 		render(
 			<ExchangeProvider>
