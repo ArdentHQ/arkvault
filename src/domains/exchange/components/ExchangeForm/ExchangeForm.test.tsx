@@ -15,7 +15,7 @@ import { StatusStep } from "./StatusStep";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
-import { requestMock, server } from "@/tests/mocks/server";
+import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
@@ -1101,17 +1101,17 @@ describe("ExchangeForm", () => {
 
 		server.use(
 			requestMock(`${exchangeBaseURL}/api/changenow/orders`, order, { method: "post" }),
-			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }, { method: "post", modifier: "once" }),
-			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "exchanging" } }, { method: "post", modifier: "once" }),
-			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "sending" } }, { method: "post", modifier: "once" }),
-			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }, { method: "post" }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "exchanging" } }, { method: "post" }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "sending" } }, { method: "post" }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
 				data: {
 					...baseStatus,
 					payinHash: "payinHash",
 					payoutHash: "payoutHash",
 					status: "finished",
 				},
-			}, { method: "post", modifier: "once" }),
+			}, { method: "post" }),
 		);
 
 		const onReady = vi.fn();
