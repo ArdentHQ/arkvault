@@ -30,7 +30,7 @@
 		"qa": "pnpm install && pnpm build && pnpm serve -- --host=0.0.0.0",
 		"serve": "vite preview --port 5000",
 		"serve:https": "vite preview --port 5000 --https",
-		"test": "vitest",
+		"test": "vitest --update",
 		"test:coverage": "vitest run --coverage",
 		"test:e2e": "pnpm serve & E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json",
 		"test:e2e:ci": "E2E_HOST='http://localhost:5000' gherkin-testcafe --config-file=.testcaferc.json chrome:headless -q attemptLimit=3,successThreshold=1",
