@@ -7,7 +7,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
-import { rest } from "msw";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -16,10 +15,11 @@ import { StatusStep } from "./StatusStep";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
-import { server } from "@/tests/mocks/server";
+import { requestMock, server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
+import { vi } from "vitest";
 
 let profile: Contracts.IProfile;
 
@@ -57,12 +57,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 };
 
 const mockOrderStatus = (orderId: string, status: string) =>
-	rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
-		response(
-			context.status(200),
-			context.json({ data: { id: orderId, status } }),
-		),
-	);
+	requestMock(`${exchangeBaseURL}/api/changenow/orders/id`, { data: { id: orderId, status } });
 
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
 	// from currency
@@ -286,12 +281,8 @@ describe("ExchangeForm", () => {
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
-				response(context.status(200), context.json(currencyEth)),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, (_, response, context) =>
-				response(context.status(422), context.json({ error: { message: "Unavailable Pair" } })),
-			),
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, { error: { message: "Unavailable Pair" } }),
 		);
 
 		const onReady = vi.fn();
@@ -365,11 +356,7 @@ describe("ExchangeForm", () => {
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
-				response(context.status(200), context.json(currency)),
-			),
-		);
+		server.use(requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency));
 
 		const onReady = vi.fn();
 
@@ -407,12 +394,8 @@ describe("ExchangeForm", () => {
 		currency.data.hasExternalId = true;
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
-				response(context.status(200), context.json({ data: true })),
-			),
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
-				response(context.status(200), context.json(currency)),
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: true }),
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency),
 		);
 
 		const onReady = vi.fn();
@@ -746,12 +729,8 @@ describe("ExchangeForm", () => {
 
 	it("should clear recipient address error when unsetting to currency", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
-				response(context.status(200), context.json(currencyEth)),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
-				response(context.status(200), context.json({ data: false })),
-			),
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: false }),
 		);
 
 		const onReady = vi.fn();
@@ -795,12 +774,8 @@ describe("ExchangeForm", () => {
 
 	it("should clear refund address error when unsetting from currency", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
-				response(context.status(200), context.json(currencyEth)),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
-				response(context.status(200), context.json({ data: false })),
-			),
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: false }),
 		);
 
 		const onReady = vi.fn();
@@ -851,9 +826,7 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
-				response(context.status(500), context.json("Server Error")),
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, "Server Error", { method: "post", status: 500 }),
 		);
 
 		const onReady = vi.fn();
@@ -948,9 +921,7 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
-				response(context.status(422), context.json({ error: { message: "Invalid Address" } })),
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, { error: { message: "Invalid Address" } }, { method: "post", status: 422 }),
 		);
 
 		const onReady = vi.fn();
@@ -1029,12 +1000,8 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
-				response(context.status(422), context.json({ error: { message: "Invalid Refund Address" } })),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, (_, response, context) =>
-				response(context.status(200), context.json({ data: true })),
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, { error: { message: "Invalid Refund Address" } }, { method: "post", status: 422 }),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, { data: true }),
 		);
 
 		const onReady = vi.fn();
@@ -1133,31 +1100,18 @@ describe("ExchangeForm", () => {
 		};
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
-				response(context.status(200), context.json(order)),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
-				response.once(context.status(200), context.json({ data: baseStatus })),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
-				response.once(context.status(200), context.json({ data: { ...baseStatus, status: "exchanging" } })),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
-				response.once(context.status(200), context.json({ data: { ...baseStatus, status: "sending" } })),
-			),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
-				response.once(
-					context.status(200),
-					context.json({
-						data: {
-							...baseStatus,
-							payinHash: "payinHash",
-							payoutHash: "payoutHash",
-							status: "finished",
-						},
-					}),
-				),
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, order, { method: "post" }),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }, { method: "post", modifier: "once" }),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "exchanging" } }, { method: "post", modifier: "once" }),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "sending" } }, { method: "post", modifier: "once" }),
+			requestMock(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: {
+					...baseStatus,
+					payinHash: "payinHash",
+					payoutHash: "payoutHash",
+					status: "finished",
+				},
+			}, { method: "post", modifier: "once" }),
 		);
 
 		const onReady = vi.fn();

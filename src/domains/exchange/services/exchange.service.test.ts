@@ -1,9 +1,8 @@
-import { rest } from "msw";
 import { exchangeHost, ExchangeService } from "./exchange.service";
 import { httpClient } from "@/app/services";
 
 import orderStatus from "@/tests/fixtures/exchange/changenow/status.json";
-import { server } from "@/tests/mocks/server";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let subject: ExchangeService;
 
@@ -92,11 +91,7 @@ describe("ExchangeService", () => {
 
 	describe("#orderStatus", () => {
 		it("should retrieve the status of an exchange order", async () => {
-			server.use(
-				rest.get(`${exchangeHost}/${provider}/orders/id`, (_, response, context) =>
-					response(context.status(200), context.json(orderStatus)),
-				),
-			);
+			server.use(requestMock(`${exchangeHost}/${provider}/orders/id`, orderStatus));
 
 			const result = await subject.orderStatus("id");
 

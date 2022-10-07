@@ -5,7 +5,6 @@ import React, { useEffect } from "react";
 import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
 
-import { rest } from "msw";
 import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
@@ -19,7 +18,7 @@ import {
 	within,
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
-import { server } from "@/tests/mocks/server";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let history: HashHistory;
 let profile: Contracts.IProfile;
@@ -78,11 +77,7 @@ describe("Exchange", () => {
 	});
 
 	it("should render empty", async () => {
-		server.use(
-			rest.get(exchangeBaseURL, (_, response, context) =>
-				response(context.status(200), context.json({ data: [] })),
-			),
-		);
+		server.use(requestMock(exchangeBaseURL, { data: [] }));
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
@@ -302,12 +297,7 @@ describe("Exchange", () => {
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/changenow/orders/id`, (_, response, context) =>
-				response(
-					context.status(200),
-					context.json({ data: { id: exchangeTransaction.orderId(), status: "finished" } }),
-				),
-			),
+			requestMock(`${exchangeBaseURL}/changenow/orders/id`, { data: { id: exchangeTransaction.orderId(), status: "finished" } }),
 		);
 
 		render(
