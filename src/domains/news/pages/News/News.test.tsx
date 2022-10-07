@@ -4,6 +4,8 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { vi } from "vitest";
+import { rest } from "msw";
 import { News } from "./News";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { buildTranslations } from "@/app/i18n/helpers";
@@ -20,9 +22,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { vi } from "vitest";
-import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
-import { rest } from "msw";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const newsBasePath = "https://news.arkvault.io/api";
 
