@@ -4,6 +4,7 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
+import crypto from "crypto";
 
 import { server } from "./src/tests/mocks/server";
 
@@ -161,4 +162,9 @@ vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
 
 vi.stubGlobal("CSS", {
 	supports: () => true,
+});
+
+vi.stubGlobal("crypto", {
+	...crypto,
+	getRandomValues: crypto.randomFillSync,
 });
