@@ -12,6 +12,8 @@ on:
 jobs:
     app:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app
         strategy:
             matrix:
                 node-version:
@@ -46,6 +48,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/app
     domains-contact:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/contact
         strategy:
             matrix:
                 node-version:
@@ -80,6 +84,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/contact
     domains-dashboard:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/dashboard
         strategy:
             matrix:
                 node-version:
@@ -114,6 +120,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/dashboard
     domains-error:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/error
         strategy:
             matrix:
                 node-version:
@@ -184,6 +192,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/message
         strategy:
             matrix:
                 node-version:
@@ -218,6 +228,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/message
     domains-network:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/network
         strategy:
             matrix:
                 node-version:
@@ -252,6 +264,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/network
     domains-news:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/news
         strategy:
             matrix:
                 node-version:
@@ -286,6 +300,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/news
     domains-profile:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/profile
         strategy:
             matrix:
                 node-version:
@@ -320,6 +336,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/profile
     domains-setting:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/setting
         strategy:
             matrix:
                 node-version:
@@ -354,6 +372,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/setting
     domains-transaction:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/transaction
         strategy:
             matrix:
                 node-version:
@@ -388,6 +408,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/transaction
     domains-vote:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/vote
         strategy:
             matrix:
                 node-version:
@@ -422,6 +444,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/vote
     domains-wallet:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/wallet
         strategy:
             matrix:
                 node-version:
@@ -456,6 +480,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/wallet
     router:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/router
         strategy:
             matrix:
                 node-version:
@@ -490,6 +516,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/router
     utils:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/utils
         strategy:
             matrix:
                 node-version:

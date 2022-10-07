@@ -16,147 +16,30 @@ const workflow = {
 	jobs: {},
 };
 
-const directories = {
-	app: {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/contact": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/dashboard": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/error": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/exchange": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/message": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/network": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/news": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/profile": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/setting": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/transaction": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/vote": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/wallet": {
-		coverageThreshold: {
-			branches: 95,
-			functions: 80,
-			lines: 60,
-			statements: 60,
-		},
-		maxWorkers: 2,
-	},
-	router: {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	utils: {
-		coverageThreshold: {
-			branches: 55.71,
-			functions: 23.4,
-			lines: 50,
-			statements: 46.94,
-		},
-		maxWorkers: 2,
-	},
-};
+const directories = [
+	"app",
+	"domains/contact",
+	"domains/dashboard",
+	"domains/error",
+	"domains/exchange",
+	"domains/message",
+	"domains/network",
+	"domains/news",
+	"domains/profile",
+	"domains/setting",
+	"domains/transaction",
+	"domains/vote",
+	"domains/wallet",
+	"router",
+	"utils",
+];
 
-for (const [directory] of Object.entries(directories)) {
+for (const directory of directories) {
 	const job = {
 		"runs-on": "ubuntu-latest",
+		env: {
+			COVERAGE_INCLUDE_PATH: `src/${directory}`,
+		},
 		strategy: {
 			matrix: {
 				"node-version": ["16.17.1"],
