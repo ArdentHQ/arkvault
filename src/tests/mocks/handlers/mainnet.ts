@@ -14,17 +14,17 @@ const wallets = [
 
 export const mainnetHandlers = [
   ...endpoints.map((endpoint) =>
-    rest.get(`https://ark-live.arkvault.io/api${endpoint.path}`, (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(endpoint.data));
+    rest.get(`https://ark-live.arkvault.io/api${endpoint.path}`, (_, response, context) => {
+      return response(context.status(200), context.json(endpoint.data));
     })
   ),
-  rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (req, res, ctx) => {
+  rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (_, response, context) => {
     const identifier = req.params.identifier as string;
 
     if (wallets.includes(identifier)) {
-      return res(ctx.status(200), ctx.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`)));
+      return response(context.status(200), context.json(require(`../../fixtures/coins/ark/mainnet/wallets/${identifier}.json`)));
     }
 
-    return res(ctx.status(200), ctx.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json")));
+    return response(context.status(200), context.json(require("../../fixtures/coins/ark/mainnet/wallets/not-found.json")));
   }),
 ];

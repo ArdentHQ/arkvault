@@ -93,8 +93,8 @@ describe("ExchangeService", () => {
 	describe("#orderStatus", () => {
 		it("should retrieve the status of an exchange order", async () => {
 			server.use(
-				rest.get(`${exchangeHost}/${provider}/orders/id`, (req, res, ctx) => {
-					return res(ctx.status(200), ctx.json(orderStatus));
+				rest.get(`${exchangeHost}/${provider}/orders/id`, (_, response, context) => {
+					return response(context.status(200), context.json(orderStatus));
 				}),
 			);
 

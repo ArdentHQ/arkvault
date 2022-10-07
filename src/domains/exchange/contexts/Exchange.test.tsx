@@ -50,8 +50,8 @@ describe("Exchange Context", () => {
 
 	it("should handle error when fetching providers", async () => {
 		server.use(
-			rest.get("https://exchanges.arkvault.io/api", (req, res, ctx) => {
-				return res(ctx.status(404));
+			rest.get("https://exchanges.arkvault.io/api", (_, response, context) => {
+				return response(context.status(404));
 			})
 		);
 

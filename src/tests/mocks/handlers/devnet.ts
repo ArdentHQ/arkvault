@@ -30,21 +30,21 @@ const wallets = [
 
 export const devnetHandlers = [
   ...endpoints.map((endpoint) =>
-    rest.get(`https://ark-test.arkvault.io/api${endpoint.path}`, (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(endpoint.data));
+    rest.get(`https://ark-test.arkvault.io/api${endpoint.path}`, (_, response, context) => {
+      return response(context.status(200), context.json(endpoint.data));
     })
   ),
-  rest.get("https://ark-test.arkvault.io/api/wallets/:identifier", (req, res, ctx) => {
-    const identifier = req.params.identifier;
+  rest.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
+    const identifier = request.params.identifier as string;
 
     if (wallets.includes(identifier)) {
-      return res(ctx.status(200), ctx.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`)));
+      return response(context.status(200), context.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`)));
     }
 
     if (identifier === "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192") {
-      return res(ctx.status(200), ctx.json(delegate));
+      return response(context.status(200), context.json(delegate));
     }
 
-    return res(ctx.status(200), ctx.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json")));
+    return response(context.status(200), context.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json")));
   }),
 ];

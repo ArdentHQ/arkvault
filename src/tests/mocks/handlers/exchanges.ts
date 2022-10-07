@@ -14,11 +14,11 @@ const endpoints = [
 
 export const exchangeHandlers = [
   ...endpoints.map((endpoint) =>
-    rest.get(`https://exchanges.arkvault.io/api${endpoint.path}`, (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(endpoint.data));
+    rest.get(`https://exchanges.arkvault.io/api${endpoint.path}`, (_, response, context) => {
+      return response(context.status(200), context.json(endpoint.data));
     }),
   ),
-  rest.post("https://exchanges.arkvault.io/api/:provider/orders", (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(require("../../fixtures/exchange/changenow/order.json")));
+  rest.post("https://exchanges.arkvault.io/api/:provider/orders", (_, response, context) => {
+    return response(context.status(200), context.json(require("../../fixtures/exchange/changenow/order.json")));
   }),
 ];

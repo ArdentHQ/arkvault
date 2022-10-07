@@ -79,8 +79,8 @@ describe("Exchange", () => {
 
 	it("should render empty", async () => {
 		server.use(
-			rest.get(exchangeBaseURL, (req, res, ctx) => {
-				return res(ctx.status(200), ctx.json({ data: [] }));
+			rest.get(exchangeBaseURL, (_, response, context) => {
+				return response(context.status(200), context.json({ data: [] }));
 			})
 		);
 
@@ -302,8 +302,8 @@ describe("Exchange", () => {
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/changenow/orders/id`, (req, res, ctx) => {
-				return res(ctx.status(200), ctx.json({ data: { id: exchangeTransaction.orderId(), status: "finished" } }));
+			rest.get(`${exchangeBaseURL}/changenow/orders/id`, (_, response, context) => {
+				return response(context.status(200), context.json({ data: { id: exchangeTransaction.orderId(), status: "finished" } }));
 			}),
 		);
 

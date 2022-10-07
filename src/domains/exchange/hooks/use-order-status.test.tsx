@@ -31,8 +31,8 @@ describe("useOrderStatus", () => {
 	describe("#checkOrderStatus", () => {
 		it("should check the order status", async () => {
 			server.use(
-				rest.get("https://exchanges.arkvault.io/api/changenow/orders/id", (req, res, ctx) => {
-					return res(ctx.status(200), ctx.json({ data: { id: "id", status: "waiting" } }));
+				rest.get("https://exchanges.arkvault.io/api/changenow/orders/id", (_, response, context) => {
+					return response(context.status(200), context.json({ data: { id: "id", status: "waiting" } }));
 				}),
 			);
 

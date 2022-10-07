@@ -8,8 +8,8 @@ const endpoints = [
 
 export const exchangeHandlers = [
   ...endpoints.map((endpoint) =>
-    rest.get(`https://min-api.cryptocompare.com${endpoint.path}`, (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(endpoint.data));
+    rest.get(`https://min-api.cryptocompare.com${endpoint.path}`, (_, response, context) => {
+      return response(context.status(200), context.json(endpoint.data));
     }),
   ),
 ];
