@@ -42,9 +42,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(document.getElementById("world-map")).toBeInTheDocument();
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -87,9 +85,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(document.getElementById("world-map")).toBeInTheDocument();
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
@@ -116,9 +112,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(document.getElementById("world-map")).toBeInTheDocument();
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("ExchangeForm")).not.toBeInTheDocument();
@@ -144,9 +138,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(document.getElementById("world-map")).toBeInTheDocument();
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();

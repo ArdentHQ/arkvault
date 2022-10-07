@@ -75,7 +75,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 		);
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
-		expect(document.getElementById(icon)).toBeInTheDocument();
+		expect(document.querySelector(`svg#${icon}`)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

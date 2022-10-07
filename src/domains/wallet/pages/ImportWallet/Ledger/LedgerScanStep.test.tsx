@@ -95,6 +95,11 @@ describe("LedgerScanStep", () => {
 		);
 	};
 
+	const validLedgerWallet = () =>
+		expect(formReference.getValues("wallets")).toMatchObject([
+			{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
+		]);
+
 	it("should handle select", async () => {
 		render(<Component />);
 
@@ -148,11 +153,6 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
 		userEvent.click(checkboxSelectAll);
-
-		const validLedgerWallet = () =>
-			expect(formReference.getValues("wallets")).toMatchObject([
-				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-			]);
 
 		await waitFor(validLedgerWallet);
 
