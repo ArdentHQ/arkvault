@@ -179,7 +179,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/exchange --config src/domains/exchange/vitest.config.ts
+                  command: pnpm vitest run --config src/domains/exchange/vitest.config.ts --coverage --dir src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
         strategy:
