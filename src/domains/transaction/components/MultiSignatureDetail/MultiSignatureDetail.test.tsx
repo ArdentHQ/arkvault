@@ -746,9 +746,7 @@ describe("MultiSignatureDetail", () => {
 		vi.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 
-		const addSignatureMock = vi
-			.spyOn(wallet.transaction(), "addSignature")
-			.mockRejectedValue(new Error("Failed"));
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockRejectedValue(new Error("Failed"));
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
 
 		render(

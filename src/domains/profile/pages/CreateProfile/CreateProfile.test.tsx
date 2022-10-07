@@ -406,9 +406,7 @@ describe("CreateProfile", () => {
 	});
 
 	it.each([true, false])("should set viewing mode based on system preferences", async (shouldUseDarkColors) => {
-		const shouldUseDarkColorsSpy = vi
-			.spyOn(themeUtils, "shouldUseDarkColors")
-			.mockReturnValue(shouldUseDarkColors);
+		const shouldUseDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
 		await renderComponent();
 

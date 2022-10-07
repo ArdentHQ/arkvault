@@ -7,6 +7,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { rest } from "msw";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -15,7 +16,6 @@ import { StatusStep } from "./StatusStep";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
-import { rest } from "msw";
 import { server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
@@ -185,9 +185,12 @@ describe("ExchangeForm", () => {
 		});
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }));
-			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
+				response(
+					context.status(200),
+					context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }),
+				),
+			),
 		);
 
 		const { container } = renderComponent(
@@ -282,12 +285,12 @@ describe("ExchangeForm", () => {
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) => {
-				return response(context.status(200), context.json(currencyEth));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, (_, response, context) => {
-				return response(context.status(422), context.json({ error: { message: "Unavailable Pair" } }));
-			}),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
+				response(context.status(200), context.json(currencyEth)),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, (_, response, context) =>
+				response(context.status(422), context.json({ error: { message: "Unavailable Pair" } })),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -362,9 +365,9 @@ describe("ExchangeForm", () => {
 		currency.data.hasExternalId = true;
 
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) => {
-				return response(context.status(200), context.json(currency));
-			}),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
+				response(context.status(200), context.json(currency)),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -403,12 +406,12 @@ describe("ExchangeForm", () => {
 		currency.data.hasExternalId = true;
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: true }));
-			}),
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) => {
-				return response(context.status(200), context.json(currency));
-			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
+				response(context.status(200), context.json({ data: true })),
+			),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
+				response(context.status(200), context.json(currency)),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -742,12 +745,12 @@ describe("ExchangeForm", () => {
 
 	it("should clear recipient address error when unsetting to currency", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) => {
-				return response(context.status(200), context.json(currencyEth));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: false }));
-			}),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
+				response(context.status(200), context.json(currencyEth)),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
+				response(context.status(200), context.json({ data: false })),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -791,12 +794,12 @@ describe("ExchangeForm", () => {
 
 	it("should clear refund address error when unsetting from currency", async () => {
 		server.use(
-			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) => {
-				return response(context.status(200), context.json(currencyEth));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: false }));
-			}),
+			rest.get(`${exchangeBaseURL}${exchangeETHURL}`, (_, response, context) =>
+				response(context.status(200), context.json(currencyEth)),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, (_, response, context) =>
+				response(context.status(200), context.json({ data: false })),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -847,9 +850,9 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) => {
-				return response(context.status(500), context.json("Server Error"));
-			}),
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
+				response(context.status(500), context.json("Server Error")),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -944,9 +947,9 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) => {
-				return response(context.status(422), context.json({ error: { message: "Invalid Address" } }));
-			}),
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
+				response(context.status(422), context.json({ error: { message: "Invalid Address" } })),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -1025,12 +1028,12 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) => {
-				return response(context.status(422), context.json({ error: { message: "Invalid Refund Address" } }));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: true }));
-			}),
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
+				response(context.status(422), context.json({ error: { message: "Invalid Refund Address" } })),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, (_, response, context) =>
+				response(context.status(200), context.json({ data: true })),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -1129,26 +1132,31 @@ describe("ExchangeForm", () => {
 		};
 
 		server.use(
-			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) => {
-				return response(context.status(200), context.json(order));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) => {
-				return response.once(context.status(200), context.json({ data: baseStatus }));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) => {
-				return response.once(context.status(200), context.json({ data: { ...baseStatus, status: "exchanging" } }));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) => {
-				return response.once(context.status(200), context.json({ data: { ...baseStatus, status: "sending" } }));
-			}),
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) => {
-				return response.once(context.status(200), context.json({ data: {
-					...baseStatus,
-					payinHash: "payinHash",
-					payoutHash: "payoutHash",
-					status: "finished",
-				} }));
-			}),
+			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (_, response, context) =>
+				response(context.status(200), context.json(order)),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
+				response.once(context.status(200), context.json({ data: baseStatus })),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
+				response.once(context.status(200), context.json({ data: { ...baseStatus, status: "exchanging" } })),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
+				response.once(context.status(200), context.json({ data: { ...baseStatus, status: "sending" } })),
+			),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (_, response, context) =>
+				response.once(
+					context.status(200),
+					context.json({
+						data: {
+							...baseStatus,
+							payinHash: "payinHash",
+							payoutHash: "payoutHash",
+							status: "finished",
+						},
+					}),
+				),
+			),
 		);
 
 		const onReady = vi.fn();
@@ -1392,9 +1400,12 @@ describe("StatusStep", () => {
 		});
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }));
-			}),
+			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
+				response(
+					context.status(200),
+					context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }),
+				),
+			),
 		);
 
 		const { container } = render(
@@ -1437,9 +1448,14 @@ describe("StatusStep", () => {
 		});
 
 		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/${exchangeTransaction.orderId()}`, (_, response, context) => {
-				return response(context.status(200), context.json({ data: { id: exchangeTransaction.orderId(), status: "sending" } }));
-			}),
+			rest.get(
+				`${exchangeBaseURL}/api/changenow/orders/${exchangeTransaction.orderId()}`,
+				(_, response, context) =>
+					response(
+						context.status(200),
+						context.json({ data: { id: exchangeTransaction.orderId(), status: "sending" } }),
+					),
+			),
 		);
 
 		render(

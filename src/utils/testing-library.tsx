@@ -2,7 +2,6 @@ import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
@@ -13,7 +12,6 @@ import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { i18n } from "@/app/i18n";
 import { httpClient } from "@/app/services";
 import { LayoutBreakpoint } from "@/types";
-import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
@@ -169,14 +167,13 @@ export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
-const environmentWithMocks = () => {
-	return new Environment({
+const environmentWithMocks = () =>
+	new Environment({
 		coins: { ARK },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
 	});
-};
 
 export const env = environmentWithMocks();
 

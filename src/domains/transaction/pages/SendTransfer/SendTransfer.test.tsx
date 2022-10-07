@@ -978,9 +978,7 @@ describe("SendTransfer", () => {
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
-		const expirationMock = vi
-			.spyOn(wallet.coin().transaction(), "estimateExpiration")
-			.mockResolvedValue(undefined);
+		const expirationMock = vi.spyOn(wallet.coin().transaction(), "estimateExpiration").mockResolvedValue(undefined);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 		userEvent.click(sendButton());

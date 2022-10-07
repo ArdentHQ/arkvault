@@ -195,9 +195,7 @@ describe("Wallet Transactions Hook", () => {
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
-		vi.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(
-			false,
-		);
+		vi.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(false);
 		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
 		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
 

@@ -131,11 +131,9 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should start export and fail", async () => {
-		const transactionIndexMock = vi
-			.spyOn(profile.wallets().first(), "transactionIndex")
-			.mockImplementation(() => {
-				throw new Error("error");
-			});
+		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
+			throw new Error("error");
+		});
 
 		const { result } = renderExportHook();
 

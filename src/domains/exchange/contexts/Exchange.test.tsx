@@ -1,12 +1,12 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { rest } from "msw";
 import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
 import { server } from "@/tests/mocks/server";
-import { rest } from "msw";
 
 const Test = () => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
@@ -50,9 +50,7 @@ describe("Exchange Context", () => {
 
 	it("should handle error when fetching providers", async () => {
 		server.use(
-			rest.get("https://exchanges.arkvault.io/api", (_, response, context) => {
-				return response(context.status(404));
-			})
+			rest.get("https://exchanges.arkvault.io/api", (_, response, context) => response(context.status(404))),
 		);
 
 		const { container } = render(

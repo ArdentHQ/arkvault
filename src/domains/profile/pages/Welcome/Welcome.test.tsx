@@ -73,9 +73,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to vote page", async () => {
-		const mockDelegateName = vi
-			.spyOn(env.delegates(), "findByUsername")
-			.mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		const { container } = render(
 			<Route path="/">
@@ -124,9 +122,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const mockDelegateName = vi
-			.spyOn(env.delegates(), "findByUsername")
-			.mockReturnValue(profile.wallets().first());
+		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 
 		render(
 			<Route path="/">

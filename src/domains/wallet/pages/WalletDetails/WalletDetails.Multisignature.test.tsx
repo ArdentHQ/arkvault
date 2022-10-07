@@ -10,15 +10,7 @@ import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	syncDelegates,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 
 const translations = buildTranslations();
 

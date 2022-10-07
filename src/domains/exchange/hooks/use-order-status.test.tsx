@@ -1,9 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useState } from "react";
 
+import { rest } from "msw";
 import { useOrderStatus } from "./use-order-status";
 import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
-import { rest } from "msw";
 import { server } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
@@ -31,9 +31,9 @@ describe("useOrderStatus", () => {
 	describe("#checkOrderStatus", () => {
 		it("should check the order status", async () => {
 			server.use(
-				rest.get("https://exchanges.arkvault.io/api/changenow/orders/id", (_, response, context) => {
-					return response(context.status(200), context.json({ data: { id: "id", status: "waiting" } }));
-				}),
+				rest.get("https://exchanges.arkvault.io/api/changenow/orders/id", (_, response, context) =>
+					response(context.status(200), context.json({ data: { id: "id", status: "waiting" } })),
+				),
 			);
 
 			const Component = () => {

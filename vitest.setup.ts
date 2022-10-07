@@ -61,8 +61,8 @@ vi.mock("async-retry", async () => {
 	const retry = await vi.importActual("async-retry");
 
 	return {
-    default: (fn, options) => retry(fn, { ...options, retries: 2 }),
-  };
+		default: (fn, options) => retry(fn, { ...options, retries: 2 }),
+	};
 });
 
 vi.mock("browser-fs-access");
@@ -155,10 +155,10 @@ class BroadcastChannelMock {
 	addEventListener = vi.fn();
 	removeEventListener = vi.fn();
 	close = vi.fn();
-};
+}
 
 vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
 
 vi.stubGlobal("CSS", {
-  supports: () => true,
+	supports: () => true,
 });

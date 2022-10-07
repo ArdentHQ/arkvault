@@ -338,9 +338,7 @@ describe("AddressRowMobile", () => {
 	});
 
 	it("should render when the wallet has many votes", () => {
-		const votesMock = vi
-			.spyOn(wallet.voting(), "current")
-			.mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(
 			<AddressWrapper>

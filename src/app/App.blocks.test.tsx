@@ -153,9 +153,7 @@ describe("App Main", () => {
 
 		await env.profiles().restore(profile);
 
-		const walletSyncErrorMock = vi
-			.spyOn(profile.wallets().first(), "hasSyncedWithNetwork")
-			.mockReturnValue(false);
+		const walletSyncErrorMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 		const walletRestoreErrorMock = vi
 			.spyOn(profile.wallets().last(), "hasBeenFullyRestored")
 			.mockReturnValue(false);

@@ -12,9 +12,7 @@ import { toasts } from "@/app/services";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
-	expect(formReference.getValues("wallets")).toMatchObject([
-		{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-	]);
+	expect(formReference.getValues("wallets")).toMatchObject([{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" }]);
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;

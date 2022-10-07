@@ -5,12 +5,7 @@ import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
-import {
-	env,
-	getDefaultProfileId,
-	getDefaultWalletMnemonic,
-	WithProviders,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, WithProviders } from "@/utils/testing-library";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;

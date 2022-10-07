@@ -111,9 +111,7 @@ describe("ImportWallet WIF", () => {
 
 	it("should import with valid wif", async () => {
 		const coin = profile.coins().get("ARK", testNetwork);
-		const coinMock = vi
-			.spyOn(coin.address(), "fromWIF")
-			.mockResolvedValue({ address: "whatever", type: "bip39" });
+		const coinMock = vi.spyOn(coin.address(), "fromWIF").mockResolvedValue({ address: "whatever", type: "bip39" });
 
 		history.push(`/profiles/${profile.id()}`);
 

@@ -135,11 +135,9 @@ describe("TransactionExportModal", () => {
 	});
 
 	it("should render error status", async () => {
-		const transactionIndexMock = vi
-			.spyOn(profile.wallets().first(), "transactionIndex")
-			.mockImplementation(() => {
-				throw new Error("error");
-			});
+		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
+			throw new Error("error");
+		});
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">

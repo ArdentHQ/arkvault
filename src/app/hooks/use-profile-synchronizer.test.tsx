@@ -496,9 +496,7 @@ describe("useProfileSynchronizer", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		const mockWalletSyncStatus = vi
-			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
-			.mockReturnValue(false);
+		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: true });
@@ -560,9 +558,7 @@ describe("useProfileSynchronizer", () => {
 
 		await expect(screen.findByTestId("ProfileSyncedWithError")).resolves.toBeVisible();
 
-		const mockWalletSyncStatus = vi
-			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
-			.mockReturnValue(false);
+		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: true });
@@ -987,9 +983,7 @@ describe("useProfileStatusWatcher", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		const mockWalletSyncStatus = vi
-			.spyOn(profile.wallets().first(), "hasBeenFullyRestored")
-			.mockReturnValue(false);
+		const mockWalletSyncStatus = vi.spyOn(profile.wallets().first(), "hasBeenFullyRestored").mockReturnValue(false);
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>

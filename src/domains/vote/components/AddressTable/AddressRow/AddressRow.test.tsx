@@ -129,9 +129,7 @@ describe("AddressRow", () => {
 	it.each([true, false])(
 		"should render with isCompact = %s when the maximum votes is greater than 1",
 		(isCompact: boolean) => {
-			const votesMock = vi
-				.spyOn(wallet.voting(), "current")
-				.mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 			const { asFragment, container } = render(
 				<Route path="/profiles/:profileId/votes">
@@ -154,9 +152,7 @@ describe("AddressRow", () => {
 	);
 
 	it.each([true, false])("should render with isCompact = %s when the wallet has many votes", (isCompact: boolean) => {
-		const votesMock = vi
-			.spyOn(wallet.voting(), "current")
-			.mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(
 			<AddressWrapper>
@@ -176,9 +172,7 @@ describe("AddressRow", () => {
 	it.each([true, false])(
 		"should render with isCompact = %s when the wallet has exactly 4 votes",
 		(isCompact: boolean) => {
-			const votesMock = vi
-				.spyOn(wallet.voting(), "current")
-				.mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 			const { asFragment, container } = render(
 				<AddressWrapper>

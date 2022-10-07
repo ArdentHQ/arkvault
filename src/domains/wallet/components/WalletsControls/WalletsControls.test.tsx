@@ -21,11 +21,7 @@ describe("WalletsControls", () => {
 
 	it("should render", () => {
 		const { container } = render(
-			<WalletsControls
-				onCreateWallet={vi.fn()}
-				onImportWallet={vi.fn()}
-				filterProperties={filterProperties}
-			/>,
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -33,11 +29,7 @@ describe("WalletsControls", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { container } = renderResponsive(
-			<WalletsControls
-				onCreateWallet={vi.fn()}
-				onImportWallet={vi.fn()}
-				filterProperties={filterProperties}
-			/>,
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
 			breakpoint,
 		);
 

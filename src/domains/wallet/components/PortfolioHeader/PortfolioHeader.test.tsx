@@ -127,9 +127,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet creation", () => {
-		const useWalletActionSpy = vi
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />
@@ -151,9 +149,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet import", () => {
-		const useWalletActionSpy = vi
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -264,9 +260,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should apply ledger import", () => {
-		const useWalletActionSpy = vi
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		const transportMock = mockNanoXTransport();
 		const { asFragment } = render(
