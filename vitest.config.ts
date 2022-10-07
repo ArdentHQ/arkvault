@@ -19,7 +19,6 @@ export default mergeConfig(viteConfig, defineConfig({
     },
     coverage: {
       all: false,
-      include: ["src/"],
       exclude: [
         "**/build/*",
         "**/dist/*",
