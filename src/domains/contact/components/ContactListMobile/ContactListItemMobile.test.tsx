@@ -61,7 +61,7 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -84,13 +84,13 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
 		});
 
-		const sendButton = screen.getByRole("button", { name: "double-arrow-right.svg" });
+		const sendButton = screen.getByTestId("ContactListItemMobileAddress__send-button");
 
 		expect(sendButton).toBeEnabled();
 
@@ -113,13 +113,13 @@ describe("ContactListItemMobile", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
 		});
 
-		const sendButton = screen.getByRole("button", { name: "double-arrow-right.svg" });
+		const sendButton = screen.getByTestId("ContactListItemMobileAddress__send-button");
 
 		expect(sendButton).toBeDisabled();
 

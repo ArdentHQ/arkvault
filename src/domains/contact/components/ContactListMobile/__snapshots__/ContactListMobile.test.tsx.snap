@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ContactListMobile should render 1`] = `
+exports[`ContactListMobile > should render 1`] = `
 <DocumentFragment>
   <div
     class="mt-8"
@@ -42,8 +42,37 @@ exports[`ContactListMobile should render 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        ellipsis-vertical.svg
+                      <svg
+                        id="ellipsis-vertical"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <circle
+                            cx="10"
+                            cy="16.994"
+                            r="2.006"
+                          />
+                          <circle
+                            cx="10"
+                            cy="3"
+                            r="2"
+                          />
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="2"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -57,8 +86,7 @@ exports[`ContactListMobile should render 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -69,8 +97,22 @@ exports[`ContactListMobile should render 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
