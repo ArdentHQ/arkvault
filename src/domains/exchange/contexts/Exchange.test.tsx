@@ -1,12 +1,12 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { vi } from "vitest";
 import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-import { vi } from "vitest";
 
 const Test = () => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
@@ -49,9 +49,7 @@ describe("Exchange Context", () => {
 	});
 
 	it("should handle error when fetching providers", async () => {
-		server.use(
-			requestMock("https://exchanges.arkvault.io/api", undefined, { status: 404 }),
-		);
+		server.use(requestMock("https://exchanges.arkvault.io/api", undefined, { status: 404 }));
 
 		const { container } = render(
 			<ExchangeProvider>

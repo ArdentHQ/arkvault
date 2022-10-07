@@ -30,7 +30,9 @@ describe("useOrderStatus", () => {
 	describe("#checkOrderStatus", () => {
 		it("should check the order status", async () => {
 			server.use(
-				requestMock("https://exchanges.arkvault.io/api/changenow/orders/id", { data: { id: "id", status: "waiting" } }),
+				requestMock("https://exchanges.arkvault.io/api/changenow/orders/id", {
+					data: { id: "id", status: "waiting" },
+				}),
 			);
 
 			const Component = () => {

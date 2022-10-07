@@ -7,6 +7,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { vi } from "vitest";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -19,7 +20,6 @@ import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
-import { vi } from "vitest";
 
 let profile: Contracts.IProfile;
 
@@ -921,7 +921,11 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			requestMock(`${exchangeBaseURL}/api/changenow/orders`, { error: { message: "Invalid Address" } }, { method: "post", status: 422 }),
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/orders`,
+				{ error: { message: "Invalid Address" } },
+				{ method: "post", status: 422 },
+			),
 		);
 
 		const onReady = vi.fn();
@@ -1000,7 +1004,11 @@ describe("ExchangeForm", () => {
 		const { t } = result.current;
 
 		server.use(
-			requestMock(`${exchangeBaseURL}/api/changenow/orders`, { error: { message: "Invalid Refund Address" } }, { method: "post", status: 422 }),
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/orders`,
+				{ error: { message: "Invalid Refund Address" } },
+				{ method: "post", status: 422 },
+			),
 			requestMock(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, { data: true }),
 		);
 
@@ -1101,17 +1109,33 @@ describe("ExchangeForm", () => {
 
 		server.use(
 			requestMock(`${exchangeBaseURL}/api/changenow/orders`, order, { method: "post" }),
-			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }, { method: "post" }),
-			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "exchanging" } }, { method: "post" }),
-			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: { ...baseStatus, status: "sending" } }, { method: "post" }),
-			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
-				data: {
-					...baseStatus,
-					payinHash: "payinHash",
-					payoutHash: "payoutHash",
-					status: "finished",
+			requestMockOnce(
+				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
+				{ data: baseStatus },
+				{ method: "post" },
+			),
+			requestMockOnce(
+				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
+				{ data: { ...baseStatus, status: "exchanging" } },
+				{ method: "post" },
+			),
+			requestMockOnce(
+				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
+				{ data: { ...baseStatus, status: "sending" } },
+				{ method: "post" },
+			),
+			requestMockOnce(
+				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
+				{
+					data: {
+						...baseStatus,
+						payinHash: "payinHash",
+						payoutHash: "payoutHash",
+						status: "finished",
+					},
 				},
-			}, { method: "post" }),
+				{ method: "post" },
+			),
 		);
 
 		const onReady = vi.fn();

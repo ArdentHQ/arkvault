@@ -297,7 +297,9 @@ describe("Exchange", () => {
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
 		server.use(
-			requestMock(`${exchangeBaseURL}/changenow/orders/id`, { data: { id: exchangeTransaction.orderId(), status: "finished" } }),
+			requestMock(`${exchangeBaseURL}/changenow/orders/id`, {
+				data: { id: exchangeTransaction.orderId(), status: "finished" },
+			}),
 		);
 
 		render(
