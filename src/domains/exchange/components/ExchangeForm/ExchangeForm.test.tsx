@@ -56,6 +56,14 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	return <></>;
 };
 
+const mockOrderStatus = (orderId: string, status: string) =>
+	rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
+		response(
+			context.status(200),
+			context.json({ data: { id: orderId, status } }),
+		),
+	);
+
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
 	// from currency
 	if (from) {
@@ -184,14 +192,7 @@ describe("ExchangeForm", () => {
 			provider: "changenow",
 		});
 
-		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
-				response(
-					context.status(200),
-					context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }),
-				),
-			),
-		);
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
 
 		const { container } = renderComponent(
 			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
@@ -1399,14 +1400,7 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		server.use(
-			rest.get(`${exchangeBaseURL}/api/changenow/orders/id`, (_, response, context) =>
-				response(
-					context.status(200),
-					context.json({ data: { id: exchangeTransaction.orderId(), status: "new" } }),
-				),
-			),
-		);
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
 
 		const { container } = render(
 			<ExchangeProvider>
@@ -1447,16 +1441,7 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		server.use(
-			rest.get(
-				`${exchangeBaseURL}/api/changenow/orders/${exchangeTransaction.orderId()}`,
-				(_, response, context) =>
-					response(
-						context.status(200),
-						context.json({ data: { id: exchangeTransaction.orderId(), status: "sending" } }),
-					),
-			),
-		);
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "sending"));
 
 		render(
 			<ExchangeProvider>
