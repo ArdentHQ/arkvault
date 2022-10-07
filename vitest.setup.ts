@@ -111,7 +111,13 @@ afterEach(() => {
 	localstorageSpy.mockRestore();
 });
 
-afterAll(() => server.close())
+afterAll(() => {
+	server.close();
+
+	if (global.gc) {
+		global.gc();
+	}
+});
 
 Object.defineProperty(HTMLImageElement.prototype, "decode", {
 	writable: true,

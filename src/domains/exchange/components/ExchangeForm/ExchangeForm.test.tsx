@@ -19,6 +19,7 @@ import { rest } from "msw";
 import { server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
+import order from "@/tests/fixtures/exchange/changenow/order.json";
 
 let profile: Contracts.IProfile;
 
@@ -1115,7 +1116,7 @@ describe("ExchangeForm", () => {
 		toastSpy.mockRestore();
 	});
 
-	it.only("should perform an exchange", async () => {
+	it("should perform an exchange", async () => {
 		const baseStatus = {
 			amountFrom: 1,
 			amountTo: 100,
@@ -1129,7 +1130,7 @@ describe("ExchangeForm", () => {
 
 		server.use(
 			rest.post(`${exchangeBaseURL}/api/changenow/orders`, (req, res, ctx) => {
-				return res(ctx.status(200), ctx.json(require("tests/fixtures/exchange/changenow/order.json")));
+				return res(ctx.status(200), ctx.json(order));
 			}),
 			rest.get(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, (req, res, ctx) => {
 				return res.once(ctx.status(200), ctx.json({ data: baseStatus }));

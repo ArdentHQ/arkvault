@@ -69,7 +69,6 @@ specifiers:
   eslint-plugin-testing-library: ^5.3.1
   eslint-plugin-unicorn: ^40.0.0
   eslint-plugin-unused-imports: ^2.0.0
-  eslint-plugin-vitest: ^0.0.8
   focus-visible: ^5.2.0
   framer-motion: ^4.1.17
   gherkin-testcafe: 5.1.0
@@ -131,7 +130,6 @@ specifiers:
   vite-plugin-package-config: ^0.1.1
   vite-plugin-pwa: ^0.12.0
   vite-plugin-svgr: ^0.6.0
-  vite-require: ^0.2.3
   vite-tsconfig-paths: ^3.4.1
   vitest: ^0.23.4
   workbox-window: ^6.5.3
@@ -239,7 +237,6 @@ devDependencies:
   eslint-plugin-testing-library: 5.3.1_jzhokl4shvj5szf5bgr66kln2a
   eslint-plugin-unicorn: 40.1.0_eslint@8.13.0
   eslint-plugin-unused-imports: 2.0.0_t7lnypqiuokwc7wuum62o34nay
-  eslint-plugin-vitest: 0.0.8_jzhokl4shvj5szf5bgr66kln2a
   gherkin-testcafe: 5.1.0_kpx2nmlo2o5n3gcd76yfoh7xve
   history: 5.3.0
   identity-obj-proxy: 3.0.0
@@ -271,7 +268,6 @@ devDependencies:
   vite-plugin-package-config: 0.1.1_vite@2.9.5
   vite-plugin-pwa: 0.12.0_nmh4z3meiw4zjeje3ieza3n4yq
   vite-plugin-svgr: 0.6.0_vite@2.9.5
-  vite-require: 0.2.3
   vite-tsconfig-paths: 3.4.1_vite@2.9.5
   vitest: 0.23.4_jsdom@20.0.1
   workbox-window: 6.5.3
@@ -5758,19 +5754,6 @@ packages:
       '@typescript-eslint/eslint-plugin': 5.20.0_xgwjwvswzzo77lpghh6plzerx4
       eslint: 8.13.0
       eslint-rule-composer: 0.3.0
-    dev: true
-
-  /eslint-plugin-vitest/0.0.8_jzhokl4shvj5szf5bgr66kln2a:
-    resolution: {integrity: sha512-6xn2b4Cspn7Qc0v/ZMCq13fmsucnkEeUeKCna57M5vayvreshHEUFVgjtsksnyODlHIm9oyVfNfSFkToYz/dJg==}
-    engines: {node: 14.x || >= 16}
-    peerDependencies:
-      eslint: '>=8.0.0'
-    dependencies:
-      '@typescript-eslint/utils': 5.20.0_jzhokl4shvj5szf5bgr66kln2a
-      eslint: 8.13.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
     dev: true
 
   /eslint-rule-composer/0.3.0:
@@ -11272,10 +11255,6 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-dynamic-import/1.2.2:
-    resolution: {integrity: sha512-50m5Whh9ZLzJouIcHhSzlcrieXx3YUiWAel4twcaNvZIlV9AbRud8e1qAunzpHZKTKPwujhkZps3O6XwebRGLg==}
-    dev: true
-
   /vite-plugin-optimize-persist/0.1.2_h75giynhgnxftd6km3bdnt7a2q:
     resolution: {integrity: sha512-H/Ebn2kZO8PvwUF08SsT5K5xMJNCWKoGX71+e9/ER3yNj7GHiFjNQlvGg5ih/zEx09MZ9m7WCxOwmEKbeIVzww==}
     peerDependencies:
@@ -11328,13 +11307,6 @@ packages:
       vite: 2.9.5
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vite-require/0.2.3:
-    resolution: {integrity: sha512-Lpeg5mxXiLAVrylKK9FMF8d6yxLBm6YtHXmtWpJSDSWBdl12tBsMGHOBC/fsLzATj+Zp9FHjqwzE1JayOPi9dQ==}
-    dependencies:
-      fast-glob: 3.2.11
-      vite-plugin-dynamic-import: 1.2.2
     dev: true
 
   /vite-tsconfig-paths/3.4.1_vite@2.9.5:

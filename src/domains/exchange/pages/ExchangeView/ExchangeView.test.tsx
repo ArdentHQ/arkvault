@@ -43,7 +43,7 @@ describe("ExchangeView", () => {
 		);
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
+			expect(document.getElementById("world-map")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
@@ -54,8 +54,6 @@ describe("ExchangeView", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -90,7 +88,7 @@ describe("ExchangeView", () => {
 		);
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
+			expect(document.getElementById("world-map")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
@@ -119,7 +117,7 @@ describe("ExchangeView", () => {
 		);
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
+			expect(document.getElementById("world-map")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
@@ -147,7 +145,7 @@ describe("ExchangeView", () => {
 		);
 
 		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
+			expect(document.getElementById("world-map")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {

@@ -6,6 +6,8 @@ import viteConfig from "./vite.config";
 
 export default mergeConfig(viteConfig, defineConfig({
   test: {
+    logHeapUsage: true,
+    maxConcurrency: 3,
 		globals: true,
 		environment: "jsdom",
     isolate: true,

@@ -1,4 +1,7 @@
 module.exports = {
+	globals: {
+		vi: false,
+	},
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,

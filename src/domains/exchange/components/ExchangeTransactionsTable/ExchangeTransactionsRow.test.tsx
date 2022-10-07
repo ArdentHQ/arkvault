@@ -65,7 +65,7 @@ describe("ExchangeTransactionsRow", () => {
 		);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-		expect(screen.getByTestId("TableRow")).toHaveTextContent(icon);
+		expect(document.getElementById(icon)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

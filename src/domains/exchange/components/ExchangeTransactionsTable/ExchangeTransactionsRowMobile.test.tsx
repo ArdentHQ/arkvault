@@ -75,7 +75,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 		);
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
-		// expect(screen.getByTestId("TableRow__mobile")).toHaveTextContent(icon);
+		expect(document.getElementById(icon)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

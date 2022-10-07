@@ -2,13 +2,14 @@ import { rest } from "msw";
 
 const endpoints = [
   { path: "", data: require("../../fixtures/exchange/exchanges.json") },
-  { path: "/changenow/currencies", data: require("../../fixtures/exchange/changenow/currencies.json") },
-  { path: "/changenow/currencies/ark", data: require("../../fixtures/exchange/changenow/currency-ark.json") },
-  { path: "/changenow/currencies/ark/payoutAddress", data: { data: true } },
-  { path: "/changenow/currencies/btc", data: require("../../fixtures/exchange/changenow/currency-btc.json") },
-  { path: "/changenow/tickers/:from/:to", data: require("../../fixtures/exchange/changenow/minimum.json") },
-  { path: "/changenow/tickers/:from/:to/1", data: require("../../fixtures/exchange/changenow/estimate.json") },
-  { path: "/changenow/orders/id", data: { data: { id: "id", status: "finished" } } },
+  { path: "/:provider/currencies", data: require("../../fixtures/exchange/changenow/currencies.json") },
+  { path: "/:provider/currencies/ark", data: require("../../fixtures/exchange/changenow/currency-ark.json") },
+  { path: "/:provider/currencies/ark/payoutAddress", data: { data: true } },
+  { path: "/:provider/currencies/btc", data: require("../../fixtures/exchange/changenow/currency-btc.json") },
+  { path: "/:provider/currencies/btc/:address", data: require("../../fixtures/exchange/changenow/validate-address.json") },
+  { path: "/:provider/tickers/:from/:to", data: require("../../fixtures/exchange/changenow/minimum.json") },
+  { path: "/:provider/tickers/:from/:to/1", data: require("../../fixtures/exchange/changenow/estimate.json") },
+  { path: "/:provider/orders/id", data: { data: { id: "id", status: "finished" } } },
 ];
 
 export const exchangeHandlers = [
@@ -17,4 +18,7 @@ export const exchangeHandlers = [
       return res(ctx.status(200), ctx.json(endpoint.data));
     }),
   ),
+  rest.post("https://exchanges.arkvault.io/api/:provider/orders", (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(require("../../fixtures/exchange/changenow/order.json")));
+  }),
 ];

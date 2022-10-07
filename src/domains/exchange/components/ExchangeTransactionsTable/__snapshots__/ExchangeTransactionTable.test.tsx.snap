@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ExchangeTransactionsTable should render 1`] = `
+exports[`ExchangeTransactionsTable > should render 1`] = `
 <div>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -59,8 +59,22 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -91,8 +105,22 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -123,8 +151,22 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -155,8 +197,22 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -216,8 +272,42 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -252,8 +342,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -290,8 +397,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -312,8 +436,28 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -337,8 +481,32 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -361,8 +529,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -387,8 +572,42 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -423,8 +642,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -461,8 +697,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -483,8 +736,28 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -508,8 +781,32 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -532,8 +829,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -558,8 +872,42 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -594,8 +942,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -632,8 +997,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -654,8 +1036,28 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -679,8 +1081,32 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -703,8 +1129,25 @@ exports[`ExchangeTransactionsTable should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -719,7 +1162,7 @@ exports[`ExchangeTransactionsTable should render 1`] = `
 </div>
 `;
 
-exports[`ExchangeTransactionsTable should render compact 1`] = `
+exports[`ExchangeTransactionsTable > should render compact 1`] = `
 <div>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -778,8 +1221,22 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -810,8 +1267,22 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -842,8 +1313,22 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -874,8 +1359,22 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -935,8 +1434,42 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -968,8 +1501,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sent.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1002,8 +1552,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      received.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1023,8 +1590,28 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1048,8 +1635,32 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1072,8 +1683,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1098,8 +1726,42 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -1131,8 +1793,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sent.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1165,8 +1844,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      received.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1186,8 +1882,28 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1211,8 +1927,32 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1235,8 +1975,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1261,8 +2018,42 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -1294,8 +2085,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sent.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1328,8 +2136,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      received.svg
+                    <svg
+                      id="received"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1349,8 +2174,28 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1374,8 +2219,32 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1398,8 +2267,25 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1414,7 +2300,7 @@ exports[`ExchangeTransactionsTable should render compact 1`] = `
 </div>
 `;
 
-exports[`ExchangeTransactionsTable should render desktop 1`] = `
+exports[`ExchangeTransactionsTable > should render desktop 1`] = `
 <DocumentFragment>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -1473,8 +2359,22 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1505,8 +2405,22 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1537,8 +2451,22 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1569,8 +2497,22 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1630,8 +2572,42 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -1666,8 +2642,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1704,8 +2697,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1726,8 +2736,28 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1751,8 +2781,32 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1775,8 +2829,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1801,8 +2872,42 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -1837,8 +2942,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1875,8 +2997,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1897,8 +3036,28 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1922,8 +3081,32 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1946,8 +3129,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1972,8 +3172,42 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -2008,8 +3242,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2046,8 +3297,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2068,8 +3336,28 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2093,8 +3381,32 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2117,8 +3429,25 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2133,7 +3462,7 @@ exports[`ExchangeTransactionsTable should render desktop 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ExchangeTransactionsTable should render desktop 2`] = `
+exports[`ExchangeTransactionsTable > should render desktop 2`] = `
 <DocumentFragment>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -2192,8 +3521,22 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2224,8 +3567,22 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2256,8 +3613,22 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2288,8 +3659,22 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2349,8 +3734,42 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -2385,8 +3804,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2423,8 +3859,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2445,8 +3898,28 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2470,8 +3943,32 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2494,8 +3991,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2520,8 +4034,42 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -2556,8 +4104,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2594,8 +4159,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2616,8 +4198,28 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2641,8 +4243,32 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2665,8 +4291,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2691,8 +4334,42 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -2727,8 +4404,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2765,8 +4459,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2787,8 +4498,28 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2812,8 +4543,32 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2836,8 +4591,25 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2852,7 +4624,7 @@ exports[`ExchangeTransactionsTable should render desktop 2`] = `
 </DocumentFragment>
 `;
 
-exports[`ExchangeTransactionsTable should render desktop 3`] = `
+exports[`ExchangeTransactionsTable > should render desktop 3`] = `
 <DocumentFragment>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -2911,8 +4683,22 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2943,8 +4729,22 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2975,8 +4775,22 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3007,8 +4821,22 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3068,8 +4896,42 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -3104,8 +4966,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3142,8 +5021,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3164,8 +5060,28 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3189,8 +5105,32 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3213,8 +5153,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3239,8 +5196,42 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -3275,8 +5266,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3313,8 +5321,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3335,8 +5360,28 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3360,8 +5405,32 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3384,8 +5453,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3410,8 +5496,42 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -3446,8 +5566,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3484,8 +5621,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3506,8 +5660,28 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3531,8 +5705,32 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3555,8 +5753,25 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3571,7 +5786,7 @@ exports[`ExchangeTransactionsTable should render desktop 3`] = `
 </DocumentFragment>
 `;
 
-exports[`ExchangeTransactionsTable should render mobile 1`] = `
+exports[`ExchangeTransactionsTable > should render mobile 1`] = `
 <DocumentFragment>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -3685,8 +5900,28 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3718,8 +5953,32 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3740,8 +5999,25 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3847,8 +6123,28 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3880,8 +6176,32 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3902,8 +6222,25 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4009,8 +6346,28 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -4042,8 +6399,32 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4064,8 +6445,25 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4080,7 +6478,7 @@ exports[`ExchangeTransactionsTable should render mobile 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ExchangeTransactionsTable should render mobile 2`] = `
+exports[`ExchangeTransactionsTable > should render mobile 2`] = `
 <DocumentFragment>
   <div
     data-testid="ExchangeTransactionsTable"
@@ -4194,8 +6592,28 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -4227,8 +6645,32 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4249,8 +6691,25 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4356,8 +6815,28 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -4389,8 +6868,32 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4411,8 +6914,25 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4518,8 +7038,28 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          hint-small.svg
+                        <svg
+                          id="hint-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <circle
+                            cx="4.5"
+                            cy="1"
+                            fill="currentColor"
+                            r="1"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -4551,8 +7091,32 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4573,8 +7137,25 @@ exports[`ExchangeTransactionsTable should render mobile 2`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
