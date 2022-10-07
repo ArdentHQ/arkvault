@@ -19,6 +19,7 @@ export default mergeConfig(viteConfig, defineConfig({
     },
     coverage: {
       all: false,
+      include: [process.env.COVERAGE_INCLUDE_PATH || "src/"],
       exclude: [
         "**/build/*",
         "**/dist/*",

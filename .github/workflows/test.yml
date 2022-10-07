@@ -148,6 +148,8 @@ jobs:
                   command: pnpm vitest run --coverage --dir src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/exchange
         strategy:
             matrix:
                 node-version:
@@ -179,7 +181,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --config src/domains/exchange/vitest.config.ts --coverage --dir src/domains/exchange
+                  command: pnpm vitest run --coverage --dir src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
         strategy:
