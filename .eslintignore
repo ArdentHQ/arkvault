@@ -3,6 +3,7 @@ config-overrides.js
 coverage/
 dist/
 jest.setup.js
+vitest.setup.ts
 public/
 scripts/
 src/i18n

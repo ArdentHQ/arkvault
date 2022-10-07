@@ -30,7 +30,6 @@ specifiers:
   '@testing-library/user-event': ^13.5.0
   '@tippyjs/react': ^4.2.5
   '@types/dlv': ^1.1.2
-  '@types/jest': ^27.5.2
   '@types/postcss-import': ^14.0.0
   '@types/react': ^17.0.0
   '@types/react-datepicker': ^4.4.2
@@ -58,8 +57,6 @@ specifiers:
   eslint: ^8.13.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-import: ^2.26.0
-  eslint-plugin-jest: ^25.3.4
-  eslint-plugin-jest-formatting: ^3.1.0
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-promise: ^6.0.0
   eslint-plugin-react: ^7.29.4
@@ -205,7 +202,6 @@ devDependencies:
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   '@testing-library/react-hooks': 7.0.2_7qv3rjnqa3j7exc7qtvho7thru
   '@testing-library/user-event': 13.5.0_tlwynutqiyp5mns3woioasuxnq
-  '@types/jest': 27.5.2
   '@types/postcss-import': 14.0.0
   '@types/react': 17.0.44
   '@types/react-datepicker': 4.4.2_sfoxds7t5ydpegc3knd667wn6m
@@ -227,8 +223,6 @@ devDependencies:
   eslint: 8.13.0
   eslint-config-prettier: 8.5.0_eslint@8.13.0
   eslint-plugin-import: 2.26.0_mwijbinc6ud6f2lruneo2edtnu
-  eslint-plugin-jest: 25.7.0_2di2db66ef5q4zgjjumzrxrgue
-  eslint-plugin-jest-formatting: 3.1.0_eslint@8.13.0
   eslint-plugin-prettier: 4.0.0_dak2zfnx7mtmcpd5jcuo55rnb4
   eslint-plugin-promise: 6.0.0_eslint@8.13.0
   eslint-plugin-react: 7.29.4_eslint@8.13.0
@@ -3223,19 +3217,6 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/experimental-utils/5.20.0_jzhokl4shvj5szf5bgr66kln2a:
-    resolution: {integrity: sha512-w5qtx2Wr9x13Dp/3ic9iGOGmVXK5gMwyc8rwVgZU46K9WTjPZSyPvdER9Ycy+B5lNHvoz+z2muWhUvlTpQeu+g==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      '@typescript-eslint/utils': 5.20.0_jzhokl4shvj5szf5bgr66kln2a
-      eslint: 8.13.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
   /@typescript-eslint/parser/5.20.0_jzhokl4shvj5szf5bgr66kln2a:
     resolution: {integrity: sha512-UWKibrCZQCYvobmu3/N8TWbEeo/EPQbS41Ux1F9XqPzGuV7pfg6n50ZrFo6hryynD8qOTTfLHtHjjdQtxJ0h/w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -5624,37 +5605,6 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
-    dev: true
-
-  /eslint-plugin-jest-formatting/3.1.0_eslint@8.13.0:
-    resolution: {integrity: sha512-XyysraZ1JSgGbLSDxjj5HzKKh0glgWf+7CkqxbTqb7zEhW7X2WHo5SBQ8cGhnszKN+2Lj3/oevBlHNbHezoc/A==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '>=0.8.0'
-    dependencies:
-      eslint: 8.13.0
-    dev: true
-
-  /eslint-plugin-jest/25.7.0_2di2db66ef5q4zgjjumzrxrgue:
-    resolution: {integrity: sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ==}
-    engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^4.0.0 || ^5.0.0
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 5.20.0_xgwjwvswzzo77lpghh6plzerx4
-      '@typescript-eslint/experimental-utils': 5.20.0_jzhokl4shvj5szf5bgr66kln2a
-      eslint: 8.13.0
-      jest: 27.5.1
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
     dev: true
 
   /eslint-plugin-prettier/4.0.0_dak2zfnx7mtmcpd5jcuo55rnb4:
