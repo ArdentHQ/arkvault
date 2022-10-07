@@ -4,6 +4,8 @@ import { defineConfig } from "vitest/config";
 
 import viteConfig from "./vite.config";
 
+const coverageThreshold = Number(process.env.COVERAGE_THRESHOLD || 100);
+
 export default mergeConfig(
 	viteConfig,
 	defineConfig({
@@ -39,10 +41,10 @@ export default mergeConfig(
 				],
 				provider: "istanbul",
 				reporter: ["json", "lcov", "text", "clover", "html"],
-				lines: 100,
-				functions: 100,
-				branches: 100,
-				statements: 100,
+				lines: coverageThreshold,
+				functions: coverageThreshold,
+				branches: coverageThreshold,
+				statements: coverageThreshold,
 			},
 		},
 		resolve: {

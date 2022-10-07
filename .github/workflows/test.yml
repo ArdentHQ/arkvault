@@ -518,6 +518,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             COVERAGE_INCLUDE_PATH: src/utils
+            COVERAGE_THRESHOLD: 25
         strategy:
             matrix:
                 node-version:
