@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";

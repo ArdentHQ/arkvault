@@ -11,6 +11,11 @@ import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } f
 import { toasts } from "@/app/services";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
+const validLedgerWallet = () =>
+	expect(formReference.getValues("wallets")).toMatchObject([
+		{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
+	]);
+
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -94,11 +99,6 @@ describe("LedgerScanStep", () => {
 			</FormProvider>
 		);
 	};
-
-	const validLedgerWallet = () =>
-		expect(formReference.getValues("wallets")).toMatchObject([
-			{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-		]);
 
 	it("should handle select", async () => {
 		render(<Component />);

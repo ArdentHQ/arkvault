@@ -74,8 +74,9 @@ describe("ExchangeTransactionsRowMobile", () => {
 			</Wrapper>,
 		);
 
-		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
+		// eslint-disable-next-line testing-library/no-node-access
 		expect(document.querySelector(`svg#${icon}`)).toBeInTheDocument();
+		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
 
 		expect(container).toMatchSnapshot();
 	});

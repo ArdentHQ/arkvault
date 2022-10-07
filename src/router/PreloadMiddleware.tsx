@@ -39,7 +39,6 @@ const getPreloadableRoutes = (path: string): RouteItem[] => {
 
 export class PreloadMiddleware implements Middleware {
 	handler({ location }: MiddlewareParameters): boolean {
-		/* istanbul ignore next */
 		if (isUnit()) {
 			return true;
 		}

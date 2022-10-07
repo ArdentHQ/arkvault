@@ -17,6 +17,14 @@ describe("PreloadMiddleware", () => {
 		subject = new PreloadMiddleware();
 	});
 
+	it("returns true in test environment", () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		expect(subject.handler({ location: { pathname: "/some-path" } } as any)).toBe(true);
+
+		process.env.REACT_APP_IS_UNIT = undefined;
+	});
+
 	it("returns true when current path is not root and does not start with /profiles", () => {
 		expect(subject.handler({ location: { pathname: "/some-path" } } as any)).toBe(true);
 	});

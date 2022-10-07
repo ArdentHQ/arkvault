@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
