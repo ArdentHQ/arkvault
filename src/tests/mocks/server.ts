@@ -29,7 +29,11 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 	);
 };
 
+<<<<<<< Updated upstream
 export const constRequestMockOnce = (path: string, data: undefined | string | object, options = {}) =>
+=======
+export const requestMockOnce = (path: string, data: undefined | string | object, options = {}) =>
+>>>>>>> Stashed changes
 	requestMock(path, data, { ...options, modifier: "once" });
 
 const restHandlers = [...devnetHandlers, ...exchangeHandlers, ...mainnetHandlers];

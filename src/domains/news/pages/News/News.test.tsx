@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -10,6 +9,7 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import filteredFixture from "@/tests/fixtures/news/filtered.json";
+import emptyPageFixture from "@/tests/fixtures/news/empty-response.json";
 import page1Fixture from "@/tests/fixtures/news/page-1.json";
 import page2Fixture from "@/tests/fixtures/news/page-2.json";
 import {
@@ -20,16 +20,19 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { vi } from "vitest";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
+import { rest } from "msw";
+
+const newsBasePath = "https://news.arkvault.io/api";
 
 const history = createHashHistory();
 const newsURL = `/profiles/${getDefaultProfileId()}/news`;
 
 const translations = buildTranslations();
 
-vi.setTimeout(30_000);
-
-const firstPageReply = () => {
-	const { meta, data } = page1Fixture;
+const pageReply = (source: any) => {
+	const { meta, data } = source;
 	return {
 		data: data.slice(0, 1),
 		meta,
@@ -57,31 +60,7 @@ describe("News", () => {
 	};
 
 	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://news.arkvault.io")
-			.get("/api?coins=ARK")
-			.reply(200, firstPageReply)
-			.get("/api?coins=ARK&page=1")
-			.reply(200, firstPageReply)
-			.get("/api")
-			.query((parameters) => !!parameters.categories)
-			.reply(200, filteredFixture)
-			.get("/api?coins=ARK&query=NoResult&page=1")
-			.reply(200, require("tests/fixtures/news/empty-response.json"))
-			.persist();
-
-		nock("https://news.arkvault.io")
-			.get("/api?coins=ARK&page=2")
-			.replyWithError({ code: "ETIMEDOUT" })
-			.get("/api?coins=ARK&page=2")
-			.reply(200, () => {
-				const { meta, data } = page2Fixture;
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			});
+		server.use(requestMock(`${newsBasePath}`, pageReply(page1Fixture)));
 
 		vi.spyOn(window, "scrollTo").mockImplementation();
 	});
@@ -100,6 +79,18 @@ describe("News", () => {
 	});
 
 	it("should show error toast if news cannot be fetched", async () => {
+		server.use(
+			rest.get(newsBasePath, (request, response, context) => {
+				const page = request.url.searchParams.get("page");
+
+				if (page === "1") {
+					return response(context.status(200), context.json(pageReply(page1Fixture)));
+				}
+
+				return response(context.status(500), context.json({ code: "ETIMEDOUT" }));
+			}),
+		);
+
 		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = renderPage();
@@ -118,6 +109,18 @@ describe("News", () => {
 	});
 
 	it("should navigate on next and previous pages", async () => {
+		server.use(
+			rest.get(newsBasePath, (request, response, context) => {
+				const page = request.url.searchParams.get("page");
+
+				if (page === "1") {
+					return response(context.status(200), context.json(pageReply(page1Fixture)));
+				}
+
+				return response(context.status(200), context.json(pageReply(page2Fixture)));
+			}),
+		);
+
 		renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
@@ -136,6 +139,16 @@ describe("News", () => {
 	});
 
 	it("should show no results screen", async () => {
+		server.use(
+			rest.get(newsBasePath, (request, response, context) => {
+				const query = request.url.searchParams.get("query");
+
+				if (query === "NoResult") {
+					return response(context.status(200), context.json(emptyPageFixture));
+				}
+			}),
+		);
+
 		renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
@@ -155,6 +168,18 @@ describe("News", () => {
 	});
 
 	it("should filter results based on category query and asset", async () => {
+		server.use(
+			rest.get(newsBasePath, (request, response, context) => {
+				const categories = request.url.searchParams.get("categories");
+
+				if (categories) {
+					return response(context.status(200), context.json(filteredFixture));
+				}
+
+				return response(context.status(200), context.json(pageReply(page1Fixture)));
+			}),
+		);
+
 		const { asFragment } = renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));

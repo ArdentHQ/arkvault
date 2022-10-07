@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`News should filter results based on category query and asset 1`] = `
+exports[`News > should filter results based on category query and asset 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -26,8 +26,25 @@ exports[`News should filter results based on category query and asset 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                received.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -49,8 +66,22 @@ exports[`News should filter results based on category query and asset 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                dashboard.svg
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -73,8 +104,25 @@ exports[`News should filter results based on category query and asset 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sent.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -100,8 +148,22 @@ exports[`News should filter results based on category query and asset 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-left-small.svg
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </button>
@@ -121,9 +183,19 @@ exports[`News should filter results based on category query and asset 1`] = `
                 class="relative"
               >
                 <svg
+                  fill="none"
                   height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  arkvault-logo.svg
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </span>
             </button>
@@ -189,8 +261,19 @@ exports[`News should filter results based on category query and asset 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      menu.svg
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -223,8 +306,18 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            cloud.svg
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                         <div
@@ -266,8 +359,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            bell.svg
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
                           </svg>
                         </div>
                         <div
@@ -309,8 +419,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          received.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -340,8 +467,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sent.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -448,9 +592,26 @@ exports[`News should filter results based on category query and asset 1`] = `
                   <svg
                     class="text-theme-text"
                     height="20"
+                    viewBox="0 0 272 84"
                     width="65"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    ftx.svg
+                    <path
+                      d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M29 0h70v23H29z"
+                      fill="#009BB5"
+                    />
+                    <path
+                      d="M29 30h50v23H29zM0 30h22v23H0z"
+                      fill="#00B3C8"
+                    />
+                    <path
+                      d="M29 60h23v23H29z"
+                      fill="#ABEBF4"
+                    />
                   </svg>
                 </div>
               </div>
@@ -482,8 +643,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              magnifying-glass.svg
+                            <svg
+                              id="magnifying-glass"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -518,8 +696,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                               height="20"
                               width="20"
                             >
-                              <svg>
-                                sliders-vertical.svg
+                              <svg
+                                id="sliders-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -577,8 +772,19 @@ exports[`News should filter results based on category query and asset 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -597,8 +803,19 @@ exports[`News should filter results based on category query and asset 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -679,8 +896,22 @@ exports[`News should filter results based on category query and asset 1`] = `
                             height="16"
                             width="16"
                           >
-                            <svg>
-                              arrow-external.svg
+                            <svg
+                              id="arrow-external"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
                             </svg>
                           </div>
                         </a>
@@ -719,8 +950,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                           <svg
                             class="text-white"
                             height="60"
+                            viewBox="0 0 272 84"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            ftx.svg
+                            <path
+                              d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M29 0h70v23H29z"
+                              fill="#009BB5"
+                            />
+                            <path
+                              d="M29 30h50v23H29zM0 30h22v23H0z"
+                              fill="#00B3C8"
+                            />
+                            <path
+                              d="M29 60h23v23H29z"
+                              fill="#ABEBF4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -745,8 +993,49 @@ exports[`News should filter results based on category query and asset 1`] = `
                         >
                           <svg
                             class="b-0 h-10 w-32"
+                            id="livetype"
+                            viewBox="0 0 119.7 40"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            download-app-store.svg
+                            <path
+                              d="M110.1 0H7.5c-.7 0-1.3.1-2 .2-.6.1-1.3.3-1.9.6S2.5 1.5 2 2 1.1 3 .8 3.6.3 4.9.2 5.5c-.1.7-.2 1.4-.2 2v24.9c0 .7.1 1.3.2 2s.3 1.3.6 1.9c.3.7.7 1.2 1.2 1.7s1 .9 1.6 1.2 1.2.5 1.9.6 1.3.2 2 .2h104.6c.7 0 1.3-.1 2-.2s1.3-.3 1.9-.6 1.1-.7 1.6-1.2.9-1 1.2-1.6c.3-.6.5-1.2.6-1.9s.2-1.3.2-2v-25c0-.7-.1-1.3-.2-2s-.3-1.3-.6-1.9c-.6-1.2-1.6-2.2-2.8-2.8-.6-.3-1.2-.5-1.9-.6-.7-.1-1.3-.2-2-.2h-2z"
+                            />
+                            <path
+                              d="M8.4 39.1h-.9c-.6 0-1.3-.1-1.9-.2-.6-.1-1.1-.3-1.7-.5-.5-.3-1-.6-1.4-1s-.8-.9-1-1.4c-.3-.5-.4-1.1-.5-1.7-.1-.6-.2-1.2-.2-1.9V7.5c0-.6.1-1.3.2-1.9.1-.5.3-1.1.6-1.6s.6-1 1-1.4.9-.7 1.4-1 1.1-.4 1.7-.5S6.9.9 7.6.9h104.6c.6 0 1.2.1 1.9.2.6.1 1.1.3 1.7.5 1 .5 1.9 1.4 2.4 2.4.3.5.4 1.1.5 1.6.1.6.2 1.3.2 1.9v24.9c0 .6-.1 1.2-.2 1.9-.1.6-.3 1.1-.5 1.7-.3.5-.6 1-1 1.4s-.9.8-1.4 1c-.5.3-1.1.5-1.7.5-.6.1-1.2.2-1.9.2H8.4z"
+                            />
+                            <g
+                              id="_Group_"
+                            >
+                              <g
+                                id="_Group_2"
+                              >
+                                <g
+                                  fill="#fff"
+                                  id="_Group_3"
+                                >
+                                  <path
+                                    d="M24.8 20.3c0-1.7.9-3.3 2.4-4.2-.9-1.3-2.4-2.1-4-2.2-1.7-.2-3.3 1-4.2 1s-2.2-1-3.6-1c-1.9.1-3.6 1.1-4.5 2.7-1.9 3.3-.5 8.3 1.4 11 .9 1.3 2 2.8 3.4 2.8 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.9 2.4-1.3 3.3-2.7c.7-.9 1.2-2 1.5-3.1-1.8-.6-2.9-2.4-2.9-4.3z"
+                                    id="_Path_"
+                                  />
+                                  <path
+                                    d="M22 12.2c.8-1 1.2-2.2 1.1-3.5-1.2.1-2.4.7-3.2 1.7-.8.9-1.2 2.1-1.1 3.4 1.3 0 2.4-.6 3.2-1.6z"
+                                    id="_Path_2"
+                                  />
+                                </g>
+                              </g>
+                              <path
+                                d="M42.3 27.1h-4.7l-1.1 3.4h-2L39 18.1h2l4.5 12.4h-2l-1.2-3.4zm-4.2-1.5h3.8L40 20.1h-.1l-1.8 5.5zm17.1.4c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.2-.1 3.8 1.8 3.8 4.6zm-2 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm11.9 0c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.3-.1 3.8 1.8 3.8 4.6zm-1.9 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm8.5 1c.1 1.2 1.3 2 3 2 1.6 0 2.7-.8 2.7-1.9 0-1-.7-1.5-2.3-1.9l-1.6-.4c-2.3-.6-3.3-1.6-3.3-3.3 0-2.1 1.9-3.6 4.5-3.6s4.4 1.5 4.5 3.6h-1.9c-.1-1.2-1.1-2-2.6-2s-2.5.8-2.5 1.9c0 .9.7 1.4 2.3 1.8l1.4.3c2.5.6 3.6 1.6 3.6 3.4 0 2.3-1.9 3.8-4.8 3.8-2.8 0-4.6-1.4-4.7-3.7h1.7zm11.6-7.7v2.1H85v1.5h-1.7v5c0 .8.3 1.1 1.1 1.1h.6v1.5c-.3.1-.7.1-1 .1-1.8 0-2.5-.7-2.5-2.4V23h-1.3v-1.5h1.3v-2.1h1.8v-.1zm2.8 6.7c0-2.8 1.7-4.6 4.3-4.6 2.6 0 4.3 1.8 4.3 4.6 0 2.9-1.7 4.6-4.3 4.6-2.7 0-4.3-1.8-4.3-4.6zm6.7 0c0-2-.9-3.1-2.4-3.1S88 24 88 26s.9 3.1 2.4 3.1 2.4-1.2 2.4-3.1zm3.4-4.6H98V23c.2-1 1.2-1.7 2.2-1.6.2 0 .4 0 .6.1v1.7c-.3-.1-.6-.1-.8-.1-1 0-1.9.8-1.9 1.8v5.7h-1.9v-9.2zm13.2 6.4c-.2 1.6-1.9 2.8-3.9 2.8-2.6 0-4.3-1.8-4.3-4.6s1.6-4.7 4.2-4.7c2.5 0 4.1 1.7 4.1 4.5v.6h-6.4v.1c-.1 1.3.8 2.4 2.1 2.6h.3c.9.1 1.8-.4 2.1-1.3h1.8zm-6.3-2.7h4.5c.1-1.2-.9-2.2-2.1-2.3h-.2c-1.2 0-2.2 1-2.2 2.3z"
+                                fill="#fff"
+                              />
+                            </g>
+                            <path
+                              d="M37.8 8.7c1.5-.1 2.7 1 2.8 2.4v.5c0 1.9-1 3-2.8 3h-2.2v-6l2.2.1zm-1.2 5.2h1.1c1 .1 1.9-.7 2-1.8v-.4c.1-1-.6-2-1.6-2.1h-1.5v4.3zm5.1-1.5c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.3 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6s1.2-.6 1.2-1.6zm6.6 2.3h-.9l-.9-3.3h-.1l-.9 3.3h-.9l-1.2-4.5h.9l.8 3.4h.1l.9-3.4h.9l.9 3.4h.1l.8-3.4h.9l-1.4 4.5zm2.3-4.5h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm5.2-1.8h.9v6.3h-.9V8.4zm2.1 4c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm1.8 1c0-.8.6-1.3 1.7-1.3l1.2-.1v-.4c0-.5-.3-.7-.9-.7-.5 0-.8.2-.9.5h-.9c.1-.8.8-1.3 1.8-1.3 1.1 0 1.8.6 1.8 1.5v3.1h-.9v-.6h-.1c-.3.5-.8.7-1.4.7-.7.1-1.4-.5-1.5-1.2.1-.1.1-.1.1-.2zm2.9-.4v-.4l-1.1.1c-.6 0-.9.3-.9.6 0 .4.4.6.8.6.6.2 1.1-.2 1.2-.9 0 .1 0 .1 0 0zm2-.6c0-1.4.7-2.3 1.9-2.3.6 0 1.1.3 1.4.8h.1V8.4h.9v6.3h-.9V14h-.1c-.3.5-.8.8-1.4.8-1.1 0-1.9-.9-1.9-2.4zm1 0c0 1 .5 1.5 1.2 1.5s1.2-.6 1.2-1.5-.5-1.5-1.2-1.5c-.8 0-1.2.6-1.2 1.5zm6.9 0c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3-1.2.1-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5-.8 0-1.2.6-1.2 1.5 0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm2.1-2.2h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm8.8-1.1v1.1h1v.8h-1v2.3c0 .5.2.7.6.7h.3v.7h-.5c-1 0-1.4-.3-1.4-1.2V11h-.7v-.7h.7V9.1h1zm2.2-.7h.9v2.5h.1c.2-.5.8-.9 1.4-.8.8 0 1.5.6 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9l-.1-6.3zm9.1 5.1c-.2.8-1.1 1.4-2 1.3-1.1 0-2.1-.9-2.1-2v-.3c-.2-1.1.6-2.2 1.8-2.3h.3c1.3 0 2 .9 2 2.3v.3h-3.2c-.1.7.4 1.2 1.1 1.3h.1c.4.1.9-.2 1.1-.5l.9-.1zm-3.2-1.5h2.3c0-.6-.4-1.1-1-1.2h-.1c-.6.1-1.2.6-1.2 1.2z"
+                              fill="#fff"
+                              id="_Group_4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -762,8 +1051,163 @@ exports[`News should filter results based on category query and asset 1`] = `
                         >
                           <svg
                             class="h-10 w-32"
+                            viewBox="0 0 2500 741"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            download-google-play.svg
+                            <path
+                              d="M2407.4 740.9H92.6C40.7 740.9 0 700.1 0 648.3V92.7C0 40.9 40.7.1 92.6.1h2314.8c51.9 0 92.6 40.7 92.6 92.6v555.6c0 51.8-40.7 92.6-92.6 92.6z"
+                            />
+                            <path
+                              d="M2407.4 14.9c42.6 0 77.8 35.2 77.8 77.8v555.6c0 42.6-35.2 77.8-77.8 77.8H92.6c-42.6 0-77.8-35.2-77.8-77.8V92.7c0-42.6 35.2-77.8 77.8-77.8h2314.8m0-14.8H92.6C40.7.1 0 42.7 0 92.7v555.6c0 51.9 40.7 92.6 92.6 92.6h2314.8c51.9 0 92.6-40.7 92.6-92.6V92.7c0-50-40.7-92.6-92.6-92.6z"
+                            />
+                            <path
+                              d="M877.8 189c0 14.8-3.7 27.8-13 37-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7c11.1-11.1 24.1-16.7 40.7-16.7 7.4 0 14.8 1.9 22.2 5.6 7.4 3.7 13 7.4 16.7 13l-9.3 9.3c-7.4-9.3-16.7-13-29.6-13-11.1 0-22.2 3.7-29.6 13-9.3 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5c9.3 7.4 18.5 13 29.6 13 13 0 22.2-3.7 31.5-13 5.6-5.6 9.3-13 9.3-22.2h-40.7v-14.8h53.7l-.1 7.2h0zm85.2-46.3h-50v35.2h46.3v13H913v35.2h50v14.8h-64.8V129.8H963v12.9zm61.1 98.2h-14.8v-98.1h-31.5v-13h77.8v13h-31.5v98.1zm85.2 0V129.8h14.8v111.1h-14.8zm77.7 0h-14.8v-98.1h-31.5v-13h75.9v13h-31.5v98.1h1.9zm176-14.8c-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7 24.1-16.7 40.7-16.7 29.6 5.6 40.7 16.7c11.1 11.1 16.7 24.1 16.7 40.7s-5.6 29.5-16.7 40.7zm-70.4-9.3c7.4 7.4 18.5 13 29.6 13s22.2-3.7 29.6-13c7.4-7.4 13-18.5 13-31.5s-3.7-24.1-13-31.5c-7.4-7.4-18.5-13-29.6-13s-22.2 3.7-29.6 13c-7.4 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5zm107.4 24.1V129.8h16.7l53.7 87v-87h14.8v111.1h-14.8l-57.4-90.7v90.7h-13 0z"
+                              fill="#fff"
+                              stroke="#fff"
+                              stroke-miterlimit="185.185"
+                              stroke-width="3.704"
+                            />
+                            <path
+                              d="M1261.1 403.8c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6s79.6-33.3 79.6-79.6c0-48.1-35.1-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 44.4 18.5 44.4 48.1c.1 27.7-20.3 48.1-44.4 48.1zm-172.2-126c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6 44.4 0 79.6-33.3 79.6-79.6 0-48.1-35.2-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1c24.1 0 44.4 18.5 44.4 48.1 0 27.7-20.3 48.1-44.4 48.1zM883.3 427.9v33.3H963c-1.9 18.5-9.3 33.3-18.5 42.6-11.1 11.1-29.6 24.1-61.1 24.1-50 0-87-38.9-87-88.9s38.9-88.9 87-88.9c25.9 0 46.3 11.1 61.1 24.1l24.1-24.1c-20.4-18.5-46.3-33.3-83.3-33.3-66.7 0-124.1 55.6-124.1 122.2s57.4 122.2 124.1 122.2c37 0 63-11.1 85.2-35.2 22.2-22.2 29.6-53.7 29.6-77.8 0-7.4 0-14.8-1.9-20.4l-114.9.1zm840.8 25.9c-7.4-18.5-25.9-50-66.7-50-40.7 0-74.1 31.5-74.1 79.6 0 44.4 33.3 79.6 77.8 79.6 35.2 0 57.4-22.2 64.8-35.2l-25.9-18.5c-9.3 13-20.4 22.2-38.9 22.2s-29.6-7.4-38.9-24.1l105.6-44.4-3.7-9.2zm-107.4 26c0-29.6 24.1-46.3 40.7-46.3 13 0 25.9 7.4 29.6 16.7l-70.3 29.6zm-87.1 75.9h35.2V324.2h-35.2v231.5zm-55.5-135.2c-9.3-9.3-24.1-18.5-42.6-18.5-38.9 0-75.9 35.2-75.9 79.6s35.2 77.8 75.9 77.8c18.5 0 33.3-9.3 40.7-18.5h1.9V552c0 29.6-16.7 46.3-42.6 46.3-20.4 0-35.2-14.8-38.9-27.8l-29.6 13c9.3 20.4 31.5 46.3 70.4 46.3 40.7 0 74.1-24.1 74.1-81.5V407.5h-33.3l-.1 13zm-40.8 109.3c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 42.6 20.4 42.6 48.1-18.5 48.1-42.6 48.1zm451.9-205.6h-83.3v231.5h35.2v-87h48.1c38.9 0 75.9-27.8 75.9-72.2s-37-72.3-75.9-72.3zm1.8 111.1h-50v-79.6h50c25.9 0 40.7 22.2 40.7 38.9-1.8 20.3-16.6 40.7-40.7 40.7zm213-33.3c-25.9 0-51.9 11.1-61.1 35.2l31.5 13c7.4-13 18.5-16.7 31.5-16.7 18.5 0 35.2 11.1 37 29.6v1.9c-5.6-3.7-20.4-9.3-35.2-9.3-33.3 0-66.7 18.5-66.7 51.9 0 31.5 27.8 51.9 57.4 51.9 24.1 0 35.2-11.1 44.4-22.2h1.9v18.5h33.3v-88.9c-3.6-40.8-35.1-64.9-74-64.9zm-3.7 127.8c-11.1 0-27.8-5.6-27.8-20.4 0-18.5 20.4-24.1 37-24.1 14.8 0 22.2 3.7 31.5 7.4-3.7 22.2-22.2 37.1-40.7 37.1zm194.4-122.3l-38.9 100h-1.9l-40.7-100h-37l61.1 140.7-35.2 77.8h35.2l94.4-218.5h-37zm-311.1 148.2h35.2V324.2h-35.2v231.5z"
+                              fill="#fff"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="a"
+                              x1="967.795"
+                              x2="951.012"
+                              y1="844.671"
+                              y2="861.453"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#00a0ff"
+                              />
+                              <stop
+                                offset="0.007"
+                                stop-color="#00a1ff"
+                              />
+                              <stop
+                                offset="0.26"
+                                stop-color="#00beff"
+                              />
+                              <stop
+                                offset="0.512"
+                                stop-color="#00d2ff"
+                              />
+                              <stop
+                                offset="0.76"
+                                stop-color="#00dfff"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00e3ff"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M192.6 139c-5.6 5.6-7.4 14.8-7.4 25.9v409.3c0 11.1 3.7 20.4 9.3 25.9l1.9 1.9L426 372.4v-3.7L192.6 139z"
+                              fill="url(#a)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="b"
+                              x1="979.834"
+                              x2="955.637"
+                              y1="856.016"
+                              y2="856.016"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ffe000"
+                              />
+                              <stop
+                                offset="0.409"
+                                stop-color="#ffbd00"
+                              />
+                              <stop
+                                offset="0.775"
+                                stop-color="orange"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#ff9c00"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M500 450.1l-75.9-75.9v-5.6l75.9-75.9 1.9 1.9 90.7 51.9c25.9 14.8 25.9 38.9 0 53.7L500 450.1z"
+                              fill="url(#b)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="c"
+                              x1="970.816"
+                              x2="948.058"
+                              y1="858.25"
+                              y2="881.009"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ff3a44"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#c31162"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 448.3l-77.8-77.8L192.6 602c9.3 9.3 22.2 9.3 38.9 1.9l270.4-155.6"
+                              fill="url(#c)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="d"
+                              x1="953.261"
+                              x2="963.424"
+                              y1="836.178"
+                              y2="846.341"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#32a071"
+                              />
+                              <stop
+                                offset="0.069"
+                                stop-color="#2da771"
+                              />
+                              <stop
+                                offset="0.476"
+                                stop-color="#15cf74"
+                              />
+                              <stop
+                                offset="0.801"
+                                stop-color="#06e775"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00f076"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 292.7L231.5 139c-16.7-9.3-29.6-7.4-38.9 1.9l231.5 229.6 77.8-77.8z"
+                              fill="url(#d)"
+                            />
+                            <path
+                              d="M500 446.4L231.5 598.3c-14.8 9.3-27.8 7.4-37 0l-1.9 1.9 1.9 1.9c9.3 7.4 22.2 9.3 37 0L500 446.4z"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M192.6 598.3c-5.6-5.6-7.4-14.8-7.4-25.9v1.9c0 11.1 3.7 20.4 9.3 25.9v-1.9h-1.9zm400-203.7L500 446.4l1.9 1.9 90.7-51.9c13-7.4 18.5-16.7 18.5-25.9 0 9.3-7.4 16.7-18.5 24.1z"
+                              opacity="0.12"
+                            />
+                            <path
+                              d="M231.5 140.9l361.1 205.6c11.1 7.4 18.5 14.8 18.5 24.1 0-9.3-5.6-18.5-18.5-25.9L231.5 139c-25.9-14.8-46.3-3.7-46.3 25.9v1.9c0-27.8 20.4-40.7 46.3-25.9z"
+                              fill="#fff"
+                              opacity="0.25"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -772,7 +1216,7 @@ exports[`News should filter results based on category query and asset 1`] = `
                   <img
                     alt="FTX Banner"
                     class="absolute right-0 bottom-0 z-0 hidden max-w-sm lg:block"
-                    src="ftx-banner.png"
+                    src="/src/domains/news/images/ftx-banner.png"
                   />
                 </div>
               </div>
@@ -797,8 +1241,30 @@ exports[`News should filter results based on category query and asset 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          double-chevron-left-small.svg
+                        <svg
+                          id="double-chevron-left-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M4.995 9L1.102 5.178c-.136-.134-.136-.267 0-.356h0L4.995 1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M9 9L5.107 5.178c-.136-.134-.136-.267 0-.356h0L9 1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -823,8 +1289,22 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-left-small.svg
+                          <svg
+                            id="chevron-left-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -904,8 +1384,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -937,8 +1434,25 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -963,8 +1477,22 @@ exports[`News should filter results based on category query and asset 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-right-small.svg
+                          <svg
+                            id="chevron-right-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -983,8 +1511,30 @@ exports[`News should filter results based on category query and asset 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          double-chevron-right-small.svg
+                        <svg
+                          id="double-chevron-right-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.011 1l3.893 3.822c.136.134.136.267 0 .356h0L5.011 9"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M1.006 1L4.9 4.822c.136.134.136.267 0 .356h0L1.006 9"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1108,7 +1658,7 @@ exports[`News should filter results based on category query and asset 1`] = `
 </DocumentFragment>
 `;
 
-exports[`News should render responsive (md) 1`] = `
+exports[`News > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -1134,8 +1684,25 @@ exports[`News should render responsive (md) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                received.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -1157,8 +1724,22 @@ exports[`News should render responsive (md) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                dashboard.svg
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -1181,8 +1762,25 @@ exports[`News should render responsive (md) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sent.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -1208,8 +1806,22 @@ exports[`News should render responsive (md) 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-left-small.svg
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </button>
@@ -1229,9 +1841,19 @@ exports[`News should render responsive (md) 1`] = `
                 class="relative"
               >
                 <svg
+                  fill="none"
                   height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  arkvault-logo.svg
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </span>
             </button>
@@ -1297,8 +1919,19 @@ exports[`News should render responsive (md) 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      menu.svg
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -1331,8 +1964,18 @@ exports[`News should render responsive (md) 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            cloud.svg
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                         <div
@@ -1374,8 +2017,25 @@ exports[`News should render responsive (md) 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            bell.svg
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
                           </svg>
                         </div>
                         <div
@@ -1417,8 +2077,25 @@ exports[`News should render responsive (md) 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          received.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -1448,8 +2125,25 @@ exports[`News should render responsive (md) 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sent.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -1556,9 +2250,26 @@ exports[`News should render responsive (md) 1`] = `
                   <svg
                     class="text-theme-text"
                     height="20"
+                    viewBox="0 0 272 84"
                     width="65"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    ftx.svg
+                    <path
+                      d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M29 0h70v23H29z"
+                      fill="#009BB5"
+                    />
+                    <path
+                      d="M29 30h50v23H29zM0 30h22v23H0z"
+                      fill="#00B3C8"
+                    />
+                    <path
+                      d="M29 60h23v23H29z"
+                      fill="#ABEBF4"
+                    />
                   </svg>
                 </div>
               </div>
@@ -1590,8 +2301,25 @@ exports[`News should render responsive (md) 1`] = `
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              magnifying-glass.svg
+                            <svg
+                              id="magnifying-glass"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -1626,8 +2354,25 @@ exports[`News should render responsive (md) 1`] = `
                               height="20"
                               width="20"
                             >
-                              <svg>
-                                sliders-vertical.svg
+                              <svg
+                                id="sliders-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -1685,8 +2430,19 @@ exports[`News should render responsive (md) 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1705,8 +2461,19 @@ exports[`News should render responsive (md) 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1787,8 +2554,22 @@ exports[`News should render responsive (md) 1`] = `
                             height="16"
                             width="16"
                           >
-                            <svg>
-                              arrow-external.svg
+                            <svg
+                              id="arrow-external"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
                             </svg>
                           </div>
                         </a>
@@ -1827,8 +2608,25 @@ exports[`News should render responsive (md) 1`] = `
                           <svg
                             class="text-white"
                             height="60"
+                            viewBox="0 0 272 84"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            ftx.svg
+                            <path
+                              d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M29 0h70v23H29z"
+                              fill="#009BB5"
+                            />
+                            <path
+                              d="M29 30h50v23H29zM0 30h22v23H0z"
+                              fill="#00B3C8"
+                            />
+                            <path
+                              d="M29 60h23v23H29z"
+                              fill="#ABEBF4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -1853,8 +2651,49 @@ exports[`News should render responsive (md) 1`] = `
                         >
                           <svg
                             class="b-0 h-10 w-32"
+                            id="livetype"
+                            viewBox="0 0 119.7 40"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            download-app-store.svg
+                            <path
+                              d="M110.1 0H7.5c-.7 0-1.3.1-2 .2-.6.1-1.3.3-1.9.6S2.5 1.5 2 2 1.1 3 .8 3.6.3 4.9.2 5.5c-.1.7-.2 1.4-.2 2v24.9c0 .7.1 1.3.2 2s.3 1.3.6 1.9c.3.7.7 1.2 1.2 1.7s1 .9 1.6 1.2 1.2.5 1.9.6 1.3.2 2 .2h104.6c.7 0 1.3-.1 2-.2s1.3-.3 1.9-.6 1.1-.7 1.6-1.2.9-1 1.2-1.6c.3-.6.5-1.2.6-1.9s.2-1.3.2-2v-25c0-.7-.1-1.3-.2-2s-.3-1.3-.6-1.9c-.6-1.2-1.6-2.2-2.8-2.8-.6-.3-1.2-.5-1.9-.6-.7-.1-1.3-.2-2-.2h-2z"
+                            />
+                            <path
+                              d="M8.4 39.1h-.9c-.6 0-1.3-.1-1.9-.2-.6-.1-1.1-.3-1.7-.5-.5-.3-1-.6-1.4-1s-.8-.9-1-1.4c-.3-.5-.4-1.1-.5-1.7-.1-.6-.2-1.2-.2-1.9V7.5c0-.6.1-1.3.2-1.9.1-.5.3-1.1.6-1.6s.6-1 1-1.4.9-.7 1.4-1 1.1-.4 1.7-.5S6.9.9 7.6.9h104.6c.6 0 1.2.1 1.9.2.6.1 1.1.3 1.7.5 1 .5 1.9 1.4 2.4 2.4.3.5.4 1.1.5 1.6.1.6.2 1.3.2 1.9v24.9c0 .6-.1 1.2-.2 1.9-.1.6-.3 1.1-.5 1.7-.3.5-.6 1-1 1.4s-.9.8-1.4 1c-.5.3-1.1.5-1.7.5-.6.1-1.2.2-1.9.2H8.4z"
+                            />
+                            <g
+                              id="_Group_"
+                            >
+                              <g
+                                id="_Group_2"
+                              >
+                                <g
+                                  fill="#fff"
+                                  id="_Group_3"
+                                >
+                                  <path
+                                    d="M24.8 20.3c0-1.7.9-3.3 2.4-4.2-.9-1.3-2.4-2.1-4-2.2-1.7-.2-3.3 1-4.2 1s-2.2-1-3.6-1c-1.9.1-3.6 1.1-4.5 2.7-1.9 3.3-.5 8.3 1.4 11 .9 1.3 2 2.8 3.4 2.8 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.9 2.4-1.3 3.3-2.7c.7-.9 1.2-2 1.5-3.1-1.8-.6-2.9-2.4-2.9-4.3z"
+                                    id="_Path_"
+                                  />
+                                  <path
+                                    d="M22 12.2c.8-1 1.2-2.2 1.1-3.5-1.2.1-2.4.7-3.2 1.7-.8.9-1.2 2.1-1.1 3.4 1.3 0 2.4-.6 3.2-1.6z"
+                                    id="_Path_2"
+                                  />
+                                </g>
+                              </g>
+                              <path
+                                d="M42.3 27.1h-4.7l-1.1 3.4h-2L39 18.1h2l4.5 12.4h-2l-1.2-3.4zm-4.2-1.5h3.8L40 20.1h-.1l-1.8 5.5zm17.1.4c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.2-.1 3.8 1.8 3.8 4.6zm-2 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm11.9 0c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.3-.1 3.8 1.8 3.8 4.6zm-1.9 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm8.5 1c.1 1.2 1.3 2 3 2 1.6 0 2.7-.8 2.7-1.9 0-1-.7-1.5-2.3-1.9l-1.6-.4c-2.3-.6-3.3-1.6-3.3-3.3 0-2.1 1.9-3.6 4.5-3.6s4.4 1.5 4.5 3.6h-1.9c-.1-1.2-1.1-2-2.6-2s-2.5.8-2.5 1.9c0 .9.7 1.4 2.3 1.8l1.4.3c2.5.6 3.6 1.6 3.6 3.4 0 2.3-1.9 3.8-4.8 3.8-2.8 0-4.6-1.4-4.7-3.7h1.7zm11.6-7.7v2.1H85v1.5h-1.7v5c0 .8.3 1.1 1.1 1.1h.6v1.5c-.3.1-.7.1-1 .1-1.8 0-2.5-.7-2.5-2.4V23h-1.3v-1.5h1.3v-2.1h1.8v-.1zm2.8 6.7c0-2.8 1.7-4.6 4.3-4.6 2.6 0 4.3 1.8 4.3 4.6 0 2.9-1.7 4.6-4.3 4.6-2.7 0-4.3-1.8-4.3-4.6zm6.7 0c0-2-.9-3.1-2.4-3.1S88 24 88 26s.9 3.1 2.4 3.1 2.4-1.2 2.4-3.1zm3.4-4.6H98V23c.2-1 1.2-1.7 2.2-1.6.2 0 .4 0 .6.1v1.7c-.3-.1-.6-.1-.8-.1-1 0-1.9.8-1.9 1.8v5.7h-1.9v-9.2zm13.2 6.4c-.2 1.6-1.9 2.8-3.9 2.8-2.6 0-4.3-1.8-4.3-4.6s1.6-4.7 4.2-4.7c2.5 0 4.1 1.7 4.1 4.5v.6h-6.4v.1c-.1 1.3.8 2.4 2.1 2.6h.3c.9.1 1.8-.4 2.1-1.3h1.8zm-6.3-2.7h4.5c.1-1.2-.9-2.2-2.1-2.3h-.2c-1.2 0-2.2 1-2.2 2.3z"
+                                fill="#fff"
+                              />
+                            </g>
+                            <path
+                              d="M37.8 8.7c1.5-.1 2.7 1 2.8 2.4v.5c0 1.9-1 3-2.8 3h-2.2v-6l2.2.1zm-1.2 5.2h1.1c1 .1 1.9-.7 2-1.8v-.4c.1-1-.6-2-1.6-2.1h-1.5v4.3zm5.1-1.5c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.3 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6s1.2-.6 1.2-1.6zm6.6 2.3h-.9l-.9-3.3h-.1l-.9 3.3h-.9l-1.2-4.5h.9l.8 3.4h.1l.9-3.4h.9l.9 3.4h.1l.8-3.4h.9l-1.4 4.5zm2.3-4.5h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm5.2-1.8h.9v6.3h-.9V8.4zm2.1 4c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm1.8 1c0-.8.6-1.3 1.7-1.3l1.2-.1v-.4c0-.5-.3-.7-.9-.7-.5 0-.8.2-.9.5h-.9c.1-.8.8-1.3 1.8-1.3 1.1 0 1.8.6 1.8 1.5v3.1h-.9v-.6h-.1c-.3.5-.8.7-1.4.7-.7.1-1.4-.5-1.5-1.2.1-.1.1-.1.1-.2zm2.9-.4v-.4l-1.1.1c-.6 0-.9.3-.9.6 0 .4.4.6.8.6.6.2 1.1-.2 1.2-.9 0 .1 0 .1 0 0zm2-.6c0-1.4.7-2.3 1.9-2.3.6 0 1.1.3 1.4.8h.1V8.4h.9v6.3h-.9V14h-.1c-.3.5-.8.8-1.4.8-1.1 0-1.9-.9-1.9-2.4zm1 0c0 1 .5 1.5 1.2 1.5s1.2-.6 1.2-1.5-.5-1.5-1.2-1.5c-.8 0-1.2.6-1.2 1.5zm6.9 0c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3-1.2.1-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5-.8 0-1.2.6-1.2 1.5 0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm2.1-2.2h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm8.8-1.1v1.1h1v.8h-1v2.3c0 .5.2.7.6.7h.3v.7h-.5c-1 0-1.4-.3-1.4-1.2V11h-.7v-.7h.7V9.1h1zm2.2-.7h.9v2.5h.1c.2-.5.8-.9 1.4-.8.8 0 1.5.6 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9l-.1-6.3zm9.1 5.1c-.2.8-1.1 1.4-2 1.3-1.1 0-2.1-.9-2.1-2v-.3c-.2-1.1.6-2.2 1.8-2.3h.3c1.3 0 2 .9 2 2.3v.3h-3.2c-.1.7.4 1.2 1.1 1.3h.1c.4.1.9-.2 1.1-.5l.9-.1zm-3.2-1.5h2.3c0-.6-.4-1.1-1-1.2h-.1c-.6.1-1.2.6-1.2 1.2z"
+                              fill="#fff"
+                              id="_Group_4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -1870,8 +2709,163 @@ exports[`News should render responsive (md) 1`] = `
                         >
                           <svg
                             class="h-10 w-32"
+                            viewBox="0 0 2500 741"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            download-google-play.svg
+                            <path
+                              d="M2407.4 740.9H92.6C40.7 740.9 0 700.1 0 648.3V92.7C0 40.9 40.7.1 92.6.1h2314.8c51.9 0 92.6 40.7 92.6 92.6v555.6c0 51.8-40.7 92.6-92.6 92.6z"
+                            />
+                            <path
+                              d="M2407.4 14.9c42.6 0 77.8 35.2 77.8 77.8v555.6c0 42.6-35.2 77.8-77.8 77.8H92.6c-42.6 0-77.8-35.2-77.8-77.8V92.7c0-42.6 35.2-77.8 77.8-77.8h2314.8m0-14.8H92.6C40.7.1 0 42.7 0 92.7v555.6c0 51.9 40.7 92.6 92.6 92.6h2314.8c51.9 0 92.6-40.7 92.6-92.6V92.7c0-50-40.7-92.6-92.6-92.6z"
+                            />
+                            <path
+                              d="M877.8 189c0 14.8-3.7 27.8-13 37-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7c11.1-11.1 24.1-16.7 40.7-16.7 7.4 0 14.8 1.9 22.2 5.6 7.4 3.7 13 7.4 16.7 13l-9.3 9.3c-7.4-9.3-16.7-13-29.6-13-11.1 0-22.2 3.7-29.6 13-9.3 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5c9.3 7.4 18.5 13 29.6 13 13 0 22.2-3.7 31.5-13 5.6-5.6 9.3-13 9.3-22.2h-40.7v-14.8h53.7l-.1 7.2h0zm85.2-46.3h-50v35.2h46.3v13H913v35.2h50v14.8h-64.8V129.8H963v12.9zm61.1 98.2h-14.8v-98.1h-31.5v-13h77.8v13h-31.5v98.1zm85.2 0V129.8h14.8v111.1h-14.8zm77.7 0h-14.8v-98.1h-31.5v-13h75.9v13h-31.5v98.1h1.9zm176-14.8c-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7 24.1-16.7 40.7-16.7 29.6 5.6 40.7 16.7c11.1 11.1 16.7 24.1 16.7 40.7s-5.6 29.5-16.7 40.7zm-70.4-9.3c7.4 7.4 18.5 13 29.6 13s22.2-3.7 29.6-13c7.4-7.4 13-18.5 13-31.5s-3.7-24.1-13-31.5c-7.4-7.4-18.5-13-29.6-13s-22.2 3.7-29.6 13c-7.4 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5zm107.4 24.1V129.8h16.7l53.7 87v-87h14.8v111.1h-14.8l-57.4-90.7v90.7h-13 0z"
+                              fill="#fff"
+                              stroke="#fff"
+                              stroke-miterlimit="185.185"
+                              stroke-width="3.704"
+                            />
+                            <path
+                              d="M1261.1 403.8c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6s79.6-33.3 79.6-79.6c0-48.1-35.1-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 44.4 18.5 44.4 48.1c.1 27.7-20.3 48.1-44.4 48.1zm-172.2-126c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6 44.4 0 79.6-33.3 79.6-79.6 0-48.1-35.2-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1c24.1 0 44.4 18.5 44.4 48.1 0 27.7-20.3 48.1-44.4 48.1zM883.3 427.9v33.3H963c-1.9 18.5-9.3 33.3-18.5 42.6-11.1 11.1-29.6 24.1-61.1 24.1-50 0-87-38.9-87-88.9s38.9-88.9 87-88.9c25.9 0 46.3 11.1 61.1 24.1l24.1-24.1c-20.4-18.5-46.3-33.3-83.3-33.3-66.7 0-124.1 55.6-124.1 122.2s57.4 122.2 124.1 122.2c37 0 63-11.1 85.2-35.2 22.2-22.2 29.6-53.7 29.6-77.8 0-7.4 0-14.8-1.9-20.4l-114.9.1zm840.8 25.9c-7.4-18.5-25.9-50-66.7-50-40.7 0-74.1 31.5-74.1 79.6 0 44.4 33.3 79.6 77.8 79.6 35.2 0 57.4-22.2 64.8-35.2l-25.9-18.5c-9.3 13-20.4 22.2-38.9 22.2s-29.6-7.4-38.9-24.1l105.6-44.4-3.7-9.2zm-107.4 26c0-29.6 24.1-46.3 40.7-46.3 13 0 25.9 7.4 29.6 16.7l-70.3 29.6zm-87.1 75.9h35.2V324.2h-35.2v231.5zm-55.5-135.2c-9.3-9.3-24.1-18.5-42.6-18.5-38.9 0-75.9 35.2-75.9 79.6s35.2 77.8 75.9 77.8c18.5 0 33.3-9.3 40.7-18.5h1.9V552c0 29.6-16.7 46.3-42.6 46.3-20.4 0-35.2-14.8-38.9-27.8l-29.6 13c9.3 20.4 31.5 46.3 70.4 46.3 40.7 0 74.1-24.1 74.1-81.5V407.5h-33.3l-.1 13zm-40.8 109.3c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 42.6 20.4 42.6 48.1-18.5 48.1-42.6 48.1zm451.9-205.6h-83.3v231.5h35.2v-87h48.1c38.9 0 75.9-27.8 75.9-72.2s-37-72.3-75.9-72.3zm1.8 111.1h-50v-79.6h50c25.9 0 40.7 22.2 40.7 38.9-1.8 20.3-16.6 40.7-40.7 40.7zm213-33.3c-25.9 0-51.9 11.1-61.1 35.2l31.5 13c7.4-13 18.5-16.7 31.5-16.7 18.5 0 35.2 11.1 37 29.6v1.9c-5.6-3.7-20.4-9.3-35.2-9.3-33.3 0-66.7 18.5-66.7 51.9 0 31.5 27.8 51.9 57.4 51.9 24.1 0 35.2-11.1 44.4-22.2h1.9v18.5h33.3v-88.9c-3.6-40.8-35.1-64.9-74-64.9zm-3.7 127.8c-11.1 0-27.8-5.6-27.8-20.4 0-18.5 20.4-24.1 37-24.1 14.8 0 22.2 3.7 31.5 7.4-3.7 22.2-22.2 37.1-40.7 37.1zm194.4-122.3l-38.9 100h-1.9l-40.7-100h-37l61.1 140.7-35.2 77.8h35.2l94.4-218.5h-37zm-311.1 148.2h35.2V324.2h-35.2v231.5z"
+                              fill="#fff"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="a"
+                              x1="967.795"
+                              x2="951.012"
+                              y1="844.671"
+                              y2="861.453"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#00a0ff"
+                              />
+                              <stop
+                                offset="0.007"
+                                stop-color="#00a1ff"
+                              />
+                              <stop
+                                offset="0.26"
+                                stop-color="#00beff"
+                              />
+                              <stop
+                                offset="0.512"
+                                stop-color="#00d2ff"
+                              />
+                              <stop
+                                offset="0.76"
+                                stop-color="#00dfff"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00e3ff"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M192.6 139c-5.6 5.6-7.4 14.8-7.4 25.9v409.3c0 11.1 3.7 20.4 9.3 25.9l1.9 1.9L426 372.4v-3.7L192.6 139z"
+                              fill="url(#a)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="b"
+                              x1="979.834"
+                              x2="955.637"
+                              y1="856.016"
+                              y2="856.016"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ffe000"
+                              />
+                              <stop
+                                offset="0.409"
+                                stop-color="#ffbd00"
+                              />
+                              <stop
+                                offset="0.775"
+                                stop-color="orange"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#ff9c00"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M500 450.1l-75.9-75.9v-5.6l75.9-75.9 1.9 1.9 90.7 51.9c25.9 14.8 25.9 38.9 0 53.7L500 450.1z"
+                              fill="url(#b)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="c"
+                              x1="970.816"
+                              x2="948.058"
+                              y1="858.25"
+                              y2="881.009"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ff3a44"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#c31162"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 448.3l-77.8-77.8L192.6 602c9.3 9.3 22.2 9.3 38.9 1.9l270.4-155.6"
+                              fill="url(#c)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="d"
+                              x1="953.261"
+                              x2="963.424"
+                              y1="836.178"
+                              y2="846.341"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#32a071"
+                              />
+                              <stop
+                                offset="0.069"
+                                stop-color="#2da771"
+                              />
+                              <stop
+                                offset="0.476"
+                                stop-color="#15cf74"
+                              />
+                              <stop
+                                offset="0.801"
+                                stop-color="#06e775"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00f076"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 292.7L231.5 139c-16.7-9.3-29.6-7.4-38.9 1.9l231.5 229.6 77.8-77.8z"
+                              fill="url(#d)"
+                            />
+                            <path
+                              d="M500 446.4L231.5 598.3c-14.8 9.3-27.8 7.4-37 0l-1.9 1.9 1.9 1.9c9.3 7.4 22.2 9.3 37 0L500 446.4z"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M192.6 598.3c-5.6-5.6-7.4-14.8-7.4-25.9v1.9c0 11.1 3.7 20.4 9.3 25.9v-1.9h-1.9zm400-203.7L500 446.4l1.9 1.9 90.7-51.9c13-7.4 18.5-16.7 18.5-25.9 0 9.3-7.4 16.7-18.5 24.1z"
+                              opacity="0.12"
+                            />
+                            <path
+                              d="M231.5 140.9l361.1 205.6c11.1 7.4 18.5 14.8 18.5 24.1 0-9.3-5.6-18.5-18.5-25.9L231.5 139c-25.9-14.8-46.3-3.7-46.3 25.9v1.9c0-27.8 20.4-40.7 46.3-25.9z"
+                              fill="#fff"
+                              opacity="0.25"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -1880,7 +2874,7 @@ exports[`News should render responsive (md) 1`] = `
                   <img
                     alt="FTX Banner"
                     class="absolute right-0 bottom-0 z-0 hidden max-w-sm lg:block"
-                    src="ftx-banner.png"
+                    src="/src/domains/news/images/ftx-banner.png"
                   />
                 </div>
               </div>
@@ -1905,8 +2899,30 @@ exports[`News should render responsive (md) 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          double-chevron-left-small.svg
+                        <svg
+                          id="double-chevron-left-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M4.995 9L1.102 5.178c-.136-.134-.136-.267 0-.356h0L4.995 1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M9 9L5.107 5.178c-.136-.134-.136-.267 0-.356h0L9 1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1931,8 +2947,22 @@ exports[`News should render responsive (md) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-left-small.svg
+                          <svg
+                            id="chevron-left-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -2012,8 +3042,25 @@ exports[`News should render responsive (md) 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -2045,8 +3092,25 @@ exports[`News should render responsive (md) 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -2071,8 +3135,22 @@ exports[`News should render responsive (md) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-right-small.svg
+                          <svg
+                            id="chevron-right-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -2091,8 +3169,30 @@ exports[`News should render responsive (md) 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          double-chevron-right-small.svg
+                        <svg
+                          id="double-chevron-right-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.011 1l3.893 3.822c.136.134.136.267 0 .356h0L5.011 9"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M1.006 1L4.9 4.822c.136.134.136.267 0 .356h0L1.006 9"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2216,7 +3316,7 @@ exports[`News should render responsive (md) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`News should render responsive (xs) 1`] = `
+exports[`News > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -2242,8 +3342,25 @@ exports[`News should render responsive (xs) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                received.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -2265,8 +3382,22 @@ exports[`News should render responsive (xs) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                dashboard.svg
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -2289,8 +3420,25 @@ exports[`News should render responsive (xs) 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sent.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -2316,8 +3464,22 @@ exports[`News should render responsive (xs) 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-left-small.svg
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </button>
@@ -2337,9 +3499,19 @@ exports[`News should render responsive (xs) 1`] = `
                 class="relative"
               >
                 <svg
+                  fill="none"
                   height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  arkvault-logo.svg
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </span>
             </button>
@@ -2405,8 +3577,19 @@ exports[`News should render responsive (xs) 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      menu.svg
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -2439,8 +3622,18 @@ exports[`News should render responsive (xs) 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            cloud.svg
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                         <div
@@ -2482,8 +3675,25 @@ exports[`News should render responsive (xs) 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            bell.svg
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
                           </svg>
                         </div>
                         <div
@@ -2525,8 +3735,25 @@ exports[`News should render responsive (xs) 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          received.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -2556,8 +3783,25 @@ exports[`News should render responsive (xs) 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sent.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -2669,8 +3913,25 @@ exports[`News should render responsive (xs) 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        magnifying-glass.svg
+                      <svg
+                        id="magnifying-glass"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2705,8 +3966,25 @@ exports[`News should render responsive (xs) 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sliders-vertical.svg
+                        <svg
+                          id="sliders-vertical"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </button>
@@ -2761,8 +4039,19 @@ exports[`News should render responsive (xs) 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2781,8 +4070,19 @@ exports[`News should render responsive (xs) 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2863,8 +4163,22 @@ exports[`News should render responsive (xs) 1`] = `
                             height="16"
                             width="16"
                           >
-                            <svg>
-                              arrow-external.svg
+                            <svg
+                              id="arrow-external"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
                             </svg>
                           </div>
                         </a>
@@ -2903,8 +4217,25 @@ exports[`News should render responsive (xs) 1`] = `
                           <svg
                             class="text-white"
                             height="60"
+                            viewBox="0 0 272 84"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            ftx.svg
+                            <path
+                              d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                              fill="currentColor"
+                            />
+                            <path
+                              d="M29 0h70v23H29z"
+                              fill="#009BB5"
+                            />
+                            <path
+                              d="M29 30h50v23H29zM0 30h22v23H0z"
+                              fill="#00B3C8"
+                            />
+                            <path
+                              d="M29 60h23v23H29z"
+                              fill="#ABEBF4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -2929,8 +4260,49 @@ exports[`News should render responsive (xs) 1`] = `
                         >
                           <svg
                             class="b-0 h-10 w-32"
+                            id="livetype"
+                            viewBox="0 0 119.7 40"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
                           >
-                            download-app-store.svg
+                            <path
+                              d="M110.1 0H7.5c-.7 0-1.3.1-2 .2-.6.1-1.3.3-1.9.6S2.5 1.5 2 2 1.1 3 .8 3.6.3 4.9.2 5.5c-.1.7-.2 1.4-.2 2v24.9c0 .7.1 1.3.2 2s.3 1.3.6 1.9c.3.7.7 1.2 1.2 1.7s1 .9 1.6 1.2 1.2.5 1.9.6 1.3.2 2 .2h104.6c.7 0 1.3-.1 2-.2s1.3-.3 1.9-.6 1.1-.7 1.6-1.2.9-1 1.2-1.6c.3-.6.5-1.2.6-1.9s.2-1.3.2-2v-25c0-.7-.1-1.3-.2-2s-.3-1.3-.6-1.9c-.6-1.2-1.6-2.2-2.8-2.8-.6-.3-1.2-.5-1.9-.6-.7-.1-1.3-.2-2-.2h-2z"
+                            />
+                            <path
+                              d="M8.4 39.1h-.9c-.6 0-1.3-.1-1.9-.2-.6-.1-1.1-.3-1.7-.5-.5-.3-1-.6-1.4-1s-.8-.9-1-1.4c-.3-.5-.4-1.1-.5-1.7-.1-.6-.2-1.2-.2-1.9V7.5c0-.6.1-1.3.2-1.9.1-.5.3-1.1.6-1.6s.6-1 1-1.4.9-.7 1.4-1 1.1-.4 1.7-.5S6.9.9 7.6.9h104.6c.6 0 1.2.1 1.9.2.6.1 1.1.3 1.7.5 1 .5 1.9 1.4 2.4 2.4.3.5.4 1.1.5 1.6.1.6.2 1.3.2 1.9v24.9c0 .6-.1 1.2-.2 1.9-.1.6-.3 1.1-.5 1.7-.3.5-.6 1-1 1.4s-.9.8-1.4 1c-.5.3-1.1.5-1.7.5-.6.1-1.2.2-1.9.2H8.4z"
+                            />
+                            <g
+                              id="_Group_"
+                            >
+                              <g
+                                id="_Group_2"
+                              >
+                                <g
+                                  fill="#fff"
+                                  id="_Group_3"
+                                >
+                                  <path
+                                    d="M24.8 20.3c0-1.7.9-3.3 2.4-4.2-.9-1.3-2.4-2.1-4-2.2-1.7-.2-3.3 1-4.2 1s-2.2-1-3.6-1c-1.9.1-3.6 1.1-4.5 2.7-1.9 3.3-.5 8.3 1.4 11 .9 1.3 2 2.8 3.4 2.8 1.4-.1 1.9-.9 3.6-.9s2.1.9 3.6.9 2.4-1.3 3.3-2.7c.7-.9 1.2-2 1.5-3.1-1.8-.6-2.9-2.4-2.9-4.3z"
+                                    id="_Path_"
+                                  />
+                                  <path
+                                    d="M22 12.2c.8-1 1.2-2.2 1.1-3.5-1.2.1-2.4.7-3.2 1.7-.8.9-1.2 2.1-1.1 3.4 1.3 0 2.4-.6 3.2-1.6z"
+                                    id="_Path_2"
+                                  />
+                                </g>
+                              </g>
+                              <path
+                                d="M42.3 27.1h-4.7l-1.1 3.4h-2L39 18.1h2l4.5 12.4h-2l-1.2-3.4zm-4.2-1.5h3.8L40 20.1h-.1l-1.8 5.5zm17.1.4c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.2-.1 3.8 1.8 3.8 4.6zm-2 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm11.9 0c0 2.8-1.5 4.6-3.8 4.6-1.2.1-2.3-.6-2.8-1.6v4.5h-1.9v-12h1.8V23c.6-1 1.7-1.6 2.9-1.6 2.3-.1 3.8 1.8 3.8 4.6zm-1.9 0c0-1.8-.9-3-2.4-3-1.4 0-2.4 1.2-2.4 3s1 3 2.4 3c1.5 0 2.4-1.2 2.4-3zm8.5 1c.1 1.2 1.3 2 3 2 1.6 0 2.7-.8 2.7-1.9 0-1-.7-1.5-2.3-1.9l-1.6-.4c-2.3-.6-3.3-1.6-3.3-3.3 0-2.1 1.9-3.6 4.5-3.6s4.4 1.5 4.5 3.6h-1.9c-.1-1.2-1.1-2-2.6-2s-2.5.8-2.5 1.9c0 .9.7 1.4 2.3 1.8l1.4.3c2.5.6 3.6 1.6 3.6 3.4 0 2.3-1.9 3.8-4.8 3.8-2.8 0-4.6-1.4-4.7-3.7h1.7zm11.6-7.7v2.1H85v1.5h-1.7v5c0 .8.3 1.1 1.1 1.1h.6v1.5c-.3.1-.7.1-1 .1-1.8 0-2.5-.7-2.5-2.4V23h-1.3v-1.5h1.3v-2.1h1.8v-.1zm2.8 6.7c0-2.8 1.7-4.6 4.3-4.6 2.6 0 4.3 1.8 4.3 4.6 0 2.9-1.7 4.6-4.3 4.6-2.7 0-4.3-1.8-4.3-4.6zm6.7 0c0-2-.9-3.1-2.4-3.1S88 24 88 26s.9 3.1 2.4 3.1 2.4-1.2 2.4-3.1zm3.4-4.6H98V23c.2-1 1.2-1.7 2.2-1.6.2 0 .4 0 .6.1v1.7c-.3-.1-.6-.1-.8-.1-1 0-1.9.8-1.9 1.8v5.7h-1.9v-9.2zm13.2 6.4c-.2 1.6-1.9 2.8-3.9 2.8-2.6 0-4.3-1.8-4.3-4.6s1.6-4.7 4.2-4.7c2.5 0 4.1 1.7 4.1 4.5v.6h-6.4v.1c-.1 1.3.8 2.4 2.1 2.6h.3c.9.1 1.8-.4 2.1-1.3h1.8zm-6.3-2.7h4.5c.1-1.2-.9-2.2-2.1-2.3h-.2c-1.2 0-2.2 1-2.2 2.3z"
+                                fill="#fff"
+                              />
+                            </g>
+                            <path
+                              d="M37.8 8.7c1.5-.1 2.7 1 2.8 2.4v.5c0 1.9-1 3-2.8 3h-2.2v-6l2.2.1zm-1.2 5.2h1.1c1 .1 1.9-.7 2-1.8v-.4c.1-1-.6-2-1.6-2.1h-1.5v4.3zm5.1-1.5c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.3 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6s1.2-.6 1.2-1.6zm6.6 2.3h-.9l-.9-3.3h-.1l-.9 3.3h-.9l-1.2-4.5h.9l.8 3.4h.1l.9-3.4h.9l.9 3.4h.1l.8-3.4h.9l-1.4 4.5zm2.3-4.5h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm5.2-1.8h.9v6.3h-.9V8.4zm2.1 4c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3s-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5s-1.2.6-1.2 1.5c0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm1.8 1c0-.8.6-1.3 1.7-1.3l1.2-.1v-.4c0-.5-.3-.7-.9-.7-.5 0-.8.2-.9.5h-.9c.1-.8.8-1.3 1.8-1.3 1.1 0 1.8.6 1.8 1.5v3.1h-.9v-.6h-.1c-.3.5-.8.7-1.4.7-.7.1-1.4-.5-1.5-1.2.1-.1.1-.1.1-.2zm2.9-.4v-.4l-1.1.1c-.6 0-.9.3-.9.6 0 .4.4.6.8.6.6.2 1.1-.2 1.2-.9 0 .1 0 .1 0 0zm2-.6c0-1.4.7-2.3 1.9-2.3.6 0 1.1.3 1.4.8h.1V8.4h.9v6.3h-.9V14h-.1c-.3.5-.8.8-1.4.8-1.1 0-1.9-.9-1.9-2.4zm1 0c0 1 .5 1.5 1.2 1.5s1.2-.6 1.2-1.5-.5-1.5-1.2-1.5c-.8 0-1.2.6-1.2 1.5zm6.9 0c-.1-1.2.7-2.2 1.9-2.3s2.2.7 2.3 1.9v.4c.1 1.2-.7 2.2-1.9 2.3-1.2.1-2.2-.7-2.3-1.9v-.4zm3.4 0c0-1-.4-1.5-1.2-1.5-.8 0-1.2.6-1.2 1.5 0 1 .4 1.6 1.2 1.6.7 0 1.2-.6 1.2-1.6zm2.1-2.2h.9v.7h.1c.2-.5.8-.8 1.3-.8.8-.1 1.5.5 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9v-4.5zm8.8-1.1v1.1h1v.8h-1v2.3c0 .5.2.7.6.7h.3v.7h-.5c-1 0-1.4-.3-1.4-1.2V11h-.7v-.7h.7V9.1h1zm2.2-.7h.9v2.5h.1c.2-.5.8-.9 1.4-.8.8 0 1.5.6 1.6 1.4v3.2h-.9V12c0-.7-.3-1.1-1-1.1-.6 0-1.1.4-1.1 1v2.8h-.9l-.1-6.3zm9.1 5.1c-.2.8-1.1 1.4-2 1.3-1.1 0-2.1-.9-2.1-2v-.3c-.2-1.1.6-2.2 1.8-2.3h.3c1.3 0 2 .9 2 2.3v.3h-3.2c-.1.7.4 1.2 1.1 1.3h.1c.4.1.9-.2 1.1-.5l.9-.1zm-3.2-1.5h2.3c0-.6-.4-1.1-1-1.2h-.1c-.6.1-1.2.6-1.2 1.2z"
+                              fill="#fff"
+                              id="_Group_4"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -2946,8 +4318,163 @@ exports[`News should render responsive (xs) 1`] = `
                         >
                           <svg
                             class="h-10 w-32"
+                            viewBox="0 0 2500 741"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            download-google-play.svg
+                            <path
+                              d="M2407.4 740.9H92.6C40.7 740.9 0 700.1 0 648.3V92.7C0 40.9 40.7.1 92.6.1h2314.8c51.9 0 92.6 40.7 92.6 92.6v555.6c0 51.8-40.7 92.6-92.6 92.6z"
+                            />
+                            <path
+                              d="M2407.4 14.9c42.6 0 77.8 35.2 77.8 77.8v555.6c0 42.6-35.2 77.8-77.8 77.8H92.6c-42.6 0-77.8-35.2-77.8-77.8V92.7c0-42.6 35.2-77.8 77.8-77.8h2314.8m0-14.8H92.6C40.7.1 0 42.7 0 92.7v555.6c0 51.9 40.7 92.6 92.6 92.6h2314.8c51.9 0 92.6-40.7 92.6-92.6V92.7c0-50-40.7-92.6-92.6-92.6z"
+                            />
+                            <path
+                              d="M877.8 189c0 14.8-3.7 27.8-13 37-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7c11.1-11.1 24.1-16.7 40.7-16.7 7.4 0 14.8 1.9 22.2 5.6 7.4 3.7 13 7.4 16.7 13l-9.3 9.3c-7.4-9.3-16.7-13-29.6-13-11.1 0-22.2 3.7-29.6 13-9.3 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5c9.3 7.4 18.5 13 29.6 13 13 0 22.2-3.7 31.5-13 5.6-5.6 9.3-13 9.3-22.2h-40.7v-14.8h53.7l-.1 7.2h0zm85.2-46.3h-50v35.2h46.3v13H913v35.2h50v14.8h-64.8V129.8H963v12.9zm61.1 98.2h-14.8v-98.1h-31.5v-13h77.8v13h-31.5v98.1zm85.2 0V129.8h14.8v111.1h-14.8zm77.7 0h-14.8v-98.1h-31.5v-13h75.9v13h-31.5v98.1h1.9zm176-14.8c-11.1 11.1-24.1 16.7-40.7 16.7-16.7 0-29.6-5.6-40.7-16.7-11.1-11.1-16.7-24.1-16.7-40.7s5.6-29.6 16.7-40.7 24.1-16.7 40.7-16.7 29.6 5.6 40.7 16.7c11.1 11.1 16.7 24.1 16.7 40.7s-5.6 29.5-16.7 40.7zm-70.4-9.3c7.4 7.4 18.5 13 29.6 13s22.2-3.7 29.6-13c7.4-7.4 13-18.5 13-31.5s-3.7-24.1-13-31.5c-7.4-7.4-18.5-13-29.6-13s-22.2 3.7-29.6 13c-7.4 7.4-13 18.5-13 31.5s3.7 24.1 13 31.5zm107.4 24.1V129.8h16.7l53.7 87v-87h14.8v111.1h-14.8l-57.4-90.7v90.7h-13 0z"
+                              fill="#fff"
+                              stroke="#fff"
+                              stroke-miterlimit="185.185"
+                              stroke-width="3.704"
+                            />
+                            <path
+                              d="M1261.1 403.8c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6s79.6-33.3 79.6-79.6c0-48.1-35.1-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 44.4 18.5 44.4 48.1c.1 27.7-20.3 48.1-44.4 48.1zm-172.2-126c-44.4 0-79.6 33.3-79.6 79.6 0 44.4 35.2 79.6 79.6 79.6 44.4 0 79.6-33.3 79.6-79.6 0-48.1-35.2-79.6-79.6-79.6zm0 126c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1c24.1 0 44.4 18.5 44.4 48.1 0 27.7-20.3 48.1-44.4 48.1zM883.3 427.9v33.3H963c-1.9 18.5-9.3 33.3-18.5 42.6-11.1 11.1-29.6 24.1-61.1 24.1-50 0-87-38.9-87-88.9s38.9-88.9 87-88.9c25.9 0 46.3 11.1 61.1 24.1l24.1-24.1c-20.4-18.5-46.3-33.3-83.3-33.3-66.7 0-124.1 55.6-124.1 122.2s57.4 122.2 124.1 122.2c37 0 63-11.1 85.2-35.2 22.2-22.2 29.6-53.7 29.6-77.8 0-7.4 0-14.8-1.9-20.4l-114.9.1zm840.8 25.9c-7.4-18.5-25.9-50-66.7-50-40.7 0-74.1 31.5-74.1 79.6 0 44.4 33.3 79.6 77.8 79.6 35.2 0 57.4-22.2 64.8-35.2l-25.9-18.5c-9.3 13-20.4 22.2-38.9 22.2s-29.6-7.4-38.9-24.1l105.6-44.4-3.7-9.2zm-107.4 26c0-29.6 24.1-46.3 40.7-46.3 13 0 25.9 7.4 29.6 16.7l-70.3 29.6zm-87.1 75.9h35.2V324.2h-35.2v231.5zm-55.5-135.2c-9.3-9.3-24.1-18.5-42.6-18.5-38.9 0-75.9 35.2-75.9 79.6s35.2 77.8 75.9 77.8c18.5 0 33.3-9.3 40.7-18.5h1.9V552c0 29.6-16.7 46.3-42.6 46.3-20.4 0-35.2-14.8-38.9-27.8l-29.6 13c9.3 20.4 31.5 46.3 70.4 46.3 40.7 0 74.1-24.1 74.1-81.5V407.5h-33.3l-.1 13zm-40.8 109.3c-24.1 0-44.4-20.4-44.4-48.1s20.4-48.1 44.4-48.1 42.6 20.4 42.6 48.1-18.5 48.1-42.6 48.1zm451.9-205.6h-83.3v231.5h35.2v-87h48.1c38.9 0 75.9-27.8 75.9-72.2s-37-72.3-75.9-72.3zm1.8 111.1h-50v-79.6h50c25.9 0 40.7 22.2 40.7 38.9-1.8 20.3-16.6 40.7-40.7 40.7zm213-33.3c-25.9 0-51.9 11.1-61.1 35.2l31.5 13c7.4-13 18.5-16.7 31.5-16.7 18.5 0 35.2 11.1 37 29.6v1.9c-5.6-3.7-20.4-9.3-35.2-9.3-33.3 0-66.7 18.5-66.7 51.9 0 31.5 27.8 51.9 57.4 51.9 24.1 0 35.2-11.1 44.4-22.2h1.9v18.5h33.3v-88.9c-3.6-40.8-35.1-64.9-74-64.9zm-3.7 127.8c-11.1 0-27.8-5.6-27.8-20.4 0-18.5 20.4-24.1 37-24.1 14.8 0 22.2 3.7 31.5 7.4-3.7 22.2-22.2 37.1-40.7 37.1zm194.4-122.3l-38.9 100h-1.9l-40.7-100h-37l61.1 140.7-35.2 77.8h35.2l94.4-218.5h-37zm-311.1 148.2h35.2V324.2h-35.2v231.5z"
+                              fill="#fff"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="a"
+                              x1="967.795"
+                              x2="951.012"
+                              y1="844.671"
+                              y2="861.453"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#00a0ff"
+                              />
+                              <stop
+                                offset="0.007"
+                                stop-color="#00a1ff"
+                              />
+                              <stop
+                                offset="0.26"
+                                stop-color="#00beff"
+                              />
+                              <stop
+                                offset="0.512"
+                                stop-color="#00d2ff"
+                              />
+                              <stop
+                                offset="0.76"
+                                stop-color="#00dfff"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00e3ff"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M192.6 139c-5.6 5.6-7.4 14.8-7.4 25.9v409.3c0 11.1 3.7 20.4 9.3 25.9l1.9 1.9L426 372.4v-3.7L192.6 139z"
+                              fill="url(#a)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="b"
+                              x1="979.834"
+                              x2="955.637"
+                              y1="856.016"
+                              y2="856.016"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ffe000"
+                              />
+                              <stop
+                                offset="0.409"
+                                stop-color="#ffbd00"
+                              />
+                              <stop
+                                offset="0.775"
+                                stop-color="orange"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#ff9c00"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M500 450.1l-75.9-75.9v-5.6l75.9-75.9 1.9 1.9 90.7 51.9c25.9 14.8 25.9 38.9 0 53.7L500 450.1z"
+                              fill="url(#b)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="c"
+                              x1="970.816"
+                              x2="948.058"
+                              y1="858.25"
+                              y2="881.009"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#ff3a44"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#c31162"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 448.3l-77.8-77.8L192.6 602c9.3 9.3 22.2 9.3 38.9 1.9l270.4-155.6"
+                              fill="url(#c)"
+                            />
+                            <lineargradient
+                              gradientTransform="translate(-17518.518 -15480.722) scale(18.5185)"
+                              gradientUnits="userSpaceOnUse"
+                              id="d"
+                              x1="953.261"
+                              x2="963.424"
+                              y1="836.178"
+                              y2="846.341"
+                            >
+                              <stop
+                                offset="0"
+                                stop-color="#32a071"
+                              />
+                              <stop
+                                offset="0.069"
+                                stop-color="#2da771"
+                              />
+                              <stop
+                                offset="0.476"
+                                stop-color="#15cf74"
+                              />
+                              <stop
+                                offset="0.801"
+                                stop-color="#06e775"
+                              />
+                              <stop
+                                offset="1"
+                                stop-color="#00f076"
+                              />
+                            </lineargradient>
+                            <path
+                              d="M501.9 292.7L231.5 139c-16.7-9.3-29.6-7.4-38.9 1.9l231.5 229.6 77.8-77.8z"
+                              fill="url(#d)"
+                            />
+                            <path
+                              d="M500 446.4L231.5 598.3c-14.8 9.3-27.8 7.4-37 0l-1.9 1.9 1.9 1.9c9.3 7.4 22.2 9.3 37 0L500 446.4z"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M192.6 598.3c-5.6-5.6-7.4-14.8-7.4-25.9v1.9c0 11.1 3.7 20.4 9.3 25.9v-1.9h-1.9zm400-203.7L500 446.4l1.9 1.9 90.7-51.9c13-7.4 18.5-16.7 18.5-25.9 0 9.3-7.4 16.7-18.5 24.1z"
+                              opacity="0.12"
+                            />
+                            <path
+                              d="M231.5 140.9l361.1 205.6c11.1 7.4 18.5 14.8 18.5 24.1 0-9.3-5.6-18.5-18.5-25.9L231.5 139c-25.9-14.8-46.3-3.7-46.3 25.9v1.9c0-27.8 20.4-40.7 46.3-25.9z"
+                              fill="#fff"
+                              opacity="0.25"
+                            />
                           </svg>
                         </span>
                       </a>
@@ -2956,7 +4483,7 @@ exports[`News should render responsive (xs) 1`] = `
                   <img
                     alt="FTX Banner"
                     class="absolute right-0 bottom-0 z-0 hidden max-w-sm lg:block"
-                    src="ftx-banner.png"
+                    src="/src/domains/news/images/ftx-banner.png"
                   />
                 </div>
               </div>
@@ -3041,8 +4568,25 @@ exports[`News should render responsive (xs) 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -3074,8 +4618,25 @@ exports[`News should render responsive (xs) 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            magnifying-glass.svg
+                          <svg
+                            id="magnifying-glass"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -3098,8 +4659,30 @@ exports[`News should render responsive (xs) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            double-chevron-left-small.svg
+                          <svg
+                            id="double-chevron-left-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M4.995 9L1.102 5.178c-.136-.134-.136-.267 0-.356h0L4.995 1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M9 9L5.107 5.178c-.136-.134-.136-.267 0-.356h0L9 1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -3118,8 +4701,22 @@ exports[`News should render responsive (xs) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-left-small.svg
+                          <svg
+                            id="chevron-left-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -3137,8 +4734,22 @@ exports[`News should render responsive (xs) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            chevron-right-small.svg
+                          <svg
+                            id="chevron-right-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -3156,8 +4767,30 @@ exports[`News should render responsive (xs) 1`] = `
                           height="10"
                           width="10"
                         >
-                          <svg>
-                            double-chevron-right-small.svg
+                          <svg
+                            id="double-chevron-right-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M5.011 1l3.893 3.822c.136.134.136.267 0 .356h0L5.011 9"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M1.006 1L4.9 4.822c.136.134.136.267 0 .356h0L1.006 9"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -3282,7 +4915,7 @@ exports[`News should render responsive (xs) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`News should show error toast if news cannot be fetched 1`] = `
+exports[`News > should show error toast if news cannot be fetched 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -3308,8 +4941,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                received.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -3331,8 +4981,22 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                dashboard.svg
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -3355,8 +5019,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sent.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -3382,8 +5063,22 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-left-small.svg
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </button>
@@ -3403,9 +5098,19 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                 class="relative"
               >
                 <svg
+                  fill="none"
                   height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  arkvault-logo.svg
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </span>
             </button>
@@ -3471,8 +5176,19 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      menu.svg
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -3505,8 +5221,18 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            cloud.svg
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                         <div
@@ -3548,8 +5274,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            bell.svg
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
                           </svg>
                         </div>
                         <div
@@ -3591,8 +5334,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          received.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -3622,8 +5382,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sent.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -3730,9 +5507,26 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                   <svg
                     class="text-theme-text"
                     height="20"
+                    viewBox="0 0 272 84"
                     width="65"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    ftx.svg
+                    <path
+                      d="M125 70h14V53h23V41h-23V31h26V19h-40v51zm45-39h16v39h14V31h16V19h-46v12zm82 13l18-25h-16l-10 15-10-15h-16l18 26-19 25h16l11-15 10 15h17l-19-26z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M29 0h70v23H29z"
+                      fill="#009BB5"
+                    />
+                    <path
+                      d="M29 30h50v23H29zM0 30h22v23H0z"
+                      fill="#00B3C8"
+                    />
+                    <path
+                      d="M29 60h23v23H29z"
+                      fill="#ABEBF4"
+                    />
                   </svg>
                 </div>
               </div>
@@ -3764,8 +5558,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              magnifying-glass.svg
+                            <svg
+                              id="magnifying-glass"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -3800,8 +5611,25 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                               height="20"
                               width="20"
                             >
-                              <svg>
-                                sliders-vertical.svg
+                              <svg
+                                id="sliders-vertical"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -3845,8 +5673,477 @@ exports[`News should show error toast if news cannot be fetched 1`] = `
                   <div
                     class="mx-auto w-full max-w-lg"
                   >
-                    <svg>
-                      no-results-light-green.svg
+                    <svg
+                      viewBox="0 0 385 135.22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        id="images"
+                        transform="translate(0 1.013)"
+                      >
+                        <path
+                          d="M3 84V65H0v-2h3v-4h2v4h38v-1h2v1h38V25H61v-2h22V0h2v23h2v2h-2v38h16v2H85v6h-2v-6H45v10h-2V65H5v19z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 15"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_15"
+                          transform="translate(275 50.206)"
+                        />
+                        <path
+                          d="M16 84V61h-2v-2h2V21H0v-2h16v-6h2v6h38V9h2v10h38V0h2v19h3v2h-3v4h-2v-4H58v23h-2V21H18v38h22v2H18v23z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 17"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_17"
+                          transform="translate(6 6.206)"
+                        />
+                        <path
+                          d="M4 10V6H0V4h4V0h2v4h4v2H6v4z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          transform="translate(117 21.207)"
+                        />
+                        <path
+                          d="M4 10V6H0V4h4V0h2v4h4v2H6v4z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                          transform="translate(0 61.207)"
+                        />
+                        <path
+                          d="M4 10V6H0V4h4V0h2v4h4v2H6v4z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                          transform="translate(354.001 30.207)"
+                        />
+                        <path
+                          d="M4 10V6H0V4h4V0h2v4h4v2H6v4z"
+                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                          fill="#dbdee5"
+                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                          transform="translate(375 69.206)"
+                        />
+                        <g
+                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 88"
+                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_88"
+                          transform="translate(344 .207)"
+                        >
+                          <rect
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 12"
+                            fill="none"
+                            height="97"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_12"
+                            rx="7.5"
+                            width="15"
+                          />
+                        </g>
+                        <g
+                          data-name="1"
+                          fill="none"
+                          id="_1"
+                          stroke="#dbdee5"
+                          stroke-width="2"
+                          transform="translate(49 60.207)"
+                        >
+                          <path
+                            d="M315 862.014v-44.3a4.011 4.011 0 0 1 8 0v34.6"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 12 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_12_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            stroke-linecap="round"
+                            transform="translate(-305 -814)"
+                          />
+                          <path
+                            d="M309 840v-13.614a2.5 2.5 0 0 1 4.985 0V840"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                            transform="translate(-307 -814)"
+                          />
+                          <path
+                            d="M315.006 846.009a2.853 2.853 0 0 1-3.016-2.963v-4.056"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 14 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_14_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                            transform="translate(-305 -814)"
+                          />
+                          <path
+                            d="M316.989 853.009h0a8.039 8.039 0 0 1-7.989-8.088v-8.913"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 15 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_15_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                            transform="translate(-307 -814)"
+                          />
+                          <path
+                            d="M329 845v-7.562a2.494 2.494 0 0 0-4.987 0V845"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-2"
+                            transform="translate(-303 -814)"
+                          />
+                          <path
+                            d="M323 851.08a2.865 2.865 0 0 0 3.011-2.993v-4.1"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 14 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_14_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-2"
+                            transform="translate(-305 -814)"
+                          />
+                          <path
+                            d="M320.986 857.015h0a8.053 8.053 0 0 0 8.014-8.091v-8.916"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 15 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_15_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-2"
+                            transform="translate(-303 -814)"
+                          />
+                          <path
+                            d="M0 0h27"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1268 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1268_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            transform="translate(0 49.99)"
+                          />
+                          <path
+                            d="M0 5V0"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1267"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1267"
+                            transform="translate(16 45)"
+                          />
+                        </g>
+                        <g
+                          data-name="1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          fill="none"
+                          id="_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          stroke="#dbdee5"
+                          stroke-width="2"
+                          transform="translate(157 60.207)"
+                        >
+                          <path
+                            d="M423 862.014v-44.3a4.011 4.011 0 0 1 8 0v34.6"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 12 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_12_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
+                            stroke-linecap="round"
+                            transform="translate(-413 -814)"
+                          />
+                          <path
+                            d="M417 840v-13.614a2.5 2.5 0 0 1 4.985 0V840"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-3"
+                            transform="translate(-415 -814)"
+                          />
+                          <path
+                            d="M423.006 846.009a2.853 2.853 0 0 1-3.016-2.963v-4.056"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 14 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_14_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-3"
+                            transform="translate(-413 -814)"
+                          />
+                          <path
+                            d="M424.989 853.009h0a8.039 8.039 0 0 1-7.989-8.088v-8.913"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 15 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_15_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-3"
+                            transform="translate(-415 -814)"
+                          />
+                          <path
+                            d="M437 845v-7.562a2.494 2.494 0 0 0-4.987 0V845"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-4"
+                            transform="translate(-411 -814)"
+                          />
+                          <path
+                            d="M431 851.015a2.839 2.839 0 0 0 2.983-2.966v-4.059"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 14 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_14_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-4"
+                            transform="translate(-413 -814)"
+                          />
+                          <path
+                            d="M428.986 857.015h0a8.053 8.053 0 0 0 8.014-8.091v-8.916"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 15 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_15_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-4"
+                            transform="translate(-411 -814)"
+                          />
+                          <path
+                            d="M0 0h27"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1268 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1268_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
+                            transform="translate(0 49.99)"
+                          />
+                          <path
+                            d="M0 5V0"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1267"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1267-2"
+                            transform="translate(18 45)"
+                          />
+                        </g>
+                        <g
+                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 83"
+                          fill="none"
+                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_83"
+                          stroke-width="2"
+                          transform="translate(70 100.207)"
+                        >
+                          <path
+                            d="M0 0h137"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1"
+                            stroke="#212225"
+                            transform="translate(116 10)"
+                          />
+                          <path
+                            d="M0 0h78"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            stroke="#dbdee5"
+                            transform="translate(28 10)"
+                          />
+                          <path
+                            d="M0 0h18"
+                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                            stroke="#dbdee5"
+                            transform="translate(0 10)"
+                          />
+                          <path
+                            d="M393 863.5a9.5 9.5 0 0 1 9.5-9.5h4a9.5 9.5 0 0 1 9.5 9.5"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13"
+                            stroke="#dbdee5"
+                            transform="translate(-327 -854)"
+                          />
+                          <path
+                            d="M363 863a4.788 4.788 0 0 1 4.543-5h1.913a4.788 4.788 0 0 1 4.544 5"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            stroke="#dbdee5"
+                            transform="translate(-326 -854)"
+                          />
+                          <path
+                            d="M411.017 856h5.662c3.491 0 6.321 3.134 6.321 7"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                            stroke="#dbdee5"
+                            transform="translate(-326 -854)"
+                          />
+                          <path
+                            d="M488.383 858.562A9.495 9.495 0 0 1 496.5 854h4a9.5 9.5 0 0 1 9.5 9.5"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                            stroke="#212225"
+                            transform="translate(-326 -854)"
+                          />
+                          <path
+                            d="M480 864a5.894 5.894 0 0 1 5.783-6h2.435a5.894 5.894 0 0 1 5.782 6"
+                            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 13 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+                            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_13_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+                            stroke="#212225"
+                            transform="translate(-326 -854)"
+                          />
+                        </g>
+                        <g
+                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 84"
+                          fill="none"
+                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_84"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                          transform="translate(76)"
+                        >
+                          <path
+                            d="M332 859a27 27 0 0 1 27-27c14.912 0 27 10.088 27 25"
+                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3724"
+                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3724"
+                            stroke="#289548"
+                            stroke-dasharray="8 4"
+                            transform="translate(-332 -753.793)"
+                          />
+                          <path
+                            d="M383.865 853.291a100.081 100.081 0 0 1 113.426-98.582 99.721 99.721 0 0 1 36.085 12.177"
+                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3725"
+                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3725"
+                            stroke="#289548"
+                            stroke-dasharray="8 4"
+                            transform="translate(-330 -753.793)"
+                          />
+                          <path
+                            d="M383.991 852.964a84.613 84.613 0 0 1 .776-10.887c6.294-46.179 49.087-78.546 95.579-72.294"
+                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3725 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3725_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            stroke="#289548"
+                            stroke-dasharray="8 4"
+                            transform="translate(-330 -753.793)"
+                          />
+                          <g
+                            data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 86"
+                            id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_86"
+                            stroke="#212225"
+                            transform="translate(149 15.333)"
+                          >
+                            <g
+                              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 85"
+                              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_85"
+                              transform="translate(0 3.394)"
+                            >
+                              <path
+                                d="M497.15 835.749C491.819 829.676 487 820.216 487 811.5a34.5 34.5 0 0 1 62.848-19.669"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3722"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3722"
+                                transform="translate(-481 -772.52)"
+                              />
+                              <path
+                                d="M496.842 835.092C485.225 827.019 482 817.676 482 806.5"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723"
+                                transform="translate(-482 -773.52)"
+                              />
+                              <path
+                                d="M487.07 811.534a37.1 37.1 0 0 1 3.167-26.54"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                transform="translate(-481 -769.52)"
+                              />
+                              <path
+                                d="M503.215 782.019a33.124 33.124 0 0 1 23.347-9.5"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                                transform="translate(-481 -772.52)"
+                              />
+                              <path
+                                d="M542.189 791.221c-3.577-2.282-5.2-7.4-11.545-10.889"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                                transform="translate(-486 -775.52)"
+                              />
+                            </g>
+                            <g
+                              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 85 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_85_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                              transform="translate(9.746 34.972)"
+                            >
+                              <path
+                                d="M559.172 808.355a34.614 34.614 0 1 1-68.426 9.7"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3722"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3722-2"
+                                transform="translate(-490.746 -804.099)"
+                              />
+                              <path
+                                d="M558.344 804.1c3.985 9.614 4.277 25.473-1.337 35.2"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723-2"
+                                transform="translate(-490.746 -804.099)"
+                              />
+                              <path
+                                d="M554.274 833.642a33.342 33.342 0 0 1-15.22 20.234"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
+                                transform="translate(-488.746 -807.099)"
+                              />
+                              <path
+                                d="M526.3 849.96a33.161 33.161 0 0 1-25.036-3.436"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-2"
+                                transform="translate(-490.746 -804.099)"
+                              />
+                              <path
+                                d="M497.449 825.125c1.277 2.463.534 4.911 1.233 8.78.289 1.593 2.827 5.225 2.977 6.614"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-2"
+                                transform="translate(-490.746 -804.099)"
+                              />
+                            </g>
+                            <g
+                              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 85 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_85_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                              transform="translate(17.675)"
+                            >
+                              <path
+                                d="M498.675 785.425a34.614 34.614 0 1 1 47.81 49.9"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3722"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3722-3"
+                                transform="translate(-498.675 -769.127)"
+                              />
+                              <path
+                                d="M499.009 785.382a34.628 34.628 0 0 1 26.054-16.255"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723-3"
+                                transform="translate(-498.675 -769.127)"
+                              />
+                              <path
+                                d="M522.067 774.644a33.341 33.341 0 0 1 25.313.551"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-3"
+                                transform="translate(-497.675 -770.127)"
+                              />
+                              <path
+                                d="M551.647 787.841a33.162 33.162 0 0 1 11.821 22.336"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-3"
+                                transform="translate(-498.675 -769.127)"
+                              />
+                              <path
+                                d="M548.314 825.76c1.925-3.8 4.951-.487 7.641-10.8"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-3"
+                                transform="translate(-495.675 -773.127)"
+                              />
+                            </g>
+                            <g
+                              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 85 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_85_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                              transform="translate(15 21.866)"
+                            >
+                              <path
+                                d="M542.009 830.43a24.574 24.574 0 1 1-33.949-35.42"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3722"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3722-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M541.772 830.461A24.59 24.59 0 0 1 523.271 842"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M521.139 838.082c-5.677 2.108-8.263 1.969-13.715-.391"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M504.394 828.716A23.534 23.534 0 0 1 496 812.862"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M506.761 801.8c-1.367 2.694-4.351 1.766-7.034 8.352"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M540.646 790.993a20.447 20.447 0 0 1 6.205 12.84 20.2 20.2 0 0 1-17.769 22.245 19.6 19.6 0 0 1-17.074-7.04"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3722 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3722_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M540.671 791.189A20.366 20.366 0 0 1 550 806.472"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M546.943 803.954a21.976 21.976 0 0 1-.427 15.609"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-2"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M539.26 822.065A18.906 18.906 0 0 1 526.442 829"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-3"
+                                transform="translate(-496 -790.993)"
+                              />
+                              <path
+                                d="M517.5 820.111c2.178 1.129 2.844 4.105 11.1 5.85"
+                                data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 3723 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                                id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_3723_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-4"
+                                transform="translate(-496 -790.993)"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
                     </svg>
                   </div>
                 </div>

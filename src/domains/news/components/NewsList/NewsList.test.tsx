@@ -4,6 +4,8 @@ import React from "react";
 import { NewsList } from ".";
 import { render, screen } from "@/utils/testing-library";
 
+import page1Fixture from "@/tests/fixtures/news/page-1.json";
+
 describe("NewsList", () => {
 	const meta = {
 		currentPage: 1,
@@ -11,7 +13,7 @@ describe("NewsList", () => {
 		totalCount: 10,
 	};
 
-	const news = require("tests/fixtures/news/page-1.json").data.slice(0, 1);
+	const news = page1Fixture.data.slice(0, 1);
 
 	it("should render", () => {
 		render(<NewsList isLoading={false} news={news} onSelectPage={vi.fn()} {...meta} />);
