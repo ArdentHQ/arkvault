@@ -1,11 +1,11 @@
-import { useAccentColor } from "@/app/hooks";
 import React from "react";
 import Zendesk, { ZendeskAPI } from "react-zendesk";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useAccentColor } from "@/app/hooks";
 import { delay } from "@/utils/delay";
+import ZendeskStyles from "@/styles/zendesk-widget.css";
 
 const ZENDESK_KEY = "0e4c4d37-9d38-4be4-925d-e659dd4d12bd";
-import ZendeskStyles from "@/styles/zendesk-widget.css";
-import { Contracts } from "@ardenthq/sdk-profiles";
 
 interface Properties {
 	children: React.ReactNode;
@@ -13,19 +13,15 @@ interface Properties {
 
 const ZendeskContext = React.createContext<any>(undefined);
 
-export const ZendeskProvider = ({ children }: Properties) => {
-	return (
+export const ZendeskProvider = ({ children }: Properties) => (
 		<ZendeskContext.Provider value={null}>
 			{children}
 
 			<Zendesk zendeskKey={ZENDESK_KEY} />
 		</ZendeskContext.Provider>
 	);
-};
 
-const isSupportChatOpen = () => {
-	return !!window.document.getElementById("webWidget");
-};
+const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
 
 export const useZendesk = () => {
 	const { getCurrentAccentColor } = useAccentColor();
@@ -39,8 +35,8 @@ export const useZendesk = () => {
 		ZendeskAPI("webWidget", "updateSettings", {
 			webWidget: {
 				color: {
-					theme: accentColors[getCurrentAccentColor()],
 					button: accentColors[getCurrentAccentColor()],
+					theme: accentColors[getCurrentAccentColor()],
 				},
 			},
 		});
@@ -50,7 +46,7 @@ export const useZendesk = () => {
 
 		delay(() => {
 			// @ts-ignore
-			const widget = window.document.getElementById("webWidget").contentWindow.document;
+			const widget = window.document.querySelector("#webWidget").contentWindow.document;
 
 			widget.body.classList.add("widget");
 			widget.body.classList.add(`widget-${profile.appearance().get("theme")}`);
@@ -64,12 +60,12 @@ export const useZendesk = () => {
 		}
 
 		// @ts-ignore
-		const widget = window.document.getElementById("webWidget").contentWindow.document;
+		const widget = window.document.querySelector("#webWidget").contentWindow.document;
 		widget.body.classList.remove("widget-light", "widget-dark");
 
 		// @ts-ignore
 		window.$zopim?.livechat?.window?.hide?.();
 	};
 
-	return { showSupportChat, hideSupportChat, isSupportChatOpen };
+	return { hideSupportChat, isSupportChatOpen, showSupportChat };
 };

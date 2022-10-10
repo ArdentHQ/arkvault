@@ -1,11 +1,12 @@
 import React from "react";
 
 import userEvent from "@testing-library/user-event";
+import { Contracts } from "@ardenthq/sdk-profiles";
 import { ZendeskProvider, useZendesk } from "./Zendesk";
 import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
-import { Contracts } from "@ardenthq/sdk-profiles";
 
 let profile: Contracts.IProfile;
+const webWidgetSelector = "#webWidget";
 
 describe("Zendesk Context Provider", () => {
 	beforeAll(() => {
@@ -27,13 +28,22 @@ describe("Zendesk Context Provider", () => {
 
 	it("should toggle support chat", async () => {
 		// @ts-ignore
-		const widgetMock = jest.spyOn(window.document, "getElementById").mockImplementation((id: string) => {
-			if (id === "webWidget") {
+		const widgetMock = jest.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
+			if (selector === webWidgetSelector) {
 				return {
-					contentWindow: window,
+					contentWindow: {
+						document: {
+							body: {
+								classList: {
+									add: jest.fn(),
+									remove: jest.fn(),
+								},
+								insertAdjacentHTML: jest.fn(),
+							},
+						},
+					},
 				};
 			}
-			return window.document.getElementById(id);
 		});
 
 		const Test = () => {
@@ -54,23 +64,24 @@ describe("Zendesk Context Provider", () => {
 		);
 
 		expect(screen.getByTestId("content")).toBeInTheDocument();
-		await waitFor(() => expect(widgetMock).toHaveBeenCalled());
+
+		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
 		userEvent.click(screen.getByTestId("content"));
-		await waitFor(() => expect(widgetMock).toHaveBeenCalled());
+		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
 		widgetMock.mockRestore();
 
-		const undefinedWidgetMock = jest.spyOn(window.document, "getElementById").mockImplementation((id: string) => {
-			if (id === "webWidget") {
-				return undefined;
-			}
-
-			return window.document.getElementById(id);
-		});
+		const undefinedWidgetMock = jest
+			.spyOn(window.document, "querySelector")
+			.mockImplementation((selector: string) => {
+				if (selector === webWidgetSelector) {
+					return;
+				}
+			});
 
 		userEvent.click(screen.getByTestId("content"));
-		await waitFor(() => expect(widgetMock).not.toHaveBeenCalled());
+		await waitFor(() => expect(widgetMock).not.toHaveBeenCalledWith(webWidgetSelector));
 
 		undefinedWidgetMock.mockRestore();
 	});

@@ -8,11 +8,11 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
 import { i18n as index18n } from "./i18n";
+import { ZendeskProvider } from "./contexts/Zendesk";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { AppRouter, GlobalStyles, Main } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
 import { ApplicationError } from "@/domains/error/pages";
-import { ZendeskProvider } from "./contexts/Zendesk";
 
 export const App: React.VFC = () => {
 	/**
