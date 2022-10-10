@@ -15,7 +15,7 @@ import { delay } from "@/utils/delay";
 import { getErroredNetworks, getProfileById, getProfileFromUrl, getProfileStoredPassword } from "@/utils/profile-utils";
 import { ProfilePeers } from "@/utils/profile-peers";
 import { enabledNetworksCount, profileAllEnabledNetworks, profileEnabledNetworkIds } from "@/utils/network-utils";
-import { useZendesk } from "../contexts/Zendesk";
+import { useZendesk } from "@/app/contexts/Zendesk";
 
 enum Intervals {
 	VeryShort = 15_000,
