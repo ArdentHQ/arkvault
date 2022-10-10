@@ -65,7 +65,6 @@ jest.mock("browser-fs-access");
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
-let widgetMock;
 
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
@@ -94,15 +93,6 @@ beforeEach(() => {
 
 		return originalTippyRender(context);
 	});
-
-	widgetMock = jest.spyOn(window.document, "getElementById").mockImplementation((id) => {
-		if (id === "webWidget") {
-			return {
-				contentWindow: window,
-			};
-		}
-		return window.document.getElementById(id);
-	});
 });
 
 afterEach(() => {
@@ -111,7 +101,6 @@ afterEach(() => {
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
-	widgetMock.mockRestore();
 });
 
 afterAll(() => {
@@ -161,7 +150,7 @@ global.BroadcastChannel = class BroadcastChannel {
 // Zendesk
 jest.mock("react-zendesk", () => ({
 	__esModule: true,
-	default: () => <div />,
+	default: () => null,
 	ZendeskAPI: () => jest.fn(),
 }));
 
