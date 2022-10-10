@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Zendesk Context Provider should render the wrapper properly 1`] = `
+<DocumentFragment>
+  <span
+    data-testid="ZendeskProvider"
+  >
+    Content
+  </span>
+  <div />
+</DocumentFragment>
+`;

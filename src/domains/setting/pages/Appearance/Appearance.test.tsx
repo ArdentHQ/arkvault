@@ -45,6 +45,41 @@ describe("Appearance Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should not reset support chat theme if inactive", async () => {
+		const undefinedWidgetMock = jest.spyOn(window.document, "getElementById").mockImplementation((id: string) => {
+			if (id === "webWidget") {
+				return undefined;
+			}
+
+			return window.document.getElementById(id);
+		});
+
+		const toastSuccess = jest.spyOn(toasts, "success");
+
+		renderPage();
+
+		const darkButton = within(screen.getAllByRole("radiogroup")[1]).getAllByRole("radio")[1];
+
+		userEvent.click(darkButton);
+
+		await waitFor(() => {
+			expect(darkButton).toBeChecked();
+		});
+
+		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
+
+		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+
+		await waitFor(() => {
+			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
+		});
+
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		await waitFor(() => expect(undefinedWidgetMock).toHaveBeenCalled());
+
+		undefinedWidgetMock.mockRestore();
+	});
+
 	it.each(["xs", "sm", "md", "lg", "xl"])("should return items to render in the form in %s", (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">

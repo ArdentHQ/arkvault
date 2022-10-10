@@ -1,5 +1,5 @@
-import { useAccentColor, useTheme } from "@/app/hooks";
-import React, { useCallback } from "react";
+import { useAccentColor } from "@/app/hooks";
+import React from "react";
 import Zendesk, { ZendeskAPI } from "react-zendesk";
 import { delay } from "@/utils/delay";
 
@@ -21,6 +21,10 @@ export const ZendeskProvider = ({ children }: Properties) => {
 			<Zendesk zendeskKey={ZENDESK_KEY} />
 		</ZendeskContext.Provider>
 	);
+};
+
+const isSupportChatOpen = () => {
+	return !!window.document.getElementById("webWidget");
 };
 
 export const useZendesk = () => {
@@ -65,11 +69,6 @@ export const useZendesk = () => {
 
 		// @ts-ignore
 		window.$zopim?.livechat?.window?.hide?.();
-		console.log("hide support chat");
-	};
-
-	const isSupportChatOpen = () => {
-		return !!window.document.getElementById("webWidget");
 	};
 
 	return { showSupportChat, hideSupportChat, isSupportChatOpen };

@@ -4,6 +4,7 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
+import React from "react";
 
 jest.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
@@ -64,6 +65,7 @@ jest.mock("browser-fs-access");
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
+let widgetMock;
 
 const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
@@ -92,6 +94,15 @@ beforeEach(() => {
 
 		return originalTippyRender(context);
 	});
+
+	widgetMock = jest.spyOn(window.document, "getElementById").mockImplementation((id) => {
+		if (id === "webWidget") {
+			return {
+				contentWindow: window,
+			};
+		}
+		return window.document.getElementById(id);
+	});
 });
 
 afterEach(() => {
@@ -100,6 +111,7 @@ afterEach(() => {
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
+	widgetMock.mockRestore();
 });
 
 afterAll(() => {
@@ -145,3 +157,22 @@ global.BroadcastChannel = class BroadcastChannel {
 	removeEventListener = jest.fn();
 	close = jest.fn();
 };
+
+// Zendesk
+jest.mock("react-zendesk", () => ({
+	__esModule: true,
+	default: () => <div />,
+	ZendeskAPI: () => jest.fn(),
+}));
+
+Object.defineProperty(window, "$zopim", {
+	writable: true,
+	value: {
+		livechat: {
+			window: {
+				show: jest.fn(),
+				hide: jest.fn(),
+			},
+		},
+	},
+});
