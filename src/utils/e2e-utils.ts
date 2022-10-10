@@ -294,6 +294,7 @@ export const requestMocks = {
 		mockRequest("https://qredit.dev/api/node/configuration", "coins/ark/devnet/configuration"),
 		mockRequest("https://qredit.dev/api/node/configuration/crypto", "coins/ark/devnet/cryptoConfiguration"),
 		mockRequest("https://qredit.dev/api/node/syncing", "coins/ark/devnet/syncing"),
+		mockRequest("https://static.zdassets.com/ekr/snippet.js?key=0e4c4d37-9d38-4be4-925d-e659dd4d12bd", () => ""),
 	],
 	delegates: [
 		// devnet
