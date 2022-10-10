@@ -53,7 +53,7 @@ export const useZendesk = () => {
 			const widget = window.document.getElementById("webWidget").contentWindow.document;
 
 			widget.body.classList.add("widget");
-			widget.body.classList.add(profile.appearance().get("theme") === "dark" ? "widget-dark" : "widget-light");
+			widget.body.classList.add(`widget-${profile.appearance().get("theme")}`);
 			widget.body.insertAdjacentHTML("afterend", `<style>${ZendeskStyles}</style>`);
 		}, 300);
 	};
