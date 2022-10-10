@@ -396,7 +396,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 							avatarImage={profile.avatar()}
 							onUserAction={(action: DropdownOption) => {
 								if (action.value === "contact") {
-									return showSupportChat();
+									return showSupportChat(profile);
 								}
 
 								if (action.isExternal) {

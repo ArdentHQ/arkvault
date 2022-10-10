@@ -65,7 +65,7 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 		window.scrollTo({ behavior: "smooth", top: 0 });
 
 		if (isChatOpen) {
-			showSupportChat();
+			showSupportChat(profile);
 		}
 	};
 

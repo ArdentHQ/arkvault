@@ -51,7 +51,7 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 	{
 		label: t("COMMON.CONTACT_US"),
 		mountPath: () => `/`,
-		title: "sign-out",
+		title: "contact",
 		value: "contact",
 	},
 	{

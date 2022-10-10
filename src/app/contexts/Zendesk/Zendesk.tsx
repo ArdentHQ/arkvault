@@ -5,6 +5,7 @@ import { delay } from "@/utils/delay";
 
 const ZENDESK_KEY = "0e4c4d37-9d38-4be4-925d-e659dd4d12bd";
 import ZendeskStyles from "/src/styles/zendesk.css";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 interface Properties {
 	children: React.ReactNode;
@@ -24,14 +25,13 @@ export const ZendeskProvider = ({ children }: Properties) => {
 
 export const useZendesk = () => {
 	const { getCurrentAccentColor } = useAccentColor();
-	const { isDarkMode } = useTheme();
 
 	const accentColors = {
 		green: "#289548",
 		navy: "#235b95",
 	};
 
-	const showSupportChat = useCallback(() => {
+	const showSupportChat = (profile: Contracts.IProfile) => {
 		ZendeskAPI("webWidget", "updateSettings", {
 			webWidget: {
 				color: {
@@ -47,14 +47,12 @@ export const useZendesk = () => {
 		delay(() => {
 			// @ts-ignore
 			const widget = window.document.getElementById("webWidget").contentWindow.document;
-			widget.body.classList.remove("widget-light", "widget-dark");
-			console.log({ isDarkMode });
 
 			widget.body.classList.add("widget");
-			widget.body.classList.add(isDarkMode ? "widget-dark" : "widget-light");
+			widget.body.classList.add(profile.appearance().get("theme") === "dark" ? "widget-dark" : "widget-light");
 			widget.body.insertAdjacentHTML("afterend", `<style>${ZendeskStyles}</style>`);
-		}, 400);
-	}, [isDarkMode]);
+		}, 300);
+	};
 
 	const hideSupportChat = () => {
 		if (!isSupportChatOpen()) {
