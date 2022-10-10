@@ -14,12 +14,12 @@ interface Properties {
 const ZendeskContext = React.createContext<any>(undefined);
 
 export const ZendeskProvider = ({ children }: Properties) => (
-		<ZendeskContext.Provider value={null}>
-			{children}
+	<ZendeskContext.Provider value={null}>
+		{children}
 
-			<Zendesk zendeskKey={ZENDESK_KEY} />
-		</ZendeskContext.Provider>
-	);
+		<Zendesk zendeskKey={ZENDESK_KEY} />
+	</ZendeskContext.Provider>
+);
 
 const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
 
