@@ -4,7 +4,7 @@ import Zendesk, { ZendeskAPI } from "react-zendesk";
 import { delay } from "@/utils/delay";
 
 const ZENDESK_KEY = "0e4c4d37-9d38-4be4-925d-e659dd4d12bd";
-import ZendeskStyles from "/src/styles/zendesk.css";
+import ZendeskStyles from "/src/styles/zendesk-widget.css";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 interface Properties {
