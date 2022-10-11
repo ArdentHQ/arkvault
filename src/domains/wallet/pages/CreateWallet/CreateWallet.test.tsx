@@ -19,8 +19,6 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 
-vi.setTimeout(30_000);
-
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 
@@ -79,7 +77,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 
@@ -193,7 +191,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -229,7 +227,7 @@ describe("CreateWallet", () => {
 
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 

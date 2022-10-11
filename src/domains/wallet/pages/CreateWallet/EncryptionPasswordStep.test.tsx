@@ -49,7 +49,7 @@ describe("EncryptionPasswordStep", () => {
 		const createURL = `/profiles/${fixtureProfileId}/wallets/create`;
 		history.push(createURL);
 
-		render(
+		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/create">
 				<CreateWallet />
 			</Route>,
@@ -64,7 +64,7 @@ describe("EncryptionPasswordStep", () => {
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 
@@ -173,7 +173,7 @@ describe("EncryptionPasswordStep", () => {
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 
