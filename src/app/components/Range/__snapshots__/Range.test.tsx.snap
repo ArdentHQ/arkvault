@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Range should render 1`] = `
+exports[`Range > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-wrap justify-center"
@@ -32,7 +32,7 @@ exports[`Range should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Range should render invalid 1`] = `
+exports[`Range > should render invalid 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-wrap justify-center"

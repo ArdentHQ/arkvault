@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Header should render an header 1`] = `
+exports[`Header > should render an header 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -19,7 +19,7 @@ exports[`Header should render an header 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header should render an header with a subtitle 1`] = `
+exports[`Header > should render an header with a subtitle 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -44,7 +44,7 @@ exports[`Header should render an header with a subtitle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header should render an header with extra 1`] = `
+exports[`Header > should render an header with extra 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -97,7 +97,7 @@ exports[`Header should render an header with extra 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Header should render with title suffix 1`] = `
+exports[`Header > should render with title suffix 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -125,7 +125,7 @@ exports[`Header should render with title suffix 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PageHeader should render responsive (md) 1`] = `
+exports[`PageHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
     class=" css-ycib48"
@@ -164,7 +164,7 @@ exports[`PageHeader should render responsive (md) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PageHeader should render responsive (xs) 1`] = `
+exports[`PageHeader > should render responsive (xs) 1`] = `
 <DocumentFragment>
   <section
     class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"

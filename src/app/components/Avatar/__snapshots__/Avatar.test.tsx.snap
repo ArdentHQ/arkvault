@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Avatar should render 1`] = `
+exports[`Avatar > should render 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-vlvatb"
@@ -19,7 +19,7 @@ exports[`Avatar should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with custom shadow color 1`] = `
+exports[`Avatar > should render with custom shadow color 1`] = `
 <DocumentFragment>
   <div
     class="ring-theme-black shrink-0 css-6svgkz"
@@ -38,7 +38,7 @@ exports[`Avatar should render with custom shadow color 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with highlight 1`] = `
+exports[`Avatar > should render with highlight 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-vlvatb"
@@ -57,7 +57,7 @@ exports[`Avatar should render with highlight 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with highlight and custom shadow color 1`] = `
+exports[`Avatar > should render with highlight and custom shadow color 1`] = `
 <DocumentFragment>
   <div
     class="ring-theme-black shrink-0 css-6svgkz"
@@ -76,7 +76,7 @@ exports[`Avatar should render with highlight and custom shadow color 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with size 1`] = `
+exports[`Avatar > should render with size 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-1vy2z2u"
@@ -95,7 +95,7 @@ exports[`Avatar should render with size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with size 2`] = `
+exports[`Avatar > should render with size 2`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-y5oe37"
@@ -114,7 +114,7 @@ exports[`Avatar should render with size 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with size 3`] = `
+exports[`Avatar > should render with size 3`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-8d0u1i"
@@ -133,7 +133,7 @@ exports[`Avatar should render with size 3`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with size 4`] = `
+exports[`Avatar > should render with size 4`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-1qyktzz"
@@ -152,7 +152,7 @@ exports[`Avatar should render with size 4`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render without shadow 1`] = `
+exports[`Avatar > should render without shadow 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-tthe5h"

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Card should handle click 1`] = `
+exports[`Card > should handle click 1`] = `
 <DocumentFragment>
   <div>
     <button
@@ -17,7 +17,7 @@ exports[`Card should handle click 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card should render 1`] = `
+exports[`Card > should render 1`] = `
 <DocumentFragment>
   <div>
     <button

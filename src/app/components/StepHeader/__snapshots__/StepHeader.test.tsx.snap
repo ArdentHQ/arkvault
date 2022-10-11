@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`StepHeader should render 1`] = `
+exports[`StepHeader > should render 1`] = `
 <DocumentFragment>
   <div
     class="sm:mt-8"
@@ -58,7 +58,7 @@ exports[`StepHeader should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepHeader should render simple header without a provider 1`] = `
+exports[`StepHeader > should render simple header without a provider 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -83,7 +83,7 @@ exports[`StepHeader should render simple header without a provider 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepHeader should render with extra 1`] = `
+exports[`StepHeader > should render with extra 1`] = `
 <DocumentFragment>
   <div
     class="sm:mt-8"

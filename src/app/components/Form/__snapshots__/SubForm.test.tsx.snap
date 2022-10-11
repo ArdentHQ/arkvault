@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SubForm should render 1`] = `
+exports[`SubForm > should render 1`] = `
 <DocumentFragment>
   <div
     class="css-pwc11e"

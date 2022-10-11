@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -31,7 +32,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__Verified")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletIcon__Verified")).toHaveTextContent("user-check-mark.svg");
+		expect(document.querySelector("svg#user-check-mark")).toBeInTheDocument();
 
 		walletSpy.mockRestore();
 	});
@@ -42,7 +43,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletIcon__Ledger")).toHaveTextContent("ledger.svg");
+		expect(document.querySelector("svg#ledger")).toBeInTheDocument();
 
 		walletSpy.mockRestore();
 	});
@@ -65,7 +66,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__Starred")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletIcon__Starred")).toHaveTextContent("star-filled.svg");
+		expect(document.querySelector("svg#star-filled")).toBeInTheDocument();
 
 		walletSpy.mockRestore();
 	});
@@ -77,7 +78,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletIcon__Multisignature")).toHaveTextContent("multisignature.svg");
+		expect(document.querySelector("svg#multi-signature")).toBeInTheDocument();
 
 		hasSyncedWithNetworkSpy.mockRestore();
 		isMultiSignatureSpy.mockRestore();
@@ -89,7 +90,7 @@ describe("WalletIcons", () => {
 		render(<WalletIcons wallet={wallet} />);
 
 		expect(screen.getByTestId("WalletIcon__TestNetwork")).toBeInTheDocument();
-		expect(screen.getByTestId("WalletIcon__TestNetwork")).toHaveTextContent("code.svg");
+		expect(document.querySelector("svg#code")).toBeInTheDocument();
 
 		walletSpy.mockRestore();
 	});
@@ -100,7 +101,7 @@ describe("WalletIcons", () => {
 		const { container } = render(<WalletIcons wallet={wallet} exclude={["isStarred"]} />);
 
 		expect(screen.queryByTestId("WalletIcon__Starred")).not.toBeInTheDocument();
-		expect(container).not.toHaveTextContent("star-filled.svg");
+		expect(document.querySelector("svg#star-filled")).not.toBeInTheDocument();
 
 		walletSpy.mockRestore();
 	});

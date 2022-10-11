@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Circle should render 1`] = `
+exports[`Circle > should render 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-1uikp8r"
@@ -8,7 +8,7 @@ exports[`Circle should render 1`] = `
 </div>
 `;
 
-exports[`Circle should render as avatar 1`] = `
+exports[`Circle > should render as avatar 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-1sjiwh4"
@@ -16,7 +16,7 @@ exports[`Circle should render as avatar 1`] = `
 </div>
 `;
 
-exports[`Circle should render extra-large 1`] = `
+exports[`Circle > should render extra-large 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-12m2ikc"
@@ -24,7 +24,7 @@ exports[`Circle should render extra-large 1`] = `
 </div>
 `;
 
-exports[`Circle should render large 1`] = `
+exports[`Circle > should render large 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-14jhlj1"
@@ -32,7 +32,7 @@ exports[`Circle should render large 1`] = `
 </div>
 `;
 
-exports[`Circle should render small 1`] = `
+exports[`Circle > should render small 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-1ufh3s9"
@@ -40,7 +40,7 @@ exports[`Circle should render small 1`] = `
 </div>
 `;
 
-exports[`Circle should render with content 1`] = `
+exports[`Circle > should render with content 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-1ufh3s9"
@@ -52,7 +52,7 @@ exports[`Circle should render with content 1`] = `
 </div>
 `;
 
-exports[`Circle should render with no shadow 1`] = `
+exports[`Circle > should render with no shadow 1`] = `
 <div>
   <div
     class="ring-theme-background duration-100 css-459u9r"

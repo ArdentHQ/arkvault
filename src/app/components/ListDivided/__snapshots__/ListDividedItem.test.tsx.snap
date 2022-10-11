@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ListDividedItem should render an ListDividedItem 1`] = `
+exports[`ListDividedItem > should render an ListDividedItem 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -9,7 +9,7 @@ exports[`ListDividedItem should render an ListDividedItem 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render as floating label 1`] = `
+exports[`ListDividedItem > should render as floating label 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -38,7 +38,7 @@ exports[`ListDividedItem should render as floating label 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render the content 1`] = `
+exports[`ListDividedItem > should render the content 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -54,7 +54,7 @@ exports[`ListDividedItem should render the content 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render the label 1`] = `
+exports[`ListDividedItem > should render the label 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -83,7 +83,7 @@ exports[`ListDividedItem should render the label 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render the labelDescription 1`] = `
+exports[`ListDividedItem > should render the labelDescription 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -118,7 +118,7 @@ exports[`ListDividedItem should render the labelDescription 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render the value 1`] = `
+exports[`ListDividedItem > should render the value 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "
@@ -154,7 +154,7 @@ exports[`ListDividedItem should render the value 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDividedItem should render with labelAddon 1`] = `
+exports[`ListDividedItem > should render with labelAddon 1`] = `
 <DocumentFragment>
   <li
     class="flex w-full flex-col "

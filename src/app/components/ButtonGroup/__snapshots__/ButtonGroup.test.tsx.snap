@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ButtonGroup should render 1`] = `
+exports[`ButtonGroup > should render 1`] = `
 <DocumentFragment>
   <div
     class="inline-flex w-full items-center"
@@ -10,7 +10,7 @@ exports[`ButtonGroup should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonGroup should render with className 1`] = `
+exports[`ButtonGroup > should render with className 1`] = `
 <DocumentFragment>
   <div
     class="inline-flex w-full items-center space-x-3"
@@ -20,7 +20,7 @@ exports[`ButtonGroup should render with className 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonGroupOption should render 1`] = `
+exports[`ButtonGroupOption > should render 1`] = `
 <DocumentFragment>
   <button
     aria-checked="true"
@@ -45,7 +45,7 @@ exports[`ButtonGroupOption should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ButtonGroupOption should render with modern variant 1`] = `
+exports[`ButtonGroupOption > should render with modern variant 1`] = `
 <DocumentFragment>
   <button
     aria-checked="false"

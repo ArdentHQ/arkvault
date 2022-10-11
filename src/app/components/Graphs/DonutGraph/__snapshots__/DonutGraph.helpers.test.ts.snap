@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DonutGraph.helpers useDonutGraph should plot data to svg circles needed to render the donut 1`] = `
-Object {
-  "backgroundCircle": Object {
+exports[`DonutGraph.helpers > useDonutGraph > should plot data to svg circles needed to render the donut 1`] = `
+{
+  "backgroundCircle": {
     "className": "fill-current text-theme-secondary-200 dark:text-black",
     "cx": 50,
     "cy": 50,
@@ -11,26 +11,26 @@ Object {
     "strokeLinecap": "round",
     "strokeWidth": 0,
   },
-  "circles": Array [
-    Object {
-      "animations": Array [
-        Object {
+  "circles": [
+    {
+      "animations": [
+        {
           "attribute": "r",
           "from": 18,
           "to": 34,
         },
-        Object {
+        {
           "attribute": "stroke-dasharray",
           "from": "36.548667764616276 76.54866776461628",
           "to": "86.81415022205297 126.81415022205297",
         },
-        Object {
+        {
           "attribute": "stroke-dashoffset",
           "from": 84.82300164692441,
           "to": 160.22122533307947,
         },
       ],
-      "circleProperties": Object {
+      "circleProperties": {
         "className": "stroke-current text-theme-success-600",
         "cx": 50,
         "cy": 50,
@@ -42,25 +42,25 @@ Object {
         "strokeWidth": 16,
       },
     },
-    Object {
-      "animations": Array [
-        Object {
+    {
+      "animations": [
+        {
           "attribute": "r",
           "from": 18,
           "to": 34,
         },
-        Object {
+        {
           "attribute": "stroke-dasharray",
           "from": "13.929200658769766 99.1681348704628",
           "to": "44.08849013323179 169.53981031087417",
         },
-        Object {
+        {
           "attribute": "stroke-dashoffset",
           "from": 118.75220230569417,
           "to": 224.30971546631127,
         },
       ],
-      "circleProperties": Object {
+      "circleProperties": {
         "className": "stroke-current text-theme-warning-600",
         "cx": 50,
         "cy": 50,
@@ -72,25 +72,25 @@ Object {
         "strokeWidth": 16,
       },
     },
-    Object {
-      "animations": Array [
-        Object {
+    {
+      "animations": [
+        {
           "attribute": "r",
           "from": 18,
           "to": 34,
         },
-        Object {
+        {
           "attribute": "stroke-dasharray",
           "from": "2.6194671058465104 110.47786842338604",
           "to": "22.725660088821186 190.90264035528475",
         },
-        Object {
+        {
           "attribute": "stroke-dashoffset",
           "from": 141.37166941154067,
           "to": 267.0353755551325,
         },
       ],
-      "circleProperties": Object {
+      "circleProperties": {
         "className": "stroke-current text-theme-info-600",
         "cx": 50,
         "cy": 50,
@@ -106,9 +106,9 @@ Object {
 }
 `;
 
-exports[`DonutGraph.helpers useDonutGraph should plot data to svg circles needed to render the donut 2`] = `
-Object {
-  "backgroundCircle": Object {
+exports[`DonutGraph.helpers > useDonutGraph > should plot data to svg circles needed to render the donut 2`] = `
+{
+  "backgroundCircle": {
     "className": "fill-current text-theme-secondary-200 dark:text-black",
     "cx": 50,
     "cy": 50,
@@ -117,26 +117,26 @@ Object {
     "strokeLinecap": "round",
     "strokeWidth": 0,
   },
-  "circles": Array [
-    Object {
-      "animations": Array [
-        Object {
+  "circles": [
+    {
+      "animations": [
+        {
           "attribute": "r",
           "from": 18,
           "to": 34,
         },
-        Object {
+        {
           "attribute": "stroke-dasharray",
           "from": "113.09733552923255 0",
           "to": "213.62830044410595 0",
         },
-        Object {
+        {
           "attribute": "stroke-dashoffset",
           "from": 141.3716694115407,
           "to": 267.0353755551324,
         },
       ],
-      "circleProperties": Object {
+      "circleProperties": {
         "className": "stroke-current text-theme-success-600",
         "cx": 50,
         "cy": 50,

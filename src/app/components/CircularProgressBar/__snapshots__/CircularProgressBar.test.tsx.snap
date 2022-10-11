@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`CircularProgressBar should render 1`] = `
+exports[`CircularProgressBar > should render 1`] = `
 <DocumentFragment>
   <svg
     height="130"
@@ -53,7 +53,7 @@ exports[`CircularProgressBar should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`CircularProgressBar should render without text content 1`] = `
+exports[`CircularProgressBar > should render without text content 1`] = `
 <DocumentFragment>
   <svg
     height="130"

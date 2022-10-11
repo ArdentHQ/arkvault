@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Toggle should render 1`] = `
+exports[`Toggle > should render 1`] = `
 <DocumentFragment>
   <label
     class="css-xklln0"
@@ -20,7 +20,7 @@ exports[`Toggle should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle should render always on 1`] = `
+exports[`Toggle > should render always on 1`] = `
 <DocumentFragment>
   <label
     class="css-xklln0"
@@ -40,7 +40,7 @@ exports[`Toggle should render always on 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle should render disabled 1`] = `
+exports[`Toggle > should render disabled 1`] = `
 <DocumentFragment>
   <label
     class="css-irspe1"
@@ -63,7 +63,7 @@ exports[`Toggle should render disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle should render small 1`] = `
+exports[`Toggle > should render small 1`] = `
 <DocumentFragment>
   <label
     class="css-1uxo3sa"
@@ -83,7 +83,7 @@ exports[`Toggle should render small 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toggle should toggle checked 1`] = `
+exports[`Toggle > should toggle checked 1`] = `
 <DocumentFragment>
   <label
     class="css-xklln0"

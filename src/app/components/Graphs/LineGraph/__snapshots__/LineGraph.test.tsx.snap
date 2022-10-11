@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`LineGraph should render 1`] = `
+exports[`LineGraph > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col-reverse sm:flex-col"
@@ -236,7 +236,7 @@ exports[`LineGraph should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`LineGraph should render as empty 1`] = `
+exports[`LineGraph > should render as empty 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col-reverse sm:flex-col"
@@ -259,7 +259,7 @@ exports[`LineGraph should render as empty 1`] = `
 </DocumentFragment>
 `;
 
-exports[`LineGraph should render legend 1`] = `
+exports[`LineGraph > should render legend 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col-reverse sm:flex-col"
@@ -511,7 +511,7 @@ exports[`LineGraph should render legend 1`] = `
 </DocumentFragment>
 `;
 
-exports[`LineGraph should render tooltip on hover 1`] = `
+exports[`LineGraph > should render tooltip on hover 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col-reverse sm:flex-col"
