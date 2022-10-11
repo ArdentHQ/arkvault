@@ -1,3 +1,4 @@
+/* eslint-disable jest/require-hook */
 /* eslint-disable @typescript-eslint/require-await */
 import { getUserMenuActions } from "./navigation";
 import { getDefaultProfileId } from "@/utils/testing-library";
