@@ -29,6 +29,7 @@ const wallets = [
 	"DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
 	"DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu",
 	"D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+	"DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
 ];
 
 export const devnetHandlers = [

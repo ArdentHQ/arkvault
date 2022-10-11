@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -42,15 +41,6 @@ const testNetwork = "ark.devnet";
 
 describe("ImportWallet", () => {
 	let resetProfileNetworksMock: () => void;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);

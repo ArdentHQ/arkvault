@@ -3,7 +3,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -55,15 +54,6 @@ const ARKDevnet = "ARK Devnet";
 
 describe("ImportWallet", () => {
 	let resetProfileNetworksMock: () => void;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);

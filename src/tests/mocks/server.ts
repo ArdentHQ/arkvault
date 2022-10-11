@@ -2,7 +2,7 @@ import type { ResponseComposition, DefaultBodyType, RestContext } from "msw";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import { devnetHandlers, exchangeHandlers, mainnetHandlers } from "./handlers";
+import { devnetHandlers, exchangeHandlers, mainnetHandlers, miscHandlers } from "./handlers";
 
 export const requestMock = (path: string, data: undefined | string | object, options = {}) => {
 	const requestOptions = {
@@ -32,6 +32,6 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 export const requestMockOnce = (path: string, data: undefined | string | object, options = {}) =>
 	requestMock(path, data, { ...options, modifier: "once" });
 
-const restHandlers = [...devnetHandlers, ...exchangeHandlers, ...mainnetHandlers];
+const restHandlers = [...devnetHandlers, ...exchangeHandlers, ...mainnetHandlers, ...miscHandlers];
 
 export const server = setupServer(...restHandlers);
