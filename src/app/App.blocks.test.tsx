@@ -145,7 +145,7 @@ describe("App Main", () => {
 	});
 
 	it("should fail to sync and retry", async () => {
-		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation();
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
 
 		const profile = env.profiles().first();

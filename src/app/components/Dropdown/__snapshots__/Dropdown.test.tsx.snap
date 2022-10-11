@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Dropdown should render 1`] = `
+exports[`Dropdown > should render 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -22,7 +22,7 @@ exports[`Dropdown should render 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a bottom position 1`] = `
+exports[`Dropdown > should render a bottom position 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -81,7 +81,7 @@ exports[`Dropdown should render a bottom position 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a bottom-left position 1`] = `
+exports[`Dropdown > should render a bottom-left position 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -140,7 +140,7 @@ exports[`Dropdown should render a bottom-left position 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a large one 1`] = `
+exports[`Dropdown > should render a large one 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -162,7 +162,7 @@ exports[`Dropdown should render a large one 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a left position 1`] = `
+exports[`Dropdown > should render a left position 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -221,7 +221,7 @@ exports[`Dropdown should render a left position 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a small one 1`] = `
+exports[`Dropdown > should render a small one 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -243,7 +243,7 @@ exports[`Dropdown should render a small one 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a top 1`] = `
+exports[`Dropdown > should render a top 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -302,7 +302,7 @@ exports[`Dropdown should render a top 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a top-left position 1`] = `
+exports[`Dropdown > should render a top-left position 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -361,7 +361,7 @@ exports[`Dropdown should render a top-left position 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render a top-right 1`] = `
+exports[`Dropdown > should render a top-right 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -420,7 +420,7 @@ exports[`Dropdown should render a top-right 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render dropdown group options with divider, icon and secondary label 1`] = `
+exports[`Dropdown > should render dropdown group options with divider, icon and secondary label 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -536,7 +536,7 @@ exports[`Dropdown should render dropdown group options with divider, icon and se
 </div>
 `;
 
-exports[`Dropdown should render toggle icon 1`] = `
+exports[`Dropdown > should render toggle icon 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -558,7 +558,7 @@ exports[`Dropdown should render toggle icon 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render with custom toggle content as function 1`] = `
+exports[`Dropdown > should render with custom toggle content as function 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -574,7 +574,7 @@ exports[`Dropdown should render with custom toggle content as function 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render with custom toggle content as react element 1`] = `
+exports[`Dropdown > should render with custom toggle content as react element 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -590,7 +590,7 @@ exports[`Dropdown should render with custom toggle content as react element 1`] 
 </div>
 `;
 
-exports[`Dropdown should render with options 1`] = `
+exports[`Dropdown > should render with options 1`] = `
 <div>
   <div
     class="static sm:relative"
@@ -612,7 +612,7 @@ exports[`Dropdown should render with options 1`] = `
 </div>
 `;
 
-exports[`Dropdown should render without options one 1`] = `
+exports[`Dropdown > should render without options one 1`] = `
 <div>
   <div
     class="static sm:relative"

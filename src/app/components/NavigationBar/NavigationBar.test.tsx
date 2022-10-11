@@ -158,7 +158,7 @@ describe("NavigationBar", () => {
 	it("should handle logo click", () => {
 		const { history } = render(<NavigationBar />);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 
@@ -170,7 +170,7 @@ describe("NavigationBar", () => {
 	it("should redirect to home by default on logo click", () => {
 		const { history } = render(<NavigationBar variant="logo-only" />);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByTestId("NavigationBarLogo--button"));
 

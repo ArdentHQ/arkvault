@@ -133,7 +133,7 @@ describe("Use Ledger Connection", () => {
 
 	describe("Ledger Connection", () => {
 		beforeEach(() => {
-			vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+			vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		});
 
 		afterEach(() => {

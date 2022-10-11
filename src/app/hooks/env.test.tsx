@@ -45,7 +45,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should throw error when profile is not found", () => {
-		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation();
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 
 		expect(() => {
 			render(
@@ -62,7 +62,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should throw error when useActiveProfile is called on a route where profile is not available", () => {
-		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation();
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 		const history = createHashHistory();
 
 		expect(() => {

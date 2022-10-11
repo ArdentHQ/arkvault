@@ -39,7 +39,7 @@ describe("Link", () => {
 	});
 
 	it("should do nothing on click when disabled", () => {
-		const windowSpy = vi.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
 		const externalLink = "https://app.arkvault.io/";
 
 		const { asFragment } = render(
@@ -65,7 +65,7 @@ describe("Link", () => {
 	});
 
 	it("should open an external link", () => {
-		const windowSpy = vi.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
 
 		const externalLink = "https://app.arkvault.io/";
 

@@ -25,7 +25,7 @@ describe("BackButton", () => {
 	});
 
 	it("should redirect to previous page", () => {
-		const historySpy = vi.spyOn(history, "go").mockImplementation();
+		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton />, { history });
 
@@ -40,7 +40,7 @@ describe("BackButton", () => {
 	});
 
 	it("should redirect to given url", () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton backToUrl="new-url" />, { history });
 
@@ -55,7 +55,7 @@ describe("BackButton", () => {
 	});
 
 	it("should not redirect to previous page when disabled", () => {
-		const historySpy = vi.spyOn(history, "go").mockImplementation();
+		const historySpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton disabled />, { history });
 
@@ -70,7 +70,7 @@ describe("BackButton", () => {
 	});
 
 	it("should not redirect to given url when disabled", () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		const { container } = render(<BackButton backToUrl="new-url" disabled />, { history });
 

@@ -46,7 +46,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast dismiss method", () => {
-		const mock = vi.spyOn(toast, "dismiss").mockImplementation();
+		const mock = vi.spyOn(toast, "dismiss").mockImplementation(vi.fn());
 
 		subject.dismiss();
 
@@ -54,7 +54,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast dismiss method with toast id", () => {
-		const mock = vi.spyOn(toast, "dismiss").mockImplementation();
+		const mock = vi.spyOn(toast, "dismiss").mockImplementation(vi.fn());
 
 		subject.dismiss(123);
 
@@ -62,7 +62,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast update method with toast id", () => {
-		const mock = vi.spyOn(toast, "update").mockImplementation();
+		const mock = vi.spyOn(toast, "update").mockImplementation(vi.fn());
 
 		subject.update(123, "warning", "content");
 
@@ -72,7 +72,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast isActive method with toast id", () => {
-		const mock = vi.spyOn(toast, "isActive").mockImplementation();
+		const mock = vi.spyOn(toast, "isActive").mockImplementation(vi.fn());
 
 		subject.isActive(123);
 

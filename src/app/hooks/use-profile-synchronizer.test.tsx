@@ -180,7 +180,7 @@ describe("useProfileSynchronizer", () => {
 
 		await syncDelegates(profile);
 
-		vi.spyOn(toasts, "success").mockImplementation();
+		vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 	});
 
@@ -801,7 +801,7 @@ describe("useProfileRestore", () => {
 	});
 
 	it("should sync profile and handle sync error", async () => {
-		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation();
+		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 		history.push(dashboardURL);
 
 		const profile = env.profiles().findById(getDefaultProfileId());
