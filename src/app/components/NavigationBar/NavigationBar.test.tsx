@@ -257,6 +257,7 @@ describe("NavigationBar", () => {
 		userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/");
+
 		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
 
 		getUserMenuActionsMock.mockRestore();
