@@ -1,7 +1,6 @@
 import React from "react";
 import Zendesk, { ZendeskAPI } from "react-zendesk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { useAccentColor } from "@/app/hooks";
 import { delay } from "@/utils/delay";
 import ZendeskStyles from "@/styles/zendesk-widget.css";
 
@@ -22,19 +21,19 @@ export const ZendeskProvider = ({ children }: { children: React.ReactNode }) => 
 const isSupportChatOpen = () => !!window.document.querySelector("#webWidget");
 
 export const useZendesk = () => {
-	const { getCurrentAccentColor } = useAccentColor();
-
 	const accentColors = {
 		green: "#289548",
 		navy: "#235b95",
 	};
 
 	const showSupportChat = (profile: Contracts.IProfile) => {
+		const accentColor = profile.settings().get(Contracts.ProfileSetting.AccentColor) as string;
+
 		ZendeskAPI("webWidget", "updateSettings", {
 			webWidget: {
 				color: {
-					button: accentColors[getCurrentAccentColor()],
-					theme: accentColors[getCurrentAccentColor()],
+					button: accentColors[accentColor],
+					theme: accentColors[accentColor],
 				},
 			},
 		});
