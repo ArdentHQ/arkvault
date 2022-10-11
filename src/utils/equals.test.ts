@@ -1,5 +1,3 @@
-import "jest-extended";
-
 import { lowerCaseEquals } from "./equals";
 
 describe("#lowerCaseEquals", () => {

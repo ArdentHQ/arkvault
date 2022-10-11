@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import "jest-extended";
-
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";

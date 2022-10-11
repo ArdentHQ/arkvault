@@ -8,6 +8,9 @@ import crypto from "crypto";
 
 import { server } from "./src/tests/mocks/server";
 
+import * as matchers from "jest-extended";
+expect.extend(matchers);
+
 vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
 }));

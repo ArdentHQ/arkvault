@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
-
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
