@@ -13,7 +13,7 @@ describe("Zendesk Context Provider", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
-	it("should render the wrapper properly", () => {
+	it("should render provider", () => {
 		const { container, asFragment } = render(
 			<ZendeskProvider>
 				<span data-testid="ZendeskProvider">Content</span>
@@ -27,6 +27,8 @@ describe("Zendesk Context Provider", () => {
 	});
 
 	it("should toggle support chat", async () => {
+		process.env.ZENDESK_WIDGET_KEY = "1";
+
 		// @ts-ignore
 		const widgetMock = jest.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
 			if (selector === webWidgetSelector) {

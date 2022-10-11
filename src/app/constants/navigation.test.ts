@@ -2,9 +2,9 @@
 import { getUserMenuActions } from "./navigation";
 import { getDefaultProfileId } from "@/utils/testing-library";
 
-let menuItems = [];
-
 describe("Navigation Menu", () => {
+	let menuItems = [];
+
 	beforeAll(() => {
 		menuItems = getUserMenuActions(jest.fn());
 	});

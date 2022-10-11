@@ -27,10 +27,11 @@ describe("Appearance Settings", () => {
 		await profile.sync();
 	});
 
-	const renderPage = () =>
+	const renderPage = (showSupportChat = false) =>
 		render(
 			<Route exact={false} path="/profiles/:profileId/settings/:activeSetting">
 				<AppearanceSettings />
+				{showSupportChat && <div id="webWidget" />}
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}/settings/appearance`,
@@ -45,12 +46,10 @@ describe("Appearance Settings", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should not reset support chat theme if inactive", async () => {
-		const undefinedWidgetMock = jest.spyOn(window.document, "querySelector").mockReturnValueOnce(undefined);
-
+	it("should reset support chat widget after saving", async () => {
 		const toastSuccess = jest.spyOn(toasts, "success");
 
-		renderPage();
+		renderPage(true);
 
 		const darkButton = within(screen.getAllByRole("radiogroup")[1]).getAllByRole("radio")[1];
 
@@ -65,14 +64,10 @@ describe("Appearance Settings", () => {
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
 		await waitFor(() => {
-			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
+			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("light");
 		});
 
 		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
-
-		await waitFor(() => expect(undefinedWidgetMock).toHaveBeenCalled());
-
-		undefinedWidgetMock.mockRestore();
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should return items to render in the form in %s", (breakpoint) => {
