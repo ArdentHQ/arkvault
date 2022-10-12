@@ -19,6 +19,7 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import userEvent from "@testing-library/user-event";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -135,6 +136,12 @@ describe("Dashboard", () => {
 		await waitFor(() =>
 			expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument(),
 		);
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
 		mockHasCompletedTutorial.mockRestore();
 		mockTransactionsAggregate.mockRestore();
