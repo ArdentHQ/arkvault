@@ -596,7 +596,7 @@ describe("General Settings", () => {
 	});
 
 	it("should default to USD if market provider does not support the selected currency", async () => {
-		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/settings">

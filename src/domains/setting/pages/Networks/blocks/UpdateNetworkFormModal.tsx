@@ -57,7 +57,7 @@ const UpdateNetworkFormModal: React.VFC<{
 		setFetchingDetails(true);
 
 		const baseUrl = getBaseUrl(networkData.address);
-		let configurationResponse: NodeConfigurationResponse;
+		let configurationResponse: NodeConfigurationResponse | undefined;
 		let configurationCryptoResponse: any;
 
 		const promises = [client.get(`${baseUrl}/api/node/configuration`)];
@@ -88,6 +88,10 @@ const UpdateNetworkFormModal: React.VFC<{
 			const cryptoResponse = await client.get(`${baseUrl}/api/node/configuration/crypto`);
 			configurationCryptoResponse = JSON.parse(cryptoResponse.body()).data;
 		} catch {
+			//
+		}
+
+		if (configurationResponse === undefined || configurationCryptoResponse === undefined) {
 			setFetchingError(t("SETTINGS.NETWORKS.FORM.FETCHING_ERROR"));
 			setFetchingDetails(false);
 			return;

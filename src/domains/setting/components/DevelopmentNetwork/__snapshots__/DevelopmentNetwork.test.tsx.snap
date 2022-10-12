@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DevelopmentNetwork should not render if not open 1`] = `<DocumentFragment />`;
+exports[`DevelopmentNetwork > should not render if not open 1`] = `<DocumentFragment />`;
 
-exports[`DevelopmentNetwork should render a modal 1`] = `
+exports[`DevelopmentNetwork > should render a modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -32,8 +32,25 @@ exports[`DevelopmentNetwork should render a modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>

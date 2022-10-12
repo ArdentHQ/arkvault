@@ -44,16 +44,20 @@ const NetworkFormModal: React.VFC<{
 		setFetchingDetails(true);
 
 		const baseUrl = getBaseUrl(address);
-		let configurationResponse: NodeConfigurationResponse;
+		let configurationResponse: NodeConfigurationResponse | undefined;
 		let configurationCryptoResponse: any;
 
 		try {
 			const response = await client.get(`${baseUrl}/api/node/configuration`);
-			const cryptoResponse = await client.get(`${baseUrl}/api/node/configuration/crypto`);
-
 			configurationResponse = JSON.parse(response.body()).data as NodeConfigurationResponse;
+
+			const cryptoResponse = await client.get(`${baseUrl}/api/node/configuration/crypto`);
 			configurationCryptoResponse = JSON.parse(cryptoResponse.body()).data;
 		} catch {
+			//
+		}
+
+		if (configurationResponse === undefined || configurationCryptoResponse === undefined) {
 			setFetchingError(true);
 			setFetchingDetails(false);
 			return;

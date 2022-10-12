@@ -66,7 +66,7 @@ describe("Export Settings", () => {
 	});
 
 	it("should show toast message for successful download if browser supports SaveFilePicker", async () => {
-		const toastSpy = vi.spyOn(toasts, "success").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 
 		Object.defineProperty(window, "showSaveFilePicker", vi.fn());
 
@@ -100,7 +100,7 @@ describe("Export Settings", () => {
 	});
 
 	it("should not export data or show error on cancelled download", async () => {
-		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("The user aborted a request");
@@ -136,7 +136,7 @@ describe("Export Settings", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("unexpected error");

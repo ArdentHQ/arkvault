@@ -240,7 +240,7 @@ describe("Password Settings", () => {
 		profile.auth().setPassword(password);
 
 		const toastSpy = vi.spyOn(toasts, "success");
-		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation();
+		const forgetPasswordSpy = vi.spyOn(profile.auth(), "forgetPassword").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">

@@ -7,6 +7,8 @@ import { AppearanceAccentColor } from "./AppearanceAccentColor";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
 
+vi.mock("react-hook-form");
+
 describe("AppearanceAccentColor", () => {
 	it("should render", () => {
 		const watch = vi.fn();

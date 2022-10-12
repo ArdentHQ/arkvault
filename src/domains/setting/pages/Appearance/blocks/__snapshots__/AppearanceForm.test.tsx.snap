@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`AppearanceForm should render 1`] = `
+exports[`AppearanceForm > should render 1`] = `
 <DocumentFragment>
   <form
     class="mt-8"
@@ -133,8 +133,25 @@ exports[`AppearanceForm should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        underline-sun.svg
+                      <svg
+                        id="underline-sun"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 16.6h18M10 4.6V3.4M15.5 6.9l.8-.8M17.8 12.4H19M2.2 12.4H1M4.5 6.9l-.8-.8M15 14.2c1-2.8-.4-5.9-3.2-6.9s-5.9.4-6.9 3.2c-.4 1.2-.4 2.5 0 3.7"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span
@@ -160,8 +177,25 @@ exports[`AppearanceForm should render 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        underline-moon.svg
+                      <svg
+                        id="underline-moon"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 16.6h18M13.4 10.7c-3 0-5.5-2.4-5.6-5.4 0-.6.1-1.3.2-1.9-2.9 1-4.5 4.1-3.5 7s4.1 4.5 7 3.5c1.7-.6 3-1.8 3.5-3.5-.5.2-1 .3-1.6.3z"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span

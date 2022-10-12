@@ -3,6 +3,7 @@ import { rest } from "msw";
 import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 
 const endpoints = [
+	{ path: "/", data: { data: "Hello World!" } },
 	{ path: "/blockchain", data: require("../../fixtures/coins/ark/devnet/blockchain.json") },
 	{ path: "/node/configuration", data: require("../../fixtures/coins/ark/devnet/configuration.json") },
 	{ path: "/node/fees", data: require("../../fixtures/coins/ark/devnet/node-fees.json") },

@@ -7,6 +7,8 @@ import { AppearanceViewingMode } from "./AppearanceViewingMode";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
 
+vi.mock("react-hook-form");
+
 describe("AppearanceViewingMode", () => {
 	it("should render", () => {
 		const watch = vi.fn();

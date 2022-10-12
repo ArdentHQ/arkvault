@@ -2,6 +2,7 @@ import { rest } from "msw";
 
 const endpoints = [
 	// { path: "/blockchain", data: require("../../fixtures/coins/ark/devnet/blockchain.json") },
+	{ path: "/", data: { data: "Hello World!" } },
 	{ path: "/delegates", data: require("../../fixtures/coins/ark/mainnet/delegates.json") },
 	{ path: "/peers", data: require("../../fixtures/coins/ark/mainnet/peers.json") },
 	{ path: "/node/configuration", data: require("../../fixtures/coins/ark/mainnet/configuration.json") },

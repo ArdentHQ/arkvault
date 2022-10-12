@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`AppearanceAccentColor should render 1`] = `
+exports[`AppearanceAccentColor > should render 1`] = `
 <DocumentFragment>
   <div
     class="inline-flex w-full items-center space-x-3"
