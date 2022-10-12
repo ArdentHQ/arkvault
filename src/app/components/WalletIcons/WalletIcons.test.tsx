@@ -98,7 +98,7 @@ describe("WalletIcons", () => {
 	it("should not render excluded icons", () => {
 		const walletSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
-		const { container } = render(<WalletIcons wallet={wallet} exclude={["isStarred"]} />);
+		render(<WalletIcons wallet={wallet} exclude={["isStarred"]} />);
 
 		expect(screen.queryByTestId("WalletIcon__Starred")).not.toBeInTheDocument();
 		expect(document.querySelector("svg#star-filled")).not.toBeInTheDocument();

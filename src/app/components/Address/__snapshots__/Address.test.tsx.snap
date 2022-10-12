@@ -53,6 +53,21 @@ exports[`Formatted Address > should render with horizontal orientation 1`] = `
 </div>
 `;
 
+exports[`Formatted Address > should render with horizontal orientation 2`] = `
+<div>
+  <div
+    class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+  >
+    <span
+      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
+    >
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Formatted Address > should render with normal font 1`] = `
 <div>
   <div
@@ -132,6 +147,21 @@ exports[`Formatted Address > should render with truncate on table = true 1`] = `
 `;
 
 exports[`Formatted Address > should render with vertical orientation 1`] = `
+<div>
+  <div
+    class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
+  >
+    <span
+      class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
+    >
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Formatted Address > should render with vertical orientation 2`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"

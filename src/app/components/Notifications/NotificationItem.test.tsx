@@ -1,22 +1,22 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { NotificationItem } from "./NotificationItem";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
+import { server, requestMock } from "@/tests/mocks/server";
+
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let notification: any;
 
 describe("Notifications", () => {
 	beforeAll(() => {
-		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
-			data: TransactionsFixture.data,
-			meta: TransactionsFixture.meta,
-		});
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", TransactionsFixture),
+		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		notification = profile.notifications().get("29fdd62d-1c28-4d2c-b46f-667868c5afe1");

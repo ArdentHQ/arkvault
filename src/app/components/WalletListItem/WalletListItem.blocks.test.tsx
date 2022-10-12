@@ -92,7 +92,9 @@ describe("WalletListItem.blocks", () => {
 		userEvent.hover(screen.getByTestId("WalletIcon__Starred"));
 
 		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.STAR_WALLET)).toBeInTheDocument();
-		expect(screen.getByText("star.svg")).toBeInTheDocument();
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(document.querySelector("svg#star")).toBeInTheDocument();
 
 		expect(asFragment).toMatchSnapshot();
 

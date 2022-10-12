@@ -1,15 +1,16 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { NotificationsDropdown } from "./NotificationsDropdown";
 import { env, getDefaultProfileId, renderResponsive, render, screen, waitFor } from "@/utils/testing-library";
 
-const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
-const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
+import { server, requestMock } from "@/tests/mocks/server";
+
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -19,10 +20,12 @@ describe("Notifications", () => {
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
 
-		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
-			data: NotificationTransactionsFixtures.data,
-			meta: TransactionsFixture.meta,
-		});
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: NotificationTransactionsFixtures.data,
+				meta: TransactionsFixture.meta,
+			}),
+		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
 

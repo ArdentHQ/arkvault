@@ -9,6 +9,8 @@ import { toasts } from "@/app/services";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 
+import * as reactQrReaderMock from "react-qr-reader";
+
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";
 
@@ -21,8 +23,6 @@ vi.mock("react-qr-reader", () => ({
 		return null;
 	}),
 }));
-
-const reactQrReaderMock = require("react-qr-reader");
 
 describe("QRModal", () => {
 	it("should render", () => {
@@ -95,9 +95,8 @@ describe("QRModal", () => {
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
-		await waitFor(() => {
-			expect(screen.getByText("error-small.svg")).toBeInTheDocument();
-		});
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(document.querySelector("svg#error-small")).toBeInTheDocument();
 
 		expect(screen.getByText(transactionTranslations.MODAL_QR_CODE.PERMISSION_ERROR.TITLE)).toBeInTheDocument();
 		expect(

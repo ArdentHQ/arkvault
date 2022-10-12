@@ -5,6 +5,10 @@ import * as useResizeDetectorModule from "react-resize-detector";
 import { getTruncatedValue, TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 import { render, screen } from "@/utils/testing-library";
 
+vi.mock("react-resize-detector", () => ({
+	useResizeDetector: () => ({ ref: null }),
+}));
+
 describe("TruncateMiddleDynamic", () => {
 	const valueToTruncate = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 

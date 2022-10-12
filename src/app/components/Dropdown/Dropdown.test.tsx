@@ -416,9 +416,10 @@ describe("Dropdown positioning", () => {
 		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 90, top: 0 });
+
 		const toggleHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
 		const dropdownHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(190);
 		const elementClientHeightSpy = vi.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
 
 		render(
@@ -446,8 +447,9 @@ describe("Dropdown positioning", () => {
 		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 50, top: 100 });
+
 		const offsetHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
-		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(150);
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(200);
 
 		render(
 			<Dropdown>

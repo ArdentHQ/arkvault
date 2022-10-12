@@ -1,6 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
@@ -8,8 +7,10 @@ import { httpClient } from "@/app/services";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor, renderResponsive } from "@/utils/testing-library";
 
-const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
-const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
+import { server, requestMock } from "@/tests/mocks/server";
+
+import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/notification-transactions.json";
+import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
@@ -18,10 +19,12 @@ describe("Notifications", () => {
 	beforeEach(async () => {
 		httpClient.clearCache();
 
-		nock("https://ark-test.arkvault.io").get("/api/transactions").query(true).reply(200, {
-			data: NotificationTransactionsFixtures.data,
-			meta: TransactionsFixture.meta,
-		});
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: NotificationTransactionsFixtures.data,
+				meta: TransactionsFixture.meta,
+			}),
+		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
 
