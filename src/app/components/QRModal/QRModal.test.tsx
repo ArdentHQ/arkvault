@@ -82,7 +82,7 @@ describe("QRModal", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it("should render permission denied error", async () => {
+	it("should render permission denied error", () => {
 		reactQrReaderMock.QrReader.mockImplementation(
 			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
 				if (onResult) {
