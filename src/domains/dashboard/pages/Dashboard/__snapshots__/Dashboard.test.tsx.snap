@@ -1065,12 +1065,6 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
 </DocumentFragment>
 `;
 
-exports[`Dashboard should navigate to create wallet page 1`] = `<DocumentFragment />`;
-
-exports[`Dashboard should navigate to import ledger page 1`] = `<DocumentFragment />`;
-
-exports[`Dashboard should navigate to import wallet page 1`] = `<DocumentFragment />`;
-
 exports[`Dashboard should render 1`] = `
 <DocumentFragment>
   <div

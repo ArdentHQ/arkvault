@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as dashboardTranslations } from "@/domains/dashboard/i18n";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import {
 	env,
@@ -19,7 +18,6 @@ import {
 	useDefaultNetMocks,
 	waitFor,
 	within,
-	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 
@@ -51,15 +49,17 @@ describe("Dashboard", () => {
 			.reply(200, []);
 
 		profile = env.profiles().findById(fixtureProfileId);
-		await env.profiles().restore(profile);
-		await profile.sync();
 
 		const wallet = await profile.walletFactory().fromAddress({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
 			coin: "ARK",
 			network: "ark.mainnet",
 		});
+
 		profile.wallets().push(wallet);
+
+		await env.profiles().restore(profile);
+		await profile.sync();
 
 		await syncDelegates(profile);
 
@@ -119,87 +119,11 @@ describe("Dashboard", () => {
 		);
 
 		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			() => expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument(),
 			{ timeout: 4000 },
 		);
 
-		expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument();
-
 		mockHasCompletedTutorial.mockRestore();
-	});
-
-	it("should navigate to import ledger page", async () => {
-		profile.markIntroductoryTutorialAsComplete();
-		const ledgerTransportMock = mockNanoXTransport();
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
-
-		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
-
-		await waitFor(() =>
-			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		ledgerTransportMock.mockRestore();
-	});
-
-	it("should navigate to create wallet page", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 5000 },
-		);
-
-		userEvent.click(screen.getByText("Create"));
-
-		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should navigate to import wallet page", async () => {
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 5000 },
-		);
-
-		userEvent.click(screen.getByText("Import"));
-
-		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render loading state when profile is syncing", async () => {
