@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 import { UUID } from "@ardenthq/sdk-cryptography";
+import { vi } from "vitest";
 import NetworksSettings from "@/domains/setting/pages/Networks";
 import {
 	env,
@@ -16,7 +17,6 @@ import {
 import { translations as settingsTranslations } from "@/domains/setting/i18n.ts";
 import { toasts } from "@/app/services";
 import { requestMock, server } from "@/tests/mocks/server";
-import { vi } from "vitest";
 
 let profile: Contracts.IProfile;
 
@@ -447,9 +447,7 @@ describe("Network Settings", () => {
 		);
 
 		it("shows an error when network is unreachable", async () => {
-			server.use(
-				requestMock(configurationUrl, {}, { status: 404 }),
-			);
+			server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
@@ -1011,9 +1009,7 @@ describe("Network Settings", () => {
 			])("shows an error if the know wallet url has a invalid response", async (status, data) => {
 				mockServerCryptoConfiguration(customServerAddress);
 
-				server.use(
-					requestMock("https://know-wallets.test", data, { status })
-				)
+				server.use(requestMock("https://know-wallets.test", data, { status }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1080,7 +1076,9 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => {
-					expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
+					expect(
+						within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
+					).toBeChecked();
 				});
 			});
 
@@ -1191,9 +1189,7 @@ describe("Network Settings", () => {
 			});
 
 			it("shows an error when network is unreachable when editing", async () => {
-				server.use(
-					requestMock(configurationUrl, {}, { status: 404 }),
-				);
+				server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1237,7 +1233,7 @@ describe("Network Settings", () => {
 								name: customServerName,
 							},
 						},
-					})
+					}),
 				);
 
 				render(
