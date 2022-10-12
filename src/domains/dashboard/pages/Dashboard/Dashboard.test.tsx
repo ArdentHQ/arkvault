@@ -137,12 +137,6 @@ describe("Dashboard", () => {
 			expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument(),
 		);
 
-		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("Modal__close-button"));
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
 		mockHasCompletedTutorial.mockRestore();
 		mockTransactionsAggregate.mockRestore();
 	});
