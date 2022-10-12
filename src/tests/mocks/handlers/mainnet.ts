@@ -7,6 +7,7 @@ const endpoints = [
 	{ path: "/node/configuration", data: require("../../fixtures/coins/ark/mainnet/configuration.json") },
 	{ path: "/node/configuration/crypto", data: require("../../fixtures/coins/ark/mainnet/cryptoConfiguration.json") },
 	{ path: "/node/syncing", data: require("../../fixtures/coins/ark/mainnet/syncing.json") },
+	{ path: "/transactions", data: require("../../fixtures/coins/ark/mainnet/transactions.json") },
 	{ path: "/wallets", data: require("../../fixtures/coins/ark/mainnet/wallets.json") },
 ];
 

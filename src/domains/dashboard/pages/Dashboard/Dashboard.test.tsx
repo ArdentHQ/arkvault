@@ -21,7 +21,8 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
-import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -34,8 +35,12 @@ describe("Dashboard", () => {
 	beforeAll(async () => {
 		server.use(
 			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: transactionsFixture.data.slice(0, 2),
-				meta: transactionsFixture.meta,
+				data: devnetTransactionsFixture.data.slice(0, 2),
+				meta: devnetTransactionsFixture.meta,
+			}),
+			requestMock("https://ark-live.arkvault.io/api/transactions", {
+				data: [],
+				meta: mainnetTransactionsFixture.meta,
 			}),
 		);
 
