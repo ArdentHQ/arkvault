@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -26,7 +25,6 @@ let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
-let mockTransactionsAggregate;
 
 jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -68,18 +66,6 @@ describe("Dashboard", () => {
 		await profile.sync();
 
 		useDefaultNetMocks();
-
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-
-		const transactions = (await profile.transactionAggregate().all({ limit: 10 })).items();
-
-		mockTransactionsAggregate = jest
-			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
-	});
-
-	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -91,11 +77,56 @@ describe("Dashboard", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	it("should render loading state when profile is syncing", async () => {
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		);
+	});
+
+	it("should display empty block when there are no transactions", async () => {
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getByRole("rowgroup")).toBeVisible());
+
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should render", async () => {
-		const { asFragment } = render(
+	it("should open modal when click on a transaction", async () => {
+		const transactions = (await profile.transactionAggregate().all({ limit: 10 })).items();
+
+		const mockTransactionsAggregate = jest
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
+
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -110,33 +141,12 @@ describe("Dashboard", () => {
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
-		});
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		expect(asFragment()).toMatchSnapshot();
-		mockTransactionsAggregate.mockRestore();
-	});
+		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-	it("should show introductory tutorial", async () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		render(
-			<Route path="/profiles/:profileId/dashboard">
-				<Dashboard />
-			</Route>,
-			{
-				history,
-				route: dashboardURL,
-				withProfileSynchronizer: true,
-			},
-		);
-
-		await waitFor(() =>
-			expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument(),
-		);
-
-		mockHasCompletedTutorial.mockRestore();
 		mockTransactionsAggregate.mockRestore();
 	});
 });
