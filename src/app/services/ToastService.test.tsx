@@ -5,6 +5,7 @@ import { toast, ToastContainer, Id as ToastId } from "react-toastify";
 import { ToastService } from "./ToastService";
 import { toasts } from "@/app/services/index";
 import { act, render, screen } from "@/utils/testing-library";
+import { waitFor } from "@testing-library/react";
 
 let subject: ToastService;
 
@@ -82,9 +83,12 @@ describe("ToastService", () => {
 	it("should render and update toast message", async () => {
 		const Component = () => {
 			let toastId: ToastId;
+
 			const showMessage = () => {
+				console.log("show")
 				toastId = toasts.info("info message");
 			};
+
 			const updateMessage = () => {
 				toasts.update(toastId, "error", "updated message");
 			};
@@ -92,8 +96,8 @@ describe("ToastService", () => {
 			return (
 				<>
 					<ToastContainer />
-					<div data-testid={"show_message"} onClick={showMessage} />
-					<div data-testid={"update_message"} onClick={updateMessage} />
+					<div data-testid="show" onClick={showMessage} />
+					<div data-testid="update" onClick={updateMessage} />
 				</>
 			);
 		};
@@ -102,11 +106,17 @@ describe("ToastService", () => {
 
 		expect(screen.queryByTestId("ToastMessage__content")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("show_message"));
+		act(() => {
+			userEvent.click(screen.getByTestId("show"));
+			vi.runAllTimers();
+		});
 
 		await expect(screen.findByText("info message")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("update_message"));
+		act(() => {
+			userEvent.click(screen.getByTestId("update"));
+			vi.runAllTimers();
+		});
 
 		await expect(screen.findByText("updated message")).resolves.toBeInTheDocument();
 	});
