@@ -39,9 +39,12 @@ export const devnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
-	rest.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json", (_, response, context) => {
-		return response(context.status(200), context.json([]));
-	}),
+	rest.get(
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
+		(_, response, context) => {
+			return response(context.status(200), context.json([]));
+		},
+	),
 	rest.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
 

@@ -18,9 +18,12 @@ export const mainnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
-	rest.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json", (_, response, context) => {
-		return response(context.status(200), context.json([]));
-	}),
+	rest.get(
+		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
+		(_, response, context) => {
+			return response(context.status(200), context.json([]));
+		},
+	),
 	rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (_, response, context) => {
 		const identifier = req.params.identifier as string;
 

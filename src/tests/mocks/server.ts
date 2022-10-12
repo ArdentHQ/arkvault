@@ -32,6 +32,12 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 export const requestMockOnce = (path: string, data: undefined | string | object, options = {}) =>
 	requestMock(path, data, { ...options, modifier: "once" });
 
-const restHandlers = [...cryptoCompareHandlers, ...devnetHandlers, ...exchangeHandlers, ...mainnetHandlers, ...miscHandlers];
+const restHandlers = [
+	...cryptoCompareHandlers,
+	...devnetHandlers,
+	...exchangeHandlers,
+	...mainnetHandlers,
+	...miscHandlers,
+];
 
 export const server = setupServer(...restHandlers);
