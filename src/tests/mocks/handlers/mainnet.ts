@@ -24,8 +24,8 @@ export const mainnetHandlers = [
 			return response(context.status(200), context.json([]));
 		},
 	),
-	rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (_, response, context) => {
-		const identifier = req.params.identifier as string;
+	rest.get("https://ark-live.arkvault.io/api/wallets/:identifier", (request, response, context) => {
+		const identifier = request.params.identifier as string;
 
 		if (wallets.includes(identifier)) {
 			return response(
