@@ -9,7 +9,7 @@ import { updateArkConstants } from "@/utils/migrations/update-ark-constants";
 import { updateArkNethashes } from "@/utils/migrations/update-ark-nethashes";
 
 export const initializeEnvironment = (): Environment => {
-	/* istanbul ignore next */
+	/* istanbul ignore next -- @preserve */
 	const storage = isE2E() || isUnit() ? new StubStorage() : "indexeddb";
 
 	const env = new Environment({

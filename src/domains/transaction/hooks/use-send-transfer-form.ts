@@ -154,13 +154,13 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		setValue(
 			"network",
 			networks.find((item) => {
-				/* istanbul ignore else */
+				/* istanbul ignore else -- @preserve */
 				if (lowerCaseEquals(item.coin(), queryParameters.coin)) {
 					if (queryParameters.network) {
 						return lowerCaseEquals(item.id(), queryParameters.network);
 					}
 
-					/* istanbul ignore else */
+					/* istanbul ignore else -- @preserve */
 					if (queryParameters.nethash) {
 						return item.meta().nethash === queryParameters.nethash;
 					}

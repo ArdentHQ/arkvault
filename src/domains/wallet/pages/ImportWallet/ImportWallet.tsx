@@ -119,7 +119,7 @@ export const ImportWallet = () => {
 						setActiveTab(Step.SummaryStep);
 					}
 				} catch (error) {
-					/* istanbul ignore next */
+					/* istanbul ignore next -- @preserve */
 					toasts.error(error.message);
 				} finally {
 					setIsImporting(false);
@@ -290,7 +290,7 @@ export const ImportWallet = () => {
 					{isLedgerImport ? (
 						<LedgerTabs
 							onClickEditWalletName={
-								/* istanbul ignore next */ (wallet: Contracts.IReadWriteWallet) => {
+								/* istanbul ignore next -- @preserve */ (wallet: Contracts.IReadWriteWallet) => {
 									setImportedWallet(wallet);
 									setIsEditAliasModalOpen(true);
 								}

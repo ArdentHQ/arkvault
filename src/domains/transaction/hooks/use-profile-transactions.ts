@@ -104,7 +104,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 				return;
 			}
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (!isMounted.current) {
 				return;
 			}
@@ -138,7 +138,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			const hasWallets = wallets.length > 0;
 			cursor.current = 1;
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (!isMounted.current) {
 				return;
 			}

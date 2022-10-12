@@ -13,7 +13,7 @@ export const useOrderStatus = () => {
 		try {
 			const allStatuses = await Promise.all(
 				exchangeTransactions.map((exchangeTransaction: Contracts.IExchangeTransaction) => {
-					/* istanbul ignore else */
+					/* istanbul ignore else -- @preserve */
 					if (!exchangeServices[exchangeTransaction.provider()]) {
 						exchangeServices[exchangeTransaction.provider()] = new ExchangeService(
 							exchangeTransaction.provider(),

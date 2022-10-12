@@ -14,7 +14,7 @@ export class HttpClient extends Http.AbstractRequest {
 		this.cache = new Cache(ttl);
 	}
 
-	/* istanbul ignore next */
+	/* istanbul ignore next -- @preserve */
 	public withSocksProxy(host: string): HttpClient {
 		this._options.agent = new SocksProxyAgent(host);
 

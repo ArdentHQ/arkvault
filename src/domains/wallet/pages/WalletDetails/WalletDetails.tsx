@@ -48,7 +48,7 @@ export const WalletDetails = () => {
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleVoteButton = (filter?: string) => {
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (filter) {
 			return history.push({
 				pathname: `/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/votes`,

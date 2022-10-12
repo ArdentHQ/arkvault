@@ -93,7 +93,7 @@ const Main: React.VFC = () => {
 			history.push({
 				pathname: "/",
 				state: {
-					from: history.location.pathname + history.location.search ?? /* istanbul ignore next */ "",
+					from: history.location.pathname + history.location.search ?? /* istanbul ignore next -- @preserve */ "",
 				},
 			}),
 		onProfileSignOut: () => {
@@ -133,7 +133,7 @@ const Main: React.VFC = () => {
 	useLayoutEffect(() => {
 		const boot = async () => {
 			try {
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				if (isE2E() || isUnit()) {
 					await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: isUnit() });
 					await persist();
@@ -142,10 +142,10 @@ const Main: React.VFC = () => {
 					return;
 				}
 
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				await env.verify();
 
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				await env.boot();
 
 				setIsEnvironmentBooted(true);
@@ -164,7 +164,7 @@ const Main: React.VFC = () => {
 			return <Offline />;
 		}
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (isEnvironmentBooted) {
 			return <RouterView routes={routes} middlewares={middlewares} />;
 		}

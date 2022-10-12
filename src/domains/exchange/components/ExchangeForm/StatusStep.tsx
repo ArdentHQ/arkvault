@@ -30,7 +30,7 @@ export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperti
 		const fetchStatus = async () => {
 			const responses = await checkOrderStatus([exchangeTransaction]);
 
-			/* istanbul ignore else */
+			/* istanbul ignore else -- @preserve */
 			if (responses) {
 				const orderStatus = responses[exchangeTransaction.orderId()];
 

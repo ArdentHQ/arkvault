@@ -145,7 +145,7 @@ export const SendRegistration = () => {
 				encryptionPassword,
 				mnemonic,
 				privateKey,
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				secondMnemonic: registrationType === "secondSignature" ? undefined : secondMnemonic,
 				secondSecret,
 				secret,

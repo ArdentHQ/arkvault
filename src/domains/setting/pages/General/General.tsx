@@ -44,7 +44,7 @@ export const GeneralSettings: React.FC = () => {
 	const getDefaultValues = (): Partial<GeneralSettingsState> => {
 		const settings = profile.settings();
 
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		const name = profile.settings().get<string>(Contracts.ProfileSetting.Name) || "";
 
 		return {
