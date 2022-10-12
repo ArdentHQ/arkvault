@@ -4,6 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import {
 	env,
@@ -18,7 +19,6 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
-import { vi } from "vitest";
 import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
@@ -131,13 +131,9 @@ const waitUntilServerIsValidated = async () => {
 	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).toBeNull());
 };
 
-const mockPeerNetwork = () => server.use(
-	requestMock(peerHostLive, peerResponse),
-);
+const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
 
-const mockPeerHeight = () => server.use(
-	requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight),
-);
+const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
 
 describe("Servers Settings", () => {
 	let profileCoinSpy;
@@ -281,10 +277,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses", async () => {
-				server.use(
-					requestMock(peerHostTest, peerResponse),
-					requestMock(musigHostTest, musigResponse),
-				);
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -308,10 +301,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses in an interval", async () => {
-				server.use(
-					requestMock(peerHostTest, peerResponse),
-					requestMock(musigHostTest, musigResponse),
-				);
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
 
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
@@ -381,10 +371,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
-				server.use(
-					requestMock(peerHostTest, peerResponse),
-					requestMock(musigHostTest, "invalid json"),
-				);
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, "invalid json"));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -703,10 +690,7 @@ describe("Servers Settings", () => {
 		beforeEach(() => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			server.use(
-				requestMock(musigHostTest, musigResponse),
-				requestMock(musigHostLive, musigResponse),
-			);
+			server.use(requestMock(musigHostTest, musigResponse), requestMock(musigHostLive, musigResponse));
 
 			mockPeerNetwork();
 		});
