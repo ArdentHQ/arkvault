@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -21,6 +20,8 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -31,21 +32,16 @@ let dashboardURL: string;
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(0, 2),
-					meta,
-				};
-			})
-			.persist();
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: transactionsFixture.data.slice(0, 2),
+				meta: transactionsFixture.meta,
+			}),
+		);
 
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
+		// nock("https://neoscan.io/api/main_net/v1/")
+		// 	.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
+		// 	.reply(200, []);
 
 		profile = env.profiles().findById(fixtureProfileId);
 		await env.profiles().restore(profile);

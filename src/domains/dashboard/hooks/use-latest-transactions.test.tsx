@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import nock from "nock";
 import React from "react";
 
 import { useLatestTransactions } from "./use-latest-transactions";
@@ -30,12 +29,6 @@ describe("useLatestTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.persist();
 	});
 
 	beforeEach(() => {

@@ -11,6 +11,7 @@ const endpoints = [
 	{ path: "/node/syncing", data: require("../../fixtures/coins/ark/devnet/syncing.json") },
 	{ path: "/delegates", data: require("../../fixtures/coins/ark/devnet/delegates.json") },
 	{ path: "/delegates/:identifier", data: delegate },
+	{ path: "/transactions", data: require("../../fixtures/coins/ark/devnet/transactions.json") },
 	{ path: "/transactions/fees", data: require("../../fixtures/coins/ark/devnet/transaction-fees.json") },
 	{ path: "/wallets", data: require("../../fixtures/coins/ark/devnet/wallets.json") },
 	{
@@ -38,6 +39,9 @@ export const devnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
+	rest.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json", (_, response, context) => {
+		return response(context.status(200), context.json([]));
+	}),
 	rest.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
 

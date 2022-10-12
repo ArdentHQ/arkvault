@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`PortfolioBreakdown should render empty (filtered) message when there are no assets that match the current network filters 1`] = `
+exports[`PortfolioBreakdown > should render empty (filtered) message when there are no assets that match the current network filters 1`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -13,7 +13,7 @@ exports[`PortfolioBreakdown should render empty (filtered) message when there ar
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render empty block when portfolio is empty and there are filtered networks 1`] = `
+exports[`PortfolioBreakdown > should render empty block when portfolio is empty and there are filtered networks 1`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -26,7 +26,7 @@ exports[`PortfolioBreakdown should render empty block when portfolio is empty an
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render loading when items converted balance contain a NaN value 1`] = `
+exports[`PortfolioBreakdown > should render loading when items converted balance contain a NaN value 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -139,7 +139,7 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render loading when no wallets have synced with the network 1`] = `
+exports[`PortfolioBreakdown > should render loading when no wallets have synced with the network 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -252,7 +252,7 @@ exports[`PortfolioBreakdown should render loading when no wallets have synced wi
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render loading when profile is not restored yet 1`] = `
+exports[`PortfolioBreakdown > should render loading when profile is not restored yet 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -365,7 +365,7 @@ exports[`PortfolioBreakdown should render loading when profile is not restored y
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render loading when some wallets have not synced with the network 1`] = `
+exports[`PortfolioBreakdown > should render loading when some wallets have not synced with the network 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -478,7 +478,7 @@ exports[`PortfolioBreakdown should render loading when some wallets have not syn
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`] = `
+exports[`PortfolioBreakdown > should render loading when syncing exchange rates 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row lg:items-end"
@@ -591,7 +591,7 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render when some wallets are cold 1`] = `
+exports[`PortfolioBreakdown > should render when some wallets are cold 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
@@ -872,7 +872,7 @@ exports[`PortfolioBreakdown should render when some wallets are cold 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
+exports[`PortfolioBreakdown > should render with dark mode = false 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
@@ -1153,7 +1153,7 @@ exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
+exports[`PortfolioBreakdown > should render with dark mode = true 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
@@ -1434,7 +1434,7 @@ exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render zero balance state with dark mode = false 1`] = `
+exports[`PortfolioBreakdown > should render zero balance state with dark mode = false 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
@@ -1539,7 +1539,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = fa
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render zero balance state with dark mode = true 1`] = `
+exports[`PortfolioBreakdown > should render zero balance state with dark mode = true 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
@@ -1644,4 +1644,4 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should return nothing when portfolio is empty and there are no filtered networks 1`] = `<DocumentFragment />`;
+exports[`PortfolioBreakdown > should return nothing when portfolio is empty and there are no filtered networks 1`] = `<DocumentFragment />`;
