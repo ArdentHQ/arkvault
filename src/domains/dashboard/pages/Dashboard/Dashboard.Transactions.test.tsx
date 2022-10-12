@@ -120,7 +120,9 @@ describe("Dashboard", () => {
 	});
 
 	it("should open modal when click on a transaction", async () => {
-		const transactions = (await profile.transactionAggregate().all({ limit: 10 })).items();
+		const all = await profile.transactionAggregate().all({ limit: 10 });
+		const transactions = all.items();
+
 		const mockTransactionsAggregate = jest
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));

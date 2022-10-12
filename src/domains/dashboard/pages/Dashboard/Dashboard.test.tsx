@@ -72,7 +72,8 @@ describe("Dashboard", () => {
 
 		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
-		const transactions = (await profile.transactionAggregate().all({ limit: 10 })).items();
+		const all = await profile.transactionAggregate().all({ limit: 10 });
+		const transactions = all.items();
 
 		mockTransactionsAggregate = jest
 			.spyOn(profile.transactionAggregate(), "all")
@@ -133,9 +134,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument(),
-		);
+		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
 
 		mockHasCompletedTutorial.mockRestore();
 		mockTransactionsAggregate.mockRestore();
