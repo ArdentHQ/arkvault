@@ -19,7 +19,6 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import userEvent from "@testing-library/user-event";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -117,6 +116,7 @@ describe("Dashboard", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+
 		mockTransactionsAggregate.mockRestore();
 	});
 
