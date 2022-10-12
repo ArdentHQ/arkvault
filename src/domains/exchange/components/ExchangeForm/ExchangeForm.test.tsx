@@ -20,6 +20,7 @@ import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
+import { cloneDeep } from "@ardenthq/sdk-helpers";
 
 let profile: Contracts.IProfile;
 
@@ -57,7 +58,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 };
 
 const mockOrderStatus = (orderId: string, status: string) =>
-	requestMock(`${exchangeBaseURL}/api/changenow/orders/id`, { data: { id: orderId, status } });
+	requestMock(`${exchangeBaseURL}/api/changenow/orders/${orderId}`, { data: { id: orderId, status } });
 
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
 	// from currency
@@ -269,7 +270,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
@@ -282,7 +283,9 @@ describe("ExchangeForm", () => {
 	it("should show an error alert if the selected pair is unavailable", async () => {
 		server.use(
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
-			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, { error: { message: "Unavailable Pair" } }),
+			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, {
+				error: { message: "Unavailable Pair" },
+			}, { status: 400 }),
 		);
 
 		const onReady = vi.fn();
@@ -351,7 +354,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input if supported", async () => {
-		const currency = { ...currencyEth };
+		const currency = cloneDeep(currencyEth);
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
@@ -388,7 +391,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input for refund if supported", async () => {
-		const currency = { ...currencyEth };
+		const currency = cloneDeep(currencyEth);
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
@@ -904,7 +907,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -987,7 +990,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1083,7 +1086,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1112,17 +1115,14 @@ describe("ExchangeForm", () => {
 			requestMockOnce(
 				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
 				{ data: baseStatus },
-				{ method: "post" },
 			),
 			requestMockOnce(
 				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
 				{ data: { ...baseStatus, status: "exchanging" } },
-				{ method: "post" },
 			),
 			requestMockOnce(
 				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
 				{ data: { ...baseStatus, status: "sending" } },
-				{ method: "post" },
 			),
 			requestMockOnce(
 				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
@@ -1134,7 +1134,6 @@ describe("ExchangeForm", () => {
 						status: "finished",
 					},
 				},
-				{ method: "post" },
 			),
 		);
 
@@ -1243,7 +1242,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(
 			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),

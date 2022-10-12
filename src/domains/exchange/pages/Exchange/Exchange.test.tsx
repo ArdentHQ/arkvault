@@ -156,7 +156,7 @@ describe("Exchange", () => {
 			expect(screen.getAllByTestId("Card")).toHaveLength(2);
 		});
 
-		const historyMock = vi.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByText("ChangeNOW"));
 
@@ -370,7 +370,7 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		const historyMock = vi.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
@@ -382,7 +382,7 @@ describe("Exchange", () => {
 	});
 
 	it("should delete exchange transaction", async () => {
-		const toastSpy = vi.spyOn(toasts, "success").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 		profile
