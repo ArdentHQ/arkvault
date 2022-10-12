@@ -92,13 +92,13 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		// actual transactions
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		await waitFor(() => {
@@ -122,13 +122,13 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		// actual transactions
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		expect(screen.getByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).toBeInTheDocument();
@@ -177,13 +177,13 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		// actual transactions
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		userEvent.click(screen.getByText("Create"));
@@ -205,13 +205,13 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		// actual transactions
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		userEvent.click(screen.getByText("Import"));
@@ -232,8 +232,8 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -257,8 +257,8 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
@@ -281,13 +281,13 @@ describe("Dashboard", () => {
 		);
 
 		// skeletons
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 
 		// actual transactions
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
