@@ -4,12 +4,11 @@ import React from "react";
 import * as browserAccess from "browser-fs-access";
 
 import QRScanner from "qr-scanner";
+import * as reactQrReaderMock from "react-qr-reader";
 import { QRModal } from "./QRModal";
 import { toasts } from "@/app/services";
 import { render, screen } from "@/utils/testing-library";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-
-import * as reactQrReaderMock from "react-qr-reader";
 
 const qrCodeUrl =
 	"http://localhost:3000/#/?amount=10&coin=ARK&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o";

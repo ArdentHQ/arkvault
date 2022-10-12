@@ -2,7 +2,6 @@ import retry from "async-retry";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +18,6 @@ import {
 	mockNanoXTransport,
 	mockLedgerTransportError,
 } from "@/utils/testing-library";
-import { vi } from "vitest";
 
 const LedgerWaitingDevice = "Waiting Device";
 
@@ -52,13 +50,9 @@ describe("Use Ledger Connection", () => {
 			["m/44'/1'/3'/0/0", "033a5474f68f92f254691e93c06a2f22efaf7d66b543a53efcece021819653a200"],
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
-
-		// vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		// vi.runOnlyPendingTimers();
-		// vi.useRealTimers();
 		getVersionSpy.mockRestore();
 	});
 
@@ -77,7 +71,10 @@ describe("Use Ledger Connection", () => {
 		return (
 			<div>
 				{error && <span>{error}</span>}
-				<button disabled={!hasDeviceAvailable} onClick={handleImport}>Import</button>;
+				<button disabled={!hasDeviceAvailable} onClick={handleImport}>
+					Import
+				</button>
+				;
 			</div>
 		);
 	};
@@ -392,7 +389,6 @@ describe("Use Ledger Connection", () => {
 			).resolves.toBeVisible();
 
 			expect(connectSpy).toHaveBeenCalledTimes(3);
-			// await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
 
 			listenSpy.mockRestore();
 			connectSpy.mockRestore();
@@ -504,8 +500,6 @@ describe("Use Ledger Connection", () => {
 		});
 
 		it("should ignore the app version check for coins that are not in the minVersionList", async () => {
-			nock.disableNetConnect();
-
 			const listenSpy = mockNanoXTransport();
 
 			const getPublicKeySpy = vi

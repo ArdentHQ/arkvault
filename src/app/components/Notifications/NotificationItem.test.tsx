@@ -14,9 +14,7 @@ let notification: any;
 
 describe("Notifications", () => {
 	beforeAll(() => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", TransactionsFixture),
-		);
+		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", TransactionsFixture));
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		notification = profile.notifications().get("29fdd62d-1c28-4d2c-b46f-667868c5afe1");
