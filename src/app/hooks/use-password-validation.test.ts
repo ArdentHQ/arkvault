@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/require-await */
-import * as passwordPwnd from "@faustbrian/node-haveibeenpwned";
+import * as haveibeenpwnedMock from "@faustbrian/node-haveibeenpwned";
 import { renderHook } from "@testing-library/react-hooks";
 import { usePasswordValidation, defaultState } from "./use-password-validation";
 import { ValidationRule } from ".";
 
 const validPassword = "S3cUr3!Pas#w0rd";
 
-let pwnd: vi.SpyInstance;
+vi.mock("@faustbrian/node-haveibeenpwned", () => ({
+	pwned: vi.fn(),
+}));
 
 describe("usePasswordValidation", () => {
 	beforeEach(() => {
-		pwnd = vi.spyOn(passwordPwnd, "pwned").mockResolvedValue(0);
+		haveibeenpwnedMock.pwned.mockResolvedValue(0);
 	});
-
-	afterEach(() => pwnd.mockRestore());
 
 	describe("#validationState", () => {
 		it("should return the password validation state", () => {
@@ -105,7 +105,7 @@ describe("usePasswordValidation", () => {
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-			pwnd = vi.spyOn(passwordPwnd, "pwned").mockResolvedValue(1);
+			haveibeenpwnedMock.pwned.mockResolvedValue(1);
 
 			await result.current.validatePassword(validPassword);
 

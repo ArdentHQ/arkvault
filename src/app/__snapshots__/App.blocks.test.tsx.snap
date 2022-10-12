@@ -1,3 +1,3 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`App Router should render app router 1`] = `<DocumentFragment />`;
+exports[`App Router > should render app router 1`] = `<DocumentFragment />`;

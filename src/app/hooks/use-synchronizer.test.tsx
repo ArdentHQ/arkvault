@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { useSynchronizer } from "./use-synchronizer";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
+import { vi } from "vitest";
 
 const wrapper = ({ children }: any) => (
 	<EnvironmentProvider env={env}>
@@ -34,8 +35,6 @@ describe("Synchronizer Hook", () => {
 	});
 
 	it("should stop jobs", async () => {
-		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
-
 		const Component = () => {
 			const { start, stop } = useSynchronizer(jobs);
 
@@ -52,16 +51,16 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		userEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});
 
 	it("should stop jobs and clear timers", async () => {
-		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
-
 		const Component = () => {
 			const { start, stop } = useSynchronizer(jobs);
 
@@ -78,16 +77,16 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		userEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});
 
 	it("should run periodically", async () => {
-		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
-
 		const Component = () => {
 			const { start } = useSynchronizer(jobs);
 
@@ -104,9 +103,11 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		unmount();
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});

@@ -498,15 +498,15 @@ describe("useSearchParametersValidation", () => {
 
 		expect(result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true))
 			.toMatchInlineSnapshot(`
-		<Trans
-		  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
-		  parent={[Function]}
-		  values={
-		    Object {
-		      "coin": undefined,
-		    }
-		  }
-		/>
-	`);
+				<Trans
+				  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+				  parent={[Function]}
+				  values={
+				    {
+				      "coin": undefined,
+				    }
+				  }
+				/>
+			`);
 	});
 });
