@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -114,7 +115,6 @@ describe("Dashboard", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
-
 		mockTransactionsAggregate.mockRestore();
 	});
 
