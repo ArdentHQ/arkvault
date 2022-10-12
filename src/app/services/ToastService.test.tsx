@@ -5,7 +5,6 @@ import { toast, ToastContainer, Id as ToastId } from "react-toastify";
 import { ToastService } from "./ToastService";
 import { toasts } from "@/app/services/index";
 import { act, render, screen } from "@/utils/testing-library";
-import { waitFor } from "@testing-library/react";
 
 let subject: ToastService;
 
@@ -106,17 +105,13 @@ describe("ToastService", () => {
 
 		expect(screen.queryByTestId("ToastMessage__content")).not.toBeInTheDocument();
 
-		act(() => {
-			userEvent.click(screen.getByTestId("show"));
-			vi.runAllTimers();
-		});
+		userEvent.click(screen.getByTestId("show"));
+		vi.runAllTimers();
 
 		await expect(screen.findByText("info message")).resolves.toBeInTheDocument();
 
-		act(() => {
-			userEvent.click(screen.getByTestId("update"));
-			vi.runAllTimers();
-		});
+		userEvent.click(screen.getByTestId("update"));
+		vi.runAllTimers();
 
 		await expect(screen.findByText("updated message")).resolves.toBeInTheDocument();
 	});

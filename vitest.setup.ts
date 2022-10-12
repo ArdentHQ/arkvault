@@ -60,14 +60,16 @@ vi.mock("react-idle-timer", () => {
 	};
 });
 
-// Reduce ledger connection retries to 2 in all tests.
-vi.mock("async-retry", async () => {
-	const retry = await vi.importActual("async-retry");
+// TODO this mock does not work as expected
 
-	return {
-		default: (fn, options) => retry(fn, { ...options, retries: 2 }),
-	};
-});
+// Reduce ledger connection retries to 2 in all tests.
+// vi.mock("async-retry", async () => {
+// 	const retry = await vi.importActual("async-retry");
+
+// 	return {
+// 		default: (fn, options) => retry(fn, { ...options, retries: 2 }),
+// 	};
+// });
 
 vi.mock("browser-fs-access");
 

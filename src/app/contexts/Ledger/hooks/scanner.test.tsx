@@ -1,11 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { useLedgerScanner } from "./scanner";
-import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger";
+import { useLedgerContext } from "@/app/contexts/Ledger";
 import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const walletsList = (wallets, isSelected) => (
 	<ul>
@@ -29,10 +29,12 @@ describe("Use Ledger Scanner", () => {
 	beforeAll(() => {
 		legacyPublicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+		mockNanoXTransport();
+	});
+
+	beforeEach(async () => {
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
 				data: [
 					{
 						address: "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES",
@@ -48,24 +50,13 @@ describe("Use Ledger Scanner", () => {
 					},
 				],
 				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", {
 				data: [],
 				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
+			}),
+		);
 
-		mockNanoXTransport();
-	});
-
-	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -123,11 +114,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		const { container } = render(<Component />);
 
 		userEvent.click(screen.getByRole("button"));
 
@@ -164,11 +151,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 
@@ -178,8 +161,6 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with toggleSelectAll", async () => {
@@ -198,11 +179,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByText("Scan"));
 
@@ -211,8 +188,6 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByText("Toggle All"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it.each([
@@ -235,11 +210,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByRole("button"));
 
@@ -275,11 +246,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 
@@ -324,17 +291,11 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByText("Scan"));
 
 		await expect(screen.findByText("Retry")).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		getExtendedPublicKeySpy.mockRestore();
 	});
@@ -357,19 +318,11 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 		userEvent.click(screen.getByTestId("abort"));
 
 		await expect(screen.findByText("Idle")).resolves.toBeVisible();
-
-		await new Promise((resolve) => setTimeout(resolve, 3000));
-
-		expect(container).toMatchSnapshot();
 	});
 });

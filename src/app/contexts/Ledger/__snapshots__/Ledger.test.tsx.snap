@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Ledger Provider should render ledger provider 1`] = `
+exports[`Ledger Provider > should render ledger provider 1`] = `
 <DocumentFragment>
   <div
     data-testid="content"

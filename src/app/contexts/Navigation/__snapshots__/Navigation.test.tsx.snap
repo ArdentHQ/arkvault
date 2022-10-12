@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Navigation Context should render the wrapper properly 1`] = `
+exports[`Navigation Context > should render the wrapper properly 1`] = `
 <DocumentFragment>
   <span
     data-testid="NavigationProvider__content"
@@ -10,7 +10,7 @@ exports[`Navigation Context should render the wrapper properly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Navigation Context should update navigation 1`] = `
+exports[`Navigation Context > should update navigation 1`] = `
 <DocumentFragment>
   <div
     data-testid="Navigation__consumer"

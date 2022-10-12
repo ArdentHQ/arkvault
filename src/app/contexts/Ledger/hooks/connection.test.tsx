@@ -19,6 +19,7 @@ import {
 	mockNanoXTransport,
 	mockLedgerTransportError,
 } from "@/utils/testing-library";
+import { vi } from "vitest";
 
 const LedgerWaitingDevice = "Waiting Device";
 
@@ -52,12 +53,12 @@ describe("Use Ledger Connection", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		vi.useFakeTimers();
+		// vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		vi.runOnlyPendingTimers();
-		vi.useRealTimers();
+		// vi.runOnlyPendingTimers();
+		// vi.useRealTimers();
 		getVersionSpy.mockRestore();
 	});
 
@@ -76,8 +77,7 @@ describe("Use Ledger Connection", () => {
 		return (
 			<div>
 				{error && <span>{error}</span>}
-				<span>{hasDeviceAvailable ? "On" : "Off"}</span>
-				<button onClick={handleImport}>Import</button>;
+				<button disabled={!hasDeviceAvailable} onClick={handleImport}>Import</button>;
 			</div>
 		);
 	};
@@ -87,18 +87,21 @@ describe("Use Ledger Connection", () => {
 
 		render(<Component />);
 
-		await expect(screen.findByText("Off")).resolves.toBeVisible();
-		await expect(screen.findByText("On")).resolves.toBeVisible();
+		expect(screen.getByRole("button")).toBeDisabled();
+
+		await waitFor(() => {
+			expect(screen.getByRole("button")).toBeEnabled();
+		});
 
 		listenSpy.mockReset();
 	});
 
-	it("should not have device available", async () => {
+	it("should not have device available", () => {
 		const listenSpy = mockLedgerTransportError("no device");
 
 		render(<Component />);
 
-		await expect(screen.findByText("Off")).resolves.toBeVisible();
+		expect(screen.getByRole("button")).toBeDisabled();
 
 		listenSpy.mockReset();
 	});
@@ -109,12 +112,14 @@ describe("Use Ledger Connection", () => {
 		render(<Component />);
 
 		await waitFor(() => {
-			expect(profile.wallets().count()).toBe(2);
+			expect(screen.getByRole("button")).toBeEnabled();
 		});
+
+		expect(profile.wallets().count()).toBe(2);
 
 		listenSpy.mockReset();
 
-		userEvent.click(screen.getByText("Import"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => {
 			expect(profile.wallets().count()).toBe(3);
@@ -128,7 +133,7 @@ describe("Use Ledger Connection", () => {
 		expect(importedWallet?.data().get(Contracts.WalletData.LedgerModel)).toBe(Contracts.WalletLedgerModel.NanoX);
 
 		profile.wallets().forget("DQx1w8KE7nEW1nX9gj9iWjMXnp8Q3xyn3y");
-		env.persist();
+		await env.persist();
 	});
 
 	describe("Ledger Connection", () => {
@@ -147,7 +152,7 @@ describe("Use Ledger Connection", () => {
 		}: {
 			userProfile?: Contracts.IProfile;
 			userWallet?: Contracts.IReadWriteWallet;
-			retryOptions?: retry.retryOptions;
+			retryOptions?: retry.Options;
 		}) => {
 			const {
 				connect,
@@ -220,7 +225,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 3 }} />);
+			render(<Component retryOptions={{ retries: 2 }} />);
 
 			userEvent.click(screen.getByText("Connect"));
 
@@ -235,7 +240,6 @@ describe("Use Ledger Connection", () => {
 			await expect(screen.findByText("Disconnected")).resolves.toBeVisible();
 
 			getPublicKeySpy.mockReset();
-
 			listenSpy.mockRestore();
 		});
 
@@ -246,7 +250,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 3 }} />);
+			render(<Component retryOptions={{ retries: 2 }} />);
 
 			userEvent.click(screen.getByText("Connect"));
 
@@ -261,12 +265,11 @@ describe("Use Ledger Connection", () => {
 			await expect(screen.findByText("Busy")).resolves.toBeVisible();
 
 			getPublicKeySpy.mockReset();
-
 			listenSpy.mockRestore();
 		});
 
 		it("should show disconnected warning message upon disconnecting device", async () => {
-			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementationOnce(vi.fn());
 
 			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -274,7 +277,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport();
 
-			render(<Component retryOptions={{ retries: 3 }} />);
+			render(<Component retryOptions={{ retries: 2 }} />);
 
 			userEvent.click(screen.getByText("Connect"));
 
@@ -291,12 +294,11 @@ describe("Use Ledger Connection", () => {
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith("Nano X disconnected"));
 
 			getPublicKeySpy.mockReset();
-
 			listenSpy.mockRestore();
 		});
 
 		it("should add default device model id", async () => {
-			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementationOnce(vi.fn());
 
 			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -304,7 +306,7 @@ describe("Use Ledger Connection", () => {
 
 			const listenSpy = mockNanoXTransport({ deviceModel: { id: null, productName: "Nano S" } });
 
-			render(<Component retryOptions={{ retries: 3 }} />);
+			render(<Component retryOptions={{ retries: 2 }} />);
 
 			userEvent.click(screen.getByText("Connect"));
 
@@ -321,16 +323,15 @@ describe("Use Ledger Connection", () => {
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith("Nano S disconnected"));
 
 			getPublicKeySpy.mockReset();
-
 			listenSpy.mockRestore();
 		});
 
 		it("should abort connection retries", async () => {
-			const listenSpy = mockNanoXTransport();
-
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
+
+			const listenSpy = mockNanoXTransport();
 
 			render(
 				<Component
@@ -338,7 +339,7 @@ describe("Use Ledger Connection", () => {
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
-						retries: 3,
+						retries: 2,
 					}}
 				/>,
 			);
@@ -353,26 +354,27 @@ describe("Use Ledger Connection", () => {
 			).resolves.toBeVisible();
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
-			await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
 
-			listenSpy.mockReset();
-			connectSpy.mockReset();
+			expect(connectSpy).toHaveBeenCalledTimes(1);
+
+			listenSpy.mockRestore();
+			connectSpy.mockRestore();
 		});
 
 		it("should fail to connect with retries", async () => {
-			const listenSpy = mockNanoXTransport();
-
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("CONNECTION_ERROR");
 			});
 
+			const listenSpy = mockNanoXTransport();
+
 			render(
 				<Component
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
-						retries: 3,
+						retries: 2,
 					}}
 				/>,
 			);
@@ -389,26 +391,27 @@ describe("Use Ledger Connection", () => {
 				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
 			).resolves.toBeVisible();
 
-			await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
+			expect(connectSpy).toHaveBeenCalledTimes(3);
+			// await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
 
-			connectSpy.mockReset();
-			listenSpy.mockReset();
+			listenSpy.mockRestore();
+			connectSpy.mockRestore();
 		});
 
 		it("should fail to connect unknown connection error and show generic connection error", async () => {
-			const listenSpy = mockNanoXTransport();
-
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw { statusText: "UNKNOWN_ERROR" };
 			});
 
+			const listenSpy = mockNanoXTransport();
+
 			render(
 				<Component
 					retryOptions={{
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
-						retries: 3,
+						retries: 2,
 					}}
 				/>,
 			);
@@ -427,8 +430,8 @@ describe("Use Ledger Connection", () => {
 
 			await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
 
-			connectSpy.mockReset();
-			listenSpy.mockReset();
+			listenSpy.mockRestore();
+			connectSpy.mockRestore();
 		});
 
 		it("should fail to connect with unknown error", async () => {
@@ -444,7 +447,7 @@ describe("Use Ledger Connection", () => {
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
-						retries: 3,
+						retries: 2,
 					}}
 				/>,
 			);
@@ -519,7 +522,7 @@ describe("Use Ledger Connection", () => {
 						factor: 1,
 						minTimeout: 10,
 						randomize: false,
-						retries: 3,
+						retries: 2,
 					}}
 				/>,
 			);

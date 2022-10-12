@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Configuration Context should render the wrapper properly 1`] = `
+exports[`Configuration Context > should render the wrapper properly 1`] = `
 <DocumentFragment>
   <span
     data-testid="ConfigurationProvider__content"
@@ -10,7 +10,7 @@ exports[`Configuration Context should render the wrapper properly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Configuration Context should update configuration 1`] = `
+exports[`Configuration Context > should update configuration 1`] = `
 <DocumentFragment>
   <div
     data-testid="Configuration__consumer"

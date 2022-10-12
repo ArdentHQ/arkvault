@@ -17,15 +17,13 @@ import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
 const history = createHashHistory();
 
-vi.setTimeout(7000);
-
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/domains/news/routing", () => {
-	const page = require("@/domains/news/pages/News");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/news/routing", async () => {
+	const page = await vi.importActual("@/domains/news/pages/News");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		NewsRoutes: [
@@ -38,9 +36,9 @@ vi.mock("@/domains/news/routing", () => {
 	};
 });
 
-vi.mock("@/domains/profile/routing", () => {
-	const page = require("@/domains/profile/pages/Welcome");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/profile/routing", async () => {
+	const page = await vi.importActual("@/domains/profile/pages/Welcome");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		ProfileRoutes: [

@@ -18,9 +18,9 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 
-vi.mock("@/domains/dashboard/routing", () => {
-	const page = require("@/domains/dashboard/pages/Dashboard");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/dashboard/routing", async () => {
+	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		DashboardRoutes: [
@@ -33,9 +33,9 @@ vi.mock("@/domains/dashboard/routing", () => {
 	};
 });
 
-vi.mock("@/domains/profile/routing", () => {
-	const page = require("@/domains/profile/pages/Welcome");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/profile/routing", async () => {
+	const page = await vi.importActual("@/domains/profile/pages/Welcome");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		ProfileRoutes: [
@@ -217,7 +217,7 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -284,20 +284,20 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
-		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
 
-		vi.restoreAllMocks();
+		toastSpy.mockRestore();
 	});
 
 	it("should enter profile and fail to restore", async () => {
@@ -307,7 +307,7 @@ describe("App", () => {
 		render(<App />, { history, withProviders: false });
 
 		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
@@ -320,13 +320,13 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
-		vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
 		vi.spyOn(passwordProtectedProfile.password(), "get").mockImplementation(() => {
 			throw new Error("restore error");
@@ -336,6 +336,6 @@ describe("App", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
-		vi.restoreAllMocks();
+		toastSpy.mockRestore();
 	});
 });

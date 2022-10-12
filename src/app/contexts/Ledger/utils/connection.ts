@@ -43,6 +43,7 @@ export const persistLedgerConnection = async ({
 	const retryAccess: retry.RetryFunction<void> = async (bail: (error: Error) => void, attempts: number) => {
 		if (hasRequestedAbort() && attempts > 1) {
 			bail(new Error("CONNECTION_ERROR"));
+			return;
 		}
 
 		try {
