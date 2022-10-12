@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
 import { vi } from "vitest";
+import { cloneDeep } from "@ardenthq/sdk-helpers";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -20,7 +21,6 @@ import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
 
 import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
 import order from "@/tests/fixtures/exchange/changenow/order.json";
-import { cloneDeep } from "@ardenthq/sdk-helpers";
 
 let profile: Contracts.IProfile;
 
@@ -283,9 +283,13 @@ describe("ExchangeForm", () => {
 	it("should show an error alert if the selected pair is unavailable", async () => {
 		server.use(
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
-			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, {
-				error: { message: "Unavailable Pair" },
-			}, { status: 400 }),
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/tickers/btc/eth`,
+				{
+					error: { message: "Unavailable Pair" },
+				},
+				{ status: 400 },
+			),
 		);
 
 		const onReady = vi.fn();
@@ -1112,29 +1116,21 @@ describe("ExchangeForm", () => {
 
 		server.use(
 			requestMock(`${exchangeBaseURL}/api/changenow/orders`, order, { method: "post" }),
-			requestMockOnce(
-				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
-				{ data: baseStatus },
-			),
-			requestMockOnce(
-				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
-				{ data: { ...baseStatus, status: "exchanging" } },
-			),
-			requestMockOnce(
-				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
-				{ data: { ...baseStatus, status: "sending" } },
-			),
-			requestMockOnce(
-				`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`,
-				{
-					data: {
-						...baseStatus,
-						payinHash: "payinHash",
-						payoutHash: "payoutHash",
-						status: "finished",
-					},
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: { ...baseStatus, status: "exchanging" },
+			}),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: { ...baseStatus, status: "sending" },
+			}),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: {
+					...baseStatus,
+					payinHash: "payinHash",
+					payoutHash: "payoutHash",
+					status: "finished",
 				},
-			),
+			}),
 		);
 
 		const onReady = vi.fn();
