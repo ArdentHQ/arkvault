@@ -1,8 +1,7 @@
 import { rest } from "msw";
 
 const endpoints = [
-	// { path: "/blockchain", data: require("../../fixtures/coins/ark/devnet/blockchain.json") },
-	{ path: "/", data: { data: "Hello World!" } },
+	{ path: "/blockchain", data: require("../../fixtures/coins/ark/mainnet/blockchain.json") },
 	{ path: "/delegates", data: require("../../fixtures/coins/ark/mainnet/delegates.json") },
 	{ path: "/peers", data: require("../../fixtures/coins/ark/mainnet/peers.json") },
 	{ path: "/node/configuration", data: require("../../fixtures/coins/ark/mainnet/configuration.json") },
@@ -20,6 +19,9 @@ export const mainnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
+	rest.get("https://ark-live.arkvault.io/", (_, response, context) => {
+		return response(context.status(200), context.json({ data: "Hello World!" }));
+	}),
 	rest.get(
 		"https://raw.githubusercontent.com/ArkEcosystem/common/master/mainnet/known-wallets-extended.json",
 		(_, response, context) => {

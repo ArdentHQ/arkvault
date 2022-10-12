@@ -4,7 +4,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import {
 	env,
@@ -19,6 +18,8 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
+import { vi } from "vitest";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -130,8 +131,13 @@ const waitUntilServerIsValidated = async () => {
 	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).toBeNull());
 };
 
-const mockPeerNetwork = () => nock(peerHostLive).persist().get("/").reply(200, peerResponse);
-const mockPeerHeight = () => nock(peerHostLive).persist().get("/api/blockchain").reply(200, peerResponseHeight);
+const mockPeerNetwork = () => server.use(
+	requestMock(peerHostLive, peerResponse),
+);
+
+const mockPeerHeight = () => server.use(
+	requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight),
+);
 
 describe("Servers Settings", () => {
 	let profileCoinSpy;
@@ -148,12 +154,6 @@ describe("Servers Settings", () => {
 			.wallets()
 			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", arkDevnet)!
 			.network();
-
-		nock.disableNetConnect();
-	});
-
-	afterAll(() => {
-		nock.cleanAll();
 	});
 
 	beforeEach(() => {
@@ -274,19 +274,17 @@ describe("Servers Settings", () => {
 
 			beforeEach(() => {
 				availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([network]);
-
-				nock.cleanAll();
 			});
 
 			afterEach(() => {
-				nock.cleanAll();
-
 				availableNetworksSpy.mockRestore();
 			});
 
 			it("should load the node statuses", async () => {
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(
+					requestMock(peerHostTest, peerResponse),
+					requestMock(musigHostTest, musigResponse),
+				);
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -310,8 +308,10 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses in an interval", async () => {
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(
+					requestMock(peerHostTest, peerResponse),
+					requestMock(musigHostTest, musigResponse),
+				);
 
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
@@ -354,9 +354,10 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error", async () => {
-				// Urls for the network
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(404);
+				server.use(
+					requestMock(peerHostTest, peerResponse),
+					requestMock(musigHostTest, undefined, { status: 404 }),
+				);
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -380,9 +381,10 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
-				// Urls for the network
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, "invalid-json");
+				server.use(
+					requestMock(peerHostTest, peerResponse),
+					requestMock(musigHostTest, "invalid json"),
+				);
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -420,9 +422,7 @@ describe("Servers Settings", () => {
 
 		describe("with reachable server", () => {
 			it("can fill the form and store the new server", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(requestMock(musigHostTest, musigResponse));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -447,8 +447,6 @@ describe("Servers Settings", () => {
 			});
 
 			it("can fill the form and store the new server for peer server", async () => {
-				nock.cleanAll();
-
 				mockPeerNetwork();
 
 				mockPeerHeight();
@@ -483,10 +481,9 @@ describe("Servers Settings", () => {
 			});
 
 			it("can fill the form with an ip host", async () => {
-				nock.cleanAll();
-
 				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-				nock("https://127.0.0.1").persist().get(/.*/).reply(200, musigResponse);
+
+				server.use(requestMock("https://127.0.0.1", musigResponse));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -508,7 +505,6 @@ describe("Servers Settings", () => {
 			});
 
 			it("should create a new server and save settings", async () => {
-				nock.cleanAll();
 				mockPeerNetwork();
 				mockPeerHeight();
 
@@ -567,9 +563,8 @@ describe("Servers Settings", () => {
 		describe("with invalid server", () => {
 			it("shows an error if the server is reachable but invalid", async () => {
 				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-				nock.cleanAll();
 
-				nock(musigHostTest).persist().get(/.*/).reply(200, { foo: "bar" });
+				server.use(requestMock(musigHostTest, { foo: "bar" }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -596,8 +591,6 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is valid but doesnt match the network", async () => {
-				nock.cleanAll();
-
 				mockPeerNetwork();
 
 				coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
@@ -625,9 +618,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is reachable but invalid json response", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(200, "invalid-response");
+				server.use(requestMock(musigHostTest, "invalid response"));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -652,9 +643,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is unreachable", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(500);
+				server.use(requestMock(musigHostTest, undefined, { status: 500 }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -714,11 +703,10 @@ describe("Servers Settings", () => {
 		beforeEach(() => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			nock.cleanAll();
-
-			nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
-
-			nock(musigHostLive).persist().get(/.*/).reply(200, musigResponse);
+			server.use(
+				requestMock(musigHostTest, musigResponse),
+				requestMock(musigHostLive, musigResponse),
+			);
 
 			mockPeerNetwork();
 		});
@@ -1259,8 +1247,6 @@ describe("Servers Settings", () => {
 		});
 
 		it("can update a server", async () => {
-			nock.cleanAll();
-
 			mockPeerNetwork();
 
 			render(
@@ -1367,13 +1353,11 @@ describe("Servers Settings", () => {
 		beforeEach(() => {
 			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			nock.cleanAll();
-
-			nock(musigHostTest).persist().get(/.*/).reply(403);
-
-			nock(musigHostLive).persist().get(/.*/).reply(500);
-
-			nock(peerHostLive).persist().get(/.*/).reply(404);
+			server.use(
+				requestMock(musigHostTest, undefined, { status: 403 }),
+				requestMock(musigHostLive, undefined, { status: 500 }),
+				requestMock(peerHostLive, undefined, { status: 404 }),
+			);
 		});
 
 		afterEach(() => {

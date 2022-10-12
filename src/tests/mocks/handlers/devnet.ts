@@ -3,7 +3,6 @@ import { rest } from "msw";
 import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 
 const endpoints = [
-	{ path: "/", data: { data: "Hello World!" } },
 	{ path: "/blockchain", data: require("../../fixtures/coins/ark/devnet/blockchain.json") },
 	{ path: "/node/configuration", data: require("../../fixtures/coins/ark/devnet/configuration.json") },
 	{ path: "/node/fees", data: require("../../fixtures/coins/ark/devnet/node-fees.json") },
@@ -40,6 +39,9 @@ export const devnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
+	rest.get("https://ark-test.arkvault.io/", (_, response, context) => {
+		return response(context.status(200), context.json({ data: "Hello World!" }));
+	}),
 	rest.get(
 		"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
 		(_, response, context) => {
