@@ -121,7 +121,6 @@ describe("Dashboard", () => {
 
 	it("should open modal when click on a transaction", async () => {
 		const transactions = (await profile.transactionAggregate().all({ limit: 10 })).items();
-
 		const mockTransactionsAggregate = jest
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
@@ -146,6 +145,10 @@ describe("Dashboard", () => {
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
 		mockTransactionsAggregate.mockRestore();
 	});
