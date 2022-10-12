@@ -98,7 +98,9 @@ describe("Clipboard", () => {
 	describe("on error", () => {
 		beforeAll(() => {
 			(navigator as any).clipboard = {
-				writeText: vi.fn().mockRejectedValue(new Error("writeText rejected.")),
+				writeText: vi.fn().mockImplementation(() => {
+					throw new Error("writeText rejected.");
+				}),
 			};
 		});
 

@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
@@ -7,20 +8,20 @@ import { render, screen } from "@/utils/testing-library";
 
 const history = createHashHistory();
 
-const leftIcon = "chevron-left-small.svg";
+const leftIcon = "svg#chevron-left-small";
 
 describe("BackButton", () => {
 	it("should render", () => {
 		const { container } = render(<BackButton />, { history });
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render when disabled", () => {
 		const { container } = render(<BackButton disabled />, { history });
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -33,7 +34,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(-1);
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -48,7 +49,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith("new-url");
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -63,7 +64,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -78,7 +79,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent(leftIcon);
+		expect(document.querySelector(leftIcon)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();

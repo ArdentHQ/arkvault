@@ -8,7 +8,8 @@ describe("TableRemoveButton", () => {
 	it("should render", () => {
 		const { container } = render(<TableRemoveButton onClick={vi.fn()} />);
 
-		expect(screen.getByTestId("TableRemoveButton")).toHaveTextContent("trash.svg");
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("TableRemoveButton").querySelector("svg#trash")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -16,7 +17,8 @@ describe("TableRemoveButton", () => {
 	it("should render compact", () => {
 		const { container } = render(<TableRemoveButton onClick={vi.fn()} isCompact />);
 
-		expect(screen.getByTestId("TableRemoveButton--compact")).toHaveTextContent("trash.svg");
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("TableRemoveButton--compact").querySelector("svg#trash")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
