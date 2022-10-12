@@ -87,7 +87,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	const { isBusy } = useLedgerContext();
 
-	const showSkeleton = (isScanning || (isBusy && /* istanbul ignore next -- @preserve */ wallets.length === 0)) && !isScanningMore;
+	const showSkeleton =
+		(isScanning || (isBusy && /* istanbul ignore next -- @preserve */ wallets.length === 0)) && !isScanningMore;
 
 	const data = useMemo(() => {
 		const skeletonRows = Array.from<LedgerData>({ length: 5 }).fill({} as LedgerData);
