@@ -54,18 +54,18 @@ describe("Dashboard", () => {
 
 		profile = env.profiles().findById(fixtureProfileId);
 
-		// const wallet = await profile.walletFactory().fromAddress({
-		// 	address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-		// 	coin: "ARK",
-		// 	network: "ark.mainnet",
-		// });
+		const wallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
 
-		// profile.wallets().push(wallet);
+		profile.wallets().push(wallet);
 
-		// await syncDelegates(profile);
+		await syncDelegates(profile);
 
-		// await env.profiles().restore(profile);
-		// await profile.sync();
+		await env.profiles().restore(profile);
+		await profile.sync();
 
 		useDefaultNetMocks();
 
