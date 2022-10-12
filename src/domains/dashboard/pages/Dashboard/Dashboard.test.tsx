@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import nock from "nock";
 import React from "react";
@@ -8,7 +7,6 @@ import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
 import {
 	env,
 	getDefaultProfileId,
@@ -115,6 +113,7 @@ describe("Dashboard", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+
 		mockTransactionsAggregate.mockRestore();
 	});
 
