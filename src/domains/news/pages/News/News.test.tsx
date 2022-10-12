@@ -62,7 +62,7 @@ describe("News", () => {
 	beforeAll(() => {
 		server.use(requestMock(`${newsBasePath}`, pageReply(page1Fixture)));
 
-		vi.spyOn(window, "scrollTo").mockImplementation();
+		vi.spyOn(window, "scrollTo").mockImplementation(vi.fn());
 	});
 
 	beforeEach(() => {
@@ -225,7 +225,7 @@ describe("News", () => {
 	it("should show warning toast when trying to deselect all categories", async () => {
 		renderPage();
 
-		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 
