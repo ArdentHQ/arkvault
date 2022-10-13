@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Avatar should render with profile image 1`] = `
+exports[`Avatar > should render with profile image 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-tthe5h"
@@ -21,7 +21,7 @@ exports[`Avatar should render with profile image 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Avatar should render with svg 1`] = `
+exports[`Avatar > should render with svg 1`] = `
 <DocumentFragment>
   <div
     class="shrink-0 css-tthe5h"

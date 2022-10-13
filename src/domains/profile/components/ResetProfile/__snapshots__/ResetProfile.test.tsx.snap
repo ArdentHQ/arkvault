@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ResetProfile should render 1`] = `
+exports[`ResetProfile > should render 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`ResetProfile should render 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -50,8 +67,40 @@ exports[`ResetProfile should render 1`] = `
           >
             <svg
               class="m-auto my-8 max-w-52"
+              viewBox="0 0 207 106"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              warning-light.svg
+              <path
+                d="M131.5 68.9l11.6-11.6c2.4-2.4 2.4-6.2 0-8.6l-35.3-35.3c-2.4-2.4-6.2-2.4-8.6 0L63.9 48.7c-2.4 2.4-2.4 6.2 0 8.6l35.3 35.3c2.4 2.4 6.2 2.4 8.6 0l12.4-12.4m6.7-6.8l-2.7 2.7"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M89.5 16.7l7.6-7.6c3.5-3.5 9.3-3.5 12.8 0l37.4 37.4c3.5 3.5 3.5 9.3 0 12.8l-37.4 37.4c-3.5 3.5-9.3 3.5-12.8 0L59.7 59.4c-3.5-3.5-3.5-9.3 0-12.8L73.3 33m13.2-13.2l-9.8 9.8"
+                fill="none"
+                stroke="#FC9F0F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M100.5 40.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6v13.9c0 2-1.6 3.6-3.6 3.6s-3.6-1.6-3.6-3.6V40.4zm0 25.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6z"
+                fill="#F7FAFB"
+                stroke="#212225"
+                stroke-width="2"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7z"
+                fill="#DBDEE5"
+              />
+              <path
+                d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm103.8 0h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm-43 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm66 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-66h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7V8h7V1h2v7h7v2h-7v7z"
+                fill="#DBDEE5"
+              />
             </svg>
             <div
               class="flex flex-col overflow-hidden rounded-xl"
@@ -64,8 +113,36 @@ exports[`ResetProfile should render 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    circle-exclamation-mark.svg
+                  <svg
+                    id="circle-exclamation-mark"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
                   </svg>
                 </div>
                 <span>
@@ -105,8 +182,18 @@ exports[`ResetProfile should render 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      arrow-rotate-right.svg
+                    <svg
+                      id="arrow-rotate-right"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9.99 20c-1.407 0-2.81-.296-4.127-.883A9.767 9.767 0 0 1 .631 13.54C-1.29 8.323 1.325 2.538 6.46.645c3.712-1.36 7.715-.535 10.49 2.148v-.87a1.129 1.129 0 1 1 2.26 0V5.52a1.13 1.13 0 0 1-.28.742h-.002a1.123 1.123 0 0 1-.775.382l-.08.003h-3.587a1.129 1.129 0 1 1 0-2.259h.864c-2.148-2.05-5.238-2.674-8.111-1.622C3.275 4.227 1.26 8.71 2.75 12.76a7.521 7.521 0 0 0 4.033 4.294 7.86 7.86 0 0 0 5.96.191 7.656 7.656 0 0 0 4.31-3.998 1.129 1.129 0 1 1 2.056.938 9.94 9.94 0 0 1-5.588 5.18A10.193 10.193 0 0 1 9.99 20z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </div>
                   <span>

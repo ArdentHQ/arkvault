@@ -25,6 +25,7 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { vi } from "vitest";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
@@ -61,7 +62,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	beforeEach(() => {
-		toastUpdateSpy = vi.spyOn(toasts, "update").mockImplementation();
+		toastUpdateSpy = vi.spyOn(toasts, "update").mockImplementation(vi.fn());
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -82,7 +83,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
-				withProviders: true,
 			},
 		);
 
@@ -103,7 +103,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
-				withProviders: true,
 			},
 		);
 
@@ -131,7 +130,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
-				withProviders: true,
 			},
 		);
 
@@ -161,7 +159,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=doge&network=ark.mainnet",
-				withProviders: true,
 			},
 		);
 
@@ -182,7 +179,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=ark",
-				withProviders: true,
 			},
 		);
 
@@ -221,7 +217,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=nuke&coin=ark&network=ark.mainnet",
-				withProviders: true,
 			},
 		);
 
@@ -242,7 +237,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=ark",
-				withProviders: true,
 			},
 		);
 
@@ -263,7 +257,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=ark&network=custom",
-				withProviders: true,
 			},
 		);
 
@@ -284,7 +277,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: mainnetDeepLink,
-				withProviders: true,
 			},
 		);
 
@@ -306,7 +298,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
-				withProviders: true,
 			},
 		);
 
@@ -333,7 +324,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: `/?method=transfer&coin=ark&nethash=${nethash}`,
-				withProviders: true,
 			},
 		);
 
@@ -354,7 +344,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=ark&network=ark.devnet",
-				withProviders: true,
 			},
 		);
 
@@ -373,7 +362,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-				withProviders: true,
 			},
 		);
 
@@ -385,7 +373,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should redirect to profile if only one available", async () => {
-		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const profilesSpy = vi.spyOn(env, "profiles").mockImplementationOnce(() => ({
 			findById: () => profile,
@@ -400,7 +388,6 @@ describe("Welcome with deeplink", () => {
 				history,
 				// Using transfer page as an example
 				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-				withProviders: true,
 			},
 		);
 
@@ -420,7 +407,7 @@ describe("Welcome with deeplink", () => {
 			.spyOn(passwordProtectedProfile.password(), "get")
 			.mockReturnValue(getDefaultPassword());
 
-		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const profilesSpy = vi.spyOn(env, "profiles").mockImplementationOnce(() => ({
 			findById: () => passwordProtectedProfile,
@@ -435,7 +422,6 @@ describe("Welcome with deeplink", () => {
 				history,
 				// Using transfer page as an example
 				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
-				withProviders: true,
 			},
 		);
 
@@ -456,7 +442,7 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should prompt the user to select a profile", async () => {
-		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/">
@@ -465,7 +451,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: mainnetDeepLink,
-				withProviders: true,
 			},
 		);
 
@@ -480,7 +465,7 @@ describe("Welcome with deeplink", () => {
 		["createProfile", ProfilePaths.CreateProfile],
 		["importProfile", ProfilePaths.ImportProfile],
 	])("should clear deeplink and do not show a warning toast in %s page", async (page, path) => {
-		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/">
@@ -489,7 +474,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: mainnetDeepLink,
-				withProviders: true,
 			},
 		);
 
@@ -514,13 +498,12 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: mainnetDeepLink,
-				withProviders: true,
 			},
 		);
 
 		unmount();
 
-		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Number));
+		expect(clearTimeoutSpy).toHaveBeenCalledWith(expect.any(Object));
 
 		clearTimeoutSpy.mockRestore();
 	});
@@ -533,7 +516,6 @@ describe("Welcome with deeplink", () => {
 			{
 				history,
 				route: "/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
-				withProviders: true,
 			},
 		);
 
@@ -794,10 +776,6 @@ describe("Welcome", () => {
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 		expect(screen.getByTestId(passwordTestID)).toBeDisabled();
 
-		act(() => {
-			vi.advanceTimersByTime(15_000);
-		});
-
 		// Close
 		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
@@ -807,30 +785,27 @@ describe("Welcome", () => {
 		// Still disabled
 		expect(screen.getByTestId(submitTestID)).toBeDisabled();
 
-		act(() => {
-			vi.advanceTimersByTime(50_000);
-			vi.clearAllTimers();
-		});
+		// the timer seems to update only every two seconds
+		vi.advanceTimersByTime(120_000);
 
 		// wait for form to be updated
 		await expect(screen.findByTestId(submitTestID)).resolves.toBeVisible();
 
-		await waitFor(
-			() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"),
-			{
-				timeout: 10_000,
-			},
-		);
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid");
+		});
 
 		vi.useRealTimers();
 	});
 
-	it("should change route to create profile", () => {
+	it("should change route to create profile", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 
 		expect(container).toBeInTheDocument();
 
-		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+		});
 
 		userEvent.click(screen.getByText(commonTranslations.CREATE));
 
@@ -838,7 +813,7 @@ describe("Welcome", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render without profiles", () => {
+	it("should render without profiles", async () => {
 		env.reset({ coins: {}, httpClient, storage: new StubStorage() });
 
 		const { container, asFragment } = render(
@@ -849,19 +824,23 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITHOUT_PROFILES.TITLE)).toBeInTheDocument();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should use the system theme", () => {
+	it("should use the system theme", async () => {
 		const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
 		render(<Welcome />);
 
-		expect(spy).toHaveBeenNthCalledWith(1, theme);
+		await waitFor(() => {
+			expect(spy).toHaveBeenNthCalledWith(1, theme);
+		});
 
 		spy.mockRestore();
 	});
