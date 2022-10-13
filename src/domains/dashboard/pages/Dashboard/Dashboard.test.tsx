@@ -32,6 +32,10 @@ jest.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
+jest.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("Dashboard", () => {
 	beforeAll(async () => {
 		useDefaultNetMocks();

@@ -23,6 +23,7 @@ import {
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
+const webWidgetSelector = "#webWidget";
 
 jest.spyOn(environmentHooks, "useActiveProfile").mockImplementation(() =>
 	mockedTestEnvironment.profiles().findById(getDefaultProfileId()),
@@ -220,6 +221,48 @@ describe("NavigationBar", () => {
 		expect(history.location.pathname).toBe("/test");
 
 		getUserMenuActionsMock.mockRestore();
+	});
+
+	it("should open support chat when clicking contact menu", async () => {
+		// @ts-ignore
+		const widgetMock = jest.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
+			if (selector === webWidgetSelector) {
+				return {
+					contentWindow: {
+						document: {
+							body: {
+								classList: {
+									add: jest.fn(),
+									remove: jest.fn(),
+								},
+								insertAdjacentHTML: jest.fn(),
+							},
+						},
+					},
+				};
+			}
+		});
+
+		const getUserMenuActionsMock = jest
+			.spyOn(navigation, "getUserMenuActions")
+			.mockReturnValue([{ label: "Option 1", mountPath: () => "/", title: "test2", value: "contact" }]);
+
+		const { history } = render(<NavigationBar />);
+		const toggle = screen.getByTestId("UserMenu");
+
+		userEvent.click(toggle);
+
+		expect(screen.getByText("Option 1")).toBeInTheDocument();
+
+		userEvent.click(screen.getByText("Option 1"));
+
+		expect(history.location.pathname).toBe("/");
+
+		await waitFor(() => expect(widgetMock).toHaveBeenCalledWith(webWidgetSelector));
+
+		getUserMenuActionsMock.mockRestore();
+
+		widgetMock.mockRestore();
 	});
 
 	it("should handle click to send button", () => {
