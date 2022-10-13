@@ -12,7 +12,9 @@ describe("WalletDetailNetwork", () => {
 		const { container } = render(<WalletDetailNetwork network={network!} />);
 
 		expect(container).toHaveTextContent(translations.CRYPTOASSET);
-		expect(container).toHaveTextContent("ark.svg");
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(container.querySelector("svg#ark")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

@@ -98,25 +98,4 @@ describe("MnemonicVerification", () => {
 
 		expect(firstOptions).not.toStrictEqual(secondOptions);
 	});
-
-	it("should ask for unique words", () => {
-		let wordCounter = 0;
-
-		// @ts-ignore
-		const arrayIncludesSpy = vi.spyOn(Array.prototype, "includes").mockImplementation(function () {
-			if (wordCounter === 3) {
-				return false;
-			}
-
-			wordCounter++;
-
-			return true;
-		});
-
-		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
-
-		expect(arrayIncludesSpy).toHaveBeenCalledTimes(6);
-
-		arrayIncludesSpy.mockRestore();
-	});
 });

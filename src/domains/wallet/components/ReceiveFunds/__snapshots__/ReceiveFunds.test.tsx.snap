@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ReceiveFunds should not render qrcode without an address 1`] = `
+exports[`ReceiveFunds > should not render qrcode without an address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -99,8 +116,28 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                               height="16"
                               width="16"
                             >
-                              <svg>
-                                copy.svg
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -123,8 +160,19 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        ark.svg
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                          id="ark-icon"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -166,7 +214,7 @@ exports[`ReceiveFunds should not render qrcode without an address 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ReceiveFunds should render with a wallet name 1`] = `
+exports[`ReceiveFunds > should render with a wallet name 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -196,8 +244,25 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -259,8 +324,19 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        ark.svg
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                          id="ark-icon"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -316,8 +392,28 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                               height="16"
                               width="16"
                             >
-                              <svg>
-                                copy.svg
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -366,7 +462,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                 alt="QR Code"
                 class="h-64 w-64 rounded-lg border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
                 data-testid="ReceiveFunds__qrcode"
-                src="data:image/png;base64,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"
+                src="data:image/png;base64,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"
               />
             </div>
             <div
@@ -385,8 +481,20 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      download.svg
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 9.867v1.477a2.871 2.871 0 0 1-2.878 2.878H3.878C2.322 14.222 1 12.9 1 11.344V9.867M7.961 1v8.633m3.656-3.655L7.96 9.633 4.383 5.978"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                   <span>
@@ -403,7 +511,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ReceiveFunds should render without a wallet name 1`] = `
+exports[`ReceiveFunds > should render without a wallet name 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -433,8 +541,25 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -509,8 +634,28 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                               height="16"
                               width="16"
                             >
-                              <svg>
-                                copy.svg
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
                               </svg>
                             </div>
                           </button>
@@ -533,8 +678,19 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        ark.svg
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                          id="ark-icon"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -575,7 +731,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                 alt="QR Code"
                 class="h-64 w-64 rounded-lg border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
                 data-testid="ReceiveFunds__qrcode"
-                src="data:image/png;base64,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"
+                src="data:image/png;base64,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"
               />
             </div>
             <div
@@ -594,8 +750,20 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      download.svg
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 9.867v1.477a2.871 2.871 0 0 1-2.878 2.878H3.878C2.322 14.222 1 12.9 1 11.344V9.867M7.961 1v8.633m3.656-3.655L7.96 9.633 4.383 5.978"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                   <span>

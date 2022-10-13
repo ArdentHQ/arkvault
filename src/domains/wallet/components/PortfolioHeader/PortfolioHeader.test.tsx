@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
@@ -54,9 +53,9 @@ describe("Portfolio grouped networks", () => {
 	beforeAll(async () => {
 		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
+		// nock("https://neoscan.io/api/main_net/v1/")
+		// 	.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
+		// 	.reply(200, []);
 
 		emptyProfile = await env.profiles().create("Empty");
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -89,7 +88,7 @@ describe("Portfolio grouped networks", () => {
 		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
-	it("should render list", async () => {
+	it.only("should render list", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />

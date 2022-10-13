@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletsControls should render 1`] = `
+exports[`WalletsControls > should render 1`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -30,8 +30,25 @@ exports[`WalletsControls should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -68,8 +85,18 @@ exports[`WalletsControls should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -96,8 +123,28 @@ exports[`WalletsControls should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -122,8 +169,25 @@ exports[`WalletsControls should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -150,8 +214,25 @@ exports[`WalletsControls should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -162,7 +243,7 @@ exports[`WalletsControls should render 1`] = `
 </div>
 `;
 
-exports[`WalletsControls should render responsive 1`] = `
+exports[`WalletsControls > should render responsive 1`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -192,8 +273,25 @@ exports[`WalletsControls should render responsive 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -230,8 +328,18 @@ exports[`WalletsControls should render responsive 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -258,8 +366,28 @@ exports[`WalletsControls should render responsive 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -284,8 +412,25 @@ exports[`WalletsControls should render responsive 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -312,8 +457,25 @@ exports[`WalletsControls should render responsive 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -324,7 +486,7 @@ exports[`WalletsControls should render responsive 1`] = `
 </div>
 `;
 
-exports[`WalletsControls should render responsive 2`] = `
+exports[`WalletsControls > should render responsive 2`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -354,8 +516,25 @@ exports[`WalletsControls should render responsive 2`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -392,8 +571,18 @@ exports[`WalletsControls should render responsive 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -420,8 +609,28 @@ exports[`WalletsControls should render responsive 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -446,8 +655,25 @@ exports[`WalletsControls should render responsive 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -474,8 +700,25 @@ exports[`WalletsControls should render responsive 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -486,7 +729,7 @@ exports[`WalletsControls should render responsive 2`] = `
 </div>
 `;
 
-exports[`WalletsControls should render responsive 3`] = `
+exports[`WalletsControls > should render responsive 3`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -516,8 +759,25 @@ exports[`WalletsControls should render responsive 3`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -554,8 +814,18 @@ exports[`WalletsControls should render responsive 3`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -582,8 +852,28 @@ exports[`WalletsControls should render responsive 3`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -608,8 +898,25 @@ exports[`WalletsControls should render responsive 3`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -636,8 +943,25 @@ exports[`WalletsControls should render responsive 3`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -648,7 +972,7 @@ exports[`WalletsControls should render responsive 3`] = `
 </div>
 `;
 
-exports[`WalletsControls should render responsive 4`] = `
+exports[`WalletsControls > should render responsive 4`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -678,8 +1002,25 @@ exports[`WalletsControls should render responsive 4`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -716,8 +1057,18 @@ exports[`WalletsControls should render responsive 4`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -744,8 +1095,28 @@ exports[`WalletsControls should render responsive 4`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -770,8 +1141,25 @@ exports[`WalletsControls should render responsive 4`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -798,8 +1186,25 @@ exports[`WalletsControls should render responsive 4`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -810,7 +1215,7 @@ exports[`WalletsControls should render responsive 4`] = `
 </div>
 `;
 
-exports[`WalletsControls should render responsive 5`] = `
+exports[`WalletsControls > should render responsive 5`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -840,8 +1245,25 @@ exports[`WalletsControls should render responsive 5`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -878,8 +1300,18 @@ exports[`WalletsControls should render responsive 5`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -906,8 +1338,28 @@ exports[`WalletsControls should render responsive 5`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -932,8 +1384,25 @@ exports[`WalletsControls should render responsive 5`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -960,8 +1429,25 @@ exports[`WalletsControls should render responsive 5`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>
@@ -972,7 +1458,7 @@ exports[`WalletsControls should render responsive 5`] = `
 </div>
 `;
 
-exports[`WalletsControls should render with networks selection 1`] = `
+exports[`WalletsControls > should render with networks selection 1`] = `
 <div>
   <div
     class="flex items-center justify-end"
@@ -1002,8 +1488,25 @@ exports[`WalletsControls should render with networks selection 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      sliders-vertical.svg
+                    <svg
+                      id="sliders-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -1040,8 +1543,18 @@ exports[`WalletsControls should render with networks selection 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                ledger.svg
+              <svg
+                id="ledger"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
             <span
@@ -1068,8 +1581,28 @@ exports[`WalletsControls should render with networks selection 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-turn-down-bracket.svg
+              <svg
+                id="arrow-turn-down-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                  />
+                  <path
+                    d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -1094,8 +1627,25 @@ exports[`WalletsControls should render with networks selection 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -1122,8 +1672,25 @@ exports[`WalletsControls should render with networks selection 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </span>

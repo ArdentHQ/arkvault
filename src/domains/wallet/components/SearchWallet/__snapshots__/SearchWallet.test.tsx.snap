@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SearchWallet uses fiat value = false should render 1`] = `
+exports[`SearchWallet uses fiat value = false > should render 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -94,8 +111,22 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -126,8 +157,22 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -169,8 +214,25 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -209,8 +271,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -313,8 +386,19 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -405,7 +489,7 @@ exports[`SearchWallet uses fiat value = false should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render compact on md screen 1`] = `
+exports[`SearchWallet uses fiat value = false > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -435,8 +519,25 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -499,8 +600,22 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -531,8 +646,22 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -574,8 +703,25 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -788,7 +934,7 @@ exports[`SearchWallet uses fiat value = false should render compact on md screen
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render compact with selected address 1`] = `
+exports[`SearchWallet uses fiat value = false > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -818,8 +964,25 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -882,8 +1045,22 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -914,8 +1091,22 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -957,8 +1148,25 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1171,7 +1379,7 @@ exports[`SearchWallet uses fiat value = false should render compact with selecte
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render expanded on > md screen according to user settings 1`] = `
+exports[`SearchWallet uses fiat value = false > should render expanded on > md screen according to user settings 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -1201,8 +1409,25 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1265,8 +1490,22 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -1297,8 +1536,22 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -1340,8 +1593,25 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1380,8 +1650,19 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1484,8 +1765,19 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1576,7 +1868,7 @@ exports[`SearchWallet uses fiat value = false should render expanded on > md scr
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render responsive item 1`] = `
+exports[`SearchWallet uses fiat value = false > should render responsive item 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -1606,8 +1898,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1650,8 +1959,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -1680,8 +2006,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -1728,8 +2071,19 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -1823,8 +2177,19 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -1899,7 +2264,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 1`] 
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render responsive item 2`] = `
+exports[`SearchWallet uses fiat value = false > should render responsive item 2`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -1929,8 +2294,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1973,8 +2355,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -2003,8 +2402,25 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -2051,8 +2467,19 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -2146,8 +2573,19 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -2222,7 +2660,7 @@ exports[`SearchWallet uses fiat value = false should render responsive item 2`] 
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render responsive with selected address 1`] = `
+exports[`SearchWallet uses fiat value = false > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2252,8 +2690,25 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -2296,8 +2751,25 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -2326,8 +2798,25 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -2374,8 +2863,19 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -2469,8 +2969,19 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -2545,7 +3056,7 @@ exports[`SearchWallet uses fiat value = false should render responsive with sele
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render with selected address 1`] = `
+exports[`SearchWallet uses fiat value = false > should render with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2575,8 +3086,25 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -2639,8 +3167,22 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -2671,8 +3213,22 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -2714,8 +3270,25 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2754,8 +3327,19 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2858,8 +3442,19 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2950,7 +3545,7 @@ exports[`SearchWallet uses fiat value = false should render with selected addres
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = false should render with the default exchange currency enabled from profile settings 1`] = `
+exports[`SearchWallet uses fiat value = false > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2980,8 +3575,25 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3044,8 +3656,22 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3076,8 +3702,22 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3119,8 +3759,25 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3159,8 +3816,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3263,8 +3931,19 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3355,7 +4034,7 @@ exports[`SearchWallet uses fiat value = false should render with the default exc
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render 1`] = `
+exports[`SearchWallet uses fiat value = true > should render 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -3385,8 +4064,25 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3449,8 +4145,22 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3481,8 +4191,22 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3513,8 +4237,22 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3556,8 +4294,25 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3597,8 +4352,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3716,8 +4482,19 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3822,7 +4599,7 @@ exports[`SearchWallet uses fiat value = true should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render compact on md screen 1`] = `
+exports[`SearchWallet uses fiat value = true > should render compact on md screen 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -3852,8 +4629,25 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3916,8 +4710,22 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3948,8 +4756,22 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -3980,8 +4802,22 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4023,8 +4859,25 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -4265,7 +5118,7 @@ exports[`SearchWallet uses fiat value = true should render compact on md screen 
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render compact with selected address 1`] = `
+exports[`SearchWallet uses fiat value = true > should render compact with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -4295,8 +5148,25 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -4359,8 +5229,22 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4391,8 +5275,22 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4423,8 +5321,22 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4466,8 +5378,25 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -4708,7 +5637,7 @@ exports[`SearchWallet uses fiat value = true should render compact with selected
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render expanded on > md screen according to user settings 1`] = `
+exports[`SearchWallet uses fiat value = true > should render expanded on > md screen according to user settings 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -4738,8 +5667,25 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -4802,8 +5748,22 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4834,8 +5794,22 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4866,8 +5840,22 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -4909,8 +5897,25 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -4949,8 +5954,19 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -5067,8 +6083,19 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -5173,7 +6200,7 @@ exports[`SearchWallet uses fiat value = true should render expanded on > md scre
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render responsive item 1`] = `
+exports[`SearchWallet uses fiat value = true > should render responsive item 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -5203,8 +6230,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -5247,8 +6291,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -5277,8 +6338,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -5325,8 +6403,19 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -5420,8 +6509,19 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -5496,7 +6596,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 1`] =
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render responsive item 2`] = `
+exports[`SearchWallet uses fiat value = true > should render responsive item 2`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -5526,8 +6626,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -5570,8 +6687,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -5600,8 +6734,25 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -5648,8 +6799,19 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -5743,8 +6905,19 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -5819,7 +6992,7 @@ exports[`SearchWallet uses fiat value = true should render responsive item 2`] =
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render responsive with selected address 1`] = `
+exports[`SearchWallet uses fiat value = true > should render responsive with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -5849,8 +7022,25 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -5893,8 +7083,25 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        cross.svg
+                      <svg
+                        id="cross"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </button>
@@ -5923,8 +7130,25 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      magnifying-glass.svg
+                    <svg
+                      id="magnifying-glass"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -5971,8 +7195,19 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -6066,8 +7301,19 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
                                     height="20"
                                     width="20"
                                   >
-                                    <svg>
-                                      ark.svg
+                                    <svg
+                                      id="Layer_1"
+                                      viewBox="0 0 36.3 30.6"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
+                                    >
+                                      <path
+                                        d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                        fill="currentColor"
+                                        id="ark-icon"
+                                      />
                                     </svg>
                                   </div>
                                 </div>
@@ -6142,7 +7388,7 @@ exports[`SearchWallet uses fiat value = true should render responsive with selec
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render with selected address 1`] = `
+exports[`SearchWallet uses fiat value = true > should render with selected address 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -6172,8 +7418,25 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -6236,8 +7499,22 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6268,8 +7545,22 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6300,8 +7591,22 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6343,8 +7648,25 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -6383,8 +7705,19 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -6501,8 +7834,19 @@ exports[`SearchWallet uses fiat value = true should render with selected address
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -6607,7 +7951,7 @@ exports[`SearchWallet uses fiat value = true should render with selected address
 </DocumentFragment>
 `;
 
-exports[`SearchWallet uses fiat value = true should render with the default exchange currency enabled from profile settings 1`] = `
+exports[`SearchWallet uses fiat value = true > should render with the default exchange currency enabled from profile settings 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -6637,8 +7981,25 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -6701,8 +8062,22 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6733,8 +8108,22 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6765,8 +8154,22 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -6808,8 +8211,25 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        magnifying-glass.svg
+                                      <svg
+                                        id="magnifying-glass"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -6848,8 +8268,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -6966,8 +8397,19 @@ exports[`SearchWallet uses fiat value = true should render with the default exch
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  ark.svg
+                                <svg
+                                  id="Layer_1"
+                                  viewBox="0 0 36.3 30.6"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                                    fill="currentColor"
+                                    id="ark-icon"
+                                  />
                                 </svg>
                               </div>
                             </div>

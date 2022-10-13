@@ -76,7 +76,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should do nothing after qr download if user closes file dialog", async () => {
-		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation();
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
@@ -86,7 +86,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should not call success toast after qr download for legacy browsers", async () => {
-		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation();
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		vi.spyOn(global, "fetch").mockImplementation(() =>
 			Promise.resolve({
 				blob: () => Promise.resolve(new Blob()),
@@ -103,7 +103,7 @@ describe("ReceiveFunds", () => {
 	});
 
 	it("should handle qr image download", async () => {
-		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation();
+		const successToastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		Object.defineProperty(window, "showSaveFilePicker", vi.fn());
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
