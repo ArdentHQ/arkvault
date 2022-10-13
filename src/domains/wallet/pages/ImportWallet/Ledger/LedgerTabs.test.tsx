@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -21,6 +20,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 const backSelector = () => screen.getByTestId("Paginator__back-button");
@@ -30,42 +30,10 @@ let resetProfileNetworksMock: () => void;
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let publicKeyPaths: Map<string, string>;
 	let onClickEditWalletName: vi.Mock;
 	let getVersionSpy: vi.SpyInstance;
 
-	beforeAll(() => {
-		publicKeyPaths = new Map<string, string>();
-
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [
-					{
-						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-						balance: "2",
-					},
-					{
-						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
-						balance: "3",
-					},
-				],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
-	});
+	let publicKeyPaths = new Map<string, string>();
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -95,10 +63,29 @@ describe("LedgerTabs", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+	});
+
+	beforeEach(() => {
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
+				data: [
+					{
+						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+						balance: "2",
+					},
+					{
+						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
+						balance: "3",
+					},
+				],
+				meta: {},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", { data: [], meta: {} }),
+		);
 	});
 
 	afterAll(() => {
@@ -165,7 +152,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	it("should load more address", async () => {
+	it.only("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const getPublicKeySpy = vi
@@ -173,7 +160,7 @@ describe("LedgerTabs", () => {
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`});
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
@@ -271,7 +258,7 @@ describe("LedgerTabs", () => {
 
 		expect(container).toMatchSnapshot();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(backSelector());
 
@@ -322,7 +309,7 @@ describe("LedgerTabs", () => {
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByTestId("Paginator__finish-button"));
 
@@ -374,7 +361,7 @@ describe("LedgerTabs", () => {
 
 		expect(profile.wallets().count()).toBe(walletsCountBefore + 2);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.keyboard("{enter}");
 

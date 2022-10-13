@@ -245,7 +245,7 @@ describe("ImportWallet", () => {
 	it("should go back to portfolio", async () => {
 		const history = createHashHistory();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -270,7 +270,7 @@ describe("ImportWallet", () => {
 	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		resetProfileNetworksMock();
 
@@ -400,7 +400,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 

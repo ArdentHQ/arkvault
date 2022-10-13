@@ -6,9 +6,10 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
-import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
+import { vi } from "vitest";
+import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
@@ -19,13 +20,9 @@ describe("LedgerScanStep", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths: Map<string, string>;
 
-	beforeAll(() => {
-		publicKeyPaths = new Map<string, string>();
-
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+	beforeEach(async () => {
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
 				data: [
 					{
 						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
@@ -37,22 +34,10 @@ describe("LedgerScanStep", () => {
 					},
 				],
 				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
-	});
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", { data: [], meta: {} }),
+		);
 
-	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -91,9 +76,7 @@ describe("LedgerScanStep", () => {
 
 		return (
 			<FormProvider {...formReference}>
-				<LedgerProvider>
-					<LedgerScanStep profile={profile} cancelling={isCancelling} />
-				</LedgerProvider>
+				<LedgerScanStep profile={profile} cancelling={isCancelling} />
 			</FormProvider>
 		);
 	};

@@ -53,10 +53,6 @@ describe("Portfolio grouped networks", () => {
 	beforeAll(async () => {
 		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
-		// nock("https://neoscan.io/api/main_net/v1/")
-		// 	.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-		// 	.reply(200, []);
-
 		emptyProfile = await env.profiles().create("Empty");
 		profile = env.profiles().findById(getDefaultProfileId());
 

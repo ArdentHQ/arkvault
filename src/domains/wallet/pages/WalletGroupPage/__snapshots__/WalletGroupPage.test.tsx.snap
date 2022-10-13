@@ -590,7 +590,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       width="20"
                     >
                       <svg
-                        id="Layer_1"
+                        id="ark"
                         viewBox="0 0 36.3 30.6"
                         x="0"
                         xml:space="preserve"

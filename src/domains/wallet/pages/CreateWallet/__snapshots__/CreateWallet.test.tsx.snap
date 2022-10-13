@@ -660,7 +660,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -707,7 +707,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -1471,7 +1471,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                                 width="20"
                               >
                                 <svg
-                                  id="Layer_1"
+                                  id="ark"
                                   viewBox="0 0 36.3 30.6"
                                   x="0"
                                   xml:space="preserve"
@@ -1502,7 +1502,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                                 width="20"
                               >
                                 <svg
-                                  id="Layer_1"
+                                  id="ark"
                                   viewBox="0 0 36.3 30.6"
                                   x="0"
                                   xml:space="preserve"
@@ -2367,7 +2367,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -2414,7 +2414,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -3181,7 +3181,7 @@ exports[`CreateWallet > should create a wallet with encryption 2`] = `
                                 width="20"
                               >
                                 <svg
-                                  id="Layer_1"
+                                  id="ark"
                                   viewBox="0 0 36.3 30.6"
                                   x="0"
                                   xml:space="preserve"
@@ -3212,7 +3212,7 @@ exports[`CreateWallet > should create a wallet with encryption 2`] = `
                                 width="20"
                               >
                                 <svg
-                                  id="Layer_1"
+                                  id="ark"
                                   viewBox="0 0 36.3 30.6"
                                   x="0"
                                   xml:space="preserve"
@@ -4079,7 +4079,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -4126,7 +4126,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -4878,7 +4878,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -4925,7 +4925,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -5731,7 +5731,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"
@@ -5778,7 +5778,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                                     width="20"
                                   >
                                     <svg
-                                      id="Layer_1"
+                                      id="ark"
                                       viewBox="0 0 36.3 30.6"
                                       x="0"
                                       xml:space="preserve"

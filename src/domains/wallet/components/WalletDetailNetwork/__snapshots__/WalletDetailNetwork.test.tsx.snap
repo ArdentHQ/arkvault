@@ -1,7 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`WalletDetailNetwork > should render 1`] = `
-<div>
+<DocumentFragment>
   <div
     class="no-ligatures css-19rivvh"
     data-testid="WalletDetailNetwork"
@@ -100,5 +100,5 @@ exports[`WalletDetailNetwork > should render 1`] = `
       </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

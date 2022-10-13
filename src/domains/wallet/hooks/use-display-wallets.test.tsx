@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import nock from "nock";
 import React from "react";
 import * as envHooks from "@/app/hooks/env";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
@@ -28,10 +27,6 @@ describe("useDisplayWallets", () => {
 	);
 
 	beforeAll(async () => {
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
-
 		profile = env.profiles().findById(getDefaultProfileId());
 		await env.profiles().restore(profile);
 		await profile.sync();

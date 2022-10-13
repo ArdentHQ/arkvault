@@ -4,17 +4,19 @@ import { Networks } from "@ardenthq/sdk";
 import { TransactionNetwork } from "./TransactionNetwork";
 import { translations } from "@/domains/transaction/i18n";
 import { availableNetworksMock } from "@/tests/mocks/networks";
-import { renderResponsive } from "@/utils/testing-library";
+import { renderResponsive, screen } from "@/utils/testing-library";
 
 describe("TransactionNetwork", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
 		const network = availableNetworksMock.find((network: Networks.Network) => network.id() === "ark.devnet");
 
-		const { container } = renderResponsive(<TransactionNetwork network={network!} />, breakpoint);
+		const { asFragment } = renderResponsive(<TransactionNetwork network={network!} />, breakpoint);
 
-		expect(container).toHaveTextContent(translations.CRYPTOASSET);
-		expect(container).toHaveTextContent("ark.svg");
+		expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(translations.CRYPTOASSET);
 
-		expect(container).toMatchSnapshot();
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("TransactionNetwork").querySelector("svg#ark")).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 });

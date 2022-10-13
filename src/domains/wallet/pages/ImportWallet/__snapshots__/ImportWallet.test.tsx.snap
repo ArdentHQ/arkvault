@@ -2752,7 +2752,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -2783,7 +2783,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -3084,7 +3084,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -3115,7 +3115,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"

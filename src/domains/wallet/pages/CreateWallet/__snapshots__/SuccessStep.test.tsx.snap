@@ -73,7 +73,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -104,7 +104,7 @@ exports[`SuccessStep > should render (lg) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -359,7 +359,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"
@@ -390,7 +390,7 @@ exports[`SuccessStep > should render (xs) 1`] = `
                 width="20"
               >
                 <svg
-                  id="Layer_1"
+                  id="ark"
                   viewBox="0 0 36.3 30.6"
                   x="0"
                   xml:space="preserve"

@@ -113,23 +113,6 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		// .get("/api/transactions")
-		// .query((parameters) => !!parameters.address)
-		// .reply(200, (url) => {
-		// 	const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-		// 	const filteredUrl =
-		// 		"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
-		// 	if (url === filteredUrl) {
-		// 		return { data: [], meta };
-		// 	}
-
-		// 	return {
-		// 		data: data.slice(0, 1),
-		// 		meta,
-		// 	};
-		// })
-		// .persist();
-
 		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
