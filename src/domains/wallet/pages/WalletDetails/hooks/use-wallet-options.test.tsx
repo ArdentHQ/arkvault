@@ -2,10 +2,9 @@ import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { renderHook } from "@testing-library/react-hooks";
-import { rest } from "msw";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-import { server } from "@/tests/mocks/server";
+import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
@@ -14,36 +13,40 @@ describe("Wallet Options Hook", () => {
 	let profile: Contracts.IProfile;
 
 	beforeEach(async () => {
+		const { data, meta } = transactionsFixture;
+
 		server.use(
-			rest.get("https://ark-test.arkvault.io/api/transactions", (request, response, context) => {
-				const address = request.url.searchParams.get("page");
-				const limit = request.url.searchParams.get("page");
-				const page = request.url.searchParams.get("page");
-
-				const { data, meta } = transactionsFixture;
-
-				if (page === undefined || page === "1") {
-					const unconfirmed = data[0];
-					unconfirmed.confirmations = 0;
-
-					return response(
-						context.status(200),
-						context.json({
-							data: [unconfirmed],
-							meta,
-						}),
-					);
-				}
-
-				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "10" && page === "2") {
-					return response(
-						context.status(200),
-						context.json({
-							data: data.slice(1, 3),
-							meta,
-						}),
-					);
-				}
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [{
+					...data[0],
+					confirmations: 0,
+				}],
+				meta,
+			}, {
+				query: {
+					page: undefined,
+				},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [{
+					...data[0],
+					confirmations: 0,
+				}],
+				meta,
+			}, {
+				query: {
+					page: 1,
+				},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: data.slice(1, 3),
+				meta,
+			}, {
+				query: {
+					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					limit: "10",
+					page: "2",
+				},
 			}),
 		);
 

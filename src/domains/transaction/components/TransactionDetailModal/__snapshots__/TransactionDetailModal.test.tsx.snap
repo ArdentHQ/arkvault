@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionDetailModal should not render if not open 1`] = `<DocumentFragment />`;
+exports[`TransactionDetailModal > should not render if not open 1`] = `<DocumentFragment />`;
 
-exports[`TransactionDetailModal should render a delegate registration modal 1`] = `
+exports[`TransactionDetailModal > should render a delegate registration modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -32,8 +32,25 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -139,8 +156,28 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    delegate-registration.svg
+                  <svg
+                    id="delegate-registration"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M16.73 1L6.43 19"
+                      />
+                      <path
+                        d="M6.73 6.9c1.4 0 2.7-1.1 2.7-2.7 0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7h0c0 1.5 1.1 2.7 2.7 2.7zM8.63 9.8c-.6-.3-1.2-.5-1.9-.5-2.5 0-4.4 2-4.4 4.4M14.97 18.4c1.4 0 2.7-1.1 2.7-2.7 0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7h0c0 1.5 1.1 2.7 2.7 2.7z"
+                        stroke-linejoin="round"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -214,8 +251,32 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -270,8 +331,22 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -290,8 +365,28 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -308,7 +403,7 @@ exports[`TransactionDetailModal should render a delegate registration modal 1`] 
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a delegate resignation modal 1`] = `
+exports[`TransactionDetailModal > should render a delegate resignation modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -338,8 +433,25 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -445,8 +557,31 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    delegate-resignation.svg
+                  <svg
+                    id="delegate-resignation"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M16.73 1L6.43 19"
+                      />
+                      <path
+                        d="M6.73 6.9c1.4 0 2.7-1.1 2.7-2.7 0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7h0c0 1.5 1.1 2.7 2.7 2.7zM8.63 9.8c-.6-.3-1.2-.5-1.9-.5-2.5 0-4.4 2-4.4 4.4"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.97 17.8l4-4.1M16.97 17.8l-4-4.1"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -520,8 +655,32 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -576,8 +735,22 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -596,8 +769,28 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -614,7 +807,7 @@ exports[`TransactionDetailModal should render a delegate resignation modal 1`] =
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a ipfs modal 1`] = `
+exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -644,8 +837,25 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -794,8 +1004,33 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    ipfs.svg
+                  <svg
+                    id="ipfs"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M10 19l-8.3-4.5v-9L10 1l8.3 4.5v9L10 19z"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.2 8.827L1.7 5.7M12.8 8.853L18.3 5.7"
+                        stroke-linecap="round"
+                      />
+                      <circle
+                        cx="10"
+                        cy="9.7"
+                        r="2.8"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -844,8 +1079,32 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -900,8 +1159,22 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -920,8 +1193,28 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -938,7 +1231,7 @@ exports[`TransactionDetailModal should render a ipfs modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a magistrate modal 1`] = `
+exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -968,8 +1261,25 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1117,8 +1427,32 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -1173,8 +1507,22 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -1193,8 +1541,28 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -1211,7 +1579,7 @@ exports[`TransactionDetailModal should render a magistrate modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a multi payment modal 1`] = `
+exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -1241,8 +1609,25 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1364,8 +1749,22 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          arrow-external.svg
+                        <svg
+                          id="arrow-external"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </a>
@@ -1406,8 +1805,22 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </a>
@@ -1473,8 +1886,25 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -1535,8 +1965,25 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    file-lines.svg
+                  <svg
+                    id="file-lines"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 14h3.5M7 11h6M7 8h6M3 17.4c0 .9.667 1.6 1.429 1.6h-.096 11.143c.857 0 1.524-.8 1.524-1.6V2.6c0-.9-.762-1.6-1.524-1.6h0-7.905c-.38 0-.761.1-1.142.4L3.38 4.6C3 5 3 5.4 3 5.8v11.6z"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -1585,8 +2032,32 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -1641,8 +2112,22 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -1661,8 +2146,28 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -1679,7 +2184,7 @@ exports[`TransactionDetailModal should render a multi payment modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a multi signature modal 1`] = `
+exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -1709,8 +2214,25 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1858,8 +2380,32 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -2179,8 +2725,22 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -2199,8 +2759,28 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -2217,7 +2797,7 @@ exports[`TransactionDetailModal should render a multi signature modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a second signature modal 1`] = `
+exports[`TransactionDetailModal > should render a second signature modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2247,8 +2827,25 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -2396,8 +2993,32 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -2452,8 +3073,22 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -2472,8 +3107,28 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -2490,7 +3145,7 @@ exports[`TransactionDetailModal should render a second signature modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a transfer modal 1`] = `
+exports[`TransactionDetailModal > should render a transfer modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2520,8 +3175,25 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -2692,8 +3364,25 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -2754,8 +3443,25 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    file-lines.svg
+                  <svg
+                    id="file-lines"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 14h3.5M7 11h6M7 8h6M3 17.4c0 .9.667 1.6 1.429 1.6h-.096 11.143c.857 0 1.524-.8 1.524-1.6V2.6c0-.9-.762-1.6-1.524-1.6h0-7.905c-.38 0-.761.1-1.142.4L3.38 4.6C3 5 3 5.4 3 5.8v11.6z"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -2804,8 +3510,32 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -2860,8 +3590,22 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -2880,8 +3624,28 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -2898,7 +3662,7 @@ exports[`TransactionDetailModal should render a transfer modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a unvote modal 1`] = `
+exports[`TransactionDetailModal > should render a unvote modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -2928,8 +3692,25 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3209,8 +3990,32 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -3265,8 +4070,22 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -3285,8 +4104,28 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -3303,7 +4142,7 @@ exports[`TransactionDetailModal should render a unvote modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a vote modal 1`] = `
+exports[`TransactionDetailModal > should render a vote modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -3333,8 +4172,25 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3614,8 +4470,32 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -3670,8 +4550,22 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -3690,8 +4584,28 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -3708,7 +4622,7 @@ exports[`TransactionDetailModal should render a vote modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
+exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -3738,8 +4652,25 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -4019,8 +4950,32 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -4075,8 +5030,22 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -4095,8 +5064,28 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>
@@ -4113,7 +5102,7 @@ exports[`TransactionDetailModal should render a voteCombination modal 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
+exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -4143,8 +5132,25 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -4264,8 +5270,25 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -4339,8 +5362,32 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span>
@@ -4395,8 +5442,22 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            arrow-external.svg
+                          <svg
+                            id="arrow-external"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </a>
@@ -4415,8 +5476,28 @@ exports[`TransactionDetailModal should render an unlock tokens modal 1`] = `
                           height="16"
                           width="16"
                         >
-                          <svg>
-                            copy.svg
+                          <svg
+                            id="copy"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                              />
+                              <path
+                                d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </button>

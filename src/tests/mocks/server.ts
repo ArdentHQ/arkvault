@@ -1,4 +1,4 @@
-import type { ResponseComposition, DefaultBodyType, RestContext } from "msw";
+import type { ResponseComposition, DefaultBodyType, RestContext, PathParams, RestRequest } from "msw";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
@@ -16,14 +16,25 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 		method: "get",
 		status: 200,
 		modifier: undefined,
+		query: undefined,
 		...options,
 	};
 
 	return rest[requestOptions.method](
 		path,
-		(_: any, response: ResponseComposition<DefaultBodyType>, context: RestContext) => {
+		(request: RestRequest<never, PathParams<string>>, response: ResponseComposition<DefaultBodyType>, context: RestContext) => {
 			if (typeof data === "function") {
 				throw new Error(`Mock request using "rest.${requestOptions.method}()"`);
+			}
+
+			if (requestOptions.query) {
+				const params = request.url.searchParams;
+
+				for (const [name, value] of Object.entries(requestOptions.query)) {
+					if (params.get(name) !== value) {
+						return;
+					}
+				}
 			}
 
 			if (requestOptions.modifier) {

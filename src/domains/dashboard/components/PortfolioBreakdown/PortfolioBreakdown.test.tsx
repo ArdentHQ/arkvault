@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { PortfolioBreakdown } from "./PortfolioBreakdown";
 import { env, render, screen } from "@/utils/testing-library";
@@ -31,8 +30,6 @@ describe("PortfolioBreakdown", () => {
 	const liveNetworkIds = ["ark.mainnet", "lsk.mainnet"];
 
 	beforeAll(async () => {
-		nock.disableNetConnect();
-
 		profile = await env.profiles().create("blank");
 
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, "USD");
@@ -58,8 +55,6 @@ describe("PortfolioBreakdown", () => {
 	});
 
 	afterAll(() => {
-		nock.enableNetConnect();
-
 		env.profiles().forget(profile.id());
 
 		useGraphWidthMock.mockRestore();

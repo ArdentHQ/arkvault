@@ -1,12 +1,14 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 import { Route } from "react-router-dom";
 import * as browserAccess from "browser-fs-access";
 import { TransactionExportModal } from ".";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const history = createHashHistory();
 
@@ -22,31 +24,16 @@ const dateToggle = () =>
 describe("TransactionExportModal", () => {
 	let profile: Contracts.IProfile;
 
-	beforeAll(() => {
-		nock.disableNetConnect();
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions")
-			.query((query) => query.page === "1")
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: Array.from({ length: 100 }).fill(data[0]),
-					meta,
-				};
-			})
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.persist();
-	});
-
 	beforeEach(async () => {
+		const { meta, data } = transactionsFixture;
+
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: Array.from({ length: 100 }).fill(data[0]),
+				meta,
+			}),
+		);
+
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 		history.push(dashboardURL);
 		profile = env.profiles().findById(getDefaultProfileId());

@@ -5,7 +5,6 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { rest } from "msw";
 import { WalletDetails } from "./WalletDetails";
 import { requestMock, server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -118,6 +117,8 @@ describe("WalletDetails", () => {
 	});
 
 	beforeEach(async () => {
+		const { meta, data } = transactionsFixture;
+
 		server.use(
 			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
 			requestMock(
@@ -135,18 +136,16 @@ describe("WalletDetails", () => {
 				statusCode: 404,
 			}),
 			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
-			rest.get("https://ark-test.arkvault.io/api/transactions", (request, response, context) => {
-				const { meta, data } = transactionsFixture;
-
-				const address = request.url.searchParams.get("address");
-				const limit = request.url.searchParams.get("limit");
-				const page = request.url.searchParams.get("page");
-
-				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "1" && page === "1") {
-					return response(context.status(200), context.json({ data: [], meta }));
-				}
-
-				return response(context.status(200), context.json({ data: data.slice(0, 1), meta }));
+			requestMock("https://ark-test.arkvault.io/api/transactions", { data: [], meta }, {
+				query: {
+					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					limit: "1",
+					page: "1",
+				},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: data.slice(0, 1),
+				meta,
 			}),
 		);
 
