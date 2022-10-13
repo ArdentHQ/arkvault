@@ -225,17 +225,17 @@ describe("NavigationBar", () => {
 
 	it("should open support chat when clicking contact menu", async () => {
 		// @ts-ignore
-		const widgetMock = jest.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
+		const widgetMock = vi.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
 			if (selector === webWidgetSelector) {
 				return {
 					contentWindow: {
 						document: {
 							body: {
 								classList: {
-									add: jest.fn(),
-									remove: jest.fn(),
+									add: vi.fn(),
+									remove: vi.fn(),
 								},
-								insertAdjacentHTML: jest.fn(),
+								insertAdjacentHTML: vi.fn(),
 							},
 						},
 					},
@@ -243,7 +243,7 @@ describe("NavigationBar", () => {
 			}
 		});
 
-		const getUserMenuActionsMock = jest
+		const getUserMenuActionsMock = vi
 			.spyOn(navigation, "getUserMenuActions")
 			.mockReturnValue([{ label: "Option 1", mountPath: () => "/", title: "test2", value: "contact" }]);
 

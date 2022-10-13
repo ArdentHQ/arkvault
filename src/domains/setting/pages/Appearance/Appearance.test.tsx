@@ -47,7 +47,7 @@ describe("Appearance Settings", () => {
 	});
 
 	it("should reset support chat widget after saving", async () => {
-		const toastSuccess = jest.spyOn(toasts, "success");
+		const toastSuccess = vi.spyOn(toasts, "success");
 
 		renderPage(true);
 
