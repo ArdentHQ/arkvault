@@ -6,6 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
+import { vi } from "vitest";
 import { Welcome } from "./Welcome";
 import { ProfilePaths } from "@/router/paths";
 import { EnvironmentProvider } from "@/app/contexts";
@@ -25,7 +26,6 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { vi } from "vitest";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;

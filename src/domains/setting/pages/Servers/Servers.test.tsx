@@ -1091,7 +1091,9 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			userEvent.click(within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0]);
+			userEvent.click(
+				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+			);
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
@@ -1419,7 +1421,9 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			userEvent.click(within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0]);
+			userEvent.click(
+				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+			);
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
