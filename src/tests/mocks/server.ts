@@ -22,7 +22,11 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 
 	return rest[requestOptions.method](
 		path,
-		(request: RestRequest<never, PathParams<string>>, response: ResponseComposition<DefaultBodyType>, context: RestContext) => {
+		(
+			request: RestRequest<never, PathParams<string>>,
+			response: ResponseComposition<DefaultBodyType>,
+			context: RestContext,
+		) => {
 			if (typeof data === "function") {
 				throw new Error(`Mock request using "rest.${requestOptions.method}()"`);
 			}

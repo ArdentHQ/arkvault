@@ -66,14 +66,18 @@ describe("Add Participant", () => {
 		const { t } = result.current;
 
 		server.use(
-			requestMock(`${ARKTestURL}${walletsURLPath}`, {
-				data: [coldWalletFixture.data],
-				meta: { count: 1, pageCount: 1, totalCount: 1 },
-			}, {
-				query: {
-					address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			requestMock(
+				`${ARKTestURL}${walletsURLPath}`,
+				{
+					data: [coldWalletFixture.data],
+					meta: { count: 1, pageCount: 1, totalCount: 1 },
 				},
-			}),
+				{
+					query: {
+						address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+					},
+				},
+			),
 		);
 
 		const { asFragment } = render(
@@ -150,14 +154,18 @@ describe("Add Participant", () => {
 		const { t } = result.current;
 
 		server.use(
-			requestMock(`${ARKTestURL}${walletsURLPath}`, {
-				data: [],
-				meta: { count: 0, pageCount: 1, totalCount: 0 },
-			}, {
-				query: {
-					address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+			requestMock(
+				`${ARKTestURL}${walletsURLPath}`,
+				{
+					data: [],
+					meta: { count: 0, pageCount: 1, totalCount: 0 },
 				},
-			}),
+				{
+					query: {
+						address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+					},
+				},
+			),
 		);
 
 		const { asFragment } = render(

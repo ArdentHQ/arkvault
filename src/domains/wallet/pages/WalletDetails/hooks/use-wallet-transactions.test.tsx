@@ -38,38 +38,54 @@ describe("Wallet Transactions Hook", () => {
 		const { meta, data } = transactionsFixture;
 
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: [{
-					...data[0],
-					confirmations: 0,
-				}],
-				meta,
-			}, {
-				query: {
-					page: undefined,
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
+					meta,
 				},
-			}),
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: [{
-					...data[0],
-					confirmations: 0,
-				}],
-				meta,
-			}, {
-				query: {
-					page: 1,
+				{
+					query: {
+						page: undefined,
+					},
 				},
-			}),
-			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: data.slice(1, 3),
-				meta,
-			}, {
-				query: {
-					address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-					limit: "10",
-					page: "2",
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
+					meta,
 				},
-			}),
+				{
+					query: {
+						page: 1,
+					},
+				},
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: data.slice(1, 3),
+					meta,
+				},
+				{
+					query: {
+						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+						limit: "10",
+						page: "2",
+					},
+				},
+			),
 		);
 
 		profile = env.profiles().findById(getDefaultProfileId());

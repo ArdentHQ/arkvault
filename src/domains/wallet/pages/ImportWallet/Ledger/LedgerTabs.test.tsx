@@ -150,7 +150,9 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[0]).getAllByRole("row")).toHaveLength(1));
 
-		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1));
+		await waitFor(() =>
+			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1),
+		);
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
@@ -177,7 +179,9 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[0]).getAllByRole("row")).toHaveLength(1));
 
-		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1));
+		await waitFor(() =>
+			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1),
+		);
 
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
@@ -195,7 +199,9 @@ describe("LedgerTabs", () => {
 			startPath: "m/44'/1'/0'/0/0",
 		});
 
-		await waitFor(() => expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(2));
+		await waitFor(() =>
+			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(2),
+		);
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
