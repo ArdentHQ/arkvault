@@ -8,6 +8,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, NavigationProvider } from "./contexts";
 import { i18n as index18n } from "./i18n";
+import { ZendeskProvider } from "./contexts/Zendesk";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { AppRouter, GlobalStyles, Main } from "@/app/App.blocks";
 import { initializeEnvironment } from "@/utils/environment";
@@ -24,25 +25,27 @@ export const App: React.VFC = () => {
 	emotionCache.compat = true;
 
 	return (
-		<I18nextProvider i18n={index18n}>
-			<EnvironmentProvider env={environment.current}>
-				<ConfigurationProvider defaultConfiguration={{ profileIsSyncingExchangeRates: true }}>
-					<NavigationProvider>
-						<ExchangeProvider>
-							<ErrorBoundary FallbackComponent={ApplicationError}>
-								<LedgerProvider>
-									<CacheProvider value={emotionCache}>
-										<AppRouter>
-											<GlobalStyles />
-											<Main />
-										</AppRouter>
-									</CacheProvider>
-								</LedgerProvider>
-							</ErrorBoundary>
-						</ExchangeProvider>
-					</NavigationProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		</I18nextProvider>
+		<ZendeskProvider>
+			<I18nextProvider i18n={index18n}>
+				<EnvironmentProvider env={environment.current}>
+					<ConfigurationProvider defaultConfiguration={{ profileIsSyncingExchangeRates: true }}>
+						<NavigationProvider>
+							<ExchangeProvider>
+								<ErrorBoundary FallbackComponent={ApplicationError}>
+									<LedgerProvider>
+										<CacheProvider value={emotionCache}>
+											<AppRouter>
+												<GlobalStyles />
+												<Main />
+											</AppRouter>
+										</CacheProvider>
+									</LedgerProvider>
+								</ErrorBoundary>
+							</ExchangeProvider>
+						</NavigationProvider>
+					</ConfigurationProvider>
+				</EnvironmentProvider>
+			</I18nextProvider>
+		</ZendeskProvider>
 	);
 };

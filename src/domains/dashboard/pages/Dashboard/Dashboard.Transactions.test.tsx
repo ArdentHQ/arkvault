@@ -1,13 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
-import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { translations as profileTranslations } from "@/domains/profile/i18n";
-
 import {
 	env,
 	getDefaultProfileId,
@@ -29,7 +27,6 @@ let resetProfileNetworksMock: () => void;
 
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
-let mockTransactionsAggregate;
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -62,19 +59,6 @@ describe("Dashboard", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-
-		const all = await profile.transactionAggregate().all({ limit: 10 });
-		const transactions = all.items();
-
-		mockTransactionsAggregate = vi
-			.spyOn(profile.transactionAggregate(), "all")
-			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
-	});
-
-	afterAll(() => {
-		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -86,36 +70,29 @@ describe("Dashboard", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
-		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should render", async () => {
-		const { asFragment } = render(
+	it("should render loading state when profile is syncing", async () => {
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
 			{
 				history,
 				route: dashboardURL,
-				withProfileSynchronizer: true,
 			},
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("Balance__value")).toBeInTheDocument();
-		});
-
-		expect(asFragment()).toMatchSnapshot();
-
-		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should show introductory tutorial", async () => {
-		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+	it("should display empty block when there are no transactions", async () => {
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -128,9 +105,47 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await expect(screen.findByText(profileTranslations.MODAL_WELCOME.STEP_1.TITLE)).resolves.toBeVisible();
+		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getByRole("rowgroup")).toBeVisible());
 
-		mockHasCompletedTutorial.mockRestore();
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
+		mockTransactionsAggregate.mockRestore();
+	});
+
+	it("should open modal when click on a transaction", async () => {
+		const all = await profile.transactionAggregate().all({ limit: 10 });
+		const transactions = all.items();
+
+		const mockTransactionsAggregate = vi
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Dashboard />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await waitFor(
+			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
+			{ timeout: 4000 },
+		);
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+
+		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
+
+		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+
 		mockTransactionsAggregate.mockRestore();
 	});
 });

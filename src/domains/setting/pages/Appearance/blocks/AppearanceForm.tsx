@@ -13,6 +13,7 @@ import { toasts } from "@/app/services";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 import { useAppearanceItems, useAppearanceSettings } from "@/domains/setting/pages/Appearance/Appearance.helpers";
+import { useZendesk } from "@/app/contexts/Zendesk";
 
 interface AppearanceFormProperties {
 	profile: Contracts.IProfile;
@@ -22,6 +23,7 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 	const { t } = useTranslation();
 
 	const { getValues, setValues } = useAppearanceSettings(profile);
+	const { hideSupportChat, showSupportChat, isSupportChatOpen } = useZendesk();
 
 	const items = useAppearanceItems();
 
@@ -47,6 +49,9 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 	}, [register]);
 
 	const save = async (values: AppearanceSettingsState) => {
+		const isChatOpen = isSupportChatOpen();
+
+		hideSupportChat();
 		setValues(values);
 
 		await persist();
@@ -58,6 +63,10 @@ export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) 
 
 		toasts.success(t("SETTINGS.GENERAL.SUCCESS"));
 		window.scrollTo({ behavior: "smooth", top: 0 });
+
+		if (isChatOpen) {
+			showSupportChat(profile);
+		}
 	};
 
 	return (

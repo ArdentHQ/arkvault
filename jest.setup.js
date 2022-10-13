@@ -4,6 +4,7 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
+import React from "react";
 
 jest.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
@@ -145,3 +146,22 @@ global.BroadcastChannel = class BroadcastChannel {
 	removeEventListener = jest.fn();
 	close = jest.fn();
 };
+
+// Zendesk
+jest.mock("react-zendesk", () => ({
+	__esModule: true,
+	default: () => null,
+	ZendeskAPI: () => jest.fn(),
+}));
+
+Object.defineProperty(window, "$zopim", {
+	writable: true,
+	value: {
+		livechat: {
+			window: {
+				show: jest.fn(),
+				hide: jest.fn(),
+			},
+		},
+	},
+});
