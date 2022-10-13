@@ -60,6 +60,7 @@ export default defineConfig({
 		"process.env": {
 			REACT_APP_IS_E2E: process.env.REACT_APP_IS_E2E,
 			REACT_APP_IS_UNIT: process.env.REACT_APP_IS_UNIT,
+			ZENDESK_WIDGET_KEY: process.env.ZENDESK_WIDGET_KEY,
 		},
 	},
 	plugins: [
