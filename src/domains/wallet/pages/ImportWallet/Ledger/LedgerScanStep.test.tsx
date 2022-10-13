@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
@@ -8,7 +7,6 @@ import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
-import { vi } from "vitest";
 import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 

@@ -38,7 +38,7 @@ describe("Use Transaction Builder with Ledger", () => {
 	it("should sign transfer with ledger", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
 			"027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582",
 		);
@@ -74,7 +74,7 @@ describe("Use Transaction Builder with Ledger", () => {
 	it("should sign transfer with cold ledger wallet", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 

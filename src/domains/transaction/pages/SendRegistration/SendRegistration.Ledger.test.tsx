@@ -155,7 +155,7 @@ describe("Registration", () => {
 
 		// Ledger mocks
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -205,11 +205,11 @@ describe("Registration", () => {
 	});
 
 	it("should send multisignature registration with ledger wallet", async () => {
-		const envPersistMock = vi.spyOn(env, "persist").mockImplementation();
+		const envPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
 		// Ledger mocks
 		const nanoXTransportMock = mockNanoXTransport();
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")

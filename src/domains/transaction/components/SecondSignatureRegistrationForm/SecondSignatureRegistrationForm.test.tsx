@@ -91,7 +91,7 @@ describe("SecondSignatureRegistrationForm", () => {
 	it("should not generate mnemonic if already set", async () => {
 		history.push(dashboardURL);
 
-		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockImplementation();
+		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockImplementation(vi.fn());
 
 		const { form, asFragment } = renderWithForm(
 			<Router history={history}>
@@ -257,7 +257,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		});
 
 		it("should not show error toast on cancelled download", async () => {
-			const toastSpy = vi.spyOn(toasts, "error").mockImplementation();
+			const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 			const useFilesOutput = useFilesHook.useFiles();
 
@@ -470,7 +470,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
-		const mutatorMock = vi.spyOn(wallet.mutator(), "removeEncryption").mockImplementation();
+		const mutatorMock = vi.spyOn(wallet.mutator(), "removeEncryption").mockImplementation(vi.fn());
 
 		await signSecondSignatureRegistration({
 			env,

@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
 
 import { useNetworks, useWalletAlias } from "@/app/hooks";
-import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 import { sortWallets } from "@/utils/wallet-utils";
 import { profileEnabledNetworkIds } from "@/utils/network-utils";

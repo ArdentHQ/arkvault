@@ -839,7 +839,7 @@ describe("MultiSignatureDetail", () => {
 		const isNanoXMock = vi.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
 		// Ledger mocks
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -936,7 +936,7 @@ describe("MultiSignatureDetail", () => {
 
 		// Ledger mocks
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")

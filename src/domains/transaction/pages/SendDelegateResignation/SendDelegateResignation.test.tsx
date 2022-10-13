@@ -150,7 +150,7 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should go back to wallet details", async () => {
-			const historySpy = vi.spyOn(history, "push").mockImplementation();
+			const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 			renderPage();
 

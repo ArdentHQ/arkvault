@@ -144,7 +144,7 @@ describe("UpdateContact", () => {
 	});
 
 	it("should call onDelete callback", async () => {
-		const deleteSpy = vi.spyOn(profile.contacts(), "forget").mockImplementation();
+		const deleteSpy = vi.spyOn(profile.contacts(), "forget").mockImplementation(vi.fn());
 
 		const onDeleteFunction = vi.fn();
 

@@ -836,7 +836,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -846,7 +846,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -1071,7 +1070,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -1081,7 +1080,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -1294,7 +1292,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -1304,7 +1302,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -1517,7 +1514,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -1527,7 +1524,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -2560,7 +2556,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -2570,7 +2566,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -2795,7 +2790,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -2805,7 +2800,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -3018,7 +3012,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -3028,7 +3022,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -3241,7 +3234,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -3251,7 +3244,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -5178,7 +5170,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -5188,7 +5180,6 @@ exports[`Contacts > should render with contacts 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -5413,7 +5404,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -5423,7 +5414,6 @@ exports[`Contacts > should render with contacts 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -5636,7 +5626,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -5646,7 +5636,6 @@ exports[`Contacts > should render with contacts 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>
@@ -5859,7 +5848,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             width="20"
                           >
                             <svg
-                              id="Layer_1"
+                              id="ark"
                               viewBox="0 0 36.3 30.6"
                               x="0"
                               xml:space="preserve"
@@ -5869,7 +5858,6 @@ exports[`Contacts > should render with contacts 1`] = `
                               <path
                                 d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                                 fill="currentColor"
-                                id="ark-icon"
                               />
                             </svg>
                           </div>

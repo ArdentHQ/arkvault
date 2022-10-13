@@ -72,7 +72,7 @@ describe("FeeField", () => {
 			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
 		});
 
-		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const { rerender } = render(
 			<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />,
@@ -153,7 +153,7 @@ describe("FeeField", () => {
 
 			let useFeesSpy: vi.SpyInstance;
 
-			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation();
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),

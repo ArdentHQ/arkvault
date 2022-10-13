@@ -60,7 +60,6 @@ exports[`WalletDetailNetwork > should render 1`] = `
                 <path
                   d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                   fill="currentColor"
-                  id="ark-icon"
                 />
               </svg>
             </div>
@@ -91,7 +90,6 @@ exports[`WalletDetailNetwork > should render 1`] = `
                 <path
                   d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
                   fill="currentColor"
-                  id="ark-icon"
                 />
               </svg>
             </div>

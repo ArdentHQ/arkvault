@@ -694,7 +694,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -813,7 +813,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -920,7 +920,7 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -1086,7 +1086,7 @@ describe("SendTransfer", () => {
 
 	it("should send a single transfer with a ledger wallet", async () => {
 		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
 		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
@@ -1445,7 +1445,7 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -1671,7 +1671,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -1762,7 +1762,7 @@ describe("SendTransfer", () => {
 
 		history.push(`${transferURL}?reset=1`);
 
-		const replaceSpy = vi.spyOn(history, "replace").mockImplementation();
+		const replaceSpy = vi.spyOn(history, "replace").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">

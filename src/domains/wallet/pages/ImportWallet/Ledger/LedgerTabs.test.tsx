@@ -160,7 +160,7 @@ describe("LedgerTabs", () => {
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`});
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 

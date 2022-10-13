@@ -65,7 +65,7 @@ describe("useUnlockableBalances", () => {
 			.spyOn(wallet.coin().client(), "unlockableBalances")
 			.mockImplementation(() => Promise.reject(new Error("unable to fetch")));
 
-		const toastWarning = vi.spyOn(toasts, "warning").mockImplementation();
+		const toastWarning = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
 

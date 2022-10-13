@@ -361,7 +361,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -444,7 +444,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
 
-		const goSpy = vi.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -646,7 +646,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			userEvent.click(continueButton());
 
-			const profileSpy = vi.spyOn(profile.settings(), "set").mockImplementation();
+			const profileSpy = vi.spyOn(profile.settings(), "set").mockImplementation(vi.fn());
 
 			// Fee warning
 			await expect(screen.findByTestId("FeeWarning__suppressWarning-toggle")).resolves.toBeVisible();

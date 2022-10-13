@@ -628,7 +628,7 @@ describe("SendIpfs", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
@@ -823,7 +823,7 @@ describe("SendIpfs", () => {
 	});
 
 	it("should send a ipfs transfer with a ledger wallet", async () => {
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 		const isNanoXMock = vi.spyOn(wallet.ledger(), "isNanoX").mockResolvedValue(true);
 
 		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);

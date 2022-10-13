@@ -306,7 +306,7 @@ describe("Registration", () => {
 
 		// Ledger mocks
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		vi.spyOn(wallet.coin(), "__construct").mockImplementation();
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
 		const getPublicKeyMock = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -479,7 +479,7 @@ describe("Registration", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet);
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(formStep()).resolves.toBeVisible();
 

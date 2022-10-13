@@ -54,8 +54,6 @@ describe("LedgerTabs", () => {
 	});
 
 	beforeEach(() => {
-		publicKeyPaths =
-
 		server.use(
 			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
 				data: [
@@ -120,10 +118,9 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}` });
+		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}`, withProviders: true });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
-
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerConnected")).resolves.toBeVisible();
 

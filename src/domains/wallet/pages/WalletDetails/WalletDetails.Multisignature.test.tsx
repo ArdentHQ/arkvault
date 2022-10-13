@@ -2,6 +2,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
+import { rest } from "msw";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -11,7 +12,6 @@ import { toasts } from "@/app/services";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import { rest } from "msw";
 
 const translations = buildTranslations();
 
@@ -147,7 +147,11 @@ describe("WalletDetails", () => {
 
 	it("should remove pending multisignature transactions", async () => {
 		server.use(
-			requestMock("https://ark-test-musig.arkvault.io", { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } }, { method: "post" }),
+			requestMock(
+				"https://ark-test-musig.arkvault.io",
+				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
+				{ method: "post" },
+			),
 		);
 
 		renderPage();
