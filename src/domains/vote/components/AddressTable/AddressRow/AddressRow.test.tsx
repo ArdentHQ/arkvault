@@ -263,7 +263,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -298,7 +298,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -333,7 +333,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
