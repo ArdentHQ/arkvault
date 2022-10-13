@@ -1,7 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
@@ -80,11 +79,15 @@ describe("Signed Transaction Table", () => {
 				],
 				meta: transactionsFixture.meta,
 			}),
-			requestMock("https://ark-test-musig.arkvault.io", {
-				result: {
-					id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+			requestMock(
+				"https://ark-test-musig.arkvault.io",
+				{
+					result: {
+						id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc",
+					},
 				},
-			}, { method: "post" }),
+				{ method: "post" },
+			),
 		);
 
 		profile = env.profiles().findById(getDefaultProfileId());
