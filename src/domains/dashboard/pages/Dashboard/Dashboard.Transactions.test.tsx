@@ -33,7 +33,7 @@ vi.mock("@/utils/delay", () => ({
 }));
 
 describe("Dashboard", () => {
-	beforeAll(async () => {
+	beforeEach(() => {
 		server.use(
 			requestMock("https://ark-test.arkvault.io/api/transactions", {
 				data: devnetTransactionsFixture.data.slice(0, 2),
@@ -44,7 +44,9 @@ describe("Dashboard", () => {
 				meta: mainnetTransactionsFixture.meta,
 			}),
 		);
+	});
 
+	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
 		const wallet = await profile.walletFactory().fromAddress({
@@ -131,9 +133,8 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
 		);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();

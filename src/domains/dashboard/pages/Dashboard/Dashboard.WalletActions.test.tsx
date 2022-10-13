@@ -69,7 +69,7 @@ describe("Dashboard", () => {
 		profile.markIntroductoryTutorialAsComplete();
 		const ledgerTransportMock = mockNanoXTransport();
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -91,7 +91,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should navigate to create wallet page", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -109,7 +109,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should navigate to import wallet page", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,

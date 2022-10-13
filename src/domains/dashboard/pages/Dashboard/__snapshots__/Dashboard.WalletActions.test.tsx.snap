@@ -1,7 +1,0 @@
-// Vitest Snapshot v1
-
-exports[`Dashboard > should navigate to create wallet page 1`] = `<DocumentFragment />`;
-
-exports[`Dashboard > should navigate to import ledger page 1`] = `<DocumentFragment />`;
-
-exports[`Dashboard > should navigate to import wallet page 1`] = `<DocumentFragment />`;
