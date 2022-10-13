@@ -110,6 +110,14 @@ describe("usePasswordValidation", () => {
 			await result.current.validatePassword(validPassword);
 
 			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
+
+			haveibeenpwnedMock.pwned.mockImplementation(() => {
+				throw new Error("Error");
+			});
+
+			await result.current.validatePassword(validPassword);
+
+			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 		});
 
 		it("should validate new rule", async () => {

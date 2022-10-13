@@ -95,10 +95,10 @@ describe("HttpClient", () => {
 	});
 
 	// @README: Run this locally with TOR running.
-	it.skip("should connect with TOR", async () => {
-		const realAddress = await subject.get("https://ipinfo.io");
-		const newAddress = await subject.withSocksProxy("socks5://127.0.0.1:9050").get("https://ipinfo.io");
+	// it("should connect with TOR", async () => {
+	// 	const realAddress = await subject.get("https://ipinfo.io");
+	// 	const newAddress = await subject.withSocksProxy("socks5://127.0.0.1:9050").get("https://ipinfo.io");
 
-		expect(newAddress.json().ip).not.toBe(realAddress);
-	});
+	// 	expect(newAddress.json().ip).not.toBe(realAddress);
+	// });
 });
