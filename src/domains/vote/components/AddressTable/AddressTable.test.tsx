@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -40,14 +39,6 @@ describe("AddressTable", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
-
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.persist();
 
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();

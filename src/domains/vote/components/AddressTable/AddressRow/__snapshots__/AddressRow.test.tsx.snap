@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`AddressRow should emit action on select button 1`] = `
+exports[`AddressRow > should emit action on select button 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -68,8 +68,18 @@ exports[`AddressRow should emit action on select button 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -82,8 +92,22 @@ exports[`AddressRow should emit action on select button 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -150,8 +174,31 @@ exports[`AddressRow should emit action on select button 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -180,7 +227,7 @@ exports[`AddressRow should emit action on select button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render for a multisignature wallet 1`] = `
+exports[`AddressRow > should render for a multisignature wallet 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -248,8 +295,18 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -262,8 +319,22 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -276,8 +347,30 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  multisignature.svg
+                <svg
+                  id="multi-signature"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                    />
+                    <g>
+                      <path
+                        d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                      />
+                    </g>
+                  </g>
                 </svg>
               </div>
             </div>
@@ -344,8 +437,31 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -374,7 +490,7 @@ exports[`AddressRow should render for a multisignature wallet 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render when isCompact = false 1`] = `
+exports[`AddressRow > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -442,8 +558,18 @@ exports[`AddressRow should render when isCompact = false 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -456,8 +582,22 @@ exports[`AddressRow should render when isCompact = false 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -524,8 +664,31 @@ exports[`AddressRow should render when isCompact = false 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -554,7 +717,7 @@ exports[`AddressRow should render when isCompact = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render when isCompact = true 1`] = `
+exports[`AddressRow > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -622,8 +785,18 @@ exports[`AddressRow should render when isCompact = true 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -636,8 +809,22 @@ exports[`AddressRow should render when isCompact = true 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -704,8 +891,31 @@ exports[`AddressRow should render when isCompact = true 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -734,7 +944,7 @@ exports[`AddressRow should render when isCompact = true 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render when wallet hasn't voted 1`] = `
+exports[`AddressRow > should render when wallet hasn't voted 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -802,8 +1012,18 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -816,8 +1036,22 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -884,8 +1118,31 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -1028,7 +1285,7 @@ exports[`AddressRow should render when wallet hasn't voted 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render when wallet not found for votes 1`] = `
+exports[`AddressRow > should render when wallet not found for votes 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1096,8 +1353,18 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1110,8 +1377,22 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -1178,8 +1459,31 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -1312,7 +1616,7 @@ exports[`AddressRow should render when wallet not found for votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with active delegate 1`] = `
+exports[`AddressRow > should render with active delegate 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1380,8 +1684,18 @@ exports[`AddressRow should render with active delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1394,8 +1708,22 @@ exports[`AddressRow should render with active delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -1460,8 +1788,31 @@ exports[`AddressRow should render with active delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-check-mark.svg
+                <svg
+                  id="circle-check-mark"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -1490,7 +1841,7 @@ exports[`AddressRow should render with active delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = false when the maximum votes is greater than 1 1`] = `
+exports[`AddressRow > should render with isCompact = false when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1558,8 +1909,18 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1572,8 +1933,22 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -1648,7 +2023,7 @@ exports[`AddressRow should render with isCompact = false when the maximum votes 
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = false when the wallet has exactly 4 votes 1`] = `
+exports[`AddressRow > should render with isCompact = false when the wallet has exactly 4 votes 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1716,8 +2091,18 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1730,8 +2115,22 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -1874,7 +2273,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has exa
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = false when the wallet has many votes 1`] = `
+exports[`AddressRow > should render with isCompact = false when the wallet has many votes 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1942,8 +2341,18 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1956,8 +2365,22 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -2091,7 +2514,7 @@ exports[`AddressRow should render with isCompact = false when the wallet has man
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = true when the maximum votes is greater than 1 1`] = `
+exports[`AddressRow > should render with isCompact = true when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2159,8 +2582,18 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2173,8 +2606,22 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -2249,7 +2696,7 @@ exports[`AddressRow should render with isCompact = true when the maximum votes i
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = true when the wallet has exactly 4 votes 1`] = `
+exports[`AddressRow > should render with isCompact = true when the wallet has exactly 4 votes 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2317,8 +2764,18 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2331,8 +2788,22 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -2475,7 +2946,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has exac
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with isCompact = true when the wallet has many votes 1`] = `
+exports[`AddressRow > should render with isCompact = true when the wallet has many votes 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2543,8 +3014,18 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2557,8 +3038,22 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -2692,7 +3187,7 @@ exports[`AddressRow should render with isCompact = true when the wallet has many
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with resigned delegate 1`] = `
+exports[`AddressRow > should render with resigned delegate 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2760,8 +3255,18 @@ exports[`AddressRow should render with resigned delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2774,8 +3279,22 @@ exports[`AddressRow should render with resigned delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -2842,8 +3361,31 @@ exports[`AddressRow should render with resigned delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  circle-cross.svg
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
@@ -2872,7 +3414,7 @@ exports[`AddressRow should render with resigned delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`AddressRow should render with standby delegate 1`] = `
+exports[`AddressRow > should render with standby delegate 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -2940,8 +3482,18 @@ exports[`AddressRow should render with standby delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ledger.svg
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2954,8 +3506,22 @@ exports[`AddressRow should render with standby delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  star-filled.svg
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -3020,8 +3586,32 @@ exports[`AddressRow should render with standby delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  clock.svg
+                <svg
+                  id="clock"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="2"
+                    transform="translate(1.5 1.5)"
+                  >
+                    <circle
+                      cx="8.5"
+                      cy="8.5"
+                      r="9"
+                    />
+                    <path
+                      d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                    />
+                  </g>
                 </svg>
               </div>
             </span>
