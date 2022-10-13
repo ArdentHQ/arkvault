@@ -2,7 +2,7 @@ import { PBKDF2 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import reactRouterDom from "react-router-dom";
+import * as reactRouterDomMock from "react-router-dom";
 import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
@@ -22,9 +22,8 @@ const ARKDevnet = "ark.devnet";
 
 const itif = (condition: boolean) => (condition ? it : it.skip);
 
-vi.mock("react-router-dom", () => ({
-	...vi.requireActual("react-router-dom"),
-	useHistory: vi.fn(),
+vi.mock("react-router-dom", async () => ({
+	...(await vi.importActual("react-router-dom")),
 }));
 
 vi.mock("@/utils/delay", () => ({
@@ -41,7 +40,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		wallet = profile.wallets().first();
 		goMock = vi.fn();
 
-		vi.spyOn(reactRouterDom, "useHistory").mockReturnValue({ go: goMock });
+		vi.spyOn(reactRouterDomMock, "useHistory").mockReturnValue({ go: goMock });
 	});
 
 	it("should validate if mnemonic match the wallet address", async () => {
