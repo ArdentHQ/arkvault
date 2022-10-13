@@ -48,7 +48,7 @@ describe("WalletHeaderMobile", () => {
 	it("should render for starred wallets", async () => {
 		const starredSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
-		const { container } = renderResponsiveWithRoute(
+		renderResponsiveWithRoute(
 			<WalletHeaderMobile profile={profile} wallet={wallet} />,
 			"xs",
 			{
@@ -59,7 +59,8 @@ describe("WalletHeaderMobile", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		expect(container).toHaveTextContent("star-filled.svg");
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(document.querySelector("svg#star-filled")).toBeInTheDocument();
 
 		starredSpy.mockRestore();
 	});

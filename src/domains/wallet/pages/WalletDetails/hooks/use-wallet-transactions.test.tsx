@@ -1,11 +1,14 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect, useState } from "react";
 
 import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+import { transactionsFixture } from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { rest } from "msw";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let allPendingTransactions: PendingTransaction[];
 
@@ -32,32 +35,34 @@ describe("Wallet Transactions Hook", () => {
 		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 	};
 
-	beforeAll(() => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query((parameters) => parameters.page === undefined || parameters.page === "1")
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const unconfirmed = data[0];
-				unconfirmed.confirmations = 0;
-				return {
-					data: [unconfirmed],
-					meta,
-				};
-			})
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", limit: "10", page: "2" })
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(1, 3),
-					meta,
-				};
-			})
-			.persist();
-	});
-
 	beforeEach(async () => {
+		server.use(
+			rest.get("https://ark-test.arkvault.io/api/transactions", (request, response, context) => {
+				const address = request.url.searchParams.get("address");
+				const limit = request.url.searchParams.get("limit");
+				const page = request.url.searchParams.get("page");
+
+				const { meta, data } = transactionsFixture;
+
+				if (page === undefined || page === "1") {
+					const unconfirmed = data[0];
+					unconfirmed.confirmations = 0;
+
+					return response(context.status(200), context.json({
+						data: [unconfirmed],
+						meta,
+					}));
+				}
+
+				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "10" && page === "2") {
+					return response(context.status(200), context.json({
+						data: data.slice(1, 3),
+						meta,
+					}));
+				}
+			}),
+		);
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -171,10 +176,12 @@ describe("Wallet Transactions Hook", () => {
 
 	it("should sync pending multiSignature transactions", async () => {
 		mockPendingTransfers(wallet);
+
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
 		let allPendingTransactions: PendingTransaction[];
+
 		const Component = () => {
 			const { pendingTransactions, syncPending } = useWalletTransactions(wallet);
 			allPendingTransactions = pendingTransactions;
@@ -182,16 +189,20 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, []);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
 		render(<Component />);
 
-		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+
+		vi.clearAllMocks();
 	});
 
 	it("should sync pending transactions", async () => {
 		mockPendingTransfers(wallet);
+
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
@@ -208,15 +219,22 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, []);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
 		render(<Component />);
 
-		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+
+		vi.clearAllMocks();
 	});
 
 	it("should prevent from rendering transaction if not found in wallet", async () => {
+		server.use(
+			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
+		);
+
 		vi.spyOn(wallet.transaction(), "pending").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
@@ -235,6 +253,7 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, [syncPending]);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
@@ -244,6 +263,10 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should run periodically", async () => {
+		server.use(
+			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
+		);
+
 		vi.useFakeTimers();
 		const spySync = vi.spyOn(wallet.transaction(), "sync");
 

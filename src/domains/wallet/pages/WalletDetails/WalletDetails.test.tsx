@@ -2,7 +2,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -21,6 +20,7 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
 
@@ -125,46 +125,26 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get(`/api/wallets/${unvotedWallet.address()}`)
-			.reply(200, walletMock)
-			.get(`/api/wallets/${blankWallet.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.get(`/api/wallets/${wallet2.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.get("/api/transactions")
-			.query((parameters) => !!parameters.address)
-			.reply(200, (url) => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const filteredUrl =
-					"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
-				if (url === filteredUrl) {
-					return { data: [], meta };
-				}
-
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			})
-			.persist();
-
 		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
+		server.use(
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`, {
+				error: "Not Found",
+				message: "Wallet not found",
+				statusCode: 404,
+			}, { status: 404 }),
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
+				error: "Not Found",
+				message: "Wallet not found",
+				statusCode: 404,
+			}),
+			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
+		);
+
 		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()

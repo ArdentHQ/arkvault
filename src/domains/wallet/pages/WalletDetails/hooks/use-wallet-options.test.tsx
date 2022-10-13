@@ -1,41 +1,46 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 
 import { renderHook } from "@testing-library/react-hooks";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { server } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { rest } from "msw";
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 
-	beforeAll(() => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query((parameters) => parameters.page === undefined || parameters.page === "1")
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const unconfirmed = data[0];
-				unconfirmed.confirmations = 0;
-				return {
-					data: [unconfirmed],
-					meta,
-				};
-			})
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", limit: "10", page: "2" })
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(1, 3),
-					meta,
-				};
-			})
-			.persist();
-	});
-
 	beforeEach(async () => {
+		server.use(
+			rest.get("https://ark-test.arkvault.io/api/transactions", (request, response, context) => {
+				const address = request.url.searchParams.get("page");
+				const limit = request.url.searchParams.get("page");
+				const page = request.url.searchParams.get("page");
+
+				const { data, meta } = transactionsFixture;
+
+				if (page === undefined || page === "1") {
+					const unconfirmed = data[0];
+					unconfirmed.confirmations = 0;
+
+					return response(context.status(200), context.json({
+						data: [unconfirmed],
+						meta,
+					}));
+				}
+
+				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "10" && page === "2") {
+					return response(context.status(200), context.json({
+						data: data.slice(1, 3),
+						meta,
+					}));
+				}
+			}),
+		);
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 

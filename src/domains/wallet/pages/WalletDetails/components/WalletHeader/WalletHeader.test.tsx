@@ -1,3 +1,4 @@
+/* eslint-disable-next-line testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -160,9 +161,9 @@ describe("WalletHeader", () => {
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} currencyDelta={delta} />);
 
 		if (delta < 0) {
-			expect(screen.getByText("chevron-down-small.svg")).toBeInTheDocument();
+			expect(document.querySelector("svg#chevron-down-small")).toBeInTheDocument();
 		} else {
-			expect(screen.getByText("chevron-up-small.svg")).toBeInTheDocument();
+			expect(document.querySelector("svg#chevron-up-small")).toBeInTheDocument();
 		}
 
 		expect(screen.getByText(`${delta}%`)).toBeInTheDocument();

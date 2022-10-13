@@ -1,3 +1,4 @@
+/* eslint-disable-next-line testing-library/no-node-access */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -17,8 +18,6 @@ let defaultDelegate: {
 	isResignedDelegate: boolean;
 	governanceIdentifier: string;
 };
-
-const smallIcon = () => screen.getByText("hint-small.svg");
 
 const multivote = "WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE";
 
@@ -269,7 +268,7 @@ describe("WalletVote", () => {
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(smallIcon()).toBeInTheDocument();
+			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -391,7 +390,7 @@ describe("WalletVote", () => {
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(smallIcon()).toBeInTheDocument();
+			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -431,7 +430,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -470,7 +469,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -519,7 +518,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
