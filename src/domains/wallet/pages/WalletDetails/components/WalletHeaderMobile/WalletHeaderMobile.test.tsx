@@ -48,14 +48,10 @@ describe("WalletHeaderMobile", () => {
 	it("should render for starred wallets", async () => {
 		const starredSpy = vi.spyOn(wallet, "isStarred").mockReturnValue(true);
 
-		renderResponsiveWithRoute(
-			<WalletHeaderMobile profile={profile} wallet={wallet} />,
-			"xs",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
+		renderResponsiveWithRoute(<WalletHeaderMobile profile={profile} wallet={wallet} />, "xs", {
+			history,
+			route: walletUrl,
+		});
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 

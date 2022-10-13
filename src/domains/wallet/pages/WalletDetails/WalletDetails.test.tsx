@@ -132,11 +132,15 @@ describe("WalletDetails", () => {
 	beforeEach(async () => {
 		server.use(
 			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			}, { status: 404 }),
+			requestMock(
+				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
+				{
+					error: "Not Found",
+					message: "Wallet not found",
+					statusCode: 404,
+				},
+				{ status: 404 },
+			),
 			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
 				error: "Not Found",
 				message: "Wallet not found",

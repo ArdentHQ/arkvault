@@ -5,6 +5,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { rest } from "msw";
 import { WalletDetails } from "./WalletDetails";
 import { requestMock, server } from "@/tests/mocks/server";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -20,7 +21,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-import { rest } from "msw";
 
 const history = createHashHistory();
 let walletUrl: string;
@@ -113,22 +113,22 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-			// .get("/api/transactions")
-			// .query((parameters) => !!parameters.address)
-			// .reply(200, (url) => {
-			// 	const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-			// 	const filteredUrl =
-			// 		"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
-			// 	if (url === filteredUrl) {
-			// 		return { data: [], meta };
-			// 	}
+		// .get("/api/transactions")
+		// .query((parameters) => !!parameters.address)
+		// .reply(200, (url) => {
+		// 	const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
+		// 	const filteredUrl =
+		// 		"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
+		// 	if (url === filteredUrl) {
+		// 		return { data: [], meta };
+		// 	}
 
-			// 	return {
-			// 		data: data.slice(0, 1),
-			// 		meta,
-			// 	};
-			// })
-			// .persist();
+		// 	return {
+		// 		data: data.slice(0, 1),
+		// 		meta,
+		// 	};
+		// })
+		// .persist();
 
 		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
@@ -137,11 +137,15 @@ describe("WalletDetails", () => {
 	beforeEach(async () => {
 		server.use(
 			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			}, { status: 404 }),
+			requestMock(
+				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
+				{
+					error: "Not Found",
+					message: "Wallet not found",
+					statusCode: 404,
+				},
+				{ status: 404 },
+			),
 			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
 				error: "Not Found",
 				message: "Wallet not found",

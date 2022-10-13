@@ -2,12 +2,12 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
 
+import { rest } from "msw";
 import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { transactionsFixture } from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { rest } from "msw";
 import { requestMock, server } from "@/tests/mocks/server";
 
 let allPendingTransactions: PendingTransaction[];
@@ -48,17 +48,23 @@ describe("Wallet Transactions Hook", () => {
 					const unconfirmed = data[0];
 					unconfirmed.confirmations = 0;
 
-					return response(context.status(200), context.json({
-						data: [unconfirmed],
-						meta,
-					}));
+					return response(
+						context.status(200),
+						context.json({
+							data: [unconfirmed],
+							meta,
+						}),
+					);
 				}
 
 				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "10" && page === "2") {
-					return response(context.status(200), context.json({
-						data: data.slice(1, 3),
-						meta,
-					}));
+					return response(
+						context.status(200),
+						context.json({
+							data: data.slice(1, 3),
+							meta,
+						}),
+					);
 				}
 			}),
 		);
@@ -231,9 +237,7 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should prevent from rendering transaction if not found in wallet", async () => {
-		server.use(
-			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
-		);
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 
 		vi.spyOn(wallet.transaction(), "pending").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
@@ -263,9 +267,7 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should run periodically", async () => {
-		server.use(
-			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
-		);
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 
 		vi.useFakeTimers();
 		const spySync = vi.spyOn(wallet.transaction(), "sync");

@@ -255,9 +255,7 @@ describe("WalletDetails", () => {
 			network: "ark.devnet",
 		});
 
-		server.use(
-			requestMock(`https://ark-test.arkvault.io/api/wallets/${newWallet.address()}`, walletMock),
-		);
+		server.use(requestMock(`https://ark-test.arkvault.io/api/wallets/${newWallet.address()}`, walletMock));
 
 		profile.wallets().push(newWallet);
 
