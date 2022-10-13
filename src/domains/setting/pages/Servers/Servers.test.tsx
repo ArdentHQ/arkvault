@@ -434,8 +434,9 @@ describe("Servers Settings", () => {
 			});
 
 			it("can fill the form and store the new server for peer server", async () => {
-				mockPeerNetwork();
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
+				mockPeerNetwork();
 				mockPeerHeight();
 
 				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
@@ -464,7 +465,9 @@ describe("Servers Settings", () => {
 				userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
 
 				await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
+
 				serverPushSpy.mockRestore();
+				hostsMock.mockRestore();
 			});
 
 			it("can fill the form with an ip host", async () => {
@@ -1088,15 +1091,13 @@ describe("Servers Settings", () => {
 				},
 			);
 
+			userEvent.click(within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0]);
+
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-
-			const table = screen.getByTestId(customPeerListTestId);
-
-			userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1301,10 +1302,9 @@ describe("Servers Settings", () => {
 			userEvent.click(refreshButton);
 
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(1));
+			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
 
-			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(2);
-
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3);
 		});
 
 		it("can check and uncheck a server", async () => {
@@ -1419,15 +1419,13 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			const table = screen.getByTestId(customPeerListTestId);
-
-			userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			userEvent.click(within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0]);
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
 
 			// After ping it should show error
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
