@@ -23,8 +23,8 @@ import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 vi.mock("react-hook-form", async () => ({
-  ...(await vi.importActual("react-hook-form")),
-}))
+	...(await vi.importActual("react-hook-form")),
+}));
 
 const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 const backSelector = () => screen.getByTestId("Paginator__back-button");
