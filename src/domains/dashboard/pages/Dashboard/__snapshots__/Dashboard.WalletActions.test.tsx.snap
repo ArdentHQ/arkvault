@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard should navigate to create wallet page 1`] = `<DocumentFragment />`;
+
+exports[`Dashboard should navigate to import ledger page 1`] = `<DocumentFragment />`;
+
+exports[`Dashboard should navigate to import wallet page 1`] = `<DocumentFragment />`;
