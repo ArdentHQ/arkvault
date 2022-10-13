@@ -173,3 +173,22 @@ vi.stubGlobal("crypto", {
 	...crypto,
 	getRandomValues: crypto.randomFillSync,
 });
+
+// Zendesk
+vi.mock("react-zendesk", () => ({
+	__esModule: true,
+	default: () => null,
+	ZendeskAPI: () => vi.fn(),
+}));
+
+Object.defineProperty(window, "$zopim", {
+	writable: true,
+	value: {
+		livechat: {
+			window: {
+				show: vi.fn(),
+				hide: vi.fn(),
+			},
+		},
+	},
+});
