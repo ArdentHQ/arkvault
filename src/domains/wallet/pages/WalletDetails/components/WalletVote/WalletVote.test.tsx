@@ -21,7 +21,7 @@ let defaultDelegate: {
 
 const multivote = "WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE";
 
-const queryDocumentSvg = (svg: string) => document.querySelector(`svg#${svg}`);
+const expectHintIcon = () => expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 
 let votes: Contracts.VoteRegistryItem[];
 
@@ -270,7 +270,8 @@ describe("WalletVote", () => {
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -392,7 +393,8 @@ describe("WalletVote", () => {
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -432,7 +434,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -471,7 +474,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -520,7 +524,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
