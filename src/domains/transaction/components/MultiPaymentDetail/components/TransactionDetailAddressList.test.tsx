@@ -59,7 +59,8 @@ describe("TransactionDetailAddressList", () => {
 
 		render(<TransactionDetailAddressList transaction={TransactionFixture} addresses={addresses} />);
 
-		expect(screen.getByText("delegate-registration.svg")).toBeInTheDocument();
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(document.querySelector("svg#delegate-registration")).toBeInTheDocument();
 	});
 
 	it("should show the sender address if it's a returned transaction", () => {

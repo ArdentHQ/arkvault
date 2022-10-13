@@ -48,7 +48,9 @@ describe("TransactionAmount", () => {
 		);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
-		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 
 		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
