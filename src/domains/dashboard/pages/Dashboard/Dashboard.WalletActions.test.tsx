@@ -87,8 +87,6 @@ describe("Dashboard", () => {
 			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
 		);
 
-		expect(asFragment()).toMatchSnapshot();
-
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -108,7 +106,6 @@ describe("Dashboard", () => {
 		userEvent.click(screen.getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to import wallet page", async () => {
@@ -127,6 +124,5 @@ describe("Dashboard", () => {
 		userEvent.click(screen.getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 });
