@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`VoteList should render in lg 1`] = `
+exports[`VoteList > should render in lg 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -138,7 +138,7 @@ exports[`VoteList should render in lg 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render in md 1`] = `
+exports[`VoteList > should render in md 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -276,7 +276,7 @@ exports[`VoteList should render in md 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render in sm 1`] = `
+exports[`VoteList > should render in sm 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -414,7 +414,7 @@ exports[`VoteList should render in sm 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render in xl 1`] = `
+exports[`VoteList > should render in xl 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -552,7 +552,7 @@ exports[`VoteList should render in xl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render in xs 1`] = `
+exports[`VoteList > should render in xs 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -690,7 +690,7 @@ exports[`VoteList should render in xs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with amount in lg 1`] = `
+exports[`VoteList > should render with amount in lg 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -858,7 +858,7 @@ exports[`VoteList should render with amount in lg 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with amount in md 1`] = `
+exports[`VoteList > should render with amount in md 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -1026,7 +1026,7 @@ exports[`VoteList should render with amount in md 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with amount in sm 1`] = `
+exports[`VoteList > should render with amount in sm 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -1194,7 +1194,7 @@ exports[`VoteList should render with amount in sm 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with amount in xl 1`] = `
+exports[`VoteList > should render with amount in xl 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -1362,7 +1362,7 @@ exports[`VoteList should render with amount in xl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with amount in xs 1`] = `
+exports[`VoteList > should render with amount in xs 1`] = `
 <DocumentFragment>
   <div
     class="css-1rbgdnn"
@@ -1530,4 +1530,4 @@ exports[`VoteList should render with amount in xs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`VoteList should render with empty list 1`] = `<DocumentFragment />`;
+exports[`VoteList > should render with empty list 1`] = `<DocumentFragment />`;

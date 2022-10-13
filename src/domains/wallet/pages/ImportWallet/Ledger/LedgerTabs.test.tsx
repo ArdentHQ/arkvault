@@ -22,6 +22,10 @@ import {
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
+vi.mock("react-hook-form", async () => ({
+  ...(await vi.importActual("react-hook-form")),
+}))
+
 const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 const backSelector = () => screen.getByTestId("Paginator__back-button");
 
@@ -132,7 +136,7 @@ describe("LedgerTabs", () => {
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		const ledgerTransportMock = mockNanoXTransport();
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
@@ -152,7 +156,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	it.only("should load more address", async () => {
+	it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const getPublicKeySpy = vi
@@ -210,7 +214,7 @@ describe("LedgerTabs", () => {
 
 		const ledgerTransportMock = mockNanoXTransport();
 
-		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
 
@@ -246,7 +250,6 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const { container, history } = render(<Component />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
@@ -286,7 +289,6 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const { history } = render(<Component activeIndex={3} />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -342,7 +344,6 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		const { history } = render(<Component activeIndex={3} />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -383,7 +384,6 @@ describe("LedgerTabs", () => {
 		const ledgerTransportMock = mockNanoXTransport();
 		render(<Component activeIndex={2} />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		expect(screen.getByTestId("NetworkStep")).toBeVisible();
@@ -421,7 +421,6 @@ describe("LedgerTabs", () => {
 
 		const { history } = render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
@@ -445,7 +444,6 @@ describe("LedgerTabs", () => {
 
 		const { history } = render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
-			withProviders: true,
 		});
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
@@ -456,7 +454,7 @@ describe("LedgerTabs", () => {
 		vi.restoreAllMocks();
 	});
 
-	describe("Enter key handling", () => {
+	describe.only("Enter key handling", () => {
 		it("should go to the next step", async () => {
 			const getPublicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -464,7 +462,7 @@ describe("LedgerTabs", () => {
 
 			const ledgerTransportMock = mockNanoXTransport();
 
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 			expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
@@ -484,7 +482,7 @@ describe("LedgerTabs", () => {
 
 			const ledgerTransportMock = mockNanoXTransport();
 
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
 
@@ -516,7 +514,7 @@ describe("LedgerTabs", () => {
 
 			const ledgerTransportMock = mockNanoXTransport();
 
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
 
 			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
 

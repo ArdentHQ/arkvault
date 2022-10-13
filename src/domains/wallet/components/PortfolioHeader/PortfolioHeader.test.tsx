@@ -84,7 +84,7 @@ describe("Portfolio grouped networks", () => {
 		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
-	it.only("should render list", async () => {
+	it("should render list", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />
