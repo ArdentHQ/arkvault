@@ -283,12 +283,17 @@ describe("ExchangeForm", () => {
 	it("should show an error alert if the selected pair is unavailable", async () => {
 		server.use(
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
-			requestMock(
+			requestMockOnce(
 				`${exchangeBaseURL}/api/changenow/tickers/btc/eth`,
 				{
 					error: { message: "Unavailable Pair" },
 				},
 				{ status: 400 },
+			),
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/tickers/btc/eth`,
+				undefined,
+				{ status: 500 },
 			),
 		);
 
@@ -311,6 +316,17 @@ describe("ExchangeForm", () => {
 
 		await waitFor(() => {
 			expect(container).toHaveTextContent("The pair BTC / ETH is not available");
+		});
+
+		// remove to currency
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+
+		await selectCurrencies({
+			to: { name: "Ethereum", ticker: "ETH" },
+		});
+
+		await waitFor(() => {
+			expect(container).not.toHaveTextContent("The pair BTC / ETH is not available");
 		});
 	});
 
@@ -782,7 +798,8 @@ describe("ExchangeForm", () => {
 	it("should clear refund address error when unsetting from currency", async () => {
 		server.use(
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
-			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: false }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, undefined, { status: 500 }),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, { data: false }),
 		);
 
 		const onReady = vi.fn();
@@ -810,10 +827,10 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		userEvent.paste(refundDropdown, "payoutAddress");
+		userEvent.paste(refundDropdown, "refundAddress");
 
 		await waitFor(() => {
-			expect(refundDropdown).toHaveValue("payoutAddress");
+			expect(refundDropdown).toHaveValue("refundAddress");
 		});
 
 		await waitFor(() => {
@@ -1016,7 +1033,6 @@ describe("ExchangeForm", () => {
 				{ error: { message: "Invalid Refund Address" } },
 				{ method: "post", status: 422 },
 			),
-			requestMock(`${exchangeBaseURL}/api/changenow/currencies/btc/refundAddress`, { data: true }),
 		);
 
 		const onReady = vi.fn();

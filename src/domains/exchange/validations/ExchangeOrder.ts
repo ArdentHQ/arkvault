@@ -61,6 +61,7 @@ export const exchangeOrder = (t: TFunction) => ({
 
 				return true;
 			} catch {
+				/* istanbul ignore next -- @preserve */
 				return true;
 			}
 		},
@@ -82,6 +83,7 @@ export const exchangeOrder = (t: TFunction) => ({
 
 				return true;
 			} catch {
+				/* istanbul ignore next -- @preserve */
 				return true;
 			}
 		},
