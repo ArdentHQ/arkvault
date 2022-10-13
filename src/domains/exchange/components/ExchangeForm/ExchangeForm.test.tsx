@@ -290,11 +290,7 @@ describe("ExchangeForm", () => {
 				},
 				{ status: 400 },
 			),
-			requestMock(
-				`${exchangeBaseURL}/api/changenow/tickers/btc/eth`,
-				undefined,
-				{ status: 500 },
-			),
+			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, undefined, { status: 500 }),
 		);
 
 		const onReady = vi.fn();
@@ -798,7 +794,9 @@ describe("ExchangeForm", () => {
 	it("should clear refund address error when unsetting from currency", async () => {
 		server.use(
 			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
-			requestMockOnce(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, undefined, { status: 500 }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, undefined, {
+				status: 500,
+			}),
 			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, { data: false }),
 		);
 
