@@ -1,4 +1,4 @@
-/* eslint-disable-next-line testing-library/no-node-access */
+/* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";

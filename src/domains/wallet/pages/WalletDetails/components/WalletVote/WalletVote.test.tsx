@@ -1,4 +1,4 @@
-/* eslint-disable-next-line testing-library/no-node-access */
+/* eslint-disable testing-library/no-node-access */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -20,6 +20,8 @@ let defaultDelegate: {
 };
 
 const multivote = "WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE";
+
+const queryDocumentSvg = (svg: string) => document.querySelector(`svg#${svg}`);
 
 let votes: Contracts.VoteRegistryItem[];
 
@@ -268,7 +270,7 @@ describe("WalletVote", () => {
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
+			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -390,7 +392,7 @@ describe("WalletVote", () => {
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
+			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -430,7 +432,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
+			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -469,7 +471,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
+			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -518,7 +520,7 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
+			expect(queryDocumentSvg("hint-small")).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
