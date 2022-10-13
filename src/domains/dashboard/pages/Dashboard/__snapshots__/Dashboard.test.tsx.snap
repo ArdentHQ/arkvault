@@ -1,5 +1,6 @@
 // Vitest Snapshot v1
 
+<<<<<<< HEAD
 exports[`Dashboard > should display empty block when there are no transactions 1`] = `
 <DocumentFragment>
   <div
@@ -1371,6 +1372,9 @@ exports[`Dashboard > should navigate to import ledger page 1`] = `<DocumentFragm
 exports[`Dashboard > should navigate to import wallet page 1`] = `<DocumentFragment />`;
 
 exports[`Dashboard > should render 1`] = `
+=======
+exports[`Dashboard should render 1`] = `
+>>>>>>> origin/develop
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -3781,6 +3785,7 @@ exports[`Dashboard > should render 1`] = `
   </div>
 </DocumentFragment>
 `;
+<<<<<<< HEAD
 
 exports[`Dashboard > should render loading state when profile is syncing 1`] = `
 <DocumentFragment>
@@ -7031,3 +7036,5 @@ exports[`Dashboard > should render loading state when profile is syncing 1`] = `
   </div>
 </DocumentFragment>
 `;
+=======
+>>>>>>> origin/develop

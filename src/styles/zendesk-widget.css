@@ -1,0 +1,87 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./variables.css";
+
+#launcher {
+	@apply hidden;
+}
+
+.widget h1 {
+	@apply text-theme-secondary-200;
+}
+
+.widget footer {
+	@apply border-none;
+}
+
+.widget a {
+	@apply invisible;
+}
+
+.widget svg:first-child path {
+	stroke: var(--theme-color-secondary-200);
+}
+
+.widget-dark form,
+.widget-dark [data-embed="ticketSubmissionForm"] > div {
+	@apply bg-theme-secondary-900;
+}
+
+.widget-light form input,
+.widget-light form textarea {
+	@apply border-theme-secondary-400;
+}
+
+.widget-dark form input,
+.widget-dark form textarea {
+	@apply border-theme-secondary-700 bg-theme-secondary-900 text-theme-secondary-200;
+}
+
+.widget-dark form input,
+.widget-dark form textarea {
+	@apply border-theme-secondary-700 bg-theme-secondary-900 text-theme-secondary-200;
+}
+
+.widget-dark form label {
+	@apply text-theme-secondary-500;
+}
+
+.widget #dropzone-input svg,
+.widget #attachmentButtonDescription {
+	@apply inline;
+}
+
+.widget-dark #dropzone-input,
+.widget-dark #attachmentButtonDescription {
+	background-color: var(--theme-color-secondary-800) !important;
+	@apply border-none text-theme-secondary-600;
+}
+
+.widget button[type="submit"],
+.widget button[type="submit"]:hover {
+	color: var(--theme-color-secondary-200) !important;
+	@apply font-bold;
+}
+
+.widget-dark h2 {
+	@apply text-2xl;
+}
+
+.widget-dark h2,
+.widget-dark h2:hover,
+.widget-dark p {
+	color: var(--theme-color-secondary-500) !important;
+}
+
+.widget-dark #Layer_2 {
+	@apply hidden;
+}
+
+.widget-dark button:nth-child(1) {
+	line-height: 1px !important;
+	background-color: var(--theme-color-secondary-800) !important;
+	color: var(--theme-color-secondary-200) !important;
+	@apply rounded-sm p-4;
+}

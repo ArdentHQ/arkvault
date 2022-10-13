@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { useSynchronizer } from "@/app/hooks";
 import { isUnit } from "@/utils/test-helpers";
+import { delay } from "@/utils/delay";
 
 interface TransactionsState {
 	transactions: DTO.ExtendedConfirmedTransactionData[];
@@ -123,7 +124,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 			return;
 		}
 
-		setTimeout(() => loadTransactions(), 0);
+		delay(() => loadTransactions(), 0);
 
 		isMounted.current = true;
 		return () => {
