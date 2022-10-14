@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`CsvFormatter should convert to csv excluding crypto amount 1`] = `
+exports[`CsvFormatter > should convert to csv excluding crypto amount 1`] = `
 "ID,Date & Time,Sender,Recipient,Fiat Amount [USD],Fiat Fee [USD],Fiat Total [USD],Rate
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,0,0,0,0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,0,0,0,0
@@ -19,7 +19,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,12.09.2020 12,D
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,14.11.2018 13,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv excluding date 1`] = `
+exports[`CsvFormatter > should convert to csv excluding date 1`] = `
 "ID,Sender,Recipient,Amount,Fee,Total,Fiat Amount [USD],Fiat Fee [USD],Fiat Total [USD],Rate
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,400000,0,400000,0,0,0,0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,50000,0,50000,0,0,0,0
@@ -38,7 +38,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,D8rr7B1d6TL6pf1
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,10,0,10,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv excluding fiat amount 1`] = `
+exports[`CsvFormatter > should convert to csv excluding fiat amount 1`] = `
 "ID,Date & Time,Sender,Recipient,Amount,Fee,Total
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,400000,0,400000
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,50000,0,50000
@@ -57,7 +57,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,12.09.2020 12,D
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,14.11.2018 13,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,10,0,10"
 `;
 
-exports[`CsvFormatter should convert to csv excluding header row 1`] = `
+exports[`CsvFormatter > should convert to csv excluding header row 1`] = `
 "8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,400000,0,400000,0,0,0,0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,50000,0,50000,0,0,0,0
 73b0aec130840a50adf747a8dd18faf1109c47ac8faef6579d59a9737f3cb33e,23.07.2020 07,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,100000,0,100000,0,0,0,0
@@ -75,7 +75,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,12.09.2020 12,D
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,14.11.2018 13,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,10,0,10,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv excluding sender and recipient 1`] = `
+exports[`CsvFormatter > should convert to csv excluding sender and recipient 1`] = `
 "ID,Date & Time,Amount,Fee,Total,Fiat Amount [USD],Fiat Fee [USD],Fiat Total [USD],Rate
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,23.07.2020 08,400000,0,400000,0,0,0,0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,23.07.2020 08,50000,0,50000,0,0,0,0
@@ -94,7 +94,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,12.09.2020 12,0
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,14.11.2018 13,10,0,10,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv excluding transation id 1`] = `
+exports[`CsvFormatter > should convert to csv excluding transation id 1`] = `
 "Date & Time,Sender,Recipient,Amount,Fee,Total,Fiat Amount [USD],Fiat Fee [USD],Fiat Total [USD],Rate
 23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,400000,0,400000,0,0,0,0
 23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,50000,0,50000,0,0,0,0
@@ -113,7 +113,7 @@ exports[`CsvFormatter should convert to csv excluding transation id 1`] = `
 14.11.2018 13,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,10,0,10,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv including header row 1`] = `
+exports[`CsvFormatter > should convert to csv including header row 1`] = `
 "ID,Date & Time,Sender,Recipient,Amount,Fee,Total,Fiat Amount [USD],Fiat Fee [USD],Fiat Total [USD],Rate
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv,400000,0,400000,0,0,0,0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf,23.07.2020 08,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A,50000,0,50000,0,0,0,0
@@ -132,7 +132,7 @@ d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493,12.09.2020 12,D
 29cc21f2941a6696a330ab1949f3b35b1614028e157827b7d3b6dd7c6ee13f90,14.11.2018 13,D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax,DHawRTCWDw4e4YaPyF8QEdWUmxiwtVmQ5z,10,0,10,0,0,0,0"
 `;
 
-exports[`CsvFormatter should convert to csv using semicolon delimiter 1`] = `
+exports[`CsvFormatter > should convert to csv using semicolon delimiter 1`] = `
 "ID;Date & Time;Sender;Recipient;Amount;Fee;Total;Fiat Amount [USD];Fiat Fee [USD];Fiat Total [USD];Rate
 8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877;23.07.2020 08;D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax;D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv;400000;0;400000;0;0;0;0
 0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf;23.07.2020 08;D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax;DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A;50000;0;50000;0;0;0;0

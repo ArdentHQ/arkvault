@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Signatures should handle exception when checking if participant is awaiting signature 1`] = `
+exports[`Signatures > should handle exception when checking if participant is awaiting signature 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -49,8 +49,22 @@ exports[`Signatures should handle exception when checking if participant is awai
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -96,8 +110,22 @@ exports[`Signatures should handle exception when checking if participant is awai
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -110,7 +138,7 @@ exports[`Signatures should handle exception when checking if participant is awai
 </div>
 `;
 
-exports[`Signatures should not require signature if waiting for final signature in registration with isAwaitingOurSignature=false 1`] = `
+exports[`Signatures > should not require signature if waiting for final signature in registration with isAwaitingOurSignature=false 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -159,8 +187,22 @@ exports[`Signatures should not require signature if waiting for final signature 
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -206,8 +248,22 @@ exports[`Signatures should not require signature if waiting for final signature 
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -220,7 +276,7 @@ exports[`Signatures should not require signature if waiting for final signature 
 </div>
 `;
 
-exports[`Signatures should not require signature if waiting for final signature in registration with isAwaitingOurSignature=true 1`] = `
+exports[`Signatures > should not require signature if waiting for final signature in registration with isAwaitingOurSignature=true 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -269,8 +325,22 @@ exports[`Signatures should not require signature if waiting for final signature 
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -316,8 +386,22 @@ exports[`Signatures should not require signature if waiting for final signature 
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -330,7 +414,7 @@ exports[`Signatures should not require signature if waiting for final signature 
 </div>
 `;
 
-exports[`Signatures should render 1`] = `
+exports[`Signatures > should render 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -379,8 +463,32 @@ exports[`Signatures should render 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  clock-small.svg
+                <svg
+                  id="clock-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="2"
+                    transform="translate(1.5 1.5)"
+                  >
+                    <circle
+                      cx="3.5"
+                      cy="3.5"
+                      r="4"
+                    />
+                    <path
+                      d="M3.5 3.5V2m.1 1.6l.9.9"
+                    />
+                  </g>
                 </svg>
               </div>
               <span />
@@ -426,8 +534,22 @@ exports[`Signatures should render 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -440,7 +562,7 @@ exports[`Signatures should render 1`] = `
 </div>
 `;
 
-exports[`Signatures should render with waiting badge 1`] = `
+exports[`Signatures > should render with waiting badge 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -489,8 +611,22 @@ exports[`Signatures should render with waiting badge 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -536,8 +672,22 @@ exports[`Signatures should render with waiting badge 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -550,7 +700,7 @@ exports[`Signatures should render with waiting badge 1`] = `
 </div>
 `;
 
-exports[`Signatures should show all participants as signed when all signatures are added 1`] = `
+exports[`Signatures > should show all participants as signed when all signatures are added 1`] = `
 <div>
   <div
     data-testid="Signatures"
@@ -599,8 +749,22 @@ exports[`Signatures should show all participants as signed when all signatures a
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -646,8 +810,22 @@ exports[`Signatures should show all participants as signed when all signatures a
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionRow should omit the currency for transactions from test networks 1`] = `
+exports[`TransactionRow > should omit the currency for transactions from test networks 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -27,8 +27,42 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -65,8 +99,22 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -181,7 +229,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render 1`] = `
+exports[`TransactionRow > should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -208,8 +256,42 @@ exports[`TransactionRow should render 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -246,8 +328,22 @@ exports[`TransactionRow should render 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -379,7 +475,7 @@ exports[`TransactionRow should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render compact skeleton 1`] = `
+exports[`TransactionRow > should render compact skeleton 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -604,7 +700,7 @@ exports[`TransactionRow should render compact skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render responsive 1`] = `
+exports[`TransactionRow > should render responsive 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -820,7 +916,7 @@ exports[`TransactionRow should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render responsive 2`] = `
+exports[`TransactionRow > should render responsive 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1036,7 +1132,7 @@ exports[`TransactionRow should render responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render skeleton 1`] = `
+exports[`TransactionRow > should render skeleton 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1249,7 +1345,7 @@ exports[`TransactionRow should render skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render with currency 1`] = `
+exports[`TransactionRow > should render with currency 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1276,8 +1372,42 @@ exports[`TransactionRow should render with currency 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1314,8 +1444,22 @@ exports[`TransactionRow should render with currency 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>

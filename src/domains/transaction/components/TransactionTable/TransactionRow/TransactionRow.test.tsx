@@ -5,7 +5,7 @@ import { TransactionRow } from "./TransactionRow";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/utils/testing-library";
+import { env, getDefaultProfileId, queryElementForSvg, render, screen, renderResponsive } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {
@@ -38,7 +38,7 @@ describe("TransactionRow", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getAllByRole("cell")).toHaveLength(6);
-		expect(screen.getByRole("link", { name: "magnifying-glass-id.svg" })).toBeInTheDocument();
+		expect(queryElementForSvg(screen.getByRole("row"), "magnifying-glass-id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRowMode")).toBeInTheDocument();
 		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);

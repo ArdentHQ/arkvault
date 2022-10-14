@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 import { convertToCsv } from "./transaction-to-csv-converter";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 
@@ -29,19 +28,6 @@ describe("CsvFormatter", () => {
 	});
 
 	beforeEach(async () => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data,
-					meta,
-				};
-			});
-
 		const response = await profile.wallets().first().transactionIndex().all();
 		transactions = response.items();
 	});

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`UnlockTokensTotal should render 1`] = `
+exports[`UnlockTokensTotal > should render 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
@@ -59,7 +59,7 @@ exports[`UnlockTokensTotal should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`UnlockTokensTotal should render loading 1`] = `
+exports[`UnlockTokensTotal > should render loading 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
@@ -114,7 +114,7 @@ exports[`UnlockTokensTotal should render loading 1`] = `
 </DocumentFragment>
 `;
 
-exports[`UnlockTokensTotal should render loading fee 1`] = `
+exports[`UnlockTokensTotal > should render loading fee 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
