@@ -118,7 +118,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}` });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -126,7 +126,9 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(backSelector());
 
-		await expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
+		});
 
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
@@ -150,7 +152,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
 
 		userEvent.click(backSelector());
 
@@ -167,7 +169,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component />, { route: `/profiles/${profile.id()}` });
 
 		// eslint-disable-next-line testing-library/prefer-explicit-assert
 		await screen.findByTestId("LedgerAuthStep");
