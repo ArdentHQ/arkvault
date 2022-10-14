@@ -51,7 +51,7 @@ describe("Wallet Transactions Hook", () => {
 				},
 				{
 					query: {
-						page: undefined,
+						page: null,
 					},
 				},
 			),
@@ -81,8 +81,8 @@ describe("Wallet Transactions Hook", () => {
 				{
 					query: {
 						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-						limit: "10",
-						page: "2",
+						limit: 10,
+						page: 2,
 					},
 				},
 			),
@@ -220,7 +220,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
 
 		vi.clearAllMocks();
 	});
@@ -250,7 +250,7 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		await waitFor(() => expect(allPendingTransactions).toHaveLength(1));
+		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
 
 		vi.clearAllMocks();
 	});

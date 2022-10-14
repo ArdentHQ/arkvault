@@ -29,7 +29,7 @@ describe("Wallet Options Hook", () => {
 				},
 				{
 					query: {
-						page: undefined,
+						page: null,
 					},
 				},
 			),
@@ -59,8 +59,8 @@ describe("Wallet Options Hook", () => {
 				{
 					query: {
 						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-						limit: "10",
-						page: "2",
+						limit: 10,
+						page: 2,
 					},
 				},
 			),

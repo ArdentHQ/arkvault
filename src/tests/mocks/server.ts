@@ -35,7 +35,7 @@ export const requestMock = (path: string, data: undefined | string | object, opt
 				const params = request.url.searchParams;
 
 				for (const [name, value] of Object.entries(requestOptions.query)) {
-					if (params.get(name) !== value) {
+					if (params.get(name) !== ((value === null || value === undefined) ? null : value.toString())) {
 						return;
 					}
 				}
