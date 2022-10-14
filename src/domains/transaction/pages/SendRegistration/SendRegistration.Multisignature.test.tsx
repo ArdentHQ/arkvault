@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -10,6 +9,7 @@ import { SendRegistration } from "./SendRegistration";
 import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -21,6 +21,7 @@ import {
 	waitFor,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -32,8 +33,6 @@ let getVersionSpy: vi.SpyInstance;
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
-
-vi.setTimeout(6000);
 
 const path = "/profiles/:profileId/wallets/:walletId/send-registration/:registrationType";
 
@@ -140,16 +139,10 @@ describe("Multisignature Registration", () => {
 	});
 
 	beforeEach(() => {
-		nock.cleanAll();
-
-		nock("https://ark-test-musig.arkvault.io/")
-			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
-
-		nock("https://ark-test-musig.arkvault.io")
-			.post("/")
-			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
-			.persist();
+		server.use(
+			requestMock("https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS", walletFixture),
+			requestMock("https://ark-test-musig.arkvault.io", { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } }, { method: "post" }),
+		);
 	});
 
 	it("should send multisignature registration", async () => {

@@ -4,15 +4,14 @@ import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
-import { LedgerProvider } from "@/app/contexts";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, WithProviders } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, triggerMessageSignOnce, WithProviders } from "@/utils/testing-library";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	const wrapper = ({ children }: any) => (
 		<WithProviders>
-			<LedgerProvider>{children}</LedgerProvider>
+			{children}
 		</WithProviders>
 	);
 
@@ -21,6 +20,8 @@ describe("Use Transaction Builder Hook", () => {
 		wallet = profile.wallets().first();
 
 		await profile.sync();
+
+		await triggerMessageSignOnce(wallet);
 	});
 
 	it("should sign transfer", async () => {
