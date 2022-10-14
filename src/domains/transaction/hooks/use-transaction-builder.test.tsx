@@ -4,16 +4,18 @@ import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, triggerMessageSignOnce, WithProviders } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
+	triggerMessageSignOnce,
+	WithProviders,
+} from "@/utils/testing-library";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	const wrapper = ({ children }: any) => (
-		<WithProviders>
-			{children}
-		</WithProviders>
-	);
+	const wrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

@@ -238,7 +238,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
@@ -290,16 +292,13 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
-				<MultiSignatureDetail
-					profile={profile}
-					transaction={fixtures.multiPayment}
-					wallet={wallet}
-					isOpen
-				/>
+				<MultiSignatureDetail profile={profile} transaction={fixtures.multiPayment} wallet={wallet} isOpen />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -320,16 +319,13 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
-				<MultiSignatureDetail
-					profile={profile}
-					transaction={fixtures.multiSignature}
-					wallet={wallet}
-					isOpen
-				/>
+				<MultiSignatureDetail profile={profile} transaction={fixtures.multiSignature} wallet={wallet} isOpen />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -350,7 +346,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.vote, "type").mockReturnValueOnce("vote");
 
@@ -379,7 +377,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		vi.spyOn(fixtures.unvote, "type").mockReturnValueOnce("unvote");
 
@@ -408,7 +408,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingSignatureMock = vi.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey").mockReturnValue(false);
+		const isAwaitingSignatureMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
+			.mockReturnValue(false);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
@@ -434,7 +436,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		const isMultisignatureReadyMock = vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		const isMultisignatureReadyMock = vi
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [fixtures.transfer.id()],
@@ -473,7 +477,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		const isMultisignatureReadyMock = vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		const isMultisignatureReadyMock = vi
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
 
@@ -508,8 +514,12 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-		const isAwaitingConfirmationMock = vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		const isMultisignatureReadyMock = vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		const isAwaitingConfirmationMock = vi
+			.spyOn(wallet.transaction(), "isAwaitingConfirmation")
+			.mockReturnValue(true);
+		const isMultisignatureReadyMock = vi
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
@@ -535,7 +545,9 @@ describe("MultiSignatureDetail", () => {
 
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		const isMultisignatureReadyMock = vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		const isMultisignatureReadyMock = vi
+			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
+			.mockReturnValue(true);
 
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockRejectedValue(new Error("Failed"));
 
