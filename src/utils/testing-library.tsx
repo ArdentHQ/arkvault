@@ -333,7 +333,7 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 };
 
-
+// eslint-disable-next-line testing-library/no-node-access
 export const getSvgById = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
 
 // This helper function is used to prevent assertion error in SDK (ArrayBuffer error in randomFillSync) when signing messages.
@@ -346,5 +346,7 @@ export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet)
 	try {
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
 		await wallet.message().sign({ message: "message", signatory });
-	} catch {}
+	} catch {
+		//
+	}
 };
