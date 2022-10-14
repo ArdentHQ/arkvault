@@ -1,6 +1,6 @@
 import { Coins } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import retry from "async-retry";
+import { Options } from "p-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -86,7 +86,7 @@ export const useLedgerConnection = () => {
 	);
 
 	const connect = useCallback(
-		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: retry.Options) => {
+		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: Options) => {
 			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
 			await resetConnectionState();
 

@@ -333,6 +333,9 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 };
 
+
+export const getSvgById = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+
 // This helper function is used to prevent assertion error in SDK (ArrayBuffer error in randomFillSync) when signing messages.
 //
 // It needs to be called only once before calling `message.sign` in tests in order to properly initialize global instances (in sdk) and prevent

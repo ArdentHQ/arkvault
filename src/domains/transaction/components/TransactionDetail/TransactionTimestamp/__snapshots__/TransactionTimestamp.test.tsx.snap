@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionTimestamp should render 1`] = `
+exports[`TransactionTimestamp > should render 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"

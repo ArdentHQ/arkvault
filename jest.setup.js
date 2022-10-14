@@ -56,10 +56,10 @@ jest.mock("react-idle-timer", () => {
 });
 
 // Reduce ledger connection retries to 2 in all tests.
-jest.mock("async-retry", () => {
-	const retry = jest.requireActual("async-retry");
-	return (fn, options) => retry(fn, { ...options, retries: 2 });
-});
+// jest.mock("async-retry", () => {
+// 	const retry = jest.requireActual("async-retry");
+// 	return (fn, options) => retry(fn, { ...options, retries: 2 });
+// });
 
 jest.mock("browser-fs-access");
 

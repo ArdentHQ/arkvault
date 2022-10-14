@@ -19,6 +19,14 @@ describe("LedgerScanStep", () => {
 	let publicKeyPaths: Map<string, string>;
 
 	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		wallet = profile.wallets().first();
+		await wallet.synchroniser().identity();
+
 		server.use(
 			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
 				data: [
@@ -26,6 +34,11 @@ describe("LedgerScanStep", () => {
 						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
 						balance: "2",
 					},
+				],
+				meta: {},
+			}),
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
+				data: [
 					{
 						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
 						balance: "3",
@@ -35,14 +48,6 @@ describe("LedgerScanStep", () => {
 			}),
 			requestMock("https://ark-test.arkvault.io/api/wallets", { data: [], meta: {} }),
 		);
-
-		profile = env.profiles().findById(getDefaultProfileId());
-
-		await env.profiles().restore(profile);
-		await profile.sync();
-
-		wallet = profile.wallets().first();
-		await wallet.synchroniser().identity();
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -82,11 +87,11 @@ describe("LedgerScanStep", () => {
 	it("should handle select", async () => {
 		render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
-
 		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2));
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		// Unselect All
 
@@ -110,9 +115,11 @@ describe("LedgerScanStep", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
-		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
 
 		await waitFor(() =>
 			expect(formReference.getValues("wallets")).toMatchObject([
@@ -151,7 +158,9 @@ describe("LedgerScanStep", () => {
 
 		const { container } = render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+		expect(screen.getAllByRole("row")).toHaveLength(6);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 
 		expect(container).toMatchSnapshot();
 
@@ -167,11 +176,11 @@ describe("LedgerScanStep", () => {
 
 		render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 
 		expect(toastUpdateSpy).toHaveBeenCalledTimes(1);
 

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionDetail should always render as desktop is useDesktop is set lg 1`] = `
+exports[`TransactionDetail > should always render as desktop is useDesktop is set lg 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -25,7 +25,7 @@ exports[`TransactionDetail should always render as desktop is useDesktop is set 
 </div>
 `;
 
-exports[`TransactionDetail should always render as desktop is useDesktop is set md 1`] = `
+exports[`TransactionDetail > should always render as desktop is useDesktop is set md 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -50,7 +50,7 @@ exports[`TransactionDetail should always render as desktop is useDesktop is set 
 </div>
 `;
 
-exports[`TransactionDetail should always render as desktop is useDesktop is set sm 1`] = `
+exports[`TransactionDetail > should always render as desktop is useDesktop is set sm 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -75,7 +75,7 @@ exports[`TransactionDetail should always render as desktop is useDesktop is set 
 </div>
 `;
 
-exports[`TransactionDetail should always render as desktop is useDesktop is set xl 1`] = `
+exports[`TransactionDetail > should always render as desktop is useDesktop is set xl 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -100,7 +100,7 @@ exports[`TransactionDetail should always render as desktop is useDesktop is set 
 </div>
 `;
 
-exports[`TransactionDetail should always render as desktop is useDesktop is set xs 1`] = `
+exports[`TransactionDetail > should always render as desktop is useDesktop is set xs 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -125,7 +125,7 @@ exports[`TransactionDetail should always render as desktop is useDesktop is set 
 </div>
 `;
 
-exports[`TransactionDetail should render in lg desktop screen 1`] = `
+exports[`TransactionDetail > should render in lg desktop screen 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -150,7 +150,7 @@ exports[`TransactionDetail should render in lg desktop screen 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render in md desktop screen 1`] = `
+exports[`TransactionDetail > should render in md desktop screen 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -175,7 +175,7 @@ exports[`TransactionDetail should render in md desktop screen 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render in sm mobile screen 1`] = `
+exports[`TransactionDetail > should render in sm mobile screen 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -204,7 +204,7 @@ exports[`TransactionDetail should render in sm mobile screen 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render in xl desktop screen 1`] = `
+exports[`TransactionDetail > should render in xl desktop screen 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -229,7 +229,7 @@ exports[`TransactionDetail should render in xl desktop screen 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render in xs mobile screen 1`] = `
+exports[`TransactionDetail > should render in xs mobile screen 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -258,7 +258,7 @@ exports[`TransactionDetail should render in xs mobile screen 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render with bottom border 1`] = `
+exports[`TransactionDetail > should render with bottom border 1`] = `
 <div>
   <div
     class="no-ligatures css-s5w13h"
@@ -283,7 +283,7 @@ exports[`TransactionDetail should render with bottom border 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render with extra children 1`] = `
+exports[`TransactionDetail > should render with extra children 1`] = `
 <div>
   <div
     class="no-ligatures css-tnqofj"
@@ -311,7 +311,7 @@ exports[`TransactionDetail should render with extra children 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render with top border 1`] = `
+exports[`TransactionDetail > should render with top border 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -336,7 +336,7 @@ exports[`TransactionDetail should render with top border 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render without border 1`] = `
+exports[`TransactionDetail > should render without border 1`] = `
 <div>
   <div
     class="no-ligatures css-1iw2tte"
@@ -361,7 +361,7 @@ exports[`TransactionDetail should render without border 1`] = `
 </div>
 `;
 
-exports[`TransactionDetail should render without padding 1`] = `
+exports[`TransactionDetail > should render without padding 1`] = `
 <div>
   <div
     class="no-ligatures css-tnqofj"

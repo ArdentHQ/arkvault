@@ -142,8 +142,8 @@ describe("WalletDetails", () => {
 				{
 					query: {
 						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-						limit: "1",
-						page: "1",
+						limit: 1,
+						page: 1,
 					},
 				},
 			),

@@ -1,4 +1,4 @@
-import retry from "async-retry";
+import { Options } from "p-retry";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -20,6 +20,15 @@ import {
 } from "@/utils/testing-library";
 
 const LedgerWaitingDevice = "Waiting Device";
+
+class LedgerError extends Error {
+	statusText: string;
+
+	constructor(statusText: string, message?: string) {
+		super(message);
+		this.statusText = statusText;
+	}
+}
 
 describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
@@ -149,7 +158,7 @@ describe("Use Ledger Connection", () => {
 		}: {
 			userProfile?: Contracts.IProfile;
 			userWallet?: Contracts.IReadWriteWallet;
-			retryOptions?: retry.Options;
+			retryOptions?: Options;
 		}) => {
 			const {
 				connect,
@@ -396,7 +405,7 @@ describe("Use Ledger Connection", () => {
 
 		it("should fail to connect unknown connection error and show generic connection error", async () => {
 			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
-				throw { statusText: "UNKNOWN_ERROR" };
+				throw new LedgerError("UNKNOWN_ERROR");
 			});
 
 			const listenSpy = mockNanoXTransport();
@@ -416,13 +425,15 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
-				timeout: 4000,
-			});
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
-			await expect(
-				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
-			).resolves.toBeVisible();
+			await waitFor(
+				() =>
+					expect(
+						screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
+					).resolves.toBeVisible(),
+				{ timeout: 3000 },
+			);
 
 			await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));
 
