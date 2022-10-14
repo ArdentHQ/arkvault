@@ -214,7 +214,7 @@ describe("SignMessage", () => {
 
 			history.push(walletUrl(encryptedWallet.id()));
 
-			const { asFragment } = render(
+			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />
 				</Route>,
@@ -321,7 +321,7 @@ describe("SignMessage", () => {
 
 			history.push(walletUrl(encryptedWallet.id()));
 
-			const { asFragment } = render(
+			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />
 				</Route>,
