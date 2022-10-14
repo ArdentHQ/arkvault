@@ -2,17 +2,13 @@
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
-import { LedgerProvider } from "@/app/contexts";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 import {
 	act,
 	env,
@@ -25,6 +21,10 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -89,19 +89,21 @@ describe("SendVote Combined", () => {
 			/* eslint-disable-next-line testing-library/prefer-explicit-assert */
 			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
 		}
-
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
-			.reply(200, voteFixture)
-			.get("/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf")
-			.reply(200, unvoteFixture)
-			.persist();
 	});
 
 	beforeEach(() => {
-		vi.useFakeTimers("legacy");
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
+				voteFixture,
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
+				unvoteFixture,
+			),
+		);
+
+		vi.useFakeTimers();
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -142,9 +144,7 @@ describe("SendVote Combined", () => {
 
 		const { history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {

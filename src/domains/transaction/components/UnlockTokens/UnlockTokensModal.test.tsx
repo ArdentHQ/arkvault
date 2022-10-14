@@ -7,7 +7,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
-import { LedgerProvider } from "@/app/contexts";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
@@ -82,9 +81,7 @@ describe("UnlockTokensModal", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<LedgerProvider>
-					<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
-				</LedgerProvider>
+				<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -103,9 +100,7 @@ describe("UnlockTokensModal", () => {
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<LedgerProvider>
-					<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
-				</LedgerProvider>
+				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,

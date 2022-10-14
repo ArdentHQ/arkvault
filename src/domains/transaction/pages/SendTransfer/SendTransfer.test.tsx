@@ -14,7 +14,7 @@ import { SendTransfer } from "./SendTransfer";
 import { SummaryStep } from "./SummaryStep";
 import { NetworkStep } from "./NetworkStep";
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
-import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
+import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -542,9 +542,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -580,9 +578,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -606,9 +602,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -627,9 +621,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -648,9 +640,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -669,9 +659,7 @@ describe("SendTransfer", () => {
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -691,9 +679,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -812,9 +798,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -919,9 +903,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1027,9 +1009,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1124,9 +1104,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/transactions/:walletId/transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1200,9 +1178,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1281,9 +1257,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1370,9 +1344,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1444,9 +1416,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1590,9 +1560,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1670,9 +1638,7 @@ describe("SendTransfer", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -1779,9 +1745,7 @@ describe("SendTransfer", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,

@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -17,6 +16,10 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -32,31 +35,41 @@ const transferURL = `/profiles/${getDefaultProfileId()}/send-transfer`;
 
 const history = createHashHistory();
 
-vi.setTimeout(10_000);
-
 describe("SendTransfer Network Selection", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		// Profile needs a wallet on the mainnet network to show network selection
-		// step.
+		// Profile needs a wallet on the mainnet network to show network selection step.
 		const { wallet: arkMainnetWallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: "ark.mainnet",
 		});
 		profile.wallets().push(arkMainnetWallet);
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, { data: [], meta: {} })
-			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
 	});
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				transactionFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{ data: [], meta: {} },
+				{
+					query: {
+						limit: 20,
+						page: 1,
+						senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					},
+				},
+			),
+		);
 	});
 
 	afterEach(() => {

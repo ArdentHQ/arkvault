@@ -11,7 +11,6 @@ import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
 import * as useWalletAction from "@/domains/wallet/hooks/use-wallet-actions";
 
-import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/dashboard/i18n";
@@ -227,10 +226,8 @@ describe("Portfolio grouped networks", () => {
 	it.skip("should open and close ledger import modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<PortfolioHeader />
-					<WalletsGroupsList />
-				</LedgerProvider>
+				<PortfolioHeader />
+				<WalletsGroupsList />
 			</Route>,
 			{
 				history,
@@ -261,10 +258,8 @@ describe("Portfolio grouped networks", () => {
 		const transportMock = mockNanoXTransport();
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<PortfolioHeader />
-					<WalletsGroupsList />
-				</LedgerProvider>
+				<PortfolioHeader />
+				<WalletsGroupsList />
 			</Route>,
 			{
 				history,

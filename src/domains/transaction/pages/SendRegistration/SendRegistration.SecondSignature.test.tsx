@@ -4,12 +4,11 @@ import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
-import { LedgerProvider, minVersionList } from "@/app/contexts";
+import { minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
@@ -232,9 +231,7 @@ describe("Second Signature Registration", () => {
 
 		render(
 			<Route path={path}>
-				<LedgerProvider>
-					<SendRegistration />
-				</LedgerProvider>
+				<SendRegistration />
 			</Route>,
 			{
 				history,

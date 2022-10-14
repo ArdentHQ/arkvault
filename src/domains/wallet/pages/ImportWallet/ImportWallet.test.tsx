@@ -10,7 +10,7 @@ import { Route } from "react-router-dom";
 import { ImportWallet } from "./ImportWallet";
 import { MethodStep } from "./MethodStep";
 import { SuccessStep } from "./SuccessStep";
-import { EnvironmentProvider, LedgerProvider } from "@/app/contexts";
+import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
@@ -363,9 +363,7 @@ describe("ImportWallet", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
-				<LedgerProvider>
-					<ImportWallet />
-				</LedgerProvider>
+				<ImportWallet />
 			</Route>,
 			{
 				route: {

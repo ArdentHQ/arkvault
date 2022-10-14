@@ -1,13 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { BIP39 } from "@ardenthq/sdk-cryptography";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendIpfs } from "./SendIpfs";
 import { translations } from "@/domains/transaction/i18n";
-import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -18,6 +16,10 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -69,13 +71,6 @@ describe("SendIpfs", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e")
-			.reply(200, ipfsFixture);
-
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -88,6 +83,16 @@ describe("SendIpfs", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e",
+				ipfsFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+		);
 	});
 
 	afterEach(() => {

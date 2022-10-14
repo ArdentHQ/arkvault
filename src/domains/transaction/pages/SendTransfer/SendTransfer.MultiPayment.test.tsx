@@ -6,7 +6,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendTransfer } from "./SendTransfer";
-import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
@@ -49,9 +48,7 @@ describe("SendTransfer MultiPayment", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
