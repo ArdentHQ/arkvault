@@ -1,6 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
@@ -21,11 +20,6 @@ describe("NotificationsTransactionTable", () => {
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
 	beforeAll(() => {
-		nock("https://ark-test.arkvault.io/api")
-			.get("/transactions")
-			.query(true)
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));
-
 		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
 

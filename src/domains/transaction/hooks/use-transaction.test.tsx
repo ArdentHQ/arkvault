@@ -1,30 +1,30 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import nock from "nock";
 
 import { useTransaction } from "./use-transaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("useTransaction", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeAll(() => {
-		nock.disableNetConnect();
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				data[0].confirmations = 0;
-				return {
-					data: data.slice(0, 2),
-					meta,
-				};
-			});
-	});
-
 	beforeEach(() => {
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [
+					{
+						...transactionsFixture.data[0],
+						confirmations: 0,
+					},
+					transactionsFixture.data[1],
+				],
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 	});

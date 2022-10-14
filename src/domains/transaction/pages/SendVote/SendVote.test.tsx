@@ -4,13 +4,11 @@ import { Signatories } from "@ardenthq/sdk";
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendVote } from "./SendVote";
 import { toasts } from "@/app/services";
-import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
@@ -32,6 +30,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const fixtureProfileId = getDefaultProfileId();
 
@@ -117,20 +116,16 @@ describe("SendVote", () => {
 			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
 		}
 
-		nock.disableNetConnect();
-
 		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
-			.reply(200, voteFixture)
-			.get("/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf")
-			.reply(200, unvoteFixture)
-			.persist();
 	});
 
 	beforeEach(() => {
-		vi.useFakeTimers("legacy");
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493", voteFixture),
+			requestMock("https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf", unvoteFixture),
+		);
+
+		vi.useFakeTimers();
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -142,22 +137,56 @@ describe("SendVote", () => {
 	it("should return to the select a delegate page to unvote", async () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
 		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
+
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				{" "}
-				<LedgerProvider>
-					{" "}
-					<SendVote />{" "}
-				</LedgerProvider>{" "}
+				<SendVote />
 			</Route>,
 			{ route: { pathname: voteURL, search: `?${parameters}` } },
 		);
 
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled()); userEvent.click(backButton()); expect(container).toMatchSnapshot(); }); it("should return to the select a delegate page to unvote/vote", async () => { const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`; const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`); const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ]; appendParameters(parameters, "unvote", unvotes); const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ]; appendParameters(parameters, "vote", votes); const { container } = render( <Route path="/profiles/:profileId/wallets/:walletId/send-vote"> <LedgerProvider> <SendVote /> </LedgerProvider> </Route>, { route: { pathname: voteURL, search: `?${parameters}`, }, },); expect(screen.getByTestId(formStepID)).toBeInTheDocument(); await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username)); // Back to select a delegate page await waitFor(() => expect(backButton()).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
+
+		// Back to select a delegate page
+		await waitFor(() => expect(backButton()).not.toBeDisabled());
+
+		userEvent.click(backButton());
+
+		expect(container).toMatchSnapshot();
+	});
+
+	it("should return to the select a delegate page to unvote/vote", async () => {
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ];
+		appendParameters(parameters, "unvote", unvotes);
+
+		const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ];
+		appendParameters(parameters, "vote", votes);
+
+		const { container } = render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<SendVote />
+			</Route>,
+			{
+				route: {
+					pathname: voteURL, search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		// Back to select a delegate page
+		await waitFor(() => expect(backButton()).not.toBeDisabled());
+
 		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
@@ -182,9 +211,7 @@ describe("SendVote", () => {
 
 		const { history } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -291,9 +318,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -341,9 +366,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -466,9 +489,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -498,9 +519,7 @@ describe("SendVote", () => {
 
 		const { history } = render(
 			<Route path="/profiles/:profileId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -526,9 +545,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -560,9 +577,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -590,9 +605,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -648,9 +661,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -749,9 +760,7 @@ describe("SendVote", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -826,9 +835,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -883,9 +890,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -940,9 +945,7 @@ describe("SendVote", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -1001,9 +1004,7 @@ describe("SendVote", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				history,
@@ -1080,9 +1081,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {
@@ -1174,9 +1173,7 @@ describe("SendVote", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
-				<LedgerProvider>
-					<SendVote />
-				</LedgerProvider>
+				<SendVote />
 			</Route>,
 			{
 				route: {

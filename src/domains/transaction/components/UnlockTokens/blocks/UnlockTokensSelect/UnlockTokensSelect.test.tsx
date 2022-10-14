@@ -2,7 +2,6 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
@@ -59,8 +58,6 @@ describe("UnlockTokensSelect", () => {
 	];
 
 	beforeAll(() => {
-		nock.disableNetConnect();
-
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		wallet = profile.wallets().first();

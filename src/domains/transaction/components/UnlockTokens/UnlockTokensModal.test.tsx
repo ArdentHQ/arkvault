@@ -3,7 +3,6 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -32,8 +31,6 @@ describe("UnlockTokensModal", () => {
 	};
 
 	beforeAll(async () => {
-		nock.disableNetConnect();
-
 		profile = await env.profiles().create("empty");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({

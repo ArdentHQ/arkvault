@@ -4,7 +4,6 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route, Router } from "react-router-dom";
@@ -18,6 +17,7 @@ import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/Send
 import { LedgerProvider, minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -35,6 +35,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -147,20 +148,20 @@ describe("SendTransfer", () => {
 
 		profile.coins().set("ARK", "ark.devnet");
 
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, { data: [], meta: {} })
-			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
-
 		await syncFees(profile);
 	});
 
 	beforeEach(() => {
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877", transactionFixture),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, { query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" } }),
+			requestMock("https://ark-test.arkvault.io/api/transactions", { data: [], meta: {} }, { query: {
+				senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+				page: 1,
+				limit: 20,
+			} }),
+		);
+
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});

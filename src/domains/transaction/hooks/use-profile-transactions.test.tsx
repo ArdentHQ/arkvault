@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
-import nock from "nock";
 import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
@@ -14,14 +13,6 @@ const wrapper = ({ children }: any) => (
 );
 
 describe("useProfileTransactions", () => {
-	beforeAll(async () => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.persist();
-	});
-
 	it("#fetchTransactions", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 

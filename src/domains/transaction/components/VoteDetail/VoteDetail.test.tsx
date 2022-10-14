@@ -1,6 +1,5 @@
 import { ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -14,19 +13,8 @@ const history = createHashHistory();
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-vi.setTimeout(10_000);
-
 describe("VoteDetail", () => {
 	beforeAll(async () => {
-		nock.cleanAll();
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.persist();
-
 		const profile = env.profiles().findById(fixtureProfileId);
 
 		await syncDelegates(profile);
