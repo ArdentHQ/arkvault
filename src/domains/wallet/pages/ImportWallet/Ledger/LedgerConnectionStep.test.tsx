@@ -78,7 +78,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -88,7 +87,7 @@ describe("LedgerConnectionStep", () => {
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -111,7 +110,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -120,12 +118,14 @@ describe("LedgerConnectionStep", () => {
 				expect(
 					screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
 				).resolves.toBeVisible(),
-			{ timeout: 4000 },
+			{ timeout: 3_000 },
 		);
+
+		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -157,7 +157,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -169,22 +168,26 @@ describe("LedgerConnectionStep", () => {
 			),
 		).toBeInTheDocument();
 
-		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
+		await waitFor(
+			() =>
+				expect(
+					screen.findByText(
+						t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+							coin: wallet.network().coin(),
+							version: outdatedVersion,
+						}),
+					),
+				).resolves.toBeVisible(),
+			{ timeout: 3_000 },
+		);
 
-		await expect(
-			screen.findByText(
-				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-					coin: wallet.network().coin(),
-					version: outdatedVersion,
-				}),
-			),
-		).resolves.toBeVisible();
+		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
-		getVersionSpy.mockReset();
-		ledgerTransportMock.mockReset();
+		getPublicKeySpy.mockRestore();
+		getVersionSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
 	});
 
 	it("should render cancel screen", async () => {
@@ -200,7 +203,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
