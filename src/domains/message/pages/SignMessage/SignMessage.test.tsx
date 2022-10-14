@@ -19,6 +19,7 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
+	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -53,6 +54,8 @@ describe("SignMessage", () => {
 		profile.wallets().push(wallet);
 
 		profile.coins().set("ARK", "ark.devnet");
+
+		await triggerMessageSignOnce(wallet);
 	});
 
 	describe("Sign with Wallet", () => {

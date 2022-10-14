@@ -17,6 +17,7 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
+	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -53,6 +54,8 @@ describe("VerifyMessage", () => {
 		signedMessageText = "Hello World";
 
 		const signatory = await wallet.coin().signatory().mnemonic(MNEMONICS[0]);
+
+		await triggerMessageSignOnce(wallet);
 
 		signedMessage = await wallet.message().sign({
 			message: signedMessageText,
