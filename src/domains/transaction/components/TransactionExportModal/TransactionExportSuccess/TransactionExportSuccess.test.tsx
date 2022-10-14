@@ -1,4 +1,3 @@
-import nock from "nock";
 import React from "react";
 
 import { TransactionExportSuccess } from "./TransactionExportSuccess";
@@ -8,15 +7,6 @@ import { screen, renderResponsive, render } from "@/utils/testing-library";
 const downloadButton = () => screen.getByTestId("TransactionExportSuccess__download-button");
 
 describe("TransactionExportForm", () => {
-	beforeAll(() => {
-		nock.disableNetConnect();
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.persist();
-	});
-
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint: string) => {
 		const { asFragment } = renderResponsive(<TransactionExportSuccess count={10} />, breakpoint);
 

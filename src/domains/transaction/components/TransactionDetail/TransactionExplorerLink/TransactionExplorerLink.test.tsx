@@ -1,12 +1,11 @@
 import React from "react";
 
+import * as reactResizeDetector from "react-resize-detector";
 import { TransactionExplorerLink } from "./TransactionExplorerLink";
 import { translations } from "@/domains/transaction/i18n";
 import { render } from "@/utils/testing-library";
 
-vi.mock("react-resize-detector", () => ({
-	useResizeDetector: () => ({ width: 100 }),
-}));
+vi.mock("react-resize-detector");
 
 describe("TransactionExplorerLink", () => {
 	it("should render a transaction link", () => {
@@ -25,6 +24,8 @@ describe("TransactionExplorerLink", () => {
 	});
 
 	it("should render a transaction link responsive after the width has calculated", () => {
+		vi.spyOn(reactResizeDetector, "useResizeDetector").mockReturnValue({ width: 100 });
+
 		const { container } = render(
 			<TransactionExplorerLink
 				// @ts-ignore
