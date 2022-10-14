@@ -332,3 +332,5 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 		allByCoinMock.mockRestore();
 	};
 };
+
+export const getSvgById = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);

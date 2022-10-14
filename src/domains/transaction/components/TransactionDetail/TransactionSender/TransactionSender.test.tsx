@@ -3,7 +3,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSender } from "./TransactionSender";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getSvgById, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -72,7 +72,9 @@ describe("TransactionSender", () => {
 		);
 
 		expect(container).toHaveTextContent(wallet.address());
-		expect(container).toHaveTextContent("delegate-registration.svg");
+
+		expect(getSvgById(container, "delegate-registration")).toBeInTheDocument();
+
 		expect(container).toMatchSnapshot();
 
 		delegateMock.mockRestore();
