@@ -24,9 +24,7 @@ describe("TransactionTable", () => {
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
 	beforeEach(async () => {
-		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture),
-		);
+		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
 
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(getDefaultWalletId());
