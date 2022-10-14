@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { requestMock, server } from "@/tests/mocks/server";
@@ -94,6 +94,8 @@ describe("Wallet Transactions Hook", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
+		await triggerMessageSignOnce(wallet);
+
 		fixtures.multiSignatureTransfer = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
@@ -132,6 +134,10 @@ describe("Wallet Transactions Hook", () => {
 			wallet,
 		);
 	});
+
+	// afterEach(() => {
+	// 	vi.clearAllMocks();
+	// })
 
 	const Component = () => {
 		const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
