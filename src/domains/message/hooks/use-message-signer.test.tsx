@@ -2,17 +2,25 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useMessageSigner } from "./use-message-signer";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, mockNanoXTransport } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	triggerMessageSignOnce,
+} from "@/utils/testing-library";
 
 describe("Use Message Signer Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeEach(async () => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		await triggerMessageSignOnce(wallet);
 	});
 
 	it("should sign message", async () => {

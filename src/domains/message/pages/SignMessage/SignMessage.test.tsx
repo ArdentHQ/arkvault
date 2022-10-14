@@ -19,6 +19,7 @@ import {
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
+	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -53,6 +54,8 @@ describe("SignMessage", () => {
 		profile.wallets().push(wallet);
 
 		profile.coins().set("ARK", "ark.devnet");
+
+		await triggerMessageSignOnce(wallet);
 	});
 
 	describe("Sign with Wallet", () => {
@@ -245,8 +248,6 @@ describe("SignMessage", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
-			expect(asFragment()).toMatchSnapshot();
-
 			profile.wallets().forget(encryptedWallet.id());
 		});
 
@@ -320,8 +321,6 @@ describe("SignMessage", () => {
 
 			history.push(walletUrl(encryptedWallet.id()));
 
-			// const signMock = vi.spyOn(encryptedWallet.message(), "sign").mockResolvedValue("asd");
-
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 					<SignMessage />
@@ -355,10 +354,6 @@ describe("SignMessage", () => {
 			userEvent.click(signButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
-
-			expect(asFragment()).toMatchSnapshot();
-
-			// signMock.mockRestore();
 
 			profile.wallets().forget(encryptedWallet.id());
 		});

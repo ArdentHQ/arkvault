@@ -334,4 +334,19 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 };
 
+// This helper function is used to prevent assertion error in SDK (ArrayBuffer error in randomFillSync) when signing messages.
+//
+// It needs to be called only once before calling `message.sign` in tests in order to properly initialize global instances (in sdk) and prevent
+// from throwing false assertions against types & instances (Buffer & ArrayBuffer).
+//
+// This is probably caused by how jsdom initialization runs with vitest as it's not an issue with jsdom in jest.
+export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet) => {
+	try {
+		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		await wallet.message().sign({ message: "message", signatory });
+	} catch {
+		//
+	}
+};
+
 export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
