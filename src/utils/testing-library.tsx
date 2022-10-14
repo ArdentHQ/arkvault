@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
