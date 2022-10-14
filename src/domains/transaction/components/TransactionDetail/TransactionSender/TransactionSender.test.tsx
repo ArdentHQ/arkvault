@@ -3,7 +3,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSender } from "./TransactionSender";
-import { env, getDefaultProfileId, getSvgById, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, queryElementForSvg, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -73,7 +73,7 @@ describe("TransactionSender", () => {
 
 		expect(container).toHaveTextContent(wallet.address());
 
-		expect(getSvgById(container, "delegate-registration")).toBeInTheDocument();
+		expect(queryElementForSvg(container, "delegate-registration")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 
