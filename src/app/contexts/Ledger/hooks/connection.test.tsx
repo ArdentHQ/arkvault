@@ -28,7 +28,7 @@ class LedgerError extends Error {
 		super(message);
 		this.statusText = statusText;
 	}
-};
+}
 
 describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
@@ -432,7 +432,7 @@ describe("Use Ledger Connection", () => {
 					expect(
 						screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
 					).resolves.toBeVisible(),
-				{ timeout: 3_000 },
+				{ timeout: 3000 },
 			);
 
 			await waitFor(() => expect(connectSpy).toHaveBeenCalledTimes(3));

@@ -1,6 +1,6 @@
 import { Coins } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import retry, { Options } from "p-retry";
+import { Options } from "p-retry";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 

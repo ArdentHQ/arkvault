@@ -118,7 +118,7 @@ describe("LedgerConnectionStep", () => {
 				expect(
 					screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
 				).resolves.toBeVisible(),
-			{ timeout: 3_000 },
+			{ timeout: 3000 },
 		);
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
@@ -178,7 +178,7 @@ describe("LedgerConnectionStep", () => {
 						}),
 					),
 				).resolves.toBeVisible(),
-			{ timeout: 3_000 },
+			{ timeout: 3000 },
 		);
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
