@@ -111,24 +111,21 @@ exports[`Votes > should filter current delegates 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -470,24 +467,21 @@ exports[`Votes > should filter current delegates 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1648,24 +1642,21 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -2007,24 +1998,21 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3585,24 +3573,21 @@ exports[`Votes > should render 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -3944,24 +3929,21 @@ exports[`Votes > should render 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -5460,24 +5442,21 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -5819,24 +5798,21 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -7333,24 +7309,21 @@ exports[`Votes > should render with no wallets 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -7687,24 +7660,21 @@ exports[`Votes > should render with no wallets 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -8045,24 +8015,21 @@ exports[`Votes > should select a delegate 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -8404,24 +8371,21 @@ exports[`Votes > should select a delegate 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -9919,24 +9883,21 @@ exports[`Votes > should select an address without vote 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -10278,24 +10239,21 @@ exports[`Votes > should select an address without vote 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -11790,24 +11748,21 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -12149,24 +12104,21 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -13167,24 +13119,21 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -13526,24 +13475,21 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -14548,24 +14494,21 @@ exports[`Votes > should show resigned delegate notice 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -14907,24 +14850,21 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -16477,24 +16417,21 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -16836,24 +16773,21 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
@@ -17961,24 +17895,21 @@ exports[`Votes > should trigger network connection warning 1`] = `
               width="20"
             >
               <svg
-                id="received"
+                id="sent"
                 viewBox="0 0 20 20"
                 x="0"
                 xml:space="preserve"
                 xmlns="http://www.w3.org/2000/svg"
                 y="0"
               >
-                <g
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                >
-                  <path
-                    d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                  />
-                </g>
+                />
               </svg>
             </div>
           </div>
@@ -18320,24 +18251,21 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         width="20"
                       >
                         <svg
-                          id="received"
+                          id="sent"
                           viewBox="0 0 20 20"
                           x="0"
                           xml:space="preserve"
                           xmlns="http://www.w3.org/2000/svg"
                           y="0"
                         >
-                          <g
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
                             fill="none"
                             stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                          >
-                            <path
-                              d="M8 19v-4M8 11V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                            />
-                          </g>
+                          />
                         </svg>
                       </div>
                     </div>
