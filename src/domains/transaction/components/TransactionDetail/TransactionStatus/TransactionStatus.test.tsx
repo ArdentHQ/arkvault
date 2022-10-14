@@ -3,7 +3,7 @@ import React from "react";
 
 import { TransactionStatus } from "./TransactionStatus";
 import { translations } from "@/domains/transaction/i18n";
-import { getSvgById, render } from "@/utils/testing-library";
+import { queryElementForSvg, render } from "@/utils/testing-library";
 
 describe("TransactionStatus", () => {
 	it("should render when confirmed", () => {
@@ -20,7 +20,7 @@ describe("TransactionStatus", () => {
 		expect(container).toHaveTextContent(translations.CONFIRMED);
 		expect(container).not.toHaveTextContent(translations.NOT_YET_CONFIRMED);
 
-		expect(getSvgById(container, "circle-check-mark")).toBeInTheDocument();
+		expect(queryElementForSvg(container, "circle-check-mark")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -39,7 +39,7 @@ describe("TransactionStatus", () => {
 		expect(container).not.toHaveTextContent(translations.CONFIRMED);
 		expect(container).toHaveTextContent(translations.NOT_YET_CONFIRMED);
 
-		expect(getSvgById(container, "clock")).toBeInTheDocument();
+		expect(queryElementForSvg(container, "clock")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

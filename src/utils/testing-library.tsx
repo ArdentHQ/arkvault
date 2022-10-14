@@ -333,4 +333,4 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 	};
 };
 
-export const getSvgById = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);
+export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);

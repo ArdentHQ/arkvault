@@ -23,7 +23,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	getSvgById,
+	queryElementForSvg,
 	MNEMONICS,
 	render,
 	renderWithForm,
@@ -580,7 +580,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
-		expect(getSvgById(screen.getByTestId("NetworkOptions"), "ark")).toBeInTheDocument();
+		expect(queryElementForSvg(screen.getByTestId("NetworkOptions"), "ark")).toBeInTheDocument();
 
 		resetProfileNetworksMock();
 	});

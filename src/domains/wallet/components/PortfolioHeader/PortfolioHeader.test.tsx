@@ -18,7 +18,7 @@ import { translations } from "@/domains/dashboard/i18n";
 import {
 	env,
 	getDefaultProfileId,
-	getSvgById,
+	queryElementForSvg,
 	render,
 	screen,
 	syncDelegates,
@@ -221,7 +221,7 @@ describe("Portfolio grouped networks", () => {
 		userEvent.click(within(screen.getByTestId("WalletControls")).getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-		expect(getSvgById(screen.getByTestId("NetworkOption__ark.devnet"), "ark")).toBeInTheDocument();
+		expect(queryElementForSvg(screen.getByTestId("NetworkOption__ark.devnet"), "ark")).toBeInTheDocument();
 	});
 
 	it.skip("should open and close ledger import modal", async () => {
