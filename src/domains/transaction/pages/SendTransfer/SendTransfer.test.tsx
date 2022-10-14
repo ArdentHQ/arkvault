@@ -153,13 +153,24 @@ describe("SendTransfer", () => {
 
 	beforeEach(() => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877", transactionFixture),
-			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, { query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" } }),
-			requestMock("https://ark-test.arkvault.io/api/transactions", { data: [], meta: {} }, { query: {
-				senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				page: 1,
-				limit: 20,
-			} }),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				transactionFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{ data: [], meta: {} },
+				{
+					query: {
+						limit: 20,
+						page: 1,
+						senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					},
+				},
+			),
 		);
 
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);

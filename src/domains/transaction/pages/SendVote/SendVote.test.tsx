@@ -121,8 +121,14 @@ describe("SendVote", () => {
 
 	beforeEach(() => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493", voteFixture),
-			requestMock("https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf", unvoteFixture),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
+				voteFixture,
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
+				unvoteFixture,
+			),
 		);
 
 		vi.useFakeTimers();
@@ -164,10 +170,10 @@ describe("SendVote", () => {
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const unvotes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[1].address, }, ];
+		const unvotes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[1].address }];
 		appendParameters(parameters, "unvote", unvotes);
 
-		const votes: VoteDelegateProperties[] = [ { amount: 10, delegateAddress: delegateData[0].address, }, ];
+		const votes: VoteDelegateProperties[] = [{ amount: 10, delegateAddress: delegateData[0].address }];
 		appendParameters(parameters, "vote", votes);
 
 		const { container } = render(
@@ -176,7 +182,8 @@ describe("SendVote", () => {
 			</Route>,
 			{
 				route: {
-					pathname: voteURL, search: `?${parameters}`,
+					pathname: voteURL,
+					search: `?${parameters}`,
 				},
 			},
 		);

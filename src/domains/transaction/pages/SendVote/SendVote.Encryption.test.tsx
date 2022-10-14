@@ -96,8 +96,14 @@ describe("SendVote", () => {
 
 	beforeEach(() => {
 		server.use(
-			requestMock("https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493", voteFixture),
-			requestMock("https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf", unvoteFixture),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
+				voteFixture,
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
+				unvoteFixture,
+			),
 		);
 
 		vi.useFakeTimers();
