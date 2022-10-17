@@ -101,6 +101,7 @@ describe("SendVote Combined", () => {
 				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
 				unvoteFixture,
 			),
+			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
 		vi.useFakeTimers();
@@ -215,8 +216,6 @@ describe("SendVote Combined", () => {
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
 
 		const historySpy = vi.spyOn(history, "push");
 

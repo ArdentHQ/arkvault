@@ -18,6 +18,8 @@ import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+
 import {
 	env,
 	getDefaultProfileId,
@@ -40,10 +42,6 @@ import { server, requestMock } from "@/tests/mocks/server";
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 const fixtureWalletId = getDefaultWalletId();
-
-// We need more time on some of the tests here since we need to complete a bunch
-// of steps to make a transaction
-vi.setTimeout(10_000);
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
@@ -171,6 +169,8 @@ describe("SendTransfer", () => {
 					},
 				},
 			),
+			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
+			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
 		);
 
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);

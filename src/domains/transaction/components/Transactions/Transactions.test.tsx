@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -19,6 +18,8 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -26,69 +27,8 @@ let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-const API_BASE_URL = "https://ark-test.arkvault.io";
-
 describe("Transactions", () => {
 	beforeAll(async () => {
-		const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
-
-		const emptyResponse = {
-			data: [],
-			meta: {},
-		};
-
-		const singleItemsResponse = {
-			data: data.slice(0, 1),
-			meta,
-		};
-
-		const twoItemsResponse = {
-			data: data.slice(0, 2),
-			meta,
-		};
-
-		nock(API_BASE_URL)
-			.get((uri) => uri.includes("DCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7") && !uri.includes("typeGroup=2"))
-			.reply(200, () => singleItemsResponse)
-			.get((uri) => uri.includes("DCX2kvwgL2mrd9GjyYAbfXLGGXWwgN3Px7") && uri.includes("typeGroup=2"))
-			.reply(200, () => emptyResponse)
-			.persist();
-
-		nock(API_BASE_URL)
-			.get((uri) => uri.includes("DDHk393YcsxTPN1H5SWTcbjfnCRmF1iBR8") && !uri.includes("type=3"))
-			.reply(200, () => singleItemsResponse)
-			.get((uri) => uri.includes("DDHk393YcsxTPN1H5SWTcbjfnCRmF1iBR8") && uri.includes("type=3"))
-			.reply(200, () => emptyResponse)
-			.persist();
-
-		nock(API_BASE_URL)
-			.get("/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&typeGroup=2")
-			.reply(200, () => emptyResponse)
-			.get("/api/transactions?limit=30&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb&typeGroup=2")
-			.reply(200, () => emptyResponse)
-			.get("/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr&typeGroup=2")
-			.reply(200, () => emptyResponse)
-			.persist();
-
-		nock(API_BASE_URL)
-			.get("/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, () => emptyResponse)
-			.get("/api/transactions?page=2&limit=30&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb")
-			.reply(200, () => emptyResponse)
-			.get("/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr")
-			.reply(200, () => emptyResponse)
-			.persist();
-
-		nock(API_BASE_URL)
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => twoItemsResponse)
-			.persist();
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -113,9 +53,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -132,9 +71,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -165,9 +103,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -183,7 +120,7 @@ describe("Transactions", () => {
 		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 	});
 
@@ -199,9 +136,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		const button = within(screen.getByTestId("FilterTransactions--Mobile")).getByTestId("CollapseToggleButton");
@@ -217,7 +153,7 @@ describe("Transactions", () => {
 		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 	});
 
@@ -234,7 +170,7 @@ describe("Transactions", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
+				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
 			{
 				history,
@@ -242,9 +178,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -252,6 +187,13 @@ describe("Transactions", () => {
 		expect(button).toBeInTheDocument();
 
 		expect(button).not.toBeDisabled();
+
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [],
+				meta: transactionsFixture.meta,
+			}),
+		);
 
 		userEvent.click(button);
 
@@ -265,17 +207,9 @@ describe("Transactions", () => {
 	it("should filter by type and see empty screen", async () => {
 		const emptyProfile = await env.profiles().create("empty screen profile");
 
-		emptyProfile.wallets().push(
-			await emptyProfile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
-				mnemonic: MNEMONICS[0],
-				network: "ark.devnet",
-			}),
-		);
-
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={emptyProfile} wallets={emptyProfile.wallets().values()} />
+				<Transactions profile={profile} wallets={[profile.wallets().first()]} />
 			</Route>,
 			{
 				history,
@@ -283,9 +217,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(2),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(15),
 		);
 
 		const button = screen.getAllByRole("button", { name: /Type/ })[0];
@@ -293,6 +226,13 @@ describe("Transactions", () => {
 		expect(button).toBeInTheDocument();
 
 		expect(button).not.toBeDisabled();
+
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: [],
+				meta: transactionsFixture.meta,
+			}),
+		);
 
 		userEvent.click(button);
 
@@ -317,9 +257,8 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(
-			() => expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
@@ -354,7 +293,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
+		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
 
 		userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
@@ -362,7 +301,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
 
-		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
+		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60);
 
 		process.env.REACT_APP_IS_UNIT = undefined;
 
@@ -388,7 +327,7 @@ describe("Transactions", () => {
 		});
 
 		await waitFor(() => {
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30);
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -414,29 +353,16 @@ describe("Transactions", () => {
 	});
 
 	it("should abort previous request", async () => {
-		nock.cleanAll();
-		const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-
-		nock(API_BASE_URL)
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => ({
-				data: data.slice(0, 4),
-				meta,
-			}))
-			.get("/api/transactions")
-			.query((parameters) => !!parameters.senderId)
-			.delayBody(500)
-			.reply(200, () => ({
-				data: data.slice(0, 1),
-				meta,
-			}))
-			.get("/api/transactions")
-			.query((parameters) => !!parameters.recipientId)
-			.reply(200, () => ({
-				data: data.slice(0, 3),
-				meta,
-			}));
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: transactionsFixture.data.slice(0, 4),
+				meta: transactionsFixture.meta,
+			}),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: transactionsFixture.data.slice(0, 1),
+				meta: transactionsFixture.meta,
+			}),
+		);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -448,12 +374,12 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(4), { timeout: 500 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(30), { timeout: 500 });
 
 		userEvent.click(screen.getByTestId("tabs__tab-button-received"));
 		userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
-		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(1), { timeout: 1000 });
+		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(8), { timeout: 1000 });
 	});
 
 	it("should filter by mode", async () => {
@@ -468,13 +394,13 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
 
 		userEvent.click(screen.getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8),
 		);
 	});
 
@@ -491,7 +417,7 @@ describe("Transactions", () => {
 		);
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(4),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
 		);
 
 		const dropdownContainer = within(screen.getByTestId("Transactions--filter-dropdown"));
@@ -508,12 +434,8 @@ describe("Transactions", () => {
 
 		userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
 
-		await waitFor(
-			() =>
-				expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(
-					1,
-				),
-			{ timeout: 4000 },
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 	});
 
@@ -544,6 +466,7 @@ describe("Transactions", () => {
 		const emptyProfileURL = `/profiles/${emptyProfile.id()}/dashboard`;
 
 		history.push(emptyProfileURL);
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={emptyProfile} wallets={[]} />

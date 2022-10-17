@@ -1,5 +1,4 @@
 import "@testing-library/jest-dom";
-import MockDate from "mockdate";
 import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
@@ -89,7 +88,7 @@ beforeAll(async () => {
 });
 
 beforeEach(() => {
-	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
+	vi.setSystemTime(new Date("2020-07-01T00:00:00.000Z"));
 
 	localstorageSpy = vi
 		.spyOn(Storage.prototype, "getItem")
@@ -108,8 +107,6 @@ beforeEach(() => {
 
 afterEach(() => {
 	server.resetHandlers();
-
-	MockDate.reset();
 
 	tippyMock.mockRestore();
 

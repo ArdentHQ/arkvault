@@ -11,6 +11,7 @@ import {
 	triggerMessageSignOnce,
 	WithProviders,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
@@ -24,6 +25,10 @@ describe("Use Transaction Builder Hook", () => {
 		await profile.sync();
 
 		await triggerMessageSignOnce(wallet);
+	});
+
+	beforeEach(async () => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should sign transfer", async () => {
