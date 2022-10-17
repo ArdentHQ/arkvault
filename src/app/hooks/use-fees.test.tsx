@@ -7,7 +7,7 @@ import { useFees } from "./use-fees";
 import { EnvironmentProvider } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
 
 const ARKDevnet = "ark.devnet";
 
@@ -114,10 +114,14 @@ describe("useFees", () => {
 
 		const profile = await env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
-		await profile.walletFactory().generate({
+
+		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: ARKDevnet,
 		});
+
+		await triggerMessageSignOnce(wallet);
+
 		await env.wallets().syncByProfile(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
@@ -153,10 +157,14 @@ describe("useFees", () => {
 
 		const profile = await env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
+
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: ARKDevnet,
 		});
+
+		await triggerMessageSignOnce(wallet);
+
 		await env.wallets().syncByProfile(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
