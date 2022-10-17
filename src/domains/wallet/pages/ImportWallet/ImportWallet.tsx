@@ -235,6 +235,12 @@ export const ImportWallet = () => {
 		await persist();
 	};
 
+	/* istanbul ignore next -- @preserve */
+	const handleEditLedgerAlias = (wallet: Contracts.IReadWriteWallet) => {
+		setImportedWallet(wallet);
+		setIsEditAliasModalOpen(true);
+	};
+
 	const handleFinish = () => {
 		assertWallet(importedWallet);
 
@@ -288,14 +294,7 @@ export const ImportWallet = () => {
 					data-testid="ImportWallet__form"
 				>
 					{isLedgerImport ? (
-						<LedgerTabs
-							onClickEditWalletName={
-								/* istanbul ignore next -- @preserve */ (wallet: Contracts.IReadWriteWallet) => {
-									setImportedWallet(wallet);
-									setIsEditAliasModalOpen(true);
-								}
-							}
-						/>
+						<LedgerTabs onClickEditWalletName={handleEditLedgerAlias} />
 					) : (
 						<Tabs activeId={activeTab}>
 							<StepIndicator steps={allSteps} activeIndex={activeTabIndex} />

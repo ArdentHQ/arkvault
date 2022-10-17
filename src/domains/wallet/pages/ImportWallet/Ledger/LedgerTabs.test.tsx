@@ -154,7 +154,7 @@ describe("LedgerTabs", () => {
 			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(1),
 		);
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -203,7 +203,8 @@ describe("LedgerTabs", () => {
 			expect(within(screen.getAllByRole("rowgroup")[1]).getAllByRole("checkbox")).toHaveLength(2),
 		);
 
-		getPublicKeySpy.mockReset();
+		scanSpy.mockRestore();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -225,17 +226,16 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("NetworkOption")).rejects.toThrow(/Unable to find/);
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 		networkAllowsSpy.mockRestore();
 		profileAvailableNetworksMock.mockRestore();
 	});
 
-	// TODO find out whats wrong - test hangs
-	it.skip("should render connection step", async () => {
+	it("should render connection step", async () => {
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockResolvedValue(publicKeyPaths.values().next().value);
+			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
 		let formReference: ReturnType<typeof useForm>;
 		const Component = () => {
@@ -273,10 +273,15 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(backSelector());
 
-		await waitFor(() => expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`));
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
+		});
+
 		historySpy.mockRestore();
 
-		await waitFor(() => expect(nextSelector()).toBeEnabled());
+		await waitFor(() => {
+			expect(nextSelector()).toBeEnabled();
+		});
 
 		userEvent.click(nextSelector());
 
@@ -326,7 +331,7 @@ describe("LedgerTabs", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${profile.wallets().last().id()}`);
 
 		historySpy.mockRestore();
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -377,7 +382,7 @@ describe("LedgerTabs", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
 
 		historySpy.mockRestore();
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		scannerMock.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
@@ -456,10 +461,8 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
-		getPublicKeySpy.mockReset();
-
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-		vi.restoreAllMocks();
 	});
 
 	describe("Enter key handling", () => {
@@ -478,8 +481,7 @@ describe("LedgerTabs", () => {
 
 			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
 
-			getPublicKeySpy.mockReset();
-
+			getPublicKeySpy.mockRestore();
 			ledgerTransportMock.mockRestore();
 		});
 
@@ -500,8 +502,7 @@ describe("LedgerTabs", () => {
 
 			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
 
-			getPublicKeySpy.mockReset();
-
+			getPublicKeySpy.mockRestore();
 			ledgerTransportMock.mockRestore();
 		});
 
@@ -531,10 +532,8 @@ describe("LedgerTabs", () => {
 			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
 			expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-			getPublicKeySpy.mockReset();
-
+			getPublicKeySpy.mockRestore();
 			ledgerTransportMock.mockRestore();
-
 			formContextSpy.mockRestore();
 		});
 	});
