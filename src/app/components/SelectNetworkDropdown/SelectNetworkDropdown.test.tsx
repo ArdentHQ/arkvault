@@ -1,4 +1,5 @@
 import React from "react";
+import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import Tippy from "@tippyjs/react";
 import userEvent from "@testing-library/user-event";
@@ -59,7 +60,7 @@ describe("SelectNetworkDropdown", () => {
 						isLive: () => true,
 						isTest: () => false,
 						ticker: () => "WTH",
-					},
+					} as Networks.Network,
 				]}
 				selectedNetwork={networks[0]}
 				onChange={onChange}
@@ -90,9 +91,9 @@ describe("SelectNetworkDropdown", () => {
 			isLive: () => false,
 			isTest: () => false,
 			ticker: () => "MYC",
-		};
+		} as Networks.Network;
 
-		render(<NetworkOptionLabel network={customNetworkMock} value="tests" />);
+		render(<NetworkOptionLabel network={customNetworkMock} />);
 
 		expect(screen.getByText("MY")).toBeInTheDocument();
 	});
