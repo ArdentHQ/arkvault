@@ -27,7 +27,7 @@ describe("Use Transaction Builder Hook", () => {
 		await triggerMessageSignOnce(wallet);
 	});
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 

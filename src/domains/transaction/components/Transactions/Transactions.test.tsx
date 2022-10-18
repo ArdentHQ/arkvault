@@ -205,8 +205,6 @@ describe("Transactions", () => {
 	});
 
 	it("should filter by type and see empty screen", async () => {
-		const emptyProfile = await env.profiles().create("empty screen profile");
-
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={[profile.wallets().first()]} />

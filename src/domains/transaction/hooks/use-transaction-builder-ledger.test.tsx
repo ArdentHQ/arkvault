@@ -36,7 +36,7 @@ describe("Use Transaction Builder with Ledger", () => {
 		wallet = profile.wallets().first();
 	});
 
-	beforeEach(async () => {
+	beforeEach(() => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
