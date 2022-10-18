@@ -614,9 +614,6 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
       </div>
     </div>
   </div>
-  <table>
-    <tbody />
-  </table>
 </DocumentFragment>
 `;
 
