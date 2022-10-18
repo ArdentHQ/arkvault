@@ -167,9 +167,6 @@ describe("useProfileTransactions", () => {
 	});
 
 	it("should run updates periodically", async () => {
-		vi.useRealTimers();
-		vi.useFakeTimers();
-
 		let hook: any;
 
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -181,6 +178,8 @@ describe("useProfileTransactions", () => {
 
 		const all = await profile.transactionAggregate().all({});
 		const items = all.items();
+
+		vi.useFakeTimers();
 
 		let mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => true,
