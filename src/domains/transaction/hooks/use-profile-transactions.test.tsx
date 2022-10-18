@@ -93,6 +93,9 @@ describe("useProfileTransactions", () => {
 	});
 
 	it("should hide unconfirmed transactions", async () => {
+		vi.useRealTimers();
+		vi.useFakeTimers();
+
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncDelegates(profile);

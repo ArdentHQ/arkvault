@@ -14,18 +14,15 @@ describe("useUnlockableBalances", () => {
 	let wallet: Contracts.IReadWriteWallet;
 
 	beforeAll(() => {
-		vi.useFakeTimers("legacy");
-
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		wallet = profile.wallets().first();
 	});
 
-	afterAll(() => {
-		vi.useRealTimers();
-	});
-
 	it("should fetch unlockable balances every 60 seconds", async () => {
+		vi.useRealTimers();
+		vi.useFakeTimers("legacy");
+
 		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
 			objects: [
