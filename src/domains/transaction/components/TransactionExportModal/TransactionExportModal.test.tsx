@@ -29,8 +29,8 @@ describe("TransactionExportModal", () => {
 
 		server.use(
 			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				meta,
 				data: [data[0]],
+				meta,
 			}),
 		);
 
