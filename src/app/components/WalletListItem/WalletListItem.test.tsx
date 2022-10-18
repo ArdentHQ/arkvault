@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 import { WalletListItem } from "./WalletListItem";
 import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import * as isFullySyncedModule from "@/domains/wallet/utils/is-fully-synced";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
