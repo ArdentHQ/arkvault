@@ -29,8 +29,8 @@ describe("TransactionExportModal", () => {
 
 		server.use(
 			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: Array.from({ length: 100 }).fill(data[0]),
 				meta,
+				data: [data[0]],
 			}),
 		);
 
@@ -89,7 +89,7 @@ describe("TransactionExportModal", () => {
 		walletSpy.mockRestore();
 	});
 
-	it.skip("should render progress status", async () => {
+	it("should render progress status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
@@ -106,13 +106,10 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
+		expect(exportButton()).not.toBeDisabled();
+
+		console.log("CLICKING");
 		userEvent.click(exportButton());
-
-		await expect(screen.findByTestId("TransactionExportProgress__cancel-button")).resolves.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
-
-		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(dateToggle()).toBeEnabled();
@@ -121,7 +118,7 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.skip("should render error status", async () => {
+	it("should render error status", async () => {
 		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
 			throw new Error("error");
 		});
@@ -159,7 +156,7 @@ describe("TransactionExportModal", () => {
 		transactionIndexMock.mockRestore();
 	});
 
-	it.skip("should render success status", async () => {
+	it("should render success status", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={vi.fn()} />
@@ -193,7 +190,7 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.skip("should render success and download file", async () => {
+	it("should render success and download file", async () => {
 		const onClose = vi.fn();
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
 
@@ -228,7 +225,7 @@ describe("TransactionExportModal", () => {
 		browserAccessMock.mockRestore();
 	});
 
-	it.skip("should render success and stay open if download fails", async () => {
+	it("should render success and stay open if download fails", async () => {
 		const onClose = vi.fn();
 		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("error");
@@ -263,6 +260,32 @@ describe("TransactionExportModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		browserAccessMock.mockRestore();
+	});
+
+	it("should emit onClose", async () => {
+		const onClose = vi.fn();
+
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionExportModal isOpen wallet={profile.wallets().first()} onClose={onClose} />
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		expect(screen.getByTestId("TransactionExportForm")).toBeInTheDocument();
+
+		await waitFor(() => {
+			expect(dateToggle()).toBeEnabled();
+		});
+
+		userEvent.click(screen.getByTestId("Modal__close-button"));
+
+		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
 
 	it("should disable export button if all column toggles are off", async () => {
