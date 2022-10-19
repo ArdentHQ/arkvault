@@ -326,7 +326,7 @@ describe("WalletListItem", () => {
 		isFullySyncedSpy.mockRestore();
 	});
 
-	it.skip("should handle click on responsive send button", () => {
+	it("should handle click on responsive send button", () => {
 		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		render(
