@@ -14,7 +14,7 @@ import {
 } from "./assertions";
 
 describe("#assertProfile", () => {
-	it.skip("should pass with a profile instance", () => {
+	it("should pass with a profile instance", () => {
 		expect(() =>
 			assertProfile(
 				new Profile({
@@ -131,7 +131,7 @@ describe("#assertNetwork", () => {
 		expect(() => assertNetwork(new Networks.Network())).not.toThrow();
 	});
 
-	it.skip("should fail without a network instance", () => {
+	it("should fail without a network instance", () => {
 		expect(() => assertNetwork(undefined)).toThrow(
 			"Expected 'network' to be Networks.Network, but received undefined",
 		);

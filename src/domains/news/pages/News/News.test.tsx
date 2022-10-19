@@ -5,7 +5,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { vi } from "vitest";
-import { rest } from "msw";
 import { News } from "./News";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { buildTranslations } from "@/app/i18n/helpers";
@@ -80,15 +79,8 @@ describe("News", () => {
 
 	it("should show error toast if news cannot be fetched", async () => {
 		server.use(
-			rest.get(newsBasePath, (request, response, context) => {
-				const page = request.url.searchParams.get("page");
-
-				if (page === "1") {
-					return response(context.status(200), context.json(pageReply(page1Fixture)));
-				}
-
-				return response(context.status(500), context.json({ code: "ETIMEDOUT" }));
-			}),
+			requestMock(newsBasePath, pageReply(page1Fixture), { query: { page: 1 } }),
+			requestMock(newsBasePath, { code: "ETIMEDOUT" }, { status: 500 }),
 		);
 
 		const toastSpy = vi.spyOn(toasts, "error");
@@ -110,15 +102,8 @@ describe("News", () => {
 
 	it("should navigate on next and previous pages", async () => {
 		server.use(
-			rest.get(newsBasePath, (request, response, context) => {
-				const page = request.url.searchParams.get("page");
-
-				if (page === "1") {
-					return response(context.status(200), context.json(pageReply(page1Fixture)));
-				}
-
-				return response(context.status(200), context.json(pageReply(page2Fixture)));
-			}),
+			requestMock(newsBasePath, pageReply(page1Fixture), { query: { page: 1 } }),
+			requestMock(newsBasePath, pageReply(page2Fixture)),
 		);
 
 		renderPage();
@@ -140,13 +125,7 @@ describe("News", () => {
 
 	it("should show no results screen", async () => {
 		server.use(
-			rest.get(newsBasePath, (request, response, context) => {
-				const query = request.url.searchParams.get("query");
-
-				if (query === "NoResult") {
-					return response(context.status(200), context.json(emptyPageFixture));
-				}
-			}),
+			requestMock(newsBasePath, emptyPageFixture, { query: { query: "NoResult" } }),
 		);
 
 		renderPage();
@@ -169,15 +148,10 @@ describe("News", () => {
 
 	it("should filter results based on category query and asset", async () => {
 		server.use(
-			rest.get(newsBasePath, (request, response, context) => {
-				const categories = request.url.searchParams.get("categories");
-
-				if (categories) {
-					return response(context.status(200), context.json(filteredFixture));
-				}
-
-				return response(context.status(200), context.json(pageReply(page1Fixture)));
-			}),
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Emergency,Marketing,Technical" } }),
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Marketing,Technical" } }),
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Technical" } }),
+			requestMock(newsBasePath, pageReply(page1Fixture)),
 		);
 
 		const { asFragment } = renderPage();
