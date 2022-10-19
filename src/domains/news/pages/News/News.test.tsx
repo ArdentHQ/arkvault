@@ -124,9 +124,7 @@ describe("News", () => {
 	});
 
 	it("should show no results screen", async () => {
-		server.use(
-			requestMock(newsBasePath, emptyPageFixture, { query: { query: "NoResult" } }),
-		);
+		server.use(requestMock(newsBasePath, emptyPageFixture, { query: { query: "NoResult" } }));
 
 		renderPage();
 
