@@ -2,7 +2,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import { rest } from "msw";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -68,18 +67,23 @@ describe("WalletDetails", () => {
 	beforeEach(async () => {
 		server.use(
 			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
-			rest.get("https://ark-test.arkvault.io/api/transactions", (request, response, context) => {
-				const { meta, data } = transactionsFixture;
-
-				const address = request.url.searchParams.get("address");
-				const limit = request.url.searchParams.get("limit");
-				const page = request.url.searchParams.get("page");
-
-				if (address === "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" && limit === "1" && page === "1") {
-					return response(context.status(200), context.json({ data: [], meta }));
-				}
-
-				return response(context.status(200), context.json({ data: data.slice(0, 1), meta }));
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [],
+					meta: transactionsFixture.meta,
+				},
+				{
+					query: {
+						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+						limit: 1,
+						page: 1,
+					},
+				},
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: transactionsFixture.data.slice(0, 1),
+				meta: transactionsFixture.meta,
 			}),
 		);
 
