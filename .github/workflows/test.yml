@@ -442,6 +442,42 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 1
                   command: pnpm vitest run --coverage --dir src/domains/transaction/hooks
+    domains-transaction-components:
+        runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/transaction/components
+        strategy:
+            matrix:
+                node-version:
+                    - 16.17.1
+        concurrency:
+            group: ${{ github.head_ref }}-test-domains-transaction-components
+            cancel-in-progress: true
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 7
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: pnpm
+            - name: Update System
+              run: sudo apt-get update
+            - name: Install (Ledger Requirements)
+              run: sudo apt-get install libudev-dev libusb-1.0-0-dev
+            - name: Install (pnpm)
+              run: pnpm install --frozen-lockfile
+            - name: Rebuild
+              run: pnpm rebuild
+            - name: Test
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --dir src/domains/transaction/components
     domains-vote:
         runs-on: ubuntu-latest
         env:
