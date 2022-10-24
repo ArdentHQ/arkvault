@@ -406,14 +406,14 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[ABCDEFGHIGKLMNO]*/
+                  command: COVERAGE_THRESHOLD=0 pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[ABCDEFGHIGKLMNO]*/
 
             - name: Test Components ^P-Z
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[PQRSTWXYZ]*/
+                  command: COVERAGE_THRESHOLD=0 pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[PQRSTWXYZ]*/
 
     domains-vote:
         runs-on: ubuntu-latest
