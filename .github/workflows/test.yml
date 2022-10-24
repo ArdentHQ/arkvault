@@ -380,7 +380,7 @@ jobs:
                 node-version:
                     - 16.17.1
         concurrency:
-            group: ${{ github.head_ref }}-test-domains-transaction-components
+            group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v2
