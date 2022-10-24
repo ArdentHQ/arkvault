@@ -422,6 +422,13 @@ jobs:
                   max_attempts: 1
                   command: COVERAGE_THRESHOLD=0 pnpm vitest run --coverage --dir src/domains/transaction/hooks
 
+            - name: Test Pages
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: COVERAGE_THRESHOLD=0 pnpm vitest run --coverage --dir src/domains/transaction/pages
+
     domains-vote:
         runs-on: ubuntu-latest
         env:
