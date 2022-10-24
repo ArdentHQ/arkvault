@@ -401,18 +401,19 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test Hooks
+            - name: Test Components ^A-O
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: COVERAGE_INCLUDE_PATH=src/domains/transaction/hooks pnpm vitest run --coverage --dir src/domains/transaction/hooks
-            - name: Test Pages
+                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[ABCDEFGHIGKLMNO]*/
+
+            - name: Test Components ^P-Z
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: COVERAGE_INCLUDE_PATH=src/domains/transaction/pages pnpm vitest run --coverage --dir src/domains/transaction/pages
+                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[PQRSTWXYZ]*/
 
     domains-vote:
         runs-on: ubuntu-latest
