@@ -415,9 +415,9 @@ jobs:
 
             - name: Test Components ^P-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 16.08
+                  COVERAGE_THRESHOLD_LINES: 13.02
                   COVERAGE_THRESHOLD_FUNCTIONS: 1.23
-                  COVERAGE_THRESHOLD_STATEMENTS: 15.61
+                  COVERAGE_THRESHOLD_STATEMENTS: 12.93
                   COVERAGE_THRESHOLD_BRANCHES: 1.25
               uses: nick-invision/retry@v2
               with:
@@ -448,6 +448,18 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 1
                   command: pnpm vitest run --coverage --dir src/domains/transaction/pages
+
+            - name: Test Validations
+              env:
+                  COVERAGE_THRESHOLD_LINES: 28.52
+                  COVERAGE_THRESHOLD_FUNCTIONS: 11.17
+                  COVERAGE_THRESHOLD_STATEMENTS: 27.19
+                  COVERAGE_THRESHOLD_BRANCHES: 18.43
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --dir src/domains/transaction/validations
 
     domains-vote:
         runs-on: ubuntu-latest
