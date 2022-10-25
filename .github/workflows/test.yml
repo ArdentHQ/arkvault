@@ -71,9 +71,9 @@ jobs:
 
             - name: Test hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 96.1
-                  COVERAGE_THRESHOLD_FUNCTIONS: 96.73
-                  COVERAGE_THRESHOLD_STATEMENTS: 96.3
+                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.91
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
                   # TODO: fix add inclusion regex and require full coverage.
                   COVERAGE_INCLUDE_PATH: src/app/hooks
