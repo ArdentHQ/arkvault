@@ -40,12 +40,36 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 0
+                  COVERAGE_THRESHOLD_FUNCTIONS: 0
+                  COVERAGE_THRESHOLD_STATEMENTS: 0
+                  COVERAGE_THRESHOLD_BRANCHES: 0
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[ABCDEFGHIGKLMNO]*/
+
+            - name: Test Components ^P-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 0
+                  COVERAGE_THRESHOLD_FUNCTIONS: 0
+                  COVERAGE_THRESHOLD_STATEMENTS: 0
+                  COVERAGE_THRESHOLD_BRANCHES: 0
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[PQRSTWXYZ]*/
+
             - name: Test hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 13.2
-                  COVERAGE_THRESHOLD_FUNCTIONS: 1.08
-                  COVERAGE_THRESHOLD_STATEMENTS: 12.96
-                  COVERAGE_THRESHOLD_BRANCHES: 1.01
+                  COVERAGE_THRESHOLD_LINES: 0
+                  COVERAGE_THRESHOLD_FUNCTIONS: 0
+                  COVERAGE_THRESHOLD_STATEMENTS: 0
+                  COVERAGE_THRESHOLD_BRANCHES: 0
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
