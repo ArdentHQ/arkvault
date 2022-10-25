@@ -461,6 +461,13 @@ jobs:
                   max_attempts: 1
                   command: pnpm vitest run --coverage --dir src/domains/transaction/validations
 
+            - name: Test utils
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest --coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+
     domains-vote:
         runs-on: ubuntu-latest
         env:
