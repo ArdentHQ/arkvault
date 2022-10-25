@@ -90,7 +90,6 @@ jobs:
                   COVERAGE_THRESHOLD_STATEMENTS: 100
                   COVERAGE_THRESHOLD_BRANCHES: 100
                   # TODO: fix add inclusion regex
-                  COVERAGE_INCLUDE_PATH: src/app/components/
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
