@@ -55,7 +55,7 @@ jobs:
                   max_attempts: 1
                   command: pnpm vitest run --coverage src/app/App* src/app/App.test.tsx src/app/validations
 
-            - name: Test Contexts
+            - name: Test Context Providers
               env:
                   # TODO: fix thresholds
                   COVERAGE_THRESHOLD_LINES: 100
@@ -471,6 +471,7 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 69.23
                   COVERAGE_THRESHOLD_STATEMENTS: 80
                   COVERAGE_THRESHOLD_BRANCHES: 83.33
+                  # TODO: fix add inclusion regex and require full coverage.
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
@@ -483,6 +484,7 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 1.08
                   COVERAGE_THRESHOLD_STATEMENTS: 12.96
                   COVERAGE_THRESHOLD_BRANCHES: 1.01
+                  # TODO: fix add inclusion regex and require full coverage.
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
@@ -495,6 +497,7 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 1.23
                   COVERAGE_THRESHOLD_STATEMENTS: 12.93
                   COVERAGE_THRESHOLD_BRANCHES: 1.25
+                  # TODO: fix add inclusion regex and require full coverage.
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20

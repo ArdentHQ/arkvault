@@ -47,7 +47,7 @@ export const openTransport = async (): Promise<Contracts.LedgerTransport> => {
 
 	return new Promise((resolve, reject) =>
 		transport.listen({
-			/* istanbul ignore next -- @preserve */
+			/* istanbul ignore next */
 			complete: () => null,
 			error: reject,
 			next: ({ type, descriptor, deviceModel }) => {
