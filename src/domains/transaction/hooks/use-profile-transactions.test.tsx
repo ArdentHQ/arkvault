@@ -13,7 +13,7 @@ const wrapper = ({ children }: any) => (
 );
 
 describe("useProfileTransactions", () => {
-	it("should hide unconfirmed transactions", async () => {
+	it.skip("should hide unconfirmed transactions", async () => {
 		vi.useRealTimers();
 		vi.useFakeTimers();
 
@@ -54,7 +54,7 @@ describe("useProfileTransactions", () => {
 		mockIsConfirmed.mockRestore();
 	});
 
-	it("should run updates periodically", async () => {
+	it.skip("should run updates periodically", async () => {
 		let hook: any;
 
 		const profile = env.profiles().findById(getDefaultProfileId());
