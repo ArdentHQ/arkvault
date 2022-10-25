@@ -401,6 +401,13 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
+            - name: Test Utils
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest --coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+
             - name: Test Components ^A-O
               env:
                   COVERAGE_THRESHOLD_LINES: 13.2
@@ -424,13 +431,6 @@ jobs:
                   timeout_minutes: 20
                   max_attempts: 1
                   command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[PQRSTWXYZ]*/
-
-            - name: Test utils
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 20
-                  max_attempts: 1
-                  command: pnpm vitest --coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
 
             - name: Test Hooks
               env:
