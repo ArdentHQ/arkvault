@@ -13,6 +13,7 @@ const wrapper = ({ children }: any) => (
 );
 
 describe("useProfileTransactions", () => {
+	// TODO: Inspect timeout issue and restore this test. It works locally but timetouts in CI
 	it.skip("should hide unconfirmed transactions", async () => {
 		vi.useRealTimers();
 		vi.useFakeTimers();
@@ -54,6 +55,7 @@ describe("useProfileTransactions", () => {
 		mockIsConfirmed.mockRestore();
 	});
 
+	// TODO: Inspect timeout issue and restore this test. It works locally but timetouts in CI
 	it.skip("should run updates periodically", async () => {
 		let hook: any;
 
