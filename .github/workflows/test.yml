@@ -40,12 +40,18 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test
+            - name: Test hooks
+              env:
+                  COVERAGE_THRESHOLD_LINES: 13.2
+                  COVERAGE_THRESHOLD_FUNCTIONS: 1.08
+                  COVERAGE_THRESHOLD_STATEMENTS: 12.96
+                  COVERAGE_THRESHOLD_BRANCHES: 1.01
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/app
+                  command: pnpm vitest run --coverage --dir src/app/hooks
+
     domains-contact:
         runs-on: ubuntu-latest
         env:
