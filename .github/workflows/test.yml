@@ -57,7 +57,7 @@ jobs:
 
             - name: Test Context Providers
               env:
-                  # TODO: fix thresholds
+                  # TODO: fix thresholdl
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
@@ -76,7 +76,7 @@ jobs:
                   COVERAGE_THRESHOLD_STATEMENTS: 96.3
                   COVERAGE_THRESHOLD_BRANCHES: 94.22
                   # TODO: fix add inclusion regex and require full coverage.
-                  COVERAGE_INCLUDE_PATH: src/app/components/
+                  COVERAGE_INCLUDE_PATH: src/app/hooks
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
