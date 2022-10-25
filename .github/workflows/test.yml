@@ -40,41 +40,74 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test Components ^A-O
-              env:
-                  COVERAGE_THRESHOLD_LINES: 0
-                  COVERAGE_THRESHOLD_FUNCTIONS: 0
-                  COVERAGE_THRESHOLD_STATEMENTS: 0
-                  COVERAGE_THRESHOLD_BRANCHES: 0
-              uses: nick-invision/retry@v2
-              with:
-                  timeout_minutes: 20
-                  max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[ABCDEFGHIGKLMNO]*/
 
-            - name: Test Components ^P-Z
+            - name: Test App
               env:
-                  COVERAGE_THRESHOLD_LINES: 0
-                  COVERAGE_THRESHOLD_FUNCTIONS: 0
-                  COVERAGE_THRESHOLD_STATEMENTS: 0
-                  COVERAGE_THRESHOLD_BRANCHES: 0
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES:
+                  # TODO: include validations coverage
+                  COVERAGE_INCLUDE_PATH: src/app/App*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[PQRSTWXYZ]*/
+                  command: pnpm vitest run --coverage src/app/App* src/app/App.test.tsx src/app/validations
+
+            - name: Test Contexts
+              env:
+                  # TODO: fix thresholds
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/contexts
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --dir src/app/contexts
 
             - name: Test hooks
               env:
-                  COVERAGE_THRESHOLD_LINES: 0
-                  COVERAGE_THRESHOLD_FUNCTIONS: 0
-                  COVERAGE_THRESHOLD_STATEMENTS: 0
-                  COVERAGE_THRESHOLD_BRANCHES: 0
+                  COVERAGE_THRESHOLD_LINES: 96.1
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.73
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.3
+                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  # TODO: fix add inclusion regex and require full coverage.
+                  COVERAGE_INCLUDE_PATH: src/app/components/
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
                   command: pnpm vitest run --coverage --dir src/app/hooks
+
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  # TODO: fix add inclusion regex
+                  COVERAGE_INCLUDE_PATH: src/app/components/
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --testNamePattern src/app/components/^[ABCDEFGHIGKLMNO]*/
+
+            - name: Test Components ^P-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[PQRSTWXYZ]*/
 
     domains-contact:
         runs-on: ubuntu-latest
