@@ -488,7 +488,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[ABCDEFGHIGKLMNO]*
+                  command: pnpm vitest run src/domains/transaction/[ABCDEFGHIGKLMNO]* --coverage --dir src/domains/transaction/components
 
             - name: Test Components ^P-Z
               env:
@@ -501,7 +501,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/domains/transaction/components/[PQRSTWXYZ]*
+                  command: pnpm vitest run src/domains/transaction/[PQRSTWXYZ]* --coverage --dir src/domains/transaction/components
 
             - name: Test Hooks
               env:
