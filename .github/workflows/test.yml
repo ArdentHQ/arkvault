@@ -94,7 +94,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[ABCDEFGHIGKLMNO]*
+                  command: pnpm vitest run src/app/components/[ABCDEFGHIGKLMNO]* --coverage --dir src/app/components
 
             - name: Test Components ^P-Z
               env:
@@ -106,7 +106,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --testNamePattern src/app/components/[PQRSTWXYZ]*/
+                  command: pnpm vitest run src/app/components/[PQRSTWXYZ]* --coverage --dir src/app/components
 
     domains-contact:
         runs-on: ubuntu-latest
