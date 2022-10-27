@@ -58,7 +58,7 @@ describe("TruncateMiddleDynamic", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with tooltip in the dark mode", () => {
+	it.skip("should render with tooltip in the dark mode", () => {
 		useResizeDetectorSpy
 			.mockReturnValueOnce({ ref: parentElementReference, width: 50 })
 			.mockReturnValue({ ref: parentElementReference, width: 30 });
