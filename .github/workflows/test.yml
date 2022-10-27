@@ -53,7 +53,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage src/app/App* src/app/App.test.tsx src/app/validations
+                  command: pnpm test:coverage src/app/App* src/app/validations
 
             - name: Test Context Providers
               env:
@@ -67,7 +67,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/app/contexts
+                  command: pnpm test:coverage src/app/contexts
 
             - name: Test hooks
               env:
@@ -81,7 +81,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/app/hooks
+                  command: pnpm test:coverage src/app/hooks
 
             - name: Test Components ^A-O
               env:
@@ -144,7 +144,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/contact
+                  command: pnpm test:coverage src/domains/contact
     domains-dashboard:
         runs-on: ubuntu-latest
         env:
@@ -180,7 +180,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/dashboard
+                  command: pnpm test:coverage src/domains/dashboard
     domains-error:
         runs-on: ubuntu-latest
         env:
@@ -216,7 +216,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/error
+                  command: pnpm test:coverage src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
         env:
@@ -252,7 +252,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/exchange
+                  command: pnpm test:coverage src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
         env:
@@ -288,7 +288,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/message
+                  command: pnpm test:coverage src/domains/message
     domains-network:
         runs-on: ubuntu-latest
         env:
@@ -324,7 +324,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/network
+                  command: pnpm test:coverage src/domains/network
     domains-news:
         runs-on: ubuntu-latest
         env:
@@ -360,7 +360,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/news
+                  command: pnpm test:coverage src/domains/news
     domains-profile:
         runs-on: ubuntu-latest
         env:
@@ -396,7 +396,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/profile
+                  command: pnpm test:coverage src/domains/profile
     domains-setting:
         runs-on: ubuntu-latest
         env:
@@ -432,7 +432,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/setting
+                  command: pnpm test:coverage src/domains/setting
 
     domains-transaction:
         runs-on: ubuntu-latest
@@ -471,12 +471,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 69.23
                   COVERAGE_THRESHOLD_STATEMENTS: 80
                   COVERAGE_THRESHOLD_BRANCHES: 83.33
-                  # TODO: fix add inclusion regex and require full coverage.
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest --coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+                  command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
 
             - name: Test Components ^A-O
               env:
@@ -510,11 +510,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 14.91
                   COVERAGE_THRESHOLD_STATEMENTS: 28.31
                   COVERAGE_THRESHOLD_BRANCHES: 10.57
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/transaction/hooks
+                  command: pnpm test:coverage src/domains/transaction/hooks
 
             - name: Test Pages
               env:
@@ -522,11 +523,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 60.99
                   COVERAGE_THRESHOLD_STATEMENTS: 65.31
                   COVERAGE_THRESHOLD_BRANCHES: 52.36
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/transaction/pages
+                  command: pnpm test:coverage src/domains/transaction/pages
 
             - name: Test Validations
               env:
@@ -534,11 +536,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 11.17
                   COVERAGE_THRESHOLD_STATEMENTS: 27.19
                   COVERAGE_THRESHOLD_BRANCHES: 18.43
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/transaction/validations
+                  command: pnpm test:coverage src/domains/transaction/validations
 
     domains-vote:
         runs-on: ubuntu-latest
@@ -575,7 +578,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/vote
+                  command: pnpm test:coverage src/domains/vote
     domains-wallet:
         runs-on: ubuntu-latest
         env:
@@ -611,7 +614,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/domains/wallet
+                  command: pnpm test:coverage src/domains/wallet
     router:
         runs-on: ubuntu-latest
         env:
@@ -647,7 +650,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/router
+                  command: pnpm test:coverage src/router
     utils:
         runs-on: ubuntu-latest
         env:
@@ -687,4 +690,4 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run --coverage --dir src/utils
+                  command: pnpm test:coverage src/utils
