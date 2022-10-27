@@ -57,7 +57,7 @@ jobs:
 
             - name: Test Context Providers
               env:
-                  # TODO: fix thresholdl
+                  # TODO: fix threshold
                   COVERAGE_THRESHOLD_LINES: 100
                   COVERAGE_THRESHOLD_FUNCTIONS: 100
                   COVERAGE_THRESHOLD_STATEMENTS: 100
@@ -89,12 +89,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 0.7
                   COVERAGE_THRESHOLD_STATEMENTS: 15.66
                   COVERAGE_THRESHOLD_BRANCHES: 0.55
-                  # TODO: fix add inclusion regex
+                  COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/app/components/[ABCDEFGHIGKLMNO]* --coverage --dir src/app/components
+                  command: pnpm vitest run src/app/components/[A-O]* --coverage --dir src/app/components
 
             - name: Test Components ^P-Z
               env:
@@ -102,11 +102,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 0.61
                   COVERAGE_THRESHOLD_STATEMENTS: 15.26
                   COVERAGE_THRESHOLD_BRANCHES: 0.47
+                  COVERAGE_INCLUDE_PATH: src/app/components/[P-Z]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/app/components/[PQRSTWXYZ]* --coverage --dir src/app/components
+                  command: pnpm vitest run src/app/components/[P-Z]* --coverage --dir src/app/components
 
     domains-contact:
         runs-on: ubuntu-latest
@@ -483,12 +484,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 1.08
                   COVERAGE_THRESHOLD_STATEMENTS: 12.96
                   COVERAGE_THRESHOLD_BRANCHES: 1.01
-                  # TODO: fix add inclusion regex and require full coverage.
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/domains/transaction/components/[ABCDEFGHIGKLMNO]* --coverage --dir src/domains/transaction/components
+                  command: pnpm vitest run src/domains/transaction/components/[A-O]* --coverage --dir src/domains/transaction/components
 
             - name: Test Components ^P-Z
               env:
@@ -496,12 +497,12 @@ jobs:
                   COVERAGE_THRESHOLD_FUNCTIONS: 1.23
                   COVERAGE_THRESHOLD_STATEMENTS: 12.93
                   COVERAGE_THRESHOLD_BRANCHES: 1.24
-                  # TODO: fix add inclusion regex and require full coverage.
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-Z]*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/domains/transaction/components/[PQRSTWXYZ]* --coverage --dir src/domains/transaction/components
+                  command: pnpm vitest run src/domains/transaction/components/[P-Z]* --coverage --dir src/domains/transaction/components
 
             - name: Test Hooks
               env:
