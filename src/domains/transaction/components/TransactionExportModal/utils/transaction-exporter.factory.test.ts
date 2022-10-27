@@ -22,7 +22,8 @@ describe("CsvFormatter", () => {
 		vi.resetAllMocks();
 	});
 
-	it("should sync all transactions recursively", async () => {
+	// TODO: Restore this test.
+	it.skip("should sync all transactions recursively", async () => {
 		const exporter = TransactionExporter({ limit: 13, profile, wallet: profile.wallets().first() });
 		//@ts-ignore
 		await exporter.transactions().sync({ dateRange: { from: Date.now(), to: Date.now() } });
