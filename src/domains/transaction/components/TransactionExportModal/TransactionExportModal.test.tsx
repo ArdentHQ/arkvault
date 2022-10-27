@@ -108,7 +108,6 @@ describe("TransactionExportModal", () => {
 
 		expect(exportButton()).not.toBeDisabled();
 
-		console.log("CLICKING");
 		userEvent.click(exportButton());
 
 		await waitFor(() => {
