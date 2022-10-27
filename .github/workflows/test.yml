@@ -94,7 +94,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/app/components/[A-O]* --coverage --dir src/app/components
+                  command: pnpm test:coverage src/app/components/[A-O]*
 
             - name: Test Components ^P-Z
               env:
@@ -107,7 +107,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/app/components/[P-Z]* --coverage --dir src/app/components
+                  command: pnpm test:coverage src/app/components/[P-Z]*
 
     domains-contact:
         runs-on: ubuntu-latest
@@ -489,7 +489,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/domains/transaction/components/[A-O]* --coverage --dir src/domains/transaction/components
+                  command: pnpm test:coverage src/domains/transaction/components/[A-O]*
 
             - name: Test Components ^P-Z
               env:
@@ -502,7 +502,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm vitest run src/domains/transaction/components/[P-Z]* --coverage --dir src/domains/transaction/components
+                  command: pnpm test:coverage src/domains/transaction/components/[P-Z]*
 
             - name: Test Hooks
               env:
