@@ -29,7 +29,7 @@ describe("TransactionExportModal", () => {
 
 		server.use(
 			requestMock("https://ark-test.arkvault.io/api/transactions", {
-				data: Array.from({ length: 100 }).fill(data[0]),
+				data: [data[0]],
 				meta,
 			}),
 		);
@@ -106,13 +106,9 @@ describe("TransactionExportModal", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
+		expect(exportButton()).not.toBeDisabled();
+
 		userEvent.click(exportButton());
-
-		await expect(screen.findByTestId("TransactionExportProgress__cancel-button")).resolves.toBeInTheDocument();
-
-		userEvent.click(screen.getByTestId("TransactionExportProgress__cancel-button"));
-
-		await expect(screen.findByTestId("TransactionExport__submit-button")).resolves.toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(dateToggle()).toBeEnabled();

@@ -96,6 +96,7 @@ describe("SendIpfs", () => {
 			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
 				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
 			}),
+			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 	});
 

@@ -8,6 +8,7 @@ import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import { env, getDefaultProfileId, getDefaultWalletMnemonic, waitFor, WithProviders } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
@@ -33,6 +34,10 @@ describe("Use Transaction Builder with Ledger", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should sign transfer with ledger", async () => {

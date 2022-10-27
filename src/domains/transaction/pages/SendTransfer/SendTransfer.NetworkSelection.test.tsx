@@ -20,6 +20,8 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
 
 let profile: Contracts.IProfile;
 let resetProfileNetworksMock: () => void;
@@ -69,6 +71,8 @@ describe("SendTransfer Network Selection", () => {
 					},
 				},
 			),
+			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
+			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
 		);
 	});
 

@@ -5,16 +5,7 @@ import React from "react";
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 import { translations } from "@/domains/transaction/i18n";
-import {
-	act,
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-	within,
-	renderResponsive,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within, renderResponsive } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let recipients: RecipientProperties[];
@@ -217,8 +208,6 @@ describe("SearchRecipient", () => {
 	});
 
 	it("should filter recipients by address", async () => {
-		vi.useFakeTimers();
-
 		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
@@ -237,17 +226,10 @@ describe("SearchRecipient", () => {
 
 		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
-		act(() => {
-			vi.advanceTimersByTime(100);
-		});
-
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		vi.useRealTimers();
 	});
 
 	it("should filter recipients by alias", async () => {
-		vi.useFakeTimers();
-
 		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
@@ -266,17 +248,10 @@ describe("SearchRecipient", () => {
 
 		userEvent.paste(searchInput, "Ark Wallet 1");
 
-		act(() => {
-			vi.advanceTimersByTime(100);
-		});
-
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
-		vi.useRealTimers();
 	});
 
 	it("should reset recipient search", async () => {
-		vi.useFakeTimers();
-
 		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
@@ -294,10 +269,6 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		userEvent.paste(searchInput, "Ark Wallet 1");
-
-		act(() => {
-			vi.advanceTimersByTime(100);
-		});
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
@@ -306,13 +277,9 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
-
-		vi.useRealTimers();
 	});
 
 	it("should not find recipient and show empty results screen", async () => {
-		vi.useFakeTimers();
-
 		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={vi.fn} />);
 
 		await waitFor(() =>
@@ -331,16 +298,10 @@ describe("SearchRecipient", () => {
 
 		userEvent.paste(searchInput, "non-existent recipient address");
 
-		act(() => {
-			vi.advanceTimersByTime(100);
-		});
-
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
-
-		vi.useRealTimers();
 	});
 
 	it.each(["xs", "sm"])("has a search input on responsive screen", (breakpoint) => {

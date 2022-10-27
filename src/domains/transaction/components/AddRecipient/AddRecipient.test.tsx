@@ -250,8 +250,6 @@ describe("AddRecipient", () => {
 	});
 
 	it("should clear the value when changing from multiple to single if more than one wallet is added", async () => {
-		vi.useFakeTimers();
-
 		const onChange = vi.fn();
 
 		let form: ReturnType<typeof useForm>;
@@ -348,8 +346,6 @@ describe("AddRecipient", () => {
 	});
 
 	it("should prevent adding invalid recipient address in multiple type", async () => {
-		vi.useFakeTimers();
-
 		const values = {
 			amount: 1,
 			recipientAddress: "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT",

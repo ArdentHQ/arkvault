@@ -105,6 +105,40 @@ describe("SendDelegateResignation", () => {
 				.mockResolvedValue({ publicKey: wallet.publicKey() });
 		});
 
+		it("should show mnemonic authentication error", async () => {
+			mnemonicMock.mockRestore();
+			secondMnemonicMock.mockRestore();
+
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
+			const { asFragment } = renderPage();
+
+			await expect(formStep()).resolves.toBeVisible();
+
+			userEvent.click(continueButton());
+
+			await expect(reviewStep()).resolves.toBeVisible();
+
+			userEvent.click(continueButton());
+
+			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+			userEvent.paste(secondMnemonic(), MNEMONICS[2]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
+
+			expect(secondMnemonic()).toHaveAttribute("aria-invalid");
+			expect(sendButton()).toBeDisabled();
+
+			expect(asFragment()).toMatchSnapshot();
+
+			secondPublicKeyMock.mockRestore();
+		});
+
 		it("should render 1st step", async () => {
 			const { asFragment } = renderPage();
 
@@ -253,41 +287,19 @@ describe("SendDelegateResignation", () => {
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 		});
 
-		it("should show mnemonic authentication error", async () => {
-			mnemonicMock.mockRestore();
-			secondMnemonicMock.mockRestore();
-
-			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-			const { asFragment } = renderPage();
-
-			await expect(formStep()).resolves.toBeVisible();
-
-			userEvent.click(continueButton());
-
-			await expect(reviewStep()).resolves.toBeVisible();
-
-			userEvent.click(continueButton());
-
-			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-			userEvent.paste(secondMnemonic(), MNEMONICS[2]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
-
-			expect(secondMnemonic()).toHaveAttribute("aria-invalid");
-			expect(sendButton()).toBeDisabled();
-
-			expect(asFragment()).toMatchSnapshot();
-
-			secondPublicKeyMock.mockRestore();
-		});
-
 		it("should show error step and go back", async () => {
+			// Run signDelegate once to prevent assertion error (sdk).
+			try {
+				await wallet.transaction().signDelegateResignation({
+					fee: 4,
+					signatory: await wallet.signatoryFactory().make({
+						mnemonic: MNEMONICS[1],
+					}),
+				});
+			} catch {
+				//
+			}
+
 			const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
 				throw new Error("broadcast error");
 			});

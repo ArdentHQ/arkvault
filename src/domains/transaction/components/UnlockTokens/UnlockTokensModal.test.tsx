@@ -11,6 +11,7 @@ import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
 
@@ -74,6 +75,10 @@ describe("UnlockTokensModal", () => {
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
 		} as any);
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should render", async () => {
