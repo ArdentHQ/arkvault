@@ -181,7 +181,6 @@ describe("WalletDetails", () => {
 
 	it("should open detail modal on transaction row click", async () => {
 		await renderPage({
-			waitForTopSection: true,
 			waitForTransactions: true,
 			withProfileSynchronizer: true,
 		});
