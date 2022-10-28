@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Notifications should render notification item 1`] = `
+exports[`Notifications > should render notification item 1`] = `
 <div>
   <table>
     <tbody>
@@ -43,7 +43,7 @@ exports[`Notifications should render notification item 1`] = `
 </div>
 `;
 
-exports[`Notifications should render with custom action name 1`] = `
+exports[`Notifications > should render with custom action name 1`] = `
 <div>
   <table>
     <tbody>

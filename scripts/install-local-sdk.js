@@ -23,7 +23,7 @@ packageJson.dependencies["@ardenthq/sdk-ledger"] = join(sdkPath, "packages/ledge
 packageJson.dependencies["@ardenthq/sdk-news"] = join(sdkPath, "packages/news");
 packageJson.dependencies["@ardenthq/sdk-profiles"] = join(sdkPath, "packages/profiles");
 
-fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 4));
+fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, "\t"));
 
 exec("pnpm install", () => {
 	console.log("Finished adding local sdk.");

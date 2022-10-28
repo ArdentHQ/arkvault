@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletsGroupHeaderSkeleton should render 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -154,8 +154,22 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -164,7 +178,7 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -318,8 +332,22 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -328,7 +356,7 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -418,8 +446,22 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -428,7 +470,7 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -518,8 +560,22 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>

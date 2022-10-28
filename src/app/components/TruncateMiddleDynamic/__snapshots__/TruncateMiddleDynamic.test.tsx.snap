@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TruncateMiddleDynamic should render 1`] = `
+exports[`TruncateMiddleDynamic > should render 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"
@@ -10,7 +10,7 @@ exports[`TruncateMiddleDynamic should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TruncateMiddleDynamic should return the value if it fits the given container 1`] = `
+exports[`TruncateMiddleDynamic > should return the value if it fits the given container 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"
@@ -20,7 +20,7 @@ exports[`TruncateMiddleDynamic should return the value if it fits the given cont
 </DocumentFragment>
 `;
 
-exports[`TruncateMiddleDynamic should return the value if it overflows the given container 1`] = `
+exports[`TruncateMiddleDynamic > should return the value if it overflows the given container 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"
@@ -30,7 +30,7 @@ exports[`TruncateMiddleDynamic should return the value if it overflows the given
 </DocumentFragment>
 `;
 
-exports[`TruncateMiddleDynamic should return the value if the elements have no width 1`] = `
+exports[`TruncateMiddleDynamic > should return the value if the elements have no width 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"
@@ -40,7 +40,7 @@ exports[`TruncateMiddleDynamic should return the value if the elements have no w
 </DocumentFragment>
 `;
 
-exports[`TruncateMiddleDynamic should truncate value if doesn't overflow and availableWidth is set 1`] = `
+exports[`TruncateMiddleDynamic > should truncate value if doesn't overflow and availableWidth is set 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"
@@ -50,7 +50,7 @@ exports[`TruncateMiddleDynamic should truncate value if doesn't overflow and ava
 </DocumentFragment>
 `;
 
-exports[`TruncateMiddleDynamic should truncate value if it overflows and availableWidth is set 1`] = `
+exports[`TruncateMiddleDynamic > should truncate value if it overflows and availableWidth is set 1`] = `
 <DocumentFragment>
   <span
     class="min-w-0 overflow-hidden"

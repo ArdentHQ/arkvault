@@ -69,7 +69,7 @@ export const FormStep = ({
 				recipients,
 			});
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (isMounted.current) {
 				setFeeTransactionData(transferData);
 			}
@@ -87,7 +87,7 @@ export const FormStep = ({
 	}, [network, profile]);
 
 	useEffect(
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		() => () => {
 			isMounted.current = false;
 		},

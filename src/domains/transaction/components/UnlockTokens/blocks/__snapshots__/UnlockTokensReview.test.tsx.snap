@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`UnlockTokensReview should render 1`] = `
+exports[`UnlockTokensReview > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex items-end justify-between bg-theme-background"
@@ -119,8 +119,25 @@ exports[`UnlockTokensReview should render 1`] = `
         height="20"
         width="20"
       >
-        <svg>
-          received.svg
+        <svg
+          id="received"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+            />
+          </g>
         </svg>
       </div>
     </div>

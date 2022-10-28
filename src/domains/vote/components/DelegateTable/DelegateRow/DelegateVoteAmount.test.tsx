@@ -14,9 +14,9 @@ let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
 
 let Component: () => JSX.Element;
-let walletBalanceMock: jest.SpyInstance;
-let votesAmountMinimumMock: jest.SpyInstance;
-let votesAmountStepMock: jest.SpyInstance;
+let walletBalanceMock: vi.SpyInstance;
+let votesAmountMinimumMock: vi.SpyInstance;
+let votesAmountStepMock: vi.SpyInstance;
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => (
 	<table>
@@ -41,9 +41,9 @@ describe("DelegateVoteAmount", () => {
 			username: data[0].username,
 		});
 
-		walletBalanceMock = jest.spyOn(wallet, "balance").mockReturnValue(90);
-		votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
-		votesAmountStepMock = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+		walletBalanceMock = vi.spyOn(wallet, "balance").mockReturnValue(90);
+		votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
+		votesAmountStepMock = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
 
 		const selectedVotes: VoteDelegateProperties[] = [
 			{
@@ -61,11 +61,11 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={selectedVotes}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
 					delegateAddress={delegate.address()}
 					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
+					setAvailableBalance={vi.fn()}
 				/>
 			</Wrapper>
 		);
@@ -86,11 +86,11 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
 					delegateAddress={delegate.address()}
 					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
+					setAvailableBalance={vi.fn()}
 					isCompact={isCompact}
 				/>
 			</Wrapper>,
@@ -122,11 +122,11 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
 					delegateAddress={delegate.address()}
 					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
+					setAvailableBalance={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -147,11 +147,11 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
 					delegateAddress={delegate.address()}
 					availableBalance={wallet.balance()}
-					setAvailableBalance={jest.fn()}
+					setAvailableBalance={vi.fn()}
 				/>
 			</Wrapper>,
 		);
@@ -273,11 +273,11 @@ describe("DelegateVoteAmount", () => {
 						selectedWallet={wallet}
 						selectedUnvotes={[]}
 						selectedVotes={selectedVotes}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>,
 			);
@@ -306,11 +306,11 @@ describe("DelegateVoteAmount", () => {
 						selectedUnvotes={selectedUnvotes}
 						selectedVotes={[]}
 						voted={voted}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>,
 			);
@@ -333,11 +333,11 @@ describe("DelegateVoteAmount", () => {
 						selectedUnvotes={[]}
 						selectedVotes={[]}
 						voted={voted}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>,
 			);
@@ -366,11 +366,11 @@ describe("DelegateVoteAmount", () => {
 						selectedUnvotes={selectedUnvotes}
 						selectedVotes={selectedVotes}
 						voted={voted}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>
 			);
@@ -419,9 +419,9 @@ describe("DelegateVoteAmount", () => {
 	});
 
 	it("should calculate remaining balance and update votes", async () => {
-		const toggleVotesSelected = jest.fn();
+		const toggleVotesSelected = vi.fn();
 		let availableBalance = wallet.balance();
-		const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
+		const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 		const selectedVotes: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -437,7 +437,7 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={selectedVotes}
-					toggleUnvotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
 					toggleVotesSelected={toggleVotesSelected}
 					delegateAddress={delegate.address()}
 					availableBalance={availableBalance}
@@ -468,7 +468,7 @@ describe("DelegateVoteAmount", () => {
 
 	it("should calculate net amount", async () => {
 		let availableBalance = wallet.balance();
-		const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
+		const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 
 		const VoteAmount = () => (
 			<Wrapper>
@@ -478,8 +478,8 @@ describe("DelegateVoteAmount", () => {
 					selectedWallet={wallet}
 					selectedUnvotes={[]}
 					selectedVotes={[]}
-					toggleUnvotesSelected={jest.fn()}
-					toggleVotesSelected={jest.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
 					delegateAddress={delegate.address()}
 					availableBalance={availableBalance}
 					setAvailableBalance={setAvailableBalance}
@@ -513,9 +513,9 @@ describe("DelegateVoteAmount", () => {
 	it("should calculate net amount when there is a voted delegate", async () => {
 		let availableBalance = wallet.balance();
 
-		const toggleUnvotesSelected = jest.fn();
-		const toggleVotesSelected = jest.fn();
-		const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
+		const toggleUnvotesSelected = vi.fn();
+		const toggleVotesSelected = vi.fn();
+		const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 
 		const voted: Contracts.VoteRegistryItem = {
 			amount: 30,
@@ -631,11 +631,11 @@ describe("DelegateVoteAmount", () => {
 						selectedWallet={wallet}
 						selectedUnvotes={[]}
 						selectedVotes={[]}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>,
 			);
@@ -652,11 +652,11 @@ describe("DelegateVoteAmount", () => {
 						selectedWallet={wallet}
 						selectedUnvotes={[]}
 						selectedVotes={[]}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={wallet.balance()}
-						setAvailableBalance={jest.fn()}
+						setAvailableBalance={vi.fn()}
 					/>
 				</Wrapper>
 			);
@@ -674,8 +674,8 @@ describe("DelegateVoteAmount", () => {
 
 		it("should reset fields and calculate remaining balance", async () => {
 			let availableBalance = wallet.balance();
-			const toggleVotesSelected = jest.fn();
-			const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
+			const toggleVotesSelected = vi.fn();
+			const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 
 			const VoteAmount = ({ isSelectedVote }: { isSelectedVote: boolean }) => (
 				<Wrapper>
@@ -685,7 +685,7 @@ describe("DelegateVoteAmount", () => {
 						selectedWallet={wallet}
 						selectedUnvotes={[]}
 						selectedVotes={[]}
-						toggleUnvotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
 						toggleVotesSelected={toggleVotesSelected}
 						delegateAddress={delegate.address()}
 						availableBalance={availableBalance}
@@ -713,7 +713,7 @@ describe("DelegateVoteAmount", () => {
 
 		it("should reset fields and calculate remaining balance when unvote if there is voted delegate", async () => {
 			let availableBalance = wallet.balance();
-			const setAvailableBalance = jest.fn((balance: number) => (availableBalance = balance));
+			const setAvailableBalance = vi.fn((balance: number) => (availableBalance = balance));
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
 				wallet: delegate,
@@ -728,8 +728,8 @@ describe("DelegateVoteAmount", () => {
 						selectedUnvotes={[]}
 						selectedVotes={[]}
 						voted={voted}
-						toggleUnvotesSelected={jest.fn()}
-						toggleVotesSelected={jest.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
 						delegateAddress={delegate.address()}
 						availableBalance={availableBalance}
 						setAvailableBalance={setAvailableBalance}

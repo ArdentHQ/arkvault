@@ -13,7 +13,7 @@ describe("Card", () => {
 	});
 
 	it("should handle click", () => {
-		const handleClick = jest.fn();
+		const handleClick = vi.fn();
 		const { container, asFragment } = render(<Card onClick={() => handleClick()}>Test</Card>);
 
 		expect(container).toBeInTheDocument();

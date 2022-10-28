@@ -165,7 +165,7 @@ export const useProfileSyncStatus = () => {
 
 	const shouldRestore = (profile: Contracts.IProfile) => {
 		// For unit tests only. This flag prevents from running restore multiple times
-		// as the profiles are all restored before all (see jest.setup)
+		// as the profiles are all restored before all (see vi.setup)
 		const isRestoredInTests = process.env.TEST_PROFILES_RESTORE_STATUS === "restored";
 		if (isRestoredInTests) {
 			return false;

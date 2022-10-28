@@ -174,7 +174,7 @@ describe("SelectAddress", () => {
 	});
 
 	it("should call onChange prop if provided", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<SelectAddress

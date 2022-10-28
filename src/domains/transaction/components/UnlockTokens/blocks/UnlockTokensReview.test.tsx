@@ -20,13 +20,13 @@ describe("UnlockTokensReview", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
-		jest.spyOn(wallet, "currency").mockReturnValue("LSK");
-		jest.spyOn(wallet, "alias").mockReturnValue("LSK Wallet 1");
+		vi.spyOn(wallet, "currency").mockReturnValue("LSK");
+		vi.spyOn(wallet, "alias").mockReturnValue("LSK Wallet 1");
 	});
 
 	it("should render", () => {
-		const onBack = jest.fn();
-		const onConfirm = jest.fn();
+		const onBack = vi.fn();
+		const onConfirm = vi.fn();
 
 		const { result } = renderHook(() =>
 			useForm<UnlockTokensFormState>({

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Collapse should render 1`] = `
+exports[`Collapse > should render 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"
@@ -12,7 +12,7 @@ exports[`Collapse should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Collapse should render visible 1`] = `
+exports[`Collapse > should render visible 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="false"
@@ -24,7 +24,7 @@ exports[`Collapse should render visible 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Collapse should render with custom scroll 1`] = `
+exports[`Collapse > should render with custom scroll 1`] = `
 <DocumentFragment>
   <div
     aria-hidden="true"

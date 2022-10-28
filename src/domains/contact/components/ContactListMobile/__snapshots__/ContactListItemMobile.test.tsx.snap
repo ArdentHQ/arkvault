@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ContactListItemMobile should render 1`] = `
+exports[`ContactListItemMobile > should render 1`] = `
 <DocumentFragment>
   <div
     class="css-8cvvgy"
@@ -38,8 +38,37 @@ exports[`ContactListItemMobile should render 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </button>
@@ -53,8 +82,7 @@ exports[`ContactListItemMobile should render 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
       >
         <div
           class="css-16yt50s"
@@ -65,8 +93,22 @@ exports[`ContactListItemMobile should render 1`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </div>
@@ -76,7 +118,7 @@ exports[`ContactListItemMobile should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContactListItemMobile should render addresses 1`] = `
+exports[`ContactListItemMobile > should render addresses 1`] = `
 <DocumentFragment>
   <div
     class="css-8cvvgy"
@@ -114,8 +156,37 @@ exports[`ContactListItemMobile should render addresses 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </button>
@@ -129,8 +200,7 @@ exports[`ContactListItemMobile should render addresses 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch"
-        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
       >
         <div
           class="css-16yt50s"
@@ -141,8 +211,22 @@ exports[`ContactListItemMobile should render addresses 1`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </div>
@@ -208,8 +292,28 @@ exports[`ContactListItemMobile should render addresses 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      copy.svg
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -221,6 +325,7 @@ exports[`ContactListItemMobile should render addresses 1`] = `
           >
             <button
               class="flex h-full items-center justify-center rounded-r-xl px-3 bg-theme-secondary-200 text-theme-secondary-500 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+              data-testid="ContactListItemMobileAddress__send-button"
               disabled=""
               type="button"
             >
@@ -229,8 +334,22 @@ exports[`ContactListItemMobile should render addresses 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  double-arrow-right.svg
+                <svg
+                  id="double-arrow-right"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </button>

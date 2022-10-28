@@ -143,7 +143,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 
 	useEffect(() => {
 		const handleKeys = (event: KeyboardEvent) => {
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (event.key === "Escape") {
 				hide();
 			}

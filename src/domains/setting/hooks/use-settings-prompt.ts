@@ -11,7 +11,7 @@ interface UseSettingsPromptInput<TFieldValues> {
 export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSettingsPromptInput<TFieldValues>) => {
 	const getPromptMessage = useCallback(
 		(location: any) => {
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			const pathname = location.pathname || location.location?.pathname;
 
 			const matchCurrent = matchPath(pathname, {

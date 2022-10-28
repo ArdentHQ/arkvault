@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`LedgerReview should render for unvote and vote transaction 1`] = `
+exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
 <div>
   <div
     class="no-ligatures css-1iw2tte"
@@ -188,8 +188,25 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -215,7 +232,7 @@ exports[`LedgerReview should render for unvote and vote transaction 1`] = `
 </div>
 `;
 
-exports[`LedgerReview should render for unvote transaction 1`] = `
+exports[`LedgerReview > should render for unvote transaction 1`] = `
 <div>
   <div
     class="no-ligatures css-1iw2tte"
@@ -337,8 +354,25 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -364,7 +398,7 @@ exports[`LedgerReview should render for unvote transaction 1`] = `
 </div>
 `;
 
-exports[`LedgerReview should render for vote transaction 1`] = `
+exports[`LedgerReview > should render for vote transaction 1`] = `
 <div>
   <div
     class="no-ligatures css-1iw2tte"
@@ -486,8 +520,25 @@ exports[`LedgerReview should render for vote transaction 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </div>

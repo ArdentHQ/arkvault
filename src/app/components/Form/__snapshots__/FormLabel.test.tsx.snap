@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`FormLabel should render & hover if optional 1`] = `
+exports[`FormLabel > should render & hover if optional 1`] = `
 <DocumentFragment>
   <label
     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
@@ -17,7 +17,7 @@ exports[`FormLabel should render & hover if optional 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormLabel should render with name from context 1`] = `
+exports[`FormLabel > should render with name from context 1`] = `
 <DocumentFragment>
   <label
     class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"

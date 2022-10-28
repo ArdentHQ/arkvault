@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
@@ -12,13 +11,13 @@ import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
 import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
 import * as useWalletAction from "@/domains/wallet/hooks/use-wallet-actions";
 
-import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/dashboard/i18n";
 import {
 	env,
 	getDefaultProfileId,
+	queryElementForSvg,
 	render,
 	screen,
 	syncDelegates,
@@ -38,25 +37,21 @@ let resetProfileNetworksMock: () => void;
 
 const useWalletActionReturn = {
 	activeModal: undefined,
-	handleConfirmEncryptionWarning: jest.fn(),
-	handleCreate: jest.fn(),
-	handleDelete: jest.fn(),
-	handleImport: jest.fn(),
-	handleImportLedger: jest.fn(),
-	handleOpen: jest.fn(),
-	handleSelectOption: jest.fn(),
-	handleSend: jest.fn(),
-	handleToggleStar: jest.fn(),
-	setActiveModal: jest.fn(),
+	handleConfirmEncryptionWarning: vi.fn(),
+	handleCreate: vi.fn(),
+	handleDelete: vi.fn(),
+	handleImport: vi.fn(),
+	handleImportLedger: vi.fn(),
+	handleOpen: vi.fn(),
+	handleSelectOption: vi.fn(),
+	handleSend: vi.fn(),
+	handleToggleStar: vi.fn(),
+	setActiveModal: vi.fn(),
 };
 
 describe("Portfolio grouped networks", () => {
 	beforeAll(async () => {
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
 		emptyProfile = await env.profiles().create("Empty");
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -127,9 +122,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet creation", () => {
-		const useWalletActionSpy = jest
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />
@@ -151,9 +144,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should handle wallet import", () => {
-		const useWalletActionSpy = jest
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -229,16 +220,14 @@ describe("Portfolio grouped networks", () => {
 		userEvent.click(within(screen.getByTestId("WalletControls")).getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkOption__ark.devnet")).toHaveTextContent("ark.svg");
+		expect(queryElementForSvg(screen.getByTestId("NetworkOption__ark.devnet"), "ark")).toBeInTheDocument();
 	});
 
 	it.skip("should open and close ledger import modal", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<PortfolioHeader />
-					<WalletsGroupsList />
-				</LedgerProvider>
+				<PortfolioHeader />
+				<WalletsGroupsList />
 			</Route>,
 			{
 				history,
@@ -264,17 +253,13 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should apply ledger import", () => {
-		const useWalletActionSpy = jest
-			.spyOn(useWalletAction, "useWalletActions")
-			.mockReturnValue(useWalletActionReturn);
+		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		const transportMock = mockNanoXTransport();
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<LedgerProvider>
-					<PortfolioHeader />
-					<WalletsGroupsList />
-				</LedgerProvider>
+				<PortfolioHeader />
+				<WalletsGroupsList />
 			</Route>,
 			{
 				history,
@@ -304,13 +289,13 @@ describe("Portfolio grouped networks", () => {
 		const useWalletFiltersReturn = {
 			walletsDisplayType: "all",
 		} as unknown as ReturnType<typeof filterWalletsHooks.useWalletFilters>;
-		const useDisplayWalletsSpy = jest
+		const useDisplayWalletsSpy = vi
 			.spyOn(useDisplayWallets, "useDisplayWallets")
 			.mockReturnValue(useDisplayWalletsReturn);
-		const useWalletFiltersSpy = jest
+		const useWalletFiltersSpy = vi
 			.spyOn(filterWalletsHooks, "useWalletFilters")
 			.mockReturnValue(useWalletFiltersReturn);
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false });
 
@@ -378,7 +363,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	it("should render empty profile wallets", async () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false });
 

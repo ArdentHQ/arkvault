@@ -16,7 +16,7 @@ describe("VotesHeader", () => {
 		const { asFragment } = renderResponsive(
 			<VotesHeader
 				profile={profile}
-				setSearchQuery={jest.fn()}
+				setSearchQuery={vi.fn()}
 				isFilterChanged={false}
 				isSelectDelegateStep={false}
 				filterProperties={undefined}
@@ -34,7 +34,7 @@ describe("VotesHeader", () => {
 		const { asFragment } = renderResponsive(
 			<VotesHeader
 				profile={profile}
-				setSearchQuery={jest.fn()}
+				setSearchQuery={vi.fn()}
 				isFilterChanged={false}
 				isSelectDelegateStep={true}
 				filterProperties={undefined}

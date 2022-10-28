@@ -4,16 +4,15 @@ import { BIP39 } from "@ardenthq/sdk-cryptography";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendRegistration } from "./SendRegistration";
-import { LedgerProvider, minVersionList } from "@/app/contexts";
+import { minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
+import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
@@ -25,15 +24,16 @@ import {
 	within,
 	mockNanoXTransport,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 const history = createHashHistory();
 const passphrase = getDefaultWalletMnemonic();
-let getVersionSpy: jest.SpyInstance;
+let getVersionSpy: vi.SpyInstance;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -64,7 +64,7 @@ const renderPage = async (wallet: Contracts.IReadWriteWallet, type = "delegateRe
 };
 
 const createSecondSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => 0,
 		data: () => ({ data: () => SecondSignatureRegistrationFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${SecondSignatureRegistrationFixture.data.id}`,
@@ -102,7 +102,7 @@ describe("Second Signature Registration", () => {
 		await wallet.synchroniser().identity();
 		await secondWallet.synchroniser().identity();
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
@@ -122,23 +122,23 @@ describe("Second Signature Registration", () => {
 		getVersionSpy.mockRestore();
 	});
 
-	beforeAll(() => {
-		nock.cleanAll();
-		defaultNetMocks();
-
-		nock("https://ark-test-musig.arkvault.io/")
-			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"));
-
-		nock("https://ark-test-musig.arkvault.io")
-			.post("/")
-			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } })
-			.persist();
+	beforeEach(() => {
+		server.use(
+			requestMock(
+				"https://ark-test-musig.arkvault.io/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
+				walletFixture,
+			),
+			requestMock(
+				"https://ark-test-musig.arkvault.io",
+				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
+				{ method: "post" },
+			),
+		);
 	});
 
 	it("should register second signature", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
-		const bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		const bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		const { asFragment } = await renderPage(wallet, "secondSignature");
 
@@ -190,11 +190,11 @@ describe("Second Signature Registration", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signSecondSignature")
 			.mockReturnValue(Promise.resolve(SecondSignatureRegistrationFixture.data.id));
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [SecondSignatureRegistrationFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -202,7 +202,7 @@ describe("Second Signature Registration", () => {
 
 		const transactionMock = createSecondSignatureRegistrationMock(wallet);
 
-		const mnemonicValidationMock = jest
+		const mnemonicValidationMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
@@ -238,9 +238,7 @@ describe("Second Signature Registration", () => {
 
 		render(
 			<Route path={path}>
-				<LedgerProvider>
-					<SendRegistration />
-				</LedgerProvider>
+				<SendRegistration />
 			</Route>,
 			{
 				history,

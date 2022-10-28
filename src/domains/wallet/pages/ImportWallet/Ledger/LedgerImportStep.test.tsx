@@ -42,12 +42,12 @@ describe("LedgerImportStep", () => {
 			);
 		}
 
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		jest.runOnlyPendingTimers();
-		jest.useRealTimers();
+		vi.runOnlyPendingTimers();
+		vi.useRealTimers();
 
 		for (const { address } of ledgerWallets) {
 			const wallet = profile.wallets().findByAddressWithNetwork(address, "ark.devnet");
@@ -59,7 +59,7 @@ describe("LedgerImportStep", () => {
 	});
 
 	const renderComponent = (breakpoint: string, wallets: LedgerData[] = ledgerWallets) => {
-		const onClickEditWalletName = jest.fn();
+		const onClickEditWalletName = vi.fn();
 
 		const network = profile.wallets().findByAddressWithNetwork(wallets[0].address, "ark.devnet")?.network();
 

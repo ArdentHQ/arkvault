@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`NotificationsTransactionTable should render compact skeleton 1`] = `
+exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -1010,7 +1010,7 @@ exports[`NotificationsTransactionTable should render compact skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`NotificationsTransactionTable should render skeleton for small screens 1`] = `
+exports[`NotificationsTransactionTable > should render skeleton for small screens 1`] = `
 <DocumentFragment>
   <div>
     <div

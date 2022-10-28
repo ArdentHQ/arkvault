@@ -1,53 +1,22 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { Networks } from "@ardenthq/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
-import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
+import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
+
+const validLedgerWallet = () =>
+	expect(formReference.getValues("wallets")).toMatchObject([{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" }]);
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths: Map<string, string>;
-
-	beforeAll(() => {
-		publicKeyPaths = new Map<string, string>();
-
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [
-					{
-						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-						balance: "2",
-					},
-					{
-						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
-						balance: "3",
-					},
-				],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -57,6 +26,28 @@ describe("LedgerScanStep", () => {
 
 		wallet = profile.wallets().first();
 		await wallet.synchroniser().identity();
+
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
+				data: [
+					{
+						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+						balance: "2",
+					},
+				],
+				meta: {},
+			}),
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
+				data: [
+					{
+						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
+						balance: "3",
+					},
+				],
+				meta: {},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", { data: [], meta: {} }),
+		);
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -72,11 +63,11 @@ describe("LedgerScanStep", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(publicKeyPaths.get(path)!),
 		);
 
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -88,9 +79,7 @@ describe("LedgerScanStep", () => {
 
 		return (
 			<FormProvider {...formReference}>
-				<LedgerProvider>
-					<LedgerScanStep profile={profile} cancelling={isCancelling} />
-				</LedgerProvider>
+				<LedgerScanStep profile={profile} cancelling={isCancelling} />
 			</FormProvider>
 		);
 	};
@@ -98,11 +87,11 @@ describe("LedgerScanStep", () => {
 	it("should handle select", async () => {
 		render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
-
 		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2));
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		// Unselect All
 
@@ -126,9 +115,11 @@ describe("LedgerScanStep", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
-		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
 
 		await waitFor(() =>
 			expect(formReference.getValues("wallets")).toMatchObject([
@@ -149,11 +140,6 @@ describe("LedgerScanStep", () => {
 
 		userEvent.click(checkboxSelectAll);
 
-		const validLedgerWallet = () =>
-			expect(formReference.getValues("wallets")).toMatchObject([
-				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-			]);
-
 		await waitFor(validLedgerWallet);
 
 		userEvent.click(checkboxFirstItem);
@@ -172,7 +158,9 @@ describe("LedgerScanStep", () => {
 
 		const { container } = render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+		expect(screen.getAllByRole("row")).toHaveLength(6);
+
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 
 		expect(container).toMatchSnapshot();
 
@@ -180,25 +168,25 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should update the toast messages if already added", async () => {
-		const toastUpdateSpy = jest.spyOn(toasts, "update");
+		const toastUpdateSpy = vi.spyOn(toasts, "update");
 
-		jest.spyOn(toasts, "isActive").mockReturnValueOnce(false);
+		vi.spyOn(toasts, "isActive").mockReturnValueOnce(false);
 
-		jest.spyOn(toasts, "isActive").mockReturnValueOnce(true);
+		vi.spyOn(toasts, "isActive").mockReturnValueOnce(true);
 
 		render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 
 		expect(toastUpdateSpy).toHaveBeenCalledTimes(1);
 
 		expect(toastUpdateSpy).toHaveBeenCalledWith("wallet-loading", "success", expect.anything());
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render cancelling screen", async () => {

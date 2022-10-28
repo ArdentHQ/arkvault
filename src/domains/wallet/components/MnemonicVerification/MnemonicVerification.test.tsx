@@ -7,7 +7,7 @@ import { render, screen } from "@/utils/testing-library";
 const mnemonic = "ark btc usd bnb eth ltc";
 const mnemonicWords = mnemonic.split(" ");
 const limit = 6;
-const handleComplete = jest.fn();
+const handleComplete = vi.fn();
 
 describe("MnemonicVerification", () => {
 	it("should render", () => {
@@ -97,26 +97,5 @@ describe("MnemonicVerification", () => {
 		expect(secondOptions).toHaveLength(length);
 
 		expect(firstOptions).not.toStrictEqual(secondOptions);
-	});
-
-	it("should ask for unique words", () => {
-		let wordCounter = 0;
-
-		// @ts-ignore
-		const arrayIncludesSpy = jest.spyOn(Array.prototype, "includes").mockImplementation(function () {
-			if (wordCounter === 3) {
-				return false;
-			}
-
-			wordCounter++;
-
-			return true;
-		});
-
-		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
-
-		expect(arrayIncludesSpy).toHaveBeenCalledTimes(6);
-
-		arrayIncludesSpy.mockRestore();
 	});
 });

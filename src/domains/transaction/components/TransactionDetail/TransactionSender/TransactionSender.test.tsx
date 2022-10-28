@@ -3,7 +3,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSender } from "./TransactionSender";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, queryElementForSvg, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -58,7 +58,7 @@ describe("TransactionSender", () => {
 	});
 
 	it("should not render delegate icon", () => {
-		const delegateMock = jest.spyOn(env.delegates(), "findByAddress").mockReturnValue({
+		const delegateMock = vi.spyOn(env.delegates(), "findByAddress").mockReturnValue({
 			username: () => "delegate username",
 		} as any);
 
@@ -72,7 +72,9 @@ describe("TransactionSender", () => {
 		);
 
 		expect(container).toHaveTextContent(wallet.address());
-		expect(container).toHaveTextContent("delegate-registration.svg");
+
+		expect(queryElementForSvg(container, "delegate-registration")).toBeInTheDocument();
+
 		expect(container).toMatchSnapshot();
 
 		delegateMock.mockRestore();

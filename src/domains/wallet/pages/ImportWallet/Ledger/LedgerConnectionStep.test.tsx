@@ -16,7 +16,7 @@ const history = createHashHistory();
 describe("LedgerConnectionStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let getVersionSpy: jest.SpyInstance;
+	let getVersionSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -24,7 +24,7 @@ describe("LedgerConnectionStep", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().first();
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 	});
@@ -33,7 +33,7 @@ describe("LedgerConnectionStep", () => {
 		getVersionSpy.mockRestore();
 	});
 
-	const Component = ({ onConnect = jest.fn(), onFailed = jest.fn(), cancelling = false }) => {
+	const Component = ({ onConnect = vi.fn(), onFailed = vi.fn(), cancelling = false }) => {
 		const { listenDevice } = useLedgerContext();
 
 		const form = useForm({
@@ -63,11 +63,11 @@ describe("LedgerConnectionStep", () => {
 			["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
 		]);
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
-		const onConnect = jest.fn();
+		const onConnect = vi.fn();
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -78,7 +78,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -88,7 +87,7 @@ describe("LedgerConnectionStep", () => {
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -96,11 +95,11 @@ describe("LedgerConnectionStep", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const getPublicKeySpy = jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation(() => {
+		const getPublicKeySpy = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation(() => {
 			throw new Error(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"));
 		});
 
-		const onFailed = jest.fn();
+		const onFailed = vi.fn();
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -111,7 +110,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -120,12 +118,14 @@ describe("LedgerConnectionStep", () => {
 				expect(
 					screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
 				).resolves.toBeVisible(),
-			{ timeout: 4000 },
+			{ timeout: 3000 },
 		);
+
+		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
+		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
 	});
 
@@ -139,14 +139,14 @@ describe("LedgerConnectionStep", () => {
 			["m/44'/111'/2'/0/0", "020aac4ec02d47d306b394b79d3351c56c1253cd67fe2c1a38ceba59b896d584d1"],
 		]);
 
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockResolvedValue(publicKeyPaths.values().next().value);
 
 		const outdatedVersion = "1.0.1";
-		const getVersionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(outdatedVersion);
+		const getVersionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(outdatedVersion);
 
-		const onFailed = jest.fn();
+		const onFailed = vi.fn();
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -157,7 +157,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 
@@ -169,22 +168,26 @@ describe("LedgerConnectionStep", () => {
 			),
 		).toBeInTheDocument();
 
-		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
+		await waitFor(
+			() =>
+				expect(
+					screen.findByText(
+						t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+							coin: wallet.network().coin(),
+							version: outdatedVersion,
+						}),
+					),
+				).resolves.toBeVisible(),
+			{ timeout: 3000 },
+		);
 
-		await expect(
-			screen.findByText(
-				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-					coin: wallet.network().coin(),
-					version: outdatedVersion,
-				}),
-			),
-		).resolves.toBeVisible();
+		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
 
 		expect(container).toMatchSnapshot();
 
-		getPublicKeySpy.mockReset();
-		getVersionSpy.mockReset();
-		ledgerTransportMock.mockReset();
+		getPublicKeySpy.mockRestore();
+		getVersionSpy.mockRestore();
+		ledgerTransportMock.mockRestore();
 	});
 
 	it("should render cancel screen", async () => {
@@ -200,7 +203,6 @@ describe("LedgerConnectionStep", () => {
 			</Route>,
 			{
 				history,
-				withProviders: true,
 			},
 		);
 

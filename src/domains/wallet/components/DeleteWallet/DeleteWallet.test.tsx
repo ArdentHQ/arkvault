@@ -4,7 +4,7 @@ import { DeleteWallet } from "./DeleteWallet";
 import { translations } from "@/domains/wallet/i18n";
 import { render, screen, getDefaultProfileId, env } from "@/utils/testing-library";
 
-const onDelete = jest.fn();
+const onDelete = vi.fn();
 
 describe("DeleteWallet", () => {
 	it("should render a modal", async () => {

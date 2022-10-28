@@ -9,20 +9,20 @@ const categories: AvailableNewsCategories[] = ["Technical"];
 
 describe("NewsOptions", () => {
 	it("should render", () => {
-		const { container, asFragment } = render(<NewsOptions selectedCategories={categories} onSubmit={jest.fn()} />);
+		const { container, asFragment } = render(<NewsOptions selectedCategories={categories} onSubmit={vi.fn()} />);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should select category", () => {
-		render(<NewsOptions selectedCategories={categories} onSubmit={jest.fn()} />);
+		render(<NewsOptions selectedCategories={categories} onSubmit={vi.fn()} />);
 
 		userEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
 	});
 
 	it("should emit onSubmit with all selected filters", async () => {
-		const onSubmit = jest.fn();
+		const onSubmit = vi.fn();
 
 		render(<NewsOptions selectedCategories={categories} onSubmit={onSubmit} />);
 

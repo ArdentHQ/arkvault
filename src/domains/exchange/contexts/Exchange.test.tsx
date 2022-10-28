@@ -1,11 +1,12 @@
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
+import { vi } from "vitest";
 import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
 
 const Test = () => {
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
@@ -21,7 +22,7 @@ describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
 	it("should throw without provider", () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		const Test = () => {
 			const { exchangeProviders } = useExchangeContext();
@@ -48,9 +49,7 @@ describe("Exchange Context", () => {
 	});
 
 	it("should handle error when fetching providers", async () => {
-		nock.cleanAll();
-
-		nock("https://exchanges.arkvault.io").get("/api").reply(404);
+		server.use(requestMock("https://exchanges.arkvault.io/api", undefined, { status: 404 }));
 
 		const { container } = render(
 			<ExchangeProvider>

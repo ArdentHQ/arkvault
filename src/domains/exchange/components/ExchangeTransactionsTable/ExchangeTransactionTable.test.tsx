@@ -8,7 +8,7 @@ import { env, getDefaultProfileId, render, screen, within, renderResponsive } fr
 
 let profile: Contracts.IProfile;
 
-let dateNowSpy: jest.SpyInstance;
+let dateNowSpy: vi.SpyInstance;
 
 const stubData = {
 	input: {
@@ -26,7 +26,7 @@ const stubData = {
 
 describe("ExchangeTransactionsTable", () => {
 	beforeAll(() => {
-		dateNowSpy = jest.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
+		dateNowSpy = vi.spyOn(Date, "now").mockImplementation(() => new Date("2021-01-01").getTime());
 
 		profile = env.profiles().findById(getDefaultProfileId());
 
@@ -44,8 +44,8 @@ describe("ExchangeTransactionsTable", () => {
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
-					onClick={jest.fn()}
-					onRemove={jest.fn()}
+					onClick={vi.fn()}
+					onRemove={vi.fn()}
 				/>
 			</ExchangeProvider>,
 		);
@@ -60,8 +60,8 @@ describe("ExchangeTransactionsTable", () => {
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
-					onClick={jest.fn()}
-					onRemove={jest.fn()}
+					onClick={vi.fn()}
+					onRemove={vi.fn()}
 				/>
 			</ExchangeProvider>,
 			breakpoint,
@@ -76,8 +76,8 @@ describe("ExchangeTransactionsTable", () => {
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
-					onClick={jest.fn()}
-					onRemove={jest.fn()}
+					onClick={vi.fn()}
+					onRemove={vi.fn()}
 				/>
 			</ExchangeProvider>,
 			breakpoint,
@@ -92,8 +92,8 @@ describe("ExchangeTransactionsTable", () => {
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
-					onClick={jest.fn()}
-					onRemove={jest.fn()}
+					onClick={vi.fn()}
+					onRemove={vi.fn()}
 					isCompact
 				/>
 			</ExchangeProvider>,
@@ -105,14 +105,14 @@ describe("ExchangeTransactionsTable", () => {
 	});
 
 	it("should execute onClick callback", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
 					onClick={onClick}
-					onRemove={jest.fn()}
+					onRemove={vi.fn()}
 				/>
 			</ExchangeProvider>,
 		);
@@ -128,13 +128,13 @@ describe("ExchangeTransactionsTable", () => {
 	});
 
 	it("should execute onRemove callback", () => {
-		const onRemove = jest.fn();
+		const onRemove = vi.fn();
 
 		render(
 			<ExchangeProvider>
 				<ExchangeTransactionsTable
 					exchangeTransactions={profile.exchangeTransactions().values()}
-					onClick={jest.fn()}
+					onClick={vi.fn()}
 					onRemove={onRemove}
 				/>
 			</ExchangeProvider>,

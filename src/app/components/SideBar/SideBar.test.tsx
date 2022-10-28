@@ -27,7 +27,7 @@ describe("SideBar", () => {
 
 	it("should render", () => {
 		const { asFragment } = render(
-			<SideBar handleActiveItem={jest.fn()} activeItem={items[0].itemKey} items={items} />,
+			<SideBar handleActiveItem={vi.fn()} activeItem={items[0].itemKey} items={items} />,
 		);
 
 		expect(screen.getByTestId("side-menu__item--general")).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe("SideBar", () => {
 	});
 
 	it.each(["sm", "md", "lg"])("should render responsive dropdown", async (breakpoint) => {
-		const handleActiveItemMock = jest.fn();
+		const handleActiveItemMock = vi.fn();
 
 		const { asFragment } = renderResponsiveWithRoute(
 			<SideBar handleActiveItem={handleActiveItemMock} activeItem={items[0].itemKey} items={items} />,

@@ -19,7 +19,7 @@
 		"useUnknownInCatchVariables": false,
 		"noImplicitAny": false,
 		"noFallthroughCasesInSwitch": true,
-		"types": ["vite-plugin-pwa/client"]
+		"types": ["vite-plugin-pwa/client", "vitest/globals"]
 	},
 	"exclude": [
 		"**/*.test.ts",

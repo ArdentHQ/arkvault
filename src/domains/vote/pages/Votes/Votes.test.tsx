@@ -2,7 +2,6 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -20,6 +19,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const history = createHashHistory();
 
@@ -72,10 +72,6 @@ const firstVoteButtonID = "DelegateRow__toggle-0";
 
 describe("Votes", () => {
 	beforeAll(async () => {
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
-
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(walletID);
@@ -89,20 +85,6 @@ describe("Votes", () => {
 
 		wallet.settings().set(Contracts.WalletSetting.Alias, "Sample Wallet");
 
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get(`/api/wallets/${blankWallet.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.persist();
-
 		await env.profiles().restore(profile);
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
@@ -111,6 +93,18 @@ describe("Votes", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		server.use(
+			requestMock(
+				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
+				{
+					error: "Not Found",
+					message: "Wallet not found",
+					statusCode: 404,
+				},
+				{ status: 404 },
+			),
+		);
 	});
 
 	afterEach(() => {
@@ -131,7 +125,7 @@ describe("Votes", () => {
 
 	it("should render and handle wallet current voting exception", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		const currentMock = jest.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
+		const currentMock = vi.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
 			throw new Error("Error");
 		});
 
@@ -206,7 +200,9 @@ describe("Votes", () => {
 		userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkOption__ark.devnet")).toHaveTextContent("ark.svg");
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("NetworkOption__ark.devnet").querySelector("svg#ark")).toBeInTheDocument();
 
 		resetProfileNetworksMock();
 	});
@@ -271,7 +267,7 @@ describe("Votes", () => {
 
 	it("should filter current delegates", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -334,7 +330,7 @@ describe("Votes", () => {
 
 	it("should select an address and delegate", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -417,7 +413,7 @@ describe("Votes", () => {
 	it("should handle wallet vote error and show empty delegates", async () => {
 		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
 
-		const walletVoteMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
+		const walletVoteMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("delegate error");
 		});
 
@@ -441,7 +437,7 @@ describe("Votes", () => {
 
 	it("should handle resigned delegate and show empty results", async () => {
 		const currentWallet = profile.wallets().findById(walletID);
-		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -479,12 +475,12 @@ describe("Votes", () => {
 		const currentWallet = profile.wallets().findById(walletID);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
-		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
+		const walletRestoreMock = vi.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 
 		const history = createHashHistory();
 		history.push(route);
 
-		const onProfileSyncError = jest.fn();
+		const onProfileSyncError = vi.fn();
 		const Component = () => {
 			useProfileStatusWatcher({ env, onProfileSyncError, profile });
 			return (
@@ -667,7 +663,7 @@ describe("Votes", () => {
 
 	it("should show resigned delegate notice", async () => {
 		const currentWallet = profile.wallets().first();
-		const walletSpy = jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
+		const walletSpy = vi.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({

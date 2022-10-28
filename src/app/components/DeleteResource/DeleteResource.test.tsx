@@ -3,7 +3,7 @@ import React from "react";
 import { DeleteResource } from "./DeleteResource";
 import { render, screen } from "@/utils/testing-library";
 
-const onDelete = jest.fn();
+const onDelete = vi.fn();
 
 describe("DeleteResource", () => {
 	it("should not render if not open", () => {

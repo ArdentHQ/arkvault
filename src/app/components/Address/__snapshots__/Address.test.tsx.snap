@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Formatted Address should not render without address 1`] = `
+exports[`Formatted Address > should not render without address 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8,7 +8,7 @@ exports[`Formatted Address should not render without address 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render address only 1`] = `
+exports[`Formatted Address > should render address only 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -23,7 +23,7 @@ exports[`Formatted Address should render address only 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with center alignment 1`] = `
+exports[`Formatted Address > should render with center alignment 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
@@ -38,7 +38,7 @@ exports[`Formatted Address should render with center alignment 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with horizontal orientation 1`] = `
+exports[`Formatted Address > should render with horizontal orientation 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -53,7 +53,7 @@ exports[`Formatted Address should render with horizontal orientation 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with horizontal orientation 2`] = `
+exports[`Formatted Address > should render with horizontal orientation 2`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -68,7 +68,7 @@ exports[`Formatted Address should render with horizontal orientation 2`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with normal font 1`] = `
+exports[`Formatted Address > should render with normal font 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -94,7 +94,7 @@ exports[`Formatted Address should render with normal font 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with right alignment 1`] = `
+exports[`Formatted Address > should render with right alignment 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -109,7 +109,7 @@ exports[`Formatted Address should render with right alignment 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with truncate on table = false 1`] = `
+exports[`Formatted Address > should render with truncate on table = false 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -124,7 +124,7 @@ exports[`Formatted Address should render with truncate on table = false 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with truncate on table = true 1`] = `
+exports[`Formatted Address > should render with truncate on table = true 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -146,7 +146,7 @@ exports[`Formatted Address should render with truncate on table = true 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with vertical orientation 1`] = `
+exports[`Formatted Address > should render with vertical orientation 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
@@ -161,7 +161,7 @@ exports[`Formatted Address should render with vertical orientation 1`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with vertical orientation 2`] = `
+exports[`Formatted Address > should render with vertical orientation 2`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
@@ -176,7 +176,7 @@ exports[`Formatted Address should render with vertical orientation 2`] = `
 </div>
 `;
 
-exports[`Formatted Address should render with wallet name 1`] = `
+exports[`Formatted Address > should render with wallet name 1`] = `
 <div>
   <div
     class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"

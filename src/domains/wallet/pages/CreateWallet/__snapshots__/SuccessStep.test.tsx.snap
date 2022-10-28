@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SuccessStep should render (lg) 1`] = `
+exports[`SuccessStep > should render (lg) 1`] = `
 <DocumentFragment>
   <section
     data-testid="CreateWallet__SuccessStep"
@@ -72,8 +72,18 @@ exports[`SuccessStep should render (lg) 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -92,8 +102,18 @@ exports[`SuccessStep should render (lg) 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -237,8 +257,22 @@ exports[`SuccessStep should render (lg) 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  pencil.svg
+                <svg
+                  id="pencil"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -250,7 +284,7 @@ exports[`SuccessStep should render (lg) 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SuccessStep should render (xs) 1`] = `
+exports[`SuccessStep > should render (xs) 1`] = `
 <DocumentFragment>
   <section
     data-testid="CreateWallet__SuccessStep"
@@ -322,8 +356,18 @@ exports[`SuccessStep should render (xs) 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -342,8 +386,18 @@ exports[`SuccessStep should render (xs) 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -487,8 +541,22 @@ exports[`SuccessStep should render (xs) 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  pencil.svg
+                <svg
+                  id="pencil"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>

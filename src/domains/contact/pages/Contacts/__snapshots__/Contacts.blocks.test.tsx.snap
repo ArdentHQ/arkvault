@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ContactsHeader should render responsive 1`] = `
+exports[`ContactsHeader > should render responsive 1`] = `
 <DocumentFragment>
   <section
     class="h-13 flex w-full items-center justify-between bg-theme-secondary-100 py-1.5 px-8 dark:bg-black"
@@ -40,8 +40,25 @@ exports[`ContactsHeader should render responsive 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    magnifying-glass.svg
+                  <svg
+                    id="magnifying-glass"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -66,8 +83,25 @@ exports[`ContactsHeader should render responsive 1`] = `
           height="20"
           width="20"
         >
-          <svg>
-            plus.svg
+          <svg
+            id="plus"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M1 10h18M10 1v18"
+              />
+            </g>
           </svg>
         </div>
       </button>
@@ -76,7 +110,7 @@ exports[`ContactsHeader should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContactsHeader should render responsive 2`] = `
+exports[`ContactsHeader > should render responsive 2`] = `
 <DocumentFragment>
   <div
     class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
@@ -134,8 +168,25 @@ exports[`ContactsHeader should render responsive 2`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          magnifying-glass.svg
+                        <svg
+                          id="magnifying-glass"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -170,7 +221,7 @@ exports[`ContactsHeader should render responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`ContactsHeaderExtra should render responsive 1`] = `
+exports[`ContactsHeaderExtra > should render responsive 1`] = `
 <DocumentFragment>
   <div
     class="items-top flex justify-end"
@@ -202,8 +253,25 @@ exports[`ContactsHeaderExtra should render responsive 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  magnifying-glass.svg
+                <svg
+                  id="magnifying-glass"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -228,8 +296,25 @@ exports[`ContactsHeaderExtra should render responsive 1`] = `
         height="20"
         width="20"
       >
-        <svg>
-          plus.svg
+        <svg
+          id="plus"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M1 10h18M10 1v18"
+            />
+          </g>
         </svg>
       </div>
     </button>
@@ -237,7 +322,7 @@ exports[`ContactsHeaderExtra should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContactsHeaderExtra should render responsive 2`] = `
+exports[`ContactsHeaderExtra > should render responsive 2`] = `
 <DocumentFragment>
   <div
     class="items-top flex justify-end"
@@ -269,8 +354,25 @@ exports[`ContactsHeaderExtra should render responsive 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  magnifying-glass.svg
+                <svg
+                  id="magnifying-glass"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>

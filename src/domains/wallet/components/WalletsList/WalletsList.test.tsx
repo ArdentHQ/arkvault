@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
@@ -42,7 +43,7 @@ describe("WalletsList", () => {
 
 		history.push(dashboardURL);
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	it("should render", () => {
@@ -82,7 +83,7 @@ describe("WalletsList", () => {
 
 		const { asFragment } = renderResponsive(<WalletsList wallets={wallets} />, "lg");
 
-		expect(starredButton()).toHaveTextContent("star-filled.svg");
+		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
 
@@ -90,7 +91,7 @@ describe("WalletsList", () => {
 
 		userEvent.click(starredButton());
 
-		expect(starredButton()).toHaveTextContent("star.svg");
+		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
 
@@ -98,7 +99,7 @@ describe("WalletsList", () => {
 
 		userEvent.click(starredButton());
 
-		expect(starredButton()).toHaveTextContent("star-filled.svg");
+		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[1].displayName());
 
@@ -113,22 +114,22 @@ describe("WalletsList", () => {
 	it("should keep the original sort method when grouping starred wallets at the top", () => {
 		renderResponsive(<WalletsList wallets={wallets} />, "lg");
 
-		expect(starredButton()).toHaveTextContent("star-filled.svg");
+		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 
-		expect(otherButton()).toHaveTextContent("chevron-down-small.svg");
+		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
 		userEvent.click(starredButton());
 
-		expect(starredButton()).toHaveTextContent("star.svg");
+		expect(starredButton().querySelector("svg#star")).toBeInTheDocument();
 
-		expect(otherButton()).toHaveTextContent("chevron-down-small.svg");
+		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
 		userEvent.click(otherButton());
 
 		userEvent.click(starredButton());
 
-		expect(otherButton()).toHaveTextContent("chevron-down-small.svg");
+		expect(otherButton().querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
-		expect(starredButton()).toHaveTextContent("star-filled.svg");
+		expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument();
 	});
 });

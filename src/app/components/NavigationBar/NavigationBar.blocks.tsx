@@ -299,7 +299,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		const sendTransferPath = `/profiles/${profile.id()}/send-transfer`;
 
 		// add query param reset = 1 if already on send transfer page
-		/* istanbul ignore next: tested in e2e */
+		/* istanbul ignore next: tested in e2e -- @preserve */
 		const reset = history.location.pathname === sendTransferPath ? 1 : 0;
 		history.push(`${sendTransferPath}?reset=${reset}`);
 	}, [history]);

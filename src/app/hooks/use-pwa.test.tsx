@@ -46,9 +46,9 @@ describe("usePwa", () => {
 	});
 
 	it("should close the banner if press the close button", () => {
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 		render(<TestComponent />);
 
 		act(() => {
@@ -65,13 +65,13 @@ describe("usePwa", () => {
 	});
 
 	it("should call prompt method if user clicks on the install button", async () => {
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		render(<TestComponent />);
 
-		const promptFunction = jest.fn().mockResolvedValue({});
+		const promptFunction = vi.fn().mockResolvedValue({});
 
 		const event = new Event("beforeinstallprompt") as any;
 
@@ -94,15 +94,15 @@ describe("usePwa", () => {
 	});
 
 	it("should show the install intructions modal if user clicks on the install button on ios", async () => {
-		const navigatorSpy = jest
+		const navigatorSpy = vi
 			.spyOn(navigator, "userAgent", "get")
 			.mockReturnValue(
 				"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Mobile/15E148 Safari/604.1",
 			);
 
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		render(<TestComponent />);
 

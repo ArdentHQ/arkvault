@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Row should render 1`] = `
+exports[`Row > should render 1`] = `
 <div>
   <div
     class="flex items-center justify-between space-x-4"
@@ -14,7 +14,7 @@ exports[`Row should render 1`] = `
 </div>
 `;
 
-exports[`Row should render responsive wrapper 1`] = `
+exports[`Row > should render responsive wrapper 1`] = `
 <div>
   <div
     class="flex items-center justify-between space-x-4"

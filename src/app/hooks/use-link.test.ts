@@ -3,7 +3,7 @@ import { useLink } from "./use-link";
 
 describe("useLink", () => {
 	it("should return a function to open external links in a new tab", () => {
-		const windowOpen = jest.spyOn(window, "open").mockImplementation();
+		const windowOpen = vi.spyOn(window, "open").mockImplementation(vi.fn());
 
 		const { result } = renderHook(() => useLink());
 

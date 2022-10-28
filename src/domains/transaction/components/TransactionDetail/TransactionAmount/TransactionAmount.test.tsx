@@ -3,7 +3,7 @@ import React from "react";
 
 import { TransactionAmount } from "./TransactionAmount";
 import { translations } from "@/domains/transaction/i18n";
-import { render, renderResponsive, screen } from "@/utils/testing-library";
+import { queryElementForSvg, render, renderResponsive, screen } from "@/utils/testing-library";
 
 describe("TransactionAmount", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
@@ -39,7 +39,7 @@ describe("TransactionAmount", () => {
 	it.each(["Sent", "Received"])("should render '%s' icon", (type) => {
 		const { container } = render(<TransactionAmount amount={1} currency="DARK" isSent={type === "Sent"} />);
 
-		expect(container).toHaveTextContent(`${type.toLowerCase()}.svg`);
+		expect(queryElementForSvg(container, type.toLowerCase())).toBeInTheDocument();
 	});
 
 	it.each(["Sent", "Received"])("should render info indicator for '%s'", (type) => {
@@ -48,7 +48,8 @@ describe("TransactionAmount", () => {
 		);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
-		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+
+		expect(queryElementForSvg(document, "hint-small")).toBeInTheDocument();
 
 		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 

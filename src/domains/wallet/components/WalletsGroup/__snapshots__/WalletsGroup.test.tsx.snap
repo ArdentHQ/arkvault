@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletsGroup should handle list wallet click 1`] = `
+exports[`WalletsGroup > should handle list wallet click 1`] = `
 <DocumentFragment>
   <div
     class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mt-0 sm:mb-6 sm:border-b-0 sm:bg-transparent sm:py-0 sm:px-0 sm:dark:bg-transparent"
@@ -42,8 +42,25 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sliders-vertical.svg
+                        <svg
+                          id="sliders-vertical"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -80,8 +97,18 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    ledger.svg
+                  <svg
+                    id="ledger"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
                 <span
@@ -108,8 +135,28 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-turn-down-bracket.svg
+                  <svg
+                    id="arrow-turn-down-bracket"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                      />
+                      <path
+                        d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                      />
+                    </g>
                   </svg>
                 </div>
                 <span>
@@ -134,8 +181,25 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    plus.svg
+                  <svg
+                    id="plus"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
                   </svg>
                 </div>
                 <span>
@@ -162,8 +226,25 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    plus.svg
+                  <svg
+                    id="plus"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
                   </svg>
                 </div>
               </span>
@@ -201,8 +282,18 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -267,8 +358,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -366,8 +456,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -378,8 +467,22 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -411,8 +514,18 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -428,8 +541,22 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -456,8 +583,22 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -501,8 +642,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -588,8 +728,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -600,8 +739,22 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -612,7 +765,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
+exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
 <DocumentFragment>
   <div
     class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
@@ -638,8 +791,7 @@ exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex"
-    css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+    class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
   >
     <span
       class="hidden"
@@ -721,8 +873,7 @@ exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex"
-    css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+    class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
   >
     <span
       class="hidden"
@@ -783,7 +934,7 @@ exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render group with different widths 1`] = `
+exports[`WalletsGroup > should render group with different widths 1`] = `
 <DocumentFragment>
   <div
     class="css-1xhm62p"
@@ -810,8 +961,18 @@ exports[`WalletsGroup should render group with different widths 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                ark.svg
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -876,8 +1037,7 @@ exports[`WalletsGroup should render group with different widths 1`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -975,8 +1135,7 @@ exports[`WalletsGroup should render group with different widths 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
       >
         <div
           class="css-16yt50s"
@@ -987,8 +1146,22 @@ exports[`WalletsGroup should render group with different widths 1`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </div>
@@ -998,7 +1171,7 @@ exports[`WalletsGroup should render group with different widths 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render group with different widths 2`] = `
+exports[`WalletsGroup > should render group with different widths 2`] = `
 <DocumentFragment>
   <div
     class="css-1xhm62p"
@@ -1025,8 +1198,18 @@ exports[`WalletsGroup should render group with different widths 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                ark.svg
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -1091,8 +1274,7 @@ exports[`WalletsGroup should render group with different widths 2`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -1190,8 +1372,7 @@ exports[`WalletsGroup should render group with different widths 2`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
       >
         <div
           class="css-16yt50s"
@@ -1202,8 +1383,22 @@ exports[`WalletsGroup should render group with different widths 2`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </div>
@@ -1213,7 +1408,7 @@ exports[`WalletsGroup should render group with different widths 2`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render group with different widths 3`] = `
+exports[`WalletsGroup > should render group with different widths 3`] = `
 <DocumentFragment>
   <div
     class="css-1xhm62p"
@@ -1240,8 +1435,18 @@ exports[`WalletsGroup should render group with different widths 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                ark.svg
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -1306,8 +1511,7 @@ exports[`WalletsGroup should render group with different widths 3`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
         >
           <span
             class="hidden"
@@ -1407,8 +1611,7 @@ exports[`WalletsGroup should render group with different widths 3`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-        css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
       >
         <div
           class="css-16yt50s"
@@ -1419,8 +1622,22 @@ exports[`WalletsGroup should render group with different widths 3`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </div>
@@ -1430,7 +1647,7 @@ exports[`WalletsGroup should render group with different widths 3`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render with dark mode = false 1`] = `
+exports[`WalletsGroup > should render with dark mode = false 1`] = `
 <DocumentFragment>
   <div
     data-testid="NetworkWalletsGroupList"
@@ -1460,8 +1677,18 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1526,8 +1753,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1625,8 +1851,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -1637,8 +1862,22 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -1670,8 +1909,18 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1687,8 +1936,22 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -1715,8 +1978,22 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -1760,8 +2037,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -1847,8 +2123,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -1859,8 +2134,22 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -1871,7 +2160,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render with dark mode = true 1`] = `
+exports[`WalletsGroup > should render with dark mode = true 1`] = `
 <DocumentFragment>
   <div
     data-testid="NetworkWalletsGroupList"
@@ -1901,8 +2190,18 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -1967,8 +2266,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2066,8 +2364,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -2078,8 +2375,22 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -2111,8 +2422,18 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2128,8 +2449,22 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -2156,8 +2491,22 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -2201,8 +2550,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2288,8 +2636,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -2300,8 +2647,22 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -2312,9 +2673,9 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroup should render with show all button 1`] = `<DocumentFragment />`;
+exports[`WalletsGroup > should render with show all button 1`] = `<DocumentFragment />`;
 
-exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
+exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
 <DocumentFragment>
   <div
     data-testid="NetworkWalletsGroupList"
@@ -2344,8 +2705,18 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2399,8 +2770,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -2471,8 +2841,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -2483,8 +2852,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -2535,8 +2918,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                               height="18"
                               width="18"
                             >
-                              <svg>
-                                star-filled.svg
+                              <svg
+                                id="star-filled"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                  fill="currentColor"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </button>
@@ -2569,8 +2966,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                           role="img"
                           width="10"
                         >
-                          <svg>
-                            chevron-down-small.svg
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -2617,8 +3028,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                           role="img"
                           width="10"
                         >
-                          <svg>
-                            chevron-down-small.svg
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -2649,8 +3074,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                           role="img"
                           width="10"
                         >
-                          <svg>
-                            chevron-down-small.svg
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -2699,8 +3138,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                             height="18"
                             width="18"
                           >
-                            <svg>
-                              star.svg
+                            <svg
+                              id="star"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
                             </svg>
                           </div>
                         </div>
@@ -2774,8 +3227,30 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              second-signature.svg
+                            <svg
+                              id="second-signature"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                                transform="translate(482.484 177)"
+                              >
+                                <path
+                                  d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
+                                />
+                                <circle
+                                  cx="-476.5"
+                                  cy="-170.9"
+                                  r="5"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -2855,8 +3330,37 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                                   height="20"
                                   width="20"
                                 >
-                                  <svg>
-                                    ellipsis-vertical.svg
+                                  <svg
+                                    id="ellipsis-vertical"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <circle
+                                        cx="10"
+                                        cy="16.994"
+                                        r="2.006"
+                                      />
+                                      <circle
+                                        cx="10"
+                                        cy="3"
+                                        r="2"
+                                      />
+                                      <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="2"
+                                      />
+                                    </g>
                                   </svg>
                                 </div>
                               </div>
@@ -2898,8 +3402,18 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -2915,8 +3429,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -2943,8 +3471,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    code.svg
+                  <svg
+                    id="code"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </div>
@@ -2977,8 +3519,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex"
-            css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+            class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
           >
             <span
               class="hidden"
@@ -3037,8 +3578,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100"
-          css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
         >
           <div
             class="css-16yt50s"
@@ -3049,8 +3589,22 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-down-small.svg
+              <svg
+                id="chevron-down-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>

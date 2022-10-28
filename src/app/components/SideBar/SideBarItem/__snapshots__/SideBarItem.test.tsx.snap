@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SideBarItem should render 1`] = `
+exports[`SideBarItem > should render 1`] = `
 <DocumentFragment>
   <li
     class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-pointer"
@@ -28,7 +28,7 @@ exports[`SideBarItem should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SideBarItem should render as active 1`] = `
+exports[`SideBarItem > should render as active 1`] = `
 <DocumentFragment>
   <li
     class="relative border-b border-theme-secondary-300 py-1 first:pt-0 last:border-0 last:pb-0 dark:border-theme-secondary-800 cursor-default"

@@ -25,7 +25,7 @@ export const SuccessStep = ({
 	const messageReference = useRef();
 	const walletAlias = wallet.alias();
 
-	/* istanbul ignore next */
+	/* istanbul ignore next -- @preserve */
 	const iconSize = isMdAndAbove ? "lg" : "xs";
 
 	return (

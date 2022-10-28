@@ -4,7 +4,7 @@ import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Link } from "@/app/components/Link";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets/hooks";
 import { WalletsGroup } from "@/domains/wallet/components/WalletsGroup/WalletsGroup";
 import { WalletsGroupHeaderSkeleton } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
 import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
@@ -75,7 +75,7 @@ export const WalletsGroupsList: React.VFC = () => {
 			);
 		}
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (!profileIsSyncing || availableWallets.length > 0) {
 			return filteredWalletsGroupedByNetwork.map(([network, wallets]) => (
 				<WalletsGroup

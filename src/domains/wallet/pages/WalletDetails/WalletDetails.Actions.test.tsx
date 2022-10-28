@@ -2,7 +2,6 @@
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -19,6 +18,7 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
 
@@ -66,34 +66,16 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get(`/api/wallets/${unvotedWallet.address()}`)
-			.reply(200, walletMock)
-			.get("/api/transactions")
-			.query((parameters) => !!parameters.address)
-			.reply(200, (url) => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const filteredUrl =
-					"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
-				if (url === filteredUrl) {
-					return { data: [], meta };
-				}
-
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			})
-			.persist();
-
 		// Mock musig server requests
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
+		server.use(
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
+			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
+		);
+
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
 	});
@@ -101,7 +83,7 @@ describe("WalletDetails", () => {
 	it("should navigate to send transfer", async () => {
 		await renderPage({ waitForTopSection: true });
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
 
@@ -117,8 +99,8 @@ describe("WalletDetails", () => {
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
 		await profile.sync();
 
-		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
-		const historySpy = jest.spyOn(history, "push");
+		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
+		const historySpy = vi.spyOn(history, "push");
 
 		await renderPage();
 
@@ -135,7 +117,7 @@ describe("WalletDetails", () => {
 	});
 
 	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
-		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -157,8 +139,8 @@ describe("WalletDetails", () => {
 				}),
 			},
 		]);
-		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
-		const historySpy = jest.spyOn(history, "push");
+		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
+		const historySpy = vi.spyOn(history, "push");
 
 		await renderPage();
 
@@ -210,7 +192,7 @@ describe("WalletDetails", () => {
 	});
 
 	it("should open wallet in explorer", async () => {
-		const windowSpy = jest.spyOn(window, "open").mockImplementation();
+		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
 
 		await renderPage();
 
@@ -273,13 +255,13 @@ describe("WalletDetails", () => {
 			network: "ark.devnet",
 		});
 
-		profile.wallets().push(newWallet);
+		server.use(requestMock(`https://ark-test.arkvault.io/api/wallets/${newWallet.address()}`, walletMock));
 
-		nock("https://ark-test.arkvault.io").get(`/api/wallets/${newWallet.address()}`).reply(200, walletMock);
+		profile.wallets().push(newWallet);
 
 		await newWallet.synchroniser().identity();
 
-		const syncVotesSpy = jest.spyOn(newWallet.synchroniser(), "votes").mockImplementation();
+		const syncVotesSpy = vi.spyOn(newWallet.synchroniser(), "votes").mockImplementation(vi.fn());
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${newWallet.id()}`;
 		history.push(walletUrl);

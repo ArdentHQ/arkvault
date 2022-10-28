@@ -61,7 +61,7 @@ export const ButtonGroupOption = ({
 	value,
 	variant = "default",
 }: ButtonGroupOptionProperties) => {
-	/* istanbul ignore next */
+	/* istanbul ignore next -- @preserve */
 	const label = tooltipContent ?? `${value ?? ""}`;
 
 	const render = () => (

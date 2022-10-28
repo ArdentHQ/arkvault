@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`MnemonicList should render 1`] = `
+exports[`MnemonicList > should render 1`] = `
 <DocumentFragment>
   <ul
     class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"
@@ -249,7 +249,7 @@ exports[`MnemonicList should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`MnemonicList should render with special delimiter 1`] = `
+exports[`MnemonicList > should render with special delimiter 1`] = `
 <DocumentFragment>
   <ul
     class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"

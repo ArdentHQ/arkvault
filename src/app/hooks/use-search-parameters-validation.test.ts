@@ -112,7 +112,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error for disabled network", async () => {
-		const networkSpy = jest
+		const networkSpy = vi
 			.spyOn(profile, "availableNetworks")
 			.mockReturnValue(profile.availableNetworks().filter((network) => network.id() === "ark.mainnet"));
 
@@ -280,7 +280,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should validate vote", async () => {
-		const mockFindDelegateByName = jest
+		const mockFindDelegateByName = vi
 			.spyOn(env.delegates(), "findByUsername")
 			.mockReturnValue(profile.wallets().first());
 
@@ -296,7 +296,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should find delegate by public key", async () => {
-		const mockFindDelegateByPublicKey = jest
+		const mockFindDelegateByPublicKey = vi
 			.spyOn(env.delegates(), "findByPublicKey")
 			.mockReturnValue(profile.wallets().first());
 
@@ -382,11 +382,11 @@ describe("useSearchParametersValidation", () => {
 			rank: 52,
 			username: "testi",
 		});
-		const mockFindDelegateByPublicKey = jest
+		const mockFindDelegateByPublicKey = vi
 			.spyOn(env.delegates(), "findByPublicKey")
 			.mockReturnValue(delegateWallet);
 
-		const resignedMock = jest.spyOn(delegateWallet, "isResignedDelegate").mockReturnValue(true);
+		const resignedMock = vi.spyOn(delegateWallet, "isResignedDelegate").mockReturnValue(true);
 
 		const parameters = new URLSearchParams(
 			`coin=ARK&network=ark.devnet&method=vote&publicKey=${delegateWallet.publicKey()}`,
@@ -448,7 +448,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if no available wallets found in network (with network)", async () => {
-		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNetwork").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
 			"amount=10&coin=ark&method=transfer&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o",
@@ -464,7 +464,7 @@ describe("useSearchParametersValidation", () => {
 	});
 
 	it("should return error if no available wallets found in network (with nethash)", async () => {
-		const mockAvailableWallets = jest.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
+		const mockAvailableWallets = vi.spyOn(profile.wallets(), "findByCoinWithNethash").mockReturnValue([]);
 
 		const parameters = new URLSearchParams(
 			"coin=ark&method=transfer&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
@@ -498,15 +498,15 @@ describe("useSearchParametersValidation", () => {
 
 		expect(result.current.buildSearchParametersError({ coin: "custom", type: "COIN_NOT_SUPPORTED" }, true))
 			.toMatchInlineSnapshot(`
-		<Trans
-		  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
-		  parent={[Function]}
-		  values={
-		    Object {
-		      "coin": undefined,
-		    }
-		  }
-		/>
-	`);
+				<Trans
+				  i18nKey="TRANSACTION.VALIDATION.COIN_NOT_SUPPORTED"
+				  parent={[Function]}
+				  values={
+				    {
+				      "coin": undefined,
+				    }
+				  }
+				/>
+			`);
 	});
 });

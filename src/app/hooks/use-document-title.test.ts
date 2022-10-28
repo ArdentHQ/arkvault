@@ -7,8 +7,8 @@ describe("use-document-title", () => {
 		const newTitle = "New title";
 
 		let documentTitle = originalTitle;
-		const documentTitleGetSpy = jest.spyOn(document, "title", "get").mockReturnValue(documentTitle);
-		const documentTitleSetSpy = jest.spyOn(document, "title", "set").mockImplementation((value) => {
+		const documentTitleGetSpy = vi.spyOn(document, "title", "get").mockReturnValue(documentTitle);
+		const documentTitleSetSpy = vi.spyOn(document, "title", "set").mockImplementation((value) => {
 			documentTitle = value;
 		});
 

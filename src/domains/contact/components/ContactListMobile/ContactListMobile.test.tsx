@@ -25,8 +25,8 @@ describe("ContactListMobile", () => {
 				availableNetworks={[]}
 				contacts={contacts}
 				options={options}
-				onAction={jest.fn()}
-				onSend={jest.fn()}
+				onAction={vi.fn()}
+				onSend={vi.fn()}
 			/>,
 		);
 
@@ -34,14 +34,14 @@ describe("ContactListMobile", () => {
 	});
 
 	it("should execute onAction callback", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		render(
 			<ContactListMobile
 				profile={profile}
 				availableNetworks={[]}
 				contacts={contacts}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
 				onAction={onAction}
 			/>,

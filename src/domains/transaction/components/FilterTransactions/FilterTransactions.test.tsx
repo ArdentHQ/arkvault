@@ -40,7 +40,7 @@ describe("FilterTransactions", () => {
 	});
 
 	it("should emit onChange", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		render(<FilterTransactions wallets={profile.wallets().values()} onSelect={onSelect} />);
 

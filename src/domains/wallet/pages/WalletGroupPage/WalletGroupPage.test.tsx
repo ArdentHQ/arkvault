@@ -21,7 +21,7 @@ describe("WalletGroupPage", () => {
 	let duplicateWallets: Contracts.IReadWriteWallet[];
 
 	let useDisplayWalletsResult: Partial<ReturnType<UseDisplayWallets>>;
-	let useDisplayWalletsSpy: jest.SpyInstance;
+	let useDisplayWalletsSpy: vi.SpyInstance;
 
 	let walletGroupURL: string;
 
@@ -45,7 +45,7 @@ describe("WalletGroupPage", () => {
 
 		history.push(walletGroupURL);
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	beforeEach(() => {
@@ -57,7 +57,7 @@ describe("WalletGroupPage", () => {
 		};
 		useDisplayWalletsResult.walletsGroupedByNetwork?.set(wallets[0].network(), duplicateWallets);
 
-		useDisplayWalletsSpy = jest.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
+		useDisplayWalletsSpy = vi.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
 			...useDisplayWalletsResult,
 			availableWallets: duplicateWallets,
 		} as ReturnType<UseDisplayWallets>);

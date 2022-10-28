@@ -36,7 +36,7 @@ export const ExchangeView = () => {
 
 	useLayoutEffect(() => {
 		if (exchangeProvider) {
-			/* istanbul ignore else */
+			/* istanbul ignore else -- @preserve */
 			if (shouldUseDarkColors()) {
 				setLogoUrl(exchangeProvider.logo.dark);
 			} else {

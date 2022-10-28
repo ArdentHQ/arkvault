@@ -1,4 +1,3 @@
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import QRScanner from "qr-scanner";
@@ -18,12 +17,15 @@ import {
 	getDefaultWalletId,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import { LedgerProvider } from "@/app/contexts";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { toasts } from "@/app/services";
+import { server, requestMock } from "@/tests/mocks/server";
 
-jest.mock("react-qr-reader", () => ({
-	QrReader: jest.fn().mockImplementation(() => null),
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+
+vi.mock("react-qr-reader", () => ({
+	QrReader: vi.fn().mockImplementation(() => null),
 }));
 
 const QRCodeModalButton = "QRCodeModalButton";
@@ -37,20 +39,35 @@ let qrScannerMock;
 
 describe("SendTransfer QRModal", () => {
 	beforeAll(() => {
-		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
-		jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: qrCodeUrl });
+		vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
 
 		const profile = env.profiles().findById("b999d134-7a24-481e-a95d-bc47c543bfc9");
 
 		profile.coins().set("ARK", "ark.devnet");
+	});
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, { data: [], meta: {} })
-			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
+	beforeEach(() => {
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				transactionFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{ data: [], meta: {} },
+				{
+					query: {
+						limit: 20,
+						page: 1,
+						senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					},
+				},
+			),
+		);
 	});
 
 	afterEach(() => {
@@ -58,13 +75,13 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	afterAll(() => {
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should read QR and apply transaction parameters", async () => {
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
-		const toastSpy = jest.spyOn(toasts, "success");
+		const toastSpy = vi.spyOn(toasts, "success");
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -73,9 +90,7 @@ describe("SendTransfer QRModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -94,13 +109,13 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and prevent from applying parameters if not available in qr code", async () => {
-		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({
 			data: "http://localhost:3000/#/?coin=ARK&method=transfer&network=ark.devnet",
 		});
 
 		const profile = env.profiles().findById(fixtureProfileId);
 		const mockProfileWithOnlyPublicNetworksReset = mockProfileWithPublicAndTestNetworks(profile);
-		const toastSpy = jest.spyOn(toasts, "success");
+		const toastSpy = vi.spyOn(toasts, "success");
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -109,9 +124,7 @@ describe("SendTransfer QRModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -135,9 +148,9 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and error for invalid url", async () => {
-		qrScannerMock = jest.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "invalid url" });
+		qrScannerMock = vi.spyOn(QRScanner, "scanImage").mockResolvedValue({ data: "invalid url" });
 
-		const toastSpy = jest.spyOn(toasts, "error");
+		const toastSpy = vi.spyOn(toasts, "error");
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
@@ -146,9 +159,7 @@ describe("SendTransfer QRModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -170,11 +181,11 @@ describe("SendTransfer QRModal", () => {
 	});
 
 	it("should read QR and error for invalid format", async () => {
-		qrScannerMock = jest
+		qrScannerMock = vi
 			.spyOn(QRScanner, "scanImage")
 			.mockResolvedValue({ data: "http://localhost:3000/#/?coin=ark" });
 
-		const toastSpy = jest.spyOn(toasts, "error");
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { result } = renderHook(() => useSearchParametersValidation());
 
@@ -183,9 +194,7 @@ describe("SendTransfer QRModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -212,9 +221,7 @@ describe("SendTransfer QRModal", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,

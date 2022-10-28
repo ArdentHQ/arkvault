@@ -34,7 +34,7 @@ describe("ExchangeGrid", () => {
 	});
 
 	it("should execute onClick callback", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(<ExchangeGrid exchanges={[exchange]} onClick={onClick} />);
 

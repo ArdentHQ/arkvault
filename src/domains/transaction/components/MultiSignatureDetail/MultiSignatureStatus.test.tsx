@@ -19,7 +19,7 @@ describe("MultiSignatureStatus", () => {
 	});
 
 	it("should render as awaiting our signature", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
 
 		const { container } = render(
 			<MultiSignatureStatus
@@ -38,13 +38,13 @@ describe("MultiSignatureStatus", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render as awaiting other signatures", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
-		jest.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(1);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(1);
 
 		const { container } = render(
 			<MultiSignatureStatus
@@ -63,13 +63,13 @@ describe("MultiSignatureStatus", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render as awaiting confirmations", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		const { container } = render(
 			<MultiSignatureStatus
@@ -88,14 +88,14 @@ describe("MultiSignatureStatus", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render as multiSignature ready", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 
 		const { container } = render(
 			<MultiSignatureStatus
@@ -114,14 +114,14 @@ describe("MultiSignatureStatus", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should show as awaiting final signature", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockImplementation(() => {
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockImplementation(() => {
 			throw new Error("error");
 		});
 
@@ -142,6 +142,6 @@ describe("MultiSignatureStatus", () => {
 
 		expect(container).toMatchSnapshot();
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

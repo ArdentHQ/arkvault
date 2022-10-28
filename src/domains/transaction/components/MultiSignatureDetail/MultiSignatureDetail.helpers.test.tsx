@@ -9,6 +9,7 @@ import {
 	render,
 	screen,
 	syncDelegates,
+	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 
 describe("MultiSignatureDetail Helpers", () => {
@@ -16,7 +17,7 @@ describe("MultiSignatureDetail Helpers", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let transaction: DTO.ExtendedSignedTransactionData;
 
-	beforeEach(async () => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
@@ -28,6 +29,10 @@ describe("MultiSignatureDetail Helpers", () => {
 
 		await wallet.synchroniser().identity();
 
+		await triggerMessageSignOnce(wallet);
+	});
+
+	beforeEach(async () => {
 		transaction = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
@@ -57,7 +62,7 @@ describe("MultiSignatureDetail Helpers", () => {
 	});
 
 	it("should extract multisignature info mapping mandatoryKeys and numberOfSignatures to min and publicKeys", () => {
-		jest.spyOn(transaction, "get").mockReturnValue({
+		vi.spyOn(transaction, "get").mockReturnValue({
 			mandatoryKeys: [],
 			numberOfSignatures: 2,
 			optionalKeys: [],

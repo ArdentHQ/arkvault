@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook, act } from "@testing-library/react-hooks";
-import nock from "nock";
 import { useTransactionExport } from "./use-transaction-export";
 import { ExportProgressStatus } from "@/domains/transaction/components/TransactionExportModal";
 import { env, getDefaultProfileId, syncDelegates, waitFor } from "@/utils/testing-library";
@@ -23,21 +22,6 @@ describe("useTransactionExport hook", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-	});
-
-	beforeEach(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data,
-					meta,
-				};
-			});
 	});
 
 	it("should start export", async () => {
@@ -131,11 +115,9 @@ describe("useTransactionExport hook", () => {
 	});
 
 	it("should start export and fail", async () => {
-		const transactionIndexMock = jest
-			.spyOn(profile.wallets().first(), "transactionIndex")
-			.mockImplementation(() => {
-				throw new Error("error");
-			});
+		const transactionIndexMock = vi.spyOn(profile.wallets().first(), "transactionIndex").mockImplementation(() => {
+			throw new Error("error");
+		});
 
 		const { result } = renderExportHook();
 

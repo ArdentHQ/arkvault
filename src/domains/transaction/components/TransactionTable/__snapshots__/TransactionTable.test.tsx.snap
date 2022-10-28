@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionTable loading state should render 1`] = `
+exports[`TransactionTable > loading state > should render 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -60,8 +60,22 @@ exports[`TransactionTable loading state should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -124,8 +138,22 @@ exports[`TransactionTable loading state should render 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1163,7 +1191,7 @@ exports[`TransactionTable loading state should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable loading state should render compact 1`] = `
+exports[`TransactionTable > loading state > should render compact 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1223,8 +1251,22 @@ exports[`TransactionTable loading state should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1287,8 +1329,22 @@ exports[`TransactionTable loading state should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2326,7 +2382,7 @@ exports[`TransactionTable loading state should render compact 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable loading state should render with currency column 1`] = `
+exports[`TransactionTable > loading state > should render with currency column 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2386,8 +2442,22 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2450,8 +2520,22 @@ exports[`TransactionTable loading state should render with currency column 1`] =
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3505,7 +3589,7 @@ exports[`TransactionTable loading state should render with currency column 1`] =
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render compact 1`] = `
+exports[`TransactionTable > should render compact 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -3565,8 +3649,22 @@ exports[`TransactionTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3629,8 +3727,22 @@ exports[`TransactionTable should render compact 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3664,8 +3776,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -3702,8 +3848,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -3842,8 +4005,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -3880,8 +4077,22 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4020,8 +4231,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4058,8 +4303,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4198,8 +4460,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4236,8 +4532,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4376,8 +4689,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4414,8 +4761,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4554,8 +4918,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4592,8 +4990,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4732,8 +5147,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4770,8 +5219,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4910,8 +5376,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -4948,8 +5448,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -5088,8 +5605,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -5126,8 +5677,25 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -5266,8 +5834,42 @@ exports[`TransactionTable should render compact 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -5304,8 +5906,22 @@ exports[`TransactionTable should render compact 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -5428,7 +6044,7 @@ exports[`TransactionTable should render compact 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render responsive 1`] = `
+exports[`TransactionTable > should render responsive 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -7412,7 +8028,7 @@ exports[`TransactionTable should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render responsive 2`] = `
+exports[`TransactionTable > should render responsive 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -9396,7 +10012,7 @@ exports[`TransactionTable should render responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render responsive 3`] = `
+exports[`TransactionTable > should render responsive 3`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -9456,8 +10072,22 @@ exports[`TransactionTable should render responsive 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -9520,8 +10150,22 @@ exports[`TransactionTable should render responsive 3`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -9555,8 +10199,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -9593,8 +10271,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -9733,8 +10428,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -9771,8 +10500,22 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -9911,8 +10654,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -9949,8 +10726,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10089,8 +10883,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -10127,8 +10955,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10267,8 +11112,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -10305,8 +11184,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10445,8 +11341,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -10483,8 +11413,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10623,8 +11570,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -10661,8 +11642,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10801,8 +11799,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -10839,8 +11871,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -10979,8 +12028,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11017,8 +12100,25 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -11157,8 +12257,42 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11195,8 +12329,22 @@ exports[`TransactionTable should render responsive 3`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11319,7 +12467,7 @@ exports[`TransactionTable should render responsive 3`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render responsive 4`] = `
+exports[`TransactionTable > should render responsive 4`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -11379,8 +12527,22 @@ exports[`TransactionTable should render responsive 4`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -11443,8 +12605,22 @@ exports[`TransactionTable should render responsive 4`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -11478,8 +12654,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11516,8 +12726,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -11656,8 +12883,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11694,8 +12955,22 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11834,8 +13109,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -11872,8 +13181,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12012,8 +13338,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12050,8 +13410,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12190,8 +13567,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12228,8 +13639,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12368,8 +13796,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12406,8 +13868,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12546,8 +14025,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12584,8 +14097,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12724,8 +14254,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12762,8 +14326,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -12902,8 +14483,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -12940,8 +14555,25 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -13080,8 +14712,42 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13118,8 +14784,22 @@ exports[`TransactionTable should render responsive 4`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13242,7 +14922,7 @@ exports[`TransactionTable should render responsive 4`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionTable should render responsive 5`] = `
+exports[`TransactionTable > should render responsive 5`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -13302,8 +14982,22 @@ exports[`TransactionTable should render responsive 5`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -13366,8 +15060,22 @@ exports[`TransactionTable should render responsive 5`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -13401,8 +15109,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13439,8 +15181,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -13579,8 +15338,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13617,8 +15410,22 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13757,8 +15564,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13795,8 +15636,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -13935,8 +15793,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -13973,8 +15865,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -14113,8 +16022,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -14151,8 +16094,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -14291,8 +16251,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -14329,8 +16323,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -14469,8 +16480,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -14507,8 +16552,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -14647,8 +16709,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -14685,8 +16781,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -14825,8 +16938,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -14863,8 +17010,25 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -15003,8 +17167,42 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        magnifying-glass-id.svg
+                      <svg
+                        id="magnifying-glass-id"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 17l-3.172-3.172"
+                          />
+                          <circle
+                            cx="13"
+                            cy="11"
+                            r="4"
+                          />
+                        </g>
+                        <path
+                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -15041,8 +17239,22 @@ exports[`TransactionTable should render responsive 5`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>

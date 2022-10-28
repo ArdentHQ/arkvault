@@ -28,7 +28,7 @@ describe("SuccessStep", () => {
 			}),
 		);
 
-		const onClickEditAlias = jest.fn();
+		const onClickEditAlias = vi.fn();
 
 		const { asFragment } = renderResponsive(
 			<FormProvider {...form.current}>

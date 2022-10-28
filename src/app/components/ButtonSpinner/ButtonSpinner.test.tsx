@@ -4,10 +4,10 @@ import { ButtonSpinner } from "./ButtonSpinner";
 import { render } from "@/utils/testing-library";
 
 describe("ButtonSpinner", () => {
-	let consoleSpy: jest.SpyInstance;
+	let consoleSpy: vi.SpyInstance;
 
 	beforeAll(() => {
-		consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 	});
 
 	afterAll(() => {

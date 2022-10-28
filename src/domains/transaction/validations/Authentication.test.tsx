@@ -9,13 +9,13 @@ let translationMock: any;
 let wallet: Contracts.IReadWriteWallet;
 let walletWithPassword: Contracts.IReadWriteWallet;
 
-jest.mock("@/utils/debounce", () => ({
+vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise: Promise<any>) => promise,
 }));
 
 describe("Authentication", () => {
 	beforeAll(async () => {
-		translationMock = jest.fn((index18nString: string) => index18nString);
+		translationMock = vi.fn((index18nString: string) => index18nString);
 
 		const profile = env.profiles().first();
 		await env.profiles().restore(profile);
@@ -42,7 +42,7 @@ describe("Authentication", () => {
 	});
 
 	it("should validate mnemonic", async () => {
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(wallet.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: wallet.address(), type: "bip39" });
 
@@ -62,7 +62,7 @@ describe("Authentication", () => {
 	});
 
 	it("should validate secret", async () => {
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(wallet.coin().address(), "fromSecret")
 			.mockResolvedValue({ address: wallet.address(), type: "secret" });
 
@@ -121,10 +121,10 @@ describe("Authentication", () => {
 	});
 
 	it("should validate encryption password with BIP39", async () => {
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: walletWithPassword.address() } as any);
-		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
+		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
 
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
@@ -135,12 +135,12 @@ describe("Authentication", () => {
 	});
 
 	it("should validate encryption password with secret", async () => {
-		const BIP39Mock = jest.spyOn(BIP39, "validate").mockReturnValue(false);
+		const BIP39Mock = vi.spyOn(BIP39, "validate").mockReturnValue(false);
 
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: walletWithPassword.address() } as any);
-		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
+		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockReturnValue(MNEMONICS[1]);
 
 		const encryptionPassword = authentication(translationMock).encryptionPassword(walletWithPassword);
 
@@ -152,7 +152,7 @@ describe("Authentication", () => {
 	});
 
 	it("should validate WIF", async () => {
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(wallet.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: wallet.address() } as any);
 
@@ -165,7 +165,7 @@ describe("Authentication", () => {
 	});
 
 	it("should validate private key", async () => {
-		const fromPrivateKeyMock = jest
+		const fromPrivateKeyMock = vi
 			.spyOn(wallet.coin().address(), "fromPrivateKey")
 			.mockResolvedValue({ address: wallet.address() } as any);
 
@@ -199,11 +199,11 @@ describe("Authentication", () => {
 	});
 
 	it("should fail validation for encryption password", async () => {
-		const walletWifMock = jest.spyOn(walletWithPassword.signingKey(), "get").mockImplementation(() => {
+		const walletWifMock = vi.spyOn(walletWithPassword.signingKey(), "get").mockImplementation(() => {
 			throw new Error("failed");
 		});
 
-		const fromWifMock = jest
+		const fromWifMock = vi
 			.spyOn(walletWithPassword.coin().address(), "fromWIF")
 			.mockResolvedValue({ address: walletWithPassword.address(), type: "bip39" });
 

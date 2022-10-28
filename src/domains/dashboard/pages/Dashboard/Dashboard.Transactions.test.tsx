@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -13,11 +12,14 @@ import {
 	render,
 	screen,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { requestMock, server } from "@/tests/mocks/server";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -26,30 +28,25 @@ let resetProfileNetworksMock: () => void;
 const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
 describe("Dashboard", () => {
+	beforeEach(() => {
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: devnetTransactionsFixture.data.slice(0, 2),
+				meta: devnetTransactionsFixture.meta,
+			}),
+			requestMock("https://ark-live.arkvault.io/api/transactions", {
+				data: [],
+				meta: mainnetTransactionsFixture.meta,
+			}),
+		);
+	});
+
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(0, 2),
-					meta,
-				};
-			})
-			.persist();
-
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
-
 		profile = env.profiles().findById(fixtureProfileId);
 
 		const wallet = await profile.walletFactory().fromAddress({
@@ -64,8 +61,6 @@ describe("Dashboard", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		useDefaultNetMocks();
 	});
 
 	beforeEach(() => {
@@ -96,7 +91,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+		const mockTransactionsAggregate = vi.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
 			hasMorePages: () => false,
 			items: () => [],
 		} as any);
@@ -123,7 +118,7 @@ describe("Dashboard", () => {
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
-		const mockTransactionsAggregate = jest
+		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 

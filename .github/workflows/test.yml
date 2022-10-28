@@ -12,10 +12,12 @@ on:
 jobs:
     app:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/app
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
@@ -38,22 +40,80 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test
+
+            - name: Test App
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES:
+                  COVERAGE_INCLUDE_PATH: src/app/App*
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/app/ --env=./src/tests/custom-env.js --forceExit --maxWorkers=2
-                      --logHeapUsage --watchAll=false --coverage
-                      --collectCoverageFrom='["src/app/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/app/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/app/App* src/app/validations
+
+            - name: Test Context Providers
+              env:
+                  COVERAGE_THRESHOLD_LINES: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 100
+                  COVERAGE_THRESHOLD_BRANCHES: 100
+                  COVERAGE_INCLUDE_PATH: src/app/contexts
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/contexts
+
+            - name: Test hooks
+              env:
+                  COVERAGE_THRESHOLD_LINES: 96
+                  COVERAGE_THRESHOLD_FUNCTIONS: 95.91
+                  COVERAGE_THRESHOLD_STATEMENTS: 96.1
+                  COVERAGE_THRESHOLD_BRANCHES: 94.22
+                  COVERAGE_INCLUDE_PATH: src/app/hooks
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/hooks
+
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.61
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.62
+                  COVERAGE_THRESHOLD_BRANCHES: 98.96
+                  COVERAGE_INCLUDE_PATH: src/app/components/[A-O]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/components/[A-O]*
+
+            - name: Test Components ^P-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.62
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.77
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.64
+                  COVERAGE_THRESHOLD_BRANCHES: 99.77
+                  COVERAGE_INCLUDE_PATH: src/app/components/[P-Z]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/app/components/[P-Z]*
+
     domains-contact:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/contact
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
@@ -81,18 +141,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/contact --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/contact/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/contact/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/contact
     domains-dashboard:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/dashboard
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
@@ -120,18 +177,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/dashboard --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/dashboard/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/dashboard/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/dashboard
     domains-error:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/error
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
@@ -159,18 +213,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/error --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/error/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/error/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/error
     domains-exchange:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/exchange
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
@@ -198,18 +249,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/exchange --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/exchange/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/exchange/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/exchange
     domains-message:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/message
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
@@ -237,18 +285,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/message --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/message/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/message/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/message
     domains-network:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/network
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
@@ -276,18 +321,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/network --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/network/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/network/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/network
     domains-news:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/news
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-news
             cancel-in-progress: true
@@ -315,18 +357,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/news --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/news/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/news/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/news
     domains-profile:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/profile
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
@@ -354,18 +393,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/profile --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/profile/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/profile/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/profile
     domains-setting:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/setting
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
@@ -393,18 +429,16 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/setting --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/setting/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/setting/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/setting
+
     domains-transaction:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/transaction
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
@@ -427,23 +461,106 @@ jobs:
               run: pnpm install --frozen-lockfile
             - name: Rebuild
               run: pnpm rebuild
-            - name: Test
+
+            - name: Test Utils
+              env:
+                  COVERAGE_THRESHOLD_LINES: 75
+                  COVERAGE_THRESHOLD_FUNCTIONS: 69.23
+                  COVERAGE_THRESHOLD_STATEMENTS: 79.41
+                  COVERAGE_THRESHOLD_BRANCHES: 83.33
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/transaction --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/domains/transaction/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/transaction/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/transaction/utils.test.ts src/domains/transaction/routing.test.ts
+
+            - name: Test Components ^A-O
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.58
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.73
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[A-O]*
+
+            - name: Test Components ^P-S
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.48
+                  COVERAGE_THRESHOLD_FUNCTIONS: 97.61
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.59
+                  COVERAGE_THRESHOLD_BRANCHES: 96.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[P-S]*
+
+            - name: Test Components ^T-Z
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.41
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.32
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.43
+                  COVERAGE_THRESHOLD_BRANCHES: 98.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/components/[T-Z]*
+
+            - name: Test Hooks
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93.61
+                  COVERAGE_THRESHOLD_FUNCTIONS: 89.79
+                  COVERAGE_THRESHOLD_STATEMENTS: 91.61
+                  COVERAGE_THRESHOLD_BRANCHES: 83.72
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/hooks
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/hooks
+
+            - name: Test Pages
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.9
+                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.93
+                  COVERAGE_THRESHOLD_BRANCHES: 98.43
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/pages
+
+            - name: Test Validations
+              env:
+                  COVERAGE_THRESHOLD_LINES: 88.03
+                  COVERAGE_THRESHOLD_FUNCTIONS: 82.85
+                  COVERAGE_THRESHOLD_STATEMENTS: 88.52
+                  COVERAGE_THRESHOLD_BRANCHES: 87.03
+                  COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
+              uses: nick-invision/retry@v2
+              with:
+                  timeout_minutes: 20
+                  max_attempts: 1
+                  command: pnpm test:coverage src/domains/transaction/validations
+
     domains-vote:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/vote
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
@@ -471,18 +588,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/vote --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/vote/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/vote/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/vote
     domains-wallet:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/domains/wallet
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
@@ -510,18 +624,15 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/domains/wallet --env=./src/tests/custom-env.js
-                      --forceExit --maxWorkers=2 --logHeapUsage
-                      --watchAll=false --coverage
-                      --collectCoverageFrom='["src/domains/wallet/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/domains/wallet/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/domains/wallet
     router:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/router
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
@@ -549,18 +660,19 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/router --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/router/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/router/":{"branches":100,"functions":100,"lines":100,"statements":100}}'
+                  command: pnpm test:coverage src/router
     utils:
         runs-on: ubuntu-latest
+        env:
+            COVERAGE_INCLUDE_PATH: src/utils
+            COVERAGE_THRESHOLD_LINES: 25
+            COVERAGE_THRESHOLD_BRANCHES: 25
+            COVERAGE_THRESHOLD_FUNCTIONS: 25
+            COVERAGE_THRESHOLD_STATEMENTS: 25
         strategy:
             matrix:
                 node-version:
-                    - 16.9.1
+                    - 16.17.1
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
@@ -588,9 +700,4 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: node --expose-gc ./node_modules/jest/bin/jest.js
-                      src/utils --env=./src/tests/custom-env.js --forceExit
-                      --maxWorkers=2 --logHeapUsage --watchAll=false
-                      --coverage
-                      --collectCoverageFrom='["src/utils/**/*.{js,jsx,ts,tsx}","!<rootDir>/build/*","!<rootDir>/dist/*","!jest.setup.js","!src/**/e2e/*.ts","!src/**/cucumber/*.ts","!src/**/*.e2e.ts","!src/**/*.models.{js,jsx,ts,tsx}","!src/**/*.stories.{js,jsx,ts,tsx}","!src/**/*.styles.{js,jsx,ts,tsx}","!src/i18n/**/*","!src/tests/**/*","!src/tailwind.config.js","!src/utils/e2e-utils.ts","!src/polyfill/**/*"]'
-                      --coverageThreshold='{"./src/utils/":{"branches":0,"functions":0,"lines":0,"statements":0}}'
+                  command: pnpm test:coverage src/utils

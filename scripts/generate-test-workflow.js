@@ -16,168 +16,33 @@ const workflow = {
 	jobs: {},
 };
 
-const directories = {
-	app: {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/contact": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/dashboard": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/error": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/exchange": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/message": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/network": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/news": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/profile": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/setting": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/transaction": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/vote": {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	"domains/wallet": {
-		coverageThreshold: {
-			branches: 95,
-			functions: 80,
-			lines: 60,
-			statements: 60,
-		},
-		maxWorkers: 2,
-	},
-	router: {
-		coverageThreshold: {
-			branches: 100,
-			functions: 100,
-			lines: 100,
-			statements: 100,
-		},
-		maxWorkers: 2,
-	},
-	utils: {
-		coverageThreshold: {
-			branches: 55.71,
-			functions: 23.4,
-			lines: 50,
-			statements: 46.94,
-		},
-		maxWorkers: 2,
-	},
-};
+const directories = [
+	"app",
+	"domains/contact",
+	"domains/dashboard",
+	"domains/error",
+	"domains/exchange",
+	"domains/message",
+	"domains/network",
+	"domains/news",
+	"domains/profile",
+	"domains/setting",
+	"domains/transaction",
+	"domains/vote",
+	"domains/wallet",
+	"router",
+	"utils",
+];
 
-for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(directories)) {
-	const collectCoverageFrom = [
-		`src/${directory}/**/*.{js,jsx,ts,tsx}`,
-		"!<rootDir>/build/*",
-		"!<rootDir>/dist/*",
-		"!jest.setup.js",
-		"!src/**/e2e/*.ts",
-		"!src/**/cucumber/*.ts",
-		"!src/**/*.e2e.ts",
-		"!src/**/*.models.{js,jsx,ts,tsx}",
-		"!src/**/*.stories.{js,jsx,ts,tsx}",
-		"!src/**/*.styles.{js,jsx,ts,tsx}",
-		"!src/i18n/**/*",
-		"!src/tests/**/*",
-		"!src/tailwind.config.js",
-		"!src/utils/e2e-utils.ts",
-		"!src/polyfill/**/*",
-	];
-
+for (const directory of directories) {
 	const job = {
 		"runs-on": "ubuntu-latest",
+		env: {
+			COVERAGE_INCLUDE_PATH: `src/${directory}`,
+		},
 		strategy: {
 			matrix: {
-				"node-version": ["16.x"],
+				"node-version": ["16.17.1"],
 			},
 		},
 		concurrency: {
@@ -194,7 +59,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			{
 				uses: "pnpm/action-setup@v2",
 				with: {
-					version: "6.24.4",
+					version: 7,
 				},
 			},
 			{
@@ -214,7 +79,7 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 			},
 			{
 				name: "Install (pnpm)",
-				run: "pnpm install",
+				run: "pnpm install --frozen-lockfile",
 			},
 			{
 				name: "Rebuild",
@@ -224,13 +89,9 @@ for (const [directory, { coverageThreshold, maxWorkers }] of Object.entries(dire
 				name: "Test",
 				uses: "nick-invision/retry@v2",
 				with: {
-					timeout_minutes: 10,
+					timeout_minutes: 20,
 					max_attempts: 1,
-					command: `.pnpm test --expose-gc test src/${directory} --env=./src/tests/custom-env.js --forceExit --maxWorkers=${maxWorkers} --logHeapUsage --watchAll=false --coverage --collectCoverageFrom='${JSON.stringify(
-						collectCoverageFrom,
-					)}' --coverageThreshold='${JSON.stringify({
-						[`./src/${directory}/`]: coverageThreshold,
-					})}'`,
+					command: `pnpm vitest run --coverage --dir src/${directory}`,
 				},
 			},
 		],

@@ -1,4 +1,7 @@
 module.exports = {
+	globals: {
+		vi: false,
+	},
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
@@ -15,8 +18,6 @@ module.exports = {
 	},
 	plugins: [
 		"@typescript-eslint",
-		"jest-formatting",
-		"jest",
 		"prettier",
 		"promise",
 		"react-hooks",
@@ -36,8 +37,6 @@ module.exports = {
 		"plugin:import/errors",
 		"plugin:import/typescript",
 		"plugin:import/warnings",
-		"plugin:jest-formatting/strict",
-		"plugin:jest/recommended",
 		"plugin:prettier/recommended",
 		"plugin:promise/recommended",
 		"plugin:react-hooks/recommended",
@@ -96,28 +95,6 @@ module.exports = {
 		"import/no-unused-modules": "error",
 		"import/no-useless-path-segments": "error",
 		"import/no-webpack-loader-syntax": "error",
-		"jest/consistent-test-it": "error",
-		"jest/max-nested-describe": "error",
-		"jest/no-alias-methods": "error",
-		"jest/no-conditional-expect": "off",
-		"jest/no-done-callback": "off",
-		"jest/no-identical-title": "error",
-		"jest/no-standalone-expect": ["error", { additionalTestBlockFunctions: ["itif"] }],
-		"jest/no-test-return-statement": "error",
-		"jest/prefer-called-with": "error",
-		"jest/prefer-expect-resolves": "error",
-		"jest/prefer-hooks-on-top": "error",
-		"jest/prefer-spy-on": "error",
-		"jest/prefer-strict-equal": "error",
-		"jest/prefer-to-be": "error",
-		"jest/prefer-to-contain": "error",
-		"jest/prefer-to-have-length": "error",
-		"jest/prefer-todo": "error",
-		"jest/require-hook": ["error", { allowedFunctionCalls: ["itif"] }],
-		"jest/require-to-throw-message": "error",
-		"jest/require-top-level-describe": "error",
-		"jest/valid-expect": "error",
-		"jest/valid-expect-in-promise": "error",
 		"max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
 		"max-lines-per-function": ["warn", { max: 40, skipBlankLines: true, skipComments: true }],
 		"no-negated-condition": "error",
@@ -208,14 +185,14 @@ module.exports = {
 				"sort-keys-fix/sort-keys-fix": "off",
 			},
 		},
-		{
-			files: ["!**/*.test.{ts,tsx}"],
-			plugins: ["jest"],
-			rules: {
-				"jest/require-hook": "off",
-				"jest/require-top-level-describe": "off",
-			},
-		},
+		// {
+		// 	files: ["!**/*.test.{ts,tsx}"],
+		// 	plugins: ["jest"],
+		// 	rules: {
+		// 		"jest/require-hook": "off",
+		// 		"jest/require-top-level-describe": "off",
+		// 	},
+		// },
 	],
 	settings: {
 		react: {

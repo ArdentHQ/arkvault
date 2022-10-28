@@ -17,7 +17,7 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 const translations = buildTranslations();
 
 let profile: Contracts.IProfile;
-let browserAccessMock: jest.SpyInstance;
+let browserAccessMock: vi.SpyInstance;
 
 const fileOpenParameters = {
 	extensions: [".png", ".jpg", ".jpeg", ".bmp"],
@@ -32,7 +32,7 @@ const avatarIdenticon = () => screen.getByTestId("SelectProfileImage__avatar-ide
 
 const resetSubmitID = "ResetProfile__submit-button";
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -44,7 +44,7 @@ describe("General Settings", () => {
 	});
 
 	beforeEach(() => {
-		browserAccessMock = jest
+		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
 	});
@@ -99,7 +99,7 @@ describe("General Settings", () => {
 	});
 
 	it("should disable submit button when profile is not restored yet", async () => {
-		const isProfileRestoredMock = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const isProfileRestoredMock = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/settings">
@@ -239,7 +239,7 @@ describe("General Settings", () => {
 	});
 
 	it("should update profile", async () => {
-		const toastSpy = jest.spyOn(toasts, "success");
+		const toastSpy = vi.spyOn(toasts, "success");
 
 		const profilesCount = env.profiles().count();
 
@@ -299,7 +299,7 @@ describe("General Settings", () => {
 		userEvent.click(submitButton());
 
 		// Not upload avatar image
-		browserAccessMock = jest
+		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockRejectedValue(new Error("The user aborted a request"));
 
@@ -483,7 +483,7 @@ describe("General Settings", () => {
 	});
 
 	it("should reset fields on reset", async () => {
-		const toastSpy = jest.spyOn(toasts, "success");
+		const toastSpy = vi.spyOn(toasts, "success");
 
 		render(
 			<Route path="/profiles/:profileId/settings">
@@ -539,7 +539,7 @@ describe("General Settings", () => {
 	});
 
 	it("should reset appearance settings on reset", async () => {
-		const toastSpy = jest.spyOn(toasts, "success");
+		const toastSpy = vi.spyOn(toasts, "success");
 		const { setAccentColor, getCurrentAccentColor } = useAccentColor();
 		const { setTheme, theme } = useTheme();
 
@@ -596,7 +596,7 @@ describe("General Settings", () => {
 	});
 
 	it("should default to USD if market provider does not support the selected currency", async () => {
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/settings">

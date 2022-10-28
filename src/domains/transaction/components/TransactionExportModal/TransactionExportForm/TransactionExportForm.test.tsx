@@ -1,7 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { TransactionExportForm } from ".";
@@ -25,18 +24,6 @@ const dateToggle = () =>
 
 describe("TransactionExportForm", () => {
 	let profile: Contracts.IProfile;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", orderBy: "timestamp:asc" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
@@ -64,7 +51,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should emit cancel", async () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
 		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={onCancel} />);
 
@@ -80,9 +67,9 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render fiat column if wallets network is live", async () => {
-		const walletSpy = jest.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
+		const walletSpy = vi.spyOn(profile.wallets().first().network(), "isLive").mockReturnValue(true);
 
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
 		const { asFragment } = renderWithForm(
 			<TransactionExportForm onCancel={onCancel} wallet={profile.wallets().first()} />,
@@ -128,7 +115,7 @@ describe("TransactionExportForm", () => {
 	});
 
 	it("should render custom date range", async () => {
-		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={jest.fn()} />, {
+		renderWithForm(<TransactionExportForm wallet={profile.wallets().first()} onCancel={vi.fn()} />, {
 			defaultValues: {
 				from: new Date(),
 				to: new Date(),

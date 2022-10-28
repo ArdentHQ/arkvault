@@ -27,7 +27,7 @@ describe("UnlockTokenDetail", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<UnlockTokenDetail isOpen={false} transaction={transactionFixture} onClose={jest.fn()} />,
+				<UnlockTokenDetail isOpen={false} transaction={transactionFixture} onClose={vi.fn()} />,
 			</Route>,
 			{
 				history,
@@ -42,7 +42,7 @@ describe("UnlockTokenDetail", () => {
 	it("should render a modal", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<UnlockTokenDetail isOpen={true} transaction={transactionFixture} onClose={jest.fn()} />,
+				<UnlockTokenDetail isOpen={true} transaction={transactionFixture} onClose={vi.fn()} />,
 			</Route>,
 			{
 				history,

@@ -41,7 +41,7 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should successfully import wwe profile", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 		const { container } = render(<ProcessingImport env={env} file={wwe} onSuccess={onSuccess} />);
 		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
@@ -49,7 +49,7 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should successfully import json profile", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 		const { container } = render(<ProcessingImport env={env} file={json} onSuccess={onSuccess} />);
 		await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(expect.any(Profile)));
 
@@ -57,7 +57,7 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should require password for password-protected profile import", async () => {
-		const onPasswordChange = jest.fn();
+		const onPasswordChange = vi.fn();
 
 		const { container } = render(
 			<ProcessingImport env={env} file={passwordProtectedWwe} onPasswordChange={onPasswordChange} />,
@@ -77,8 +77,8 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should emit onBack when password modal is closed", async () => {
-		const onBack = jest.fn();
-		const onPasswordChange = jest.fn();
+		const onBack = vi.fn();
+		const onPasswordChange = vi.fn();
 
 		render(
 			<ProcessingImport
@@ -99,7 +99,7 @@ describe("Import Profile - Processing import", () => {
 	});
 
 	it("should enter password again", async () => {
-		const onPasswordChange = jest.fn();
+		const onPasswordChange = vi.fn();
 
 		const { container } = render(
 			<ProcessingImport

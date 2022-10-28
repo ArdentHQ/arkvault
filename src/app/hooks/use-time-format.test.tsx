@@ -33,7 +33,7 @@ describe("useTimeFormat", () => {
 	});
 
 	it("should return format from profile", () => {
-		const settingsSpy = jest.spyOn(profile.settings(), "get");
+		const settingsSpy = vi.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce("format");
 
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });
@@ -42,7 +42,7 @@ describe("useTimeFormat", () => {
 	});
 
 	it("should return default format if profile has not setting", () => {
-		const settingsSpy = jest.spyOn(profile.settings(), "get");
+		const settingsSpy = vi.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce();
 
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });

@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -42,9 +43,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
@@ -54,8 +53,6 @@ describe("ExchangeView", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -70,7 +67,7 @@ describe("ExchangeView", () => {
 	});
 
 	it.each(["light", "dark"])("should render %s theme", async (theme) => {
-		jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
+		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
 
 		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
 
@@ -89,9 +86,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();
@@ -118,9 +113,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("ExchangeForm")).not.toBeInTheDocument();
@@ -146,9 +139,7 @@ describe("ExchangeView", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(container).toHaveTextContent("world-map.svg");
-		});
+		expect(document.querySelector("svg#world-map")).toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm")).toBeVisible();

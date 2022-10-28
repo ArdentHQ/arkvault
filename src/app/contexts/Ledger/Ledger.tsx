@@ -12,5 +12,5 @@ export const LedgerProvider = ({ children }: Properties) => (
 	<LedgerContext.Provider value={useLedgerConnection()}>{children}</LedgerContext.Provider>
 );
 
-/* istanbul ignore next */
+/* istanbul ignore next -- @preserve */
 export const useLedgerContext = (): ReturnType<typeof useLedgerConnection> => useContext(LedgerContext);

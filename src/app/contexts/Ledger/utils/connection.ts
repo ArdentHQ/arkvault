@@ -1,4 +1,4 @@
-import retry from "async-retry";
+import retry, { AbortError, Options } from "p-retry";
 import { Coins } from "@ardenthq/sdk";
 import { formatLedgerDerivationPath } from "./format-ledger-derivation-path";
 import { hasRequiredAppVersion } from "./validation";
@@ -37,20 +37,20 @@ export const persistLedgerConnection = async ({
 	hasRequestedAbort,
 }: {
 	coin: Coins.Coin;
-	options: retry.Options;
+	options: Options;
 	hasRequestedAbort: () => boolean;
 }) => {
-	const retryAccess: retry.RetryFunction<void> = async (bail: (error: Error) => void, attempts: number) => {
+	const retryAccess: any = async (attempts: number) => {
 		if (hasRequestedAbort() && attempts > 1) {
-			bail(new Error("CONNECTION_ERROR"));
+			throw new AbortError("CONNECTION_ERROR");
 		}
 
 		try {
 			await accessLedgerApp({ coin });
 		} catch (error) {
-			// Bail on version error or continue retrying access.
+			// Abort on version error or continue retrying access.
 			if (error.message === "VERSION_ERROR") {
-				bail(new Error("VERSION_ERROR"));
+				throw new AbortError("VERSION_ERROR");
 			}
 
 			throw error;

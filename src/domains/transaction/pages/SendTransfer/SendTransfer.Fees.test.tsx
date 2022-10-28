@@ -1,18 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendTransfer } from "./SendTransfer";
-import { LedgerProvider } from "@/app/contexts";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
-import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -24,9 +19,15 @@ import {
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
@@ -65,9 +66,7 @@ const sendAllID = "AddRecipient__send-all";
 
 const history = createHashHistory();
 
-jest.setTimeout(20_000);
-
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -86,19 +85,37 @@ describe("SendTransfer Fee Handling", () => {
 
 		profile.coins().set("ARK", "ark.devnet");
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions?address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-			.reply(200, { data: [], meta: {} })
-			.get("/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877")
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"));
-
+		server.use(
+			requestMock("https://ark-live.arkvault.io/api/node/fees", nodeFeesFixture),
+			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
+		);
 		await syncFees(profile);
 	});
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+				transactionFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{ data: [], meta: {} },
+				{
+					query: {
+						limit: 20,
+						page: 1,
+						senderId: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+					},
+				},
+			),
+			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
+		);
 	});
 
 	afterEach(() => {
@@ -163,9 +180,9 @@ describe("SendTransfer Fee Handling", () => {
 
 		const selectedWallet = profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet")[0];
 
-		const selectedWalletSpy = jest.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const selectedWalletSpy = vi.spyOn(selectedWallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		const walletSyncSpy = jest.spyOn(selectedWallet.synchroniser(), "identity");
+		const walletSyncSpy = vi.spyOn(selectedWallet.synchroniser(), "identity");
 
 		render(
 			<Route path="/profiles/:profileId/send-transfer">
@@ -227,9 +244,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -284,9 +299,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -349,9 +362,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -363,7 +374,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
-		const goSpy = jest.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -419,8 +430,8 @@ describe("SendTransfer Fee Handling", () => {
 			network: "ark.devnet",
 		});
 
-		jest.spyOn(arkWallet, "balance").mockReturnValue(10);
-		jest.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(arkWallet, "balance").mockReturnValue(10);
+		vi.spyOn(arkWallet, "isDelegate").mockReturnValue(false);
 
 		profile.wallets().push(arkWallet);
 
@@ -428,15 +439,13 @@ describe("SendTransfer Fee Handling", () => {
 
 		history.push(transferURL);
 
-		const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: 0.1, isDynamic: true, max: 0.1, min: 0.1, static: 0.1 }),
 		});
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -446,7 +455,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkWallet.address()));
 
-		const goSpy = jest.spyOn(history, "go").mockImplementation();
+		const goSpy = vi.spyOn(history, "go").mockImplementation(vi.fn());
 
 		expect(backButton()).not.toHaveAttribute("disabled");
 
@@ -515,9 +524,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -592,9 +599,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-					<LedgerProvider>
-						<SendTransfer />
-					</LedgerProvider>
+					<SendTransfer />
 				</Route>,
 				{
 					history,
@@ -648,7 +653,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			userEvent.click(continueButton());
 
-			const profileSpy = jest.spyOn(profile.settings(), "set").mockImplementation();
+			const profileSpy = vi.spyOn(profile.settings(), "set").mockImplementation(vi.fn());
 
 			// Fee warning
 			await expect(screen.findByTestId("FeeWarning__suppressWarning-toggle")).resolves.toBeVisible();
@@ -676,9 +681,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -743,10 +746,10 @@ describe("SendTransfer Fee Handling", () => {
 		);
 
 		// Summary Step (skip ledger confirmation for now)
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signTransfer")
 			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [transactionFixture.data.id],
 			errors: {},
 			rejected: [],
@@ -765,7 +768,7 @@ describe("SendTransfer Fee Handling", () => {
 		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
-		const pushSpy = jest.spyOn(history, "push");
+		const pushSpy = vi.spyOn(history, "push");
 		userEvent.click(backToWalletButton());
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);

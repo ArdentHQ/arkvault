@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`UpdateWalletName should render 1`] = `
+exports[`UpdateWalletName > should render 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`UpdateWalletName should render 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -125,7 +142,7 @@ exports[`UpdateWalletName should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show an error message for duplicate name 1`] = `
+exports[`UpdateWalletName > should show an error message for duplicate name 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -155,8 +172,25 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -224,8 +258,36 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -269,7 +331,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 1`] = 
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show an error message for duplicate name 2`] = `
+exports[`UpdateWalletName > should show an error message for duplicate name 2`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -299,8 +361,25 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -368,8 +447,36 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -413,7 +520,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 2`] = 
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show an error message for duplicate name 3`] = `
+exports[`UpdateWalletName > should show an error message for duplicate name 3`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -443,8 +550,25 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -512,8 +636,36 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -557,7 +709,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 3`] = 
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show an error message for duplicate name 4`] = `
+exports[`UpdateWalletName > should show an error message for duplicate name 4`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -587,8 +739,25 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -656,8 +825,36 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -701,7 +898,7 @@ exports[`UpdateWalletName should show an error message for duplicate name 4`] = 
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show error message when name consists only of whitespace 1`] = `
+exports[`UpdateWalletName > should show error message when name consists only of whitespace 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -731,8 +928,25 @@ exports[`UpdateWalletName should show error message when name consists only of w
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -800,8 +1014,36 @@ exports[`UpdateWalletName should show error message when name consists only of w
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -845,7 +1087,7 @@ exports[`UpdateWalletName should show error message when name consists only of w
 </DocumentFragment>
 `;
 
-exports[`UpdateWalletName should show error message when name exceeds 42 characters 1`] = `
+exports[`UpdateWalletName > should show error message when name exceeds 42 characters 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -875,8 +1117,25 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -944,8 +1203,36 @@ exports[`UpdateWalletName should show error message when name exceeds 42 charact
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            circle-exclamation-mark.svg
+                          <svg
+                            id="circle-exclamation-mark"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle
+                                cx="10"
+                                cy="10"
+                                r="9"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 10.5v-5"
+                                stroke-linecap="round"
+                                stroke-miterlimit="10"
+                              />
+                              <path
+                                d="M10 14h0"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>

@@ -6,7 +6,7 @@ describe("ClickOutside Hook", () => {
 	it("should not call callback if clicked on target element", () => {
 		const element = document.body;
 		const reference = { current: element };
-		const callback = jest.fn();
+		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
 		userEvent.click(element);
@@ -18,7 +18,7 @@ describe("ClickOutside Hook", () => {
 		const div = document.createElement("div");
 		const reference = { current: div };
 
-		const callback = jest.fn();
+		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
 		userEvent.click(document.body);

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`LineGraph.helpers useLineGraph should assign full graph width to single graph segment 1`] = `
-Array [
-  Object {
+exports[`LineGraph.helpers > useLineGraph > should assign full graph width to single graph segment 1`] = `
+[
+  {
     "className": "fill-current text-theme-success-600",
     "height": 8,
     "rx": 4,
@@ -13,9 +13,9 @@ Array [
 ]
 `;
 
-exports[`LineGraph.helpers useLineGraph should plot data to svg rectangles needed to render the line 1`] = `
-Array [
-  Object {
+exports[`LineGraph.helpers > useLineGraph > should plot data to svg rectangles needed to render the line 1`] = `
+[
+  {
     "className": "fill-current text-theme-success-600",
     "height": 8,
     "rx": 4,
@@ -23,7 +23,7 @@ Array [
     "x": 0,
     "y": 8,
   },
-  Object {
+  {
     "className": "fill-current text-theme-warning-600",
     "height": 8,
     "rx": 4,
@@ -31,7 +31,7 @@ Array [
     "x": 50,
     "y": 8,
   },
-  Object {
+  {
     "className": "fill-current text-theme-info-600",
     "height": 8,
     "rx": 4,

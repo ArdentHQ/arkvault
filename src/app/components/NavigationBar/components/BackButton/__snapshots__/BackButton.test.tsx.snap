@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`BackButton should not redirect to given url when disabled 1`] = `
+exports[`BackButton > should not redirect to given url when disabled 1`] = `
 <div>
   <button
     class="css-11quel4"
@@ -11,15 +11,29 @@ exports[`BackButton should not redirect to given url when disabled 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>
 </div>
 `;
 
-exports[`BackButton should not redirect to previous page when disabled 1`] = `
+exports[`BackButton > should not redirect to previous page when disabled 1`] = `
 <div>
   <button
     class="css-11quel4"
@@ -30,15 +44,29 @@ exports[`BackButton should not redirect to previous page when disabled 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>
 </div>
 `;
 
-exports[`BackButton should redirect to given url 1`] = `
+exports[`BackButton > should redirect to given url 1`] = `
 <div>
   <button
     class="css-1v0i3m7"
@@ -48,15 +76,29 @@ exports[`BackButton should redirect to given url 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>
 </div>
 `;
 
-exports[`BackButton should redirect to previous page 1`] = `
+exports[`BackButton > should redirect to previous page 1`] = `
 <div>
   <button
     class="css-1v0i3m7"
@@ -66,15 +108,29 @@ exports[`BackButton should redirect to previous page 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>
 </div>
 `;
 
-exports[`BackButton should render 1`] = `
+exports[`BackButton > should render 1`] = `
 <div>
   <button
     class="css-1v0i3m7"
@@ -84,15 +140,29 @@ exports[`BackButton should render 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>
 </div>
 `;
 
-exports[`BackButton should render when disabled 1`] = `
+exports[`BackButton > should render when disabled 1`] = `
 <div>
   <button
     class="css-11quel4"
@@ -103,8 +173,22 @@ exports[`BackButton should render when disabled 1`] = `
       height="10"
       width="10"
     >
-      <svg>
-        chevron-left-small.svg
+      <svg
+        id="chevron-left-small"
+        viewBox="0 0 10 10"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <path
+          d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
       </svg>
     </div>
   </button>

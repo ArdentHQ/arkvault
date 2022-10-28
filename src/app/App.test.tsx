@@ -18,9 +18,9 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 
-jest.mock("@/domains/dashboard/routing", () => {
-	const page = require("@/domains/dashboard/pages/Dashboard");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/dashboard/routing", async () => {
+	const page = await vi.importActual("@/domains/dashboard/pages/Dashboard");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		DashboardRoutes: [
@@ -33,9 +33,9 @@ jest.mock("@/domains/dashboard/routing", () => {
 	};
 });
 
-jest.mock("@/domains/profile/routing", () => {
-	const page = require("@/domains/profile/pages/Welcome");
-	const { ProfilePaths } = require("@/router/paths");
+vi.mock("@/domains/profile/routing", async () => {
+	const page = await vi.importActual("@/domains/profile/pages/Welcome");
+	const { ProfilePaths } = await vi.importActual("@/router/paths");
 
 	return {
 		ProfileRoutes: [
@@ -57,14 +57,14 @@ describe("App", () => {
 	beforeAll(async () => {
 		passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
-		jest.spyOn(toasts, "dismiss").mockImplementation(jest.fn());
+		vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
 		// Mock synchronizer to avoid running any jobs in these tests.
 		process.env.MOCK_SYNCHRONIZER = "TRUE";
 	});
 
 	afterAll(() => {
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 		process.env.MOCK_SYNCHRONIZER = undefined;
 	});
 
@@ -74,7 +74,7 @@ describe("App", () => {
 	});
 
 	it("should render page skeleton", async () => {
-		const toastSuccessMock = jest.spyOn(toasts, "success").mockImplementation(jest.fn());
+		const toastSuccessMock = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.REACT_APP_IS_E2E = undefined;
 
@@ -137,7 +137,7 @@ describe("App", () => {
 	it("should render the offline screen if there is no internet connection", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		jest.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
+		vi.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
 		const { asFragment } = render(<App />, { history, withProviders: false });
 
@@ -150,9 +150,9 @@ describe("App", () => {
 	});
 
 	it("should render application error if the app fails to boot", async () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
-		const environmentSpy = jest.spyOn(Environment.prototype, "boot").mockImplementation(() => {
+		const environmentSpy = vi.spyOn(Environment.prototype, "boot").mockImplementation(() => {
 			throw new Error("failed to boot env");
 		});
 
@@ -217,14 +217,14 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
-		const verifyPasswordMock = jest.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = jest.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
+		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
 			throw new Error("password not found");
 		});
 
@@ -241,15 +241,15 @@ describe("App", () => {
 		"should set the theme based on system preferences (dark = %s)",
 		async (shouldUseDarkColors) => {
 			Object.defineProperty(window, "matchMedia", {
-				value: jest.fn().mockImplementation(() => ({
+				value: vi.fn().mockImplementation(() => ({
 					matches: shouldUseDarkColors,
 				})),
 			});
 
 			process.env.REACT_APP_IS_UNIT = "1";
 
-			const toastSpy = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-			const utilsSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
+			const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+			const utilsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
 			render(<App />, { history, withProviders: false });
 
@@ -284,20 +284,20 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
-		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
 
-		jest.restoreAllMocks();
+		toastSpy.mockRestore();
 	});
 
 	it("should enter profile and fail to restore", async () => {
@@ -307,7 +307,7 @@ describe("App", () => {
 		render(<App />, { history, withProviders: false });
 
 		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
 		).resolves.toBeVisible();
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
@@ -320,15 +320,15 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(passwordInput(), "password");
+		userEvent.paste(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
 		});
 
-		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
-		jest.spyOn(passwordProtectedProfile.password(), "get").mockImplementation(() => {
+		vi.spyOn(passwordProtectedProfile.password(), "get").mockImplementation(() => {
 			throw new Error("restore error");
 		});
 
@@ -336,6 +336,6 @@ describe("App", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
-		jest.restoreAllMocks();
+		toastSpy.mockRestore();
 	});
 });

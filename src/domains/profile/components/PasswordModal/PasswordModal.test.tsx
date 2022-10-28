@@ -7,11 +7,11 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("PasswordModal", () => {
 	beforeEach(() => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterAll(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should not render if not open", () => {
@@ -33,7 +33,7 @@ describe("PasswordModal", () => {
 	});
 
 	it("should submit", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 
 		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 

@@ -14,9 +14,9 @@ const getDefaultProperties = (): Omit<InputFeeProperties, "network" | "profile">
 	loading: false,
 	max: 0.5,
 	min: 0.006,
-	onChange: jest.fn(),
-	onChangeSimpleValue: jest.fn(),
-	onChangeViewType: jest.fn(),
+	onChange: vi.fn(),
+	onChangeSimpleValue: vi.fn(),
+	onChangeViewType: vi.fn(),
 	simpleValue: InputFeeSimpleValue.Average,
 	step: 0.001,
 	value: "0.3",
@@ -140,10 +140,10 @@ describe("InputFee", () => {
 		});
 
 		it("should display converted values when on live net", () => {
-			jest.spyOn(network, "isLive").mockReturnValueOnce(true);
+			vi.spyOn(network, "isLive").mockReturnValueOnce(true);
 
 			// use fiat currency for the converted balance
-			jest.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+			vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
 
 			const { asFragment } = render(<InputFee {...defaultProps} />);
 
@@ -166,10 +166,10 @@ describe("InputFee", () => {
 		it.each(["xs", "sm", "md", "lg", "xl"])(
 			"should render simple view with converted values in %s",
 			(breakpoint) => {
-				jest.spyOn(network, "isLive").mockReturnValueOnce(true);
+				vi.spyOn(network, "isLive").mockReturnValueOnce(true);
 
 				// use fiat currency for the converted balance
-				jest.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+				vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
 
 				const { asFragment } = renderResponsive(<InputFee {...defaultProps} />, breakpoint);
 
@@ -197,10 +197,10 @@ describe("InputFee", () => {
 
 		it.each([true, false])("should change fee option with converted values = %s", async (showConvertedValues) => {
 			if (showConvertedValues) {
-				jest.spyOn(network, "isLive").mockReturnValueOnce(true);
+				vi.spyOn(network, "isLive").mockReturnValueOnce(true);
 
 				// use fiat currency for the converted balance
-				jest.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+				vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
 			}
 
 			const { asFragment } = renderResponsive(<InputFee {...defaultProps} />, "xs");
@@ -220,7 +220,7 @@ describe("InputFee", () => {
 
 			expect(asFragment()).toMatchSnapshot();
 
-			jest.restoreAllMocks();
+			vi.restoreAllMocks();
 		});
 	});
 
@@ -371,9 +371,9 @@ describe("InputFee", () => {
 		it("should display converted value when on live net", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 
-			jest.spyOn(network, "isLive").mockReturnValueOnce(true);
+			vi.spyOn(network, "isLive").mockReturnValueOnce(true);
 
-			jest.spyOn(profile.settings(), "get").mockReturnValue("EUR");
+			vi.spyOn(profile.settings(), "get").mockReturnValue("EUR");
 
 			const { asFragment } = render(<InputFee {...defaultProps} />);
 

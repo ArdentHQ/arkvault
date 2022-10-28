@@ -8,7 +8,7 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 describe("ClipboardIcon", () => {
 	beforeAll(() => {
 		(navigator as any).clipboard = {
-			writeText: jest.fn().mockResolvedValue("test"),
+			writeText: vi.fn().mockResolvedValue("test"),
 		};
 	});
 

@@ -18,7 +18,7 @@ describe("Import Profile Select File Step", () => {
 	});
 
 	it("should render file selection for wwe and switch to json", () => {
-		const onFileFormatChange = jest.fn();
+		const onFileFormatChange = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".wwe" onFileFormatChange={onFileFormatChange} />);
 
@@ -29,7 +29,7 @@ describe("Import Profile Select File Step", () => {
 	});
 
 	it("should handle back event", () => {
-		const onBack = jest.fn();
+		const onBack = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".wwe" onBack={onBack} />);
 
@@ -40,7 +40,7 @@ describe("Import Profile Select File Step", () => {
 	});
 
 	it("should change back from json to wwe", () => {
-		const onFileFormatChange = jest.fn();
+		const onFileFormatChange = vi.fn();
 
 		const { container } = render(<SelectFileStep fileFormat=".json" onFileFormatChange={onFileFormatChange} />);
 

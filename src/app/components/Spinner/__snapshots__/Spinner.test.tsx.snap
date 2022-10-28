@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Spinner should render 1`] = `
+exports[`Spinner > should render 1`] = `
 <div>
   <div
     class="css-1v2j3qb"
@@ -9,7 +9,7 @@ exports[`Spinner should render 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a danger color 1`] = `
+exports[`Spinner > should render a danger color 1`] = `
 <div>
   <div
     class="css-nfd0mt"
@@ -18,7 +18,7 @@ exports[`Spinner should render a danger color 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a hint color 1`] = `
+exports[`Spinner > should render a hint color 1`] = `
 <div>
   <div
     class="css-13pcg61"
@@ -27,7 +27,7 @@ exports[`Spinner should render a hint color 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a info color 1`] = `
+exports[`Spinner > should render a info color 1`] = `
 <div>
   <div
     class="css-1v2j3qb"
@@ -36,7 +36,7 @@ exports[`Spinner should render a info color 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a large one 1`] = `
+exports[`Spinner > should render a large one 1`] = `
 <div>
   <div
     class="css-iepbhh"
@@ -45,7 +45,7 @@ exports[`Spinner should render a large one 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a small one 1`] = `
+exports[`Spinner > should render a small one 1`] = `
 <div>
   <div
     class="css-xvdci8"
@@ -54,7 +54,7 @@ exports[`Spinner should render a small one 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a success color 1`] = `
+exports[`Spinner > should render a success color 1`] = `
 <div>
   <div
     class="css-130bjqv"
@@ -63,7 +63,7 @@ exports[`Spinner should render a success color 1`] = `
 </div>
 `;
 
-exports[`Spinner should render a warning color 1`] = `
+exports[`Spinner > should render a warning color 1`] = `
 <div>
   <div
     class="css-1w7h9pk"

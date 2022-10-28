@@ -5,6 +5,7 @@ import { Cache } from "./Cache";
 
 type Primitive = null | undefined | string | number | boolean | symbol | bigint;
 
+/* istanbul ignore next -- @preserve */
 export class HttpClient extends Http.AbstractRequest {
 	private readonly cache: Cache;
 
@@ -14,7 +15,6 @@ export class HttpClient extends Http.AbstractRequest {
 		this.cache = new Cache(ttl);
 	}
 
-	/* istanbul ignore next */
 	public withSocksProxy(host: string): HttpClient {
 		this._options.agent = new SocksProxyAgent(host);
 

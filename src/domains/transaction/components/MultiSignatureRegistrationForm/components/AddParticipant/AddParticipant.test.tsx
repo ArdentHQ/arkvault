@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
@@ -12,6 +11,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const ARKTestURL = "https://ark-test.arkvault.io";
 const walletsURLPath = "/api/wallets";
@@ -32,8 +32,6 @@ describe("Add Participant", () => {
 	it("should fail to find", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
-
-		nock(ARKTestURL).get(walletsURLPath).query({ address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba" }).reply(404);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -67,13 +65,20 @@ describe("Add Participant", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(ARKTestURL)
-			.get(walletsURLPath)
-			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P" })
-			.reply(200, {
-				data: [coldWalletFixture.data],
-				meta: { count: 1, pageCount: 1, totalCount: 1 },
-			});
+		server.use(
+			requestMock(
+				`${ARKTestURL}${walletsURLPath}`,
+				{
+					data: [coldWalletFixture.data],
+					meta: { count: 1, pageCount: 1, totalCount: 1 },
+				},
+				{
+					query: {
+						address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+					},
+				},
+			),
+		);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -148,13 +153,20 @@ describe("Add Participant", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(ARKTestURL)
-			.get(walletsURLPath)
-			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20" })
-			.reply(200, {
-				data: [],
-				meta: { count: 0, pageCount: 1, totalCount: 0 },
-			});
+		server.use(
+			requestMock(
+				`${ARKTestURL}${walletsURLPath}`,
+				{
+					data: [],
+					meta: { count: 0, pageCount: 1, totalCount: 0 },
+				},
+				{
+					query: {
+						address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
+					},
+				},
+			),
+		);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -185,7 +197,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should work with an imported wallet", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<AddParticipant profile={profile} wallet={wallet} onChange={onChange} />
@@ -217,13 +229,12 @@ describe("Add Participant", () => {
 	});
 
 	it("should work with a remote wallet", async () => {
-		const scope = nock(ARKTestURL)
-			.get(walletsURLPath)
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+		server.use(
+			requestMock(`${ARKTestURL}${walletsURLPath}`, {
 				data: [walletFixture.data],
 				meta: { count: 1, pageCount: 1, totalCount: 1 },
-			});
+			}),
+		);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -243,8 +254,6 @@ describe("Add Participant", () => {
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
-
-		expect(scope.isDone()).toBe(true);
 	});
 
 	it("should render custom participants", () => {
@@ -270,13 +279,12 @@ describe("Add Participant", () => {
 	});
 
 	it("should clear participant field when address is added", async () => {
-		nock(ARKTestURL)
-			.get(walletsURLPath)
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+		server.use(
+			requestMock(`${ARKTestURL}${walletsURLPath}`, {
 				data: [walletFixture.data],
 				meta: { count: 1, pageCount: 1, totalCount: 1 },
-			});
+			}),
+		);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -311,7 +319,7 @@ describe("Add Participant", () => {
 	});
 
 	it("should remove participant", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId">

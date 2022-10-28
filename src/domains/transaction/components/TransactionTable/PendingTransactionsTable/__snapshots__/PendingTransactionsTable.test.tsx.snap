@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Signed Transaction Table should render different status should show as awaiting other wallets signatures 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as awaiting other wallets signatures 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -98,8 +98,22 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            sent.svg
+                          <svg
+                            id="sent"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </span>
@@ -112,8 +126,30 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            multisignature.svg
+                          <svg
+                            id="multi-signature"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                              />
+                              <g>
+                                <path
+                                  d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                                />
+                              </g>
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -175,8 +211,34 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock-pencil.svg
+                      <svg
+                        id="clock-pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10.418 10.418L9 9V6.067"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                            stroke-miterlimit="10"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -198,8 +260,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                     <span
@@ -219,7 +298,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as awaiting other wallets signatures 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as awaiting other wallets signatures 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -284,8 +363,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -348,8 +441,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -392,8 +499,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -428,8 +569,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -442,8 +597,30 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -470,8 +647,34 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock-pencil.svg
+                    <svg
+                      id="clock-pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M10.418 10.418L9 9V6.067"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                          stroke-miterlimit="10"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -518,8 +721,25 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -547,8 +767,37 @@ exports[`Signed Transaction Table should render different status should show as 
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -566,7 +815,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as awaiting the wallet signature 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as awaiting the wallet signature 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -664,8 +913,22 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            sent.svg
+                          <svg
+                            id="sent"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </span>
@@ -678,8 +941,30 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            multisignature.svg
+                          <svg
+                            id="multi-signature"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                              />
+                              <g>
+                                <path
+                                  d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                                />
+                              </g>
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -741,8 +1026,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        pencil.svg
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -764,8 +1063,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        pencil.svg
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                     <span>
@@ -786,8 +1099,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -802,7 +1132,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as awaiting the wallet signature 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as awaiting the wallet signature 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -867,8 +1197,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -931,8 +1275,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -975,8 +1333,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -1011,8 +1403,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1025,8 +1431,30 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1053,8 +1481,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      pencil.svg
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -1101,8 +1543,22 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          pencil.svg
+                        <svg
+                          id="pencil"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                       <span>
@@ -1123,8 +1579,25 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -1152,8 +1625,37 @@ exports[`Signed Transaction Table should render different status should show as 
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -1171,7 +1673,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as final signature 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as final signature 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1269,8 +1771,22 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            sent.svg
+                          <svg
+                            id="sent"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </span>
@@ -1283,8 +1799,30 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            multisignature.svg
+                          <svg
+                            id="multi-signature"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                              />
+                              <g>
+                                <path
+                                  d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                                />
+                              </g>
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -1346,8 +1884,33 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        circle-check-mark-pencil.svg
+                      <svg
+                        id="circle-check-mark-pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M12.2 5.889l-4.444 6.044a.579.579 0 0 1-.8.178l-.09-.089L5.8 10.778"
+                            stroke-linejoin="round"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -1372,8 +1935,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        double-arrow-right.svg
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1391,8 +1968,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1407,7 +2001,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as final signature 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as final signature 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1472,8 +2066,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1536,8 +2144,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -1580,8 +2202,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -1616,8 +2272,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1630,8 +2300,30 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -1658,8 +2350,33 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      circle-check-mark-pencil.svg
+                    <svg
+                      id="circle-check-mark-pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M12.2 5.889l-4.444 6.044a.579.579 0 0 1-.8.178l-.09-.089L5.8 10.778"
+                          stroke-linejoin="round"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -1709,8 +2426,22 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          double-arrow-right.svg
+                        <svg
+                          id="double-arrow-right"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1728,8 +2459,25 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -1757,8 +2505,37 @@ exports[`Signed Transaction Table should render different status should show as 
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -1776,7 +2553,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as multiSignature ready 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as multiSignature ready 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1874,8 +2651,22 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            sent.svg
+                          <svg
+                            id="sent"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </span>
@@ -1888,8 +2679,30 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            multisignature.svg
+                          <svg
+                            id="multi-signature"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                              />
+                              <g>
+                                <path
+                                  d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                                />
+                              </g>
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -1951,8 +2764,33 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        circle-check-mark-pencil.svg
+                      <svg
+                        id="circle-check-mark-pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M12.2 5.889l-4.444 6.044a.579.579 0 0 1-.8.178l-.09-.089L5.8 10.778"
+                            stroke-linejoin="round"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -1977,8 +2815,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        double-arrow-right.svg
+                      <svg
+                        id="double-arrow-right"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -1996,8 +2848,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2012,7 +2881,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as multiSignature ready 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as multiSignature ready 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2077,8 +2946,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2141,8 +3024,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2185,8 +3082,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -2221,8 +3152,22 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -2235,8 +3180,30 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2263,8 +3230,33 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      circle-check-mark-pencil.svg
+                    <svg
+                      id="circle-check-mark-pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M11.007 18.57L8 19l.43-2.884 7.548-7.61c.675-.675 1.78-.675 2.516 0 .675.675.675 1.78 0 2.516l-7.487 7.548z"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5 15.93A8 8 0 1 1 15.998 5.12"
+                          stroke-miterlimit="10"
+                        />
+                        <path
+                          d="M12.2 5.889l-4.444 6.044a.579.579 0 0 1-.8.178l-.09-.089L5.8 10.778"
+                          stroke-linejoin="round"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2314,8 +3306,22 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          double-arrow-right.svg
+                        <svg
+                          id="double-arrow-right"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2333,8 +3339,25 @@ exports[`Signed Transaction Table should render different status should show as 
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -2362,8 +3385,37 @@ exports[`Signed Transaction Table should render different status should show as 
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -2381,7 +3433,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as unvote 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as unvote 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2479,8 +3531,25 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            received.svg
+                          <svg
+                            id="received"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -2493,8 +3562,25 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            unvote.svg
+                          <svg
+                            id="unvote"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -2557,7 +3643,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as unvote 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as unvote 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2622,8 +3708,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2686,8 +3786,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -2730,8 +3844,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -2766,8 +3914,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2780,8 +3945,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        unvote.svg
+                      <svg
+                        id="unvote"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -2808,8 +3990,32 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -2853,7 +4059,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as vote 1`] = `
+exports[`Signed Transaction Table > should render different status > should show as vote 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2951,8 +4157,25 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            received.svg
+                          <svg
+                            id="received"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -2965,8 +4188,28 @@ exports[`Signed Transaction Table should render different status should show as 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            vote.svg
+                          <svg
+                            id="vote"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                              />
+                              <path
+                                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -3029,7 +4272,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show as vote 2`] = `
+exports[`Signed Transaction Table > should render different status > should show as vote 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -3094,8 +4337,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3158,8 +4415,22 @@ exports[`Signed Transaction Table should render different status should show as 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3202,8 +4473,42 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -3238,8 +4543,25 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3252,8 +4574,28 @@ exports[`Signed Transaction Table should render different status should show as 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        vote.svg
+                      <svg
+                        id="vote"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                          />
+                          <path
+                            d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3280,8 +4622,32 @@ exports[`Signed Transaction Table should render different status should show as 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3325,7 +4691,7 @@ exports[`Signed Transaction Table should render different status should show as 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show unconfirmed multiSignature transactions 1`] = `
+exports[`Signed Transaction Table > should render different status > should show unconfirmed multiSignature transactions 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -3423,8 +4789,22 @@ exports[`Signed Transaction Table should render different status should show unc
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            sent.svg
+                          <svg
+                            id="sent"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                       </span>
@@ -3437,8 +4817,30 @@ exports[`Signed Transaction Table should render different status should show unc
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            multisignature.svg
+                          <svg
+                            id="multi-signature"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                              />
+                              <g>
+                                <path
+                                  d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                                />
+                              </g>
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -3500,8 +4902,32 @@ exports[`Signed Transaction Table should render different status should show unc
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        clock.svg
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -3523,8 +4949,22 @@ exports[`Signed Transaction Table should render different status should show unc
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        pencil.svg
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                     <span>
@@ -3545,8 +4985,25 @@ exports[`Signed Transaction Table should render different status should show unc
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        trash.svg
+                      <svg
+                        id="trash"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3561,7 +5018,7 @@ exports[`Signed Transaction Table should render different status should show unc
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render different status should show unconfirmed multiSignature transactions 2`] = `
+exports[`Signed Transaction Table > should render different status > should show unconfirmed multiSignature transactions 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -3626,8 +5083,22 @@ exports[`Signed Transaction Table should render different status should show unc
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3690,8 +5161,22 @@ exports[`Signed Transaction Table should render different status should show unc
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -3734,8 +5219,42 @@ exports[`Signed Transaction Table should render different status should show unc
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -3770,8 +5289,22 @@ exports[`Signed Transaction Table should render different status should show unc
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3784,8 +5317,30 @@ exports[`Signed Transaction Table should render different status should show unc
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -3812,8 +5367,32 @@ exports[`Signed Transaction Table should render different status should show unc
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -3860,8 +5439,22 @@ exports[`Signed Transaction Table should render different status should show unc
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          pencil.svg
+                        <svg
+                          id="pencil"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                       <span>
@@ -3882,8 +5475,25 @@ exports[`Signed Transaction Table should render different status should show unc
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -3911,8 +5521,37 @@ exports[`Signed Transaction Table should render different status should show unc
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -3930,7 +5569,7 @@ exports[`Signed Transaction Table should render different status should show unc
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render pending transfers on mobile 1`] = `
+exports[`Signed Transaction Table > should render pending transfers on mobile 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -4028,8 +5667,25 @@ exports[`Signed Transaction Table should render pending transfers on mobile 1`] 
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            received.svg
+                          <svg
+                            id="received"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -4110,7 +5766,7 @@ exports[`Signed Transaction Table should render pending transfers on mobile 1`] 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render pending transfers when isCompact = false 1`] = `
+exports[`Signed Transaction Table > should render pending transfers when isCompact = false 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -4175,8 +5831,22 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4239,8 +5909,22 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4283,8 +5967,42 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -4319,8 +6037,25 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4365,8 +6100,32 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4410,7 +6169,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render pending transfers when isCompact = true 1`] = `
+exports[`Signed Transaction Table > should render pending transfers when isCompact = true 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -4475,8 +6234,22 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4539,8 +6312,22 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4583,8 +6370,42 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -4619,8 +6440,25 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -4665,8 +6503,32 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -4710,7 +6572,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render ready to broadcast transactions 1`] = `
+exports[`Signed Transaction Table > should render ready to broadcast transactions 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -4775,8 +6637,22 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4839,8 +6715,22 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -4883,8 +6773,42 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -4919,8 +6843,22 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -4933,8 +6871,30 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -4961,8 +6921,22 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      pencil.svg
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -5012,8 +6986,22 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          double-arrow-right.svg
+                        <svg
+                          id="double-arrow-right"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -5031,8 +7019,25 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -5060,8 +7065,37 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -5079,7 +7113,7 @@ exports[`Signed Transaction Table should render ready to broadcast transactions 
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should render signed transactions and handle exception 1`] = `
+exports[`Signed Transaction Table > should render signed transactions and handle exception 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -5144,8 +7178,22 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -5208,8 +7256,22 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -5252,8 +7314,42 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -5288,8 +7384,22 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -5302,8 +7412,30 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -5330,8 +7462,22 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      pencil.svg
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -5378,8 +7524,25 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -5407,8 +7570,37 @@ exports[`Signed Transaction Table should render signed transactions and handle e
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -5426,7 +7618,7 @@ exports[`Signed Transaction Table should render signed transactions and handle e
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
+exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -5491,8 +7683,22 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -5555,8 +7761,22 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -5599,8 +7819,42 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -5635,8 +7889,25 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        received.svg
+                      <svg
+                        id="received"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                          />
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -5681,8 +7952,32 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      clock.svg
+                    <svg
+                      id="clock"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        transform="translate(1.5 1.5)"
+                      >
+                        <circle
+                          cx="8.5"
+                          cy="8.5"
+                          r="9"
+                        />
+                        <path
+                          d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </span>
@@ -5726,7 +8021,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should show as awaiting confirmations on mobile 1`] = `
+exports[`Signed Transaction Table > should show as awaiting confirmations on mobile 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -5824,8 +8119,25 @@ exports[`Signed Transaction Table should show as awaiting confirmations on mobil
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            received.svg
+                          <svg
+                            id="received"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </span>
@@ -5906,7 +8218,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations on mobil
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should show the sign button with isCompact = false 1`] = `
+exports[`Signed Transaction Table > should show the sign button with isCompact = false 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -5971,8 +8283,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -6035,8 +8361,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -6079,8 +8419,42 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -6115,8 +8489,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -6129,8 +8517,30 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -6157,8 +8567,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      pencil.svg
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -6205,8 +8629,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          pencil.svg
+                        <svg
+                          id="pencil"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                       <span>
@@ -6227,8 +8665,25 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -6256,8 +8711,37 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -6275,7 +8759,7 @@ exports[`Signed Transaction Table should show the sign button with isCompact = f
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table should show the sign button with isCompact = true 1`] = `
+exports[`Signed Transaction Table > should show the sign button with isCompact = true 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -6340,8 +8824,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -6404,8 +8902,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     role="img"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -6448,8 +8960,42 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     height="16"
                     width="16"
                   >
-                    <svg>
-                      magnifying-glass-id.svg
+                    <svg
+                      id="magnifying-glass-id"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M19 17l-3.172-3.172"
+                        />
+                        <circle
+                          cx="13"
+                          cy="11"
+                          r="4"
+                        />
+                      </g>
+                      <path
+                        d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -6484,8 +9030,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        sent.svg
+                      <svg
+                        id="sent"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -6498,8 +9058,30 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        multisignature.svg
+                      <svg
+                        id="multi-signature"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M3.1 9.65c1.1 0 2.1-1 2.1-2.1s-1-2.1-2.1-2.1-2.1 1-2.1 2.1.9 2.1 2.1 2.1h0zM6.4 13.25c-.8-1.8-2.9-2.6-4.7-1.9-.2.1-.5.2-.7.4M16.9 9.65c-1.1 0-2.1-1-2.1-2.1s1-2.1 2.1-2.1 2.1 1 2.1 2.1-.9 2.1-2.1 2.1h0zM13.6 13.25c.8-1.8 2.9-2.6 4.7-1.9.2.1.5.2.7.4"
+                          />
+                          <g>
+                            <path
+                              d="M14.75 15.75c-.3-2.6-2.8-4.5-5.4-4.1-2.2.3-3.8 2-4.1 4.1M10.003 9.65c1.5 0 2.7-1.2 2.7-2.7s-1.2-2.7-2.7-2.7-2.7 1.2-2.7 2.7h0c-.1 1.5 1.1 2.7 2.7 2.7z"
+                            />
+                          </g>
+                        </g>
                       </svg>
                     </div>
                   </span>
@@ -6526,8 +9108,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      pencil.svg
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </span>
@@ -6574,8 +9170,22 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          pencil.svg
+                        <svg
+                          id="pencil"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                       <span>
@@ -6596,8 +9206,25 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          trash.svg
+                        <svg
+                          id="trash"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -6625,8 +9252,37 @@ exports[`Signed Transaction Table should show the sign button with isCompact = t
                             height="20"
                             width="20"
                           >
-                            <svg>
-                              ellipsis-vertical.svg
+                            <svg
+                              id="ellipsis-vertical"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <circle
+                                  cx="10"
+                                  cy="16.994"
+                                  r="2.006"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="3"
+                                  r="2"
+                                />
+                                <circle
+                                  cx="10"
+                                  cy="10"
+                                  r="2"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>

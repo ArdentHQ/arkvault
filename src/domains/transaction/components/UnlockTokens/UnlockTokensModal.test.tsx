@@ -3,16 +3,15 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
-import { LedgerProvider } from "@/app/contexts";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
 
@@ -32,8 +31,6 @@ describe("UnlockTokensModal", () => {
 	};
 
 	beforeAll(async () => {
-		nock.disableNetConnect();
-
 		profile = await env.profiles().create("empty");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -42,13 +39,13 @@ describe("UnlockTokensModal", () => {
 			network: "ark.devnet",
 		});
 
-		jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: fee, max: fee, min: fee, static: fee }),
 		});
 
 		// items mock
 
-		jest.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
+		vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
 			objects: [unlockableBalanceItemMock],
 			pending: BigNumber.make(0),
@@ -56,14 +53,14 @@ describe("UnlockTokensModal", () => {
 
 		// wallet mocks
 
-		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-		jest.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
-		jest.spyOn(wallet, "isDelegate").mockReturnValue(false);
-		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isDelegate").mockReturnValue(false);
+		vi.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
 
 		// transaction mocks
 
-		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 			amount: () => 30,
 			convertedAmount: () => 0,
 			convertedFee: () => 0,
@@ -80,14 +77,16 @@ describe("UnlockTokensModal", () => {
 		} as any);
 	});
 
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
+	});
+
 	it("should render", async () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<LedgerProvider>
-					<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
-				</LedgerProvider>
+				<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -106,9 +105,7 @@ describe("UnlockTokensModal", () => {
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
-				<LedgerProvider>
-					<UnlockTokensModal wallet={wallet} onClose={jest.fn()} profile={profile} />
-				</LedgerProvider>
+				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
 			</Route>,
 			{
 				route: `/profiles/${profile.id()}`,
@@ -184,11 +181,11 @@ describe("UnlockTokensModal", () => {
 
 		// send transaction
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signUnlockToken")
 			.mockResolvedValue(transactionFixture.data.id);
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
 						accepted: [transactionFixture.data.id],

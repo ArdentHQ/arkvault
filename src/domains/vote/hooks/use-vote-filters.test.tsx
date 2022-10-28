@@ -57,7 +57,7 @@ describe("Use Vote Filters", () => {
 			coin: "ARK",
 			network: "ark.mainnet",
 		});
-		const profileWalletsSpy = jest.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
+		const profileWalletsSpy = vi.spyOn(profile.wallets(), "values").mockReturnValue([arkMainWallet]);
 
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 

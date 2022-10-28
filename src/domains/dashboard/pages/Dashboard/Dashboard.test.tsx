@@ -1,24 +1,27 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { Dashboard } from "./Dashboard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
+
 import {
 	env,
 	getDefaultProfileId,
 	render,
 	screen,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { requestMock, server } from "@/tests/mocks/server";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -28,33 +31,22 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 let mockTransactionsAggregate;
 
-jest.mock("@/utils/delay", () => ({
-	delay: (callback: () => void) => callback(),
-}));
-
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(0, 2),
-					meta,
-				};
-			})
-			.persist();
-
-		nock("https://neoscan.io/api/main_net/v1/")
-			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-			.reply(200, []);
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: devnetTransactionsFixture.data.slice(0, 2),
+				meta: devnetTransactionsFixture.meta,
+			}),
+			requestMock("https://ark-live.arkvault.io/api/transactions", {
+				data: [],
+				meta: mainnetTransactionsFixture.meta,
+			}),
+		);
 
 		profile = env.profiles().findById(fixtureProfileId);
 
@@ -71,14 +63,12 @@ describe("Dashboard", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		useDefaultNetMocks();
-
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 
 		const all = await profile.transactionAggregate().all({ limit: 10 });
 		const transactions = all.items();
 
-		mockTransactionsAggregate = jest
+		mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => transactions } as any));
 	});
@@ -125,7 +115,7 @@ describe("Dashboard", () => {
 	});
 
 	it("should show introductory tutorial", async () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">

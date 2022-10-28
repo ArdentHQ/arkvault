@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 import { CsvFormatter } from "./transaction-csv-formatter.factory";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 
@@ -21,26 +20,13 @@ describe("CsvFormatter", () => {
 	});
 
 	beforeEach(async () => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data,
-					meta,
-				};
-			});
-
 		const transactions = await profile.wallets().first().transactionIndex().all();
 		transaction = transactions.first();
 		fields = CsvFormatter(transaction, "HH");
 	});
 
 	afterEach(() => {
-		jest.resetAllMocks();
+		vi.resetAllMocks();
 	});
 
 	it("should format transaction fields for transfer type", () => {
@@ -58,7 +44,7 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should set amount to for transfer type if sender is recipient", () => {
-		jest.spyOn(transaction, "recipient").mockReturnValue(transaction.sender());
+		vi.spyOn(transaction, "recipient").mockReturnValue(transaction.sender());
 
 		const fields = CsvFormatter(transaction, "HH");
 
@@ -68,8 +54,8 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format transaction fields for multipayment type", () => {
-		jest.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
-		jest.spyOn(transaction, "recipients").mockReturnValue([
+		vi.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
+		vi.spyOn(transaction, "recipients").mockReturnValue([
 			{
 				address: transaction.wallet().address(),
 				amount: 1,
@@ -83,8 +69,8 @@ describe("CsvFormatter", () => {
 				amount: 10,
 			},
 		]);
-		jest.spyOn(transaction, "sender").mockReturnValue(profile.wallets().first().address());
-		jest.spyOn(transaction, "isSent").mockReturnValue(true);
+		vi.spyOn(transaction, "sender").mockReturnValue(profile.wallets().first().address());
+		vi.spyOn(transaction, "isSent").mockReturnValue(true);
 
 		const fields = CsvFormatter(transaction, "HH");
 
@@ -102,8 +88,8 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format multipayment transaction fields for recipient wallet", () => {
-		jest.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
-		jest.spyOn(transaction, "recipients").mockReturnValue([
+		vi.spyOn(transaction, "isMultiPayment").mockReturnValue(true);
+		vi.spyOn(transaction, "recipients").mockReturnValue([
 			{
 				address: transaction.wallet().address(),
 				amount: 1,
@@ -134,8 +120,8 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format transaction fields for vote type", () => {
-		jest.spyOn(transaction, "isTransfer").mockReturnValue(false);
-		jest.spyOn(transaction, "isVote").mockReturnValue(true);
+		vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
+		vi.spyOn(transaction, "isVote").mockReturnValue(true);
 
 		expect(fields.amount()).toBe(400_000);
 		expect(fields.convertedAmount()).toBe(0);
@@ -151,9 +137,9 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format transaction fields for unvote type", () => {
-		jest.spyOn(transaction, "isTransfer").mockReturnValue(false);
-		jest.spyOn(transaction, "isVote").mockReturnValue(false);
-		jest.spyOn(transaction, "isUnvote").mockReturnValue(true);
+		vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
+		vi.spyOn(transaction, "isVote").mockReturnValue(false);
+		vi.spyOn(transaction, "isUnvote").mockReturnValue(true);
 
 		expect(fields.amount()).toBe(400_000);
 		expect(fields.convertedAmount()).toBe(0);
@@ -169,8 +155,8 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should format transaction other types", () => {
-		jest.spyOn(transaction, "isTransfer").mockReturnValue(false);
-		jest.spyOn(transaction, "isVote").mockReturnValue(false);
+		vi.spyOn(transaction, "isTransfer").mockReturnValue(false);
+		vi.spyOn(transaction, "isVote").mockReturnValue(false);
 
 		expect(fields.amount()).toBe(400_000);
 		expect(fields.convertedAmount()).toBe(0);
@@ -186,7 +172,7 @@ describe("CsvFormatter", () => {
 	});
 
 	it("should use zero rate if tranraction total is zero", () => {
-		jest.spyOn(transaction, "total").mockReturnValue(0);
+		vi.spyOn(transaction, "total").mockReturnValue(0);
 
 		expect(CsvFormatter(transaction, "HH").rate()).toBe(0);
 	});

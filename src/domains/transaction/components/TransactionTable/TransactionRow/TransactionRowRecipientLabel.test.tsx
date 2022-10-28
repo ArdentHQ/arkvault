@@ -48,7 +48,7 @@ describe("TransactionRowRecipientLabel", () => {
 	});
 
 	describe("Votes", () => {
-		jest.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
+		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
 					// @ts-ignore

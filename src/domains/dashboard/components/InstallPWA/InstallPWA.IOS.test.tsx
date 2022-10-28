@@ -3,11 +3,11 @@ import userEvent from "@testing-library/user-event";
 import { InstallPWA } from "./InstallPWA";
 import { render, screen, act } from "@/utils/testing-library";
 
-let navigatorSpy: jest.SpyInstance;
+let navigatorSpy: vi.SpyInstance;
 
 describe("InstallPWA IOS", () => {
 	beforeEach(() => {
-		navigatorSpy = jest
+		navigatorSpy = vi
 			.spyOn(navigator, "userAgent", "get")
 			.mockReturnValue(
 				"Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Mobile/15E148 Safari/604.1",
@@ -25,13 +25,13 @@ describe("InstallPWA IOS", () => {
 	});
 
 	it("should show ios instructions when clicking install", async () => {
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		render(<InstallPWA />);
 
-		const promptFunction = jest.fn().mockResolvedValue({});
+		const promptFunction = vi.fn().mockResolvedValue({});
 
 		const event = new Event("beforeinstallprompt") as any;
 
@@ -54,13 +54,13 @@ describe("InstallPWA IOS", () => {
 	});
 
 	it("should show ios instructions when clicking install and close", async () => {
-		jest.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
+		vi.spyOn(Storage.prototype, "getItem").mockReturnValueOnce(undefined);
 
-		const localstorageSpy = jest.spyOn(Storage.prototype, "setItem");
+		const localstorageSpy = vi.spyOn(Storage.prototype, "setItem");
 
 		render(<InstallPWA />);
 
-		const promptFunction = jest.fn().mockResolvedValue({});
+		const promptFunction = vi.fn().mockResolvedValue({});
 
 		const event = new Event("beforeinstallprompt") as any;
 

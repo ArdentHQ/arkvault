@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ListDivided should render an empty list divided 1`] = `
+exports[`ListDivided > should render an empty list divided 1`] = `
 <DocumentFragment>
   <span
     data-testid="list-divided__empty"
@@ -10,7 +10,7 @@ exports[`ListDivided should render an empty list divided 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ListDivided should render an list divided with lastBorder = false 1`] = `
+exports[`ListDivided > should render an list divided with lastBorder = false 1`] = `
 <DocumentFragment>
   <ul
     class="css-14npy8n"
@@ -71,7 +71,7 @@ exports[`ListDivided should render an list divided with lastBorder = false 1`] =
 </DocumentFragment>
 `;
 
-exports[`ListDivided should render an list divided with lastBorder = true 1`] = `
+exports[`ListDivided > should render an list divided with lastBorder = true 1`] = `
 <DocumentFragment>
   <ul
     class="css-slpw39"

@@ -39,7 +39,7 @@ const validateAddress = async ({
 			}).toString()
 		);
 	} catch (error) {
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		return error.message;
 	}
 };
@@ -167,7 +167,7 @@ const ImportInputField = ({
 				const { address } = await coin.address().fromMnemonic(value);
 				return address;
 			} catch {
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_MNEMONIC"));
 			}
 		};
@@ -202,7 +202,7 @@ const ImportInputField = ({
 						const { address } = await coin.address().fromPrivateKey(value);
 						return address;
 					} catch {
-						/* istanbul ignore next */
+						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_PRIVATE_KEY"));
 					}
 				}}
@@ -222,7 +222,7 @@ const ImportInputField = ({
 						const { address } = await coin.address().fromWIF(value);
 						return address;
 					} catch {
-						/* istanbul ignore next */
+						/* istanbul ignore next -- @preserve */
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_WIF"));
 					}
 				}}
@@ -270,7 +270,7 @@ const ImportInputField = ({
 					const { address } = await coin.address().fromSecret(value);
 					return address;
 				} catch {
-					/* istanbul ignore next */
+					/* istanbul ignore next -- @preserve */
 					throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
 				}
 			}}

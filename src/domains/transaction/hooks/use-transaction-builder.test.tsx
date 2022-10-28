@@ -4,30 +4,31 @@ import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
-import { LedgerProvider } from "@/app/contexts";
 import {
-	defaultNetMocks,
 	env,
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
+	triggerMessageSignOnce,
 	WithProviders,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	const wrapper = ({ children }: any) => (
-		<WithProviders>
-			<LedgerProvider>{children}</LedgerProvider>
-		</WithProviders>
-	);
+	const wrapper = ({ children }: any) => <WithProviders>{children}</WithProviders>;
 
 	beforeAll(async () => {
-		defaultNetMocks();
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
 		await profile.sync();
+
+		await triggerMessageSignOnce(wallet);
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should sign transfer", async () => {
@@ -57,8 +58,8 @@ describe("Use Transaction Builder Hook", () => {
 	it("should sign transfer with multisignature wallet", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
-		jest.spyOn(wallet.multiSignature(), "all").mockReturnValue({
+		vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
+		vi.spyOn(wallet.multiSignature(), "all").mockReturnValue({
 			min: 2,
 			publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
 		});
@@ -83,6 +84,6 @@ describe("Use Transaction Builder Hook", () => {
 
 		expect(transaction.id()).toBe("6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

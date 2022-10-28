@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionVotes should render loading state 1`] = `
+exports[`TransactionVotes > should render loading state 1`] = `
 <div>
   <div
     class="flex items-center justify-between border-t border-dashed border-theme-secondary-300 py-6 dark:border-theme-secondary-800"
@@ -53,7 +53,7 @@ exports[`TransactionVotes should render loading state 1`] = `
 </div>
 `;
 
-exports[`TransactionVotes should render with multiple votes and unvotes 1`] = `
+exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -276,7 +276,7 @@ exports[`TransactionVotes should render with multiple votes and unvotes 1`] = `
 </div>
 `;
 
-exports[`TransactionVotes should render with unvotes 1`] = `
+exports[`TransactionVotes > should render with unvotes 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -347,7 +347,7 @@ exports[`TransactionVotes should render with unvotes 1`] = `
 </div>
 `;
 
-exports[`TransactionVotes should render with votes 1`] = `
+exports[`TransactionVotes > should render with votes 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -418,7 +418,7 @@ exports[`TransactionVotes should render with votes 1`] = `
 </div>
 `;
 
-exports[`TransactionVotes should render with votes and unvotes 1`] = `
+exports[`TransactionVotes > should render with votes and unvotes 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"

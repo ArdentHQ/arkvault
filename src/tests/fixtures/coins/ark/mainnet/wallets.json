@@ -1,0 +1,72 @@
+{
+	"meta": {
+		"totalCountIsEstimate": false,
+		"count": 5,
+		"pageCount": 1,
+		"totalCount": 5,
+		"next": "/wallets?page=2",
+		"previous": null,
+		"self": "/wallets?page=1",
+		"first": "/wallets?page=1",
+		"last": "/wallets?page=1"
+	},
+	"data": [
+		{
+			"address": "AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW",
+			"publicKey": "02956549fc7ee3e5271f6c410d5dc56afda419433a1c99b6795404a352e2b7163f",
+			"balance": "5589889651984987",
+			"nonce": "100",
+			"attributes": {}
+		},
+		{
+			"address": "AXzxJ8Ts3dQ2bvBR1tPE7GUee9iSEJb8HX",
+			"publicKey": "03da05c1c1d4f9c6bda13695b2f29fbc65d9589edc070fc61fe97974be3e59c14e",
+			"balance": "1729099723148832",
+			"nonce": "7",
+			"attributes": {
+				"multiSignature": {
+					"publicKeys": [
+						"02fb3def2593a00c5b84620addf28ff21bac452bd71a37d4d8e24f301683a81b56",
+						"02bc9f661fcc8abca65fe9aff4614036867b7fdcc5730085ccc5cb854664d0194b",
+						"03c44c6b6cc9893ae21ca606712fd0f6f03c41ce81c4f6ce5a640f4b0b82ec1ce0",
+						"020300039e973baf5e46b945777cfae330d6392cdb039b1cebc5c3382d421166c3",
+						"03b050073621b9b5caec9461d44d6bcf21a858c47dd88230ce723e25c1bc75c219"
+					],
+					"min": 3
+				}
+			}
+		},
+		{
+			"address": "AHJJ29sCdR5UNZjdz3BYeDpvvkZCGBjde9",
+			"publicKey": "02d29ba7ebe8823137f31ed8e71288274a1cefa23a98a94fa62d4124817d58b777",
+			"balance": "874989914806053",
+			"nonce": "2",
+			"attributes": {
+				"multiSignature": {
+					"publicKeys": [
+						"02fb3def2593a00c5b84620addf28ff21bac452bd71a37d4d8e24f301683a81b56",
+						"03b050073621b9b5caec9461d44d6bcf21a858c47dd88230ce723e25c1bc75c219",
+						"020300039e973baf5e46b945777cfae330d6392cdb039b1cebc5c3382d421166c3",
+						"02d765205372ef417252594cf735b9c3ce800e1170403274af8320127b8fe2956d",
+						"03c44c6b6cc9893ae21ca606712fd0f6f03c41ce81c4f6ce5a640f4b0b82ec1ce0"
+					],
+					"min": 3
+				}
+			}
+		},
+		{
+			"address": "Aakg29vVhQhJ5nrsAHysTUqkTBVfmgBSXU",
+			"publicKey": "0394e9f4d4eb47e8cbfda6e0d1a4082973ae178e3a60662ac84591c39d06e059f5",
+			"balance": "789617736902791",
+			"nonce": "88",
+			"attributes": {}
+		},
+		{
+			"address": "AdS7WvzqusoP759qRo6HDmUz2L34u4fMHz",
+			"publicKey": "03e7635481b035149829ef74f972e69eca75363bc96e75be57579b0e6fb3f22192",
+			"balance": "704874100000001",
+			"nonce": "25",
+			"attributes": {}
+		}
+	]
+}

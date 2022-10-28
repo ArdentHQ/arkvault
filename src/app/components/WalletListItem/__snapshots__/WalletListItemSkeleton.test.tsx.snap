@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = false 1`] = `
+exports[`WalletListItemSkeleton > should render wallet list skeleton when isCompact = false 1`] = `
 <div>
   <table>
     <tbody
@@ -153,8 +153,37 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -168,7 +197,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
 </div>
 `;
 
-exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = true 1`] = `
+exports[`WalletListItemSkeleton > should render wallet list skeleton when isCompact = true 1`] = `
 <div>
   <table>
     <tbody
@@ -321,8 +350,37 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>

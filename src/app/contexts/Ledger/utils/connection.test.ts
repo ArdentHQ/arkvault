@@ -6,7 +6,7 @@ import { env, getDefaultProfileId, mockNanoXTransport } from "@/utils/testing-li
 describe("Ledger Device Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let ledgerListenSpy: jest.SpyInstance;
+	let ledgerListenSpy: vi.SpyInstance;
 	let publicKeyPaths: Map<string, string>;
 
 	beforeAll(async () => {
@@ -40,7 +40,7 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should connect if device is already open", async () => {
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("The device is already open.");
 			});
 
@@ -50,7 +50,7 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should throw on unknown connection error", async () => {
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("Connection error");
 			});
 
@@ -62,11 +62,11 @@ describe("Ledger Device Connection", () => {
 
 	describe("Access Ledger App", () => {
 		it("should connect to ledger app", async () => {
-			const publicKeySpy = jest
+			const publicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(accessLedgerApp({ coin: wallet.coin() })).resolves.not.toThrow();
 
@@ -75,7 +75,7 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should throw version error", async () => {
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
 
 			await expect(accessLedgerApp({ coin: wallet.coin() })).rejects.toThrow("VERSION_ERROR");
 
@@ -85,11 +85,11 @@ describe("Ledger Device Connection", () => {
 
 	describe("Persist Ledger Connection", () => {
 		it("should connect to ledger app without retries", async () => {
-			const publicKeySpy = jest
+			const publicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({
@@ -104,15 +104,15 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should bail if requested abort", async () => {
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("Unknown Error");
 			});
 
-			const publicKeySpy = jest
+			const publicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({
@@ -128,11 +128,11 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should abort retries if version error", async () => {
-			const publicKeySpy = jest
+			const publicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("1.3.0");
 
 			await expect(
 				persistLedgerConnection({
@@ -147,15 +147,15 @@ describe("Ledger Device Connection", () => {
 		});
 
 		it("should abort after reaching max retries", async () => {
-			const connectSpy = jest.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
+			const connectSpy = vi.spyOn(wallet.coin().ledger(), "connect").mockImplementation(() => {
 				throw new Error("Unknown Error");
 			});
 
-			const publicKeySpy = jest
+			const publicKeySpy = vi
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
 				.mockResolvedValue(publicKeyPaths.values().next().value);
 
-			const versionSpy = jest.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
+			const versionSpy = vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue("2.3.0");
 
 			await expect(
 				persistLedgerConnection({

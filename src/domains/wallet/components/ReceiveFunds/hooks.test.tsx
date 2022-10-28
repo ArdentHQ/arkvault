@@ -22,7 +22,7 @@ const renderQRCode = () =>
 	);
 
 describe("useQRCode hook", () => {
-	let darkModeSpy: jest.SpyInstance;
+	let darkModeSpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		Object.defineProperty(window, "location", {
@@ -33,7 +33,7 @@ describe("useQRCode hook", () => {
 	});
 
 	beforeEach(() => {
-		darkModeSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(false);
+		darkModeSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(false);
 	});
 
 	afterEach(() => {
@@ -41,7 +41,7 @@ describe("useQRCode hook", () => {
 	});
 
 	it.each([false, true])("should generate qr code in darkMode = %s", async (shouldUseDarkColors) => {
-		const themeSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
+		const themeSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
 		const { result, waitForNextUpdate } = renderQRCode();
 
@@ -63,7 +63,7 @@ describe("useQRCode hook", () => {
 
 		await waitForNextUpdate();
 
-		const darkColorsMock = jest.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(true);
+		const darkColorsMock = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(true);
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>

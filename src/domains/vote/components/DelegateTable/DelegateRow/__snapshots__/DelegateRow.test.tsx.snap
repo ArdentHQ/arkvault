@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DelegateRow should emit action on select button 1`] = `
+exports[`DelegateRow > should emit action on select button 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -59,8 +59,22 @@ exports[`DelegateRow should emit action on select button 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -84,8 +98,27 @@ exports[`DelegateRow should emit action on select button 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -112,8 +145,22 @@ exports[`DelegateRow should emit action on select button 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -149,7 +196,7 @@ exports[`DelegateRow should emit action on select button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render 1`] = `
+exports[`DelegateRow > should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -208,8 +255,22 @@ exports[`DelegateRow should render 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -233,8 +294,27 @@ exports[`DelegateRow should render 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -261,8 +341,22 @@ exports[`DelegateRow should render 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -298,7 +392,7 @@ exports[`DelegateRow should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render changed style when network requires vote amount 1`] = `
+exports[`DelegateRow > should render changed style when network requires vote amount 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -357,8 +451,22 @@ exports[`DelegateRow should render changed style when network requires vote amou
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -382,8 +490,27 @@ exports[`DelegateRow should render changed style when network requires vote amou
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -410,8 +537,22 @@ exports[`DelegateRow should render changed style when network requires vote amou
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -492,7 +633,7 @@ exports[`DelegateRow should render changed style when network requires vote amou
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render the selected delegate 1`] = `
+exports[`DelegateRow > should render the selected delegate 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -551,8 +692,22 @@ exports[`DelegateRow should render the selected delegate 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -576,8 +731,27 @@ exports[`DelegateRow should render the selected delegate 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -604,8 +778,22 @@ exports[`DelegateRow should render the selected delegate 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -641,7 +829,7 @@ exports[`DelegateRow should render the selected delegate 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render the selected vote 1`] = `
+exports[`DelegateRow > should render the selected vote 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -700,8 +888,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -725,8 +927,27 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -753,8 +974,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -840,8 +1075,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -865,8 +1114,27 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -893,8 +1161,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -980,8 +1262,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1005,8 +1301,27 @@ exports[`DelegateRow should render the selected vote 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1033,8 +1348,22 @@ exports[`DelegateRow should render the selected vote 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1073,7 +1402,7 @@ exports[`DelegateRow should render the selected vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render the selected vote 2`] = `
+exports[`DelegateRow > should render the selected vote 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1132,8 +1461,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1157,8 +1500,27 @@ exports[`DelegateRow should render the selected vote 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1185,8 +1547,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1272,8 +1648,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1297,8 +1687,27 @@ exports[`DelegateRow should render the selected vote 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1325,8 +1734,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1412,8 +1835,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1437,8 +1874,27 @@ exports[`DelegateRow should render the selected vote 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1465,8 +1921,22 @@ exports[`DelegateRow should render the selected vote 2`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1505,7 +1975,7 @@ exports[`DelegateRow should render the selected vote 2`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render the unselected vote 1`] = `
+exports[`DelegateRow > should render the unselected vote 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1564,8 +2034,22 @@ exports[`DelegateRow should render the unselected vote 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1589,8 +2073,27 @@ exports[`DelegateRow should render the unselected vote 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1617,8 +2120,22 @@ exports[`DelegateRow should render the unselected vote 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1654,7 +2171,7 @@ exports[`DelegateRow should render the unselected vote 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateRow should render when network requires vote amount 1`] = `
+exports[`DelegateRow > should render when network requires vote amount 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1713,8 +2230,22 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
                       height="16"
                       width="16"
                     >
-                      <svg>
-                        arrow-external.svg
+                      <svg
+                        id="arrow-external"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </span>
@@ -1738,8 +2269,27 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  status-standby.svg
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    transform="translate(600 -1329.038)"
+                  >
+                    <circle
+                      cx="-590"
+                      cy="1339.038"
+                      r="9"
+                    />
+                    <path
+                      d="M-592 1342.338v-6.5m4 6.5v-6.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1766,8 +2316,22 @@ exports[`DelegateRow should render when network requires vote amount 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    arrow-external.svg
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>

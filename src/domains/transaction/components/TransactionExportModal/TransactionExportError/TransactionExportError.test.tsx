@@ -1,5 +1,4 @@
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 
 import { TransactionExportError } from "./TransactionExportError";
@@ -11,15 +10,6 @@ const fixtureProfileId = getDefaultProfileId();
 let dashboardURL: string;
 
 describe("TransactionExportError", () => {
-	beforeAll(() => {
-		nock.disableNetConnect();
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.persist();
-	});
-
 	beforeEach(() => {
 		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
 	});

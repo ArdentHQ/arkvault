@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SelectCategory should render 1`] = `
+exports[`SelectCategory > should render 1`] = `
 <DocumentFragment>
   <label
     class="cursor-pointer"

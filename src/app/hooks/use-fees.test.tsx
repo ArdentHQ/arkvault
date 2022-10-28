@@ -7,7 +7,7 @@ import { useFees } from "./use-fees";
 import { EnvironmentProvider } from "@/app/contexts";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, triggerMessageSignOnce } from "@/utils/testing-library";
 
 const ARKDevnet = "ark.devnet";
 
@@ -74,7 +74,7 @@ describe("useFees", () => {
 			storage: new StubStorage(),
 		});
 
-		const mockFind = jest.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
+		const mockFind = vi.spyOn(env.fees(), "findByType").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
@@ -114,10 +114,14 @@ describe("useFees", () => {
 
 		const profile = await env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
-		await profile.walletFactory().generate({
+
+		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: ARKDevnet,
 		});
+
+		await triggerMessageSignOnce(wallet);
+
 		await env.wallets().syncByProfile(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
@@ -153,10 +157,14 @@ describe("useFees", () => {
 
 		const profile = await env.profiles().create("John Doe");
 		await env.profiles().restore(profile);
+
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
 			network: ARKDevnet,
 		});
+
+		await triggerMessageSignOnce(wallet);
+
 		await env.wallets().syncByProfile(profile);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
@@ -212,7 +220,7 @@ describe("useFees", () => {
 		});
 		await env.wallets().syncByProfile(profile);
 
-		const mockFind = jest.spyOn(env.fees(), "findByType").mockReturnValue({} as any);
+		const mockFind = vi.spyOn(env.fees(), "findByType").mockReturnValue({} as any);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {
@@ -221,9 +229,9 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		const transferMock = jest.spyOn(wallet.coin().transaction(), "transfer").mockResolvedValue({} as any);
-		const calculateMock = jest.spyOn(wallet.coin().fee(), "calculate").mockResolvedValue(BigNumber.make(1));
-		const feeTypeSpy = jest.spyOn(wallet.network(), "feeType").mockReturnValue("size");
+		const transferMock = vi.spyOn(wallet.coin().transaction(), "transfer").mockResolvedValue({} as any);
+		const calculateMock = vi.spyOn(wallet.coin().fee(), "calculate").mockResolvedValue(BigNumber.make(1));
+		const feeTypeSpy = vi.spyOn(wallet.network(), "feeType").mockReturnValue("size");
 
 		const transactionData = {
 			amount: 1,
@@ -274,8 +282,8 @@ describe("useFees", () => {
 
 		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		const feeTypeSpy = jest.spyOn(wallet.network(), "feeType").mockReturnValue("size");
-		const transferMock = jest.spyOn(wallet.coin().transaction(), "transfer").mockImplementation(() => {
+		const feeTypeSpy = vi.spyOn(wallet.network(), "feeType").mockReturnValue("size");
+		const transferMock = vi.spyOn(wallet.coin().transaction(), "transfer").mockImplementation(() => {
 			throw new Error("error");
 		});
 

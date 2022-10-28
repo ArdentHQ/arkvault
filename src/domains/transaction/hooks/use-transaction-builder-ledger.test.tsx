@@ -7,18 +7,12 @@ import React from "react";
 import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import {
-	defaultNetMocks,
-	env,
-	getDefaultProfileId,
-	getDefaultWalletMnemonic,
-	waitFor,
-	WithProviders,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, waitFor, WithProviders } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => BigNumber.make(transactionFixture.data.amount),
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
@@ -38,20 +32,23 @@ describe("Use Transaction Builder with Ledger", () => {
 	);
 
 	beforeAll(() => {
-		defaultNetMocks();
 		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
+	});
+
+	beforeEach(() => {
+		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
 	});
 
 	it("should sign transfer with ledger", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
 			"027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582",
 		);
-		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		jest.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
 
 		createTransactionMock(wallet);
 
@@ -76,21 +73,21 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		await waitFor(() => expect(transaction.id()).toBe(transactionFixture.data.id));
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should sign transfer with cold ledger wallet", async () => {
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
-		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+		vi.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
 
-		jest.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
+		vi.spyOn(wallet.transaction(), "signTransfer").mockResolvedValue(transactionFixture.data.id);
 		createTransactionMock(wallet);
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
@@ -113,7 +110,7 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		expect(transaction.id()).toBe(transactionFixture.data.id);
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should abort build with ledger", async () => {
@@ -122,8 +119,8 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
-		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
-		jest.spyOn(wallet.signatory(), "ledger").mockImplementation(
+		vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		vi.spyOn(wallet.signatory(), "ledger").mockImplementation(
 			() =>
 				new Promise((resolve) =>
 					setTimeout(() => {
@@ -158,6 +155,6 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		await waitFor(() => expect(error).toBe("ERR_ABORT"));
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

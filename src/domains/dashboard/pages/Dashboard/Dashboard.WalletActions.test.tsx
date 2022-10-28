@@ -2,7 +2,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -14,11 +13,14 @@ import {
 	getDefaultProfileId,
 	render,
 	screen,
-	useDefaultNetMocks,
 	waitFor,
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+
+import { requestMock, server } from "@/tests/mocks/server";
+import devnetTransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import mainnetTransactionsFixture from "@/tests/fixtures/coins/ark/mainnet/transactions.json";
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
@@ -29,26 +31,23 @@ let dashboardURL: string;
 
 describe("Dashboard", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
-					data: data.slice(0, 2),
-					meta,
-				};
-			})
-			.persist();
+		server.use(
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: devnetTransactionsFixture.data.slice(0, 2),
+				meta: devnetTransactionsFixture.meta,
+			}),
+			requestMock("https://ark-live.arkvault.io/api/transactions", {
+				data: [],
+				meta: mainnetTransactionsFixture.meta,
+			}),
+		);
 
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 	});
 
 	afterAll(() => {
@@ -70,7 +69,7 @@ describe("Dashboard", () => {
 		profile.markIntroductoryTutorialAsComplete();
 		const ledgerTransportMock = mockNanoXTransport();
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -88,13 +87,11 @@ describe("Dashboard", () => {
 			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
 		);
 
-		expect(asFragment()).toMatchSnapshot();
-
 		ledgerTransportMock.mockRestore();
 	});
 
 	it("should navigate to create wallet page", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -109,11 +106,10 @@ describe("Dashboard", () => {
 		userEvent.click(screen.getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to import wallet page", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Dashboard />
 			</Route>,
@@ -128,6 +124,5 @@ describe("Dashboard", () => {
 		userEvent.click(screen.getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
-		expect(asFragment()).toMatchSnapshot();
 	});
 });

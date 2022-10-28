@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
 
-const onDelete = jest.fn();
+const onDelete = vi.fn();
 
 describe("DeleteExchangeTransaction", () => {
 	beforeAll(() => {

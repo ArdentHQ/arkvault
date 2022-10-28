@@ -92,7 +92,7 @@ describe("Tabs", () => {
 	});
 
 	it("should render with scroll in dark mode", () => {
-		const useDarkColorsSpy = jest.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
+		const useDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
 		const { container, asFragment } = render(
 			<Tabs>

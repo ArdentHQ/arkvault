@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -42,15 +41,6 @@ const testNetwork = "ark.devnet";
 
 describe("ImportWallet Validations", () => {
 	let resetProfileNetworksMock: () => void;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -127,7 +117,7 @@ describe("ImportWallet Validations", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const fromSecretMock = jest.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
+		const fromSecretMock = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
@@ -373,7 +363,7 @@ describe("ImportWallet Validations", () => {
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		const coin = profile.coins().get("ARK", testNetwork);
-		const coinMock = jest.spyOn(coin, "__construct").mockImplementationOnce(() => {
+		const coinMock = vi.spyOn(coin, "__construct").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
@@ -382,7 +372,7 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
-		const toastDismissMock = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+		const toastDismissMock = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();

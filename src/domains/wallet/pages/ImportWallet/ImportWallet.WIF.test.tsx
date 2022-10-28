@@ -3,7 +3,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -37,15 +36,6 @@ describe("ImportWallet WIF", () => {
 	let resetProfileNetworksMock: () => void;
 	let form: ReturnType<typeof useForm>;
 	const wif = "wif.1111";
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -111,9 +101,7 @@ describe("ImportWallet WIF", () => {
 
 	it("should import with valid wif", async () => {
 		const coin = profile.coins().get("ARK", testNetwork);
-		const coinMock = jest
-			.spyOn(coin.address(), "fromWIF")
-			.mockResolvedValue({ address: "whatever", type: "bip39" });
+		const coinMock = vi.spyOn(coin.address(), "fromWIF").mockResolvedValue({ address: "whatever", type: "bip39" });
 
 		history.push(`/profiles/${profile.id()}`);
 
@@ -147,7 +135,7 @@ describe("ImportWallet WIF", () => {
 	it("should import with invalid wif", async () => {
 		const coin = profile.coins().get("ARK", testNetwork);
 
-		const coinMock = jest.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
+		const coinMock = vi.spyOn(coin.address(), "fromWIF").mockRejectedValue(() => {
 			throw new Error("Something went wrong");
 		});
 

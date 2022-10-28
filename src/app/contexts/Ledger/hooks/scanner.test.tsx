@@ -1,11 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { useLedgerScanner } from "./scanner";
-import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger";
+import { useLedgerContext } from "@/app/contexts/Ledger";
 import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const walletsList = (wallets, isSelected) => (
 	<ul>
@@ -23,16 +23,18 @@ describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let legacyPublicKeyPaths: Map<string, string>;
-	let getPublicKeySpy: Jest.SpyInstance;
-	let getExtendedPublicKeySpy: Jest.SpyInstance;
+	let getPublicKeySpy: vi.SpyInstance;
+	let getExtendedPublicKeySpy: vi.SpyInstance;
 
 	beforeAll(() => {
 		legacyPublicKeyPaths = new Map<string, string>();
 
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+		mockNanoXTransport();
+	});
+
+	beforeEach(async () => {
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
 				data: [
 					{
 						address: "DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES",
@@ -48,24 +50,13 @@ describe("Use Ledger Scanner", () => {
 					},
 				],
 				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", {
 				data: [],
 				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
+			}),
+		);
 
-		mockNanoXTransport();
-	});
-
-	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -93,11 +84,11 @@ describe("Use Ledger Scanner", () => {
 			["m/44'/1'/10'/0/0", "0349e7e2afb470994a8323e9623a6dab227c69d5f09f1a59991fd92880123ffe75"],
 		]);
 
-		getPublicKeySpy = jest
+		getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(legacyPublicKeyPaths.get(path)!));
 
-		getExtendedPublicKeySpy = jest
+		getExtendedPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockResolvedValue(wallet.publicKey()!);
 	});
@@ -108,7 +99,7 @@ describe("Use Ledger Scanner", () => {
 	});
 
 	afterAll(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should render", async () => {
@@ -123,11 +114,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		const { container } = render(<Component />);
 
 		userEvent.click(screen.getByRole("button"));
 
@@ -164,11 +151,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 
@@ -178,8 +161,6 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with toggleSelectAll", async () => {
@@ -198,11 +179,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByText("Scan"));
 
@@ -211,19 +188,17 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByText("Toggle All"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it.each([
 		["m/44'/1'/0'/0/3", "m/44'/1'/0'/0/1"],
 		["m/44'/1'/0'/0/2", "m/44'/1'/0'/0/3"],
 	])("should load with last import path", async (path1, path2) => {
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const profileWallets = profile.wallets().values();
-		const walletSpy1 = jest.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
-		const walletSpy2 = jest.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
+		const walletSpy1 = vi.spyOn(profileWallets[0].data(), "get").mockImplementation(() => path1);
+		const walletSpy2 = vi.spyOn(profileWallets[1].data(), "get").mockImplementation(() => path2);
 
 		const Component = () => {
 			const { scan } = useLedgerScanner(wallet.coinId(), wallet.networkId());
@@ -235,11 +210,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByRole("button"));
 
@@ -275,11 +246,7 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 
@@ -287,7 +254,7 @@ describe("Use Ledger Scanner", () => {
 
 		expect(screen.getByTestId("scanMore")).toBeInTheDocument();
 
-		const ledgerScanSpy = jest.spyOn(wallet.coin().ledger(), "scan");
+		const ledgerScanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		userEvent.click(screen.getByTestId("scanMore"));
 
@@ -300,7 +267,7 @@ describe("Use Ledger Scanner", () => {
 
 	it("should dispatch failed", async () => {
 		getExtendedPublicKeySpy.mockRestore();
-		getExtendedPublicKeySpy = jest
+		getExtendedPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getExtendedPublicKey")
 			.mockRejectedValue(new Error("Failed"));
 
@@ -324,17 +291,11 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByText("Scan"));
 
 		await expect(screen.findByText("Retry")).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
 
 		getExtendedPublicKeySpy.mockRestore();
 	});
@@ -357,19 +318,11 @@ describe("Use Ledger Scanner", () => {
 			);
 		};
 
-		const { container } = render(
-			<LedgerProvider>
-				<Component />
-			</LedgerProvider>,
-		);
+		render(<Component />);
 
 		userEvent.click(screen.getByTestId("scan"));
 		userEvent.click(screen.getByTestId("abort"));
 
 		await expect(screen.findByText("Idle")).resolves.toBeVisible();
-
-		await new Promise((resolve) => setTimeout(resolve, 3000));
-
-		expect(container).toMatchSnapshot();
 	});
 });

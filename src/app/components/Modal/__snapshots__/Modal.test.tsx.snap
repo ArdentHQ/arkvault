@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Modal should closed by the Esc key 1`] = `
+exports[`Modal > should closed by the Esc key 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`Modal should closed by the Esc key 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -55,9 +72,9 @@ exports[`Modal should closed by the Esc key 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should not render if not open 1`] = `<DocumentFragment />`;
+exports[`Modal > should not render if not open 1`] = `<DocumentFragment />`;
 
-exports[`Modal should render a 3x large one 1`] = `
+exports[`Modal > should render a 3x large one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -87,8 +104,25 @@ exports[`Modal should render a 3x large one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -112,7 +146,7 @@ exports[`Modal should render a 3x large one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a 4x large one 1`] = `
+exports[`Modal > should render a 4x large one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -142,8 +176,25 @@ exports[`Modal should render a 4x large one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -167,7 +218,7 @@ exports[`Modal should render a 4x large one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a 5x large one 1`] = `
+exports[`Modal > should render a 5x large one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -197,8 +248,25 @@ exports[`Modal should render a 5x large one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -222,7 +290,7 @@ exports[`Modal should render a 5x large one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a large one 1`] = `
+exports[`Modal > should render a large one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -252,8 +320,25 @@ exports[`Modal should render a large one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -277,7 +362,7 @@ exports[`Modal should render a large one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a medium one 1`] = `
+exports[`Modal > should render a medium one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -307,8 +392,25 @@ exports[`Modal should render a medium one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -332,7 +434,7 @@ exports[`Modal should render a medium one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a modal with banner 1`] = `
+exports[`Modal > should render a modal with banner 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -362,8 +464,25 @@ exports[`Modal should render a modal with banner 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -397,7 +516,7 @@ exports[`Modal should render a modal with banner 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render a modal with content 1`] = `
+exports[`Modal > should render a modal with content 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -427,8 +546,25 @@ exports[`Modal should render a modal with content 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -454,7 +590,7 @@ exports[`Modal should render a modal with content 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render a modal with description 1`] = `
+exports[`Modal > should render a modal with description 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -484,8 +620,25 @@ exports[`Modal should render a modal with description 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -515,7 +668,7 @@ exports[`Modal should render a modal with description 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render a modal with overlay 1`] = `
+exports[`Modal > should render a modal with overlay 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -545,8 +698,25 @@ exports[`Modal should render a modal with overlay 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -572,7 +742,7 @@ exports[`Modal should render a modal with overlay 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render a modal with overlay 2`] = `
+exports[`Modal > should render a modal with overlay 2`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -602,8 +772,25 @@ exports[`Modal should render a modal with overlay 2`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -629,7 +816,7 @@ exports[`Modal should render a modal with overlay 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render a small one 1`] = `
+exports[`Modal > should render a small one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -659,8 +846,25 @@ exports[`Modal should render a small one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -684,7 +888,7 @@ exports[`Modal should render a small one 1`] = `
 </div>
 `;
 
-exports[`Modal should render a xlarge one 1`] = `
+exports[`Modal > should render a xlarge one 1`] = `
 <div>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -714,8 +918,25 @@ exports[`Modal should render a xlarge one 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -739,7 +960,7 @@ exports[`Modal should render a xlarge one 1`] = `
 </div>
 `;
 
-exports[`Modal should render without close button 1`] = `
+exports[`Modal > should render without close button 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -773,7 +994,7 @@ exports[`Modal should render without close button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal should render without offset for buttons 1`] = `
+exports[`Modal > should render without offset for buttons 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -803,8 +1024,25 @@ exports[`Modal should render without offset for buttons 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>

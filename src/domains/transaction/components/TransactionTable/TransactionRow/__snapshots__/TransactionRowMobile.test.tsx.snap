@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionRowMobile should omit the currency for transactions from test networks 1`] = `
+exports[`TransactionRowMobile > should omit the currency for transactions from test networks 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -199,7 +199,7 @@ exports[`TransactionRowMobile should omit the currency for transactions from tes
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should omit the currency for transactions from test networks 2`] = `
+exports[`TransactionRowMobile > should omit the currency for transactions from test networks 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -398,7 +398,7 @@ exports[`TransactionRowMobile should omit the currency for transactions from tes
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render 1`] = `
+exports[`TransactionRowMobile > should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -614,7 +614,7 @@ exports[`TransactionRowMobile should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render 2`] = `
+exports[`TransactionRowMobile > should render 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -830,7 +830,7 @@ exports[`TransactionRowMobile should render 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render compact skeleton 1`] = `
+exports[`TransactionRowMobile > should render compact skeleton 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1045,7 +1045,7 @@ exports[`TransactionRowMobile should render compact skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render compact skeleton 2`] = `
+exports[`TransactionRowMobile > should render compact skeleton 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1260,7 +1260,7 @@ exports[`TransactionRowMobile should render compact skeleton 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render skeleton responsive 1`] = `
+exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1475,7 +1475,7 @@ exports[`TransactionRowMobile should render skeleton responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render skeleton responsive 2`] = `
+exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1690,7 +1690,7 @@ exports[`TransactionRowMobile should render skeleton responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render with currency 1`] = `
+exports[`TransactionRowMobile > should render with currency 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1894,7 +1894,7 @@ exports[`TransactionRowMobile should render with currency 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowMobile should render with currency 2`] = `
+exports[`TransactionRowMobile > should render with currency 2`] = `
 <DocumentFragment>
   <table>
     <tbody>

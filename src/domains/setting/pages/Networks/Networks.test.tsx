@@ -2,8 +2,8 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
-import nock from "nock";
 import { UUID } from "@ardenthq/sdk-cryptography";
+import { vi } from "vitest";
 import NetworksSettings from "@/domains/setting/pages/Networks";
 import {
 	env,
@@ -16,6 +16,7 @@ import {
 } from "@/utils/testing-library";
 import { translations as settingsTranslations } from "@/domains/setting/i18n.ts";
 import { toasts } from "@/app/services";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 
@@ -140,7 +141,7 @@ describe("Network Settings", () => {
 	});
 
 	it("shows a warning if user tries to unselect all items", () => {
-		const toastSpy = jest.spyOn(toasts, "warning");
+		const toastSpy = vi.spyOn(toasts, "warning");
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/networks">
@@ -163,9 +164,9 @@ describe("Network Settings", () => {
 	});
 
 	it("stores the selected networks", async () => {
-		const toastSpy = jest.spyOn(toasts, "success");
-		const networksFillSpy = jest.spyOn(profile.networks(), "fill").mockImplementation();
-		const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success");
+		const networksFillSpy = vi.spyOn(profile.networks(), "fill").mockImplementation(vi.fn());
+		const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/networks">
@@ -216,20 +217,21 @@ describe("Network Settings", () => {
 		const customServerAddress = "https://my-server.com";
 		const customNetworkItemTestId = "CustomNetworksListNetwork";
 
-		const nockServerConfiguration = () => nock(customServerAddress).get("/api/node/configuration");
+		const configurationUrl = `${customServerAddress}/api/node/configuration`;
+		const cryptoConfigurationUrl = `${customServerAddress}/api/node/configuration/crypto`;
 
-		const nockServerCryptoConfiguration = (url: string, networkName = "testnet") =>
-			nock(url)
-				.get("/api/node/configuration")
-				.reply(200, networkConfigurationResponse)
-				.get("/api/node/configuration/crypto")
-				.reply(200, {
+		const mockServerCryptoConfiguration = (url: string, networkName = "testnet") => {
+			server.use(
+				requestMock(`${url}/api/node/configuration`, networkConfigurationResponse),
+				requestMock(`${url}/api/node/configuration/crypto`, {
 					data: {
 						network: {
 							name: networkName,
 						},
 					},
-				});
+				}),
+			);
+		};
 
 		const networkConfigurationResponse = {
 			data: {
@@ -396,22 +398,12 @@ describe("Network Settings", () => {
 		it.each(["mainnet", "testnet"])(
 			"stores the new network with data that came from the request",
 			async (networkName) => {
-				const uuidSpy = jest.spyOn(UUID, "random").mockReturnValue("random-uuid");
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksFillSpy = jest.spyOn(profile.networks(), "fill").mockImplementation();
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const uuidSpy = vi.spyOn(UUID, "random").mockReturnValue("random-uuid");
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksFillSpy = vi.spyOn(profile.networks(), "fill").mockImplementation(vi.fn());
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
-				nockServerCryptoConfiguration(customServerAddress, networkName);
-
-				nock(customServerAddress)
-					.get("/api/node/configuration/crypto")
-					.reply(200, () => ({
-						data: {
-							network: {
-								name: "testnet",
-							},
-						},
-					}));
+				mockServerCryptoConfiguration(customServerAddress, networkName);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -423,11 +415,8 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworksToggle());
-
 				userEvent.click(customNetworksAddButton());
-
 				userEvent.paste(customNetworkFormModalNameField(), customServerName);
-
 				userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
@@ -451,19 +440,14 @@ describe("Network Settings", () => {
 				);
 
 				networksFillSpy.mockRestore();
-
 				networksForgetSpy.mockRestore();
-
 				toastSpy.mockRestore();
-
 				uuidSpy.mockRestore();
-
-				nock.cleanAll();
 			},
 		);
 
 		it("shows an error when network is unreachable", async () => {
-			nockServerConfiguration().reply(404);
+			server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
@@ -475,11 +459,8 @@ describe("Network Settings", () => {
 			);
 
 			userEvent.click(customNetworksToggle());
-
 			userEvent.click(customNetworksAddButton());
-
 			userEvent.paste(customNetworkFormModalNameField(), customServerName);
-
 			userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
 
 			await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
@@ -487,12 +468,13 @@ describe("Network Settings", () => {
 			userEvent.click(customNetworkFormSaveButton());
 
 			await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
-
-			nock.cleanAll();
 		});
 
 		it("shows an error when network response is invalid json", async () => {
-			nockServerConfiguration().reply(200, "invalid json");
+			server.use(
+				requestMock(configurationUrl, "invalid json"),
+				requestMock(cryptoConfigurationUrl, "invalid json"),
+			);
 
 			render(
 				<Route path="/profiles/:profileId/settings/networks">
@@ -504,11 +486,8 @@ describe("Network Settings", () => {
 			);
 
 			userEvent.click(customNetworksToggle());
-
 			userEvent.click(customNetworksAddButton());
-
 			userEvent.paste(customNetworkFormModalNameField(), customServerName);
-
 			userEvent.paste(customNetworkFormModalServerField(), customServerAddress);
 
 			await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
@@ -516,8 +495,6 @@ describe("Network Settings", () => {
 			userEvent.click(customNetworkFormSaveButton());
 
 			await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
-
-			nock.cleanAll();
 		});
 
 		it("invalidates long name", async () => {
@@ -531,9 +508,7 @@ describe("Network Settings", () => {
 			);
 
 			userEvent.click(customNetworksToggle());
-
 			userEvent.click(customNetworksAddButton());
-
 			userEvent.paste(customNetworkFormModalNameField(), "a".repeat(43));
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
@@ -552,9 +527,7 @@ describe("Network Settings", () => {
 			);
 
 			userEvent.click(customNetworksToggle());
-
 			userEvent.click(customNetworksAddButton());
-
 			userEvent.paste(customNetworkFormModalServerField(), "/invalid-addres");
 
 			await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
@@ -563,7 +536,7 @@ describe("Network Settings", () => {
 		});
 
 		describe("with custom networks", () => {
-			let customNetworksMock: jest.SpyInstance;
+			let customNetworksMock: vi.SpyInstance;
 
 			const customNetworksStub: any = {
 				test: {
@@ -627,7 +600,7 @@ describe("Network Settings", () => {
 			};
 
 			beforeEach(() => {
-				customNetworksMock = jest.spyOn(profile.networks(), "all").mockReturnValue(customNetworksStub);
+				customNetworksMock = vi.spyOn(profile.networks(), "all").mockReturnValue(customNetworksStub);
 			});
 
 			afterEach(() => {
@@ -770,15 +743,15 @@ describe("Network Settings", () => {
 			});
 
 			it("removes deleted custom network contacts and addresses", async () => {
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
 				const firstContact = profile.contacts().values()[0];
 				const firstContactAddress = firstContact.addresses().values()[0];
 
-				const addressNetworkSpy = jest.spyOn(firstContactAddress, "network").mockReturnValue("test.custom");
-				const forgetAddressSpy = jest.spyOn(firstContact.addresses(), "forget");
-				const forgetContactSpy = jest.spyOn(profile.contacts(), "forget");
+				const addressNetworkSpy = vi.spyOn(firstContactAddress, "network").mockReturnValue("test.custom");
+				const forgetAddressSpy = vi.spyOn(firstContact.addresses(), "forget");
+				const forgetContactSpy = vi.spyOn(profile.contacts(), "forget");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -825,12 +798,12 @@ describe("Network Settings", () => {
 			});
 
 			it("removes deleted custom network wallets", async () => {
-				const toastSpy = jest.spyOn(toasts, "success");
-				const networksForgetSpy = jest.spyOn(profile.networks(), "forget").mockImplementation();
+				const toastSpy = vi.spyOn(toasts, "success");
+				const networksForgetSpy = vi.spyOn(profile.networks(), "forget").mockImplementation(vi.fn());
 
 				const firstWallet = profile.wallets().values()[0];
-				const walletNetworkSpy = jest.spyOn(firstWallet.network(), "id").mockReturnValue("test.custom");
-				const forgetWalletSpy = jest.spyOn(profile.wallets(), "forget");
+				const walletNetworkSpy = vi.spyOn(firstWallet.network(), "id").mockReturnValue("test.custom");
+				const forgetWalletSpy = vi.spyOn(profile.wallets(), "forget");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -901,7 +874,7 @@ describe("Network Settings", () => {
 			});
 
 			it("adds a new network when already have other networks", async () => {
-				nockServerCryptoConfiguration("https://new-address1.test");
+				mockServerCryptoConfiguration("https://new-address1.test");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -913,9 +886,7 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworksAddButton());
-
 				userEvent.paste(customNetworkFormModalNameField(), "new name");
-
 				userEvent.paste(customNetworkFormModalServerField(), "https://new-address1.test");
 
 				await waitFor(() => expect(customNetworkFormSaveButton()).toBeEnabled());
@@ -923,14 +894,10 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(screen.getAllByTestId(customNetworkItemTestId)).toHaveLength(3));
-
-				nock.cleanAll();
 			});
 
 			it("edits a custom network address", async () => {
-				nock("https://new-address.test")
-					.get("/api/node/configuration")
-					.reply(200, networkConfigurationResponse);
+				mockServerCryptoConfiguration("https://new-address.test");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -942,7 +909,6 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -952,7 +918,6 @@ describe("Network Settings", () => {
 				expect(customNetworkFormModalServerField()).toHaveValue(customServerAddress);
 
 				userEvent.clear(customNetworkFormModalServerField());
-
 				userEvent.paste(customNetworkFormModalServerField(), "https://new-address.test");
 
 				expect(customNetworkFormModalServerField()).toHaveValue("https://new-address.test");
@@ -966,14 +931,10 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(customNetworkFirstNetwork()).toHaveTextContent(customServerName));
-
-				nock.cleanAll();
 			});
 
 			it.each(["mainnet", "testnet"])("edits a live network", async (networkName) => {
-				nockServerConfiguration().reply(200, networkConfigurationResponse);
-
-				nockServerCryptoConfiguration(customServerAddress, networkName);
+				mockServerCryptoConfiguration(customServerAddress, networkName);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1004,19 +965,19 @@ describe("Network Settings", () => {
 			});
 
 			it("edits a valid known wallet url", async () => {
-				nockServerConfiguration().reply(200, networkConfigurationResponse);
+				mockServerCryptoConfiguration(customServerAddress);
 
-				nock(knowWalletTestUrl)
-					.get("/")
-					.reply(200, [
+				server.use(
+					requestMock(knowWalletTestUrl, [
 						{
 							address: "Whatever",
 							name: "Hot Wallet",
 							type: "team",
 						},
-					]);
+					]),
+				);
 
-				nockServerCryptoConfiguration(customServerAddress);
+				mockServerCryptoConfiguration(customServerAddress);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1028,7 +989,6 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1040,18 +1000,16 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await waitFor(() => expect(screen.queryByTestId("UpdateNetworkFormModal")).not.toBeInTheDocument());
-
-				nock.cleanAll();
 			});
 
 			it.each([
 				[200, "invalid-response"],
 				[200, [{ other: "propery" }]],
 				[404, []],
-			])("shows an error if the know wallet url has a invalid response", async (response) => {
-				nockServerConfiguration().reply(200, networkConfigurationResponse);
+			])("shows an error if the know wallet url has a invalid response", async (status, data) => {
+				mockServerCryptoConfiguration(customServerAddress);
 
-				nock("https://know-wallets.test").get("/").reply(response[0], response[1]);
+				server.use(requestMock("https://know-wallets.test", data, { status }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1063,7 +1021,6 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1080,22 +1037,10 @@ describe("Network Settings", () => {
 						settingsTranslations.NETWORKS.FORM.INVALID_KNOWN_WALLETS_URL,
 					),
 				);
-
-				nock.cleanAll();
 			});
 
 			it("edits a custom network name and keeps at selected", async () => {
-				nock(customServerAddress)
-					.get("/api/node/configuration")
-					.reply(200, networkConfigurationResponse)
-					.get("/api/node/configuration/crypto")
-					.reply(200, () => ({
-						data: {
-							network: {
-								name: "testnet whatever",
-							},
-						},
-					}));
+				mockServerCryptoConfiguration(customServerAddress, "testnet whatever");
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1109,7 +1054,6 @@ describe("Network Settings", () => {
 				expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1123,7 +1067,6 @@ describe("Network Settings", () => {
 				expect(screen.getByTestId("NetworkFormModal--explorer")).toHaveValue(explorerUrl);
 
 				userEvent.clear(customNetworkFormModalNameField());
-
 				userEvent.paste(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
@@ -1132,13 +1075,15 @@ describe("Network Settings", () => {
 
 				userEvent.click(customNetworkFormSaveButton());
 
-				expect(within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId)).toBeChecked();
-
-				nock.cleanAll();
+				await waitFor(() => {
+					expect(
+						within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
+					).toBeChecked();
+				});
 			});
 
 			it("edits a custom network name if was not previously selected", async () => {
-				nockServerConfiguration().reply(200, networkConfigurationResponse);
+				mockServerCryptoConfiguration(customServerAddress);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1157,7 +1102,6 @@ describe("Network Settings", () => {
 				).not.toBeChecked();
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1171,7 +1115,6 @@ describe("Network Settings", () => {
 				expect(screen.getByTestId("NetworkFormModal--explorer")).toHaveValue(explorerUrl);
 
 				userEvent.clear(customNetworkFormModalNameField());
-
 				userEvent.paste(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
@@ -1180,17 +1123,17 @@ describe("Network Settings", () => {
 
 				userEvent.click(customNetworkFormSaveButton());
 
-				expect(
-					within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
-				).not.toBeChecked();
-
-				nock.cleanAll();
+				await waitFor(() => {
+					expect(
+						within(customNetworkFirstNetwork()).getByTestId(customNetworkItemToggleTestId),
+					).not.toBeChecked();
+				});
 			});
 
 			it("fill network form considering optional data", async () => {
 				customNetworksMock.mockRestore();
 
-				customNetworksMock = jest.spyOn(profile.networks(), "all").mockReturnValue({
+				customNetworksMock = vi.spyOn(profile.networks(), "all").mockReturnValue({
 					test: {
 						custom: {
 							...customNetworksStub.test.custom,
@@ -1216,7 +1159,6 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1237,7 +1179,6 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
@@ -1248,7 +1189,7 @@ describe("Network Settings", () => {
 			});
 
 			it("shows an error when network is unreachable when editing", async () => {
-				nockServerConfiguration().reply(404);
+				server.use(requestMock(configurationUrl, {}, { status: 404 }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1276,19 +1217,24 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
-
-				nock.cleanAll();
 			});
 
 			it("shows an error when network nethash is different to the original one", async () => {
-				nockServerConfiguration().reply(200, {
-					data: {
-						...networkConfigurationResponse.data,
-						nethash: "whatever",
-					},
-				});
-
-				nockServerCryptoConfiguration(customServerAddress);
+				server.use(
+					requestMock(configurationUrl, {
+						data: {
+							...networkConfigurationResponse.data,
+							nethash: "whatever",
+						},
+					}),
+					requestMock(cryptoConfigurationUrl, {
+						data: {
+							network: {
+								name: customServerName,
+							},
+						},
+					}),
+				);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1300,13 +1246,11 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
 				userEvent.clear(customNetworkFormModalNameField());
-
 				userEvent.paste(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
@@ -1318,12 +1262,13 @@ describe("Network Settings", () => {
 				await expect(
 					screen.findByText(settingsTranslations.NETWORKS.FORM.NETWORK_HASH_MISMATCH),
 				).resolves.toBeVisible();
-
-				nock.cleanAll();
 			});
 
 			it("shows an error when network response is invalid json when editing", async () => {
-				nockServerConfiguration().reply(200, "invalid json");
+				server.use(
+					requestMock(configurationUrl, "invalid json"),
+					requestMock(cryptoConfigurationUrl, "invalid json"),
+				);
 
 				render(
 					<Route path="/profiles/:profileId/settings/networks">
@@ -1335,13 +1280,11 @@ describe("Network Settings", () => {
 				);
 
 				userEvent.click(customNetworkFirstNetworkMenu());
-
 				userEvent.click(customNetworkMenuEditOption());
 
 				await expect(screen.findByTestId("UpdateNetworkFormModal")).resolves.toBeVisible();
 
 				userEvent.clear(customNetworkFormModalNameField());
-
 				userEvent.paste(customNetworkFormModalNameField(), "New name");
 
 				expect(customNetworkFormModalNameField()).toHaveValue("New name");
@@ -1351,8 +1294,6 @@ describe("Network Settings", () => {
 				userEvent.click(customNetworkFormSaveButton());
 
 				await expect(screen.findByTestId(networkFormModalAlertTestId)).resolves.toBeVisible();
-
-				nock.cleanAll();
 			});
 		});
 	});

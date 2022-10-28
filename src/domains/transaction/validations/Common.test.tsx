@@ -61,7 +61,7 @@ describe("Common", () => {
 	});
 
 	it("should fail to validate a low fee when network's fee type is size", () => {
-		const feeTypeSpy = jest.spyOn(network, "feeType").mockReturnValue("size");
+		const feeTypeSpy = vi.spyOn(network, "feeType").mockReturnValue("size");
 
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;

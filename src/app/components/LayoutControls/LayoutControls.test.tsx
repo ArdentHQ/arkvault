@@ -17,7 +17,7 @@ describe("LayoutControls", () => {
 		["onSelectGridView", "LayoutControls__grid--icon"],
 		["onSelectListView", "LayoutControls__list--icon"],
 	])("should call %s callback if provided", (callback, element) => {
-		const function_ = jest.fn();
+		const function_ = vi.fn();
 
 		render(<LayoutControls {...{ [callback]: function_ }} />);
 
@@ -30,7 +30,7 @@ describe("LayoutControls", () => {
 		["onSelectGridView", "LayoutControls__grid--icon"],
 		["onSelectListView", "LayoutControls__list--icon"],
 	])("should not call %s callback if not provided", (callback, element) => {
-		const function_ = jest.fn();
+		const function_ = vi.fn();
 
 		render(<LayoutControls />);
 

@@ -14,21 +14,21 @@ describe("ToastService", () => {
 	});
 
 	beforeEach(() => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterEach(() => {
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it.each(["info", "success", "warning", "error"])("should call toast %s method", (method) => {
-		jest.spyOn(toast, method);
+		vi.spyOn(toast, method);
 
 		render(<ToastContainer />);
 
 		act(() => {
 			subject[method](method);
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(screen.getByText(method)).toBeInTheDocument();
@@ -39,14 +39,14 @@ describe("ToastService", () => {
 
 		act(() => {
 			subject[method](method, { position: "top-right" });
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(screen.getByText(method)).toBeInTheDocument();
 	});
 
 	it("should call the toast dismiss method", () => {
-		const mock = jest.spyOn(toast, "dismiss").mockImplementation();
+		const mock = vi.spyOn(toast, "dismiss").mockImplementation(vi.fn());
 
 		subject.dismiss();
 
@@ -54,7 +54,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast dismiss method with toast id", () => {
-		const mock = jest.spyOn(toast, "dismiss").mockImplementation();
+		const mock = vi.spyOn(toast, "dismiss").mockImplementation(vi.fn());
 
 		subject.dismiss(123);
 
@@ -62,7 +62,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast update method with toast id", () => {
-		const mock = jest.spyOn(toast, "update").mockImplementation();
+		const mock = vi.spyOn(toast, "update").mockImplementation(vi.fn());
 
 		subject.update(123, "warning", "content");
 
@@ -72,7 +72,7 @@ describe("ToastService", () => {
 	});
 
 	it("should call the toast isActive method with toast id", () => {
-		const mock = jest.spyOn(toast, "isActive").mockImplementation();
+		const mock = vi.spyOn(toast, "isActive").mockImplementation(vi.fn());
 
 		subject.isActive(123);
 
@@ -82,9 +82,12 @@ describe("ToastService", () => {
 	it("should render and update toast message", async () => {
 		const Component = () => {
 			let toastId: ToastId;
+
 			const showMessage = () => {
+				console.log("show");
 				toastId = toasts.info("info message");
 			};
+
 			const updateMessage = () => {
 				toasts.update(toastId, "error", "updated message");
 			};
@@ -92,8 +95,8 @@ describe("ToastService", () => {
 			return (
 				<>
 					<ToastContainer />
-					<div data-testid={"show_message"} onClick={showMessage} />
-					<div data-testid={"update_message"} onClick={updateMessage} />
+					<div data-testid="show" onClick={showMessage} />
+					<div data-testid="update" onClick={updateMessage} />
 				</>
 			);
 		};
@@ -102,11 +105,13 @@ describe("ToastService", () => {
 
 		expect(screen.queryByTestId("ToastMessage__content")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("show_message"));
+		userEvent.click(screen.getByTestId("show"));
+		vi.runAllTimers();
 
 		await expect(screen.findByText("info message")).resolves.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("update_message"));
+		userEvent.click(screen.getByTestId("update"));
+		vi.runAllTimers();
 
 		await expect(screen.findByText("updated message")).resolves.toBeInTheDocument();
 	});

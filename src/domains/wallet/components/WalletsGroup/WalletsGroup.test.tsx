@@ -35,7 +35,7 @@ describe("WalletsGroup", () => {
 	let duplicateWallets: Contracts.IReadWriteWallet[];
 
 	let useDisplayWalletsResult: Partial<ReturnType<UseDisplayWallets>>;
-	let useDisplayWalletsSpy: jest.SpyInstance;
+	let useDisplayWalletsSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -58,7 +58,7 @@ describe("WalletsGroup", () => {
 			duplicateWallets.push(wallets[0]);
 		}
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	beforeEach(() => {
@@ -72,7 +72,7 @@ describe("WalletsGroup", () => {
 			hasWalletsMatchingOtherNetworks: false,
 		};
 
-		useDisplayWalletsSpy = jest.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
+		useDisplayWalletsSpy = vi.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
 			...useDisplayWalletsResult,
 			availableWallets: duplicateWallets,
 		} as ReturnType<UseDisplayWallets>);
@@ -83,7 +83,7 @@ describe("WalletsGroup", () => {
 	});
 
 	it("should render GroupNetworkTotal with amounts", () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false, profileIsSyncingExchangeRates: false });
 
@@ -249,7 +249,7 @@ describe("WalletsGroup", () => {
 	});
 
 	it.each([true, false])("should render with dark mode = %s", (isDarkMode) => {
-		const useThemeMock = jest.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -267,11 +267,11 @@ describe("WalletsGroup", () => {
 	});
 
 	it("should render skeleton when there are no available wallets yet and profile is syncing", () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: true });
 
-		useDisplayWalletsSpy = jest.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
+		useDisplayWalletsSpy = vi.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
 			...useDisplayWalletsResult,
 			availableWallets: [],
 		} as ReturnType<UseDisplayWallets>);
@@ -293,11 +293,11 @@ describe("WalletsGroup", () => {
 	});
 
 	it("should render skeleton as placeholder when there are no wallets grouped by network and profile is restored", () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncing: false });
 
-		useDisplayWalletsSpy = jest.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
+		useDisplayWalletsSpy = vi.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
 			...useDisplayWalletsResult,
 			filteredWalletsGroupedByNetwork: [],
 		} as ReturnType<UseDisplayWallets>);
@@ -343,11 +343,11 @@ describe("WalletsGroup", () => {
 	});
 
 	it("should show skeleton when syncing exchange rates", () => {
-		const useConfigurationSpy = jest
+		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncingExchangeRates: true });
 
-		useDisplayWalletsSpy = jest.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
+		useDisplayWalletsSpy = vi.spyOn(useDisplayWallets, "useDisplayWallets").mockReturnValue({
 			...useDisplayWalletsResult,
 			availableWallets: [],
 		} as ReturnType<UseDisplayWallets>);

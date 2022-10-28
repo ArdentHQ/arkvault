@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import nock from "nock";
 import React from "react";
 
 import { useLatestTransactions } from "./use-latest-transactions";
@@ -9,7 +8,6 @@ import {
 	env,
 	getDefaultProfileId,
 	syncDelegates,
-	useDefaultNetMocks,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
@@ -31,14 +29,6 @@ describe("useLatestTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		useDefaultNetMocks();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query(true)
-			.reply(200, () => require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.persist();
 	});
 
 	beforeEach(() => {
@@ -53,7 +43,7 @@ describe("useLatestTransactions", () => {
 		const sent = await profile.transactionAggregate().all({ limit: 10 });
 		const items = sent.items();
 
-		const mockTransactionsAggregate = jest
+		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
@@ -71,9 +61,9 @@ describe("useLatestTransactions", () => {
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const mockTransactionsAggregate = jest
+		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
@@ -82,13 +72,13 @@ describe("useLatestTransactions", () => {
 			{ wrapper },
 		);
 
-		jest.runOnlyPendingTimers();
+		vi.runOnlyPendingTimers();
 
 		await waitForNextUpdate();
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
 
 		mockTransactionsAggregate.mockRestore();
 
-		jest.clearAllTimers();
+		vi.clearAllTimers();
 	});
 });

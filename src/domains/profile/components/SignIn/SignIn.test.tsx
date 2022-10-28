@@ -27,22 +27,22 @@ describe("SignIn", () => {
 	});
 
 	beforeEach(() => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterAll(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = render(<SignIn profile={profile} isOpen={false} onSuccess={jest.fn} />);
+		const { asFragment } = render(<SignIn profile={profile} isOpen={false} onSuccess={vi.fn} />);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", async () => {
-		const { asFragment } = render(<SignIn isOpen={true} profile={profile} onSuccess={jest.fn} />);
+		const { asFragment } = render(<SignIn isOpen={true} profile={profile} onSuccess={vi.fn} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
@@ -53,9 +53,9 @@ describe("SignIn", () => {
 	});
 
 	it("should cancel sign in", async () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
-		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} onSuccess={jest.fn} />);
+		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} onSuccess={vi.fn} />);
 
 		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
@@ -65,7 +65,7 @@ describe("SignIn", () => {
 	});
 
 	it("should call onSuccess callback", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
@@ -82,7 +82,7 @@ describe("SignIn", () => {
 	});
 
 	it("should set an error if the password is invalid", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
@@ -101,7 +101,7 @@ describe("SignIn", () => {
 	});
 
 	it("should set an error if the password is invalid and count retries", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
@@ -111,7 +111,7 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(submitID));
-		jest.advanceTimersByTime(20_000);
+		vi.advanceTimersByTime(20_000);
 
 		userEvent.paste(screen.getByTestId(passwordInput), "wrong password");
 
@@ -119,7 +119,7 @@ describe("SignIn", () => {
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId(submitID));
-		jest.advanceTimersByTime(60_000);
+		vi.advanceTimersByTime(60_000);
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
@@ -129,7 +129,7 @@ describe("SignIn", () => {
 	});
 
 	it("should set an error and disable the input if the password is invalid multiple times", async () => {
-		const onSuccess = jest.fn();
+		const onSuccess = vi.fn();
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
@@ -149,7 +149,7 @@ describe("SignIn", () => {
 		expect(screen.getByTestId(passwordInput)).toBeDisabled();
 
 		act(() => {
-			jest.clearAllTimers();
+			vi.clearAllTimers();
 		});
 
 		// wait for form to be updated

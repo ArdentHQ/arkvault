@@ -6,7 +6,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerWaitingApp", () => {
 	it("should call the onClose callback if given", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(<LedgerWaitingApp isOpen={true} coinName="ARK" onClose={onClose} />);
 

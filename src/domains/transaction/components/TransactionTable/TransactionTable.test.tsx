@@ -1,7 +1,6 @@
 import { sortByDesc } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 
 import { TransactionTable } from "./TransactionTable";
@@ -15,23 +14,18 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json";
 
 describe("TransactionTable", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let transactions: DTO.ExtendedConfirmedTransactionData[];
 
-	beforeAll(() => {
-		nock("https://ark-test.arkvault.io/api")
-			.get("/transactions")
-			.query(true)
-			.reply(
-				200,
-				require("tests/fixtures/coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10.json"),
-			);
-	});
-
 	beforeEach(async () => {
+		server.use(requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture));
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById(getDefaultWalletId());
 
@@ -63,10 +57,10 @@ describe("TransactionTable", () => {
 	});
 
 	describe("loading state", () => {
-		let useRandomNumberSpy: jest.SpyInstance;
+		let useRandomNumberSpy: vi.SpyInstance;
 
 		beforeAll(() => {
-			useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+			useRandomNumberSpy = vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
 		});
 
 		afterAll(() => {
@@ -108,7 +102,7 @@ describe("TransactionTable", () => {
 	});
 
 	it("should emit action on the row click", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
 		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
@@ -119,7 +113,7 @@ describe("TransactionTable", () => {
 	});
 
 	it("should emit action on the compact row click", async () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} />);
 

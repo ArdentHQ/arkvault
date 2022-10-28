@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`InputFee advanced view type should allow to input a value 1`] = `
+exports[`InputFee > advanced view type > should allow to input a value 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -82,8 +82,22 @@ exports[`InputFee advanced view type should allow to input a value 1`] = `
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-up-small.svg
+                    <svg
+                      id="chevron-up-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -97,8 +111,22 @@ exports[`InputFee advanced view type should allow to input a value 1`] = `
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -112,7 +140,7 @@ exports[`InputFee advanced view type should allow to input a value 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee advanced view type should display converted value when on live net 1`] = `
+exports[`InputFee > advanced view type > should display converted value when on live net 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -204,8 +232,22 @@ exports[`InputFee advanced view type should display converted value when on live
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-up-small.svg
+                    <svg
+                      id="chevron-up-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -219,8 +261,22 @@ exports[`InputFee advanced view type should display converted value when on live
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -234,7 +290,7 @@ exports[`InputFee advanced view type should display converted value when on live
 </DocumentFragment>
 `;
 
-exports[`InputFee advanced view type should render disabled 1`] = `
+exports[`InputFee > advanced view type > should render disabled 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -279,8 +335,22 @@ exports[`InputFee advanced view type should render disabled 1`] = `
                   height="10"
                   width="10"
                 >
-                  <svg>
-                    chevron-up-small.svg
+                  <svg
+                    id="chevron-up-small"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </button>
@@ -295,8 +365,22 @@ exports[`InputFee advanced view type should render disabled 1`] = `
                   height="10"
                   width="10"
                 >
-                  <svg>
-                    chevron-down-small.svg
+                  <svg
+                    id="chevron-down-small"
+                    viewBox="0 0 10 10"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </button>
@@ -309,7 +393,7 @@ exports[`InputFee advanced view type should render disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee should keep different values for simple and advanced view types 1`] = `
+exports[`InputFee > should keep different values for simple and advanced view types 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -390,8 +474,22 @@ exports[`InputFee should keep different values for simple and advanced view type
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-up-small.svg
+                    <svg
+                      id="chevron-up-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -405,8 +503,22 @@ exports[`InputFee should keep different values for simple and advanced view type
                     height="10"
                     width="10"
                   >
-                    <svg>
-                      chevron-down-small.svg
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -420,7 +532,7 @@ exports[`InputFee should keep different values for simple and advanced view type
 </DocumentFragment>
 `;
 
-exports[`InputFee should keep different values for simple and advanced view types 2`] = `
+exports[`InputFee > should keep different values for simple and advanced view types 2`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -537,7 +649,7 @@ exports[`InputFee should keep different values for simple and advanced view type
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should change fee option with converted values = false 1`] = `
+exports[`InputFee > simple view type > should change fee option with converted values = false 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -675,8 +787,18 @@ exports[`InputFee simple view type should change fee option with converted value
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          caret-down.svg
+                        <svg
+                          id="caret-down"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                            fill="currentColor"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -697,7 +819,7 @@ exports[`InputFee simple view type should change fee option with converted value
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should change fee option with converted values = true 1`] = `
+exports[`InputFee > simple view type > should change fee option with converted values = true 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -845,8 +967,18 @@ exports[`InputFee simple view type should change fee option with converted value
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          caret-down.svg
+                        <svg
+                          id="caret-down"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                            fill="currentColor"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -867,7 +999,7 @@ exports[`InputFee simple view type should change fee option with converted value
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should display converted values when on live net 1`] = `
+exports[`InputFee > simple view type > should display converted values when on live net 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1002,7 +1134,7 @@ exports[`InputFee simple view type should display converted values when on live 
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render loading state of simple view in sm 1`] = `
+exports[`InputFee > simple view type > should render loading state of simple view in sm 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1145,7 +1277,7 @@ exports[`InputFee simple view type should render loading state of simple view in
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render loading state of simple view in xs 1`] = `
+exports[`InputFee > simple view type > should render loading state of simple view in xs 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1207,7 +1339,7 @@ exports[`InputFee simple view type should render loading state of simple view in
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view in lg 1`] = `
+exports[`InputFee > simple view type > should render simple view in lg 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1324,7 +1456,7 @@ exports[`InputFee simple view type should render simple view in lg 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view in md 1`] = `
+exports[`InputFee > simple view type > should render simple view in md 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1441,7 +1573,7 @@ exports[`InputFee simple view type should render simple view in md 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view in sm 1`] = `
+exports[`InputFee > simple view type > should render simple view in sm 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1558,7 +1690,7 @@ exports[`InputFee simple view type should render simple view in sm 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view in xl 1`] = `
+exports[`InputFee > simple view type > should render simple view in xl 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1675,7 +1807,7 @@ exports[`InputFee simple view type should render simple view in xl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view in xs 1`] = `
+exports[`InputFee > simple view type > should render simple view in xs 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1813,8 +1945,18 @@ exports[`InputFee simple view type should render simple view in xs 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          caret-down.svg
+                        <svg
+                          id="caret-down"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                            fill="currentColor"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -1835,7 +1977,7 @@ exports[`InputFee simple view type should render simple view in xs 1`] = `
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view with converted values in lg 1`] = `
+exports[`InputFee > simple view type > should render simple view with converted values in lg 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -1970,7 +2112,7 @@ exports[`InputFee simple view type should render simple view with converted valu
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view with converted values in md 1`] = `
+exports[`InputFee > simple view type > should render simple view with converted values in md 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2105,7 +2247,7 @@ exports[`InputFee simple view type should render simple view with converted valu
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view with converted values in sm 1`] = `
+exports[`InputFee > simple view type > should render simple view with converted values in sm 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2240,7 +2382,7 @@ exports[`InputFee simple view type should render simple view with converted valu
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view with converted values in xl 1`] = `
+exports[`InputFee > simple view type > should render simple view with converted values in xl 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2375,7 +2517,7 @@ exports[`InputFee simple view type should render simple view with converted valu
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should render simple view with converted values in xs 1`] = `
+exports[`InputFee > simple view type > should render simple view with converted values in xs 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2523,8 +2665,18 @@ exports[`InputFee simple view type should render simple view with converted valu
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          caret-down.svg
+                        <svg
+                          id="caret-down"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                            fill="currentColor"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -2545,7 +2697,7 @@ exports[`InputFee simple view type should render simple view with converted valu
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should update value when clicking button Average 1`] = `
+exports[`InputFee > simple view type > should update value when clicking button Average 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2662,7 +2814,7 @@ exports[`InputFee simple view type should update value when clicking button Aver
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should update value when clicking button Fast 1`] = `
+exports[`InputFee > simple view type > should update value when clicking button Fast 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -2779,7 +2931,7 @@ exports[`InputFee simple view type should update value when clicking button Fast
 </DocumentFragment>
 `;
 
-exports[`InputFee simple view type should update value when clicking button Slow 1`] = `
+exports[`InputFee > simple view type > should update value when clicking button Slow 1`] = `
 <DocumentFragment>
   <div
     class="relative"

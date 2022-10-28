@@ -39,11 +39,11 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	const handleDragLeave = (event: React.DragEvent) => {
 		event.preventDefault();
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (reference && reference.current) {
 			const bounds = reference.current.getBoundingClientRect();
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (
 				event.clientX >= Math.trunc(Number(bounds.left) + Number(bounds.width)) ||
 				event.clientX <= bounds.left ||

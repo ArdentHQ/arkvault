@@ -103,7 +103,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 								<InputDefault
 									ref={register(createProfile.name())}
 									onBlur={() => {
-										/* istanbul ignore else */
+										/* istanbul ignore else -- @preserve */
 										if (avatarImage.length === 0 || isSvg) {
 											setValue("avatarImage", Helpers.Avatar.make(formattedName));
 										}

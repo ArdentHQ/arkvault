@@ -9,7 +9,7 @@ const translations = buildTranslations();
 
 describe("PortfolioBreakdownDetails", () => {
 	it("should render", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = render(
 			<PortfolioBreakdownDetails
@@ -35,7 +35,7 @@ describe("PortfolioBreakdownDetails", () => {
 	});
 
 	it("should render responsive", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = renderResponsive(
 			<PortfolioBreakdownDetails
@@ -63,7 +63,7 @@ describe("PortfolioBreakdownDetails", () => {
 	});
 
 	it("should render with other group", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = render(
 			<PortfolioBreakdownDetails
@@ -92,7 +92,7 @@ describe("PortfolioBreakdownDetails", () => {
 	});
 
 	it("should render responsive with other group", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		const { asFragment } = renderResponsive(
 			<PortfolioBreakdownDetails
@@ -129,7 +129,7 @@ describe("PortfolioBreakdownDetails", () => {
 					{ amount: 15, convertedAmount: 15, label: "LSK", percent: 15 },
 				]}
 				balance={100}
-				onClose={jest.fn()}
+				onClose={vi.fn()}
 				exchangeCurrency="USD"
 				isOpen={true}
 			/>,
@@ -163,7 +163,7 @@ describe("PortfolioBreakdownDetails", () => {
 					{ amount: total * 0.15, convertedAmount: total * 0.15, label: "LSK", percent: 15 },
 				]}
 				balance={total}
-				onClose={jest.fn()}
+				onClose={vi.fn()}
 				exchangeCurrency="USD"
 				isOpen={true}
 			/>,
@@ -184,7 +184,7 @@ describe("PortfolioBreakdownDetails", () => {
 					{ amount: total * 0.15, convertedAmount: total * 0.15, label: "LSK", percent: 15 },
 				]}
 				balance={total}
-				onClose={jest.fn()}
+				onClose={vi.fn()}
 				exchangeCurrency="BTC"
 				isOpen={true}
 			/>,

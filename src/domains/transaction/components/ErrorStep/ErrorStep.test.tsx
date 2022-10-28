@@ -24,7 +24,7 @@ describe("ErrorStep", () => {
 	});
 
 	it("should emit onBack", async () => {
-		const onBack = jest.fn();
+		const onBack = vi.fn();
 		const { asFragment } = render(<ErrorStep title="Custom error title" onBack={onBack} />);
 
 		expect(asFragment()).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe("ErrorStep", () => {
 	});
 
 	it("should emit onRepeat", async () => {
-		const onRepeat = jest.fn();
+		const onRepeat = vi.fn();
 		const { asFragment } = render(<ErrorStep title="Custom error title" onRepeat={onRepeat} />);
 
 		expect(asFragment()).toMatchSnapshot();
