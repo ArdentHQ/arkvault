@@ -185,14 +185,6 @@ module.exports = {
 				"sort-keys-fix/sort-keys-fix": "off",
 			},
 		},
-		// {
-		// 	files: ["!**/*.test.{ts,tsx}"],
-		// 	plugins: ["jest"],
-		// 	rules: {
-		// 		"jest/require-hook": "off",
-		// 		"jest/require-top-level-describe": "off",
-		// 	},
-		// },
 	],
 	settings: {
 		react: {
