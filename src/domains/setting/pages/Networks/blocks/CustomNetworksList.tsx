@@ -28,15 +28,18 @@ const CustomNetworksListNetwork: React.VFC<{
 
 	const onSelect = ({ value }) => {
 		switch (value) {
-			case "edit":
+			case "edit": {
 				onUpdate(network.id);
 				break;
-			case "info":
+			}
+			case "info": {
 				onInfo(network.id);
 				break;
-			case "delete":
+			}
+			case "delete": {
 				onDelete(network.id);
 				break;
+			}
 		}
 	};
 
