@@ -119,6 +119,7 @@ module.exports = {
 		"sonarjs/no-small-switch": "error",
 		"sonarjs/no-use-of-empty-return-value": "error",
 		"sonarjs/no-nested-template-literals": "warn",
+		"sonarjs/prefer-single-boolean-return": "off",
 		"sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: true }],
 		"testing-library/await-async-query": "warn", // @TODO: set to error and fix
 		"testing-library/await-async-utils": "error",

@@ -46,7 +46,7 @@ export const WalletDetail = React.forwardRef<HTMLDivElement, TransactionDetailPr
 					<div className="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden">
 						<div className="w-full truncate">{children}</div>
 					</div>
-					{extra && extra}
+					{extra || <></>}
 				</div>
 			</div>
 		</WalletDetailStyled>
