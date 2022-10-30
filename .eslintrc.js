@@ -106,6 +106,7 @@ module.exports = {
 		"prettier/prettier": ["off", { endOfLine: "auto" }],
 		"promise/param-names": "warn",
 		"react-hooks/rules-of-hooks": "error",
+		"react/no-unknown-property": ["error", { ignore: ["css"] }],
 		"react/prop-types": "off",
 		"react/self-closing-comp": "error",
 		"sonarjs/cognitive-complexity": "error",

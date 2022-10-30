@@ -82,7 +82,7 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 								{children}
 							</div>
 
-							{extra ? extra : <></>}
+							{extra && extra}
 						</div>
 					</div>
 				}
@@ -101,7 +101,7 @@ export const TransactionDetail = React.forwardRef<HTMLDivElement, TransactionDet
 							<div className="flex items-center font-semibold">{children}</div>
 						</div>
 
-						{extra ? extra : <></>}
+						{extra && extra}
 					</>
 				}
 			/>
