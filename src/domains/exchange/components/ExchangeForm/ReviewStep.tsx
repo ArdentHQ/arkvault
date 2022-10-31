@@ -70,11 +70,15 @@ export const ReviewStep = () => {
 								terms: "Terms of Use",
 							}}
 							components={{
-								linkPrivacyPolicy: exchangeProvider?.privacyPolicy && (
+								linkPrivacyPolicy: exchangeProvider?.privacyPolicy ? (
 									<Link to={exchangeProvider?.privacyPolicy} isExternal />
+								) : (
+									<></>
 								),
-								linkTerms: exchangeProvider?.termsOfService && (
+								linkTerms: exchangeProvider?.termsOfService ? (
 									<Link to={exchangeProvider?.termsOfService} isExternal />
+								) : (
+									<></>
 								),
 							}}
 						/>
