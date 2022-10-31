@@ -90,7 +90,6 @@
 		"semver": "^7.3.7",
 		"socks-proxy-agent": "^6.2.0",
 		"string-hash": "^1.1.3",
-		"swiper": "^6.5.1",
 		"tippy.js": "^6.3.7",
 		"yup": "^0.32.9"
 	},
@@ -115,7 +114,6 @@
 		"@types/react-linkify": "^1.0.0",
 		"@types/react-router-config": "^5.0.6",
 		"@types/react-router-dom": "^5.3.3",
-		"@types/swiper": "^5.4.2",
 		"@types/testing-library__jest-dom": "^5.14.5",
 		"@types/yup": "^0.29.11",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
