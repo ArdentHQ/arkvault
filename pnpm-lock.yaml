@@ -37,7 +37,6 @@ specifiers:
   '@types/react-linkify': ^1.0.0
   '@types/react-router-config': ^5.0.6
   '@types/react-router-dom': ^5.3.3
-  '@types/swiper': ^5.4.2
   '@types/testing-library__jest-dom': ^5.14.5
   '@types/yup': ^0.29.11
   '@typescript-eslint/eslint-plugin': ^5.20.0
@@ -203,7 +202,6 @@ devDependencies:
   '@types/react-linkify': 1.0.1
   '@types/react-router-config': 5.0.6
   '@types/react-router-dom': 5.3.3
-  '@types/swiper': 5.4.3
   '@types/testing-library__jest-dom': 5.14.5
   '@types/yup': 0.29.13
   '@typescript-eslint/eslint-plugin': 5.20.0_xgwjwvswzzo77lpghh6plzerx4
@@ -3161,10 +3159,6 @@ packages:
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
-    dev: true
-
-  /@types/swiper/5.4.3:
-    resolution: {integrity: sha512-hJXpVeANf+XQXgbvmuFZdsnaSOKqOEZcaLDnHhZOJDRow+lfboatwubW+Ay9XiHobMGyEomkgpXSYRlDVn4gMQ==}
     dev: true
 
   /@types/testing-library__jest-dom/5.14.5:
