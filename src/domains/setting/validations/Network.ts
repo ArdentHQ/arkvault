@@ -1,4 +1,4 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { Networks } from "@ardenthq/sdk";
 import { addressIsValid } from "@/utils/peers";
 
