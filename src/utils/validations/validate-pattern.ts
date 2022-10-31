@@ -3,7 +3,7 @@ import { sortBy, uniq } from "@ardenthq/sdk-helpers";
 export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 	let matches = "";
 
-	const parts = value.split(regexp).filter((part) => part);
+	const parts = value.split(regexp).filter(Boolean);
 	for (const part of parts) {
 		matches += part;
 	}
