@@ -76,7 +76,7 @@ specifiers:
   locale-currency: ^0.0.2
   mockdate: ^3.0.5
   msw: ^0.47.4
-  multiformats: ^9.6.4
+  multiformats: ^10.0.2
   nock: ^13.2.4
   p-retry: ^5.1.1
   postcss: ^8.4.12
@@ -152,7 +152,7 @@ dependencies:
   framer-motion: 4.1.17_sfoxds7t5ydpegc3knd667wn6m
   i18next: 21.6.16
   locale-currency: 0.0.2
-  multiformats: 9.6.4
+  multiformats: 10.0.2
   p-retry: 5.1.1
   qr-scanner: 1.4.1
   react: 17.0.2
@@ -7384,8 +7384,9 @@ packages:
       - supports-color
     dev: true
 
-  /multiformats/9.6.4:
-    resolution: {integrity: sha512-fCCB6XMrr6CqJiHNjfFNGT0v//dxOBMrOMqUIzpPc/mmITweLEyhvMpY9bF+jZ9z3vaMAau5E8B68DW77QMXkg==}
+  /multiformats/10.0.2:
+    resolution: {integrity: sha512-nJEHLFOYhO4L+aNApHhCnWqa31FyqAHv9Q77AhmwU3KsM2f1j7tuJpCk5ByZ33smzycNCpSG5klNIejIyfFx2A==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     dev: false
 
   /mustache/2.3.2:

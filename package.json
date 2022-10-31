@@ -64,7 +64,7 @@
 		"framer-motion": "^4.1.17",
 		"i18next": "^21.6.16",
 		"locale-currency": "^0.0.2",
-		"multiformats": "^9.6.4",
+		"multiformats": "^10.0.2",
 		"p-retry": "^5.1.1",
 		"qr-scanner": "^1.4.1",
 		"react": "^17.0.0",
