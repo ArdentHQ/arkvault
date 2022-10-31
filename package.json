@@ -116,7 +116,6 @@
 		"@types/react-router-dom": "^5.3.3",
 		"@types/swiper": "^5.4.2",
 		"@types/testing-library__jest-dom": "^5.14.5",
-		"@types/yup": "^0.32.0",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.9.0",
 		"@vitejs/plugin-react": "^2.2.0",
