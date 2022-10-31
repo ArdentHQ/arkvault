@@ -47,7 +47,7 @@ specifiers:
   assert: ^2.0.0
   autoprefixer: ^10.4.4
   babel-plugin-macros: ^3.1.0
-  browser-fs-access: ^0.24.0
+  browser-fs-access: ^0.31.1
   classnames: ^2.3.1
   cross-fetch: ^3.1.5
   dlv: ^1.1.3
@@ -146,7 +146,7 @@ dependencies:
   '@tippyjs/react': 4.2.6_sfoxds7t5ydpegc3knd667wn6m
   '@types/dlv': 1.1.2
   assert: 2.0.0
-  browser-fs-access: 0.24.1
+  browser-fs-access: 0.31.1
   classnames: 2.3.1
   downshift: 6.1.7_react@17.0.2
   focus-visible: 5.2.0
@@ -3910,8 +3910,8 @@ packages:
     resolution: {integrity: sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==}
     dev: false
 
-  /browser-fs-access/0.24.1:
-    resolution: {integrity: sha512-fRcwhfNej0h2Jy+Uodxjbc5PQvNkZyG9fXu3S6Mcv0kigKath5sL54GXfMtOay/A/ULMa956eQZ9lMWVPiLtMA==}
+  /browser-fs-access/0.31.1:
+    resolution: {integrity: sha512-jMz9f56DkLM7LyA8wZYO7CtpoF3RdUk1/FXrnRNybgV0R5eqk/fgFWR0k5IMjPYgK4jmZecytP/UDO5WBi9Dhg==}
     dev: false
 
   /browserslist/4.20.2:

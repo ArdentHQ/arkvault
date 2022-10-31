@@ -57,7 +57,7 @@
 		"@tippyjs/react": "^4.2.5",
 		"@types/dlv": "^1.1.2",
 		"assert": "^2.0.0",
-		"browser-fs-access": "^0.24.0",
+		"browser-fs-access": "^0.31.1",
 		"classnames": "^2.3.1",
 		"downshift": "^6.1.1",
 		"focus-visible": "^5.2.0",
