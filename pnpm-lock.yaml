@@ -41,7 +41,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.41.0
   '@typescript-eslint/parser': ^5.41.0
   '@vitejs/plugin-react': ^2.2.0
-  '@vitest/coverage-istanbul': ^0.24.3
+  '@vitest/coverage-istanbul': ^0.24.4
   assert: ^2.0.0
   autoprefixer: ^10.4.4
   babel-plugin-macros: ^3.1.0
@@ -103,8 +103,8 @@ specifiers:
   react-toastify: ^9.0.7
   react-visibility-sensor: ^5.1.1
   react-zendesk: ^0.1.13
-  rollup: ^2.70.2
-  rollup-plugin-visualizer: ^5.6.0
+  rollup: ^3.2.5
+  rollup-plugin-visualizer: ^5.8.3
   semver: ^7.3.7
   socks-proxy-agent: ^7.0.0
   string-hash: ^1.1.3
@@ -120,7 +120,7 @@ specifiers:
   vite-plugin-pwa: ^0.13.1
   vite-plugin-svgr: ^2.2.2
   vite-tsconfig-paths: ^3.5.2
-  vitest: ^0.24.3
+  vitest: ^0.24.4
   workbox-window: ^6.5.3
   yup: ^0.32.9
 
@@ -202,7 +202,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.41.0_rhxoaxky7uyfvdlkpha67mlyvu
   '@typescript-eslint/parser': 5.41.0_fnqnj4wr4adlkzkgntzwybsmii
   '@vitejs/plugin-react': 2.2.0_vite@3.2.1
-  '@vitest/coverage-istanbul': 0.24.3_jsdom@20.0.1
+  '@vitest/coverage-istanbul': 0.24.4_jsdom@20.0.1
   autoprefixer: 10.4.4_postcss@8.4.12
   babel-plugin-macros: 3.1.0
   cross-fetch: 3.1.5
@@ -234,8 +234,8 @@ devDependencies:
   prop-types: 15.8.1
   react-router-config: 5.1.1_o7qiis4onue4rjn3pwakp6j7ci
   react-test-renderer: 17.0.2_react@17.0.2
-  rollup: 2.70.2
-  rollup-plugin-visualizer: 5.6.0_rollup@2.70.2
+  rollup: 3.2.5
+  rollup-plugin-visualizer: 5.8.3_rollup@3.2.5
   tailwindcss: 3.2.1_postcss@8.4.12
   testcafe: 2.0.2
   twin.macro: 2.8.2
@@ -245,9 +245,9 @@ devDependencies:
   vite-plugin-optimize-persist: 0.1.2_ll2ggltinckiaam2x7h7lgn7ya
   vite-plugin-package-config: 0.1.1_vite@3.2.1
   vite-plugin-pwa: 0.13.1_7ykhhi6gffzfv5rdea4nvzqiz4
-  vite-plugin-svgr: 2.2.2_rollup@2.70.2+vite@3.2.1
+  vite-plugin-svgr: 2.2.2_rollup@3.2.5+vite@3.2.1
   vite-tsconfig-paths: 3.5.2_vite@3.2.1
-  vitest: 0.24.3_jsdom@20.0.1
+  vitest: 0.24.4_jsdom@20.0.1
   workbox-window: 6.5.3
 
 packages:
@@ -3579,7 +3579,7 @@ packages:
       rollup: 2.79.1
     dev: true
 
-  /@rollup/pluginutils/5.0.2_rollup@2.70.2:
+  /@rollup/pluginutils/5.0.2_rollup@3.2.5:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -3591,7 +3591,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 2.70.2
+      rollup: 3.2.5
     dev: true
 
   /@sideway/address/4.1.4:
@@ -4340,8 +4340,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vitest/coverage-istanbul/0.24.3_jsdom@20.0.1:
-    resolution: {integrity: sha512-cPQ5icP/TPih3qeZ29qA2zg1lxAM+wAUuh1ZkQJ75OK7am/8isqhP5QCCeGCLdFOakDsm4Ik8vHHfcDffuxW9Q==}
+  /@vitest/coverage-istanbul/0.24.4_jsdom@20.0.1:
+    resolution: {integrity: sha512-v9E/rMSuAu/tRoTfvyKaI0/dN33dfEhYBZs1My88HEPdo9OLPWUKPsCjSHH/iuDfFXq0IBkbO+/lIj1MXpbocg==}
     dependencies:
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.1
@@ -4349,7 +4349,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.24.3_jsdom@20.0.1
+      vitest: 0.24.4_jsdom@20.0.1
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -5258,6 +5258,15 @@ packages:
 
   /cliui/7.0.4:
     resolution: {integrity: sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==}
+    dependencies:
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 7.0.0
+    dev: true
+
+  /cliui/8.0.1:
+    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
+    engines: {node: '>=12'}
     dependencies:
       string-width: 4.2.3
       strip-ansi: 6.0.1
@@ -7754,8 +7763,8 @@ packages:
     resolution: {integrity: sha512-pzqtp31nLv/XFOzXGuvhCb8qhjmTVo5vjVk19XE4CRlSWz0KoeJ3bw9XsA7nOp9YBf4qHjwBxkDzKcME/J29Yg==}
     engines: {node: '>=8'}
     dependencies:
-      '@babel/core': 7.17.9
-      '@babel/parser': 7.17.9
+      '@babel/core': 7.19.6
+      '@babel/parser': 7.20.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.0
       semver: 6.3.0
@@ -9495,7 +9504,7 @@ packages:
       '@zxing/library': 0.18.6
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      rollup: 2.70.2
+      rollup: 2.79.1
     dev: false
 
   /react-range/1.8.12_sfoxds7t5ydpegc3knd667wn6m:
@@ -9968,30 +9977,32 @@ packages:
       terser: 5.15.1
     dev: true
 
-  /rollup-plugin-visualizer/5.6.0_rollup@2.70.2:
-    resolution: {integrity: sha512-CKcc8GTUZjC+LsMytU8ocRr/cGZIfMR7+mdy4YnlyetlmIl/dM8BMnOEpD4JPIGt+ZVW7Db9ZtSsbgyeBH3uTA==}
-    engines: {node: '>=12'}
+  /rollup-plugin-visualizer/5.8.3_rollup@3.2.5:
+    resolution: {integrity: sha512-QGJk4Bqe4AOat5AjipOh8esZH1nck5X2KFpf4VytUdSUuuuSwvIQZjMGgjcxe/zXexltqaXp5Vx1V3LmnQH15Q==}
+    engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
-      rollup: ^2.0.0
+      rollup: 2.x || 3.x
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      nanoid: 3.3.3
       open: 8.4.0
-      rollup: 2.70.2
-      source-map: 0.7.3
-      yargs: 17.4.1
+      rollup: 3.2.5
+      source-map: 0.7.4
+      yargs: 17.6.0
     dev: true
 
-  /rollup/2.70.2:
-    resolution: {integrity: sha512-EitogNZnfku65I1DD5Mxe8JYRUCy0hkK5X84IlDtUs+O6JRMpRciXTzyCUuX11b5L5pvjH+OmFXiQ3XjabcXgg==}
+  /rollup/2.79.1:
+    resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
 
-  /rollup/2.79.1:
-    resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
-    engines: {node: '>=10.0.0'}
+  /rollup/3.2.5:
+    resolution: {integrity: sha512-/Ha7HhVVofduy+RKWOQJrxe4Qb3xyZo+chcpYiD8SoQa4AG7llhupUtyfKSSrdBM2mWJjhM8wZwmbY23NmlIYw==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
@@ -10247,8 +10258,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /source-map/0.7.3:
-    resolution: {integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==}
+  /source-map/0.7.4:
+    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
     dev: true
 
@@ -11350,12 +11361,12 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-svgr/2.2.2_rollup@2.70.2+vite@3.2.1:
+  /vite-plugin-svgr/2.2.2_rollup@3.2.5+vite@3.2.1:
     resolution: {integrity: sha512-u8Ac27uZmDHTVGawpAhvLMJMuzbGeZGhe61TGeHoRQLxVhmQfIYCefa0iLbjC0ui1zFo6XZnS8EkzPITCYp85g==}
     peerDependencies:
       vite: ^2.6.0 || 3
     dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@2.70.2
+      '@rollup/pluginutils': 5.0.2_rollup@3.2.5
       '@svgr/core': 6.5.1
       vite: 3.2.1
     transitivePeerDependencies:
@@ -11407,8 +11418,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.24.3_jsdom@20.0.1:
-    resolution: {integrity: sha512-aM0auuPPgMSstWvr851hB74g/LKaKBzSxcG3da7ejfZbx08Y21JpZmbmDYrMTCGhVZKqTGwzcnLMwyfz2WzkhQ==}
+  /vitest/0.24.4_jsdom@20.0.1:
+    resolution: {integrity: sha512-4ratHSyVEJPtBLV00uhL4Wj3Pmandc9rsxUkE0q9peNOfaOgGF4lEepdkaXGRi9AGFKr1GRVtjGOJ6Fp2lCpEg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -11877,6 +11888,19 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.0.1
+    dev: true
+
+  /yargs/17.6.0:
+    resolution: {integrity: sha512-8H/wTDqlSwoSnScvV2N/JHfLWOKuh5MVla9hqLjK3nsfyy6Y4kDSYSvkU5YCUEPOSnRXfIyx3Sq+B/IWudTo4g==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 8.0.1
       escalade: 3.1.1
       get-caller-file: 2.0.5
       require-directory: 2.1.1

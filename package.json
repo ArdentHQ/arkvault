@@ -117,7 +117,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.41.0",
 		"@typescript-eslint/parser": "^5.41.0",
 		"@vitejs/plugin-react": "^2.2.0",
-		"@vitest/coverage-istanbul": "^0.24.3",
+		"@vitest/coverage-istanbul": "^0.24.4",
 		"autoprefixer": "^10.4.4",
 		"babel-plugin-macros": "^3.1.0",
 		"cross-fetch": "^3.1.5",
@@ -149,8 +149,8 @@
 		"prop-types": "^15.8.1",
 		"react-router-config": "^5.1.1",
 		"react-test-renderer": "^17.0.2",
-		"rollup": "^2.70.2",
-		"rollup-plugin-visualizer": "^5.6.0",
+		"rollup": "^3.2.5",
+		"rollup-plugin-visualizer": "^5.8.3",
 		"tailwindcss": "3.2.1",
 		"testcafe": "^2.0.2",
 		"twin.macro": "2.8.2",
@@ -162,7 +162,7 @@
 		"vite-plugin-pwa": "^0.13.1",
 		"vite-plugin-svgr": "^2.2.2",
 		"vite-tsconfig-paths": "^3.5.2",
-		"vitest": "^0.24.3",
+		"vitest": "^0.24.4",
 		"workbox-window": "^6.5.3"
 	},
 	"babelMacros": {
