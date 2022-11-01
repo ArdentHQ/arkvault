@@ -1766,66 +1766,66 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
         <div
           class="border-transparent ring-theme-secondary-background duration-100 css-14jhlj1"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 44px; height: 44px; border-radius: 50%;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 44px; height: 44px; border-radius: 50%;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </div>
       </div>
       <div
         class="flex h-10 flex-col justify-between"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 14px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 14px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 150px; height: 16px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 150px; height: 16px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
       <div
         class="ml-auto"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 44px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 44px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
     </div>
@@ -1835,31 +1835,31 @@ exports[`WalletVote > should render skelethon if loading 1`] = `
       <div
         class="flex h-10 flex-col items-center justify-between"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 150px; height: 16px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 150px; height: 16px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 14px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 14px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
     </div>

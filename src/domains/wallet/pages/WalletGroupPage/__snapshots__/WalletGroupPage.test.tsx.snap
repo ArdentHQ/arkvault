@@ -685,18 +685,18 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                     <div
                       class="flex items-center justify-end sm:h-6 h-5"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton sm:h-4.5 h-4"
+                          style="width: 140px;"
                         >
-                          <span
-                            class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 140px;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </span>
@@ -730,18 +730,18 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       <div
                         class="flex items-center justify-end sm:h-6"
                       >
-                        <span>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                        >
                           <span
-                            class="flex max-w-full items-center overflow-hidden leading-none"
+                            class="react-loading-skeleton sm:h-4.5"
+                            style="width: 60px;"
                           >
-                            <span
-                              class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 60px;"
-                            >
-                              ‌
-                            </span>
                             ‌
                           </span>
+                          <br />
                         </span>
                       </div>
                     </span>
@@ -760,18 +760,18 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                       <div
                         class="flex items-center justify-end sm:h-6 h-5"
                       >
-                        <span>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                        >
                           <span
-                            class="flex max-w-full items-center overflow-hidden leading-none"
+                            class="react-loading-skeleton sm:h-4.5 h-4"
+                            style="width: 140px;"
                           >
-                            <span
-                              class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 140px;"
-                            >
-                              ‌
-                            </span>
                             ‌
                           </span>
+                          <br />
                         </span>
                       </div>
                     </span>
