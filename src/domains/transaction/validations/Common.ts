@@ -1,5 +1,5 @@
 import { Networks } from "@ardenthq/sdk";
-import { TFunction } from "react-i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { TransactionFees } from "@/types";
 

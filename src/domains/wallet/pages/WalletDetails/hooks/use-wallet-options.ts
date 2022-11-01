@@ -1,7 +1,8 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
-import { TFunction, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { DropdownOptionGroup } from "@/app/components/Dropdown";
 import { isCustomNetwork } from "@/utils/network-utils";

@@ -24,7 +24,6 @@ export default defineConfig({
 						"react-hook-form",
 						"react-i18next",
 						"react-idle-timer",
-						"react-is",
 						"react-linkify",
 						"react-loading-skeleton",
 						"react-qr-reader",
