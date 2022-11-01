@@ -486,11 +486,11 @@ describe("useSearchParametersValidation", () => {
 		const { result } = renderHook(() => useSearchParametersValidation());
 
 		expect(result.current.buildSearchParametersError({ type: "AMBIGUOUS_DELEGATE" })).toMatchInlineSnapshot(`
-		<Trans
-		  i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"
-		  parent={[Function]}
-		/>
-	`);
+			<Trans
+			  i18nKey="TRANSACTION.VALIDATION.DELEGATE_OR_PUBLICKEY"
+			  parent={[Function]}
+			/>
+		`);
 	});
 
 	it("should build qr error message", () => {
