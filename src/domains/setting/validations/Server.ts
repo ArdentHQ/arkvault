@@ -1,4 +1,4 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { NormalizedNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
 import { addressIsValid, isValidIp, hasPath, endsWithSlash } from "@/utils/peers";
 

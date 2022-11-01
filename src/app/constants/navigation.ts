@@ -1,6 +1,6 @@
-import { TFunction } from "react-i18next";
-
 import { generatePath } from "react-router";
+
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
