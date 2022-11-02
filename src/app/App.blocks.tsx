@@ -18,7 +18,7 @@ import { PageSkeleton } from "@/app/components/PageSkeleton";
 import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSkeleton";
 import { InstallPWA } from "@/domains/dashboard/components/InstallPWA";
 
-const AppRouter: React.FC = ({ children }) => {
+const AppRouter = ({ children }: { children: React.ReactNode }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const confirmationFunctionReference = useRef<(allowNavigate: boolean) => void>();
