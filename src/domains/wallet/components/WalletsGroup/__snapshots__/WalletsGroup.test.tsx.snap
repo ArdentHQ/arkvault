@@ -320,18 +320,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -341,18 +341,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -377,18 +377,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -407,18 +407,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -437,18 +437,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-4"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-3.5"
+                      style="width: 110px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 110px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -616,18 +616,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -661,18 +661,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -691,18 +691,18 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -999,18 +999,18 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-5"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-4"
+                  style="width: 140px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 140px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1020,18 +1020,18 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-4"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-3.5"
+                  style="width: 110px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 110px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1056,18 +1056,18 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5"
+                    style="width: 60px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 60px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1086,18 +1086,18 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1116,18 +1116,18 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1236,18 +1236,18 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-5"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-4"
+                  style="width: 140px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 140px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1257,18 +1257,18 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-4"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-3.5"
+                  style="width: 110px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 110px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1293,18 +1293,18 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
               <div
                 class="flex items-center justify-end sm:h-6"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5"
+                    style="width: 60px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 60px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1323,18 +1323,18 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1353,18 +1353,18 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1473,18 +1473,18 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-5"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-4"
+                  style="width: 140px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 140px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1494,18 +1494,18 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
             <div
               class="flex items-center justify-end sm:h-6 h-4"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton sm:h-4.5 h-3.5"
+                  style="width: 110px;"
                 >
-                  <span
-                    class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 110px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
           </span>
@@ -1530,18 +1530,18 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
               <div
                 class="flex items-center justify-end sm:h-6"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5"
+                    style="width: 60px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 60px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1561,18 +1561,18 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1592,18 +1592,18 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1715,18 +1715,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1736,18 +1736,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -1772,18 +1772,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -1802,18 +1802,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -1832,18 +1832,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-4"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-3.5"
+                      style="width: 110px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 110px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2011,18 +2011,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -2056,18 +2056,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2086,18 +2086,18 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2228,18 +2228,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -2249,18 +2249,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -2285,18 +2285,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2315,18 +2315,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2345,18 +2345,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-4"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-3.5"
+                      style="width: 110px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 110px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2524,18 +2524,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-5"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-4"
+                    style="width: 140px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 140px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -2569,18 +2569,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5"
+                      style="width: 60px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 60px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2599,18 +2599,18 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-5"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-4"
+                      style="width: 140px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 140px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -2753,18 +2753,18 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton sm:h-4.5 h-3.5"
+                    style="width: 110px;"
                   >
-                    <span
-                      class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 110px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </span>
@@ -2822,18 +2822,18 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 <div
                   class="flex items-center justify-end sm:h-6 h-4"
                 >
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton sm:h-4.5 h-3.5"
+                      style="width: 110px;"
                     >
-                      <span
-                        class="react-loading-skeleton sm:h-4.5 h-3.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 110px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </span>
@@ -3276,18 +3276,18 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     <div
                       class="justify-end css-1rods8x"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 100px; height: 16px;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 100px; height: 16px;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </td>

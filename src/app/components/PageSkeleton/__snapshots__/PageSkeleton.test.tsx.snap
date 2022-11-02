@@ -70,85 +70,85 @@ exports[`PageSkeleton > should render without profile 1`] = `
             <div
               class="mx-auto hidden w-96 md:block"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="height: 230px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="height: 230px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </div>
             <div
               class="flex flex-col items-center md:mt-8"
             >
               <h2>
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton"
+                    style="width: 100px; height: 32px;"
                   >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 32px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </h2>
               <p>
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton"
+                    style="width: 240px; height: 24px;"
                   >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 240px; height: 24px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </p>
               <div
                 class="mt-6 w-full sm:w-40 md:mt-8"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton"
+                    style="height: 160px;"
                   >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="height: 160px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
               <p
                 class="mt-8 md:mt-16"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton"
+                    style="width: 280px; height: 24px;"
                   >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 280px; height: 24px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </p>
             </div>

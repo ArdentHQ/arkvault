@@ -216,18 +216,18 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="my-0.5 flex"
           data-testid="TransferLedgerReview__expiration-skeleton"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 80px; height: 16px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 80px; height: 16px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </span>
       </div>

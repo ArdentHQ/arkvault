@@ -508,18 +508,18 @@ exports[`General Settings > should disable submit button when profile is not res
               <div
                 class="py-1"
               >
-                <span>
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                >
                   <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
+                    class="react-loading-skeleton"
+                    style="width: 60px; height: 16px;"
                   >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 60px; height: 16px;"
-                    >
-                      ‌
-                    </span>
                     ‌
                   </span>
+                  <br />
                 </span>
               </div>
             </div>
