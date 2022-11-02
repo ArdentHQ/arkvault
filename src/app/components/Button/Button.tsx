@@ -18,7 +18,8 @@ type ButtonProperties = {
 	iconSize?: Size;
 	iconPosition?: "left" | "right";
 	showOn?: LayoutBreakpoint;
-} & React.ButtonHTMLAttributes<any>;
+	type?: "submit" | "button";
+} & React.HTMLAttributes<HTMLButtonElement>;
 
 const StyledButton = styled.button<ButtonProperties>(getStyles);
 
