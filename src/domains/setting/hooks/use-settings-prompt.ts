@@ -5,7 +5,7 @@ import { ProfilePaths } from "@/router/paths";
 
 interface UseSettingsPromptInput<TFieldValues> {
 	isDirty: boolean;
-	dirtyFields: FieldNamesMarkedBoolean<TFieldValues>;
+	dirtyFields: FieldNamesMarkedBoolean<object>;
 }
 
 export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSettingsPromptInput<TFieldValues>) => {
