@@ -319,8 +319,6 @@ describe("CreateWallet", () => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`),
 		);
 
-		expect(asFragment()).toMatchSnapshot();
-
 		historySpy.mockRestore();
 	});
 

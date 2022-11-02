@@ -1791,18 +1791,18 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
       <div
         class="flex flex-1 flex-col justify-between space-y-1 bg-theme-primary-500 py-3 px-4 font-semibold"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 16px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 16px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
         <span
           class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2427,18 +2427,18 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           <div
             class="font-semibold justify-end css-1d4ra48"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 100px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 100px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
