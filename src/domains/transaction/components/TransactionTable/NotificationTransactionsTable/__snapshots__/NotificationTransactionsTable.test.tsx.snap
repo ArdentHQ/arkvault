@@ -36,50 +36,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -90,31 +90,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -134,50 +134,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -188,31 +188,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -232,50 +232,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -286,31 +286,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -330,50 +330,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -384,31 +384,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -428,50 +428,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -482,31 +482,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -526,50 +526,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -580,31 +580,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -624,50 +624,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -678,31 +678,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -722,50 +722,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -776,31 +776,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -820,50 +820,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -874,31 +874,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -918,50 +918,50 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                     <div
                       class="border-transparent ring-theme-background duration-100 css-14jhlj1"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
                         >
-                          <span
-                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 44px; height: 44px; border-radius: 50%;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </div>
-                  <span>
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  >
                     <span
-                      class="flex max-w-full items-center overflow-hidden leading-none"
+                      class="react-loading-skeleton"
+                      style="width: 1px; height: 16px;"
                     >
-                      <span
-                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                        style="width: 1px; height: 16px;"
-                      >
-                        ‌
-                      </span>
                       ‌
                     </span>
+                    <br />
                   </span>
                 </div>
               </td>
@@ -972,31 +972,31 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 35px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 35px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </span>
                 </div>
@@ -1051,44 +1051,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1103,31 +1103,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1152,44 +1152,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1204,31 +1204,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1253,44 +1253,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1305,31 +1305,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1354,44 +1354,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1406,31 +1406,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1455,44 +1455,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1507,31 +1507,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1556,44 +1556,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1608,31 +1608,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1657,44 +1657,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1709,31 +1709,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1758,44 +1758,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1810,31 +1810,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1859,44 +1859,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1911,31 +1911,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -1960,44 +1960,44 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="mr-4 flex items-center space-x-2"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 20px; height: 20px; border-radius: 50%;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
@@ -2012,31 +2012,31 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
                   <div
                     class="flex h-7 items-center space-x-1"
                   >
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 1px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 1px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
-                    <span>
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                    >
                       <span
-                        class="flex max-w-full items-center overflow-hidden leading-none"
+                        class="react-loading-skeleton"
+                        style="width: 25px; height: 16px;"
                       >
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 25px; height: 16px;"
-                        >
-                          ‌
-                        </span>
                         ‌
                       </span>
+                      <br />
                     </span>
                   </div>
                 </div>
