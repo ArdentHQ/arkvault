@@ -4070,8 +4070,6 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
 </DocumentFragment>
 `;
 
-exports[`CreateWallet > should show an error message for duplicate name 2`] = `<DocumentFragment />`;
-
 exports[`CreateWallet > should show an error message if wallet generation failed 1`] = `
 <DocumentFragment>
   <div
