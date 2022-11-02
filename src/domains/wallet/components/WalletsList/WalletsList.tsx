@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
-import { t } from "i18next";
 import { Table } from "@/app/components/Table";
 import { WalletListItem, WalletListItemProperties } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
@@ -16,7 +15,7 @@ import { AccordionContent } from "@/app/components/Accordion";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => (
 	<div className="border-r border-theme-secondary-300 py-0.5 pr-3 dark:border-theme-secondary-800">
-		<Tooltip content={t("WALLETS.PAGE_WALLET_DETAILS.STARRED_FIRST")}>
+		<Tooltip content={<>t("WALLETS.PAGE_WALLET_DETAILS.STARRED_FIRST")</>}>
 			<button
 				type="button"
 				data-testid="WalletIcon__Starred__header"

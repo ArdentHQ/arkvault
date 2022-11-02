@@ -1,3 +1,4 @@
+import { ComponentType } from "react";
 import { ProfilePaths } from "@/router/paths";
 import { RouteItem } from "@/router/router.types";
 import preloadLazy from "@/utils/preload-lazy";
@@ -5,7 +6,9 @@ import preloadLazy from "@/utils/preload-lazy";
 const CreateWallet = preloadLazy(() => import("./pages/CreateWallet"));
 const ImportWallet = preloadLazy(() => import("./pages/ImportWallet"));
 const WalletDetails = preloadLazy(() => import("./pages/WalletDetails"));
-const WalletGroupPage = preloadLazy(() => import("./pages/WalletGroupPage"));
+const WalletGroupPage = preloadLazy(
+	() => import("./pages/WalletGroupPage") as Promise<{ default: ComponentType<unknown> }>,
+);
 
 export const WalletRoutes: RouteItem[] = [
 	{

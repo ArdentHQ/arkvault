@@ -95,7 +95,7 @@ specifiers:
   react-range: ^1.8.12
   react-resize-detector: ^7.0.0
   react-responsive: ^9.0.0-beta.6
-  react-router: ^6.3.0
+  react-router: ^6.4.3
   react-router-config: ^5.1.1
   react-router-dom: ^5.3.0
   react-table: ^7.7.0
@@ -165,7 +165,7 @@ dependencies:
   react-range: 1.8.12_biqbaboplfbrettd7655fr4n2y
   react-resize-detector: 7.0.0_biqbaboplfbrettd7655fr4n2y
   react-responsive: 9.0.0-beta.6_react@18.2.0
-  react-router: 6.3.0_react@18.2.0
+  react-router: 6.4.3_react@18.2.0
   react-router-dom: 5.3.1_react@18.2.0
   react-table: 7.7.0_react@18.2.0
   react-toastify: 9.0.7_biqbaboplfbrettd7655fr4n2y
@@ -232,7 +232,7 @@ devDependencies:
   prettier: 2.6.2
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.6.2
   prop-types: 15.8.1
-  react-router-config: 5.1.1_77xmmbgo3eovj6t3xv35v52s6m
+  react-router-config: 5.1.1_n6chwcsdq6puvu4oljeyhosdga
   react-test-renderer: 18.2.0_react@18.2.0
   rollup: 3.2.5
   rollup-plugin-visualizer: 5.8.3_rollup@3.2.5
@@ -3571,6 +3571,10 @@ packages:
 
   /@popperjs/core/2.11.5:
     resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
+
+  /@remix-run/router/1.0.3:
+    resolution: {integrity: sha512-ceuyTSs7PZ/tQqi19YZNBc5X7kj1f8p+4DIyrcIYFY9h+hd1OKm4RqtiWldR9eGEvIiJfsqwM4BsuCtRIuEw6Q==}
+    engines: {node: '>=14'}
 
   /@rollup/plugin-babel/5.3.1_ch2ins57xese7t2rhtohzd2sea:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -7263,6 +7267,7 @@ packages:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
     dependencies:
       '@babel/runtime': 7.17.9
+    dev: true
 
   /hmac-drbg/1.0.1:
     resolution: {integrity: sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==}
@@ -9612,7 +9617,7 @@ packages:
       shallow-equal: 1.2.1
     dev: false
 
-  /react-router-config/5.1.1_77xmmbgo3eovj6t3xv35v52s6m:
+  /react-router-config/5.1.1_n6chwcsdq6puvu4oljeyhosdga:
     resolution: {integrity: sha512-DuanZjaD8mQp1ppHjgnnUnyOlqYXZVjnov/JzFhjLEwd3Z4dYjMSnqrEzzGThH47vpCOqPPwJM2FtthLeJ8Pbg==}
     peerDependencies:
       react: '>=15'
@@ -9620,7 +9625,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.9
       react: 18.2.0
-      react-router: 6.3.0_react@18.2.0
+      react-router: 6.4.3_react@18.2.0
     dev: true
 
   /react-router-dom/5.3.1_react@18.2.0:
@@ -9656,12 +9661,13 @@ packages:
       tiny-warning: 1.0.3
     dev: false
 
-  /react-router/6.3.0_react@18.2.0:
-    resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==}
+  /react-router/6.4.3_react@18.2.0:
+    resolution: {integrity: sha512-BT6DoGn6aV1FVP5yfODMOiieakp3z46P1Fk0RNzJMACzE7C339sFuHebfvWtnB4pzBvXXkHP2vscJzWRuUjTtA==}
+    engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      history: 5.3.0
+      '@remix-run/router': 1.0.3
       react: 18.2.0
 
   /react-shallow-renderer/16.15.0_react@18.2.0:

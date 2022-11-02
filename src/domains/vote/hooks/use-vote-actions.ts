@@ -5,6 +5,7 @@ import { generatePath } from "react-router";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { ProfilePaths } from "@/router/paths";
+import { assertString } from "@/utils/assertions";
 
 interface VoteActionsProperties {
 	profile: Contracts.IProfile;
@@ -27,6 +28,8 @@ export const useVoteActions = ({
 		const walletId = hasWalletId
 			? wallet.id()
 			: profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id();
+
+		assertString(walletId);
 
 		const parameters = new URLSearchParams();
 
