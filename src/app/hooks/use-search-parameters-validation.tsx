@@ -246,8 +246,8 @@ export const useSearchParametersValidation = () => {
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
-		const method = parameters.get("method")?.toLowerCase();
-		const networkId = parameters.get("network")?.toLowerCase();
+		const method = parameters.get("method")?.toLowerCase() as string;
+		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
 
 		if (!networkId && !nethash) {
