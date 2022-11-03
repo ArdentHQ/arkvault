@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
+import { DefaultTFuncReturn } from "i18next";
 import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
 import { useNavigationContext } from "@/app/contexts";
-import { DefaultTFuncReturn } from "i18next";
 
 interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;

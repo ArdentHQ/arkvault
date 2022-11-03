@@ -3,6 +3,7 @@ import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { DefaultTFuncReturn } from "i18next";
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
@@ -12,7 +13,6 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
-import { DefaultTFuncReturn } from "i18next";
 
 interface FooterContentProperties {
 	label: string;

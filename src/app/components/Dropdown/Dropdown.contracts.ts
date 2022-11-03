@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Position, Size } from "@/types";
 import { DefaultTFuncReturn } from "i18next";
+import { Position, Size } from "@/types";
 
 export interface DropdownOption {
 	icon?: string;

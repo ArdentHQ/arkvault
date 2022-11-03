@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { Networks } from "@ardenthq/sdk";
+import { DefaultTFuncReturn } from "i18next";
 import { NodeConfigurationResponse } from "@/domains/setting/pages/Networks/Networks.contracts";
 import { HttpClient } from "@/app/services/HttpClient";
 import { Modal } from "@/app/components/Modal";
@@ -13,7 +14,6 @@ import { Alert } from "@/app/components/Alert";
 import { useValidation } from "@/app/hooks";
 import { getBaseUrl } from "@/utils/peers";
 import { buildNetwork, isValidKnownWalletUrlResponse } from "@/utils/network-utils";
-import { DefaultTFuncReturn } from "i18next";
 
 const UpdateNetworkFormModal: React.VFC<{
 	network: Networks.NetworkManifest;

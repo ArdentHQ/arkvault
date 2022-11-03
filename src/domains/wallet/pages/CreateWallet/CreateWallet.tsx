@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { DefaultTFuncReturn } from "i18next";
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 import { SuccessStep } from "./SuccessStep";
 import { WalletOverviewStep } from "./WalletOverviewStep";
@@ -22,7 +23,6 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
-import { DefaultTFuncReturn } from "i18next";
 
 enum Step {
 	NetworkStep = 1,

@@ -1,10 +1,10 @@
 import cn from "classnames";
 import tw, { styled } from "twin.macro";
 import React from "react";
+import { DefaultTFuncReturn } from "i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Size } from "@/types";
-import { DefaultTFuncReturn } from "i18next";
 
 interface ModalContentProperties {
 	children: React.ReactNode;
