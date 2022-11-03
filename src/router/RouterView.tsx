@@ -1,10 +1,11 @@
-import React, { createElement, useEffect, useMemo, useRef } from "react";
-import { Redirect, Route, Switch, useHistory, useLocation } from "react-router-dom";
+import React, { createElement, FC, useEffect, useMemo, useRef } from "react";
+import { Redirect, Route, RouterProps, Switch, useHistory, useLocation } from "react-router-dom";
 import { styled } from "twin.macro";
 
 import { useEnvironmentContext } from "@/app/contexts";
 import { RouteItem, Middleware } from "@/router/router.types";
 import { RouteSuspense } from "@/router/RouteSuspense";
+import { PreloadableComponent } from "@/utils/preload-lazy";
 
 interface Properties {
 	routes: RouteItem[];
@@ -45,7 +46,9 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 				<Route key={index} path={route.path} exact={route.exact}>
 					<RouteSuspense skeleton={route.skeleton} path={route.path}>
 						{canActivate ? (
-							<Wrapper data-testid="RouterView__wrapper">{createElement(route.component)}</Wrapper>
+							<Wrapper data-testid="RouterView__wrapper">
+								{createElement(route.component as PreloadableComponent<FC>)}
+							</Wrapper>
 						) : (
 							<Redirect to={redirectUrl ?? "/"} />
 						)}
