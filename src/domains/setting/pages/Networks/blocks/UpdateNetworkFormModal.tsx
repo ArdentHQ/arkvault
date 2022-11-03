@@ -13,6 +13,7 @@ import { Alert } from "@/app/components/Alert";
 import { useValidation } from "@/app/hooks";
 import { getBaseUrl } from "@/utils/peers";
 import { buildNetwork, isValidKnownWalletUrlResponse } from "@/utils/network-utils";
+import { DefaultTFuncReturn } from "i18next";
 
 const UpdateNetworkFormModal: React.VFC<{
 	network: Networks.NetworkManifest;
@@ -46,7 +47,7 @@ const UpdateNetworkFormModal: React.VFC<{
 	const { formState, setValue, register, setError } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
 
-	const [fetchingError, setFetchingError] = useState<string | undefined>(undefined);
+	const [fetchingError, setFetchingError] = useState<string | undefined | DefaultTFuncReturn>(undefined);
 	const [fetchingDetails, setFetchingDetails] = useState(false);
 
 	const isSaveButtonDisabled = fetchingDetails || isSubmitting || (isDirty ? !isValid : true);

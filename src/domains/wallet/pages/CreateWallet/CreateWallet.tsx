@@ -22,6 +22,7 @@ import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertNetwork, assertString, assertWallet } from "@/utils/assertions";
 import { enabledNetworksCount, profileAllEnabledNetworkIds, profileAllEnabledNetworks } from "@/utils/network-utils";
+import { DefaultTFuncReturn } from "i18next";
 
 enum Step {
 	NetworkStep = 1,
@@ -53,7 +54,7 @@ export const CreateWallet = () => {
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
-	const [generationError, setGenerationError] = useState("");
+	const [generationError, setGenerationError] = useState<string | DefaultTFuncReturn>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {
@@ -247,7 +248,7 @@ export const CreateWallet = () => {
 									title={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.TITLE")}
 									subtitle={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.SUBTITLE")}
 									disabled={isGeneratingWallet}
-									error={generationError}
+									error={`${generationError}`}
 								/>
 							</TabPanel>
 

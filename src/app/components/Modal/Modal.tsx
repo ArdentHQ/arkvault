@@ -4,12 +4,13 @@ import { useModal } from "./hooks";
 import { ModalContainer, ModalContent } from "./Modal.blocks";
 import { Size } from "@/types";
 import { useNavigationContext } from "@/app/contexts";
+import { DefaultTFuncReturn } from "i18next";
 
 interface ModalProperties extends JSX.IntrinsicAttributes {
 	children: React.ReactNode;
 	title: string | React.ReactNode;
 	titleClass?: string;
-	description?: string | JSX.Element;
+	description?: string | JSX.Element | DefaultTFuncReturn;
 	banner?: React.ReactNode;
 	image?: React.ReactNode;
 	noButtons?: boolean;

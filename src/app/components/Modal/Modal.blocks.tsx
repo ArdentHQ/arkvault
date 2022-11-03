@@ -4,12 +4,13 @@ import React from "react";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Size } from "@/types";
+import { DefaultTFuncReturn } from "i18next";
 
 interface ModalContentProperties {
 	children: React.ReactNode;
 	title: string | React.ReactNode;
 	titleClass?: string;
-	description?: string | JSX.Element;
+	description?: string | JSX.Element | DefaultTFuncReturn;
 	banner?: React.ReactNode;
 	image?: React.ReactNode;
 	onClose?: any;

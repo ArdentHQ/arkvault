@@ -12,6 +12,7 @@ import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
+import { DefaultTFuncReturn } from "i18next";
 
 interface FooterContentProperties {
 	label: string;
@@ -61,7 +62,7 @@ export const DelegateFooter = ({
 	onContinue,
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
-	const [tooltipContent, setTooltipContent] = useState("");
+	const [tooltipContent, setTooltipContent] = useState<string | DefaultTFuncReturn>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
