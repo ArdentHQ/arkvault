@@ -27,7 +27,7 @@ export const useVoteActions = ({
 	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
 		const walletId = hasWalletId
 			? wallet.id()
-			: profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id();
+			: (profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id() as string);
 
 		assertString(walletId);
 
