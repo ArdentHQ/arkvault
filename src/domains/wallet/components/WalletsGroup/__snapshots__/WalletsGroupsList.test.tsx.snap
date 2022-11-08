@@ -18,7 +18,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -42,7 +42,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
               <span
                 aria-busy="true"
                 aria-live="polite"
-                class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
                   class="react-loading-skeleton"
@@ -75,7 +75,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
                 <span
                   aria-busy="true"
                   aria-live="polite"
-                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
                   <span
                     class="react-loading-skeleton sm:h-4.5"
@@ -105,7 +105,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
                 <span
                   aria-busy="true"
                   aria-live="polite"
-                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
                   <span
                     class="react-loading-skeleton sm:h-4.5"
@@ -135,7 +135,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
                 <span
                   aria-busy="true"
                   aria-live="polite"
-                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
                   <span
                     class="react-loading-skeleton sm:h-4.5"

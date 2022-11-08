@@ -12,7 +12,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -36,7 +36,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -69,7 +69,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -99,7 +99,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -129,7 +129,7 @@ exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -190,7 +190,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -214,7 +214,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -247,7 +247,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -277,7 +277,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -307,7 +307,7 @@ exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton sm:h-4.5"
@@ -368,7 +368,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -392,7 +392,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -411,7 +411,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -424,7 +424,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -482,7 +482,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -506,7 +506,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -525,7 +525,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -538,7 +538,7 @@ exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
