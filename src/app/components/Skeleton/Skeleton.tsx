@@ -14,6 +14,6 @@ interface SkeletonProperties {
 export const Skeleton = (properties: SkeletonProperties) => (
 	<SkeletonReact
 		{...properties}
-		containerClassName="flex w-full max-w-full items-center overflow-hidden leading-none"
+		containerClassName="flex w-auto max-w-full items-center overflow-hidden leading-none"
 	/>
 );

@@ -12,7 +12,7 @@ exports[`TransactionVotes > should render loading state 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -25,7 +25,7 @@ exports[`TransactionVotes > should render loading state 1`] = `
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -39,7 +39,7 @@ exports[`TransactionVotes > should render loading state 1`] = `
     <span
       aria-busy="true"
       aria-live="polite"
-      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
     >
       <span
         class="react-loading-skeleton mb-1"
