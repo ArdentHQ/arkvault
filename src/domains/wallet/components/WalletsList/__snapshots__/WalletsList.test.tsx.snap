@@ -1791,7 +1791,30 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="items-center space-x-3 css-7ewq14"
+                  class="flex shrink-0 css-7ewq14"
+                >
+                  <div
+                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="-ml-3 space-x-3 css-1rods8x"
                 >
                   <span
                     aria-busy="true"
@@ -1800,33 +1823,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 18px; height: 18px;"
+                      style="width: 20px; height: 20px; border-radius: 50%;"
                     >
                       ‌
                     </span>
                     <br />
                   </span>
-                  <div
-                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
-                  >
-                    <div
-                      class="border-transparent ring-theme-background duration-100 css-1jea4xx"
-                    >
-                      <span
-                        aria-busy="true"
-                        aria-live="polite"
-                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                      >
-                        <span
-                          class="react-loading-skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
-                        <br />
-                      </span>
-                    </div>
-                  </div>
                   <span
                     aria-busy="true"
                     aria-live="polite"
@@ -1845,21 +1847,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               <td>
                 <div
                   class="justify-center css-1rods8x"
-                >
-                  <span
-                    aria-busy="true"
-                    aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton"
-                      style="width: 100px; height: 16px;"
-                    >
-                      ‌
-                    </span>
-                    <br />
-                  </span>
-                </div>
+                />
               </td>
               <td>
                 <div
@@ -1977,7 +1965,30 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="items-center space-x-3 css-7ewq14"
+                  class="flex shrink-0 css-7ewq14"
+                >
+                  <div
+                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="-ml-3 space-x-3 css-1rods8x"
                 >
                   <span
                     aria-busy="true"
@@ -1986,33 +1997,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 18px; height: 18px;"
+                      style="width: 20px; height: 20px; border-radius: 50%;"
                     >
                       ‌
                     </span>
                     <br />
                   </span>
-                  <div
-                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
-                  >
-                    <div
-                      class="border-transparent ring-theme-background duration-100 css-1jea4xx"
-                    >
-                      <span
-                        aria-busy="true"
-                        aria-live="polite"
-                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                      >
-                        <span
-                          class="react-loading-skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
-                        <br />
-                      </span>
-                    </div>
-                  </div>
                   <span
                     aria-busy="true"
                     aria-live="polite"
@@ -2031,21 +2021,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               <td>
                 <div
                   class="justify-center css-1rods8x"
-                >
-                  <span
-                    aria-busy="true"
-                    aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton"
-                      style="width: 100px; height: 16px;"
-                    >
-                      ‌
-                    </span>
-                    <br />
-                  </span>
-                </div>
+                />
               </td>
               <td>
                 <div
@@ -2163,7 +2139,30 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="items-center space-x-3 css-7ewq14"
+                  class="flex shrink-0 css-7ewq14"
+                >
+                  <div
+                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                  >
+                    <span
+                      aria-busy="true"
+                      aria-live="polite"
+                      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
+                      </span>
+                      <br />
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="-ml-3 space-x-3 css-1rods8x"
                 >
                   <span
                     aria-busy="true"
@@ -2172,33 +2171,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   >
                     <span
                       class="react-loading-skeleton"
-                      style="width: 18px; height: 18px;"
+                      style="width: 20px; height: 20px; border-radius: 50%;"
                     >
                       ‌
                     </span>
                     <br />
                   </span>
-                  <div
-                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
-                  >
-                    <div
-                      class="border-transparent ring-theme-background duration-100 css-1jea4xx"
-                    >
-                      <span
-                        aria-busy="true"
-                        aria-live="polite"
-                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                      >
-                        <span
-                          class="react-loading-skeleton"
-                          style="width: 20px; height: 20px; border-radius: 50%;"
-                        >
-                          ‌
-                        </span>
-                        <br />
-                      </span>
-                    </div>
-                  </div>
                   <span
                     aria-busy="true"
                     aria-live="polite"
@@ -2217,21 +2195,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               <td>
                 <div
                   class="justify-center css-1rods8x"
-                >
-                  <span
-                    aria-busy="true"
-                    aria-live="polite"
-                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton"
-                      style="width: 100px; height: 16px;"
-                    >
-                      ‌
-                    </span>
-                    <br />
-                  </span>
-                </div>
+                />
               </td>
               <td>
                 <div

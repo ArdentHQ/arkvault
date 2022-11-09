@@ -17,36 +17,34 @@ export const WalletListItemSkeleton: React.VFC<WalletListItemSkeletonProperties>
 			<TableCell
 				variant="start"
 				size="sm"
-				innerClassName={cn("items-center", isCompact ? "space-x-3" : "space-x-4")}
 				isCompact={isCompact}
+				innerClassName="flex shrink-0"
 			>
-				<Skeleton height={18} width={18} />
-
 				<div
 					className={cn(
-						"flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800",
-						{
-							"ml-3 space-x-3 pl-3": isCompact,
-							"ml-4 space-x-4 pl-4": !isCompact,
-						},
+						"flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800",
+						isCompact ? "h-5" : "h-11",
 					)}
 				>
-					{isCompact ? (
-						<Circle className="border-transparent" size="xs">
-							<Skeleton circle height={20} width={20} />
-						</Circle>
-					) : (
-						<Circle className="border-transparent" size="lg">
-							<Skeleton circle height={44} width={44} />
-						</Circle>
-					)}
+					<Skeleton height={18} width={18} />
 				</div>
+			</TableCell>
+
+			<TableCell
+				innerClassName={cn("-ml-3", isCompact ? "space-x-3" : "space-x-4")}
+				isCompact={isCompact}
+			>
+				{isCompact ? (
+					<Skeleton circle height={20} width={20} />
+				) : (
+					<Skeleton circle height={44} width={44} />
+				)}
 
 				<Skeleton height={16} width={200} />
 			</TableCell>
 
 			<TableCell innerClassName="justify-center" isCompact={isCompact}>
-				<Skeleton height={16} width={100} />
+				<></>
 			</TableCell>
 
 			<TableCell innerClassName="justify-end" isCompact={isCompact}>

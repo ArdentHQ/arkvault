@@ -10,9 +10,7 @@ export const WalletVoteSkeleton = () => (
 	>
 		<div className="flex w-full items-center px-6 py-4 md:p-0">
 			<div className="mr-4 hidden md:block">
-				<Circle size="lg" className="border-transparent" shadowClassName="ring-theme-secondary-background">
-					<Skeleton circle height={44} width={44} />
-				</Circle>
+				<Skeleton circle height={44} width={44} />
 			</div>
 
 			<div className="flex h-10 flex-col justify-between">
