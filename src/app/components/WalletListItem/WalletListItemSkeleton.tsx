@@ -6,7 +6,6 @@ import { Icon } from "@/app/components/Icon";
 import { WalletListItemSkeletonProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { Skeleton } from "@/app/components/Skeleton";
 
-import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";
 
 export const WalletListItemSkeleton: React.VFC<WalletListItemSkeletonProperties> = ({ isCompact }) => {
@@ -14,12 +13,7 @@ export const WalletListItemSkeleton: React.VFC<WalletListItemSkeletonProperties>
 
 	return (
 		<TableRow>
-			<TableCell
-				variant="start"
-				size="sm"
-				isCompact={isCompact}
-				innerClassName="flex shrink-0"
-			>
+			<TableCell variant="start" size="sm" isCompact={isCompact} innerClassName="flex shrink-0">
 				<div
 					className={cn(
 						"flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800",
@@ -30,15 +24,8 @@ export const WalletListItemSkeleton: React.VFC<WalletListItemSkeletonProperties>
 				</div>
 			</TableCell>
 
-			<TableCell
-				innerClassName={cn("-ml-3", isCompact ? "space-x-3" : "space-x-4")}
-				isCompact={isCompact}
-			>
-				{isCompact ? (
-					<Skeleton circle height={20} width={20} />
-				) : (
-					<Skeleton circle height={44} width={44} />
-				)}
+			<TableCell innerClassName={cn("-ml-3", isCompact ? "space-x-3" : "space-x-4")} isCompact={isCompact}>
+				{isCompact ? <Skeleton circle height={20} width={20} /> : <Skeleton circle height={44} width={44} />}
 
 				<Skeleton height={16} width={200} />
 			</TableCell>

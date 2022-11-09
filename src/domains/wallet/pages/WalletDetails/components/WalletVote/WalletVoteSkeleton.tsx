@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Circle } from "@/app/components/Circle";
 import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletVoteSkeleton = () => (
