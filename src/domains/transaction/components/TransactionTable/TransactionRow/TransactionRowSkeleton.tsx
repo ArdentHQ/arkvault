@@ -1,7 +1,6 @@
 import cn from "classnames";
 import React from "react";
 
-import { Circle } from "@/app/components/Circle";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
@@ -35,7 +34,7 @@ export const TransactionRowSkeleton = ({ isCompact }: Properties) => {
 				) : (
 					<div className="mr-4 flex items-center -space-x-1">
 						<Skeleton circle height={44} width={44} />
-						<div className="z-0 flex ring-6 ring-theme-background rounded-full">
+						<div className="z-0 flex rounded-full ring-6 ring-theme-background">
 							<Skeleton circle height={44} width={44} />
 						</div>
 					</div>
