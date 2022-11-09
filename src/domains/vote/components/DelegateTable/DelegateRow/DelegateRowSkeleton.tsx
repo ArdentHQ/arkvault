@@ -2,7 +2,6 @@ import cn from "classnames";
 import React from "react";
 import { Skeleton } from "@/app/components/Skeleton";
 
-import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
 
@@ -25,9 +24,7 @@ export const DelegateRowSkeleton = ({ requiresStakeAmount, isCompact }: Delegate
 				innerClassName={cn({ "h-12 space-x-3": isCompact }, { "space-x-4": !isCompact })}
 				isCompact={isCompact}
 			>
-				<Circle className="border-transparent" size={isCompact ? "xs" : "lg"}>
-					<Skeleton className="align-top" circle height={circleSize} width={circleSize} />
-				</Circle>
+				<Skeleton className="align-top" circle height={circleSize} width={circleSize} />
 
 				<Skeleton height={16} width={nameWidth} />
 			</TableCell>
