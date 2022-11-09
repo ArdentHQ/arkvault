@@ -49,7 +49,7 @@ exports[`PortfolioBreakdown > should render loading when items converted balance
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -78,7 +78,7 @@ exports[`PortfolioBreakdown > should render loading when items converted balance
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -104,7 +104,7 @@ exports[`PortfolioBreakdown > should render loading when items converted balance
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -124,7 +124,7 @@ exports[`PortfolioBreakdown > should render loading when items converted balance
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -162,7 +162,7 @@ exports[`PortfolioBreakdown > should render loading when no wallets have synced 
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -191,7 +191,7 @@ exports[`PortfolioBreakdown > should render loading when no wallets have synced 
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -217,7 +217,7 @@ exports[`PortfolioBreakdown > should render loading when no wallets have synced 
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -237,7 +237,7 @@ exports[`PortfolioBreakdown > should render loading when no wallets have synced 
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -275,7 +275,7 @@ exports[`PortfolioBreakdown > should render loading when profile is not restored
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -304,7 +304,7 @@ exports[`PortfolioBreakdown > should render loading when profile is not restored
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -330,7 +330,7 @@ exports[`PortfolioBreakdown > should render loading when profile is not restored
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -350,7 +350,7 @@ exports[`PortfolioBreakdown > should render loading when profile is not restored
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -388,7 +388,7 @@ exports[`PortfolioBreakdown > should render loading when some wallets have not s
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -417,7 +417,7 @@ exports[`PortfolioBreakdown > should render loading when some wallets have not s
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -443,7 +443,7 @@ exports[`PortfolioBreakdown > should render loading when some wallets have not s
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -463,7 +463,7 @@ exports[`PortfolioBreakdown > should render loading when some wallets have not s
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
@@ -501,7 +501,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton"
@@ -530,7 +530,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -556,7 +556,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -576,7 +576,7 @@ exports[`PortfolioBreakdown > should render loading when syncing exchange rates 
       <span
         aria-busy="true"
         aria-live="polite"
-        class="flex w-full max-w-full items-center overflow-hidden leading-none"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
       >
         <span
           class="react-loading-skeleton"
