@@ -49,6 +49,7 @@ export default mergeConfig(
 				branches: coverageThresholdBranches,
 				statements: coverageThresholdStatements,
 			},
+			outputTruncateLength: 120,
 		},
 		resolve: {
 			alias: {
