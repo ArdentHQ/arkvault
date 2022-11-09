@@ -27,12 +27,10 @@ export const NotificationTransactionSkeletonRow: VFC<NotificationTransactionSkel
 
 		return (
 			<div className="flex items-center -space-x-1">
-				<Circle className="border-transparent" size="lg">
+				<Skeleton circle height={44} width={44} />
+				<div className="z-0 flex ring-6 ring-theme-background rounded-full">
 					<Skeleton circle height={44} width={44} />
-				</Circle>
-				<Circle className="border-transparent" size="lg">
-					<Skeleton circle height={44} width={44} />
-				</Circle>
+				</div>
 			</div>
 		);
 	};

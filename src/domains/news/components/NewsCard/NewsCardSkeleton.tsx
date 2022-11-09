@@ -13,7 +13,7 @@ export const NewsCardSkeleton = () => {
 	return (
 		<div className="relative h-full w-full cursor-default border-b border-theme-primary-100 bg-theme-background p-3 text-left transition-colors-shadow duration-200 dark:border-theme-secondary-800 md:rounded-lg md:border-2 md:border-b-2 md:p-5">
 			<div className="flex flex-col space-y-6 p-5" data-testid="NewsCard__skeleton">
-				<div className="flex w-full items-center items-stretch justify-between">
+				<div className="flex w-full justify-between">
 					<div className="flex items-center">
 						<div className="relative mr-4 hidden h-12 items-center justify-center md:flex">
 							<Skeleton circle width={44} height={44} />
