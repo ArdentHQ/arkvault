@@ -95,7 +95,7 @@ export const TabScroll = ({ children }) => {
 				}}
 			/>
 			<div className="bg-theme-secondary-100 dark:bg-black">
-				<TabScrollScroll className="container relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
+				<TabScrollScroll className="relative z-0 mx-auto overflow-x-auto">{children}</TabScrollScroll>
 			</div>
 			<span
 				className="pointer-events-none absolute top-0 right-0 z-10 block h-full w-8 bg-theme-secondary-100 dark:bg-black"
