@@ -15,18 +15,22 @@ import {
 	LedgerWaitingDeviceContent,
 } from "@/domains/wallet/components/Ledger";
 import { StepHeader } from "@/app/components/StepHeader";
+import { Spinner } from "@/app/components/Spinner";
+import { Image } from "@/app/components/Image";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
 	ledgerSupportedModels?: LedgerModel[];
 	ledgerConnectedModel?: LedgerModel;
+	onDeviceNotAvailable?: () => void;
 }
 
 type AuthenticationStepProperties = {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerDetails?: React.ReactNode;
 	subject?: "transaction" | "message";
-	showHeader?: boolean;
+	noHeading?: boolean;
+	requireLedgerConfirmation?: boolean;
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
@@ -36,6 +40,7 @@ const LedgerStateWrapper = ({
 	wallet,
 	children,
 	ledgerSupportedModels = [Contracts.WalletLedgerModel.NanoS, Contracts.WalletLedgerModel.NanoX],
+	noHeading,
 }: AuthenticationStepProperties & { children: React.ReactNode }) => {
 	const { t } = useTranslation();
 
@@ -59,16 +64,16 @@ const LedgerStateWrapper = ({
 
 	if (ledgerConnectedModel && !isLedgerModelSupported) {
 		return (
-			<LedgerDeviceErrorContent connectedModel={ledgerConnectedModel} supportedModel={ledgerSupportedModels[0]} />
+			<LedgerDeviceErrorContent connectedModel={ledgerConnectedModel} supportedModel={ledgerSupportedModels[0]} noHeading={noHeading} />
 		);
 	}
 
 	if (ledgerIsAwaitingDevice) {
-		return <LedgerWaitingDeviceContent subtitle={subtitle} />;
+		return <LedgerWaitingDeviceContent subtitle={subtitle} noHeading={noHeading} />;
 	}
 
 	if (ledgerIsAwaitingApp) {
-		return <LedgerWaitingAppContent coinName={wallet.network().coin()} subtitle={subtitle} />;
+		return <LedgerWaitingAppContent coinName={wallet.network().coin()} subtitle={subtitle} noHeading={noHeading} />;
 	}
 
 	return <>{children}</>;
@@ -82,7 +87,9 @@ const LedgerAuthentication = ({
 	ledgerIsAwaitingApp,
 	ledgerConnectedModel,
 	ledgerSupportedModels,
-	showHeader,
+	onDeviceNotAvailable,
+	noHeading,
+	requireLedgerConfirmation = true,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
@@ -93,7 +100,8 @@ const LedgerAuthentication = ({
 		return (
 			<ListenLedger
 				onDeviceAvailable={() => setReadyToConfirm(true)}
-				onDeviceNotAvailable={() => history.go(-1)}
+				onDeviceNotAvailable={onDeviceNotAvailable || (() => history.go(-1))}
+				noHeading={noHeading}
 			/>
 		);
 	}
@@ -106,9 +114,10 @@ const LedgerAuthentication = ({
 				ledgerSupportedModels={ledgerSupportedModels}
 				ledgerConnectedModel={ledgerConnectedModel}
 				wallet={wallet}
+				noHeading={noHeading}
 			>
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader
 							title={
 								subject === "transaction"
@@ -118,7 +127,25 @@ const LedgerAuthentication = ({
 						/>
 					)}
 
-					<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
+					{requireLedgerConfirmation && (
+						<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
+					)}
+
+					{!requireLedgerConfirmation && (
+						<div className="space-y-8">
+							<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
+
+							<div className="inline-flex w-full items-center justify-center space-x-3">
+								<Spinner />
+								<span
+									className="animate-pulse font-semibold text-theme-secondary-text"
+									data-testid="LedgerWaitingDevice-loading_message"
+								>
+									{t("WALLETS.MODAL_LEDGER_WALLET.WAITING_DEVICE")}
+								</span>
+							</div>
+						</div>
+					)}
 				</>
 			</LedgerStateWrapper>
 		</div>
@@ -132,8 +159,10 @@ export const AuthenticationStep = ({
 	ledgerIsAwaitingApp,
 	ledgerConnectedModel,
 	ledgerSupportedModels,
+	onDeviceNotAvailable,
 	subject = "transaction",
-	showHeader = true,
+	noHeading,
+	requireLedgerConfirmation,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
@@ -148,9 +177,11 @@ export const AuthenticationStep = ({
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
 				ledgerSupportedModels={ledgerSupportedModels}
 				ledgerConnectedModel={ledgerConnectedModel}
+				onDeviceNotAvailable={onDeviceNotAvailable}
 				wallet={wallet}
 				subject={subject}
-				showHeader={showHeader}
+				noHeading={noHeading}
+				requireLedgerConfirmation={requireLedgerConfirmation}
 			/>
 		);
 	}
@@ -172,7 +203,7 @@ export const AuthenticationStep = ({
 		<div data-testid="AuthenticationStep" className="space-y-6">
 			{wallet.actsWithWif() && (
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
 					)}
 
@@ -188,7 +219,7 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithPrivateKey() && (
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")} />
 					)}
 
@@ -204,7 +235,7 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithSecret() && (
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader
 							title={title}
 							subtitle={
@@ -227,7 +258,7 @@ export const AuthenticationStep = ({
 
 			{requireEncryptionPassword && (
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader
 							title={title}
 							subtitle={
@@ -250,7 +281,7 @@ export const AuthenticationStep = ({
 
 			{requireMnemonic && (
 				<>
-					{!!showHeader && (
+					{!noHeading && (
 						<StepHeader
 							title={title}
 							subtitle={

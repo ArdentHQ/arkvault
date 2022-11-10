@@ -225,25 +225,28 @@ export const SignedTransactionRow = ({
 
 					<TableRemoveButton isCompact={isCompact} isDisabled={!canBeDeleted} onClick={handleRemove} />
 				</div>
-				<div className="xl:hidden">
-					<Dropdown
-						data-testid="SignedTransactionRow--dropdown"
-						toggleContent={
-							<Button
-								variant={isCompact ? "transparent" : "secondary"}
-								size="icon"
-								className={cn("px-2", {
-									"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
-									"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
-								})}
-							>
-								<Icon name="EllipsisVertical" size="lg" />
-							</Button>
-						}
-						options={dropdownOptions}
-						onSelect={handleDropdownSelection}
-					/>
-				</div>
+
+				{dropdownOptions.length > 0 && (
+					<div className="xl:hidden">
+						<Dropdown
+							data-testid="SignedTransactionRow--dropdown"
+							toggleContent={
+								<Button
+									variant={isCompact ? "transparent" : "secondary"}
+									size="icon"
+									className={cn("px-2", {
+										"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
+										"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
+									})}
+								>
+									<Icon name="EllipsisVertical" size="lg" />
+								</Button>
+							}
+							options={dropdownOptions}
+							onSelect={handleDropdownSelection}
+						/>
+					</div>
+				)}
 			</TableCell>
 		</TableRow>
 	);

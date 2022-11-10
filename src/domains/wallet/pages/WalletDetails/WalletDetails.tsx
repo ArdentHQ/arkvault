@@ -193,6 +193,7 @@ export const WalletDetails = () => {
 							})}
 						>
 							<PendingTransactions
+								profile={activeProfile}
 								isCompact={useCompactTables}
 								pendingTransactions={pendingTransactions}
 								wallet={activeWallet}

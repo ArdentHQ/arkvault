@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DeleteResource } from "@/app/components/DeleteResource";
@@ -8,69 +8,96 @@ import { useForm } from "react-hook-form";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { useLedgerContext } from "@/app/contexts";
 
-interface ConfirmSendTransactionProperties {
-	isOpen: boolean;
+interface ConfirmRemovePendingTransactionProperties {
+	profile: Contracts.IProfile;
+	transaction: DTO.ExtendedSignedTransactionData;
 	onClose?: any;
 	onRemove?: (transaction: DTO.ExtendedSignedTransactionData) => void;
-	transaction?: DTO.ExtendedSignedTransactionData;
 }
 
 export const ConfirmRemovePendingTransaction = ({
-	isOpen,
+	profile,
 	onClose,
 	onRemove,
 	transaction,
-}: ConfirmSendTransactionProperties) => {
+}: ConfirmRemovePendingTransactionProperties) => {
 	const { t } = useTranslation();
-
 	const { getLabel } = useTransactionTypes();
 
+	const [hasLedgerPublicKey, setHasLedgerPublicKey] = useState(false);
 	const { hasDeviceAvailable, isConnected, connect, ledgerDevice } = useLedgerContext();
+
+	const wallet = transaction.wallet();
+
+	useEffect(() => {
+		const getPublicKey = async () => {
+			try {
+				await connect(profile, transaction.wallet().coinId(), transaction.wallet().networkId());
+
+				const path = wallet.data().get<string>(Contracts.WalletData.DerivationPath);
+				const publicKey = await wallet.coin().ledger().getPublicKey(path!);
+
+				setHasLedgerPublicKey(publicKey === wallet.publicKey());
+			} catch {
+				//
+			}
+		};
+
+		if (wallet.isLedger()) {
+			getPublicKey();
+		}
+	}, [connect, profile, wallet]);
 
 	const form = useForm({ mode: "onChange" });
 
 	const { formState } = form;
 	const { isSubmitting, isValid } = formState;
 
-	if (!transaction?.type()) {
+	if (!transaction.type()) {
 		return <></>;
 	}
-
-	const wallet = transaction.wallet();
 
 	const typeLabel = getLabel(transaction.type());
 	const typeSuffix = transaction.isMultiSignatureRegistration()
 		? t("TRANSACTION.REGISTRATION")
 		: t("TRANSACTION.TRANSACTION");
 
+	const isButtonDisabled = () => {
+		if (isSubmitting) {
+			return true;
+		}
+
+		return wallet.isLedger() ? !hasLedgerPublicKey : !isValid;
+	};
+
 	return (
 		<DeleteResource
 			data-testid={`ConfirmRemovePendingTransaction__${typeLabel}-${typeSuffix}`}
-			isOpen={isOpen}
 			title={t("TRANSACTION.MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION.TITLE")}
 			description={t("TRANSACTION.MODAL_CONFIRM_REMOVE_PENDING_TRANSACTION.DESCRIPTION", {
 				type: `${typeLabel} ${typeSuffix}`,
 			})}
-			disabled={isSubmitting || !isValid}
+			disabled={isButtonDisabled()}
 			onClose={onClose}
 			onCancel={onClose}
 			onDelete={() => onRemove?.(transaction)}
+			isOpen
 		>
-			<Form context={form} className="mt-6">
-				{wallet.isLedger() && (
-					<span>TODO</span>
-				)}
-
-				{!wallet.isLedger() && (
-					<AuthenticationStep
-						wallet={wallet}
-						ledgerIsAwaitingDevice={!hasDeviceAvailable}
-						ledgerIsAwaitingApp={!isConnected}
-						ledgerConnectedModel={ledgerDevice?.id}
-						ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
-						subject="message"
-						showHeader={false}
-					/>
+			<Form context={form}>
+				{(!wallet.isLedger() || !hasLedgerPublicKey) && (
+					<div className="mt-6">
+						<AuthenticationStep
+							wallet={wallet}
+							ledgerIsAwaitingDevice={!hasDeviceAvailable}
+							ledgerIsAwaitingApp={!isConnected}
+							ledgerConnectedModel={ledgerDevice?.id}
+							ledgerSupportedModels={[Contracts.WalletLedgerModel.NanoX]}
+							onDeviceNotAvailable={onClose}
+							subject="message"
+							noHeading={true}
+							requireLedgerConfirmation={false}
+						/>
+					</div>
 				)}
 			</Form>
 		</DeleteResource>

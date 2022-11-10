@@ -6,17 +6,19 @@ import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
 
-export const LedgerWaitingAppContent = ({ coinName, subtitle }: { coinName: string; subtitle?: string }) => {
+export const LedgerWaitingAppContent = ({ coinName, subtitle, noHeading }: { coinName: string; subtitle?: string, noHeading?: boolean }) => {
 	const { t } = useTranslation();
 
 	return (
 		<div data-testid="LedgerWaitingAppContent" className="mt-8 space-y-8">
-			<Header
-				title={t("WALLETS.MODAL_LEDGER_WALLET.TITLE")}
-				subtitle={subtitle || t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE")}
-			/>
+			{!noHeading && (
+				<Header
+					title={t("WALLETS.MODAL_LEDGER_WALLET.TITLE")}
+					subtitle={subtitle || t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE")}
+				/>
+			)}
 
-			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" />
+			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
 
 			<div className="inline-flex w-full items-center justify-center space-x-3">
 				<Spinner />
