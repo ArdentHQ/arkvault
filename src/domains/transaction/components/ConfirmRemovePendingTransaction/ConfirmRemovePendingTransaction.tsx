@@ -51,7 +51,7 @@ export const ConfirmRemovePendingTransaction = ({
 	const form = useForm({ mode: "onChange" });
 
 	const { formState } = form;
-	const { isSubmitting, isValid } = formState;
+	const { isDirty, isSubmitting, isValid } = formState;
 
 	if (!transaction.type()) {
 		return <></>;
@@ -63,7 +63,7 @@ export const ConfirmRemovePendingTransaction = ({
 		: t("TRANSACTION.TRANSACTION");
 
 	const isButtonDisabled = () => {
-		if (isSubmitting) {
+		if ((!wallet.isLedger() && !isDirty) || isSubmitting) {
 			return true;
 		}
 

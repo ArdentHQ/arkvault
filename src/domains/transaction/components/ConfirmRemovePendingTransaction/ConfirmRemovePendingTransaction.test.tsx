@@ -1,10 +1,12 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import React from "react";
+import React, { useEffect } from "react";
 
+import { minVersionList, useLedgerContext } from "@/app/contexts";
 import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 import { translations } from "@/domains/transaction/i18n";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, mockNanoXTransport, render, screen } from "@/utils/testing-library";
+import { waitFor } from "@testing-library/react";
 
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
 const cancelButton = () => screen.getByTestId("DeleteResource__cancel-button");
@@ -135,8 +137,9 @@ describe("ConfirmRemovePendingTransaction", () => {
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should handle remove", () => {
+	it("should handle remove", async () => {
 		const onRemove = vi.fn();
+
 		render(
 			<ConfirmRemovePendingTransaction
 				profile={profile}
@@ -155,8 +158,78 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
+		expect(submitButton()).toBeDisabled();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
 		userEvent.click(submitButton());
 
 		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
+	});
+
+	it("should handle remove with ledger wallet", async () => {
+		const Wrapper = ({ children }: { children: React.ReactNode }) => {
+			const { listenDevice } = useLedgerContext();
+
+			useEffect(() => {
+				listenDevice();
+			}, []);
+
+			return <>{children}</>;
+		};
+
+		const onRemove = vi.fn();
+
+		vi
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
+
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+
+		const getPublicKeyMock = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue(wallet.publicKey());
+
+		const ledgerTransportMock = mockNanoXTransport();
+
+		render(
+			<Wrapper>
+				<ConfirmRemovePendingTransaction
+					profile={profile}
+					transaction={multiSignatureFixture}
+					onRemove={onRemove}
+				/>,
+			</Wrapper>
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		expect(submitButton()).toBeInTheDocument();
+		expect(cancelButton()).toBeInTheDocument();
+
+		expect(
+			screen.getByTestId(
+				`ConfirmRemovePendingTransaction__${translations.TRANSACTION_TYPES.MULTI_SIGNATURE}-${translations.REGISTRATION}`,
+			),
+		).toBeInTheDocument();
+
+		expect(submitButton()).toBeDisabled();
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
+		userEvent.click(submitButton());
+
+		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
+
+		ledgerTransportMock.mockRestore();
+		getPublicKeyMock.mockRestore();
 	});
 });

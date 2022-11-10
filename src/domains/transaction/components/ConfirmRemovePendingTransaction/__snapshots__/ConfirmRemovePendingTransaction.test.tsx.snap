@@ -268,8 +268,9 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                 </div>
               </button>
               <button
-                class="css-1cp5yjb"
+                class="css-1yqe28v"
                 data-testid="DeleteResource__submit-button"
+                disabled=""
                 type="submit"
               >
                 <div
@@ -581,8 +582,9 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                 </div>
               </button>
               <button
-                class="css-1cp5yjb"
+                class="css-1yqe28v"
                 data-testid="DeleteResource__submit-button"
+                disabled=""
                 type="submit"
               >
                 <div
