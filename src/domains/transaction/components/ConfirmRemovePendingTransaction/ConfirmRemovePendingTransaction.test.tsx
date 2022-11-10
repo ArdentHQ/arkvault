@@ -11,6 +11,16 @@ import { waitFor } from "@testing-library/react";
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
 const cancelButton = () => screen.getByTestId("DeleteResource__cancel-button");
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
+	const { listenDevice } = useLedgerContext();
+
+	useEffect(() => {
+		listenDevice();
+	}, []);
+
+	return <>{children}</>;
+};
+
 describe("ConfirmRemovePendingTransaction", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -172,16 +182,6 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should handle remove with ledger wallet", async () => {
-		const Wrapper = ({ children }: { children: React.ReactNode }) => {
-			const { listenDevice } = useLedgerContext();
-
-			useEffect(() => {
-				listenDevice();
-			}, []);
-
-			return <>{children}</>;
-		};
-
 		const onRemove = vi.fn();
 
 		vi
