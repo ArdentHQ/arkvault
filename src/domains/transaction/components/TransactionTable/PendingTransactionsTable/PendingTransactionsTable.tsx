@@ -94,12 +94,12 @@ export const PendingTransactions = ({
 			</Table>
 
 			{!!pendingRemovalTransaction && (
-					<ConfirmRemovePendingTransaction
-						profile={profile}
-						transaction={pendingRemovalTransaction}
-						onClose={() => setPendingRemovalTransaction(undefined)}
-						onRemove={handleRemove}
-					/>
+				<ConfirmRemovePendingTransaction
+					profile={profile}
+					transaction={pendingRemovalTransaction}
+					onClose={() => setPendingRemovalTransaction(undefined)}
+					onRemove={handleRemove}
+				/>
 			)}
 		</div>
 	);

@@ -52,9 +52,7 @@ export const ListenLedger = ({
 
 	return (
 		<section data-testid="LedgerAuthStep" className="space-y-8">
-			{!noHeading && (
-				<Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />
-			)}
+			{!noHeading && <Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />}
 
 			<Image name="AuthLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
 

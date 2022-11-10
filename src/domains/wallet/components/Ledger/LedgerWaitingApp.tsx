@@ -6,7 +6,15 @@ import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
 
-export const LedgerWaitingAppContent = ({ coinName, subtitle, noHeading }: { coinName: string; subtitle?: string, noHeading?: boolean }) => {
+export const LedgerWaitingAppContent = ({
+	coinName,
+	subtitle,
+	noHeading,
+}: {
+	coinName: string;
+	subtitle?: string;
+	noHeading?: boolean;
+}) => {
 	const { t } = useTranslation();
 
 	return (

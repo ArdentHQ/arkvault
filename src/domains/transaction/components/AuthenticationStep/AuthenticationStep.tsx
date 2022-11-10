@@ -64,7 +64,11 @@ const LedgerStateWrapper = ({
 
 	if (ledgerConnectedModel && !isLedgerModelSupported) {
 		return (
-			<LedgerDeviceErrorContent connectedModel={ledgerConnectedModel} supportedModel={ledgerSupportedModels[0]} noHeading={noHeading} />
+			<LedgerDeviceErrorContent
+				connectedModel={ledgerConnectedModel}
+				supportedModel={ledgerSupportedModels[0]}
+				noHeading={noHeading}
+			/>
 		);
 	}
 
@@ -133,7 +137,12 @@ const LedgerAuthentication = ({
 
 					{!requireLedgerConfirmation && (
 						<div className="space-y-8">
-							<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
+							<Image
+								name="WaitingLedgerDevice"
+								domain="wallet"
+								className="mx-auto max-w-full"
+								useAccentColor={false}
+							/>
 
 							<div className="inline-flex w-full items-center justify-center space-x-3">
 								<Spinner />
@@ -220,7 +229,10 @@ export const AuthenticationStep = ({
 			{wallet.actsWithPrivateKey() && (
 				<>
 					{!noHeading && (
-						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")} />
+						<StepHeader
+							title={title}
+							subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")}
+						/>
 					)}
 
 					<FormField name="privateKey">

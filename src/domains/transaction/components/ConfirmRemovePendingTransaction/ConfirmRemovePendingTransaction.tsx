@@ -1,10 +1,10 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useForm } from "react-hook-form";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 import { DeleteResource } from "@/app/components/DeleteResource";
 import { Form } from "@/app/components/Form";
-import { useForm } from "react-hook-form";
 import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
 import { useLedgerContext } from "@/app/contexts";
 

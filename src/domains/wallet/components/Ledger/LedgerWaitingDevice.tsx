@@ -7,7 +7,7 @@ import { Modal } from "@/app/components/Modal";
 import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
-export const LedgerWaitingDeviceContent = ({ subtitle, noHeading }: { subtitle?: string, noHeading?: boolean }) => {
+export const LedgerWaitingDeviceContent = ({ subtitle, noHeading }: { subtitle?: string; noHeading?: boolean }) => {
 	const { t } = useTranslation();
 	return (
 		<div className="space-y-8">
