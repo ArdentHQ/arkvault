@@ -2,11 +2,18 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
-import { minVersionList, useLedgerContext } from "@/app/contexts";
-import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
-import { translations } from "@/domains/transaction/i18n";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, mockNanoXTransport, render, screen } from "@/utils/testing-library";
 import { waitFor } from "@testing-library/react";
+import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
+import { minVersionList, useLedgerContext } from "@/app/contexts";
+import { translations } from "@/domains/transaction/i18n";
+import {
+	env,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	render,
+	screen,
+} from "@/utils/testing-library";
 
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
 const cancelButton = () => screen.getByTestId("DeleteResource__cancel-button");
@@ -184,18 +191,14 @@ describe("ConfirmRemovePendingTransaction", () => {
 	it("should handle remove with ledger wallet", async () => {
 		const onRemove = vi.fn();
 
-		vi
-			.spyOn(wallet.coin().ledger(), "getVersion")
-			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		vi.spyOn(wallet, "isLedgerNanoX").mockReturnValue(true);
 
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
 
-		const getPublicKeyMock = vi
-			.spyOn(wallet.coin().ledger(), "getPublicKey")
-			.mockResolvedValue(wallet.publicKey());
+		const getPublicKeyMock = vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(wallet.publicKey());
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -205,8 +208,9 @@ describe("ConfirmRemovePendingTransaction", () => {
 					profile={profile}
 					transaction={multiSignatureFixture}
 					onRemove={onRemove}
-				/>,
-			</Wrapper>
+				/>
+				,
+			</Wrapper>,
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
