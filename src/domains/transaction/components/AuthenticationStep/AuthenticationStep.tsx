@@ -26,6 +26,7 @@ type AuthenticationStepProperties = {
 	wallet: Contracts.IReadWriteWallet;
 	ledgerDetails?: React.ReactNode;
 	subject?: "transaction" | "message";
+	showHeader?: boolean;
 } & LedgerStates;
 
 const LedgerStateWrapper = ({
@@ -81,6 +82,7 @@ const LedgerAuthentication = ({
 	ledgerIsAwaitingApp,
 	ledgerConnectedModel,
 	ledgerSupportedModels,
+	showHeader,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
@@ -106,13 +108,15 @@ const LedgerAuthentication = ({
 				wallet={wallet}
 			>
 				<>
-					<StepHeader
-						title={
-							subject === "transaction"
-								? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
-								: t("MESSAGE.LEDGER_CONFIRMATION.TITLE")
-						}
-					/>
+					{!!showHeader && (
+						<StepHeader
+							title={
+								subject === "transaction"
+									? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
+									: t("MESSAGE.LEDGER_CONFIRMATION.TITLE")
+							}
+						/>
+					)}
 
 					<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
 				</>
@@ -129,6 +133,7 @@ export const AuthenticationStep = ({
 	ledgerConnectedModel,
 	ledgerSupportedModels,
 	subject = "transaction",
+	showHeader = true,
 }: AuthenticationStepProperties) => {
 	const { t } = useTranslation();
 
@@ -145,6 +150,7 @@ export const AuthenticationStep = ({
 				ledgerConnectedModel={ledgerConnectedModel}
 				wallet={wallet}
 				subject={subject}
+				showHeader={showHeader}
 			/>
 		);
 	}
@@ -166,7 +172,9 @@ export const AuthenticationStep = ({
 		<div data-testid="AuthenticationStep" className="space-y-6">
 			{wallet.actsWithWif() && (
 				<>
-					<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
+					{!!showHeader && (
+						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_WIF")} />
+					)}
 
 					<FormField name="wif">
 						<FormLabel>{t("COMMON.WIF")}</FormLabel>
@@ -180,7 +188,9 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithPrivateKey() && (
 				<>
-					<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")} />
+					{!!showHeader && (
+						<StepHeader title={title} subtitle={t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_PRIVATE_KEY")} />
+					)}
 
 					<FormField name="privateKey">
 						<FormLabel>{t("COMMON.PRIVATE_KEY")}</FormLabel>
@@ -194,14 +204,16 @@ export const AuthenticationStep = ({
 
 			{wallet.actsWithSecret() && (
 				<>
-					<StepHeader
-						title={title}
-						subtitle={
-							isTransaction
-								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
-								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
-						}
-					/>
+					{!!showHeader && (
+						<StepHeader
+							title={title}
+							subtitle={
+								isTransaction
+									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
+									: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_SECRET")
+							}
+						/>
+					)}
 
 					<FormField name="secret">
 						<FormLabel>{t("COMMON.SECRET")}</FormLabel>
@@ -215,14 +227,16 @@ export const AuthenticationStep = ({
 
 			{requireEncryptionPassword && (
 				<>
-					<StepHeader
-						title={title}
-						subtitle={
-							isTransaction
-								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
-						}
-					/>
+					{!!showHeader && (
+						<StepHeader
+							title={title}
+							subtitle={
+								isTransaction
+									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+									: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_ENCRYPTION_PASSWORD")
+							}
+						/>
+					)}
 
 					<FormField name="encryptionPassword">
 						<FormLabel>{t("TRANSACTION.ENCRYPTION_PASSWORD")}</FormLabel>
@@ -236,14 +250,16 @@ export const AuthenticationStep = ({
 
 			{requireMnemonic && (
 				<>
-					<StepHeader
-						title={title}
-						subtitle={
-							isTransaction
-								? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
-								: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
-						}
-					/>
+					{!!showHeader && (
+						<StepHeader
+							title={title}
+							subtitle={
+								isTransaction
+									? t("TRANSACTION.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
+									: t("MESSAGE.PAGE_SIGN_MESSAGE.AUTHENTICATION_STEP.DESCRIPTION_MNEMONIC")
+							}
+						/>
+					)}
 
 					<FormField name="mnemonic">
 						<FormLabel>{t("TRANSACTION.MNEMONIC")}</FormLabel>

@@ -14,6 +14,8 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { assertString } from "@/utils/assertions";
 
 interface SignedTransactionRowProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -107,6 +109,15 @@ export const SignedTransactionRow = ({
 		wallet,
 	});
 
+	const canBeDeleted = useMemo(() => {
+		const publicKey = transaction.wallet().publicKey();
+
+		assertString(publicKey);
+
+		const musigInfo = getMultiSignatureInfo(transaction);
+		return musigInfo.publicKeys.includes(publicKey);
+	}, [transaction]);
+
 	const handleRemove = (event?: MouseEvent) => {
 		event?.preventDefault();
 		event?.stopPropagation();
@@ -135,13 +146,15 @@ export const SignedTransactionRow = ({
 			});
 		}
 
-		options.push({
-			icon: "Trash",
-			iconClassName: "text-theme-danger-500",
-			iconPosition: "start",
-			label: t("COMMON.REMOVE"),
-			value: "remove",
-		});
+		if (canBeDeleted) {
+			options.push({
+				icon: "Trash",
+				iconClassName: "text-theme-danger-500",
+				iconPosition: "start",
+				label: t("COMMON.REMOVE"),
+				value: "remove",
+			});
+		}
 
 		return options;
 	}, [canBeSigned]);
@@ -210,7 +223,7 @@ export const SignedTransactionRow = ({
 						onClick={() => onSign?.(transaction)}
 					/>
 
-					<TableRemoveButton isCompact={isCompact} onClick={handleRemove} />
+					<TableRemoveButton isCompact={isCompact} isDisabled={!canBeDeleted} onClick={handleRemove} />
 				</div>
 				<div className="xl:hidden">
 					<Dropdown
