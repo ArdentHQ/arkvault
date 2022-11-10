@@ -87,7 +87,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex w-0 flex-1 items-center justify-end overflow-hidden"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -200,7 +200,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Status
                 </div>
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-x-2"
                 >
                   Awaiting 3 other signatures
                   <span
@@ -902,7 +902,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex w-0 flex-1 items-center justify-end overflow-hidden"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -1015,7 +1015,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Status
                 </div>
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-x-2"
                 >
                   Awaiting our signature
                   <span
@@ -1760,7 +1760,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex w-0 flex-1 items-center justify-end overflow-hidden"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -1873,7 +1873,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Status
                 </div>
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-x-2"
                 >
                   Awaiting broadcast
                   <span
@@ -2640,7 +2640,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex w-0 flex-1 items-center justify-end overflow-hidden"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -2753,7 +2753,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Status
                 </div>
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-x-2"
                 >
                   Awaiting broadcast
                   <span
@@ -3517,10 +3517,10 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex w-full text-right"
                 >
                   <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -3586,7 +3586,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       </span>
                     </div>
                     <div
-                      class="ml-2 overflow-hidden"
+                      class="w-0 flex-1 overflow-hidden"
                     >
                       <span
                         class="font-semibold text-theme-text"
@@ -4143,10 +4143,10 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex w-full text-right"
                 >
                   <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -4215,7 +4215,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       </span>
                     </div>
                     <div
-                      class="ml-2 overflow-hidden"
+                      class="w-0 flex-1 overflow-hidden"
                     >
                       <span
                         class="font-semibold text-theme-text"
@@ -4778,7 +4778,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     class="flex w-0 flex-1 items-center justify-end overflow-hidden"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -4891,7 +4891,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   Status
                 </div>
                 <div
-                  class="flex items-center space-x-2"
+                  class="flex items-center gap-x-2"
                 >
                   Awaiting confirmations
                   <span
@@ -5653,10 +5653,10 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                   class="flex w-full text-right"
                 >
                   <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -5705,7 +5705,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                       </div>
                     </div>
                     <div
-                      class="ml-2 overflow-hidden"
+                      class="w-0 flex-1 overflow-hidden"
                     >
                       <div
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
@@ -8105,10 +8105,10 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                   class="flex w-full text-right"
                 >
                   <div
-                    class="flex w-0 flex-1 items-center justify-end overflow-hidden"
+                    class="flex w-0 flex-1 items-center justify-end overflow-hidden gap-2"
                   >
                     <div
-                      class="flex items-center space-x-2"
+                      class="flex items-center gap-x-2"
                       data-testid="TransactionRowMode"
                     >
                       <span
@@ -8157,7 +8157,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       </div>
                     </div>
                     <div
-                      class="ml-2 overflow-hidden"
+                      class="w-0 flex-1 overflow-hidden"
                     >
                       <div
                         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"

@@ -180,7 +180,7 @@ exports[`Tabs > should render with scroll 1`] = `
         class="bg-theme-secondary-100 dark:bg-black"
       >
         <div
-          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+          class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
             class="css-6pza4g"
@@ -249,7 +249,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
         class="bg-theme-secondary-100 dark:bg-black"
       >
         <div
-          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+          class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
             class="css-6pza4g"

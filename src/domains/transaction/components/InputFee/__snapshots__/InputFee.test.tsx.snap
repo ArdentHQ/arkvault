@@ -1202,7 +1202,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton my-1 h-3"
@@ -1231,7 +1231,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton my-1 h-3"
@@ -1260,7 +1260,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
           <span
             aria-busy="true"
             aria-live="polite"
-            class="flex w-full max-w-full items-center overflow-hidden leading-none"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
           >
             <span
               class="react-loading-skeleton my-1 h-3"
@@ -1326,7 +1326,7 @@ exports[`InputFee > simple view type > should render loading state of simple vie
     <span
       aria-busy="true"
       aria-live="polite"
-      class="flex w-full max-w-full items-center overflow-hidden leading-none"
+      class="flex w-auto max-w-full items-center overflow-hidden leading-none"
     >
       <span
         class="react-loading-skeleton h-14 w-full"

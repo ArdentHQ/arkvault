@@ -12,46 +12,48 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       >
         <td>
           <div
-            class="items-center space-x-4 css-5lky4z"
+            class="flex shrink-0 css-5lky4z"
+          >
+            <div
+              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+            >
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 18px; height: 18px;"
+                >
+                  ‌
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="-ml-3 space-x-4 css-1d4ra48"
           >
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
-                style="width: 18px; height: 18px;"
+                style="width: 44px; height: 44px; border-radius: 50%;"
               >
                 ‌
               </span>
               <br />
             </span>
-            <div
-              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 space-x-4 pl-4"
-            >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 44px; height: 44px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -66,21 +68,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         <td>
           <div
             class="justify-center css-1d4ra48"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 100px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
+          />
         </td>
         <td>
           <div
@@ -89,7 +77,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -108,7 +96,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -209,46 +197,48 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       >
         <td>
           <div
-            class="items-center space-x-3 css-7ewq14"
+            class="flex shrink-0 css-7ewq14"
+          >
+            <div
+              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+            >
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 18px; height: 18px;"
+                >
+                  ‌
+                </span>
+                <br />
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="-ml-3 space-x-3 css-1rods8x"
           >
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
-                style="width: 18px; height: 18px;"
+                style="width: 20px; height: 20px; border-radius: 50%;"
               >
                 ‌
               </span>
               <br />
             </span>
-            <div
-              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
-            >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-1jea4xx"
-              >
-                <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-full max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  <br />
-                </span>
-              </div>
-            </div>
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -263,21 +253,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         <td>
           <div
             class="justify-center css-1rods8x"
-          >
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 100px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
+          />
         </td>
         <td>
           <div
@@ -286,7 +262,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"
@@ -305,7 +281,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
             <span
               aria-busy="true"
               aria-live="polite"
-              class="flex w-full max-w-full items-center overflow-hidden leading-none"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
             >
               <span
                 class="react-loading-skeleton"

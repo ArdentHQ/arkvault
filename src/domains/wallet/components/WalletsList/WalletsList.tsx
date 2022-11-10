@@ -147,9 +147,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 			showSkeletons ? (
 				<WalletListItemSkeleton isCompact={isCompact} />
 			) : (
-				<>
-					<WalletListItem wallet={wallet} isCompact={isCompact} />
-				</>
+				<WalletListItem wallet={wallet} isCompact={isCompact} />
 			),
 		[showSkeletons, isCompact],
 	);

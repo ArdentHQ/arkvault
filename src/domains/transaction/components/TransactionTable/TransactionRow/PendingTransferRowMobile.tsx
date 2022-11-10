@@ -48,9 +48,9 @@ export const PendingTransferRowMobile = ({
 				<RowWrapper>
 					<RowLabel>{t("COMMON.SENDER")}</RowLabel>
 
-					<ResponsiveAddressWrapper>
+					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<BaseTransactionRowMode
-							className="flex items-center space-x-2"
+							className="flex items-center gap-x-2"
 							isCompact={true}
 							isSent={transaction.isSent()}
 							isReturn={transaction.isReturn()}
@@ -58,7 +58,7 @@ export const PendingTransferRowMobile = ({
 							address={transaction.recipient()}
 						/>
 
-						<div className="ml-2 overflow-hidden">
+						<div className="w-0 flex-1 overflow-hidden">
 							<BaseTransactionRowRecipientLabel
 								type={transaction.type()}
 								recipient={transaction.recipient()}

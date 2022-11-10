@@ -1,5 +1,9 @@
 @import "react-loading-skeleton/dist/skeleton.css";
 
+.react-loading-skeleton {
+	z-index: 0;
+}
+
 .light .react-loading-skeleton {
 	background-color: var(--theme-color-secondary-200);
 }
