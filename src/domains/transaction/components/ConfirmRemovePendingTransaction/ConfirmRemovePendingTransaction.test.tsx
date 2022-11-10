@@ -80,7 +80,9 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should render multisignature transaction", () => {
-		const { asFragment } = render(<ConfirmRemovePendingTransaction profile={profile} transaction={transferFixture} />);
+		const { asFragment } = render(
+			<ConfirmRemovePendingTransaction profile={profile} transaction={transferFixture} />,
+		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
@@ -114,7 +116,9 @@ describe("ConfirmRemovePendingTransaction", () => {
 
 	it("should handle close", () => {
 		const onClose = vi.fn();
-		render(<ConfirmRemovePendingTransaction profile={profile} transaction={multiSignatureFixture} onClose={onClose} />);
+		render(
+			<ConfirmRemovePendingTransaction profile={profile} transaction={multiSignatureFixture} onClose={onClose} />,
+		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
@@ -134,7 +138,11 @@ describe("ConfirmRemovePendingTransaction", () => {
 	it("should handle remove", () => {
 		const onRemove = vi.fn();
 		render(
-			<ConfirmRemovePendingTransaction profile={profile} transaction={multiSignatureFixture} onRemove={onRemove} />,
+			<ConfirmRemovePendingTransaction
+				profile={profile}
+				transaction={multiSignatureFixture}
+				onRemove={onRemove}
+			/>,
 		);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();

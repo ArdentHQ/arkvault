@@ -9,7 +9,16 @@ import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { env, getDefaultWalletMnemonic, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultWalletMnemonic,
+	getDefaultProfileId,
+	render,
+	screen,
+	syncDelegates,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
