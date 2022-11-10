@@ -530,25 +530,21 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
             <div
               class="mr-4 flex items-center -space-x-1"
             >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 44px; height: 44px; border-radius: 50%;"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 44px; height: 44px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  <br />
+                  ‌
                 </span>
-              </div>
+                <br />
+              </span>
               <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+                class="z-0 flex rounded-full ring-6 ring-theme-background"
               >
                 <span
                   aria-busy="true"
@@ -587,23 +583,19 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
             <div
               class="mr-4"
             >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  aria-busy="true"
-                  aria-live="polite"
-                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 44px; height: 44px; border-radius: 50%;"
                 >
-                  <span
-                    class="react-loading-skeleton"
-                    style="width: 44px; height: 44px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  <br />
+                  ‌
                 </span>
-              </div>
+                <br />
+              </span>
             </div>
             <span
               aria-busy="true"
