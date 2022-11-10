@@ -90,7 +90,7 @@ export const PasswordSettings = () => {
 	};
 
 	const getRemoveButtonText = () => {
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		if (isXs) {
 			return t("COMMON.REMOVE");
 		}
@@ -99,7 +99,7 @@ export const PasswordSettings = () => {
 	};
 
 	const getSubmitButtonText = () => {
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		if (isXs && passwordStatus === "CHANGE") {
 			return t("COMMON.CHANGE");
 		}

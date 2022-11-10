@@ -7,7 +7,7 @@ import { render, screen, waitFor } from "@/utils/testing-library";
 describe("PaginationSearch", () => {
 	it("should render", async () => {
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={vi.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -19,7 +19,7 @@ describe("PaginationSearch", () => {
 
 	it("should show pagination search input", async () => {
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={vi.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -35,7 +35,7 @@ describe("PaginationSearch", () => {
 
 	it("should show search input and close", async () => {
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={jest.fn()} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={vi.fn()} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -54,10 +54,10 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should type page and emit onSelectPage event", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -82,10 +82,10 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should not allow typing number greater than total pages", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -110,10 +110,10 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should not emit onSelect if nothing is typed", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -132,10 +132,10 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should not emit onSelect if zero is typed", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect} totalPages={5}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect} totalPages={5}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -160,10 +160,10 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should not limit total page if not provided", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
-			<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect}>
+			<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect}>
 				<span data-testid="PaginationSearchToggle">...</span>
 			</PaginationSearch>,
 		);
@@ -188,14 +188,14 @@ describe("PaginationSearch", () => {
 	});
 
 	it("should close search input if clicked outside", async () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 
 		const { asFragment } = render(
 			<div>
 				<div data-testid="somewhere-outside" className="p-4">
 					sample text
 				</div>
-				<PaginationSearch onClick={jest.fn()} onSelectPage={onSelect}>
+				<PaginationSearch onClick={vi.fn()} onSelectPage={onSelect}>
 					<span data-testid="PaginationSearchToggle">...</span>
 				</PaginationSearch>
 				,

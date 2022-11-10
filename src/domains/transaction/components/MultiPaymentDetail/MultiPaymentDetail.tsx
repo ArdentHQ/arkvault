@@ -28,6 +28,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Tr
 				returnedAmount += recipient.amount;
 			}
 
+			// @ts-ignore
 			recipients.push({
 				...recipient,
 				// @ts-ignore

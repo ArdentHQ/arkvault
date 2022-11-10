@@ -1,12 +1,46 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionExportError should render in lg 1`] = `
+exports[`TransactionExportError > should render in lg 1`] = `
 <DocumentFragment>
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
+      viewBox="0 0 207 106"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      error-light.svg
+      <path
+        d="M146.516 53.293c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.461-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.349 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        fill="none"
+        stroke="#DBDEE5"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <circle
+        cx="103.016"
+        cy="53.793"
+        fill="none"
+        r="31.5"
+        stroke="#DE5846"
+        stroke-width="2"
+      />
+      <circle
+        cx="103"
+        cy="53.734"
+        fill="#FFE0DA"
+        r="27.5"
+      />
+      <path
+        d="M103 60.56l6.45 6.462c.806.808 1.863 1.212 2.92 1.212s2.114-.404 2.92-1.212a4.143 4.143 0 0 0 0-5.852l-6.45-6.462 6.399-6.411a4.141 4.141 0 0 0 0-5.85 4.125 4.125 0 0 0-5.841 0l-.787.787M103 48.857l-6.4-6.41a4.123 4.123 0 0 0-5.839 0 4.142 4.142 0 0 0 0 5.85l6.399 6.411-6.45 6.462a4.144 4.144 0 0 0 0 5.852 4.123 4.123 0 0 0 5.839 0l.786-.788m9.036-20.755l-1.686 1.69m-3.856 15.565l-1.6 1.603"
+        fill="none"
+        stroke="#DE5846"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <path
+        d="M30.06 17.238h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.001h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
+        fill="#DBDEE5"
+      />
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -19,8 +53,31 @@ exports[`TransactionExportError should render in lg 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            circle-cross.svg
+          <svg
+            id="circle-cross"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M7 13l6-6M13 13L7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -61,13 +118,47 @@ exports[`TransactionExportError should render in lg 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionExportError should render in md 1`] = `
+exports[`TransactionExportError > should render in md 1`] = `
 <DocumentFragment>
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
+      viewBox="0 0 207 106"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      error-light.svg
+      <path
+        d="M146.516 53.293c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.461-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.349 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        fill="none"
+        stroke="#DBDEE5"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <circle
+        cx="103.016"
+        cy="53.793"
+        fill="none"
+        r="31.5"
+        stroke="#DE5846"
+        stroke-width="2"
+      />
+      <circle
+        cx="103"
+        cy="53.734"
+        fill="#FFE0DA"
+        r="27.5"
+      />
+      <path
+        d="M103 60.56l6.45 6.462c.806.808 1.863 1.212 2.92 1.212s2.114-.404 2.92-1.212a4.143 4.143 0 0 0 0-5.852l-6.45-6.462 6.399-6.411a4.141 4.141 0 0 0 0-5.85 4.125 4.125 0 0 0-5.841 0l-.787.787M103 48.857l-6.4-6.41a4.123 4.123 0 0 0-5.839 0 4.142 4.142 0 0 0 0 5.85l6.399 6.411-6.45 6.462a4.144 4.144 0 0 0 0 5.852 4.123 4.123 0 0 0 5.839 0l.786-.788m9.036-20.755l-1.686 1.69m-3.856 15.565l-1.6 1.603"
+        fill="none"
+        stroke="#DE5846"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <path
+        d="M30.06 17.238h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.001h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
+        fill="#DBDEE5"
+      />
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -80,8 +171,31 @@ exports[`TransactionExportError should render in md 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            circle-cross.svg
+          <svg
+            id="circle-cross"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M7 13l6-6M13 13L7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -122,13 +236,47 @@ exports[`TransactionExportError should render in md 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionExportError should render in sm 1`] = `
+exports[`TransactionExportError > should render in sm 1`] = `
 <DocumentFragment>
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
+      viewBox="0 0 207 106"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      error-light.svg
+      <path
+        d="M146.516 53.293c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.461-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.349 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        fill="none"
+        stroke="#DBDEE5"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <circle
+        cx="103.016"
+        cy="53.793"
+        fill="none"
+        r="31.5"
+        stroke="#DE5846"
+        stroke-width="2"
+      />
+      <circle
+        cx="103"
+        cy="53.734"
+        fill="#FFE0DA"
+        r="27.5"
+      />
+      <path
+        d="M103 60.56l6.45 6.462c.806.808 1.863 1.212 2.92 1.212s2.114-.404 2.92-1.212a4.143 4.143 0 0 0 0-5.852l-6.45-6.462 6.399-6.411a4.141 4.141 0 0 0 0-5.85 4.125 4.125 0 0 0-5.841 0l-.787.787M103 48.857l-6.4-6.41a4.123 4.123 0 0 0-5.839 0 4.142 4.142 0 0 0 0 5.85l6.399 6.411-6.45 6.462a4.144 4.144 0 0 0 0 5.852 4.123 4.123 0 0 0 5.839 0l.786-.788m9.036-20.755l-1.686 1.69m-3.856 15.565l-1.6 1.603"
+        fill="none"
+        stroke="#DE5846"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <path
+        d="M30.06 17.238h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.001h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
+        fill="#DBDEE5"
+      />
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -141,8 +289,31 @@ exports[`TransactionExportError should render in sm 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            circle-cross.svg
+          <svg
+            id="circle-cross"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M7 13l6-6M13 13L7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -183,13 +354,47 @@ exports[`TransactionExportError should render in sm 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionExportError should render in xl 1`] = `
+exports[`TransactionExportError > should render in xl 1`] = `
 <DocumentFragment>
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
+      viewBox="0 0 207 106"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      error-light.svg
+      <path
+        d="M146.516 53.293c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.461-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.349 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        fill="none"
+        stroke="#DBDEE5"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <circle
+        cx="103.016"
+        cy="53.793"
+        fill="none"
+        r="31.5"
+        stroke="#DE5846"
+        stroke-width="2"
+      />
+      <circle
+        cx="103"
+        cy="53.734"
+        fill="#FFE0DA"
+        r="27.5"
+      />
+      <path
+        d="M103 60.56l6.45 6.462c.806.808 1.863 1.212 2.92 1.212s2.114-.404 2.92-1.212a4.143 4.143 0 0 0 0-5.852l-6.45-6.462 6.399-6.411a4.141 4.141 0 0 0 0-5.85 4.125 4.125 0 0 0-5.841 0l-.787.787M103 48.857l-6.4-6.41a4.123 4.123 0 0 0-5.839 0 4.142 4.142 0 0 0 0 5.85l6.399 6.411-6.45 6.462a4.144 4.144 0 0 0 0 5.852 4.123 4.123 0 0 0 5.839 0l.786-.788m9.036-20.755l-1.686 1.69m-3.856 15.565l-1.6 1.603"
+        fill="none"
+        stroke="#DE5846"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <path
+        d="M30.06 17.238h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.001h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
+        fill="#DBDEE5"
+      />
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -202,8 +407,31 @@ exports[`TransactionExportError should render in xl 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            circle-cross.svg
+          <svg
+            id="circle-cross"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M7 13l6-6M13 13L7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -244,13 +472,47 @@ exports[`TransactionExportError should render in xl 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionExportError should render in xs 1`] = `
+exports[`TransactionExportError > should render in xs 1`] = `
 <DocumentFragment>
   <div>
     <svg
       class="mx-auto mb-6 hidden h-26 md:block"
+      viewBox="0 0 207 106"
+      xml:space="preserve"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      error-light.svg
+      <path
+        d="M146.516 53.293c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.461-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.349 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
+        fill="none"
+        stroke="#DBDEE5"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <circle
+        cx="103.016"
+        cy="53.793"
+        fill="none"
+        r="31.5"
+        stroke="#DE5846"
+        stroke-width="2"
+      />
+      <circle
+        cx="103"
+        cy="53.734"
+        fill="#FFE0DA"
+        r="27.5"
+      />
+      <path
+        d="M103 60.56l6.45 6.462c.806.808 1.863 1.212 2.92 1.212s2.114-.404 2.92-1.212a4.143 4.143 0 0 0 0-5.852l-6.45-6.462 6.399-6.411a4.141 4.141 0 0 0 0-5.85 4.125 4.125 0 0 0-5.841 0l-.787.787M103 48.857l-6.4-6.41a4.123 4.123 0 0 0-5.839 0 4.142 4.142 0 0 0 0 5.85l6.399 6.411-6.45 6.462a4.144 4.144 0 0 0 0 5.852 4.123 4.123 0 0 0 5.839 0l.786-.788m9.036-20.755l-1.686 1.69m-3.856 15.565l-1.6 1.603"
+        fill="none"
+        stroke="#DE5846"
+        stroke-linecap="round"
+        stroke-width="2"
+      />
+      <path
+        d="M30.06 17.238h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.001h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
+        fill="#DBDEE5"
+      />
     </svg>
     <div
       class="flex flex-col overflow-hidden rounded-xl mb-6"
@@ -263,8 +525,31 @@ exports[`TransactionExportError should render in xs 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            circle-cross.svg
+          <svg
+            id="circle-cross"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="9"
+                stroke-miterlimit="10"
+              />
+              <path
+                d="M7 13l6-6M13 13L7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
           </svg>
         </div>
         <span>

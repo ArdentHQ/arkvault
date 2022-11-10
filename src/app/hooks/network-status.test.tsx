@@ -16,23 +16,23 @@ describe("useNetworkStatus", () => {
 	};
 
 	beforeEach(() => {
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 
 		eventMap = {};
 
-		jest.spyOn(window, "addEventListener").mockImplementation((eventName, callback) => {
+		vi.spyOn(window, "addEventListener").mockImplementation((eventName, callback) => {
 			eventMap[eventName] = callback;
 		});
 	});
 
 	afterEach(() => {
-		jest.spyOn(window, "removeEventListener").mockImplementation((eventName) => {
+		vi.spyOn(window, "removeEventListener").mockImplementation((eventName) => {
 			delete eventMap[eventName];
 		});
 	});
 
 	it("should be online", () => {
-		jest.spyOn(window.navigator, "onLine", "get").mockReturnValue(true);
+		vi.spyOn(window.navigator, "onLine", "get").mockReturnValue(true);
 
 		render(<TestNetworkStatus />);
 
@@ -40,7 +40,7 @@ describe("useNetworkStatus", () => {
 	});
 
 	it("should be offline", () => {
-		jest.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
+		vi.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
 		render(<TestNetworkStatus />);
 
@@ -49,7 +49,7 @@ describe("useNetworkStatus", () => {
 	});
 
 	it("should trigger event", () => {
-		jest.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
+		vi.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 		const { result } = renderHook(() => useNetworkStatus());
 
 		act(() => {

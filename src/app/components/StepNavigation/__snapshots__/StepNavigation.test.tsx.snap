@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`StepNavigation should disable buttons if loading 1`] = `
+exports[`StepNavigation > should disable buttons if loading 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -37,8 +37,22 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                double-arrow-right.svg
+              <svg
+                id="double-arrow-right"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
             <span>
@@ -59,7 +73,7 @@ exports[`StepNavigation should disable buttons if loading 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should not render back button if on last step 1`] = `
+exports[`StepNavigation > should not render back button if on last step 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -79,7 +93,7 @@ exports[`StepNavigation should not render back button if on last step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should not render back to wallet button if not on last step 1`] = `
+exports[`StepNavigation > should not render back to wallet button if not on last step 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -111,8 +125,22 @@ exports[`StepNavigation should not render back to wallet button if not on last s
           height="16"
           width="16"
         >
-          <svg>
-            double-arrow-right.svg
+          <svg
+            id="double-arrow-right"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -121,7 +149,7 @@ exports[`StepNavigation should not render back to wallet button if not on last s
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should not render continue button if on last two steps 1`] = `
+exports[`StepNavigation > should not render continue button if on last two steps 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -153,8 +181,22 @@ exports[`StepNavigation should not render continue button if on last two steps 1
           height="16"
           width="16"
         >
-          <svg>
-            double-arrow-right.svg
+          <svg
+            id="double-arrow-right"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -163,7 +205,7 @@ exports[`StepNavigation should not render continue button if on last two steps 1
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should not render continue button if on last two steps 2`] = `
+exports[`StepNavigation > should not render continue button if on last two steps 2`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -183,7 +225,7 @@ exports[`StepNavigation should not render continue button if on last two steps 2
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should render back button if not on last step 1`] = `
+exports[`StepNavigation > should render back button if not on last step 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -215,8 +257,22 @@ exports[`StepNavigation should render back button if not on last step 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            double-arrow-right.svg
+          <svg
+            id="double-arrow-right"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -225,7 +281,7 @@ exports[`StepNavigation should render back button if not on last step 1`] = `
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should render back to wallet button if on last step 1`] = `
+exports[`StepNavigation > should render back to wallet button if on last step 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"
@@ -245,7 +301,7 @@ exports[`StepNavigation should render back to wallet button if on last step 1`] 
 </DocumentFragment>
 `;
 
-exports[`StepNavigation should render continue button if not on last two steps 1`] = `
+exports[`StepNavigation > should render continue button if not on last two steps 1`] = `
 <DocumentFragment>
   <div
     class="css-2wyvkd"

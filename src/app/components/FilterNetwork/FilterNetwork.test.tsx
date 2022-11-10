@@ -23,19 +23,19 @@ describe("NetworkOptions", () => {
 	});
 
 	it("should render empty", () => {
-		const { container } = render(<NetworkOptions networks={[]} onClick={jest.fn()} />);
+		const { container } = render(<NetworkOptions networks={[]} onClick={vi.fn()} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render available networks options", () => {
-		const { container } = render(<NetworkOptions networks={networkOptions} onClick={jest.fn()} />);
+		const { container } = render(<NetworkOptions networks={networkOptions} onClick={vi.fn()} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should trigger onClick", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		render(<NetworkOptions networks={networkOptions} onClick={onClick} />);
 		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
@@ -69,7 +69,7 @@ describe("ToggleAllOption", () => {
 	});
 
 	it("should handle onClick", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		render(<ToggleAllOption isSelected onClick={onClick} />);
 		userEvent.click(screen.getByTestId("network__viewall"));
 
@@ -97,7 +97,7 @@ describe("FilterNetwork", () => {
 	});
 
 	it("should toggle a network option", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		render(<FilterNetwork options={networkOptions} onChange={onChange} />);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
@@ -154,7 +154,7 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should select all public networks", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<FilterNetworks
@@ -197,7 +197,7 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should toggle a public network option", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		render(<FilterNetworks options={networkOptions} onChange={onChange} />);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
@@ -214,7 +214,7 @@ describe("FilterNetworks", () => {
 	});
 
 	it("should toggle a testnet network option", () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		const { container } = render(<FilterNetworks options={networkOptions} onChange={onChange} />);
 
 		expect(container).toMatchSnapshot();

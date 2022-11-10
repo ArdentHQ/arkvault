@@ -1,13 +1,11 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { BIP39 } from "@ardenthq/sdk-cryptography";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendIpfs } from "./SendIpfs";
 import { translations } from "@/domains/transaction/i18n";
-import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
 	env,
 	getDefaultProfileId,
@@ -18,13 +16,17 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +ipfsFixture.data.amount / 1e8,
 		data: () => ({ data: () => ipfsFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
@@ -48,11 +50,11 @@ const formStep = () => screen.findByTestId("SendIpfs__form-step");
 const feeWarningContinueID = "FeeWarning__continue-button";
 const reviewStepID = "SendIpfs__review-step";
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.mock("@/utils/debounce", () => ({
+vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
 		async function (...arguments_: any) {
 			return new Promise((resolve) => {
@@ -69,13 +71,6 @@ describe("SendIpfs", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"))
-			.get("/api/transactions/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e")
-			.reply(200, ipfsFixture);
-
 		await env.profiles().restore(profile);
 		await profile.sync();
 
@@ -88,6 +83,16 @@ describe("SendIpfs", () => {
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e",
+				ipfsFixture,
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", transactionsFixture, {
+				query: { address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			}),
+		);
 	});
 
 	afterEach(() => {
@@ -95,18 +100,18 @@ describe("SendIpfs", () => {
 	});
 
 	it("should send an IPFS transaction using encryption password", async () => {
-		const bip39ValidateMock = jest.spyOn(BIP39, "validate").mockReturnValue(true);
+		const bip39ValidateMock = vi.spyOn(BIP39, "validate").mockReturnValue(true);
 		const encryptedWallet = profile.wallets().first();
-		const actsWithMnemonicMock = jest.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest
+		const actsWithMnemonicMock = vi.spyOn(encryptedWallet, "actsWithMnemonic").mockReturnValue(false);
+		const actsWithWifWithEncryptionMock = vi
 			.spyOn(encryptedWallet, "actsWithWifWithEncryption")
 			.mockReturnValue(true);
 
-		const fromMnemonicMock = jest
+		const fromMnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		const wifGetMock = jest.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
+		const wifGetMock = vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${encryptedWallet.id()}/send-ipfs`;
 
@@ -162,11 +167,11 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(encryptedWallet.transaction(), "signIpfs")
 			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
 
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [ipfsFixture.data.id],
 			errors: {},
 			rejected: [],

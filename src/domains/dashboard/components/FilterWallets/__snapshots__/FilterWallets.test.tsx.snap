@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`FilterWallets should render 1`] = `
+exports[`FilterWallets > should render 1`] = `
 <div>
   <div
     class="flex flex-col text-left"
@@ -55,8 +55,22 @@ exports[`FilterWallets should render 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  chevron-down-small.svg
+                <svg
+                  id="chevron-down-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -73,7 +87,7 @@ exports[`FilterWallets should render 1`] = `
 </div>
 `;
 
-exports[`FilterWallets should render with networks selection 1`] = `
+exports[`FilterWallets > should render with networks selection 1`] = `
 <div>
   <div
     class="flex flex-col text-left"
@@ -126,8 +140,18 @@ exports[`FilterWallets should render with networks selection 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    ark.svg
+                  <svg
+                    id="ark"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
@@ -173,8 +197,22 @@ exports[`FilterWallets should render with networks selection 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  chevron-down-small.svg
+                <svg
+                  id="chevron-down-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
             </div>

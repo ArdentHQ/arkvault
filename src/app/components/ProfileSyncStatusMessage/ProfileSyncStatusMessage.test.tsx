@@ -56,7 +56,7 @@ describe("SyncErrorMessage", () => {
 	});
 
 	it("should handle retry", async () => {
-		const onRetry = jest.fn();
+		const onRetry = vi.fn();
 		const { container } = render(
 			<Route path="/">
 				<SyncErrorMessage failedNetworkNames={failedNetworkNames} onRetry={onRetry} />

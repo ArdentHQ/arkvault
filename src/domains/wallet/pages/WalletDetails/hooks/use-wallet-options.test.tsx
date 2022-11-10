@@ -1,41 +1,71 @@
 import { Enums } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 
 import { renderHook } from "@testing-library/react-hooks";
 import { useWalletOptions } from "./use-wallet-options";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("Wallet Options Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 
-	beforeAll(() => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query((parameters) => parameters.page === undefined || parameters.page === "1")
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const unconfirmed = data[0];
-				unconfirmed.confirmations = 0;
-				return {
-					data: [unconfirmed],
+	beforeEach(async () => {
+		const { data, meta } = transactionsFixture;
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
 					meta,
-				};
-			})
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", limit: "10", page: "2" })
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
+				},
+				{
+					query: {
+						page: null,
+					},
+				},
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
+					meta,
+				},
+				{
+					query: {
+						page: 1,
+					},
+				},
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
 					data: data.slice(1, 3),
 					meta,
-				};
-			})
-			.persist();
-	});
+				},
+				{
+					query: {
+						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+						limit: 10,
+						page: 2,
+					},
+				},
+			),
+		);
 
-	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -60,7 +90,7 @@ describe("Wallet Options Hook", () => {
 
 	it("should get registration options for wallet without mnemonic", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
-		jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
 
 		const { result } = renderHook(() => useWalletOptions(wallet));
 
@@ -73,14 +103,14 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render options for ledger wallet and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(wallet.network(), "allows").mockImplementation((key) => {
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.network(), "allows").mockImplementation((key) => {
 			if (
 				[
 					Enums.FeatureFlag.TransactionMultiSignatureLedgerS,
@@ -101,13 +131,13 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render options for wallet of custom network and disable musig option", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		jest.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
+		vi.spyOn(wallet.network(), "id").mockReturnValue("random.custom");
 		const { result } = renderHook(() => useWalletOptions(wallet));
 
 		expect(result.current.registrationOptions).toStrictEqual({
@@ -119,6 +149,6 @@ describe("Wallet Options Hook", () => {
 			title: "Register",
 		});
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });

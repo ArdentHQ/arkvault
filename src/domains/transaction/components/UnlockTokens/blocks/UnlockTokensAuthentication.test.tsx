@@ -18,7 +18,7 @@ describe("UnlockTokensAuthentication", () => {
 	});
 
 	it("should render", async () => {
-		const onBack = jest.fn();
+		const onBack = vi.fn();
 
 		const { asFragment } = renderWithForm(<UnlockTokensAuthentication wallet={wallet} onBack={onBack} />, {
 			withProviders: true,

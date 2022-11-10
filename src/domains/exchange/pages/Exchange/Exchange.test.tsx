@@ -1,9 +1,6 @@
-import "jest-extended";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory, HashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Trans } from "react-i18next";
 import { Route } from "react-router-dom";
@@ -21,11 +18,12 @@ import {
 	within,
 	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let history: HashHistory;
 let profile: Contracts.IProfile;
 
-const exchangeBaseURL = "https://exchanges.arkvault.io";
+const exchangeBaseURL = "https://exchanges.arkvault.io/api";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 const stubData = {
@@ -66,7 +64,6 @@ describe("Exchange", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		history = createHashHistory();
-		nock.cleanAll();
 	});
 
 	beforeEach(() => {
@@ -74,14 +71,13 @@ describe("Exchange", () => {
 	});
 
 	afterEach(() => {
-		nock.cleanAll();
 		httpClient.clearCache();
 
 		profile.exchangeTransactions().flush();
 	});
 
 	it("should render empty", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, { data: [] });
+		server.use(requestMock(exchangeBaseURL, { data: [] }));
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
@@ -109,8 +105,6 @@ describe("Exchange", () => {
 	});
 
 	it("should render with exchanges", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -140,8 +134,6 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to exchange", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -164,7 +156,7 @@ describe("Exchange", () => {
 			expect(screen.getAllByTestId("Card")).toHaveLength(2);
 		});
 
-		const historyMock = jest.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(screen.getByText("ChangeNOW"));
 
@@ -176,8 +168,6 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to history tab", async () => {
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -207,8 +197,6 @@ describe("Exchange", () => {
 
 	it("should show exchange transaction history", async () => {
 		profile.exchangeTransactions().create(stubData);
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -244,8 +232,6 @@ describe("Exchange", () => {
 
 		profile.exchangeTransactions().create(stubData);
 
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -277,8 +263,6 @@ describe("Exchange", () => {
 
 		profile.exchangeTransactions().create(stubData);
 
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -309,15 +293,14 @@ describe("Exchange", () => {
 	});
 
 	it("should update exchange transaction status", async () => {
-		const updateSpy = jest.spyOn(profile.exchangeTransactions(), "update");
+		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
-		nock(exchangeBaseURL)
-			.get("/api")
-			.reply(200, require("tests/fixtures/exchange/exchanges.json"))
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "finished" } });
+		server.use(
+			requestMock(`${exchangeBaseURL}/changenow/orders/id`, {
+				data: { id: exchangeTransaction.orderId(), status: "finished" },
+			}),
+		);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -362,8 +345,6 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
-
 		render(
 			<Route path="/profiles/:profileId/exchange">
 				<ExchangeProvider>
@@ -389,7 +370,7 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		const historyMock = jest.spyOn(history, "push").mockImplementation();
+		const historyMock = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
@@ -401,14 +382,12 @@ describe("Exchange", () => {
 	});
 
 	it("should delete exchange transaction", async () => {
-		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 		profile
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -468,8 +447,6 @@ describe("Exchange", () => {
 		profile
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
-
-		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">

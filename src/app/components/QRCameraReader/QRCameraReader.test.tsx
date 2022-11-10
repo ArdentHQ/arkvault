@@ -3,7 +3,7 @@ import React from "react";
 import { QRCameraReader } from "./QRCameraReader";
 import { render } from "@/utils/testing-library";
 
-jest.mock("react-qr-reader", () => ({
+vi.mock("react-qr-reader", () => ({
 	QrReader: ({ onResult }: { onResult: (result: any) => void }) => {
 		if (onResult) {
 			onResult({ text: "qrstring" });
@@ -15,9 +15,9 @@ jest.mock("react-qr-reader", () => ({
 
 describe("QRCameraReader", () => {
 	it("should render and read qr code", () => {
-		const onRead = jest.fn();
+		const onRead = vi.fn();
 
-		const { asFragment } = render(<QRCameraReader onError={jest.fn()} onRead={onRead} onReady={jest.fn()} />);
+		const { asFragment } = render(<QRCameraReader onError={vi.fn()} onRead={onRead} onReady={vi.fn()} />);
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(onRead).toHaveBeenCalledWith("qrstring");

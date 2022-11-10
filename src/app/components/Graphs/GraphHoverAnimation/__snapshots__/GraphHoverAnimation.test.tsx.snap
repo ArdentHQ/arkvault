@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`GraphHoverAnimation should allow passing a target element 1`] = `
+exports[`GraphHoverAnimation > should allow passing a target element 1`] = `
 <DocumentFragment>
   <svg
     height="16"
@@ -40,7 +40,7 @@ exports[`GraphHoverAnimation should allow passing a target element 1`] = `
 </DocumentFragment>
 `;
 
-exports[`GraphHoverAnimation should render SMIL hover animations for svg elements 1`] = `
+exports[`GraphHoverAnimation > should render SMIL hover animations for svg elements 1`] = `
 <DocumentFragment>
   <svg
     height="16"

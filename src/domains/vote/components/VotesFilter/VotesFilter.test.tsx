@@ -42,7 +42,7 @@ describe("VotesFilter", () => {
 	});
 
 	it("should emit onChange", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 		render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));

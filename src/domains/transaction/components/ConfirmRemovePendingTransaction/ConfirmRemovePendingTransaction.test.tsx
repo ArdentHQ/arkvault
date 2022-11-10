@@ -116,7 +116,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should handle close", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 		render(<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onClose={onClose} />);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -135,7 +135,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 	});
 
 	it("should handle remove", () => {
-		const onRemove = jest.fn();
+		const onRemove = vi.fn();
 		render(
 			<ConfirmRemovePendingTransaction isOpen={true} transaction={multiSignatureFixture} onRemove={onRemove} />,
 		);

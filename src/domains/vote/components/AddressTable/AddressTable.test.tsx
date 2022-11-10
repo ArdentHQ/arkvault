@@ -1,5 +1,4 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -40,14 +39,6 @@ describe("AddressTable", () => {
 		await profile.sync();
 
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
-
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.persist();
 
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
@@ -97,7 +88,7 @@ describe("AddressTable", () => {
 	});
 
 	it.each([true, false])("should render in xs screen when wallet network is live", async (isLive) => {
-		const isLiveSpy = jest.spyOn(wallet.network(), "isLive").mockReturnValue(isLive);
+		const isLiveSpy = vi.spyOn(wallet.network(), "isLive").mockReturnValue(isLive);
 
 		const { asFragment, container } = renderResponsiveWithRoute(
 			<Wrapper>
@@ -123,7 +114,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
-		const maxVotesMock = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
+		const maxVotesMock = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(10);
 		const { asFragment, container } = render(
 			<Wrapper>
 				<AddressTable wallets={[wallet]} profile={profile} />
@@ -140,7 +131,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render with voting delegates and handle exception", async () => {
-		const walletVotingMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
+		const walletVotingMock = vi.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("error");
 		});
 

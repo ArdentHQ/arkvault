@@ -44,7 +44,7 @@ describe("Environment Context", () => {
 	});
 
 	it("should throw without provider", () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+		const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
 
 		const Test = () => {
 			const { env } = useEnvironmentContext();

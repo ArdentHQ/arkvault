@@ -9,7 +9,7 @@ const translations = buildTranslations();
 
 describe("PasswordRemovalConfirmModal", () => {
 	it("should render", async () => {
-		const { asFragment } = render(<PasswordRemovalConfirmModal onCancel={jest.fn()} onConfirm={jest.fn()} />);
+		const { asFragment } = render(<PasswordRemovalConfirmModal onCancel={vi.fn()} onConfirm={vi.fn()} />);
 
 		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
@@ -17,9 +17,9 @@ describe("PasswordRemovalConfirmModal", () => {
 	});
 
 	it("should call onCancel when closed", async () => {
-		const onCancel = jest.fn();
+		const onCancel = vi.fn();
 
-		render(<PasswordRemovalConfirmModal onCancel={onCancel} onConfirm={jest.fn()} />);
+		render(<PasswordRemovalConfirmModal onCancel={onCancel} onConfirm={vi.fn()} />);
 
 		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
@@ -29,9 +29,9 @@ describe("PasswordRemovalConfirmModal", () => {
 	});
 
 	it("should call onConfirm when submitted", async () => {
-		const onConfirm = jest.fn();
+		const onConfirm = vi.fn();
 
-		render(<PasswordRemovalConfirmModal onCancel={jest.fn()} onConfirm={onConfirm} />);
+		render(<PasswordRemovalConfirmModal onCancel={vi.fn()} onConfirm={onConfirm} />);
 
 		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 

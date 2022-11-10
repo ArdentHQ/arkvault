@@ -61,7 +61,7 @@ describe("Button", () => {
 	});
 
 	it("should emit event on click", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 		render(<Button onClick={onClick}>Click Me</Button>);
 
 		userEvent.click(screen.getByText("Click Me"));

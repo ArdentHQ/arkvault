@@ -38,7 +38,7 @@ describe("WalletOverviewStep", () => {
 		it("should render", async () => {
 			const { result: form } = renderForm();
 
-			const browserAccessMock = jest
+			const browserAccessMock = vi
 				.spyOn(browserAccess, "fileSave")
 				// @ts-ignore
 				.mockResolvedValue({ name: "filePath" });
@@ -51,7 +51,7 @@ describe("WalletOverviewStep", () => {
 
 			expect(asFragment()).toMatchSnapshot();
 
-			const writeTextMock = jest.fn();
+			const writeTextMock = vi.fn();
 			const clipboardOriginal = navigator.clipboard;
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
@@ -69,12 +69,12 @@ describe("WalletOverviewStep", () => {
 		it("should download file if legacy", async () => {
 			const { result: form } = renderForm();
 
-			const browserAccessMock = jest
+			const browserAccessMock = vi
 				.spyOn(browserAccess, "fileSave")
 				// @ts-ignore
 				.mockResolvedValue({ name: "filePath" });
 
-			const toastSpy = jest.spyOn(toasts, "success");
+			const toastSpy = vi.spyOn(toasts, "success");
 
 			render(
 				<FormProvider {...form.current}>
@@ -95,16 +95,16 @@ describe("WalletOverviewStep", () => {
 		});
 
 		it("should show success toast on successful download", async () => {
-			Object.defineProperty(window, "showSaveFilePicker", jest.fn());
+			Object.defineProperty(window, "showSaveFilePicker", vi.fn());
 
 			const { result: form } = renderForm();
 
-			const browserAccessMock = jest
+			const browserAccessMock = vi
 				.spyOn(browserAccess, "fileSave")
 				// @ts-ignore
 				.mockResolvedValue({ name: "filePath" });
 
-			const toastSpy = jest.spyOn(toasts, "success");
+			const toastSpy = vi.spyOn(toasts, "success");
 
 			render(
 				<FormProvider {...form.current}>
@@ -127,11 +127,11 @@ describe("WalletOverviewStep", () => {
 		it("should not show success toast on cancelled download", async () => {
 			const { result: form } = renderForm();
 
-			const browserAccessMock = jest
+			const browserAccessMock = vi
 				.spyOn(browserAccess, "fileSave")
 				.mockRejectedValue(new Error("The user aborted a request"));
 
-			const toastSpy = jest.spyOn(toasts, "success");
+			const toastSpy = vi.spyOn(toasts, "success");
 
 			render(
 				<FormProvider {...form.current}>
@@ -150,9 +150,9 @@ describe("WalletOverviewStep", () => {
 		it("should show error toast on error", async () => {
 			const { result: form } = renderForm();
 
-			const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockRejectedValue(new Error("Error"));
+			const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockRejectedValue(new Error("Error"));
 
-			const toastSpy = jest.spyOn(toasts, "error");
+			const toastSpy = vi.spyOn(toasts, "error");
 
 			render(
 				<FormProvider {...form.current}>

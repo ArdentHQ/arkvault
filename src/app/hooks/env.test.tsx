@@ -45,7 +45,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should throw error when profile is not found", () => {
-		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 
 		expect(() => {
 			render(
@@ -62,7 +62,7 @@ describe("useActiveProfile", () => {
 	});
 
 	it("should throw error when useActiveProfile is called on a route where profile is not available", () => {
-		const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation();
+		const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 		const history = createHashHistory();
 
 		expect(() => {
@@ -116,7 +116,7 @@ describe("useActiveProfile", () => {
 	it.each([true, false])(
 		"should return undefined if wallet id is not provided in url when active wallet isRequired = %s",
 		(isRequired: boolean) => {
-			const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+			const consoleSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
 			let activeWallet: Contracts.IReadWriteWallet | undefined;
 			let activeWalletId: string | undefined;
 

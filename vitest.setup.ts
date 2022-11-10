@@ -4,13 +4,18 @@ import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
-import React from "react";
+import crypto from "crypto";
 
-jest.mock("@/utils/debounce", () => ({
+import { server } from "./src/tests/mocks/server";
+
+import * as matchers from "jest-extended";
+expect.extend(matchers);
+
+vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (promise) => promise,
 }));
 
-jest.mock(
+vi.mock(
 	"virtual:pwa-register/react",
 	() => {
 		return {
@@ -22,16 +27,16 @@ jest.mock(
 	},
 );
 
-jest.mock("@/app/hooks/use-synchronizer", () => {
-	const { useSynchronizer } = jest.requireActual("@/app/hooks/use-synchronizer");
+vi.mock("@/app/hooks/use-synchronizer", async () => {
+	const { useSynchronizer } = await vi.importActual("@/app/hooks/use-synchronizer");
 
 	return {
 		useSynchronizer: (jobs) => {
 			if (process.env.MOCK_SYNCHRONIZER) {
 				return {
-					start: jest.fn(),
-					stop: jest.fn(),
-					runAll: jest.fn(),
+					start: vi.fn(),
+					stop: vi.fn(),
+					runAll: vi.fn(),
 					error: undefined,
 				};
 			}
@@ -41,27 +46,31 @@ jest.mock("@/app/hooks/use-synchronizer", () => {
 	};
 });
 
-jest.mock("react-idle-timer", () => {
+vi.mock("react-idle-timer", () => {
 	return {
 		useIdleTimer: (options) => {
 			const threshold = process.env.IDLE_TIME_THRESHOLD || 10000;
 
 			return {
 				start: () => setTimeout(options.onIdle, parseInt(threshold)),
-				stop: jest.fn(),
-				pause: jest.fn(),
+				stop: vi.fn(),
+				pause: vi.fn(),
 			};
 		},
 	};
 });
 
 // Reduce ledger connection retries to 2 in all tests.
-jest.mock("async-retry", () => {
-	const retry = jest.requireActual("async-retry");
-	return (fn, options) => retry(fn, { ...options, retries: 2 });
+vi.mock("p-retry", async () => {
+	const retry = await vi.importActual("p-retry");
+
+	return {
+		...retry,
+		default: (fn, options) => retry.default(fn, { ...options, retries: 2 }),
+	};
 });
 
-jest.mock("browser-fs-access");
+vi.mock("browser-fs-access");
 
 const originalTippyRender = Tippy.render;
 let tippyMock;
@@ -70,6 +79,8 @@ const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
 beforeAll(async () => {
+	server.listen({ onUnhandledRequest: "error" });
+
 	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
@@ -80,11 +91,11 @@ beforeAll(async () => {
 beforeEach(() => {
 	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
 
-	localstorageSpy = jest
+	localstorageSpy = vi
 		.spyOn(Storage.prototype, "getItem")
 		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
 
-	tippyMock = jest.spyOn(Tippy, "render").mockImplementation((context) => {
+	tippyMock = vi.spyOn(Tippy, "render").mockImplementation((context) => {
 		if (context?.render?.name === "renderDropdownContent") {
 			return context.render({
 				className: "absolute z-10 w-full",
@@ -96,6 +107,8 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+	server.resetHandlers();
+
 	MockDate.reset();
 
 	tippyMock.mockRestore();
@@ -104,6 +117,8 @@ afterEach(() => {
 });
 
 afterAll(() => {
+	server.close();
+
 	if (global.gc) {
 		global.gc();
 	}
@@ -111,47 +126,58 @@ afterAll(() => {
 
 Object.defineProperty(HTMLImageElement.prototype, "decode", {
 	writable: true,
-	value: jest.fn(),
+	value: vi.fn(),
 });
 
 Object.defineProperty(window, "matchMedia", {
 	writable: true,
-	value: jest.fn().mockImplementation((query) => ({
+	value: vi.fn().mockImplementation((query) => ({
 		matches: false,
 		media: query,
 		onchange: null,
-		addListener: jest.fn(), // deprecated
-		removeListener: jest.fn(), // deprecated
-		addEventListener: jest.fn(),
-		removeEventListener: jest.fn(),
-		dispatchEvent: jest.fn(),
+		addListener: vi.fn(), // deprecated
+		removeListener: vi.fn(), // deprecated
+		addEventListener: vi.fn(),
+		removeEventListener: vi.fn(),
+		dispatchEvent: vi.fn(),
 	})),
 });
 
-window.scrollTo = jest.fn();
+window.scrollTo = vi.fn();
 
 class ResizeObserverMock {
-	observe = jest.fn();
-	unobserve = jest.fn();
-	disconnect = jest.fn();
+	observe = vi.fn();
+	unobserve = vi.fn();
+	disconnect = vi.fn();
 }
 
 window.ResizeObserver = ResizeObserverMock;
 
-global.BroadcastChannel = class BroadcastChannel {
-	postMessage = jest.fn();
-	onMessage = jest.fn();
-	onMessageError = jest.fn();
-	addEventListener = jest.fn();
-	removeEventListener = jest.fn();
-	close = jest.fn();
-};
+class BroadcastChannelMock {
+	postMessage = vi.fn();
+	onMessage = vi.fn();
+	onMessageError = vi.fn();
+	addEventListener = vi.fn();
+	removeEventListener = vi.fn();
+	close = vi.fn();
+}
+
+vi.stubGlobal("BroadcastChannel", BroadcastChannelMock);
+
+vi.stubGlobal("CSS", {
+	supports: () => true,
+});
+
+vi.stubGlobal("crypto", {
+	...crypto,
+	getRandomValues: crypto.randomFillSync,
+});
 
 // Zendesk
-jest.mock("react-zendesk", () => ({
+vi.mock("react-zendesk", () => ({
 	__esModule: true,
 	default: () => null,
-	ZendeskAPI: () => jest.fn(),
+	ZendeskAPI: () => vi.fn(),
 }));
 
 Object.defineProperty(window, "$zopim", {
@@ -159,8 +185,8 @@ Object.defineProperty(window, "$zopim", {
 	value: {
 		livechat: {
 			window: {
-				show: jest.fn(),
-				hide: jest.fn(),
+				show: vi.fn(),
+				hide: vi.fn(),
 			},
 		},
 	},

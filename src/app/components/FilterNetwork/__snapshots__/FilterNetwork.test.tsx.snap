@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`FilterNetwork should render empty 1`] = `
+exports[`FilterNetwork > should render empty 1`] = `
 <div>
   <div
     data-testid="FilterNetwork"
@@ -13,7 +13,7 @@ exports[`FilterNetwork should render empty 1`] = `
 </div>
 `;
 
-exports[`FilterNetwork should render public networks 1`] = `
+exports[`FilterNetwork > should render public networks 1`] = `
 <div>
   <div
     data-testid="FilterNetwork"
@@ -40,8 +40,18 @@ exports[`FilterNetwork should render public networks 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                ark.svg
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -70,8 +80,18 @@ exports[`FilterNetwork should render public networks 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                ark.svg
+              <svg
+                id="ark"
+                viewBox="0 0 36.3 30.6"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                  fill="currentColor"
+                />
               </svg>
             </div>
           </div>
@@ -87,7 +107,7 @@ exports[`FilterNetwork should render public networks 1`] = `
 </div>
 `;
 
-exports[`FilterNetworks should render empty 1`] = `
+exports[`FilterNetworks > should render empty 1`] = `
 <div>
   <div
     class="space-y-4"
@@ -95,7 +115,7 @@ exports[`FilterNetworks should render empty 1`] = `
 </div>
 `;
 
-exports[`FilterNetworks should render public and testnet networks 1`] = `
+exports[`FilterNetworks > should render public and testnet networks 1`] = `
 <div>
   <div
     class="space-y-4"
@@ -130,8 +150,18 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -174,8 +204,18 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -192,7 +232,7 @@ exports[`FilterNetworks should render public and testnet networks 1`] = `
 </div>
 `;
 
-exports[`FilterNetworks should toggle a testnet network option 1`] = `
+exports[`FilterNetworks > should toggle a testnet network option 1`] = `
 <div>
   <div
     class="space-y-4"
@@ -227,8 +267,18 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -240,8 +290,22 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
                 height="10"
                 width="10"
               >
-                <svg>
-                  check-mark-small.svg
+                <svg
+                  id="check-mark-small"
+                  viewBox="0 0 10 10"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <span />
@@ -280,8 +344,18 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -298,7 +372,7 @@ exports[`FilterNetworks should toggle a testnet network option 1`] = `
 </div>
 `;
 
-exports[`FilterNetworks should toggle view all 1`] = `
+exports[`FilterNetworks > should toggle view all 1`] = `
 <div>
   <div
     class="space-y-4"
@@ -328,8 +402,22 @@ exports[`FilterNetworks should toggle view all 1`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span />
@@ -357,8 +445,18 @@ exports[`FilterNetworks should toggle view all 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -387,8 +485,18 @@ exports[`FilterNetworks should toggle view all 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -439,8 +547,22 @@ exports[`FilterNetworks should toggle view all 1`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span />
@@ -468,8 +590,18 @@ exports[`FilterNetworks should toggle view all 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -486,7 +618,7 @@ exports[`FilterNetworks should toggle view all 1`] = `
 </div>
 `;
 
-exports[`FilterNetworks should toggle view all 2`] = `
+exports[`FilterNetworks > should toggle view all 2`] = `
 <div>
   <div
     class="space-y-4"
@@ -516,8 +648,22 @@ exports[`FilterNetworks should toggle view all 2`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span />
@@ -545,8 +691,18 @@ exports[`FilterNetworks should toggle view all 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -575,8 +731,18 @@ exports[`FilterNetworks should toggle view all 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -614,8 +780,22 @@ exports[`FilterNetworks should toggle view all 2`] = `
             height="10"
             width="10"
           >
-            <svg>
-              chevron-down-small.svg
+            <svg
+              id="chevron-down-small"
+              viewBox="0 0 10 10"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span />
@@ -643,8 +823,18 @@ exports[`FilterNetworks should toggle view all 2`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -661,7 +851,7 @@ exports[`FilterNetworks should toggle view all 2`] = `
 </div>
 `;
 
-exports[`NetworkOptions should render available networks options 1`] = `
+exports[`NetworkOptions > should render available networks options 1`] = `
 <div>
   <ul
     class="flex flex-wrap"
@@ -685,8 +875,18 @@ exports[`NetworkOptions should render available networks options 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              ark.svg
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -715,8 +915,18 @@ exports[`NetworkOptions should render available networks options 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              ark.svg
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
             </svg>
           </div>
         </div>
@@ -731,7 +941,7 @@ exports[`NetworkOptions should render available networks options 1`] = `
 </div>
 `;
 
-exports[`NetworkOptions should render empty 1`] = `
+exports[`NetworkOptions > should render empty 1`] = `
 <div>
   <ul
     class="flex flex-wrap"
@@ -740,7 +950,7 @@ exports[`NetworkOptions should render empty 1`] = `
 </div>
 `;
 
-exports[`ToggleAllOption should render 1`] = `
+exports[`ToggleAllOption > should render 1`] = `
 <div>
   <div
     class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
@@ -759,8 +969,22 @@ exports[`ToggleAllOption should render 1`] = `
         height="10"
         width="10"
       >
-        <svg>
-          chevron-down-small.svg
+        <svg
+          id="chevron-down-small"
+          viewBox="0 0 10 10"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
         </svg>
       </div>
       <span />
@@ -769,9 +993,9 @@ exports[`ToggleAllOption should render 1`] = `
 </div>
 `;
 
-exports[`ToggleAllOption should render hidden 1`] = `<div />`;
+exports[`ToggleAllOption > should render hidden 1`] = `<div />`;
 
-exports[`ToggleAllOption should render selected 1`] = `
+exports[`ToggleAllOption > should render selected 1`] = `
 <div>
   <div
     class="relative mr-5 cursor-pointer border-theme-primary-100 dark:border-theme-secondary-800 ring-theme-background duration-100 css-14jhlj1"
@@ -790,8 +1014,22 @@ exports[`ToggleAllOption should render selected 1`] = `
         height="10"
         width="10"
       >
-        <svg>
-          chevron-down-small.svg
+        <svg
+          id="chevron-down-small"
+          viewBox="0 0 10 10"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
         </svg>
       </div>
       <span />

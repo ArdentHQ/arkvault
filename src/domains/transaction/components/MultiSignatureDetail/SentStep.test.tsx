@@ -19,8 +19,8 @@ describe("Multisignature Detail Sent Step", () => {
 	});
 
 	it("should render sent step %s", async () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.coin().address(), "fromMultiSignature").mockResolvedValue({ address: wallet.address() });
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.coin().address(), "fromMultiSignature").mockResolvedValue({ address: wallet.address() });
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">

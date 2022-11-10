@@ -67,7 +67,7 @@ describe("Add Participant item", () => {
 	});
 
 	it("should handle the delete button", () => {
-		const onDelete = jest.fn();
+		const onDelete = vi.fn();
 
 		render(
 			<Route path="/profiles/:profileId">

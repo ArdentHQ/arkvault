@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletVote multi vote networks should render a vote for multiple active and resigned delegates 1`] = `
+exports[`WalletVote > multi vote networks > should render a vote for multiple active and resigned delegates 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -20,8 +20,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -80,8 +100,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -111,8 +151,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -124,7 +184,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
 </DocumentFragment>
 `;
 
-exports[`WalletVote multi vote networks should render a vote for multiple active and standby delegates 1`] = `
+exports[`WalletVote > multi vote networks > should render a vote for multiple active and standby delegates 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -144,8 +204,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -204,8 +284,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -235,8 +335,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -248,7 +368,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
 </DocumentFragment>
 `;
 
-exports[`WalletVote multi vote networks should render a vote for multiple active, standby and resigned delegates 1`] = `
+exports[`WalletVote > multi vote networks > should render a vote for multiple active, standby and resigned delegates 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -268,8 +388,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -328,8 +468,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -364,8 +524,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -377,7 +557,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
 </DocumentFragment>
 `;
 
-exports[`WalletVote multi vote networks should render a vote for multiple standby and resigned delegates 1`] = `
+exports[`WalletVote > multi vote networks > should render a vote for multiple standby and resigned delegates 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -397,8 +577,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -457,8 +657,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -492,8 +712,28 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -505,7 +745,7 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
 </DocumentFragment>
 `;
 
-exports[`WalletVote multi vote networks should render votes when all delegates are active 1`] = `
+exports[`WalletVote > multi vote networks > should render votes when all delegates are active 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -525,8 +765,28 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -598,8 +858,28 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -611,7 +891,7 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
 </DocumentFragment>
 `;
 
-exports[`WalletVote multi vote networks should render votes when all delegates are on standby 1`] = `
+exports[`WalletVote > multi vote networks > should render votes when all delegates are on standby 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -631,8 +911,28 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -691,8 +991,28 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -717,8 +1037,28 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -730,7 +1070,7 @@ exports[`WalletVote multi vote networks should render votes when all delegates a
 </DocumentFragment>
 `;
 
-exports[`WalletVote should disable vote button when balance is less than votesAmountStep 1`] = `
+exports[`WalletVote > should disable vote button when balance is less than votesAmountStep 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -750,8 +1090,28 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -799,8 +1159,22 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -855,8 +1229,28 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -868,7 +1262,7 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render 1`] = `
+exports[`WalletVote > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -888,8 +1282,28 @@ exports[`WalletVote should render 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -937,8 +1351,22 @@ exports[`WalletVote should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -958,8 +1386,28 @@ exports[`WalletVote should render 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -971,7 +1419,7 @@ exports[`WalletVote should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render as all resigned 1`] = `
+exports[`WalletVote > should render as all resigned 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -991,8 +1439,28 @@ exports[`WalletVote should render as all resigned 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1046,8 +1514,28 @@ exports[`WalletVote should render as all resigned 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -1072,8 +1560,28 @@ exports[`WalletVote should render as all resigned 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1085,7 +1593,7 @@ exports[`WalletVote should render as all resigned 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render disabled vote button 1`] = `
+exports[`WalletVote > should render disabled vote button 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1105,8 +1613,28 @@ exports[`WalletVote should render disabled vote button 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1154,8 +1682,22 @@ exports[`WalletVote should render disabled vote button 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -1176,8 +1718,28 @@ exports[`WalletVote should render disabled vote button 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1189,7 +1751,7 @@ exports[`WalletVote should render disabled vote button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render skelethon if loading 1`] = `
+exports[`WalletVote > should render skelethon if loading 1`] = `
 <DocumentFragment>
   <div
     class="flex flex-col rounded-xl border border-theme-secondary-300 bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-black md:border-0 md:bg-transparent md:dark:bg-transparent"
@@ -1201,69 +1763,65 @@ exports[`WalletVote should render skelethon if loading 1`] = `
       <div
         class="mr-4 hidden md:block"
       >
-        <div
-          class="border-transparent ring-theme-secondary-background duration-100 css-14jhlj1"
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
         >
-          <span>
-            <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 44px; height: 44px; border-radius: 50%;"
-              >
-                ‌
-              </span>
-              ‌
-            </span>
+          <span
+            class="react-loading-skeleton"
+            style="width: 44px; height: 44px; border-radius: 50%;"
+          >
+            ‌
           </span>
-        </div>
+          <br />
+        </span>
       </div>
       <div
         class="flex h-10 flex-col justify-between"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 14px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 14px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 150px; height: 16px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 150px; height: 16px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
       <div
         class="ml-auto"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 44px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 44px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
     </div>
@@ -1273,31 +1831,31 @@ exports[`WalletVote should render skelethon if loading 1`] = `
       <div
         class="flex h-10 flex-col items-center justify-between"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 150px; height: 16px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 150px; height: 16px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+        >
           <span
-            class="flex max-w-full items-center overflow-hidden leading-none"
+            class="react-loading-skeleton"
+            style="width: 100px; height: 14px;"
           >
-            <span
-              class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-              style="width: 100px; height: 14px;"
-            >
-              ‌
-            </span>
             ‌
           </span>
+          <br />
         </span>
       </div>
     </div>
@@ -1305,7 +1863,7 @@ exports[`WalletVote should render skelethon if loading 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render the maximum votes 1`] = `
+exports[`WalletVote > should render the maximum votes 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1325,8 +1883,28 @@ exports[`WalletVote should render the maximum votes 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1374,8 +1952,22 @@ exports[`WalletVote should render the maximum votes 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -1395,8 +1987,28 @@ exports[`WalletVote should render the maximum votes 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1408,7 +2020,7 @@ exports[`WalletVote should render the maximum votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote should render without votes 1`] = `
+exports[`WalletVote > should render without votes 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1428,8 +2040,28 @@ exports[`WalletVote should render without votes 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1477,8 +2109,22 @@ exports[`WalletVote should render without votes 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -1498,8 +2144,28 @@ exports[`WalletVote should render without votes 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1511,7 +2177,7 @@ exports[`WalletVote should render without votes 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletVote single vote networks should render a vote for a delegate without rank 1`] = `
+exports[`WalletVote > single vote networks > should render a vote for a delegate without rank 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1531,8 +2197,28 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1584,8 +2270,28 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -1610,8 +2316,28 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1623,7 +2349,7 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
 </DocumentFragment>
 `;
 
-exports[`WalletVote single vote networks should render a vote for a standby delegate 1`] = `
+exports[`WalletVote > single vote networks > should render a vote for a standby delegate 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1643,8 +2369,28 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1696,8 +2442,28 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
               height="10"
               width="10"
             >
-              <svg>
-                hint-small.svg
+              <svg
+                id="hint-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="4.5"
+                  cy="1"
+                  fill="currentColor"
+                  r="1"
+                />
               </svg>
             </div>
           </span>
@@ -1722,8 +2488,28 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>
@@ -1735,7 +2521,7 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
 </DocumentFragment>
 `;
 
-exports[`WalletVote single vote networks should render a vote for an active delegate 1`] = `
+exports[`WalletVote > single vote networks > should render a vote for an active delegate 1`] = `
 <DocumentFragment>
   <div
     class="flex w-full flex-col items-center md:flex-row md:items-start"
@@ -1755,8 +2541,28 @@ exports[`WalletVote single vote networks should render a vote for an active dele
             height="20"
             width="20"
           >
-            <svg>
-              vote.svg
+            <svg
+              id="vote"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                />
+                <path
+                  d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -1821,8 +2627,28 @@ exports[`WalletVote single vote networks should render a vote for an active dele
           height="16"
           width="16"
         >
-          <svg>
-            vote.svg
+          <svg
+            id="vote"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+              />
+              <path
+                d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+              />
+            </g>
           </svg>
         </div>
         <span>

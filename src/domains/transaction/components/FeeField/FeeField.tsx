@@ -102,7 +102,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 				return;
 			}
 
-			/* istanbul ignore else */
+			/* istanbul ignore else -- @preserve */
 			if (
 				network.feeType() === "static" ||
 				transactionFees.isDynamic === false ||
@@ -147,7 +147,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 
 			setNewFees(transactionFees);
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (isMounted.current) {
 				setIsLoadingFee(false);
 			}
@@ -168,7 +168,7 @@ export const FeeField: React.FC<Properties> = ({ type, network, profile, ...prop
 	]);
 
 	useEffect(
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		() => () => {
 			isMounted.current = false;
 		},

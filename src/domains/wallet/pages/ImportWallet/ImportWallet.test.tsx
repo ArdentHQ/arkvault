@@ -3,7 +3,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -11,7 +10,7 @@ import { Route } from "react-router-dom";
 import { ImportWallet } from "./ImportWallet";
 import { MethodStep } from "./MethodStep";
 import { SuccessStep } from "./SuccessStep";
-import { EnvironmentProvider, LedgerProvider } from "@/app/contexts";
+import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
@@ -55,15 +54,6 @@ const ARKDevnet = "ARK Devnet";
 
 describe("ImportWallet", () => {
 	let resetProfileNetworksMock: () => void;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -222,7 +212,7 @@ describe("ImportWallet", () => {
 
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
-		const onClickEditAlias = jest.fn();
+		const onClickEditAlias = vi.fn();
 		const importedWallet = profile.wallets().first();
 
 		const Component = () => {
@@ -255,7 +245,7 @@ describe("ImportWallet", () => {
 	it("should go back to portfolio", async () => {
 		const history = createHashHistory();
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -280,7 +270,7 @@ describe("ImportWallet", () => {
 	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		resetProfileNetworksMock();
 
@@ -373,9 +363,7 @@ describe("ImportWallet", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/wallets/import/ledger">
-				<LedgerProvider>
-					<ImportWallet />
-				</LedgerProvider>
+				<ImportWallet />
 			</Route>,
 			{
 				route: {
@@ -410,7 +398,7 @@ describe("ImportWallet", () => {
 			},
 		);
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
@@ -503,7 +491,7 @@ describe("ImportWallet", () => {
 
 		it("when is valid", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
+			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockResolvedValue({ address: "whatever" });
 
 			history.push(`/profiles/${profile.id()}`);
 
@@ -532,7 +520,7 @@ describe("ImportWallet", () => {
 
 		it("when is not valid", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
+			const coinMock = vi.spyOn(coin.address(), "fromPrivateKey").mockImplementation(() => {
 				throw new Error("test");
 			});
 
@@ -612,7 +600,7 @@ describe("ImportWallet", () => {
 
 		it("with valid wif", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
-			const coinMock = jest
+			const coinMock = vi
 				.spyOn(coin.address(), "fromWIF")
 				.mockResolvedValue({ address: "whatever", type: "bip39" });
 
@@ -648,7 +636,7 @@ describe("ImportWallet", () => {
 		it("with invalid wif", async () => {
 			const coin = profile.coins().get("ARK", testNetwork);
 
-			const coinMock = jest.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
+			const coinMock = vi.spyOn(coin.address(), "fromWIF").mockImplementation(() => {
 				throw new Error("Something went wrong");
 			});
 

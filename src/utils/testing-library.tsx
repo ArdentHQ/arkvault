@@ -1,8 +1,8 @@
+/* eslint-disable testing-library/no-node-access */
 import { ARK } from "@ardenthq/sdk-ark";
 import { Contracts, Environment } from "@ardenthq/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
 import { createHashHistory, HashHistory, To } from "history";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
@@ -13,7 +13,6 @@ import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
 import { i18n } from "@/app/i18n";
 import { httpClient } from "@/app/services";
 import { LayoutBreakpoint } from "@/types";
-import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";
@@ -169,110 +168,13 @@ export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew
 
 export const getDefaultPassword = () => TestingPasswords.profiles[getPasswordProtectedProfileId()]?.password;
 
-export const defaultNetMocks = () => {
-	nock.disableNetConnect();
-
-	// devnet
-	nock("https://ark-test.arkvault.io")
-		.get("/api/blockchain")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/blockchain.json"))
-		.get("/api/node/configuration")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/configuration.json"))
-		.get("/api/peers")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/peers.json"))
-		.get("/api/node/configuration/crypto")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/cryptoConfiguration.json"))
-		.get("/api/node/syncing")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/syncing.json"))
-		.get("/api/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb.json"))
-		.get("/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr.json"))
-		.get("/api/wallets/DNTwQTSp999ezQ425utBsWetcmzDuCn2pN")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/DNTwQTSp999ezQ425utBsWetcmzDuCn2pN.json"))
-		.get("/api/wallets/DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq.json"))
-		.get("/api/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib")
-		.reply(200, delegate)
-		.get("/api/wallets/034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192")
-		.reply(200, delegate)
-		.get("/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json"))
-		.get("/api/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T.json"))
-		.get("/api/wallets/DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu.json"))
-		.get("/api/wallets/D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/wallets/D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f.json"))
-		.get("/api/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD/votes")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/votes.json"))
-		.get("/api/delegates")
-		.query(true)
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/delegates.json"))
-		.get(/\/api\/delegates\/.+/)
-		.reply(200, delegate)
-		.get("/api/node/fees")
-		.query(true)
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/node-fees.json"))
-		.get("/api/transactions/fees")
-		.reply(200, require("../tests/fixtures/coins/ark/devnet/transaction-fees.json"))
-		.persist();
-
-	// mainnet
-	nock("https://ark-live.arkvault.io")
-		.get("/api/node/configuration")
-		.reply(200, require("../tests/fixtures/coins/ark/mainnet/configuration.json"))
-		.get("/api/peers")
-		.reply(200, require("../tests/fixtures/coins/ark/mainnet/peers.json"))
-		.get("/api/node/configuration/crypto")
-		.reply(200, require("../tests/fixtures/coins/ark/mainnet/cryptoConfiguration.json"))
-		.get("/api/node/syncing")
-		.reply(200, require("../tests/fixtures/coins/ark/mainnet/syncing.json"))
-		.get("/api/wallets/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX")
-		.reply(200, require("../tests/fixtures/coins/ark/mainnet/wallets/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX.json"))
-		.persist();
-
-	nock("https://min-api.cryptocompare.com")
-		.get("/data/dayAvg?fsym=DARK&tsym=BTC&toTs=1593561600")
-		.reply(200, require("tests/fixtures/exchange/cryptocompare.json"))
-		.get("/data/dayAvg?fsym=ARK&tsym=BTC&toTs=1593561600")
-		.reply(200, require("tests/fixtures/exchange/cryptocompare.json"))
-		.get("/data/histoday")
-		.query(true)
-		.reply(200, require("../tests/fixtures/exchange/cryptocompare-historical.json"))
-		.persist();
-
-	nock("https://exchanges.arkvault.io")
-		.get("/api")
-		.reply(200, require("tests/fixtures/exchange/exchanges.json"))
-		.get("/api/changenow/currencies")
-		.reply(200, require("tests/fixtures/exchange/changenow/currencies.json"))
-		.get("/api/changenow/currencies/ark")
-		.reply(200, require("tests/fixtures/exchange/changenow/currency-ark.json"))
-		.get("/api/changenow/currencies/btc")
-		.reply(200, require("tests/fixtures/exchange/changenow/currency-btc.json"))
-		.get("/api/changenow/tickers/btc/ark")
-		.reply(200, require("tests/fixtures/exchange/changenow/minimum.json"))
-		.get("/api/changenow/currencies/ark/payoutAddress")
-		.reply(200, { data: true })
-		.get("/api/changenow/tickers/ark/btc")
-		.reply(200, require("tests/fixtures/exchange/changenow/minimum.json"))
-		.get(new RegExp("/api/changenow/tickers/[a-z]{3}/[a-z]{3}/1$"))
-		.reply(200, require("tests/fixtures/exchange/changenow/estimate.json"))
-		.persist();
-};
-
-export const useDefaultNetMocks = defaultNetMocks;
-
-const environmentWithMocks = () => {
-	defaultNetMocks();
-	return new Environment({
+const environmentWithMocks = () =>
+	new Environment({
 		coins: { ARK },
 		httpClient,
 		ledgerTransportFactory,
 		storage: new StubStorage(),
 	});
-};
 
 export const env = environmentWithMocks();
 
@@ -402,7 +304,7 @@ const customNetworksStub: any = {
 };
 
 export const mockProfileWithOnlyPublicNetworks = (profile: Contracts.IProfile) => {
-	const mock = jest.spyOn(profile.networks(), "all").mockReturnValue(publicNetworksStub);
+	const mock = vi.spyOn(profile.networks(), "all").mockReturnValue(publicNetworksStub);
 
 	return () => {
 		mock.mockRestore();
@@ -421,8 +323,8 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 		},
 	};
 
-	const allMock = jest.spyOn(profile.networks(), "all").mockReturnValue(networks);
-	const allByCoinMock = jest
+	const allMock = vi.spyOn(profile.networks(), "all").mockReturnValue(networks);
+	const allByCoinMock = vi
 		.spyOn(profile.networks(), "allByCoin")
 		.mockImplementation((coin: string) => Object.values(networks[coin.toLowerCase()] ?? []));
 
@@ -431,3 +333,20 @@ export const mockProfileWithPublicAndTestNetworks = (profile: Contracts.IProfile
 		allByCoinMock.mockRestore();
 	};
 };
+
+// This helper function is used to prevent assertion error in SDK (ArrayBuffer error in randomFillSync) when signing messages.
+//
+// It needs to be called only once before calling `message.sign` in tests in order to properly initialize global instances (in sdk) and prevent
+// from throwing false assertions against types & instances (Buffer & ArrayBuffer).
+//
+// This is probably caused by how jsdom initialization runs with vitest as it's not an issue with jsdom in jest.
+export const triggerMessageSignOnce = async (wallet: Contracts.IReadWriteWallet) => {
+	try {
+		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
+		await wallet.message().sign({ message: "message", signatory });
+	} catch {
+		//
+	}
+};
+
+export const queryElementForSvg = (target: HTMLElement, svg: string) => target.querySelector(`svg#${svg}`);

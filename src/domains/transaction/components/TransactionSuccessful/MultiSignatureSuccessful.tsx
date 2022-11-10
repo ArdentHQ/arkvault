@@ -84,7 +84,7 @@ export const MultiSignatureSuccessful = ({
 					.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
 
 				setGeneratedAddress(address);
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 			} catch {
 				// We are using a coin that doesn't support multi-signature address derivation.
 				// TODO: AddressService#fromMultiSignature is not implemented for Lisk.

@@ -27,7 +27,7 @@ describe("useWalletActions", () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
-		jest.spyOn(useActiveProfileModule, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(useActiveProfileModule, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	it("should return undefined if there is no wallet", async () => {

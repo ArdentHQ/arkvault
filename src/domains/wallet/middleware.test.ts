@@ -13,7 +13,7 @@ describe("WalletMiddleware", () => {
 		const location = {
 			pathname: "/profiles/create",
 		};
-		const redirect = jest.fn();
+		const redirect = vi.fn();
 		const parameters = { env, location, redirect };
 
 		// @ts-ignore
@@ -24,7 +24,7 @@ describe("WalletMiddleware", () => {
 		const location = {
 			pathname: "/profiles/1/wallets/create",
 		};
-		const redirect = jest.fn();
+		const redirect = vi.fn();
 		const parameters = { env, location, redirect };
 
 		// @ts-ignore
@@ -35,7 +35,7 @@ describe("WalletMiddleware", () => {
 		const location = {
 			pathname: "/profiles/1/wallets/1",
 		};
-		const redirect = jest.fn();
+		const redirect = vi.fn();
 		const parameters = { env, location, redirect };
 
 		// @ts-ignore
@@ -50,7 +50,7 @@ describe("WalletMiddleware", () => {
 		const location = {
 			pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}`,
 		};
-		const redirect = jest.fn();
+		const redirect = vi.fn();
 		const parameters = { env, location, redirect };
 
 		// @ts-ignore

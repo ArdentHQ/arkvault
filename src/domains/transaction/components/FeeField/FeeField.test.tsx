@@ -66,13 +66,13 @@ describe("FeeField", () => {
 	});
 
 	it("should not show warning toast when transaction fees are equal to the previous fees", async () => {
-		let useFeesSpy: jest.SpyInstance;
+		let useFeesSpy: vi.SpyInstance;
 
-		useFeesSpy = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
 		});
 
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		const { rerender } = render(
 			<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />,
@@ -80,7 +80,7 @@ describe("FeeField", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
 
-		useFeesSpy = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
 		});
 
@@ -97,7 +97,7 @@ describe("FeeField", () => {
 		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
 			"should show 0 when %s data is undefined",
 			async (transactionType) => {
-				const feeTypeSpy = jest.spyOn(networks, "feeType").mockReturnValueOnce("size");
+				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
 				render(<Component type={transactionType} network={networks} data={undefined} />);
 
@@ -114,7 +114,7 @@ describe("FeeField", () => {
 		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
 			"should show 0 %s data is not available yet",
 			async (transactionType) => {
-				const feeTypeSpy = jest.spyOn(networks, "feeType").mockReturnValueOnce("size");
+				const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
 				render(<Component type={transactionType} network={networks} data={{}} />);
 
@@ -129,9 +129,9 @@ describe("FeeField", () => {
 		);
 
 		it("should recalculate fees on data changes", async () => {
-			const feeTypeSpy = jest.spyOn(networks, "feeType").mockReturnValueOnce("size");
-			const calculate = jest.fn().mockResolvedValue({ avg: 2, isDynamic: false, max: 2, min: 2, static: 2 });
-			const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
+			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
+			const calculate = vi.fn().mockResolvedValue({ avg: 2, isDynamic: false, max: 2, min: 2, static: 2 });
+			const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
 
 			const properties = { network: networks, type: "transfer" };
 
@@ -149,13 +149,13 @@ describe("FeeField", () => {
 		});
 
 		it("should override fee when it is lower than the minimum fees", async () => {
-			const feeTypeSpy = jest.spyOn(networks, "feeType").mockReturnValueOnce("size");
+			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
 
-			let useFeesSpy: jest.SpyInstance;
+			let useFeesSpy: vi.SpyInstance;
 
-			const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-			useFeesSpy = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),
 			});
 
@@ -177,7 +177,7 @@ describe("FeeField", () => {
 
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
 
-			useFeesSpy = jest.spyOn(useFeesHook, "useFees").mockReturnValue({
+			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
 				calculate: () => Promise.resolve({ avg: 9, isDynamic: false, max: 12, min: 6, static: 3 }),
 			});
 
@@ -200,8 +200,8 @@ describe("FeeField", () => {
 	});
 
 	it("should set fee to fees.avg when it has no value yet", async () => {
-		const calculate = jest.fn().mockResolvedValue({ avg: 30, isDynamic: true, max: 1, min: 1, static: 1 });
-		const useFeesMock = jest.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
+		const calculate = vi.fn().mockResolvedValue({ avg: 30, isDynamic: true, max: 1, min: 1, static: 1 });
+		const useFeesMock = vi.spyOn(useFeesHook, "useFees").mockImplementation(() => ({ calculate }));
 
 		render(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
 

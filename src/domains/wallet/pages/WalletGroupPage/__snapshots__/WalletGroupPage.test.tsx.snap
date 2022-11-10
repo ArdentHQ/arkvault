@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletGroupPage should go to main page if no network 1`] = `<DocumentFragment />`;
+exports[`WalletGroupPage > should go to main page if no network 1`] = `<DocumentFragment />`;
 
-exports[`WalletGroupPage should render empty list if no wallets 1`] = `
+exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
 <DocumentFragment>
   <div
     class="css-kmmje1"
@@ -28,8 +28,25 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                received.svg
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -51,8 +68,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                dashboard.svg
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -75,8 +106,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sent.svg
+              <svg
+                id="sent"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </div>
@@ -101,8 +146,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                chevron-left-small.svg
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </button>
@@ -122,9 +181,19 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                 class="relative"
               >
                 <svg
+                  fill="none"
                   height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  arkvault-logo.svg
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </span>
             </button>
@@ -189,8 +258,19 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      menu.svg
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
                     </svg>
                   </div>
                 </button>
@@ -223,8 +303,18 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            cloud.svg
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
                           </svg>
                         </div>
                         <div
@@ -266,8 +356,25 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           height="20"
                           width="20"
                         >
-                          <svg>
-                            bell.svg
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
                           </svg>
                         </div>
                         <div
@@ -309,8 +416,25 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          received.svg
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -340,8 +464,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          sent.svg
+                        <svg
+                          id="sent"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -445,8 +583,18 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       height="20"
                       width="20"
                     >
-                      <svg>
-                        ark.svg
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -462,8 +610,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          code.svg
+                        <svg
+                          id="code"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -490,8 +652,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          code.svg
+                        <svg
+                          id="code"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -509,18 +685,18 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     <div
                       class="flex items-center justify-end sm:h-6 h-5"
                     >
-                      <span>
+                      <span
+                        aria-busy="true"
+                        aria-live="polite"
+                        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                      >
                         <span
-                          class="flex max-w-full items-center overflow-hidden leading-none"
+                          class="react-loading-skeleton sm:h-4.5 h-4"
+                          style="width: 140px;"
                         >
-                          <span
-                            class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                            style="width: 140px;"
-                          >
-                            ‌
-                          </span>
                           ‌
                         </span>
+                        <br />
                       </span>
                     </div>
                   </span>
@@ -535,8 +711,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex"
-                  css="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop)."
+                  class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
                 >
                   <span
                     class="hidden"
@@ -555,18 +730,18 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       <div
                         class="flex items-center justify-end sm:h-6"
                       >
-                        <span>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
                           <span
-                            class="flex max-w-full items-center overflow-hidden leading-none"
+                            class="react-loading-skeleton sm:h-4.5"
+                            style="width: 60px;"
                           >
-                            <span
-                              class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 60px;"
-                            >
-                              ‌
-                            </span>
                             ‌
                           </span>
+                          <br />
                         </span>
                       </div>
                     </span>
@@ -585,18 +760,18 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       <div
                         class="flex items-center justify-end sm:h-6 h-5"
                       >
-                        <span>
+                        <span
+                          aria-busy="true"
+                          aria-live="polite"
+                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        >
                           <span
-                            class="flex max-w-full items-center overflow-hidden leading-none"
+                            class="react-loading-skeleton sm:h-4.5 h-4"
+                            style="width: 140px;"
                           >
-                            <span
-                              class="react-loading-skeleton sm:h-4.5 h-4 css-1eg0sfo-skeletonStyles-Skeleton"
-                              style="width: 140px;"
-                            >
-                              ‌
-                            </span>
                             ‌
                           </span>
+                          <br />
                         </span>
                       </div>
                     </span>
@@ -668,8 +843,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                   height="18"
                                   width="18"
                                 >
-                                  <svg>
-                                    star-filled.svg
+                                  <svg
+                                    id="star-filled"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <path
+                                      d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    />
                                   </svg>
                                 </div>
                               </button>
@@ -702,8 +891,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -750,8 +953,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -782,8 +999,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               role="img"
                               width="10"
                             >
-                              <svg>
-                                chevron-down-small.svg
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -832,8 +1063,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -907,8 +1152,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -980,8 +1239,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1014,8 +1302,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1089,8 +1391,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1162,8 +1478,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1196,8 +1541,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1271,8 +1630,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1344,8 +1717,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1378,8 +1780,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1453,8 +1869,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1526,8 +1956,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1560,8 +2019,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1635,8 +2108,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1708,8 +2195,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1742,8 +2258,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1817,8 +2347,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1890,8 +2434,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -1924,8 +2497,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1999,8 +2586,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2072,8 +2673,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2106,8 +2736,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2181,8 +2825,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2254,8 +2912,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2288,8 +2975,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2363,8 +3064,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2436,8 +3151,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2470,8 +3214,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2545,8 +3303,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2618,8 +3390,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2652,8 +3453,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2727,8 +3542,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2800,8 +3629,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -2834,8 +3692,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2909,8 +3781,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2982,8 +3868,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3016,8 +3931,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3091,8 +4020,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3164,8 +4107,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3198,8 +4170,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3273,8 +4259,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3346,8 +4346,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3380,8 +4409,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="18"
                                 width="18"
                               >
-                                <svg>
-                                  star.svg
+                                <svg
+                                  id="star"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3455,8 +4498,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                 height="20"
                                 width="20"
                               >
-                                <svg>
-                                  code.svg
+                                <svg
+                                  id="code"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3528,8 +4585,37 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                                       height="20"
                                       width="20"
                                     >
-                                      <svg>
-                                        ellipsis-vertical.svg
+                                      <svg
+                                        id="ellipsis-vertical"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <circle
+                                            cx="10"
+                                            cy="16.994"
+                                            r="2.006"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="3"
+                                            r="2"
+                                          />
+                                          <circle
+                                            cx="10"
+                                            cy="10"
+                                            r="2"
+                                          />
+                                        </g>
                                       </svg>
                                     </div>
                                   </div>
@@ -3565,8 +4651,30 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       height="10"
                       width="10"
                     >
-                      <svg>
-                        double-chevron-left-small.svg
+                      <svg
+                        id="double-chevron-left-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M4.995 9L1.102 5.178c-.136-.134-.136-.267 0-.356h0L4.995 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M9 9L5.107 5.178c-.136-.134-.136-.267 0-.356h0L9 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3591,8 +4699,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          chevron-left-small.svg
+                        <svg
+                          id="chevron-left-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3643,8 +4765,25 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="16"
                         width="16"
                       >
-                        <svg>
-                          magnifying-glass.svg
+                        <svg
+                          id="magnifying-glass"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </span>
@@ -3669,8 +4808,22 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                         height="10"
                         width="10"
                       >
-                        <svg>
-                          chevron-right-small.svg
+                        <svg
+                          id="chevron-right-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M3.063 1l3.8 3.8c.1.1.1.3 0 .4L3.063 9"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
                         </svg>
                       </div>
                     </div>
@@ -3689,8 +4842,30 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       height="10"
                       width="10"
                     >
-                      <svg>
-                        double-chevron-right-small.svg
+                      <svg
+                        id="double-chevron-right-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.011 1l3.893 3.822c.136.134.136.267 0 .356h0L5.011 9"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M1.006 1L4.9 4.822c.136.134.136.267 0 .356h0L1.006 9"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -3705,4 +4880,4 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletGroupPage should render page 1`] = `[Function]`;
+exports[`WalletGroupPage > should render page 1`] = `[Function]`;

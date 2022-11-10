@@ -79,6 +79,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 			<Tooltip content={sendButtonTooltip}>
 				<div className="flex h-full">
 					<button
+						data-testid="ContactListItemMobileAddress__send-button"
 						type="button"
 						disabled={sendIsDisabled}
 						onClick={onSend}

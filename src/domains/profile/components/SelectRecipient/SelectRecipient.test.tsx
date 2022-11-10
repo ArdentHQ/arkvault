@@ -56,13 +56,13 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should focus & blur the address input when is expanded", async () => {
-		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
+		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
-		const focusSpy = jest.spyOn(recipientInputField, "focus");
-		const blurSpy = jest.spyOn(recipientInputField, "blur");
+		const focusSpy = vi.spyOn(recipientInputField, "focus");
+		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
 		// 1. Focus the select input which opens the drodpown
 		userEvent.click(recipientInputField);
@@ -81,13 +81,13 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should not focus & blur the address input when is not expanded", async () => {
-		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
+		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
 
 		render(<SelectRecipient profile={profile} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
-		const focusSpy = jest.spyOn(recipientInputField, "focus");
-		const blurSpy = jest.spyOn(recipientInputField, "blur");
+		const focusSpy = vi.spyOn(recipientInputField, "focus");
+		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
 		userEvent.click(selectRecipient());
 
@@ -142,8 +142,8 @@ describe("SelectRecipient", () => {
 	it("should call onChange prop when entered address in input", async () => {
 		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
 
-		const contactsSpy = jest.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
-		const onChange = jest.fn();
+		const contactsSpy = vi.spyOn(profile.contacts(), "findByAddress").mockReturnValue([]);
+		const onChange = vi.fn();
 
 		render(<SelectRecipient profile={profile} onChange={onChange} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
@@ -162,7 +162,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should call onChange prop if provided", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(
 			<SelectRecipient
@@ -193,7 +193,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should call onChange prop only when values change", async () => {
-		const onChange = jest.fn();
+		const onChange = vi.fn();
 
 		render(<SelectRecipient profile={profile} onChange={onChange} address="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" />);
 
@@ -216,7 +216,7 @@ describe("SelectRecipient", () => {
 	});
 
 	it("should filter recipients list by network if provided", async () => {
-		const function_ = jest.fn();
+		const function_ = vi.fn();
 
 		const [wallet] = profile.wallets().findByCoinWithNetwork("ARK", "ark.devnet");
 
@@ -249,7 +249,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(6);
 
-		const isMultiSignatureSpy = jest
+		const isMultiSignatureSpy = vi
 			.spyOn(profile.wallets().first(), "isMultiSignature")
 			.mockImplementation(() => true);
 

@@ -5,13 +5,13 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("IOsInstructions", () => {
 	it("should render ios instructions", () => {
-		const { container } = render(<IOsInstructions onClose={jest.fn()} />);
+		const { container } = render(<IOsInstructions onClose={vi.fn()} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should handle close", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 		render(<IOsInstructions onClose={onClose} />);
 
 		userEvent.click(screen.getByTestId("IOsInstructions__close-button"));

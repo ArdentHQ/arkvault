@@ -11,7 +11,7 @@ const file = {
 
 describe("useFileDownload hook", () => {
 	it("should download file", async () => {
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockResolvedValue({ name: "test.csv" });
 
 		const { result } = renderHook(() => useFileDownload());
 		await result.current.download(file);
@@ -25,7 +25,7 @@ describe("useFileDownload hook", () => {
 	});
 
 	it("should return undefined if download fails", async () => {
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockImplementation(() => {
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("error");
 		});
 

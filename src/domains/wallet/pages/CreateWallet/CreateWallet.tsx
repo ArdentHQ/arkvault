@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { DefaultTFuncReturn } from "i18next";
 import { ConfirmPassphraseStep } from "./ConfirmPassphraseStep";
 import { SuccessStep } from "./SuccessStep";
 import { WalletOverviewStep } from "./WalletOverviewStep";
@@ -53,7 +54,7 @@ export const CreateWallet = () => {
 	const { useEncryption, encryptionPassword, confirmEncryptionPassword, wallet, mnemonic } = watch();
 
 	const [isGeneratingWallet, setIsGeneratingWallet] = useState(onlyHasOneNetwork);
-	const [generationError, setGenerationError] = useState("");
+	const [generationError, setGenerationError] = useState<string | DefaultTFuncReturn>("");
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
 	useEffect(() => {
@@ -247,7 +248,7 @@ export const CreateWallet = () => {
 									title={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.TITLE")}
 									subtitle={t("WALLETS.PAGE_CREATE_WALLET.NETWORK_STEP.SUBTITLE")}
 									disabled={isGeneratingWallet}
-									error={generationError}
+									error={`${generationError}`}
 								/>
 							</TabPanel>
 

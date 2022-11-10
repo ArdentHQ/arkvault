@@ -2,12 +2,13 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { HashHistory, createHashHistory } from "history";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { vi } from "vitest";
+import { cloneDeep } from "@ardenthq/sdk-helpers";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -16,6 +17,10 @@ import { StatusStep } from "./StatusStep";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { httpClient, toasts } from "@/app/services";
+import { requestMock, requestMockOnce, server } from "@/tests/mocks/server";
+
+import currencyEth from "@/tests/fixtures/exchange/changenow/currency-eth.json";
+import order from "@/tests/fixtures/exchange/changenow/order.json";
 
 let profile: Contracts.IProfile;
 
@@ -24,7 +29,7 @@ const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: HashHistory;
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => setTimeout(callback, 200),
 }));
 
@@ -51,6 +56,9 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
 	return <></>;
 };
+
+const mockOrderStatus = (orderId: string, status: string) =>
+	requestMock(`${exchangeBaseURL}/api/changenow/orders/${orderId}`, { data: { id: orderId, status } });
 
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
 	// from currency
@@ -103,8 +111,6 @@ const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
 	beforeAll(() => {
-		nock.disableNetConnect();
-
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
@@ -133,7 +139,7 @@ describe("ExchangeForm", () => {
 		);
 
 	it("should render exchange form", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -149,8 +155,6 @@ describe("ExchangeForm", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -165,7 +169,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of pending order", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -184,10 +188,7 @@ describe("ExchangeForm", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
 
 		const { container } = renderComponent(
 			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
@@ -206,7 +207,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of finished order", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
 			input: {
@@ -245,7 +246,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should go back to exchange page", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -269,7 +270,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
@@ -280,13 +281,19 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/tickers/btc/eth")
-			.reply(422, { error: { message: "Unavailable Pair" } });
+		server.use(
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMockOnce(
+				`${exchangeBaseURL}/api/changenow/tickers/btc/eth`,
+				{
+					error: { message: "Unavailable Pair" },
+				},
+				{ status: 400 },
+			),
+			requestMock(`${exchangeBaseURL}/api/changenow/tickers/btc/eth`, undefined, { status: 500 }),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		const { container } = renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -306,10 +313,21 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(container).toHaveTextContent("The pair BTC / ETH is not available");
 		});
+
+		// remove to currency
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+
+		await selectCurrencies({
+			to: { name: "Ethereum", ticker: "ETH" },
+		});
+
+		await waitFor(() => {
+			expect(container).not.toHaveTextContent("The pair BTC / ETH is not available");
+		});
 	});
 
 	it("should show and hide refund address input", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -325,8 +343,6 @@ describe("ExchangeForm", () => {
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		expect(fromCurrencyDropdown).toBeDisabled();
-		expect(toCurrencyDropdown).toBeDisabled();
 		expect(recipientDropdown).toBeDisabled();
 
 		await waitFor(() => {
@@ -354,14 +370,14 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input if supported", async () => {
-		const currency = require("tests/fixtures/exchange/changenow/currency-eth.json");
+		const currency = cloneDeep(currencyEth);
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock(exchangeBaseURL).get(exchangeETHURL).reply(200, currency);
+		server.use(requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency));
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -391,18 +407,17 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show external id input for refund if supported", async () => {
-		const currency = require("tests/fixtures/exchange/changenow/currency-eth.json");
+		const currency = cloneDeep(currencyEth);
 
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: true })
-			.get(exchangeETHURL)
-			.reply(200, currency);
+		server.use(
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: true }),
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currency),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -443,7 +458,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should swap currencies", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -476,7 +491,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should calculate amounts", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -531,7 +546,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove amount if removing currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -574,7 +589,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payout amount if removing payin amount", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -614,7 +629,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should remove payin amount if removing payout amount", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -654,7 +669,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payin amount when there is no from currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -693,7 +708,7 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should not update payout amount when there is no to currency", async () => {
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -732,13 +747,12 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear recipient address error when unsetting to currency", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: false });
+		server.use(
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/payoutAddress`, { data: false }),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -778,13 +792,15 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear refund address error when unsetting from currency", async () => {
-		nock(exchangeBaseURL)
-			.get(exchangeETHURL)
-			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
-			.get("/api/changenow/currencies/eth/payoutAddress")
-			.reply(200, { data: false });
+		server.use(
+			requestMock(`${exchangeBaseURL}${exchangeETHURL}`, currencyEth),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, undefined, {
+				status: 500,
+			}),
+			requestMock(`${exchangeBaseURL}/api/changenow/currencies/eth/refundAddress`, { data: false }),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -809,10 +825,10 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		userEvent.paste(refundDropdown, "payoutAddress");
+		userEvent.paste(refundDropdown, "refundAddress");
 
 		await waitFor(() => {
-			expect(refundDropdown).toHaveValue("payoutAddress");
+			expect(refundDropdown).toHaveValue("refundAddress");
 		});
 
 		await waitFor(() => {
@@ -831,9 +847,11 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL).post("/api/changenow/orders").reply(500, "Server Error");
+		server.use(
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, "Server Error", { method: "post", status: 500 }),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -908,7 +926,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -924,11 +942,15 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(422, { error: { message: "Invalid Address" } });
+		server.use(
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/orders`,
+				{ error: { message: "Invalid Address" } },
+				{ method: "post", status: 422 },
+			),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -987,7 +1009,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1003,11 +1025,15 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(422, { error: { message: "Invalid Refund Address" } });
+		server.use(
+			requestMock(
+				`${exchangeBaseURL}/api/changenow/orders`,
+				{ error: { message: "Invalid Refund Address" } },
+				{ method: "post", status: 422 },
+			),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -1078,7 +1104,7 @@ describe("ExchangeForm", () => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
 		userEvent.click(continueButton());
@@ -1102,30 +1128,26 @@ describe("ExchangeForm", () => {
 			to: "ark",
 		};
 
-		nock(exchangeBaseURL)
-			.post("/api/changenow/orders")
-			.reply(200, () => require("tests/fixtures/exchange/changenow/order.json"))
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: baseStatus })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: { ...baseStatus, status: "exchanging" } })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, { data: { ...baseStatus, status: "sending" } })
-			.get("/api/changenow/orders/182b657b2c259b")
-			.query(true)
-			.reply(200, {
+		server.use(
+			requestMock(`${exchangeBaseURL}/api/changenow/orders`, order, { method: "post" }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, { data: baseStatus }),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: { ...baseStatus, status: "exchanging" },
+			}),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
+				data: { ...baseStatus, status: "sending" },
+			}),
+			requestMockOnce(`${exchangeBaseURL}/api/changenow/orders/182b657b2c259b`, {
 				data: {
 					...baseStatus,
 					payinHash: "payinHash",
 					payoutHash: "payoutHash",
 					status: "finished",
 				},
-			});
+			}),
+		);
 
-		const onReady = jest.fn();
+		const onReady = vi.fn();
 
 		renderComponent(<ExchangeForm onReady={onReady} />);
 
@@ -1230,7 +1252,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(
 			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),
@@ -1365,15 +1387,12 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get("/api/changenow/orders/id")
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "new"));
 
 		const { container } = render(
 			<ExchangeProvider>
 				<Wrapper>
-					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={jest.fn()} />
+					<StatusStep exchangeTransaction={exchangeTransaction} onUpdate={vi.fn()} />
 				</Wrapper>
 			</ExchangeProvider>,
 		);
@@ -1386,7 +1405,7 @@ describe("StatusStep", () => {
 	});
 
 	it("should execute onUpdate callback on status change", async () => {
-		const onUpdate = jest.fn();
+		const onUpdate = vi.fn();
 
 		const exchangeTransactionData = {
 			input: {
@@ -1409,10 +1428,7 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock(exchangeBaseURL)
-			.get(`/api/changenow/orders/${exchangeTransaction.orderId()}`)
-			.query(true)
-			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "sending" } });
+		server.use(mockOrderStatus(exchangeTransaction.orderId(), "sending"));
 
 		render(
 			<ExchangeProvider>

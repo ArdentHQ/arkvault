@@ -89,7 +89,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 			return;
 		}
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (qrError.message) {
 			errorCounter.current++;
 
@@ -115,7 +115,7 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 	const resetErrorCounter = () => (errorCounter.current = 0);
 
 	useEffect(() => {
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		if (!isOpen) {
 			setError(undefined);
 			setReady(false);

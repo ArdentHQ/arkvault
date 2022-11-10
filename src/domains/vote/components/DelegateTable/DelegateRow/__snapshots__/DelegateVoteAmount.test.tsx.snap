@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
+exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -56,7 +56,7 @@ exports[`DelegateVoteAmount should render when isCompact = false 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DelegateVoteAmount should render when isCompact = true 1`] = `
+exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
 <DocumentFragment>
   <table>
     <tbody>

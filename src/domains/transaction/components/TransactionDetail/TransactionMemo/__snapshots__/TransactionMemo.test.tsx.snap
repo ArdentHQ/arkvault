@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionMemo should render 1`] = `
+exports[`TransactionMemo > should render 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -33,8 +33,25 @@ exports[`TransactionMemo should render 1`] = `
         height="20"
         width="20"
       >
-        <svg>
-          file-lines.svg
+        <svg
+          id="file-lines"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M7 14h3.5M7 11h6M7 8h6M3 17.4c0 .9.667 1.6 1.429 1.6h-.096 11.143c.857 0 1.524-.8 1.524-1.6V2.6c0-.9-.762-1.6-1.524-1.6h0-7.905c-.38 0-.761.1-1.142.4L3.38 4.6C3 5 3 5.4 3 5.8v11.6z"
+            />
+          </g>
         </svg>
       </div>
     </div>

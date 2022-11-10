@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Server Status Indicator should render as downgraded 1`] = `
+exports[`Server Status Indicator > should render as downgraded 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -25,8 +25,18 @@ exports[`Server Status Indicator should render as downgraded 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  cloud.svg
+                <svg
+                  fill="none"
+                  viewBox="0 0 20 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <div
@@ -45,7 +55,7 @@ exports[`Server Status Indicator should render as downgraded 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Server Status Indicator should render as healthy 1`] = `
+exports[`Server Status Indicator > should render as healthy 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -70,8 +80,18 @@ exports[`Server Status Indicator should render as healthy 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  cloud.svg
+                <svg
+                  fill="none"
+                  viewBox="0 0 20 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <div
@@ -90,7 +110,7 @@ exports[`Server Status Indicator should render as healthy 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Server Status Indicator should render as unavailable 1`] = `
+exports[`Server Status Indicator > should render as unavailable 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -115,8 +135,18 @@ exports[`Server Status Indicator should render as unavailable 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  cloud.svg
+                <svg
+                  fill="none"
+                  viewBox="0 0 20 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <div
@@ -135,7 +165,7 @@ exports[`Server Status Indicator should render as unavailable 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Server Status Indicator should render default 1`] = `
+exports[`Server Status Indicator > should render default 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -160,8 +190,18 @@ exports[`Server Status Indicator should render default 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  cloud.svg
+                <svg
+                  fill="none"
+                  viewBox="0 0 20 15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <div
@@ -180,10 +220,10 @@ exports[`Server Status Indicator should render default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Server Status Indicator should render in lg 1`] = `<DocumentFragment />`;
+exports[`Server Status Indicator > should render in lg 1`] = `<DocumentFragment />`;
 
-exports[`Server Status Indicator should render in md 1`] = `<DocumentFragment />`;
+exports[`Server Status Indicator > should render in md 1`] = `<DocumentFragment />`;
 
-exports[`Server Status Indicator should render in sm 1`] = `<DocumentFragment />`;
+exports[`Server Status Indicator > should render in sm 1`] = `<DocumentFragment />`;
 
-exports[`Server Status Indicator should render in xl 1`] = `<DocumentFragment />`;
+exports[`Server Status Indicator > should render in xl 1`] = `<DocumentFragment />`;

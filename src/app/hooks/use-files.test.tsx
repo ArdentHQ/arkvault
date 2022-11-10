@@ -3,7 +3,7 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 
-jest.spyOn(global, "fetch").mockImplementation(() =>
+vi.spyOn(global, "fetch").mockImplementation(() =>
 	Promise.resolve({
 		blob: () => Promise.resolve(new Blob()),
 		json: () => Promise.resolve({ test: "Test" }),
@@ -37,7 +37,7 @@ describe("useFiles", () => {
 	});
 
 	it("should open file", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			// @ts-ignore
 			.mockResolvedValue(new File([], "test.png"));
@@ -76,7 +76,7 @@ describe("useFiles", () => {
 	});
 
 	it("should save file", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.json" });
@@ -95,7 +95,7 @@ describe("useFiles", () => {
 	});
 
 	it("should save image file", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.png" });
@@ -137,7 +137,7 @@ describe("useFiles", () => {
 	});
 
 	it("should handle openImage errors", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockResolvedValue(new File(["123"], "not-an-image.png"));
 

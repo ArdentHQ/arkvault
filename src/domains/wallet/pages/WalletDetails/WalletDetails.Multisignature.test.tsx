@@ -2,24 +2,15 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
-import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import {
-	defaultNetMocks,
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	syncDelegates,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
 
@@ -51,13 +42,13 @@ describe("WalletDetails", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 	};
 
 	beforeAll(async () => {
@@ -70,31 +61,32 @@ describe("WalletDetails", () => {
 
 		await syncDelegates(profile);
 
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, walletMock)
-			.get("/api/transactions")
-			.query((parameters) => !!parameters.address)
-			.reply(200, (url) => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const filteredUrl =
-					"/api/transactions?page=1&limit=1&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&type=0&typeGroup=1";
-				if (url === filteredUrl) {
-					return { data: [], meta };
-				}
-
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			})
-			.persist();
-
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
 	beforeEach(async () => {
+		server.use(
+			requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [],
+					meta: transactionsFixture.meta,
+				},
+				{
+					query: {
+						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+						limit: 1,
+						page: 1,
+					},
+				},
+			),
+			requestMock("https://ark-test.arkvault.io/api/transactions", {
+				data: transactionsFixture.data.slice(0, 1),
+				meta: transactionsFixture.meta,
+			}),
+		);
+
 		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
 			await wallet
 				.coin()
@@ -135,12 +127,12 @@ describe("WalletDetails", () => {
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("shows the transaction detail modal when click in a pending transfer row", async () => {
-		jest.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(fixtures.transfer, "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		renderPage();
 
@@ -154,10 +146,18 @@ describe("WalletDetails", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should remove pending multisignature transactions", async () => {
+		server.use(
+			requestMock(
+				"https://ark-test-musig.arkvault.io",
+				{ result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } },
+				{ method: "post" },
+			),
+		);
+
 		renderPage();
 
 		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
@@ -172,18 +172,9 @@ describe("WalletDetails", () => {
 			screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction"),
 		).resolves.toBeVisible();
 
-		jest.restoreAllMocks();
-		defaultNetMocks();
+		vi.restoreAllMocks();
 
-		nock("https://ark-test-musig.arkvault.io/")
-			.get("/api/wallets/DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS")
-			.reply(200, []);
-
-		nock("https://ark-test-musig.arkvault.io")
-			.post("/")
-			.reply(200, { result: { id: "03df6cd794a7d404db4f1b25816d8976d0e72c5177d17ac9b19a92703b62cdbbbc" } });
-
-		const toastsMock = jest.spyOn(toasts, "success");
+		const toastsMock = vi.spyOn(toasts, "success");
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 

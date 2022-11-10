@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SyncErrorMessage should handle retry 1`] = `
+exports[`SyncErrorMessage > should handle retry 1`] = `
 <div>
   There has been a network problem on 
   <span>
@@ -46,7 +46,7 @@ exports[`SyncErrorMessage should handle retry 1`] = `
 </div>
 `;
 
-exports[`SyncErrorMessage should render multiple failed networks 1`] = `
+exports[`SyncErrorMessage > should render multiple failed networks 1`] = `
 <div>
   There has been a network problem on 
   <span>
@@ -92,7 +92,7 @@ exports[`SyncErrorMessage should render multiple failed networks 1`] = `
 </div>
 `;
 
-exports[`SyncErrorMessage should render one failed network 1`] = `
+exports[`SyncErrorMessage > should render one failed network 1`] = `
 <div>
   There has been a network problem on 
   <span>
@@ -121,7 +121,7 @@ exports[`SyncErrorMessage should render one failed network 1`] = `
 </div>
 `;
 
-exports[`SyncErrorMessage should render two failed networks 1`] = `
+exports[`SyncErrorMessage > should render two failed networks 1`] = `
 <div>
   There has been a network problem on 
   <span>

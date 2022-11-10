@@ -3,7 +3,9 @@ import { Cache } from "./Cache";
 let subject: Cache;
 
 describe("Cache", () => {
-	beforeAll(() => (subject = new Cache(10)));
+	beforeAll(() => {
+		subject = new Cache(10);
+	});
 
 	it("should remember a value if it is a string", async () => {
 		subject.flush();
@@ -14,7 +16,7 @@ describe("Cache", () => {
 	it("should remember a value if it is a function", async () => {
 		subject.flush();
 
-		const valueFunction = jest.fn(() => "value");
+		const valueFunction = vi.fn(() => "value");
 
 		await expect(subject.remember("cacheKey", valueFunction)).resolves.toBe("value");
 		await expect(subject.remember("cacheKey", valueFunction)).resolves.toBe("value");

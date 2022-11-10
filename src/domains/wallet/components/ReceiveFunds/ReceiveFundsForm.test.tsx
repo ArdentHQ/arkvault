@@ -50,7 +50,7 @@ describe("ReceiveFundsForm", () => {
 	it("should not show memo if is not supported by network", async () => {
 		const memo = Array.from({ length: 256 }).fill("x").join("");
 
-		const memoMock = jest.spyOn(network, "usesMemo").mockReturnValue(false);
+		const memoMock = vi.spyOn(network, "usesMemo").mockReturnValue(false);
 
 		const { asFragment } = renderWithForm(<ReceiveFundsForm network={network} />, {
 			defaultValues: { memo },

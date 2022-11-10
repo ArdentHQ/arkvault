@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ExchangeCard should render 1`] = `
+exports[`ExchangeCard > should render 1`] = `
 <div>
   <div
     data-testid="ExchangeCard--changenow"
@@ -43,7 +43,7 @@ exports[`ExchangeCard should render 1`] = `
 </div>
 `;
 
-exports[`ExchangeCard should render when the exchange is not active 1`] = `
+exports[`ExchangeCard > should render when the exchange is not active 1`] = `
 <div>
   <div
     data-testid="ExchangeCard--changenow"

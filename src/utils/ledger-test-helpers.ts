@@ -28,7 +28,7 @@ const mockLedgerTransportListener = ({
 	devicesListHandler,
 }: TransportMockProperties) =>
 	// @ts-ignore
-	jest.spyOn(SDKLedger, "LedgerTransportFactory").mockImplementation(() => ({
+	vi.spyOn(SDKLedger, "LedgerTransportFactory").mockImplementation(() => ({
 		supportedTransport: () =>
 			// @ts-ignore
 			Promise.resolve({

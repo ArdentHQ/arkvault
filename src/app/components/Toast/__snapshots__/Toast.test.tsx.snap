@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Toast should render 1`] = `
+exports[`Toast > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -13,8 +13,36 @@ exports[`Toast should render 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-exclamation-mark.svg
+        <svg
+          id="circle-exclamation-mark"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 10.5v-5"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 14h0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -29,7 +57,7 @@ exports[`Toast should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toast should render as danger toast 1`] = `
+exports[`Toast > should render as danger toast 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -42,8 +70,31 @@ exports[`Toast should render as danger toast 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-cross.svg
+        <svg
+          id="circle-cross"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M7 13l6-6M13 13L7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -58,7 +109,7 @@ exports[`Toast should render as danger toast 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toast should render as hint toast 1`] = `
+exports[`Toast > should render as hint toast 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -71,8 +122,30 @@ exports[`Toast should render as hint toast 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-question-mark.svg
+        <svg
+          id="circle-question-mark"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+            />
+            <path
+              d="M10 13.6h0M8.3 7.9c0-.9.7-1.7 1.7-1.7s1.7.7 1.7 1.7c0 .7-.4 1.4-1.2 1.6-.3.1-.5.4-.5.7v.8"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -87,7 +160,7 @@ exports[`Toast should render as hint toast 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toast should render as info toast 1`] = `
+exports[`Toast > should render as info toast 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -100,8 +173,36 @@ exports[`Toast should render as info toast 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-info.svg
+        <svg
+          id="circle-info"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 9.2v5"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 5.8h0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -116,7 +217,7 @@ exports[`Toast should render as info toast 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toast should render as success toast 1`] = `
+exports[`Toast > should render as success toast 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -129,8 +230,31 @@ exports[`Toast should render as success toast 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-check-mark.svg
+        <svg
+          id="circle-check-mark"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
         </svg>
       </div>
     </div>
@@ -145,7 +269,7 @@ exports[`Toast should render as success toast 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Toast should render as warning toast 1`] = `
+exports[`Toast > should render as warning toast 1`] = `
 <DocumentFragment>
   <div
     class="flex items-stretch overflow-hidden md:rounded-xl"
@@ -158,8 +282,36 @@ exports[`Toast should render as warning toast 1`] = `
         height="16"
         width="16"
       >
-        <svg>
-          circle-exclamation-mark.svg
+        <svg
+          id="circle-exclamation-mark"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              r="9"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 10.5v-5"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+            />
+            <path
+              d="M10 14h0"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
         </svg>
       </div>
     </div>

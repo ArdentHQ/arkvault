@@ -35,7 +35,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should show tutorial for the new profile", () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
+		const mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial").mockReturnValue(false);
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
 		expect(result.current.show).toBeTruthy();
@@ -56,7 +56,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should not mark as complete when closed", () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "markIntroductoryTutorialAsComplete");
+		const mockHasCompletedTutorial = vi.spyOn(profile, "markIntroductoryTutorialAsComplete");
 
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
@@ -72,7 +72,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should mark as complete when closed an marked as not show again", () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "markIntroductoryTutorialAsComplete");
+		const mockHasCompletedTutorial = vi.spyOn(profile, "markIntroductoryTutorialAsComplete");
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
 		expect(result.current.show).toBeTruthy();
@@ -93,7 +93,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should not mark as complete when is in a random step", () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "markIntroductoryTutorialAsComplete");
+		const mockHasCompletedTutorial = vi.spyOn(profile, "markIntroductoryTutorialAsComplete");
 
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
@@ -113,7 +113,7 @@ describe("useWelcomeModal", () => {
 	});
 
 	it("should mark as complete when is in the last step", () => {
-		const mockHasCompletedTutorial = jest.spyOn(profile, "markIntroductoryTutorialAsComplete");
+		const mockHasCompletedTutorial = vi.spyOn(profile, "markIntroductoryTutorialAsComplete");
 		const { result } = renderHook(() => useWelcomeModal(env, profile), { wrapper });
 
 		expect(result.current.show).toBeTruthy();

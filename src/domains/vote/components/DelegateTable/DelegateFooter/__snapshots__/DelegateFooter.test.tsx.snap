@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DelegateFooter should render 1`] = `
+exports[`DelegateFooter > should render 1`] = `
 <DocumentFragment>
   <div
     class="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4 lg:py-8"
@@ -130,8 +130,28 @@ exports[`DelegateFooter should render 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          vote.svg
+                        <svg
+                          id="vote"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                            />
+                            <path
+                              d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -150,8 +170,28 @@ exports[`DelegateFooter should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      vote.svg
+                    <svg
+                      id="vote"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
+                        />
+                        <path
+                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -187,8 +227,25 @@ exports[`DelegateFooter should render 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          unvote.svg
+                        <svg
+                          id="unvote"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -207,8 +264,25 @@ exports[`DelegateFooter should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      unvote.svg
+                    <svg
+                      id="unvote"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -243,8 +317,28 @@ exports[`DelegateFooter should render 1`] = `
                         height="20"
                         width="20"
                       >
-                        <svg>
-                          vote-combination.svg
+                        <svg
+                          id="vote-combination"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M5.65 14.24l8.7-8.7M12.15 14.86l2.6-2.7M14.85 14.86l-2.6-2.7M5.15 7.14l.7 1.1c.1.2.2.2.4.1h0l.1-.1 2.4-3.1"
+                            />
+                            <path
+                              d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                            />
+                          </g>
                         </svg>
                       </div>
                     </div>
@@ -262,8 +356,28 @@ exports[`DelegateFooter should render 1`] = `
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      vote-combination.svg
+                    <svg
+                      id="vote-combination"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M5.65 14.24l8.7-8.7M12.15 14.86l2.6-2.7M14.85 14.86l-2.6-2.7M5.15 7.14l.7 1.1c.1.2.2.2.4.1h0l.1-.1 2.4-3.1"
+                        />
+                        <path
+                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>

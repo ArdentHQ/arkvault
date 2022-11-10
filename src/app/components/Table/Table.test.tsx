@@ -71,7 +71,8 @@ describe("Table", () => {
 
 		userEvent.click(th);
 
-		expect(th).toHaveTextContent("chevron-down-small.svg");
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(th.querySelector("svg#chevron-down-small")).toBeInTheDocument();
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 

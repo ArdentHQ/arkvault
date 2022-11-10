@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`UnlockTokensAuthentication should render 1`] = `
+exports[`UnlockTokensAuthentication > should render 1`] = `
 <DocumentFragment>
   <div
     class="space-y-6"
@@ -69,8 +69,28 @@ exports[`UnlockTokensAuthentication should render 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  eye.svg
+                <svg
+                  id="eye"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M10 4.6c-3.2-.1-6.5 2.2-8.6 4.5-.5.5-.5 1.3 0 1.8 2 2.3 5.4 4.6 8.6 4.5 3.3-.1 6.5-2.3 8.6-4.5.5-.5.5-1.3 0-1.8-2.1-2.3-5.4-4.6-8.6-4.5z"
+                    />
+                    <path
+                      d="M13 10c0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c1.2 0 3 .7 3 3z"
+                    />
+                  </g>
                 </svg>
               </div>
             </button>
@@ -109,8 +129,22 @@ exports[`UnlockTokensAuthentication should render 1`] = `
           height="16"
           width="16"
         >
-          <svg>
-            double-arrow-right.svg
+          <svg
+            id="double-arrow-right"
+            viewBox="0 0 20 20"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M1 7.744h9.013V3.832c0-.4.2-.4.5-.2 2.103 1.504 7.31 5.014 8.111 5.616.501.3.501 1.103 0 1.504-.8.602-6.008 4.212-8.11 5.616-.401.2-.501.2-.501-.2v-3.71H1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>

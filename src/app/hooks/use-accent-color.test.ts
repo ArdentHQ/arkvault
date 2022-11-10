@@ -29,17 +29,17 @@ describe("useAccentColor", () => {
 			const { setAccentColor } = useAccentColor();
 
 			expect(document.body.classList).toHaveLength(1);
-			expect(document.body.classList).toContain(ACCENT_NAVY_CLASS);
+			expect(document.body.classList.contains(ACCENT_NAVY_CLASS)).toBeTrue();
 
 			setAccentColor("green");
 
-			expect(document.body.classList).toContain(ACCENT_GREEN_CLASS);
-			expect(document.body.classList).not.toContain(ACCENT_NAVY_CLASS);
+			expect(document.body.classList.contains(ACCENT_GREEN_CLASS)).toBeTrue();
+			expect(document.body.classList.contains(ACCENT_NAVY_CLASS)).toBeFalse();
 
 			setAccentColor("navy");
 
-			expect(document.body.classList).not.toContain(ACCENT_GREEN_CLASS);
-			expect(document.body.classList).toContain(ACCENT_NAVY_CLASS);
+			expect(document.body.classList.contains(ACCENT_GREEN_CLASS)).toBeFalse();
+			expect(document.body.classList.contains(ACCENT_NAVY_CLASS)).toBeTrue();
 		});
 	});
 

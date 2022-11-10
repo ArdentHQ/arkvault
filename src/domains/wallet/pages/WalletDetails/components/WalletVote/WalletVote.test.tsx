@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -18,9 +19,9 @@ let defaultDelegate: {
 	governanceIdentifier: string;
 };
 
-const smallIcon = () => screen.getByText("hint-small.svg");
-
 const multivote = "WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE";
+
+const expectHintIcon = () => expect(document.querySelector("svg#hint-small")).toBeInTheDocument();
 
 let votes: Contracts.VoteRegistryItem[];
 
@@ -43,7 +44,7 @@ describe("WalletVote", () => {
 
 	it("should render", async () => {
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -53,7 +54,7 @@ describe("WalletVote", () => {
 
 	it("should render skelethon if loading", async () => {
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={true} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={true} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote__skeleton")).resolves.toBeVisible();
@@ -68,7 +69,7 @@ describe("WalletVote", () => {
 		const votes = [];
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -78,10 +79,10 @@ describe("WalletVote", () => {
 	});
 
 	it("should render disabled vote button", async () => {
-		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -93,12 +94,12 @@ describe("WalletVote", () => {
 	});
 
 	it("should disable vote button when balance is less than votesAmountStep", async () => {
-		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
-		const votesAmountStepSpy = jest.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
-		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(5);
+		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const votesAmountStepSpy = vi.spyOn(wallet.network(), "votesAmountStep").mockReturnValue(10);
+		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(5);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -131,9 +132,9 @@ describe("WalletVote", () => {
 			},
 		];
 
-		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
+		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
 
-		render(<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />);
+		render(<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
@@ -162,9 +163,9 @@ describe("WalletVote", () => {
 			},
 		];
 
-		const usesLockedBalance = jest.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(false);
+		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(false);
 
-		render(<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />);
+		render(<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
@@ -175,10 +176,10 @@ describe("WalletVote", () => {
 
 	it("should render the maximum votes", async () => {
 		const votes = [];
-		const maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
+		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -204,7 +205,7 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -231,7 +232,7 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -259,7 +260,7 @@ describe("WalletVote", () => {
 			};
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={[delegate]} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={[delegate]} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -269,7 +270,8 @@ describe("WalletVote", () => {
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(smallIcon()).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -278,9 +280,11 @@ describe("WalletVote", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		let maxVotesSpy: jest.SpyInstance;
+		let maxVotesSpy: vi.SpyInstance;
 
-		beforeEach(() => (maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101)));
+		beforeEach(() => {
+			maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
+		});
 
 		afterEach(() => maxVotesSpy.mockRestore());
 
@@ -305,7 +309,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -340,7 +344,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -376,7 +380,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -389,7 +393,8 @@ describe("WalletVote", () => {
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(smallIcon()).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -419,7 +424,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -429,7 +434,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -458,7 +464,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -468,7 +474,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 
@@ -506,7 +513,7 @@ describe("WalletVote", () => {
 			];
 
 			const { asFragment } = render(
-				<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+				<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 			);
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
@@ -517,7 +524,8 @@ describe("WalletVote", () => {
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(smallIcon()).toBeInTheDocument();
+			expectHintIcon();
+
 			expect(asFragment()).toMatchSnapshot();
 		});
 	});
@@ -545,7 +553,7 @@ describe("WalletVote", () => {
 			},
 		];
 
-		const onButtonClick = jest.fn();
+		const onButtonClick = vi.fn();
 
 		render(<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={votes} isLoadingVotes={false} />);
 
@@ -566,7 +574,7 @@ describe("WalletVote", () => {
 
 		const votes = [];
 
-		const onButtonClick = jest.fn();
+		const onButtonClick = vi.fn();
 
 		render(<WalletVote wallet={wallet} onButtonClick={onButtonClick} votes={votes} isLoadingVotes={false} />);
 
@@ -602,7 +610,7 @@ describe("WalletVote", () => {
 		];
 
 		const { asFragment } = render(
-			<WalletVote wallet={wallet} onButtonClick={jest.fn()} votes={votes} isLoadingVotes={false} />,
+			<WalletVote wallet={wallet} onButtonClick={vi.fn()} votes={votes} isLoadingVotes={false} />,
 		);
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();

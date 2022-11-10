@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
@@ -35,7 +36,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Failed);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-cross.svg");
+		expect(document.querySelector("svg#circle-cross")).toBeInTheDocument();
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.FAILED"));
 
 		expect(container).toMatchSnapshot();
@@ -48,7 +49,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Refunded);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-exclamation-mark.svg");
+		expect(document.querySelector("svg#circle-exclamation-mark")).toBeInTheDocument();
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.REFUNDED"));
 
 		expect(container).toMatchSnapshot();
@@ -61,7 +62,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Verifying);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-exclamation-mark.svg");
+		expect(document.querySelector("svg#circle-exclamation-mark")).toBeInTheDocument();
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.VERIFYING"));
 
 		expect(container).toMatchSnapshot();
@@ -74,7 +75,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Expired);
 		const { container } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(container).toHaveTextContent("circle-cross.svg");
+		expect(document.querySelector("svg#circle-cross")).toBeInTheDocument();
 		expect(container).toHaveTextContent(t("EXCHANGE.TRANSACTION_STATUS.EXPIRED"));
 
 		expect(container).toMatchSnapshot();

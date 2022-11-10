@@ -54,7 +54,7 @@ export const useTheme: () => {
 		const profileTheme = profile.appearance().get("theme");
 		const hasDifferentTheme = shouldUseDarkColors() !== (profileTheme === "dark");
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		if (hasDifferentTheme || !document.querySelector("html")!.classList.contains(theme)) {
 			setTheme(profileTheme as Theme);

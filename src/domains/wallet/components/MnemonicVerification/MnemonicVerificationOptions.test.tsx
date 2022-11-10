@@ -10,7 +10,7 @@ const limit = 2;
 
 describe("MnemonicVerificationOptions", () => {
 	it("should render options", () => {
-		const handleChange = jest.fn();
+		const handleChange = vi.fn();
 		render(
 			<MnemonicVerificationOptions
 				handleChange={handleChange}
@@ -26,7 +26,7 @@ describe("MnemonicVerificationOptions", () => {
 	});
 
 	it("should call handle on click", () => {
-		const handleChange = jest.fn();
+		const handleChange = vi.fn();
 		render(
 			<MnemonicVerificationOptions
 				handleChange={handleChange}

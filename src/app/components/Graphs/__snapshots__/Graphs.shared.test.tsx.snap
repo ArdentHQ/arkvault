@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Graphs shared hooks useGraphWidth should return reference and width of the svg element where it is applied 1`] = `
+exports[`Graphs shared hooks > useGraphWidth > should return reference and width of the svg element where it is applied 1`] = `
 <DocumentFragment>
   <svg>
     <text>

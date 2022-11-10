@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionRowRecipient should render 1`] = `
+exports[`TransactionRowRecipient > should render 1`] = `
 <DocumentFragment>
   <div
     class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
@@ -44,7 +44,7 @@ exports[`TransactionRowRecipient should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowRecipient should render compact 1`] = `
+exports[`TransactionRowRecipient > should render compact 1`] = `
 <DocumentFragment>
   <div
     class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"

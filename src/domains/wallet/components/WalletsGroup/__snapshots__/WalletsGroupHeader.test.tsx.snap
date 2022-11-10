@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletsGroupHeaderSkeleton should render 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -9,18 +9,18 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
     <div
       class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 20px; height: 20px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 20px; height: 20px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -33,18 +33,18 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
         <div
           class="flex h-7 items-center"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 150px; height: 18px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 150px; height: 18px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </div>
       </h1>
@@ -66,18 +66,18 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 60px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 60px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -96,18 +96,18 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 160px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 160px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -126,18 +126,18 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 130px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 130px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -154,8 +154,22 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -164,7 +178,7 @@ exports[`WalletsGroupHeaderSkeleton should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render as placeholder 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -173,18 +187,18 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
     <div
       class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 20px; height: 20px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 20px; height: 20px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -197,18 +211,18 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
         <div
           class="flex h-7 items-center"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 150px; height: 18px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 150px; height: 18px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </div>
       </h1>
@@ -230,18 +244,18 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 60px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 60px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -260,18 +274,18 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 160px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 160px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -290,18 +304,18 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
           <div
             class="flex items-center justify-end sm:h-6"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton sm:h-4.5"
+                style="width: 130px;"
               >
-                <span
-                  class="react-loading-skeleton sm:h-4.5 css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 130px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </span>
@@ -318,8 +332,22 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -328,7 +356,7 @@ exports[`WalletsGroupHeaderSkeleton should render as placeholder 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render responsive 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -337,18 +365,18 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
     <div
       class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 20px; height: 20px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 20px; height: 20px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -361,18 +389,18 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
         <div
           class="flex h-7 items-center"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 150px; height: 18px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 150px; height: 18px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </div>
       </h1>
@@ -380,31 +408,31 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
     <div
       class="flex h-10 flex-col items-end justify-between"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 90px; height: 14px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 90px; height: 14px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 50px; height: 12px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 50px; height: 12px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -418,8 +446,22 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>
@@ -428,7 +470,7 @@ exports[`WalletsGroupHeaderSkeleton should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] = `
+exports[`WalletsGroupHeaderSkeleton > should render responsive as placeholder 1`] = `
 <DocumentFragment>
   <div
     class="flex h-20 items-center py-4 px-8 md:px-4"
@@ -437,18 +479,18 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
     <div
       class="flex h-11 w-11 shrink-0 flex-row items-center justify-center -space-x-1 rounded-xl bg-theme-background bg-clip-padding text-theme-secondary-100 ring-1 ring-theme-secondary-300 dark:bg-theme-background dark:text-theme-secondary-700 dark:ring-theme-secondary-800"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 20px; height: 20px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 20px; height: 20px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -461,18 +503,18 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
         <div
           class="flex h-7 items-center"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 150px; height: 18px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 150px; height: 18px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </div>
       </h1>
@@ -480,31 +522,31 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
     <div
       class="flex h-10 flex-col items-end justify-between"
     >
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 90px; height: 14px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 90px; height: 14px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 50px; height: 12px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 50px; height: 12px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -518,8 +560,22 @@ exports[`WalletsGroupHeaderSkeleton should render responsive as placeholder 1`] 
           height="10"
           width="10"
         >
-          <svg>
-            chevron-down-small.svg
+          <svg
+            id="chevron-down-small"
+            viewBox="0 0 10 10"
+            x="0"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0"
+          >
+            <path
+              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
           </svg>
         </div>
       </div>

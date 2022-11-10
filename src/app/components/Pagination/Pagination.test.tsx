@@ -4,10 +4,12 @@ import React from "react";
 import { Pagination } from "./Pagination";
 import { render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
-const handleSelectPage = jest.fn();
+const handleSelectPage = vi.fn();
 
 describe("Pagination", () => {
-	beforeEach(() => handleSelectPage.mockReset());
+	beforeEach(() => {
+		handleSelectPage.mockReset();
+	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
 		const { asFragment } = renderResponsive(

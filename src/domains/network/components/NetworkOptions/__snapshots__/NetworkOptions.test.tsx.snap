@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`NetworkOption should deselect network option 1`] = `[Function]`;
+exports[`NetworkOption > should deselect network option 1`] = `[Function]`;
 
-exports[`NetworkOption should not render different class for testnet network 1`] = `[Function]`;
+exports[`NetworkOption > should not render different class for testnet network 1`] = `[Function]`;
 
-exports[`NetworkOption should render NetworkOptions 1`] = `[Function]`;
+exports[`NetworkOption > should render NetworkOptions 1`] = `[Function]`;
 
-exports[`NetworkOption should render NetworkOptions as disabled 1`] = `[Function]`;
+exports[`NetworkOption > should render NetworkOptions as disabled 1`] = `[Function]`;
 
-exports[`NetworkOption should render NetworkOptions with no networks 1`] = `[Function]`;
+exports[`NetworkOption > should render NetworkOptions with no networks 1`] = `[Function]`;
 
-exports[`NetworkOption should select network option 1`] = `[Function]`;
+exports[`NetworkOption > should select network option 1`] = `[Function]`;

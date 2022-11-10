@@ -7,7 +7,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerDeviceError", () => {
 	it("should call the onClose callback if given", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 
 		render(
 			<LedgerDeviceError

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`UnlockTokensTotal should render 1`] = `
+exports[`UnlockTokensTotal > should render 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
@@ -59,7 +59,7 @@ exports[`UnlockTokensTotal should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`UnlockTokensTotal should render loading 1`] = `
+exports[`UnlockTokensTotal > should render loading 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
@@ -73,18 +73,18 @@ exports[`UnlockTokensTotal should render loading 1`] = `
       >
         Total Amount
       </p>
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 60px; height: 28px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 60px; height: 28px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
     <div
@@ -96,25 +96,25 @@ exports[`UnlockTokensTotal should render loading 1`] = `
       >
         Transaction Fee
       </p>
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 60px; height: 28px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 60px; height: 28px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`UnlockTokensTotal should render loading fee 1`] = `
+exports[`UnlockTokensTotal > should render loading fee 1`] = `
 <DocumentFragment>
   <div
     class="mt-4 flex items-center justify-between"
@@ -153,18 +153,18 @@ exports[`UnlockTokensTotal should render loading fee 1`] = `
       >
         Transaction Fee
       </p>
-      <span>
+      <span
+        aria-busy="true"
+        aria-live="polite"
+        class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+      >
         <span
-          class="flex max-w-full items-center overflow-hidden leading-none"
+          class="react-loading-skeleton"
+          style="width: 60px; height: 28px;"
         >
-          <span
-            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-            style="width: 60px; height: 28px;"
-          >
-            ‌
-          </span>
           ‌
         </span>
+        <br />
       </span>
     </div>
   </div>

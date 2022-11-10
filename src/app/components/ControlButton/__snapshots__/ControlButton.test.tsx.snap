@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ControlButton should render 1`] = `
+exports[`ControlButton > should render 1`] = `
 <DocumentFragment>
   <div
     class="group"
@@ -12,7 +12,7 @@ exports[`ControlButton should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ControlButton should render active 1`] = `
+exports[`ControlButton > should render active 1`] = `
 <DocumentFragment>
   <div
     class="group"
@@ -24,7 +24,7 @@ exports[`ControlButton should render active 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ControlButton should render disabled 1`] = `
+exports[`ControlButton > should render disabled 1`] = `
 <DocumentFragment>
   <div
     class="group"
@@ -37,7 +37,7 @@ exports[`ControlButton should render disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ControlButton should render with dot 1`] = `
+exports[`ControlButton > should render with dot 1`] = `
 <DocumentFragment>
   <div
     class="group"
@@ -57,7 +57,7 @@ exports[`ControlButton should render with dot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ControlButton should render without border 1`] = `
+exports[`ControlButton > should render without border 1`] = `
 <DocumentFragment>
   <div
     class="group"
@@ -69,7 +69,7 @@ exports[`ControlButton should render without border 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ControlButton should render without border and with dot 1`] = `
+exports[`ControlButton > should render without border and with dot 1`] = `
 <DocumentFragment>
   <div
     class="group"

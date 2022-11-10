@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
+exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -45,8 +45,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -90,8 +104,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -120,7 +148,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 1`] = `
 </div>
 `;
 
-exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
+exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -165,8 +193,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -210,8 +252,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -240,7 +296,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 2`] = `
 </div>
 `;
 
-exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
+exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -285,8 +341,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -327,8 +397,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
             height="16"
             width="16"
           >
-            <svg>
-              arrow-external.svg
+            <svg
+              id="arrow-external"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </a>
@@ -356,7 +440,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 3`] = `
 </div>
 `;
 
-exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
+exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -401,8 +485,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -443,8 +541,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
             height="16"
             width="16"
           >
-            <svg>
-              arrow-external.svg
+            <svg
+              id="arrow-external"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </a>
@@ -472,7 +584,7 @@ exports[`TransactionDetailAddressList should render addresses in xs 4`] = `
 </div>
 `;
 
-exports[`TransactionDetailAddressList should render addresses in xs 5`] = `
+exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -517,8 +629,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 5`] = `
               height="16"
               width="16"
             >
-              <svg>
-                arrow-external.svg
+              <svg
+                id="arrow-external"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
               </svg>
             </div>
           </a>
@@ -559,8 +685,22 @@ exports[`TransactionDetailAddressList should render addresses in xs 5`] = `
             height="16"
             width="16"
           >
-            <svg>
-              arrow-external.svg
+            <svg
+              id="arrow-external"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
         </a>

@@ -173,7 +173,7 @@ const validateSign = async ({ parameters, profile, network }: ValidateParameters
 	}
 };
 
-/* istanbul ignore next */
+/* istanbul ignore next -- @preserve */
 const WrapperQR = ({ children }) => {
 	const { t } = useTranslation();
 
@@ -184,7 +184,7 @@ const WrapperQR = ({ children }) => {
 	);
 };
 
-/* istanbul ignore next */
+/* istanbul ignore next -- @preserve */
 const WrapperURI = ({ children }: { children?: React.ReactNode }) => {
 	const { t } = useTranslation();
 
@@ -246,8 +246,8 @@ export const useSearchParametersValidation = () => {
 		const allEnabledNetworks = profileAllEnabledNetworks(profile);
 
 		const coin = parameters.get("coin")?.toUpperCase() || "ARK";
-		const method = parameters.get("method")?.toLowerCase();
-		const networkId = parameters.get("network")?.toLowerCase();
+		const method = parameters.get("method")?.toLowerCase() as string;
+		const networkId = parameters.get("network")?.toLowerCase() as string;
 		const nethash = parameters.get("nethash");
 
 		if (!networkId && !nethash) {
@@ -307,7 +307,7 @@ export const useSearchParametersValidation = () => {
 			network = allEnabledNetworks.find((item) => item.meta().nethash === nethash);
 
 			if (!network) {
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				for (let { displayName, nethash: defaultNethash } of Object.values(defaultNetworks)) {
 					if (defaultNethash === nethash) {
 						return { error: { type: SearchParametersError.NetworkNotEnabled, value: displayName } };
@@ -315,7 +315,7 @@ export const useSearchParametersValidation = () => {
 				}
 			}
 
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			if (network && !defaultNetworks[network.id()] && !network.meta().enabled) {
 				return { error: { type: SearchParametersError.NetworkNotEnabled, value: network.displayName() } };
 			}
@@ -343,7 +343,7 @@ export const useSearchParametersValidation = () => {
 		return await methods[method].validate({ env, network, parameters, profile });
 	};
 
-	/* istanbul ignore next */
+	/* istanbul ignore next -- @preserve */
 	const buildSearchParametersError = (
 		{ type, value }: { type: SearchParametersError; value?: string },
 		qr = false,

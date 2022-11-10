@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`ProfileCard should hide the settings icon 1`] = `
+exports[`ProfileCard > should hide the settings icon 1`] = `
 <div>
   <div
     class="h-40 w-36 leading-tight sm:w-40"
@@ -48,7 +48,7 @@ exports[`ProfileCard should hide the settings icon 1`] = `
 </div>
 `;
 
-exports[`ProfileCard should render 1`] = `
+exports[`ProfileCard > should render 1`] = `
 <DocumentFragment>
   <div
     class="h-40 w-36 leading-tight sm:w-40"
@@ -100,7 +100,7 @@ exports[`ProfileCard should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ProfileCard should render the profile with avatar image 1`] = `
+exports[`ProfileCard > should render the profile with avatar image 1`] = `
 <DocumentFragment>
   <div
     class="h-40 w-36 leading-tight sm:w-40"
@@ -148,7 +148,7 @@ exports[`ProfileCard should render the profile with avatar image 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ProfileCard should render the settings icon 1`] = `
+exports[`ProfileCard > should render the settings icon 1`] = `
 <div>
   <div
     class="h-40 w-36 leading-tight sm:w-40"
@@ -205,8 +205,37 @@ exports[`ProfileCard should render the settings icon 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ellipsis-vertical.svg
+                <svg
+                  id="ellipsis-vertical"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="16.994"
+                      r="2.006"
+                    />
+                    <circle
+                      cx="10"
+                      cy="3"
+                      r="2"
+                    />
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="2"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>

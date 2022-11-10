@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SideBar should render 1`] = `
+exports[`SideBar > should render 1`] = `
 <DocumentFragment>
   <div
     class="relative -mx-4 lg:hidden"
@@ -19,8 +19,19 @@ exports[`SideBar should render 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              menu.svg
+            <svg
+              viewBox="0 0 20 20"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 15.5h18M1 10h18M1 4.5h18"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span
@@ -54,8 +65,25 @@ exports[`SideBar should render 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -81,8 +109,25 @@ exports[`SideBar should render 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -108,8 +153,28 @@ exports[`SideBar should render 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -125,7 +190,7 @@ exports[`SideBar should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SideBar should render responsive dropdown 1`] = `
+exports[`SideBar > should render responsive dropdown 1`] = `
 <DocumentFragment>
   <div
     class="relative -mx-4 lg:hidden"
@@ -144,8 +209,19 @@ exports[`SideBar should render responsive dropdown 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              menu-open.svg
+            <svg
+              viewBox="0 0 20 20"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 15.5h18M1 10h9M1 4.5h14.3"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span
@@ -173,8 +249,25 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -191,8 +284,25 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -209,8 +319,28 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -243,8 +373,25 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -270,8 +417,25 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -297,8 +461,28 @@ exports[`SideBar should render responsive dropdown 1`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -314,7 +498,7 @@ exports[`SideBar should render responsive dropdown 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SideBar should render responsive dropdown 2`] = `
+exports[`SideBar > should render responsive dropdown 2`] = `
 <DocumentFragment>
   <div
     class="relative -mx-4 lg:hidden"
@@ -333,8 +517,19 @@ exports[`SideBar should render responsive dropdown 2`] = `
             height="20"
             width="20"
           >
-            <svg>
-              menu-open.svg
+            <svg
+              viewBox="0 0 20 20"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 15.5h18M1 10h9M1 4.5h14.3"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span
@@ -362,8 +557,25 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -380,8 +592,25 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -398,8 +627,28 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -432,8 +681,25 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -459,8 +725,25 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -486,8 +769,28 @@ exports[`SideBar should render responsive dropdown 2`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -503,7 +806,7 @@ exports[`SideBar should render responsive dropdown 2`] = `
 </DocumentFragment>
 `;
 
-exports[`SideBar should render responsive dropdown 3`] = `
+exports[`SideBar > should render responsive dropdown 3`] = `
 <DocumentFragment>
   <div
     class="relative -mx-4 lg:hidden"
@@ -522,8 +825,19 @@ exports[`SideBar should render responsive dropdown 3`] = `
             height="20"
             width="20"
           >
-            <svg>
-              menu-open.svg
+            <svg
+              viewBox="0 0 20 20"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 15.5h18M1 10h9M1 4.5h14.3"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
             </svg>
           </div>
           <span
@@ -551,8 +865,25 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -569,8 +900,25 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -587,8 +935,28 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
             <span>
@@ -621,8 +989,25 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                sliders.svg
+              <svg
+                id="sliders"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 15h8M1 15h4M8 18c-1.7 0-3-1.4-3-3 0-1.7 1.4-3 3-3s3 1.2 3 3h0c0 1.7-1.3 3-3 3h0zM12.9 5H1M16 8c1.7 0 3-1.4 3-3s-1.4-3-3-3c-1.7 0-3 1.4-3 3s1.3 3 3 3c-.1 0 0 0 0 0z"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -648,8 +1033,25 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                lock.svg
+              <svg
+                id="lock"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3.4 9.3c0-.7.5-1.2 1.2-1.2h10.9c.7 0 1.2.5 1.2 1.2v8.5c0 .7-.5 1.2-1.2 1.2h-11c-.7 0-1.2-.6-1.2-1.2l.1-8.5h0zM5.8 8.1V5c.1-2.3 2.1-4.2 4.5-4 2.2.1 3.9 1.9 4 4v3M10 12.9h0"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -675,8 +1077,28 @@ exports[`SideBar should render responsive dropdown 3`] = `
               height="20"
               width="20"
             >
-              <svg>
-                arrow-up-turn-bracket.svg
+              <svg
+                id="arrow-up-turn-bracket"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7.6 12.2V9.3c0-2.1 1.7-3.7 3.7-3.7h7.4"
+                  />
+                  <path
+                    d="M14 10.3l4.7-4.7L14 1m5 12.4v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>

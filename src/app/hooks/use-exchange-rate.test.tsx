@@ -20,7 +20,7 @@ describe("useExchangeRate", () => {
 		);
 
 	it("should return a function to convert values based on exchange rates", () => {
-		jest.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
+		vi.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
 
 		const { result } = renderExchangeRate();
 

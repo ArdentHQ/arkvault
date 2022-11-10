@@ -1,6 +1,6 @@
 import { Coins, Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { TFunction } from "react-i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 

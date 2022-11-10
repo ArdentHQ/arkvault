@@ -176,7 +176,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 			orderParameters.refundAddress = refundWallet;
 		}
 
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		if (toCurrency?.hasExternalId && externalId) {
 			orderParameters.externalId = externalId;
 

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletDetail should render 1`] = `
+exports[`WalletDetail > should render 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -41,7 +41,7 @@ exports[`WalletDetail should render 1`] = `
 </div>
 `;
 
-exports[`WalletDetail should render with bottom border 1`] = `
+exports[`WalletDetail > should render with bottom border 1`] = `
 <div>
   <div
     class="no-ligatures css-s5w13h"
@@ -82,7 +82,7 @@ exports[`WalletDetail should render with bottom border 1`] = `
 </div>
 `;
 
-exports[`WalletDetail should render with extra children 1`] = `
+exports[`WalletDetail > should render with extra children 1`] = `
 <div>
   <div
     class="no-ligatures css-tnqofj"
@@ -126,7 +126,7 @@ exports[`WalletDetail should render with extra children 1`] = `
 </div>
 `;
 
-exports[`WalletDetail should render with top border 1`] = `
+exports[`WalletDetail > should render with top border 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -167,7 +167,7 @@ exports[`WalletDetail should render with top border 1`] = `
 </div>
 `;
 
-exports[`WalletDetail should render without border 1`] = `
+exports[`WalletDetail > should render without border 1`] = `
 <div>
   <div
     class="no-ligatures css-1iw2tte"
@@ -208,7 +208,7 @@ exports[`WalletDetail should render without border 1`] = `
 </div>
 `;
 
-exports[`WalletDetail should render without padding 1`] = `
+exports[`WalletDetail > should render without padding 1`] = `
 <div>
   <div
     class="no-ligatures css-tnqofj"

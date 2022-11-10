@@ -1,7 +1,7 @@
+/* eslint-disable testing-library/no-node-access */
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -81,32 +82,30 @@ describe("AddressRow", () => {
 		});
 		profile.wallets().push(wallet2);
 
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/delegates")
-			.query({ page: "1" })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/delegates.json"))
-			.get(`/api/wallets/${unvotedWallet.address()}`)
-			.reply(200, walletMock)
-			.get(`/api/wallets/${blankWallet.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.get(`/api/wallets/${wallet2.address()}`)
-			.reply(404, {
-				error: "Not Found",
-				message: "Wallet not found",
-				statusCode: 404,
-			})
-			.persist();
-
 		await syncDelegates(profile);
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
+	});
+
+	beforeEach(() => {
+		server.use(
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${unvotedWallet.address()}`, walletMock),
+			requestMock(
+				`https://ark-test.arkvault.io/api/wallets/${blankWallet.address()}`,
+				{
+					error: "Not Found",
+					message: "Wallet not found",
+					statusCode: 404,
+				},
+				{ status: 404 },
+			),
+			requestMock(`https://ark-test.arkvault.io/api/wallets/${wallet2.address()}`, {
+				error: "Not Found",
+				message: "Wallet not found",
+				statusCode: 404,
+			}),
+		);
 	});
 
 	it.each([true, false])("should render when isCompact = %s", async (isCompact: boolean) => {
@@ -129,9 +128,7 @@ describe("AddressRow", () => {
 	it.each([true, false])(
 		"should render with isCompact = %s when the maximum votes is greater than 1",
 		(isCompact: boolean) => {
-			const votesMock = jest
-				.spyOn(wallet.voting(), "current")
-				.mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 			const { asFragment, container } = render(
 				<Route path="/profiles/:profileId/votes">
@@ -154,9 +151,7 @@ describe("AddressRow", () => {
 	);
 
 	it.each([true, false])("should render with isCompact = %s when the wallet has many votes", (isCompact: boolean) => {
-		const votesMock = jest
-			.spyOn(wallet.voting(), "current")
-			.mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(
 			<AddressWrapper>
@@ -176,9 +171,7 @@ describe("AddressRow", () => {
 	it.each([true, false])(
 		"should render with isCompact = %s when the wallet has exactly 4 votes",
 		(isCompact: boolean) => {
-			const votesMock = jest
-				.spyOn(wallet.voting(), "current")
-				.mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
+			const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 			const { asFragment, container } = render(
 				<AddressWrapper>
@@ -197,7 +190,7 @@ describe("AddressRow", () => {
 	);
 
 	it("should render for a multisignature wallet", async () => {
-		const isMultiSignatureSpy = jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
+		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
 		const { asFragment, container } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
@@ -254,7 +247,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render with active delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -270,7 +263,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -281,7 +274,7 @@ describe("AddressRow", () => {
 
 		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
 
-		expect(container).toHaveTextContent("circle-check-mark.svg");
+		expect(document.querySelector("svg#circle-check-mark")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -289,7 +282,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render with standby delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -305,7 +298,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -316,7 +309,7 @@ describe("AddressRow", () => {
 
 		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
 
-		expect(container).toHaveTextContent("clock.svg");
+		expect(document.querySelector("svg#clock")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -324,7 +317,7 @@ describe("AddressRow", () => {
 	});
 
 	it("should render with resigned delegate", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue([
+		const votesMock = vi.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
 				wallet: new ReadOnlyWallet({
@@ -340,7 +333,7 @@ describe("AddressRow", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(
+		const { asFragment } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -351,7 +344,7 @@ describe("AddressRow", () => {
 
 		expect(screen.getByTestId("StatusIcon__icon")).toBeVisible();
 
-		expect(container).toHaveTextContent("circle-cross.svg");
+		expect(document.querySelector("svg#circle-cross")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -363,7 +356,7 @@ describe("AddressRow", () => {
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().coin();
 
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		const { asFragment, container } = render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} onSelect={onSelect} />

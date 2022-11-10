@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionStatus should render when confirmed 1`] = `
+exports[`TransactionStatus > should render when confirmed 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -26,8 +26,31 @@ exports[`TransactionStatus should render when confirmed 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              circle-check-mark.svg
+            <svg
+              id="circle-check-mark"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="9"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
             </svg>
           </div>
           <span>
@@ -40,7 +63,7 @@ exports[`TransactionStatus should render when confirmed 1`] = `
 </div>
 `;
 
-exports[`TransactionStatus should render when not confirmed 1`] = `
+exports[`TransactionStatus > should render when not confirmed 1`] = `
 <div>
   <div
     class="no-ligatures css-19rivvh"
@@ -66,8 +89,32 @@ exports[`TransactionStatus should render when not confirmed 1`] = `
             height="20"
             width="20"
           >
-            <svg>
-              clock.svg
+            <svg
+              id="clock"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                stroke-width="2"
+                transform="translate(1.5 1.5)"
+              >
+                <circle
+                  cx="8.5"
+                  cy="8.5"
+                  r="9"
+                />
+                <path
+                  d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                />
+              </g>
             </svg>
           </div>
           <span>

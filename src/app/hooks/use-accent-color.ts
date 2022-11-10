@@ -37,7 +37,7 @@ const useAccentColor = () => {
 			profileAccentColor = "navy";
 		}
 
-		/* istanbul ignore else */
+		/* istanbul ignore else -- @preserve */
 		if (getCurrentAccentColor() !== profileAccentColor) {
 			setAccentColor(profileAccentColor as AccentColorType);
 		}

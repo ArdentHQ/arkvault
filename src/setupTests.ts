@@ -4,13 +4,13 @@ import "mutationobserver-shim";
 describe("setup", () => {
 	beforeAll(() => {
 		Object.defineProperty(window, "matchMedia", {
-			value: jest.fn().mockImplementation((query) => ({
+			value: vi.fn().mockImplementation((query) => ({
 				// deprecated
-				addEventListener: jest.fn(),
+				addEventListener: vi.fn(),
 
-				addListener: jest.fn(),
+				addListener: vi.fn(),
 
-				dispatchEvent: jest.fn(),
+				dispatchEvent: vi.fn(),
 
 				matches: false,
 
@@ -18,9 +18,9 @@ describe("setup", () => {
 
 				onchange: undefined,
 
-				removeEventListener: jest.fn(),
+				removeEventListener: vi.fn(),
 				// deprecated
-				removeListener: jest.fn(),
+				removeListener: vi.fn(),
 			})),
 			writable: true,
 		});

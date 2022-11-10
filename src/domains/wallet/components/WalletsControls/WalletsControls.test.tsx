@@ -15,17 +15,13 @@ describe("WalletsControls", () => {
 		isFilterChanged: false,
 		networks: [],
 		selectedNetworkIds: [],
-		update: jest.fn(),
+		update: vi.fn(),
 		walletsDisplayType: "all",
 	};
 
 	it("should render", () => {
 		const { container } = render(
-			<WalletsControls
-				onCreateWallet={jest.fn()}
-				onImportWallet={jest.fn()}
-				filterProperties={filterProperties}
-			/>,
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -33,11 +29,7 @@ describe("WalletsControls", () => {
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render responsive", (breakpoint) => {
 		const { container } = renderResponsive(
-			<WalletsControls
-				onCreateWallet={jest.fn()}
-				onImportWallet={jest.fn()}
-				filterProperties={filterProperties}
-			/>,
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
 			breakpoint,
 		);
 
@@ -45,9 +37,9 @@ describe("WalletsControls", () => {
 	});
 
 	it("should execute onCreateWallet callback", () => {
-		const onCreateWallet = jest.fn();
+		const onCreateWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={jest.fn()} filterProperties={{}} />);
+		render(<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />);
 
 		userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
@@ -55,10 +47,10 @@ describe("WalletsControls", () => {
 	});
 
 	it("should execute onCreateWallet callback when responsive", () => {
-		const onCreateWallet = jest.fn();
+		const onCreateWallet = vi.fn();
 
 		renderResponsive(
-			<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={jest.fn()} filterProperties={{}} />,
+			<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={{}} />,
 			"xs",
 		);
 
@@ -72,9 +64,9 @@ describe("WalletsControls", () => {
 	});
 
 	it("should execute onImportWallet callback", () => {
-		const onImportWallet = jest.fn();
+		const onImportWallet = vi.fn();
 
-		render(<WalletsControls onCreateWallet={jest.fn()} onImportWallet={onImportWallet} filterProperties={{}} />);
+		render(<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />);
 
 		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
@@ -82,10 +74,10 @@ describe("WalletsControls", () => {
 	});
 
 	it("should execute onImportWallet callback when responsive", () => {
-		const onImportWallet = jest.fn();
+		const onImportWallet = vi.fn();
 
 		renderResponsive(
-			<WalletsControls onCreateWallet={jest.fn()} onImportWallet={onImportWallet} filterProperties={{}} />,
+			<WalletsControls onCreateWallet={vi.fn()} onImportWallet={onImportWallet} filterProperties={{}} />,
 			"xs",
 		);
 
@@ -101,8 +93,8 @@ describe("WalletsControls", () => {
 	it("should render with networks selection", () => {
 		const { container } = render(
 			<WalletsControls
-				onCreateWallet={jest.fn()}
-				onImportWallet={jest.fn()}
+				onCreateWallet={vi.fn()}
+				onImportWallet={vi.fn()}
 				filterProperties={filterProperties as any}
 			/>,
 		);

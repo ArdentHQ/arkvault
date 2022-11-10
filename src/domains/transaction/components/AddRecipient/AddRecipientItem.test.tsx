@@ -67,7 +67,7 @@ describe("Add Recipient item", () => {
 	});
 
 	it("should handle the delete button", () => {
-		const onDelete = jest.fn();
+		const onDelete = vi.fn();
 
 		render(
 			<AddRecipientItem

@@ -33,7 +33,7 @@ describe("EncryptionPasswordStep", () => {
 			profile.wallets().forget(wallet.id());
 		}
 
-		bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
+		bip39GenerateMock = vi.spyOn(BIP39, "generate").mockReturnValue(passphrase);
 
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
@@ -64,7 +64,7 @@ describe("EncryptionPasswordStep", () => {
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 
@@ -126,7 +126,7 @@ describe("EncryptionPasswordStep", () => {
 		userEvent.click(continueButton);
 
 		//@ts-ignore
-		const walletSpy = jest.spyOn(profile, "walletFactory").mockImplementation(() => ({
+		const walletSpy = vi.spyOn(profile, "walletFactory").mockImplementation(() => ({
 			fromMnemonicWithBIP39: () => Promise.reject(new Error("failed")),
 		}));
 
@@ -173,7 +173,7 @@ describe("EncryptionPasswordStep", () => {
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
-		const historySpy = jest.spyOn(history, "push").mockImplementation();
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		expect(backButton).toBeEnabled();
 
@@ -239,7 +239,7 @@ describe("EncryptionPasswordStep", () => {
 		});
 
 		//@ts-ignore
-		const walletSpy = jest.spyOn(profile, "walletFactory").mockImplementation(() => ({
+		const walletSpy = vi.spyOn(profile, "walletFactory").mockImplementation(() => ({
 			fromMnemonicWithBIP39: () => Promise.resolve(sampleWallet),
 		}));
 

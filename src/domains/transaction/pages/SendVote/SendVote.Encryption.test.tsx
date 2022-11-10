@@ -1,11 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
-import "jest-extended";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -28,12 +25,13 @@ import {
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
 
 const fixtureProfileId = getDefaultProfileId();
 
 const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => voteFixture.data.amount / 1e8,
 		data: () => ({ data: () => voteFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
@@ -56,11 +54,11 @@ const sendButton = () => screen.getByTestId("StepNavigation__send-button");
 const reviewStepID = "SendVote__review-step";
 const formStepID = "SendVote__form-step";
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-jest.mock("@/utils/debounce", () => ({
+vi.mock("@/utils/debounce", () => ({
 	debounceAsync: (callback: () => void) =>
 		async function (...arguments_: any) {
 			return new Promise((resolve) => {
@@ -83,7 +81,7 @@ describe("SendVote", () => {
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
 		await wallet.synchroniser().identity();
 
-		jest.spyOn(wallet, "isDelegate").mockImplementation(() => true);
+		vi.spyOn(wallet, "isDelegate").mockImplementation(() => true);
 
 		await syncDelegates(profile);
 		await syncFees(profile);
@@ -93,39 +91,42 @@ describe("SendVote", () => {
 			env.delegates().findByAddress(wallet.coinId(), wallet.networkId(), delegateData[index].address);
 		}
 
-		nock.disableNetConnect();
-
-		jest.spyOn(wallet.synchroniser(), "votes").mockImplementation(jest.fn());
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493")
-			.reply(200, voteFixture)
-			.get("/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf")
-			.reply(200, unvoteFixture)
-			.persist();
+		vi.spyOn(wallet.synchroniser(), "votes").mockImplementation(vi.fn());
 	});
 
 	beforeEach(() => {
-		jest.useFakeTimers("legacy");
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/d819c5199e323a62a4349948ff075edde91e509028329f66ec76b8518ad1e493",
+				voteFixture,
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/32e5278cb72f24f2c04c4797dbfbffa7072f6a30e016093fdd3f7660a2ee2faf",
+				unvoteFixture,
+			),
+			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
+		);
+
+		vi.useFakeTimers();
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
 	afterEach(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 		resetProfileNetworksMock();
 	});
 
 	it("should send a vote transaction using encryption password", async () => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 
-		const actsWithMnemonicMock = jest.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const wifGetMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
+		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
 
 		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
 		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
 
-		const fromMnemonicMock = jest
+		const fromMnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
@@ -176,10 +177,10 @@ describe("SendVote", () => {
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		const signMock = jest
+		const signMock = vi
 			.spyOn(wallet.transaction(), "signVote")
 			.mockReturnValue(Promise.resolve(voteFixture.data.id));
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [voteFixture.data.id],
 			errors: {},
 			rejected: [],

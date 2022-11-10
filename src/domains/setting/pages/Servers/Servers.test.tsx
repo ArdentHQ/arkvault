@@ -4,7 +4,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
+import { vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import {
 	env,
@@ -19,6 +19,7 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { translations } from "@/app/i18n/common/i18n";
+import { server, requestMock } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let network: Networks.Network;
@@ -130,8 +131,9 @@ const waitUntilServerIsValidated = async () => {
 	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).toBeNull());
 };
 
-const mockPeerNetwork = () => nock(peerHostLive).persist().get("/").reply(200, peerResponse);
-const mockPeerHeight = () => nock(peerHostLive).persist().get("/api/blockchain").reply(200, peerResponseHeight);
+const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
+
+const mockPeerHeight = () => server.use(requestMock(`${peerHostLive}/api/blockchain`, peerResponseHeight));
 
 describe("Servers Settings", () => {
 	let profileCoinSpy;
@@ -148,19 +150,13 @@ describe("Servers Settings", () => {
 			.wallets()
 			.findByAddressWithNetwork("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", arkDevnet)!
 			.network();
-
-		nock.disableNetConnect();
-	});
-
-	afterAll(() => {
-		nock.cleanAll();
 	});
 
 	beforeEach(() => {
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 		coin = (profile.coins().all().ARK as any).ark.devnet;
-		coinSpy = jest.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
-		profileCoinSpy = jest.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
+		coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(true);
+		profileCoinSpy = vi.spyOn(profile.coins(), "makeInstance").mockReturnValue(coin);
 	});
 
 	afterEach(() => {
@@ -189,7 +185,7 @@ describe("Servers Settings", () => {
 	});
 
 	it("should update profile fallback to default nodes setting", async () => {
-		const settingsSetSpy = jest.spyOn(profile.settings(), "set");
+		const settingsSetSpy = vi.spyOn(profile.settings(), "set");
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/settings/servers">
@@ -270,23 +266,18 @@ describe("Servers Settings", () => {
 		});
 
 		describe("Node statuses", () => {
-			let availableNetworksSpy: jest.SpyInstance;
+			let availableNetworksSpy: vi.SpyInstance;
 
 			beforeEach(() => {
-				availableNetworksSpy = jest.spyOn(profile, "availableNetworks").mockReturnValue([network]);
-
-				nock.cleanAll();
+				availableNetworksSpy = vi.spyOn(profile, "availableNetworks").mockReturnValue([network]);
 			});
 
 			afterEach(() => {
-				nock.cleanAll();
-
 				availableNetworksSpy.mockRestore();
 			});
 
 			it("should load the node statuses", async () => {
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -310,13 +301,12 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses in an interval", async () => {
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, musigResponse));
 
 				const originalSetInterval = global.setInterval;
 				let intervalPingFunction: () => void;
 
-				const setIntervalSpy = jest
+				const setIntervalSpy = vi
 					.spyOn(global, "setInterval")
 					.mockImplementationOnce((intervalFunction, time) => {
 						intervalPingFunction = intervalFunction;
@@ -354,9 +344,10 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error", async () => {
-				// Urls for the network
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(404);
+				server.use(
+					requestMock(peerHostTest, peerResponse),
+					requestMock(musigHostTest, undefined, { status: 404 }),
+				);
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -380,9 +371,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("should load the node statuses with error if the response is invalid json", async () => {
-				// Urls for the network
-				nock(peerHostTest).persist().get(/.*/).reply(200, peerResponse);
-				nock(musigHostTest).persist().get(/.*/).reply(200, "invalid-json");
+				server.use(requestMock(peerHostTest, peerResponse), requestMock(musigHostTest, "invalid json"));
 
 				const { container } = render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -411,7 +400,7 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({});
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({});
 		});
 
 		afterEach(() => {
@@ -420,9 +409,7 @@ describe("Servers Settings", () => {
 
 		describe("with reachable server", () => {
 			it("can fill the form and store the new server", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
+				server.use(requestMock(musigHostTest, musigResponse));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -447,13 +434,12 @@ describe("Servers Settings", () => {
 			});
 
 			it("can fill the form and store the new server for peer server", async () => {
-				nock.cleanAll();
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
 				mockPeerNetwork();
-
 				mockPeerHeight();
 
-				const serverPushSpy = jest.spyOn(profile.hosts(), "push");
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -479,14 +465,15 @@ describe("Servers Settings", () => {
 				userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
 
 				await waitFor(() => expect(screen.getAllByTestId(CustomPeersNetworkItem)).toHaveLength(1));
+
 				serverPushSpy.mockRestore();
+				hostsMock.mockRestore();
 			});
 
 			it("can fill the form with an ip host", async () => {
-				nock.cleanAll();
+				const hostsMock = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
-				const hostsMock = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-				nock("https://127.0.0.1").persist().get(/.*/).reply(200, musigResponse);
+				server.use(requestMock("https://127.0.0.1", musigResponse));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -508,13 +495,12 @@ describe("Servers Settings", () => {
 			});
 
 			it("should create a new server and save settings", async () => {
-				nock.cleanAll();
 				mockPeerNetwork();
 				mockPeerHeight();
 
-				const settingsSetSpy = jest.spyOn(profile.settings(), "set");
-				const serverPushSpy = jest.spyOn(profile.hosts(), "push");
-				const hostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
+				const settingsSetSpy = vi.spyOn(profile.settings(), "set");
+				const serverPushSpy = vi.spyOn(profile.hosts(), "push");
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -566,10 +552,9 @@ describe("Servers Settings", () => {
 
 		describe("with invalid server", () => {
 			it("shows an error if the server is reachable but invalid", async () => {
-				const hostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
-				nock.cleanAll();
+				const hostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue({ ark: [] });
 
-				nock(musigHostTest).persist().get(/.*/).reply(200, { foo: "bar" });
+				server.use(requestMock(musigHostTest, { foo: "bar" }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -596,11 +581,9 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is valid but doesnt match the network", async () => {
-				nock.cleanAll();
-
 				mockPeerNetwork();
 
-				coinSpy = jest.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
+				coinSpy = vi.spyOn(coin.prober(), "evaluate").mockReturnValue(false);
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -625,9 +608,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is reachable but invalid json response", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(200, "invalid-response");
+				server.use(requestMock(musigHostTest, "invalid response"));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -652,9 +633,7 @@ describe("Servers Settings", () => {
 			});
 
 			it("shows an error if the server is unreachable", async () => {
-				nock.cleanAll();
-
-				nock(musigHostTest).persist().get(/.*/).reply(500);
+				server.use(requestMock(musigHostTest, undefined, { status: 500 }));
 
 				render(
 					<Route path="/profiles/:profileId/settings/servers">
@@ -712,13 +691,9 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			nock.cleanAll();
-
-			nock(musigHostTest).persist().get(/.*/).reply(200, musigResponse);
-
-			nock(musigHostLive).persist().get(/.*/).reply(200, musigResponse);
+			server.use(requestMock(musigHostTest, musigResponse), requestMock(musigHostLive, musigResponse));
 
 			mockPeerNetwork();
 		});
@@ -774,7 +749,7 @@ describe("Servers Settings", () => {
 		});
 
 		it("can fill the form and generate a name", async () => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -832,7 +807,7 @@ describe("Servers Settings", () => {
 				},
 			};
 
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networks);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networks);
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -1116,15 +1091,15 @@ describe("Servers Settings", () => {
 				},
 			);
 
+			userEvent.click(
+				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+			);
+
 			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(3);
-
-			const table = screen.getByTestId(customPeerListTestId);
-
-			userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
 
 			// After ping it should show ok
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -1134,7 +1109,7 @@ describe("Servers Settings", () => {
 
 			const intervalPingFunction: (() => void)[] = [];
 
-			const setIntervalSpy = jest.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
+			const setIntervalSpy = vi.spyOn(global, "setInterval").mockImplementation((intervalFunction, time) => {
 				intervalPingFunction.push(intervalFunction);
 				return originalSetInterval(intervalFunction, time);
 			});
@@ -1259,8 +1234,6 @@ describe("Servers Settings", () => {
 		});
 
 		it("can update a server", async () => {
-			nock.cleanAll();
-
 			mockPeerNetwork();
 
 			render(
@@ -1331,14 +1304,13 @@ describe("Servers Settings", () => {
 			userEvent.click(refreshButton);
 
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(1));
+			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
 
-			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(2);
-
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3));
+			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3);
 		});
 
 		it("can check and uncheck a server", async () => {
-			const serverPushSpy = jest.spyOn(profile.hosts(), "push");
+			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
 
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -1365,15 +1337,13 @@ describe("Servers Settings", () => {
 		let profileHostsSpy;
 
 		beforeEach(() => {
-			profileHostsSpy = jest.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
+			profileHostsSpy = vi.spyOn(profile.hosts(), "all").mockReturnValue(networksStub);
 
-			nock.cleanAll();
-
-			nock(musigHostTest).persist().get(/.*/).reply(403);
-
-			nock(musigHostLive).persist().get(/.*/).reply(500);
-
-			nock(peerHostLive).persist().get(/.*/).reply(404);
+			server.use(
+				requestMock(musigHostTest, undefined, { status: 403 }),
+				requestMock(musigHostLive, undefined, { status: 500 }),
+				requestMock(peerHostLive, undefined, { status: 404 }),
+			);
 		});
 
 		afterEach(() => {
@@ -1451,15 +1421,15 @@ describe("Servers Settings", () => {
 				},
 			);
 
-			const table = screen.getByTestId(customPeerListTestId);
-
-			userEvent.click(within(table).getAllByTestId(networkAccordionIconTestId)[0]);
+			userEvent.click(
+				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
+			);
 
 			// Is loading initially
 			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
 
 			// After ping it should show error
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(3));
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});

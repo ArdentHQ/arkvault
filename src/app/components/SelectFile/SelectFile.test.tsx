@@ -13,21 +13,21 @@ const sampleFiles = [new File(["sample"], "sample-export.json")];
 
 describe("SelectFile", () => {
 	it("should render with wwe file format", () => {
-		const { container } = render(<SelectFile fileFormat=".wwe" onSelect={jest.fn} />);
+		const { container } = render(<SelectFile fileFormat=".wwe" onSelect={vi.fn} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with json file format", () => {
-		const { container } = render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
+		const { container } = render(<SelectFile fileFormat=".json" onSelect={vi.fn} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open dialog to select file", async () => {
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(sampleFiles[0]);
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(sampleFiles[0]);
 
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
 		userEvent.click(browseFiles());
@@ -48,9 +48,9 @@ describe("SelectFile", () => {
 	it("should not select the corrupted file", async () => {
 		const corruptedFile = new File([""], "sample.json");
 
-		const browserAccessMock = jest.spyOn(browserAccess, "fileOpen").mockResolvedValue(corruptedFile);
+		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(corruptedFile);
 
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
 		userEvent.click(browseFiles());
@@ -84,7 +84,7 @@ describe("SelectFile", () => {
 	});
 
 	it("should change background when dragging over drop zone", async () => {
-		render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
+		render(<SelectFile fileFormat=".json" onSelect={vi.fn} />);
 
 		expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass(
 			"bg-theme-primary-50 dark:bg-theme-secondary-800",
@@ -109,7 +109,7 @@ describe("SelectFile", () => {
 
 	it("should handle file drop", async () => {
 		//@ts-ignore
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
 		fireEvent.dragOver(browseFiles(), {
@@ -139,7 +139,7 @@ describe("SelectFile", () => {
 
 		const fileFormat = ".json";
 
-		const { container } = render(<SelectFile fileFormat={fileFormat} onSelect={jest.fn} />);
+		const { container } = render(<SelectFile fileFormat={fileFormat} onSelect={vi.fn} />);
 
 		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
@@ -160,7 +160,7 @@ describe("SelectFile", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const { container } = render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
+		const { container } = render(<SelectFile fileFormat=".json" onSelect={vi.fn} />);
 
 		fireEvent.drop(browseFiles(), {
 			dataTransfer: {

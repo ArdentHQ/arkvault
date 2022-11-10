@@ -5,7 +5,7 @@ import { renderResponsive } from "@/utils/testing-library";
 describe("ContactsHeader", () => {
 	it.each(["xs", "md"])("should render responsive", (breakpoint) => {
 		const { asFragment } = renderResponsive(
-			<ContactsHeader showSearchBar onAddContact={jest.fn()} onSearch={jest.fn()} />,
+			<ContactsHeader showSearchBar onAddContact={vi.fn()} onSearch={vi.fn()} />,
 			breakpoint,
 		);
 

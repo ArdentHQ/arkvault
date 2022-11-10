@@ -28,7 +28,7 @@ describe("SideBarItem", () => {
 	});
 
 	it("should fire click event", () => {
-		const handleActiveItem = jest.fn();
+		const handleActiveItem = vi.fn();
 
 		render(<SideBarItem {...item} handleActiveItem={handleActiveItem} />);
 		const menuItem = screen.getByTestId("side-menu__item--plugin");

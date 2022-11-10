@@ -1,20 +1,20 @@
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useScheduler } from "@/app/hooks/use-scheduler";
+import { useScheduler } from "./use-scheduler";
 
 describe("useScheduler", () => {
-	let handler: jest.Mock;
+	let handler: vi.Mock;
 
 	beforeEach(() => {
-		handler = jest.fn();
+		handler = vi.fn();
 	});
 
 	beforeAll(() => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 	});
 
 	afterAll(() => {
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 
 	const renderScheduler = (autostart = false) =>
@@ -35,17 +35,17 @@ describe("useScheduler", () => {
 
 		expect(handler).toHaveBeenCalledTimes(1);
 
-		jest.advanceTimersByTime(1100);
+		vi.advanceTimersByTime(1100);
 
 		expect(handler).toHaveBeenCalledTimes(2);
 
-		jest.advanceTimersByTime(1100);
+		vi.advanceTimersByTime(1100);
 
 		expect(handler).toHaveBeenCalledTimes(3);
 
 		result.current.stop();
 
-		jest.advanceTimersByTime(1100);
+		vi.advanceTimersByTime(1100);
 
 		expect(handler).toHaveBeenCalledTimes(3);
 	});
@@ -65,13 +65,13 @@ describe("useScheduler", () => {
 
 		expect(handler).toHaveBeenCalledTimes(1);
 
-		jest.advanceTimersByTime(1100);
+		vi.advanceTimersByTime(1100);
 
 		expect(handler).toHaveBeenCalledTimes(2);
 
 		result.current.stop();
 
-		jest.advanceTimersByTime(1100);
+		vi.advanceTimersByTime(1100);
 
 		expect(handler).toHaveBeenCalledTimes(2);
 	});

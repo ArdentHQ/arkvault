@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`SelectNetworkDropdown should change network 1`] = `
+exports[`SelectNetworkDropdown > should change network 1`] = `
 <div>
   <div
     class="relative w-full"
@@ -32,9 +32,7 @@ exports[`SelectNetworkDropdown should change network 1`] = `
         aria-owns="downshift-4-menu"
         role="combobox"
       >
-        <div
-          aria-expanded="false"
-        >
+        <div>
           <label
             for="downshift-4-input"
             id="downshift-4-label"
@@ -59,8 +57,18 @@ exports[`SelectNetworkDropdown should change network 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -112,8 +120,18 @@ exports[`SelectNetworkDropdown should change network 1`] = `
                       height="10"
                       width="10"
                     >
-                      <svg>
-                        caret-down.svg
+                      <svg
+                        id="caret-down"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -133,9 +151,9 @@ exports[`SelectNetworkDropdown should change network 1`] = `
 </div>
 `;
 
-exports[`SelectNetworkDropdown should not render network option label if network is not defined 1`] = `<div />`;
+exports[`SelectNetworkDropdown > should not render network option label if network is not defined 1`] = `<div />`;
 
-exports[`SelectNetworkDropdown should render 1`] = `
+exports[`SelectNetworkDropdown > should render 1`] = `
 <div>
   <div
     class="relative w-full"
@@ -213,8 +231,18 @@ exports[`SelectNetworkDropdown should render 1`] = `
                       height="10"
                       width="10"
                     >
-                      <svg>
-                        caret-down.svg
+                      <svg
+                        id="caret-down"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -234,7 +262,7 @@ exports[`SelectNetworkDropdown should render 1`] = `
 </div>
 `;
 
-exports[`SelectNetworkDropdown should render with default network 1`] = `
+exports[`SelectNetworkDropdown > should render with default network 1`] = `
 <div>
   <div
     class="relative w-full"
@@ -285,8 +313,18 @@ exports[`SelectNetworkDropdown should render with default network 1`] = `
                 height="20"
                 width="20"
               >
-                <svg>
-                  ark.svg
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
             </div>
@@ -328,8 +366,18 @@ exports[`SelectNetworkDropdown should render with default network 1`] = `
                       height="10"
                       width="10"
                     >
-                      <svg>
-                        caret-down.svg
+                      <svg
+                        id="caret-down"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                          fill="currentColor"
+                        />
                       </svg>
                     </div>
                   </div>

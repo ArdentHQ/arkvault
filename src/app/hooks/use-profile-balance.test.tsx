@@ -31,7 +31,7 @@ describe("useProfileBalance", () => {
 
 	it("should update balance", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const profileConvertedBalanceMock = jest.spyOn(profile, "convertedBalance").mockReturnValue(10_000);
+		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(10_000);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 
@@ -46,8 +46,8 @@ describe("useProfileBalance", () => {
 
 	it("should default to zero when exception is thrown", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const mockProfileStatus = jest.spyOn(profile.status(), "isRestored").mockReturnValue(false);
-		const profileConvertedBalanceMock = jest.spyOn(profile, "convertedBalance").mockImplementation(() => {
+		const mockProfileStatus = vi.spyOn(profile.status(), "isRestored").mockReturnValue(false);
+		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockImplementation(() => {
 			throw new Error("profile is not restored");
 		});
 
@@ -65,7 +65,7 @@ describe("useProfileBalance", () => {
 
 	it("should default to zero if converted balance is undefined", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const profileConvertedBalanceMock = jest.spyOn(profile, "convertedBalance").mockReturnValue(undefined);
+		const profileConvertedBalanceMock = vi.spyOn(profile, "convertedBalance").mockReturnValue(undefined);
 
 		const wrapper = ({ children }: any) => <ConfigurationProvider>{children}</ConfigurationProvider>;
 

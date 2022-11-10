@@ -65,7 +65,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 
 				clearErrors("pair");
 			} catch (error) {
-				/* istanbul ignore else */
+				/* istanbul ignore else -- @preserve */
 				if (isUnavailablePairError(error)) {
 					setError("pair", { type: "manual" });
 				}
@@ -164,7 +164,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			const wallets = profile.wallets().findByCoin(currency.coin.toUpperCase());
 
 			for (const wallet of wallets) {
-				/* istanbul ignore if */
+				/* istanbul ignore if -- @preserve */
 				if (wallet.network().isLive()) {
 					return setSenderNetwork(wallet.network());
 				}
@@ -196,7 +196,7 @@ export const FormStep = ({ profile }: FormStepProperties) => {
 			const wallets = profile.wallets().findByCoin(currency.coin.toUpperCase());
 
 			for (const wallet of wallets) {
-				/* istanbul ignore if */
+				/* istanbul ignore if -- @preserve */
 				if (wallet.network().isLive()) {
 					return setRecipientNetwork(wallet.network());
 				}

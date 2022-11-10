@@ -3,6 +3,7 @@ import cn from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { DefaultTFuncReturn } from "i18next";
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
@@ -61,7 +62,7 @@ export const DelegateFooter = ({
 	onContinue,
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
-	const [tooltipContent, setTooltipContent] = useState("");
+	const [tooltipContent, setTooltipContent] = useState<string | DefaultTFuncReturn>("");
 	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 

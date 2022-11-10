@@ -2,17 +2,25 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
 import { useMessageSigner } from "./use-message-signer";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, mockNanoXTransport } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
+	mockNanoXTransport,
+	triggerMessageSignOnce,
+} from "@/utils/testing-library";
 
 describe("Use Message Signer Hook", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
-	beforeEach(async () => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		await triggerMessageSignOnce(wallet);
 	});
 
 	it("should sign message", async () => {
@@ -31,11 +39,11 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message with encrypted mnemonic", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		const walletActsWithMnemonicWithEncryption = jest
+		const walletActsWithMnemonicWithEncryption = vi
 			.spyOn(wallet, "actsWithMnemonicWithEncryption")
 			.mockReturnValue(true);
-		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(getDefaultWalletMnemonic());
 
 		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
@@ -54,11 +62,11 @@ describe("Use Message Signer Hook", () => {
 	it("should sign message with encrypted secret", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		const walletActsWithSecretWithEncryption = jest
+		const walletActsWithSecretWithEncryption = vi
 			.spyOn(wallet, "actsWithSecretWithEncryption")
 			.mockReturnValue(true);
-		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue("secret");
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue("secret");
 
 		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
@@ -79,9 +87,9 @@ describe("Use Message Signer Hook", () => {
 
 		const wifDto = await wallet.wifService().fromSecret("secret");
 
-		const walletActsWithWifWithEncryption = jest.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const walletUsesWIFMock = jest.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
-		const walletWifMock = jest.spyOn(wallet.signingKey(), "get").mockReturnValue(wifDto.wif);
+		const walletActsWithWifWithEncryption = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+		const walletUsesWIFMock = vi.spyOn(wallet.signingKey(), "exists").mockReturnValue(true);
+		const walletWifMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(wifDto.wif);
 
 		const signedMessage = await result.current.sign(wallet, "message", undefined, "password", undefined);
 
@@ -101,8 +109,8 @@ describe("Use Message Signer Hook", () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		const { result } = renderHook(() => useMessageSigner());
 
-		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
@@ -112,19 +120,19 @@ describe("Use Message Signer Hook", () => {
 			signature: "signature",
 		});
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		nanoXTransportMock.mockRestore();
 	});
 
 	it("should sign message with cold ledger wallet", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 
-		jest.spyOn(wallet, "publicKey").mockReturnValue(undefined);
-		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
+		vi.spyOn(wallet, "publicKey").mockReturnValue(undefined);
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
 			"0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb",
 		);
-		jest.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
+		vi.spyOn(wallet.coin().ledger(), "signMessage").mockResolvedValue("signature");
 
 		const signedMessage = await result.current.sign(wallet, "message");
 
@@ -134,7 +142,7 @@ describe("Use Message Signer Hook", () => {
 			signature: "signature",
 		});
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should abort sign with ledger", async () => {
@@ -143,8 +151,8 @@ describe("Use Message Signer Hook", () => {
 
 		const { result } = renderHook(() => useMessageSigner());
 
-		jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		jest.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(
+		vi.spyOn(wallet, "isLedger").mockReturnValue(true);
+		vi.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(
 			() => new Promise((resolve) => setTimeout(() => resolve("signature"), 20_000)),
 		);
 
@@ -154,6 +162,6 @@ describe("Use Message Signer Hook", () => {
 			result.current.sign(wallet, "message", undefined, undefined, undefined, { abortSignal }),
 		).rejects.toBe("ERR_ABORT");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

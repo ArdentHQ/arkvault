@@ -35,7 +35,7 @@ describe("Export Settings", () => {
 	});
 
 	it("should export data", async () => {
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.wwe" });
@@ -66,11 +66,11 @@ describe("Export Settings", () => {
 	});
 
 	it("should show toast message for successful download if browser supports SaveFilePicker", async () => {
-		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "success").mockImplementation(vi.fn());
 
-		Object.defineProperty(window, "showSaveFilePicker", jest.fn());
+		Object.defineProperty(window, "showSaveFilePicker", vi.fn());
 
-		const browserAccessMock = jest
+		const browserAccessMock = vi
 			.spyOn(browserAccess, "fileSave")
 			// @ts-ignore
 			.mockResolvedValue({ name: "test.wwe" });
@@ -100,9 +100,9 @@ describe("Export Settings", () => {
 	});
 
 	it("should not export data or show error on cancelled download", async () => {
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockImplementation(() => {
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("The user aborted a request");
 		});
 
@@ -136,9 +136,9 @@ describe("Export Settings", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
-		const browserAccessMock = jest.spyOn(browserAccess, "fileSave").mockImplementation(() => {
+		const browserAccessMock = vi.spyOn(browserAccess, "fileSave").mockImplementation(() => {
 			throw new Error("unexpected error");
 		});
 

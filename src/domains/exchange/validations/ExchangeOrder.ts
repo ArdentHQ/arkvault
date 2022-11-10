@@ -1,4 +1,4 @@
-import { TFunction } from "i18next";
+import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
@@ -61,6 +61,7 @@ export const exchangeOrder = (t: TFunction) => ({
 
 				return true;
 			} catch {
+				/* istanbul ignore next -- @preserve */
 				return true;
 			}
 		},
@@ -82,6 +83,7 @@ export const exchangeOrder = (t: TFunction) => ({
 
 				return true;
 			} catch {
+				/* istanbul ignore next -- @preserve */
 				return true;
 			}
 		},

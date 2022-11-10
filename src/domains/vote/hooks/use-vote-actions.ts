@@ -26,15 +26,11 @@ export const useVoteActions = ({
 	const navigateToSendVote = (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => {
 		const walletId = hasWalletId
 			? wallet.id()
-			: profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id();
+			: (profile.wallets().findByAddressWithNetwork(selectedAddress, selectedNetwork)?.id() as string);
 
 		const parameters = new URLSearchParams();
 
-		const nethash = profile
-			.wallets()
-			.findById(walletId as string)
-			.network()
-			.meta().nethash;
+		const nethash = profile.wallets().findById(walletId).network().meta().nethash;
 
 		parameters.set("nethash", nethash);
 

@@ -71,7 +71,7 @@ export const SignedTransactionRowMobile = ({
 
 					<ResponsiveAddressWrapper>
 						<BaseTransactionRowMode
-							className="flex items-center space-x-2"
+							className="flex items-center gap-x-2"
 							isCompact={true}
 							isSent={true}
 							type={transaction.type()}
@@ -97,7 +97,7 @@ export const SignedTransactionRowMobile = ({
 				<RowWrapper>
 					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
 
-					<div className="flex items-center space-x-2">
+					<div className="flex items-center gap-x-2">
 						{status.label}
 						<span className={`p-1 ${status.className}`}>
 							<Icon name={status.icon} size="lg" />

@@ -12,8 +12,8 @@ import * as isFullySyncedModule from "@/domains/wallet/utils/is-fully-synced";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
-const handleOpen = jest.fn();
-const handleSend = jest.fn();
+const handleOpen = vi.fn();
+const handleSend = vi.fn();
 
 const useWalletActionsReturn = {
 	activeModal: "wallet-name",
@@ -21,7 +21,7 @@ const useWalletActionsReturn = {
 	handleSend,
 } as unknown as ReturnType<typeof useWalletActionsModule.useWalletActions>;
 
-jest.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue(useWalletActionsReturn);
+vi.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue(useWalletActionsReturn);
 
 describe("WalletListItem", () => {
 	let profile: Contracts.IProfile;
@@ -82,7 +82,7 @@ describe("WalletListItem", () => {
 		(isLargeScreen: boolean) => {
 			const Wrapper = isLargeScreen ? TableWrapper : React.Fragment;
 
-			const syncMock = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+			const syncMock = vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
 			const { container } = render(
 				<Wrapper>
@@ -128,7 +128,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should render with a N/A for fiat", () => {
-		const isTestMock = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
+		const isTestMock = vi.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		const { asFragment } = render(
 			<table>
@@ -151,7 +151,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should disable the send button when wallet has no balance", () => {
-		const balanceMock = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		const { asFragment } = render(
 			<table>
@@ -175,7 +175,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should render with default BTC as default exchangeCurrency", () => {
-		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined as any);
+		const mockExchangeCurrency = vi.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined as any);
 
 		const { container } = render(
 			<table>
@@ -199,7 +199,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should avoid click on TableRow when syncing", () => {
-		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
+		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
 
 		const { asFragment } = render(
 			<table>
@@ -227,16 +227,12 @@ describe("WalletListItem", () => {
 	});
 
 	it("should handle click on responsive item", () => {
-		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
+		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		const { asFragment } = render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
-					</Route>
-				</tbody>
-			</table>,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
+			</Route>,
 			{
 				history,
 				route: dashboardURL,
@@ -257,16 +253,12 @@ describe("WalletListItem", () => {
 	});
 
 	it("should avoid click on responsive item when syncing", () => {
-		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
+		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
 
 		const { asFragment } = render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
-					</Route>
-				</tbody>
-			</table>,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
+			</Route>,
 			{
 				history,
 				route: dashboardURL,
@@ -285,16 +277,12 @@ describe("WalletListItem", () => {
 	});
 
 	it("should disable the send button when wallet has no balance on responsive", () => {
-		const balanceMock = jest.spyOn(wallet, "balance").mockReturnValue(0);
+		const balanceMock = vi.spyOn(wallet, "balance").mockReturnValue(0);
 
 		const { asFragment } = render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
-					</Route>
-				</tbody>
-			</table>,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
+			</Route>,
 			{
 				history,
 				route: dashboardURL,
@@ -309,7 +297,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should handle click on send button", () => {
-		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
+		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		render(
 			<table>
@@ -339,16 +327,12 @@ describe("WalletListItem", () => {
 	});
 
 	it("should handle click on responsive send button", () => {
-		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
+		const isFullySyncedSpy = vi.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(true);
 
 		render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
-					</Route>
-				</tbody>
-			</table>,
+			<Route path="/profiles/:profileId/dashboard">
+				<WalletListItem wallet={wallet} isCompact={false} isLargeScreen={false} />
+			</Route>,
 			{
 				history,
 				route: dashboardURL,

@@ -121,7 +121,7 @@ describe("useDeeplink hook", () => {
 	it("should handle url", () => {
 		history.push(url);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		render(
 			<Route>

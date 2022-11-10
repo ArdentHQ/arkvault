@@ -13,7 +13,7 @@ import {
 
 describe("Ledger transport", () => {
 	let profile: Contracts.IProfile;
-	let ledgerListenSpy: jest.SpyInstance;
+	let ledgerListenSpy: vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -40,7 +40,7 @@ describe("Ledger transport", () => {
 
 	it("should throw unkown error when connecting to transport", async () => {
 		const deviceConnectedMock = mockConnectedTransport(
-			jest.fn().mockImplementationOnce(async () => {
+			vi.fn().mockImplementationOnce(async () => {
 				throw new Error("unknown error");
 			}),
 		);
@@ -52,7 +52,7 @@ describe("Ledger transport", () => {
 
 	it("should retry connecting if device is already opened", async () => {
 		const deviceConnectedMock = mockConnectedTransport(
-			jest.fn().mockImplementationOnce(async () => {
+			vi.fn().mockImplementationOnce(async () => {
 				throw new Error("The device is already open.");
 			}),
 		);
@@ -89,16 +89,16 @@ describe("Ledger transport", () => {
 		ledgerListenSpy.mockRestore();
 
 		const mockDevices = mockLedgerDevicesList(
-			jest.fn().mockImplementation(() => [
+			vi.fn().mockImplementation(() => [
 				{
-					close: jest.fn(),
-					open: jest.fn(),
+					close: vi.fn(),
+					open: vi.fn(),
 				},
 				{
 					close: () => {
 						throw new Error("error");
 					},
-					open: jest.fn(),
+					open: vi.fn(),
 				},
 			]),
 		);

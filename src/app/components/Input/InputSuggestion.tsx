@@ -18,12 +18,12 @@ export const InputSuggestion: VFC<InputSuggestionProperties> = ({ hiddenReferenc
 		const suggestionWidth = suggestionReference.current?.clientWidth || 0;
 		const parentWidth = suggestionReference.current?.parentElement?.clientWidth || 0;
 
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		if (!suggestionWidth || suggestionWidth < parentWidth) {
 			return false;
 		}
 
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		return (hiddenReference?.current?.clientWidth || 0) >= suggestionWidth;
 	};
 

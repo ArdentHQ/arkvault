@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = false 1`] = `
+exports[`WalletListItemSkeleton > should render wallet list skeleton when isCompact = false 1`] = `
 <div>
   <table>
     <tbody
@@ -12,73 +12,80 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       >
         <td>
           <div
-            class="items-center space-x-4 css-5lky4z"
+            class="flex shrink-0 css-5lky4z"
           >
-            <span>
+            <div
+              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  class="react-loading-skeleton"
                   style="width: 18px; height: 18px;"
                 >
                   ‌
                 </span>
-                ‌
+                <br />
               </span>
-            </span>
-            <div
-              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 space-x-4 pl-4"
-            >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
-              >
-                <span>
-                  <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
-                    ‌
-                  </span>
-                </span>
-              </div>
             </div>
-            <span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="-ml-3 space-x-4 css-1d4ra48"
+          >
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 44px; height: 44px; border-radius: 50%;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 200px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
+            </span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 200px; height: 16px;"
+              >
+                ‌
+              </span>
+              <br />
             </span>
           </div>
         </td>
         <td>
           <div
             class="justify-center css-1d4ra48"
+          />
+        </td>
+        <td>
+          <div
+            class="justify-end css-1d4ra48"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 150px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 100px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -86,37 +93,18 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
           <div
             class="justify-end css-1d4ra48"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 100px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 150px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-1d4ra48"
-          >
-            <span>
-              <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 100px; height: 16px;"
-                >
-                  ‌
-                </span>
-                ‌
-              </span>
+              <br />
             </span>
           </div>
         </td>
@@ -153,8 +141,37 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>
@@ -168,7 +185,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
 </div>
 `;
 
-exports[`WalletListItemSkeleton should render wallet list skeleton when isCompact = true 1`] = `
+exports[`WalletListItemSkeleton > should render wallet list skeleton when isCompact = true 1`] = `
 <div>
   <table>
     <tbody
@@ -180,73 +197,80 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       >
         <td>
           <div
-            class="items-center space-x-3 css-7ewq14"
+            class="flex shrink-0 css-7ewq14"
           >
-            <span>
+            <div
+              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                  class="react-loading-skeleton"
                   style="width: 18px; height: 18px;"
                 >
                   ‌
                 </span>
-                ‌
+                <br />
               </span>
-            </span>
-            <div
-              class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-3 space-x-3 pl-3"
-            >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-1jea4xx"
-              >
-                <span>
-                  <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 20px; height: 20px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
-                    ‌
-                  </span>
-                </span>
-              </div>
             </div>
-            <span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="-ml-3 space-x-3 css-1rods8x"
+          >
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 20px; height: 20px; border-radius: 50%;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 200px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
+            </span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 200px; height: 16px;"
+              >
+                ‌
+              </span>
+              <br />
             </span>
           </div>
         </td>
         <td>
           <div
             class="justify-center css-1rods8x"
+          />
+        </td>
+        <td>
+          <div
+            class="justify-end css-1rods8x"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 150px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 100px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -254,37 +278,18 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
           <div
             class="justify-end css-1rods8x"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 100px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 150px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-1rods8x"
-          >
-            <span>
-              <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 100px; height: 16px;"
-                >
-                  ‌
-                </span>
-                ‌
-              </span>
+              <br />
             </span>
           </div>
         </td>
@@ -321,8 +326,37 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                     height="20"
                     width="20"
                   >
-                    <svg>
-                      ellipsis-vertical.svg
+                    <svg
+                      id="ellipsis-vertical"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <circle
+                          cx="10"
+                          cy="16.994"
+                          r="2.006"
+                        />
+                        <circle
+                          cx="10"
+                          cy="3"
+                          r="2"
+                        />
+                        <circle
+                          cx="10"
+                          cy="10"
+                          r="2"
+                        />
+                      </g>
                     </svg>
                   </div>
                 </div>

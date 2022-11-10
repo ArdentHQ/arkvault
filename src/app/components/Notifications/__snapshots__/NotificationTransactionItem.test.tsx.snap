@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Notifications should render in xs 1`] = `
+exports[`Notifications > should render in xs 1`] = `
 <div>
   <table>
     <tbody>
@@ -83,7 +83,7 @@ exports[`Notifications should render in xs 1`] = `
 </div>
 `;
 
-exports[`Notifications should render in xs 2`] = `
+exports[`Notifications > should render in xs 2`] = `
 <div>
   <table>
     <tbody>
@@ -166,7 +166,7 @@ exports[`Notifications should render in xs 2`] = `
 </div>
 `;
 
-exports[`Notifications should render in xs 3`] = `
+exports[`Notifications > should render in xs 3`] = `
 <div>
   <table>
     <tbody>
@@ -192,8 +192,25 @@ exports[`Notifications should render in xs 3`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    received.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -266,7 +283,7 @@ exports[`Notifications should render in xs 3`] = `
 </div>
 `;
 
-exports[`Notifications should render in xs 4`] = `
+exports[`Notifications > should render in xs 4`] = `
 <div>
   <table>
     <tbody>
@@ -292,8 +309,25 @@ exports[`Notifications should render in xs 4`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    received.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -366,7 +400,7 @@ exports[`Notifications should render in xs 4`] = `
 </div>
 `;
 
-exports[`Notifications should render in xs 5`] = `
+exports[`Notifications > should render in xs 5`] = `
 <div>
   <table>
     <tbody>
@@ -392,8 +426,25 @@ exports[`Notifications should render in xs 5`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    received.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -466,7 +517,7 @@ exports[`Notifications should render in xs 5`] = `
 </div>
 `;
 
-exports[`Notifications should render notification item 1`] = `
+exports[`Notifications > should render notification item 1`] = `
 <div>
   <table>
     <tbody>
@@ -492,8 +543,25 @@ exports[`Notifications should render notification item 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    received.svg
+                  <svg
+                    id="received"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>

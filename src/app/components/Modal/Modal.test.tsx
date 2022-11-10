@@ -15,7 +15,7 @@ describe("Modal", () => {
 	});
 
 	it.each([true, false])("should render a modal with overlay", (supportsOverflowOverlay) => {
-		const overflowOverlayMock = jest
+		const overflowOverlayMock = vi
 			.spyOn(browser, "supportsOverflowOverlay")
 			.mockReturnValue(supportsOverflowOverlay);
 
@@ -56,7 +56,7 @@ describe("Modal", () => {
 	});
 
 	it("should closed by click on overlay", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
 				This is the Modal content
@@ -72,7 +72,7 @@ describe("Modal", () => {
 	});
 
 	it("should no close by click on modal content", () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
 				This is the Modal content
@@ -88,7 +88,7 @@ describe("Modal", () => {
 	});
 
 	it("should closed by the Esc key", async () => {
-		const onClose = jest.fn();
+		const onClose = vi.fn();
 		const { asFragment } = render(<Modal title="ark" isOpen={true} onClose={onClose} />);
 
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();

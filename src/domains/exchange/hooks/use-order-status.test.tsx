@@ -1,9 +1,9 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import nock from "nock";
 import React, { useEffect, useState } from "react";
 
 import { useOrderStatus } from "./use-order-status";
 import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;
@@ -29,10 +29,11 @@ describe("useOrderStatus", () => {
 
 	describe("#checkOrderStatus", () => {
 		it("should check the order status", async () => {
-			nock("https://exchanges.arkvault.io")
-				.get("/api/changenow/orders/id")
-				.query(true)
-				.reply(200, { data: { id: "id", status: "waiting" } });
+			server.use(
+				requestMock("https://exchanges.arkvault.io/api/changenow/orders/id", {
+					data: { id: "id", status: "waiting" },
+				}),
+			);
 
 			const Component = () => {
 				const [status, setStatus] = useState<Contracts.ExchangeTransactionStatus>();

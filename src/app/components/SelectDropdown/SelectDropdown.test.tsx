@@ -69,7 +69,7 @@ const firstOptionID = "SelectDropdown__option--0";
 
 describe("SelectDropdown", () => {
 	beforeEach(() => {
-		jest.spyOn(Tippy as any, "render").mockRestore();
+		vi.spyOn(Tippy as any, "render").mockRestore();
 	});
 
 	it.each([OptionType.base, OptionType.group])("should render option %s", (optType) => {

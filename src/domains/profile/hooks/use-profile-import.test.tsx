@@ -59,7 +59,7 @@ describe("useProfileImport", () => {
 	it.each(["Reason: Unexpected token", "unexpected character at line", "Unexpected identifier", "Reason: Malformed"])(
 		"should require password for %s",
 		async (error) => {
-			const mockProfileImport = jest.spyOn(env.profiles(), "import").mockImplementation(() => {
+			const mockProfileImport = vi.spyOn(env.profiles(), "import").mockImplementation(() => {
 				throw new Error(error);
 			});
 			const { result } = renderHook(() => useProfileImport({ env }));
@@ -85,7 +85,7 @@ describe("useProfileImport", () => {
 	});
 
 	it("should throw for unknown error in import", async () => {
-		const mockProfileImport = jest.spyOn(env.profiles(), "import").mockImplementation(() => {
+		const mockProfileImport = vi.spyOn(env.profiles(), "import").mockImplementation(() => {
 			throw new Error("some error");
 		});
 		const { result } = renderHook(() => useProfileImport({ env }));

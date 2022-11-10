@@ -5,13 +5,14 @@ import { ProfilePaths } from "@/router/paths";
 
 interface UseSettingsPromptInput<TFieldValues> {
 	isDirty: boolean;
+	// @ts-ignore
 	dirtyFields: FieldNamesMarkedBoolean<TFieldValues>;
 }
 
 export const useSettingsPrompt = <TFieldValues>({ isDirty, dirtyFields }: UseSettingsPromptInput<TFieldValues>) => {
 	const getPromptMessage = useCallback(
 		(location: any) => {
-			/* istanbul ignore next */
+			/* istanbul ignore next -- @preserve */
 			const pathname = location.pathname || location.location?.pathname;
 
 			const matchCurrent = matchPath(pathname, {

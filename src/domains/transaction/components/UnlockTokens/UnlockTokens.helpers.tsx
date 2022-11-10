@@ -44,7 +44,7 @@ const useUnlockableBalances: UseUnlockableBalancesHook = (wallet) => {
 			toasts.warning(
 				<UnlockTokensFetchError
 					onRetry={
-						/* istanbul ignore next */ () => {
+						/* istanbul ignore next -- @preserve */ () => {
 							void toasts.dismiss();
 
 							start();

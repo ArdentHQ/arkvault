@@ -108,7 +108,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should select option by click", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
@@ -126,7 +126,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should do nothing by click on disable option", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
@@ -144,7 +144,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should select option with enter key", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
@@ -159,7 +159,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should select option with space key", () => {
-		const onSelect = jest.fn();
+		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
@@ -371,7 +371,7 @@ describe("Dropdown ClickOutside Hook", () => {
 	it("should not call callback if clicked on target element", () => {
 		const element = document;
 		const reference = { current: element };
-		const callback = jest.fn();
+		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
 		userEvent.click(element.body);
@@ -383,7 +383,7 @@ describe("Dropdown ClickOutside Hook", () => {
 		const div = document.createElement("div");
 		const reference = { current: div };
 
-		const callback = jest.fn();
+		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
 		userEvent.click(document.body);
@@ -394,8 +394,8 @@ describe("Dropdown ClickOutside Hook", () => {
 
 describe("Dropdown positioning", () => {
 	it("should render content below toggle", () => {
-		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
-		const getComputedStyleSpy = jest.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
+		const getComputedStyleSpy = vi.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
 
 		render(
 			<Dropdown>
@@ -413,13 +413,14 @@ describe("Dropdown positioning", () => {
 	});
 
 	it("should render content below toggle and reduce its height", () => {
-		const getBoundingClientRectSpy = jest
+		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 90, top: 0 });
-		const toggleHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
-		const dropdownHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
-		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
-		const elementClientHeightSpy = jest.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
+
+		const toggleHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValueOnce(10);
+		const dropdownHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(100);
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(190);
+		const elementClientHeightSpy = vi.spyOn(Element.prototype, "clientHeight", "get").mockReturnValue(100);
 
 		render(
 			<Dropdown>
@@ -443,11 +444,12 @@ describe("Dropdown positioning", () => {
 	});
 
 	it("should render content above toggle and apply a negative margin", () => {
-		const getBoundingClientRectSpy = jest
+		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 50, top: 100 });
-		const offsetHeightSpy = jest.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
-		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(150);
+
+		const offsetHeightSpy = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(50);
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(200);
 
 		render(
 			<Dropdown>
@@ -470,12 +472,12 @@ describe("Dropdown positioning", () => {
 	it("shouldn't do resize if no ref found", () => {
 		const reference = { current: undefined };
 		Object.defineProperty(reference, "current", {
-			get: jest.fn(() => {}),
-			set: jest.fn(() => {}),
+			get: vi.fn(() => {}),
+			set: vi.fn(() => {}),
 		});
-		const useReferenceSpy = jest.spyOn(React, "useRef").mockReturnValue(reference);
-		const getBoundingClientRectSpy = jest.spyOn(Element.prototype, "getBoundingClientRect");
-		const documentClientHeightSpy = jest.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
+		const useReferenceSpy = vi.spyOn(React, "useRef").mockReturnValue(reference);
+		const getBoundingClientRectSpy = vi.spyOn(Element.prototype, "getBoundingClientRect");
+		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(100);
 
 		render(
 			<Dropdown>

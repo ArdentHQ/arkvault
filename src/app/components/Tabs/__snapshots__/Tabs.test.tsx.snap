@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Tabs should react to use effect call 1`] = `
+exports[`Tabs > should react to use effect call 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -42,7 +42,7 @@ exports[`Tabs should react to use effect call 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs should render 1`] = `
+exports[`Tabs > should render 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -95,7 +95,7 @@ exports[`Tabs should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs should render wit counts 1`] = `
+exports[`Tabs > should render wit counts 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -166,7 +166,7 @@ exports[`Tabs should render wit counts 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs should render with scroll 1`] = `
+exports[`Tabs > should render with scroll 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -180,7 +180,7 @@ exports[`Tabs should render with scroll 1`] = `
         class="bg-theme-secondary-100 dark:bg-black"
       >
         <div
-          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+          class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
             class="css-6pza4g"
@@ -235,7 +235,7 @@ exports[`Tabs should render with scroll 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs should render with scroll in dark mode 1`] = `
+exports[`Tabs > should render with scroll in dark mode 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -249,7 +249,7 @@ exports[`Tabs should render with scroll in dark mode 1`] = `
         class="bg-theme-secondary-100 dark:bg-black"
       >
         <div
-          class="container relative z-0 mx-auto overflow-x-auto css-1g94s5z"
+          class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
             class="css-6pza4g"
@@ -304,7 +304,7 @@ exports[`Tabs should render with scroll in dark mode 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Tabs should render without background 1`] = `
+exports[`Tabs > should render without background 1`] = `
 <DocumentFragment>
   <div>
     <div

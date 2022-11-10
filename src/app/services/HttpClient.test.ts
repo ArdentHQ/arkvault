@@ -1,6 +1,6 @@
-import nock from "nock";
-
 import { HttpClient } from "./HttpClient";
+
+import { server, requestMock } from "@/tests/mocks/server";
 
 let subject: HttpClient;
 
@@ -8,8 +8,6 @@ const httpbin = "http://httpbin.org";
 
 describe("HttpClient", () => {
 	beforeAll(() => {
-		nock.disableNetConnect();
-
 		subject = new HttpClient(0);
 	});
 
@@ -20,7 +18,7 @@ describe("HttpClient", () => {
 			url: `${httpbin}/get`,
 		};
 
-		nock(httpbin).get("/get").query(true).reply(200, responseBody);
+		server.use(requestMock(`${httpbin}/get`, responseBody));
 
 		const response = await subject.get(`${httpbin}/get`, { key: "value" });
 
@@ -34,7 +32,7 @@ describe("HttpClient", () => {
 			url: `${httpbin}/get`,
 		};
 
-		nock(httpbin).get("/get").reply(200, responseBody);
+		server.use(requestMock(`${httpbin}/get`, responseBody));
 
 		const response = await subject.get(`${httpbin}/get`);
 
@@ -42,7 +40,7 @@ describe("HttpClient", () => {
 	});
 
 	it("should handle 404 status codes", async () => {
-		nock(httpbin).get("/get").reply(404, {});
+		server.use(requestMock(`${httpbin}/get`, {}, { status: 404 }));
 
 		await expect(subject.get(`${httpbin}/get`)).rejects.toThrow("HTTP request returned status code 404.");
 	});
@@ -60,7 +58,7 @@ describe("HttpClient", () => {
 			url: `${httpbin}/post`,
 		};
 
-		nock(httpbin).post("/post").reply(200, responseBody);
+		server.use(requestMock(`${httpbin}/post`, responseBody, { method: "post" }));
 
 		const response = await subject.post(`${httpbin}/post`, { key: "value" });
 
@@ -81,7 +79,7 @@ describe("HttpClient", () => {
 			url: `${httpbin}/post`,
 		};
 
-		nock(httpbin).post("/post").reply(200, responseBody);
+		server.use(requestMock(`${httpbin}/post`, responseBody, { method: "post" }));
 
 		const response = await subject
 			.withHeaders({ Authorization: "Bearer TOKEN" })
@@ -97,12 +95,10 @@ describe("HttpClient", () => {
 	});
 
 	// @README: Run this locally with TOR running.
-	it.skip("should connect with TOR", async () => {
-		nock.enableNetConnect();
+	// it("should connect with TOR", async () => {
+	// 	const realAddress = await subject.get("https://ipinfo.io");
+	// 	const newAddress = await subject.withSocksProxy("socks5://127.0.0.1:9050").get("https://ipinfo.io");
 
-		const realAddress = await subject.get("https://ipinfo.io");
-		const newAddress = await subject.withSocksProxy("socks5://127.0.0.1:9050").get("https://ipinfo.io");
-
-		expect(newAddress.json().ip).not.toBe(realAddress);
-	});
+	// 	expect(newAddress.json().ip).not.toBe(realAddress);
+	// });
 });

@@ -94,7 +94,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 					</span>
 					<h3 className="m-0 text-lg font-bold">
 						{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_INPUT", {
-							currency: fromCurrency?.coin.toUpperCase() || "",
+							currency: fromCurrency?.coin.toUpperCase(),
 						})}
 					</h3>
 				</div>
@@ -116,7 +116,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 						<div className="flex flex-col space-y-2">
 							<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 								{t("EXCHANGE.EXCHANGE_FORM.EXCHANGE_ADDRESS", {
-									currency: toCurrency?.coin.toUpperCase() || "",
+									currency: toCurrency?.coin.toUpperCase(),
 								})}
 							</span>
 
@@ -151,7 +151,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 					</span>
 					<h3 className="m-0 text-lg font-bold">
 						{t("EXCHANGE.EXCHANGE_FORM.CURRENCY_OUTPUT", {
-							currency: toCurrency?.coin.toUpperCase() || "",
+							currency: toCurrency?.coin.toUpperCase(),
 						})}
 					</h3>
 				</div>
@@ -173,7 +173,7 @@ export const ConfirmationStep = ({ exchangeTransaction }: ConfirmationStepProper
 						<div className="flex flex-col space-y-2">
 							<span className="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
 								{t("EXCHANGE.EXCHANGE_FORM.YOUR_ADDRESS", {
-									currency: toCurrency?.coin.toUpperCase() || "",
+									currency: toCurrency?.coin.toUpperCase(),
 								})}
 							</span>
 

@@ -250,7 +250,7 @@ export const SendVote = () => {
 					isConfirmed = voteConfirmed && unvoteConfirmed;
 				}
 
-				/* istanbul ignore else */
+				/* istanbul ignore else -- @preserve */
 				if (isConfirmed) {
 					clearInterval(interval);
 					resolve("");

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`CreateContact should render 1`] = `
+exports[`CreateContact > should render 1`] = `
 <DocumentFragment>
   <div
     class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
@@ -30,8 +30,25 @@ exports[`CreateContact should render 1`] = `
                 height="16"
                 width="16"
               >
-                <svg>
-                  cross.svg
+                <svg
+                  id="cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -178,8 +195,18 @@ exports[`CreateContact should render 1`] = `
                                         height="10"
                                         width="10"
                                       >
-                                        <svg>
-                                          caret-down.svg
+                                        <svg
+                                          id="caret-down"
+                                          viewBox="0 0 10 10"
+                                          x="0"
+                                          xml:space="preserve"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          y="0"
+                                        >
+                                          <path
+                                            d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
+                                            fill="currentColor"
+                                          />
                                         </svg>
                                       </div>
                                     </div>

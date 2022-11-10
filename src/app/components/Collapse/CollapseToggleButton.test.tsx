@@ -7,7 +7,7 @@ import { render, screen } from "@/utils/testing-library";
 
 describe("CollapseToggleButton", () => {
 	it("should render", () => {
-		const onClick = jest.fn();
+		const onClick = vi.fn();
 
 		render(<CollapseToggleButton isOpen={false} onClick={onClick} />);
 

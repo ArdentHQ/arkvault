@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -41,15 +40,6 @@ const testNetwork = "ark.devnet";
 
 describe("ImportWallet Methods", () => {
 	let resetProfileNetworksMock: () => void;
-
-	beforeAll(() => {
-		nock.disableNetConnect();
-
-		nock("https://ark-test.arkvault.io")
-			.get("/api/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P")
-			.reply(200, require("tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json"))
-			.persist();
-	});
 
 	beforeEach(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -188,7 +178,7 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
-		const findAdressSpy = jest.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
+		const findAdressSpy = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockReturnValue({} as any);
 
 		userEvent.paste(publicKeyInput(), randomPublicKey);
 
@@ -433,7 +423,7 @@ describe("ImportWallet Methods", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		const profileForgetWalletSpy = jest.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
+		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
 
 		userEvent.click(backButton());
 

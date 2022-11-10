@@ -54,7 +54,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 				signatory,
 			};
 
-			/* istanbul ignore next: Ledger signing of this TX type is not allowed yet for the coins we support */
+			/* istanbul ignore next: Ledger signing of this TX type is not allowed yet for the coins we support -- @preserve */
 			if (wallet.isLedger()) {
 				await connect(profile, wallet.coinId(), wallet.networkId());
 			}
@@ -120,7 +120,7 @@ export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ prof
 				{step === Step.ErrorStep && (
 					<ErrorStep
 						errorMessage={errorMessage}
-						onRepeat={/* istanbul ignore next */ () => handleSubmit(submit)}
+						onRepeat={/* istanbul ignore next -- @preserve */ () => handleSubmit(submit)}
 						isRepeatDisabled={formState.isSubmitting}
 					/>
 				)}

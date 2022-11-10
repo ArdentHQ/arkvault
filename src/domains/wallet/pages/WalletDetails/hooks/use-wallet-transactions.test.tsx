@@ -1,11 +1,13 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect, useState } from "react";
 
 import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, triggerMessageSignOnce, waitFor } from "@/utils/testing-library";
+
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { requestMock, server } from "@/tests/mocks/server";
 
 let allPendingTransactions: PendingTransaction[];
 
@@ -23,46 +25,76 @@ describe("Wallet Transactions Hook", () => {
 	};
 
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		vi.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 			[fixtures.multiSignatureTransfer.id()]: fixtures.multiSignatureTransfer,
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 	};
 
-	beforeAll(() => {
-		nock("https://ark-test.arkvault.io")
-			.get("/api/transactions")
-			.query((parameters) => parameters.page === undefined || parameters.page === "1")
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				const unconfirmed = data[0];
-				unconfirmed.confirmations = 0;
-				return {
-					data: [unconfirmed],
+	beforeEach(async () => {
+		const { meta, data } = transactionsFixture;
+
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
 					meta,
-				};
-			})
-			.get("/api/transactions")
-			.query({ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD", limit: "10", page: "2" })
-			.reply(200, () => {
-				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-				return {
+				},
+				{
+					query: {
+						page: null,
+					},
+				},
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
+					data: [
+						{
+							...data[0],
+							confirmations: 0,
+						},
+					],
+					meta,
+				},
+				{
+					query: {
+						page: 1,
+					},
+				},
+			),
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions",
+				{
 					data: data.slice(1, 3),
 					meta,
-				};
-			})
-			.persist();
-	});
+				},
+				{
+					query: {
+						address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+						limit: 10,
+						page: 2,
+					},
+				},
+			),
+		);
 
-	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+
+		await triggerMessageSignOnce(wallet);
 
 		fixtures.multiSignatureTransfer = new DTO.ExtendedSignedTransactionData(
 			await wallet
@@ -103,6 +135,10 @@ describe("Wallet Transactions Hook", () => {
 		);
 	});
 
+	// afterEach(() => {
+	// 	vi.clearAllMocks();
+	// })
+
 	const Component = () => {
 		const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
 		const [loading, setLoading] = useState(false);
@@ -137,8 +173,8 @@ describe("Wallet Transactions Hook", () => {
 				signatory,
 			});
 
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
 
 		render(<Component />);
 
@@ -147,16 +183,16 @@ describe("Wallet Transactions Hook", () => {
 		await waitFor(() => expect(screen.queryByText("Loading")).not.toBeInTheDocument());
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should not sync pending transfers if wallet has not been fully restored", async () => {
 		mockPendingTransfers(wallet);
 
-		const spySync = jest.spyOn(wallet.transaction(), "sync");
-		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		const spySync = vi.spyOn(wallet.transaction(), "sync");
+		vi.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 
 		render(<Component />);
 
@@ -166,15 +202,17 @@ describe("Wallet Transactions Hook", () => {
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(0));
 		await waitFor(() => expect(spySync).not.toHaveBeenCalled());
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should sync pending multiSignature transactions", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
 		let allPendingTransactions: PendingTransaction[];
+
 		const Component = () => {
 			const { pendingTransactions, syncPending } = useWalletTransactions(wallet);
 			allPendingTransactions = pendingTransactions;
@@ -182,24 +220,26 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, []);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
 		render(<Component />);
 
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
+
+		vi.clearAllMocks();
 	});
 
 	it("should sync pending transactions", async () => {
 		mockPendingTransfers(wallet);
-		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
 
-		jest.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(
-			false,
-		);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => fixtures.transfer);
+
+		vi.spyOn(wallet.transaction().transaction(fixtures.transfer.id()), "usesMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
 
 		let allPendingTransactions: PendingTransaction[];
 		// eslint-disable-next-line sonarjs/no-identical-functions
@@ -210,24 +250,29 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, []);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
 		render(<Component />);
 
 		await waitFor(() => expect(allPendingTransactions).toHaveLength(2));
+
+		vi.clearAllMocks();
 	});
 
 	it("should prevent from rendering transaction if not found in wallet", async () => {
-		jest.spyOn(wallet.transaction(), "pending").mockReturnValue({
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
+
+		vi.spyOn(wallet.transaction(), "pending").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,
 		});
-		jest.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
+		vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
 			throw new Error("not found");
 		});
-		jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "hasBeenSigned").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		let allPendingTransactions: PendingTransaction[];
 		const Component = () => {
@@ -237,6 +282,7 @@ describe("Wallet Transactions Hook", () => {
 			useEffect(() => {
 				syncPending();
 			}, [syncPending]);
+
 			return <span>{pendingTransactions.length}</span>;
 		};
 
@@ -246,8 +292,10 @@ describe("Wallet Transactions Hook", () => {
 	});
 
 	it("should run periodically", async () => {
-		jest.useFakeTimers();
-		const spySync = jest.spyOn(wallet.transaction(), "sync");
+		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
+
+		vi.useFakeTimers();
+		const spySync = vi.spyOn(wallet.transaction(), "sync");
 
 		const Component = () => {
 			const { pendingTransactions, startSyncingPendingTransactions, stopSyncingPendingTransactions } =
@@ -263,11 +311,11 @@ describe("Wallet Transactions Hook", () => {
 
 		render(<Component />);
 
-		jest.advanceTimersByTime(5000);
+		vi.advanceTimersByTime(5000);
 
 		await waitFor(() => expect(spySync).toHaveBeenCalledWith());
 
 		spySync.mockRestore();
-		jest.useRealTimers();
+		vi.useRealTimers();
 	});
 });

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`DonutGraph should render 1`] = `
+exports[`DonutGraph > should render 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -306,7 +306,7 @@ exports[`DonutGraph should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DonutGraph should render content inside the circle 1`] = `
+exports[`DonutGraph > should render content inside the circle 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -622,7 +622,7 @@ exports[`DonutGraph should render content inside the circle 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DonutGraph should render tooltip on hover 1`] = `
+exports[`DonutGraph > should render tooltip on hover 1`] = `
 <DocumentFragment>
   <div
     class="relative"

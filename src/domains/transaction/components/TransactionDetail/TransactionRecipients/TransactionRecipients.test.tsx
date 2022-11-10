@@ -7,6 +7,7 @@ import { translations } from "@/domains/transaction/i18n";
 import {
 	env,
 	getDefaultProfileId,
+	queryElementForSvg,
 	render,
 	renderResponsive,
 	renderResponsiveWithRoute,
@@ -67,7 +68,7 @@ describe("TransactionRecipients", () => {
 
 		expect(container).toHaveTextContent(address);
 
-		expect(container).toHaveTextContent("delegate-registration.svg");
+		expect(queryElementForSvg(container, "delegate-registration")).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});

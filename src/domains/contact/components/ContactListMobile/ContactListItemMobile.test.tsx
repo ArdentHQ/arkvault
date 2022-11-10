@@ -40,9 +40,9 @@ describe("ContactListItemMobile", () => {
 				profile={profile}
 				availableNetworks={[]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
@@ -55,13 +55,13 @@ describe("ContactListItemMobile", () => {
 				profile={profile}
 				availableNetworks={[]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should execute onSend callback", async () => {
-		const onSend = jest.fn();
+		const onSend = vi.fn();
 
 		render(
 			<ContactListItemMobile
@@ -80,17 +80,17 @@ describe("ContactListItemMobile", () => {
 				contact={contact}
 				onSend={onSend}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
 		});
 
-		const sendButton = screen.getByRole("button", { name: "double-arrow-right.svg" });
+		const sendButton = screen.getByTestId("ContactListItemMobileAddress__send-button");
 
 		expect(sendButton).toBeEnabled();
 
@@ -100,7 +100,7 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should not execute onSend callback if button is disabled", async () => {
-		const onSend = jest.fn();
+		const onSend = vi.fn();
 
 		render(
 			<ContactListItemMobile
@@ -109,17 +109,17 @@ describe("ContactListItemMobile", () => {
 				contact={contact}
 				onSend={onSend}
 				options={options}
-				onAction={jest.fn()}
+				onAction={vi.fn()}
 			/>,
 		);
 
-		userEvent.click(screen.getByText("chevron-down-small.svg"));
+		userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ContactListItemMobile__addresses")).toBeInTheDocument();
 		});
 
-		const sendButton = screen.getByRole("button", { name: "double-arrow-right.svg" });
+		const sendButton = screen.getByTestId("ContactListItemMobileAddress__send-button");
 
 		expect(sendButton).toBeDisabled();
 
@@ -129,14 +129,14 @@ describe("ContactListItemMobile", () => {
 	});
 
 	it("should execute onAction callback", () => {
-		const onAction = jest.fn();
+		const onAction = vi.fn();
 
 		render(
 			<ContactListItemMobile
 				profile={profile}
 				availableNetworks={[{ hasBalance: true, id: "ark.devnet" }]}
 				contact={contact}
-				onSend={jest.fn()}
+				onSend={vi.fn()}
 				options={options}
 				onAction={onAction}
 			/>,

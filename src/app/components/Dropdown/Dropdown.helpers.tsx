@@ -87,7 +87,7 @@ export const renderOptions = ({ options, key, onSelect }: OptionsProperties) => 
 					onClick={(event) => onSelectItem(event, option)}
 					tabIndex={0}
 					onKeyDown={(event) => {
-						/* istanbul ignore next */
+						/* istanbul ignore next -- @preserve */
 						if (event.key === "Enter" || event.key === " ") {
 							onSelectItem(event, option);
 						}

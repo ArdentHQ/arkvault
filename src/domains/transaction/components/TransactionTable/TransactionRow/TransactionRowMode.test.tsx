@@ -2,26 +2,27 @@ import React from "react";
 
 import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { render, screen } from "@/utils/testing-library";
+import { queryElementForSvg, render, screen } from "@/utils/testing-library";
 
 describe("TransactionRowMode", () => {
 	it("should render default icon", () => {
 		render(<TransactionRowMode transaction={TransactionFixture} />);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "sent")).toBeInTheDocument();
+
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();
 	});
 
 	it("should render sent icon", () => {
 		render(<TransactionRowMode transaction={{ ...TransactionFixture, isSent: () => true }} />);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("sent.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "sent")).toBeInTheDocument();
 	});
 
 	it("should render received icon", () => {
 		render(<TransactionRowMode transaction={{ ...TransactionFixture, isSent: () => false }} />);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "received")).toBeInTheDocument();
 	});
 
 	it("should render return icon", () => {
@@ -29,7 +30,7 @@ describe("TransactionRowMode", () => {
 			<TransactionRowMode transaction={{ ...TransactionFixture, isReturn: () => true }} />,
 		);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "return")).toBeInTheDocument();
 
 		rerender(
 			<TransactionRowMode
@@ -37,7 +38,7 @@ describe("TransactionRowMode", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "return")).toBeInTheDocument();
 	});
 
 	it("should not render return icon if sender address is not the transactions wallet address", () => {
@@ -45,7 +46,7 @@ describe("TransactionRowMode", () => {
 			<TransactionRowMode transaction={{ ...TransactionFixture, isReturn: () => true }} />,
 		);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("return.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "return")).toBeInTheDocument();
 
 		rerender(
 			<TransactionRowMode
@@ -63,8 +64,8 @@ describe("TransactionRowMode", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("TransactionRowMode")).not.toHaveTextContent("return.svg");
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "return")).toBe(null);
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "received")).toBeInTheDocument();
 	});
 });
 
@@ -72,12 +73,12 @@ describe("BaseTransactionRowMode", () => {
 	it("should render", () => {
 		render(<BaseTransactionRowMode type="transfer" transaction={TransactionFixture} />);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "received")).toBeInTheDocument();
 	});
 
 	it("should render compact", () => {
 		render(<BaseTransactionRowMode type="transfer" transaction={TransactionFixture} isCompact />);
 
-		expect(screen.getByTestId("TransactionRowMode")).toHaveTextContent("received.svg");
+		expect(queryElementForSvg(screen.getByTestId("TransactionRowMode"), "received")).toBeInTheDocument();
 	});
 });

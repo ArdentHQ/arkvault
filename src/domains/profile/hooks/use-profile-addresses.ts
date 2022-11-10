@@ -20,7 +20,7 @@ const isMultiSignature = (wallet: Contracts.IReadWriteWallet) => {
 	try {
 		return wallet.isMultiSignature();
 	} catch {
-		/* istanbul ignore next */
+		/* istanbul ignore next -- @preserve */
 		return false;
 	}
 };

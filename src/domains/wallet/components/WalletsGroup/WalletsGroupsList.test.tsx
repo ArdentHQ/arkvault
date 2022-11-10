@@ -21,7 +21,7 @@ describe("WalletsGroupsList", () => {
 
 		profile.wallets().push(mainnetWallet);
 
-		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	it("should render WalletsGroupsList", () => {

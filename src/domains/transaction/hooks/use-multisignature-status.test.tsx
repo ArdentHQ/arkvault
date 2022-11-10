@@ -38,101 +38,101 @@ describe("Use MultiSignature Status Hook", () => {
 	});
 
 	it("should await our signature", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingOurSignature");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should await our signature as participant", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
-		jest.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(2);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(2);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingOurSignature");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should await our broadcast", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
-		jest.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(true);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingOurFinalSignature");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should await other signatures", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingOtherSignatures");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should await confirmation", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingConfirmation");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should be multisignature ready", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingOurFinalSignature");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should await final signature", () => {
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isAwaitingFinalSignature");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 
 	it("should be able to broadcast only", () => {
-		jest.spyOn(wallet, "address").mockReturnValue("1");
-		jest.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
-		jest.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
-		jest.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
-		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
+		vi.spyOn(wallet, "address").mockReturnValue("1");
+		vi.spyOn(wallet.transaction(), "isAwaitingOurSignature").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingOtherSignatures").mockReturnValue(false);
+		vi.spyOn(wallet.transaction(), "isAwaitingConfirmation").mockReturnValue(false);
+		vi.spyOn(wallet.coin().multiSignature(), "remainingSignatureCount").mockReturnValue(0);
+		vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(true);
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
 		expect(result.current.status.value).toBe("isMultiSignatureReady");
 
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

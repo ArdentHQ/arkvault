@@ -16,7 +16,7 @@ describe("UnlockTokensTotal", () => {
 
 		wallet = profile.wallets().first();
 
-		jest.spyOn(wallet, "currency").mockReturnValue("LSK");
+		vi.spyOn(wallet, "currency").mockReturnValue("LSK");
 	});
 
 	it("should render", () => {
@@ -44,7 +44,7 @@ describe("UnlockTokensTotal", () => {
 	});
 
 	it("should show hint when balance is less than the fee", () => {
-		jest.spyOn(wallet, "balance").mockReturnValueOnce(5);
+		vi.spyOn(wallet, "balance").mockReturnValueOnce(5);
 
 		render(<UnlockTokensTotal isLoading={false} isLoadingFee={false} amount={10} fee={8} wallet={wallet} />);
 

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
+exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -53,8 +53,25 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
             height="16"
             width="16"
           >
-            <svg>
-              plus.svg
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -79,7 +96,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
+exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -132,8 +149,25 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
             height="16"
             width="16"
           >
-            <svg>
-              plus.svg
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -158,7 +192,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
+exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -211,8 +245,25 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
             height="16"
             width="16"
           >
-            <svg>
-              plus.svg
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -237,7 +288,7 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 3`] = `
 </DocumentFragment>
 `;
 
-exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
+exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] = `
 <DocumentFragment>
   <div
     class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -290,8 +341,25 @@ exports[`TotalAmountBox should render with amount of 0.1 and fee of 0.01 4`] = `
             height="16"
             width="16"
           >
-            <svg>
-              plus.svg
+            <svg
+              id="plus"
+              viewBox="0 0 20 20"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path
+                  d="M1 10h18M10 1v18"
+                />
+              </g>
             </svg>
           </div>
         </div>

@@ -32,7 +32,7 @@ describe("HeaderSearchInput", () => {
 	});
 
 	it("should reset fields by prop", async () => {
-		const onReset = jest.fn();
+		const onReset = vi.fn();
 		const { rerender } = render(<HeaderSearchInput onReset={onReset} />);
 
 		userEvent.click(screen.getByRole("button"));
@@ -51,7 +51,7 @@ describe("HeaderSearchInput", () => {
 	});
 
 	it("should reset the query", () => {
-		const onReset = jest.fn();
+		const onReset = vi.fn();
 		render(<HeaderSearchInput onReset={onReset} />);
 
 		userEvent.click(screen.getByRole("button"));
@@ -69,9 +69,9 @@ describe("HeaderSearchInput", () => {
 	});
 
 	it("should call onSearch", () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(<HeaderSearchInput onSearch={onSearch} />);
 
@@ -80,16 +80,16 @@ describe("HeaderSearchInput", () => {
 		userEvent.paste(screen.getByTestId("HeaderSearchInput__input__input"), "test");
 
 		act(() => {
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(onSearch).toHaveBeenCalledWith("test");
 	});
 
 	it("should set custom debounce timeout form props", () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
-		const onSearch = jest.fn();
+		const onSearch = vi.fn();
 
 		render(<HeaderSearchInput onSearch={onSearch} debounceTimeout={100} />);
 
@@ -98,7 +98,7 @@ describe("HeaderSearchInput", () => {
 		userEvent.paste(screen.getByTestId("HeaderSearchInput__input__input"), "test");
 
 		act(() => {
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(onSearch).toHaveBeenCalledWith("test");

@@ -38,6 +38,9 @@ export const connectedTransport = async () => {
 	}
 };
 
+/* istanbul ignore next -- @preserve */
+const onComplete = () => null;
+
 // Listen to WebUSB devices and emit ONE device that was either accepted before,
 // if not it will trigger the native permission UI.
 
@@ -47,7 +50,7 @@ export const openTransport = async (): Promise<Contracts.LedgerTransport> => {
 
 	return new Promise((resolve, reject) =>
 		transport.listen({
-			complete: /* istanbul ignore next */ () => null,
+			complete: onComplete,
 			error: reject,
 			next: ({ type, descriptor, deviceModel }) => {
 				if (type === "add") {

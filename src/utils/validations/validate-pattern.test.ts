@@ -1,6 +1,6 @@
 import { validateAscii, validatePattern } from "./validate-pattern";
 
-const translationMockFunction = jest
+const translationMockFunction = vi
 	.fn()
 	.mockImplementation((text, options) => `illegal characters ${options.characters}`);
 

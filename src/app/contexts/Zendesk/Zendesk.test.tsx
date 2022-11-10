@@ -30,17 +30,17 @@ describe("Zendesk Context Provider", () => {
 		process.env.ZENDESK_WIDGET_KEY = "1";
 
 		// @ts-ignore
-		const widgetMock = jest.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
+		const widgetMock = vi.spyOn(window.document, "querySelector").mockImplementation((selector: string) => {
 			if (selector === webWidgetSelector) {
 				return {
 					contentWindow: {
 						document: {
 							body: {
 								classList: {
-									add: jest.fn(),
-									remove: jest.fn(),
+									add: vi.fn(),
+									remove: vi.fn(),
 								},
-								insertAdjacentHTML: jest.fn(),
+								insertAdjacentHTML: vi.fn(),
 							},
 						},
 					},
@@ -74,7 +74,7 @@ describe("Zendesk Context Provider", () => {
 
 		widgetMock.mockRestore();
 
-		const undefinedWidgetMock = jest
+		const undefinedWidgetMock = vi
 			.spyOn(window.document, "querySelector")
 			.mockImplementation((selector: string) => {
 				if (selector === webWidgetSelector) {

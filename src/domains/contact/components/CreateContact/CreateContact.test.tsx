@@ -7,9 +7,9 @@ import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-const onSave = jest.fn();
-const onCancel = jest.fn();
-const onClose = jest.fn();
+const onSave = vi.fn();
+const onCancel = vi.fn();
+const onClose = vi.fn();
 
 let profile: Contracts.IProfile;
 // let contact: Contracts.IContact;

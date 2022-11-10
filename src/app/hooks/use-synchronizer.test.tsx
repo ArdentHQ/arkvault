@@ -2,6 +2,7 @@ import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
+import { vi } from "vitest";
 import { useSynchronizer } from "./use-synchronizer";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
@@ -13,10 +14,10 @@ const wrapper = ({ children }: any) => (
 );
 
 describe("Synchronizer Hook", () => {
-	let onCall: jest.Mock;
+	let onCall: vi.Mock;
 
-	const job1 = jest.fn(() => Promise.resolve(onCall(1)));
-	const job2 = jest.fn(() => Promise.resolve(onCall(2)));
+	const job1 = vi.fn(() => Promise.resolve(onCall(1)));
+	const job2 = vi.fn(() => Promise.resolve(onCall(2)));
 	const jobs = [
 		{
 			callback: job1,
@@ -29,13 +30,11 @@ describe("Synchronizer Hook", () => {
 	];
 
 	beforeEach(() => {
-		jest.useFakeTimers();
-		onCall = jest.fn();
+		vi.useFakeTimers();
+		onCall = vi.fn();
 	});
 
 	it("should stop jobs", async () => {
-		const clearIntervalSpy = jest.spyOn(window, "clearInterval").mockImplementation(jest.fn());
-
 		const Component = () => {
 			const { start, stop } = useSynchronizer(jobs);
 
@@ -48,20 +47,20 @@ describe("Synchronizer Hook", () => {
 
 		render(<Component />);
 
-		jest.advanceTimersByTime(200);
+		vi.advanceTimersByTime(200);
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		userEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});
 
 	it("should stop jobs and clear timers", async () => {
-		const clearIntervalSpy = jest.spyOn(window, "clearInterval").mockImplementation(jest.fn());
-
 		const Component = () => {
 			const { start, stop } = useSynchronizer(jobs);
 
@@ -74,20 +73,20 @@ describe("Synchronizer Hook", () => {
 
 		render(<Component />);
 
-		jest.advanceTimersByTime(200);
+		vi.advanceTimersByTime(200);
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		userEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});
 
 	it("should run periodically", async () => {
-		const clearIntervalSpy = jest.spyOn(window, "clearInterval").mockImplementation(jest.fn());
-
 		const Component = () => {
 			const { start } = useSynchronizer(jobs);
 
@@ -100,19 +99,21 @@ describe("Synchronizer Hook", () => {
 
 		const { unmount } = render(<Component />);
 
-		jest.advanceTimersByTime(200);
+		vi.advanceTimersByTime(200);
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
+		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
+
 		unmount();
 
-		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
+		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
 		clearIntervalSpy.mockRestore();
 	});
 
 	it("should catch and return errors from jobs", async () => {
-		const erroringJob = jest.fn(() => Promise.reject("Some error"));
+		const erroringJob = vi.fn(() => Promise.reject("Some error"));
 
 		const jobsWithErrors = [
 			{
@@ -135,7 +136,7 @@ describe("Synchronizer Hook", () => {
 	});
 
 	it("should clear errors", async () => {
-		const erroringJob = jest.fn(() => Promise.reject("Some error"));
+		const erroringJob = vi.fn(() => Promise.reject("Some error"));
 
 		const jobsWithErrors = [
 			{

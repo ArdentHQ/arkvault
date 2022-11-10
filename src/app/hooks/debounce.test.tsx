@@ -4,7 +4,7 @@ import { useDebounce } from "./debounce";
 
 describe("useDebounce", () => {
 	it("should render useDebounce", () => {
-		jest.useFakeTimers();
+		vi.useFakeTimers();
 
 		const { result } = renderHook(() => useDebounce("query", 2000));
 
@@ -12,7 +12,7 @@ describe("useDebounce", () => {
 		expect(result.current[1]).toBeTruthy();
 
 		act(() => {
-			jest.runAllTimers();
+			vi.runAllTimers();
 		});
 
 		expect(result.current[1]).toBeFalsy();

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionRowRecipientIcon should render avatar 1`] = `
+exports[`TransactionRowRecipientIcon > should render avatar 1`] = `
 <DocumentFragment>
   <div
     class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-8d0u1i"
@@ -19,7 +19,7 @@ exports[`TransactionRowRecipientIcon should render avatar 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRowRecipientIcon should render compact 1`] = `
+exports[`TransactionRowRecipientIcon > should render compact 1`] = `
 <DocumentFragment>
   <span
     class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -30,15 +30,37 @@ exports[`TransactionRowRecipientIcon should render compact 1`] = `
       height="20"
       width="20"
     >
-      <svg>
-        second-signature.svg
+      <svg
+        id="second-signature"
+        viewBox="0 0 20 20"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="2"
+          transform="translate(482.484 177)"
+        >
+          <path
+            d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
+          />
+          <circle
+            cx="-476.5"
+            cy="-170.9"
+            r="5"
+          />
+        </g>
       </svg>
     </div>
   </span>
 </DocumentFragment>
 `;
 
-exports[`TransactionRowRecipientIcon should render icon 1`] = `
+exports[`TransactionRowRecipientIcon > should render icon 1`] = `
 <DocumentFragment>
   <div
     class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-14jhlj1"
@@ -49,8 +71,30 @@ exports[`TransactionRowRecipientIcon should render icon 1`] = `
       height="20"
       width="20"
     >
-      <svg>
-        second-signature.svg
+      <svg
+        id="second-signature"
+        viewBox="0 0 20 20"
+        x="0"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        y="0"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="2"
+          transform="translate(482.484 177)"
+        >
+          <path
+            d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
+          />
+          <circle
+            cx="-476.5"
+            cy="-170.9"
+            r="5"
+          />
+        </g>
       </svg>
     </div>
   </div>

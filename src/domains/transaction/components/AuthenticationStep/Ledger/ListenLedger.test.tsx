@@ -30,8 +30,8 @@ describe("ListenLedger", () => {
 	});
 
 	const Component = ({
-		onDeviceNotAvailable = jest.fn(),
-		onDeviceAvailable = jest.fn(),
+		onDeviceNotAvailable = vi.fn(),
+		onDeviceAvailable = vi.fn(),
 		transport = mockNanoSTransport(),
 	}) => {
 		const form = useForm({
@@ -55,7 +55,7 @@ describe("ListenLedger", () => {
 	};
 
 	it("should emit event on device available", async () => {
-		const onDeviceAvailable = jest.fn();
+		const onDeviceAvailable = vi.fn();
 
 		history.push(`/profiles/${profile.id()}/wallets/import/ledger`);
 
@@ -72,7 +72,7 @@ describe("ListenLedger", () => {
 	});
 
 	it("should emit event on device not available", async () => {
-		const onDeviceNotAvailable = jest.fn();
+		const onDeviceNotAvailable = vi.fn();
 
 		history.push(`/profiles/${profile.id()}/wallets/import/ledger`);
 

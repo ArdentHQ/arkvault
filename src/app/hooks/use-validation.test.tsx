@@ -7,7 +7,7 @@ import { EnvironmentProvider } from "@/app/contexts";
 import { env } from "@/utils/testing-library";
 
 const mockNetwork = {
-	coin: jest.fn,
+	coin: vi.fn,
 };
 
 describe("useValidation hook", () => {

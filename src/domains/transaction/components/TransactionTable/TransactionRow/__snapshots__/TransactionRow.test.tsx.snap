@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransactionRow should omit the currency for transactions from test networks 1`] = `
+exports[`TransactionRow > should omit the currency for transactions from test networks 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -27,8 +27,42 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -65,8 +99,22 @@ exports[`TransactionRow should omit the currency for transactions from test netw
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -181,7 +229,7 @@ exports[`TransactionRow should omit the currency for transactions from test netw
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render 1`] = `
+exports[`TransactionRow > should render 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -208,8 +256,42 @@ exports[`TransactionRow should render 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -246,8 +328,22 @@ exports[`TransactionRow should render 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -379,7 +475,7 @@ exports[`TransactionRow should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render compact skeleton 1`] = `
+exports[`TransactionRow > should render compact skeleton 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -391,18 +487,18 @@ exports[`TransactionRow should render compact skeleton 1`] = `
           <div
             class="css-14huxtf"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 16px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 16px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -412,18 +508,18 @@ exports[`TransactionRow should render compact skeleton 1`] = `
           <div
             class="css-1d4ra48"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 150px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 150px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -434,53 +530,49 @@ exports[`TransactionRow should render compact skeleton 1`] = `
             <div
               class="mr-4 flex items-center -space-x-1"
             >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
-              >
-                <span>
-                  <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
-                    ‌
-                  </span>
-                </span>
-              </div>
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
-              >
-                <span>
-                  <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
-                    ‌
-                  </span>
-                </span>
-              </div>
-            </div>
-            <span>
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 1px; height: 16px;"
+                  class="react-loading-skeleton"
+                  style="width: 44px; height: 44px; border-radius: 50%;"
                 >
                   ‌
                 </span>
+                <br />
+              </span>
+              <div
+                class="z-0 flex rounded-full ring-6 ring-theme-background"
+              >
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 44px; height: 44px; border-radius: 50%;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 1px; height: 16px;"
+              >
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -491,36 +583,32 @@ exports[`TransactionRow should render compact skeleton 1`] = `
             <div
               class="mr-4"
             >
-              <div
-                class="border-transparent ring-theme-background duration-100 css-14jhlj1"
-              >
-                <span>
-                  <span
-                    class="flex max-w-full items-center overflow-hidden leading-none"
-                  >
-                    <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 44px; height: 44px; border-radius: 50%;"
-                    >
-                      ‌
-                    </span>
-                    ‌
-                  </span>
-                </span>
-              </div>
-            </div>
-            <span>
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 1px; height: 16px;"
+                  class="react-loading-skeleton"
+                  style="width: 44px; height: 44px; border-radius: 50%;"
                 >
                   ‌
                 </span>
+                <br />
+              </span>
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 1px; height: 16px;"
+              >
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -531,31 +619,31 @@ exports[`TransactionRow should render compact skeleton 1`] = `
             <span
               class="flex h-7 items-center space-x-1 rounded border-2 border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 1px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 1px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 35px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 35px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </span>
           </div>
@@ -569,31 +657,31 @@ exports[`TransactionRow should render compact skeleton 1`] = `
             <span
               class="flex items-center space-x-1"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 0px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 0px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 35px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 35px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </span>
           </div>
@@ -604,7 +692,7 @@ exports[`TransactionRow should render compact skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render responsive 1`] = `
+exports[`TransactionRow > should render responsive 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -820,7 +908,7 @@ exports[`TransactionRow should render responsive 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render responsive 2`] = `
+exports[`TransactionRow > should render responsive 2`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1036,7 +1124,7 @@ exports[`TransactionRow should render responsive 2`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render skeleton 1`] = `
+exports[`TransactionRow > should render skeleton 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1048,18 +1136,18 @@ exports[`TransactionRow should render skeleton 1`] = `
           <div
             class="css-mx19qq"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 16px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 16px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -1069,18 +1157,18 @@ exports[`TransactionRow should render skeleton 1`] = `
           <div
             class="css-1rods8x"
           >
-            <span>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                class="react-loading-skeleton"
+                style="width: 150px; height: 16px;"
               >
-                <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 150px; height: 16px;"
-                >
-                  ‌
-                </span>
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -1091,45 +1179,45 @@ exports[`TransactionRow should render skeleton 1`] = `
             <div
               class="mr-4 flex items-center space-x-2"
             >
-              <span>
-                <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  ‌
-                </span>
-              </span>
-              <span>
-                <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  ‌
-                </span>
-              </span>
-            </div>
-            <span>
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 1px; height: 16px;"
+                  class="react-loading-skeleton"
+                  style="width: 20px; height: 20px; border-radius: 50%;"
                 >
                   ‌
                 </span>
+                <br />
+              </span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
+                <span
+                  class="react-loading-skeleton"
+                  style="width: 20px; height: 20px; border-radius: 50%;"
+                >
+                  ‌
+                </span>
+                <br />
+              </span>
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 1px; height: 16px;"
+              >
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -1140,32 +1228,32 @@ exports[`TransactionRow should render skeleton 1`] = `
             <div
               class="mr-4"
             >
-              <span>
-                <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
-                >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                  ‌
-                </span>
-              </span>
-            </div>
-            <span>
               <span
-                class="flex max-w-full items-center overflow-hidden leading-none"
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
               >
                 <span
-                  class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                  style="width: 1px; height: 16px;"
+                  class="react-loading-skeleton"
+                  style="width: 20px; height: 20px; border-radius: 50%;"
                 >
                   ‌
                 </span>
+                <br />
+              </span>
+            </div>
+            <span
+              aria-busy="true"
+              aria-live="polite"
+              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+            >
+              <span
+                class="react-loading-skeleton"
+                style="width: 1px; height: 16px;"
+              >
                 ‌
               </span>
+              <br />
             </span>
           </div>
         </td>
@@ -1176,31 +1264,31 @@ exports[`TransactionRow should render skeleton 1`] = `
             <span
               class="flex h-7 items-center space-x-1"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 1px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 1px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 35px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 35px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </span>
           </div>
@@ -1214,31 +1302,31 @@ exports[`TransactionRow should render skeleton 1`] = `
             <span
               class="flex items-center space-x-1"
             >
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 0px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 0px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
-              <span>
+              <span
+                aria-busy="true"
+                aria-live="polite"
+                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              >
                 <span
-                  class="flex max-w-full items-center overflow-hidden leading-none"
+                  class="react-loading-skeleton"
+                  style="width: 35px; height: 16px;"
                 >
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 35px; height: 16px;"
-                  >
-                    ‌
-                  </span>
                   ‌
                 </span>
+                <br />
               </span>
             </span>
           </div>
@@ -1249,7 +1337,7 @@ exports[`TransactionRow should render skeleton 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransactionRow should render with currency 1`] = `
+exports[`TransactionRow > should render with currency 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
@@ -1276,8 +1364,42 @@ exports[`TransactionRow should render with currency 1`] = `
                   height="16"
                   width="16"
                 >
-                  <svg>
-                    magnifying-glass-id.svg
+                  <svg
+                    id="magnifying-glass-id"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M19 17l-3.172-3.172"
+                      />
+                      <circle
+                        cx="13"
+                        cy="11"
+                        r="4"
+                      />
+                    </g>
+                    <path
+                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>
@@ -1314,8 +1436,22 @@ exports[`TransactionRow should render with currency 1`] = `
                   height="20"
                   width="20"
                 >
-                  <svg>
-                    sent.svg
+                  <svg
+                    id="sent"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
                   </svg>
                 </div>
               </span>

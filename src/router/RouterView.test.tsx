@@ -25,7 +25,7 @@ describe("RouterView", () => {
 	});
 
 	it("should scroll to top on route change", () => {
-		const windowSpy = jest.spyOn(window, "scrollTo");
+		const windowSpy = vi.spyOn(window, "scrollTo");
 
 		const history = createHashHistory();
 		history.push("/test");
@@ -48,7 +48,7 @@ describe("RouterView", () => {
 	});
 
 	it("should not scroll to top when route does not change", () => {
-		const windowSpy = jest.spyOn(window, "scrollTo");
+		const windowSpy = vi.spyOn(window, "scrollTo");
 
 		const history = createHashHistory();
 		history.push("/test");
@@ -66,7 +66,7 @@ describe("RouterView", () => {
 	});
 
 	it("should block /test router", () => {
-		const handler = jest.fn(({ location }: MiddlewareParameters) => location.pathname !== "/test");
+		const handler = vi.fn(({ location }: MiddlewareParameters) => location.pathname !== "/test");
 
 		const testMiddleware: Middleware = { handler };
 		const history = createHashHistory();
@@ -88,7 +88,7 @@ describe("RouterView", () => {
 	});
 
 	it("should block /test route and redirect to a custom url", () => {
-		const handler = jest.fn(({ location, redirect }: MiddlewareParameters) => {
+		const handler = vi.fn(({ location, redirect }: MiddlewareParameters) => {
 			if (location.pathname === "/test") {
 				redirect("/custom");
 				return false;

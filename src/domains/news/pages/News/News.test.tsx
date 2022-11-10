@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/require-await */
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { vi } from "vitest";
 import { News } from "./News";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import filteredFixture from "@/tests/fixtures/news/filtered.json";
+import emptyPageFixture from "@/tests/fixtures/news/empty-response.json";
 import page1Fixture from "@/tests/fixtures/news/page-1.json";
 import page2Fixture from "@/tests/fixtures/news/page-2.json";
 import {
@@ -20,16 +21,17 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
+import { server, requestMock } from "@/tests/mocks/server";
+
+const newsBasePath = "https://news.arkvault.io/api";
 
 const history = createHashHistory();
 const newsURL = `/profiles/${getDefaultProfileId()}/news`;
 
 const translations = buildTranslations();
 
-jest.setTimeout(30_000);
-
-const firstPageReply = () => {
-	const { meta, data } = page1Fixture;
+const pageReply = (source: any) => {
+	const { meta, data } = source;
 	return {
 		data: data.slice(0, 1),
 		meta,
@@ -57,33 +59,9 @@ describe("News", () => {
 	};
 
 	beforeAll(() => {
-		nock.disableNetConnect();
+		server.use(requestMock(`${newsBasePath}`, pageReply(page1Fixture)));
 
-		nock("https://news.arkvault.io")
-			.get("/api?coins=ARK")
-			.reply(200, firstPageReply)
-			.get("/api?coins=ARK&page=1")
-			.reply(200, firstPageReply)
-			.get("/api")
-			.query((parameters) => !!parameters.categories)
-			.reply(200, filteredFixture)
-			.get("/api?coins=ARK&query=NoResult&page=1")
-			.reply(200, require("tests/fixtures/news/empty-response.json"))
-			.persist();
-
-		nock("https://news.arkvault.io")
-			.get("/api?coins=ARK&page=2")
-			.replyWithError({ code: "ETIMEDOUT" })
-			.get("/api?coins=ARK&page=2")
-			.reply(200, () => {
-				const { meta, data } = page2Fixture;
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			});
-
-		jest.spyOn(window, "scrollTo").mockImplementation();
+		vi.spyOn(window, "scrollTo").mockImplementation(vi.fn());
 	});
 
 	beforeEach(() => {
@@ -100,7 +78,12 @@ describe("News", () => {
 	});
 
 	it("should show error toast if news cannot be fetched", async () => {
-		const toastSpy = jest.spyOn(toasts, "error");
+		server.use(
+			requestMock(newsBasePath, pageReply(page1Fixture), { query: { page: 1 } }),
+			requestMock(newsBasePath, { code: "ETIMEDOUT" }, { status: 500 }),
+		);
+
+		const toastSpy = vi.spyOn(toasts, "error");
 
 		const { asFragment } = renderPage();
 
@@ -118,6 +101,11 @@ describe("News", () => {
 	});
 
 	it("should navigate on next and previous pages", async () => {
+		server.use(
+			requestMock(newsBasePath, pageReply(page1Fixture), { query: { page: 1 } }),
+			requestMock(newsBasePath, pageReply(page2Fixture)),
+		);
+
 		renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
@@ -136,6 +124,8 @@ describe("News", () => {
 	});
 
 	it("should show no results screen", async () => {
+		server.use(requestMock(newsBasePath, emptyPageFixture, { query: { query: "NoResult" } }));
+
 		renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
@@ -155,6 +145,13 @@ describe("News", () => {
 	});
 
 	it("should filter results based on category query and asset", async () => {
+		server.use(
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Emergency,Marketing,Technical" } }),
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Marketing,Technical" } }),
+			requestMock(newsBasePath, filteredFixture, { query: { categories: "Technical" } }),
+			requestMock(newsBasePath, pageReply(page1Fixture)),
+		);
+
 		const { asFragment } = renderPage();
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
@@ -200,7 +197,7 @@ describe("News", () => {
 	it("should show warning toast when trying to deselect all categories", async () => {
 		renderPage();
 
-		const toastSpy = jest.spyOn(toasts, "warning").mockImplementation();
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
 		await waitFor(() => expect(screen.getAllByTestId("NewsCard")).toHaveLength(1));
 

@@ -75,7 +75,7 @@ export const Address = ({
 	const availableWidth = useMemo(() => {
 		if (width) {
 			if (orientation === "horizontal") {
-				/* istanbul ignore next */
+				/* istanbul ignore next -- @preserve */
 				return width - (aliasReference?.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0);
 			} else {
 				return width;

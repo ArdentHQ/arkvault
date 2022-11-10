@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/require-await */
-import "jest-extended";
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -8,7 +6,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SendTransfer } from "./SendTransfer";
-import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
 	env,
@@ -27,7 +24,7 @@ const formStepID = "SendTransfer__form-step";
 
 const history = createHashHistory();
 
-jest.mock("@/utils/delay", () => ({
+vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
@@ -45,15 +42,13 @@ describe("SendTransfer MultiPayment", () => {
 
 	it("should select two recipients", async () => {
 		const transferURL = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-transfer`;
-		const profileSetCoinMock = jest.spyOn(profile.coins(), "set").mockReturnValue(wallet.coin());
+		const profileSetCoinMock = vi.spyOn(profile.coins(), "set").mockReturnValue(wallet.coin());
 
 		history.push(transferURL);
 
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
-				<LedgerProvider>
-					<SendTransfer />
-				</LedgerProvider>
+				<SendTransfer />
 			</Route>,
 			{
 				history,
@@ -61,7 +56,7 @@ describe("SendTransfer MultiPayment", () => {
 			},
 		);
 
-		const coinValidateMock = jest.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
+		const coinValidateMock = vi.spyOn(wallet.coin().address(), "validate").mockResolvedValue(true);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 

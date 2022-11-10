@@ -17,6 +17,7 @@ import {
 	renderResponsiveWithRoute,
 	screen,
 	waitFor,
+	triggerMessageSignOnce,
 } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -54,13 +55,17 @@ describe("VerifyMessage", () => {
 
 		const signatory = await wallet.coin().signatory().mnemonic(MNEMONICS[0]);
 
+		await triggerMessageSignOnce(wallet);
+
 		signedMessage = await wallet.message().sign({
 			message: signedMessageText,
 			signatory,
 		});
 	});
 
-	beforeEach(() => history.push(walletUrl));
+	beforeEach(() => {
+		history.push(walletUrl);
+	});
 
 	it.each(["xs", "lg"])("should render (%s)", async (breakpoint) => {
 		const { asFragment } = renderResponsiveWithRoute(
@@ -220,7 +225,7 @@ describe("VerifyMessage", () => {
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.FORM_STEP.TITLE);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
 
@@ -262,7 +267,7 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		const messageSpy = jest.spyOn(wallet.message(), "verify").mockResolvedValue(false);
+		const messageSpy = vi.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
 		userEvent.paste(signatoryInput(), signedMessage.signatory);
 		userEvent.paste(messageInput(), signedMessage.message);
@@ -290,7 +295,7 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("error"));
+		const messageSpy = vi.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("error"));
 
 		userEvent.paste(signatoryInput(), signedMessage.signatory);
 		userEvent.paste(messageInput(), signedMessage.message);
@@ -304,7 +309,7 @@ describe("VerifyMessage", () => {
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 
-		const historySpy = jest.spyOn(history, "push");
+		const historySpy = vi.spyOn(history, "push");
 
 		userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
 

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`TransferLedgerReview should render 1`] = `
+exports[`TransferLedgerReview > should render 1`] = `
 <DocumentFragment>
   <div
     class="no-ligatures css-19rivvh"
@@ -28,8 +28,25 @@ exports[`TransferLedgerReview should render 1`] = `
               height="10"
               width="10"
             >
-              <svg>
-                question-mark-small.svg
+              <svg
+                id="question-mark-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -96,8 +113,25 @@ exports[`TransferLedgerReview should render 1`] = `
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -123,7 +157,7 @@ exports[`TransferLedgerReview should render 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TransferLedgerReview should render skeleton while loading expiration 1`] = `
+exports[`TransferLedgerReview > should render skeleton while loading expiration 1`] = `
 <DocumentFragment>
   <div
     class="no-ligatures css-19rivvh"
@@ -151,8 +185,25 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
               height="10"
               width="10"
             >
-              <svg>
-                question-mark-small.svg
+              <svg
+                id="question-mark-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M5 9h0M3.2 2.8C3.2 1.9 3.9 1 5 1s1.8.8 1.8 1.8c0 .8-.4 1.5-1.3 1.7-.3.2-.5.5-.5.8v.9"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -165,18 +216,18 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
           class="my-0.5 flex"
           data-testid="TransferLedgerReview__expiration-skeleton"
         >
-          <span>
+          <span
+            aria-busy="true"
+            aria-live="polite"
+            class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+          >
             <span
-              class="flex max-w-full items-center overflow-hidden leading-none"
+              class="react-loading-skeleton"
+              style="width: 80px; height: 16px;"
             >
-              <span
-                class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 80px; height: 16px;"
-              >
-                ‌
-              </span>
               ‌
             </span>
+            <br />
           </span>
         </span>
       </div>
@@ -236,8 +287,25 @@ exports[`TransferLedgerReview should render skeleton while loading expiration 1`
               height="16"
               width="16"
             >
-              <svg>
-                plus.svg
+              <svg
+                id="plus"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M1 10h18M10 1v18"
+                  />
+                </g>
               </svg>
             </div>
           </div>

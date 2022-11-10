@@ -9,7 +9,7 @@ import { translations } from "@/domains/profile/i18n";
 import { env, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
-let mockHasCompletedTutorial: jest.SpyInstance<boolean, []>;
+let mockHasCompletedTutorial: vi.SpyInstance<boolean, []>;
 
 const Wrapper = () => (
 	<ConfigurationProvider defaultConfiguration={{ profileIsSyncing: false }}>
@@ -25,7 +25,7 @@ describe("WelcomeModal", () => {
 	});
 
 	beforeEach(() => {
-		mockHasCompletedTutorial = jest.spyOn(profile, "hasCompletedIntroductoryTutorial");
+		mockHasCompletedTutorial = vi.spyOn(profile, "hasCompletedIntroductoryTutorial");
 	});
 
 	afterEach(() => {

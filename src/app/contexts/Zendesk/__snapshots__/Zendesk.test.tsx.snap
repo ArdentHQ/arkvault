@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Zendesk Context Provider should render provider 1`] = `
+exports[`Zendesk Context Provider > should render provider 1`] = `
 <DocumentFragment>
   <span
     data-testid="ZendeskProvider"

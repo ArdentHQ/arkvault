@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
@@ -9,6 +8,7 @@ import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
 import { env, getDefaultProfileId, render, screen, waitFor, mockNanoXTransport } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
 
 const nextSelector = () => screen.getByTestId("Paginator__continue-button");
 const backSelector = () => screen.getByTestId("Paginator__back-button");
@@ -16,42 +16,10 @@ const backSelector = () => screen.getByTestId("Paginator__back-button");
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
-	let publicKeyPaths: Map<string, string>;
-	let onClickEditWalletName: jest.Mock;
-	let getVersionSpy: jest.SpyInstance;
+	let onClickEditWalletName: vi.Mock;
+	let getVersionSpy: vi.SpyInstance;
 
-	beforeAll(() => {
-		publicKeyPaths = new Map<string, string>();
-
-		nock("https://ark-test.arkvault.io/api")
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [
-					{
-						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-						balance: "2",
-					},
-					{
-						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
-						balance: "3",
-					},
-				],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			})
-			.get("/wallets")
-			.query((parameters) => !!parameters.address)
-			.reply(200, {
-				data: [],
-				meta: {},
-			});
-	});
+	let publicKeyPaths = new Map<string, string>();
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -60,13 +28,13 @@ describe("LedgerTabs", () => {
 
 		wallet = profile.wallets().first();
 
-		getVersionSpy = jest
+		getVersionSpy = vi
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
 		await wallet.synchroniser().identity();
 
-		onClickEditWalletName = jest.fn();
+		onClickEditWalletName = vi.fn();
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -81,8 +49,30 @@ describe("LedgerTabs", () => {
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
 
-		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
+		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+	});
+
+	beforeEach(() => {
+		server.use(
+			requestMockOnce("https://ark-test.arkvault.io/api/wallets", {
+				data: [
+					{
+						address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
+						balance: "2",
+					},
+					{
+						address: "DSyG9hK9CE8eyfddUoEvsga4kNVQLdw2ve",
+						balance: "3",
+					},
+				],
+				meta: {},
+			}),
+			requestMock("https://ark-test.arkvault.io/api/wallets", {
+				data: [],
+				meta: {},
+			}),
+		);
 	});
 
 	afterAll(() => {
@@ -124,11 +114,11 @@ describe("LedgerTabs", () => {
 
 	it("should cancel and redirect to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={3} />, { route: `/profiles/${profile.id()}` });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -136,7 +126,9 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(backSelector());
 
-		await expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
+		});
 
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
@@ -151,16 +143,16 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should click back and go to network step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
 
 		userEvent.click(backSelector());
 
@@ -168,22 +160,22 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 
 	it("should render with listen ledger step as default active step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();
-		const getPublicKeySpy = jest
+		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		render(<Component />, { route: `/profiles/${profile.id()}`, withProviders: true });
+		render(<Component />, { route: `/profiles/${profile.id()}` });
 
 		// eslint-disable-next-line testing-library/prefer-explicit-assert
 		await screen.findByTestId("LedgerAuthStep");
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
-		jest.restoreAllMocks();
+		vi.restoreAllMocks();
 	});
 });
