@@ -150,6 +150,8 @@ export const AddParticipant = ({
 					<FormField name="address">
 						<FormLabel label={t("TRANSACTION.MULTISIGNATURE.PARTICIPANT")} />
 						<SelectRecipient
+							contactSearchTitle={t("TRANSACTION.MULTISIGNATURE.SELECT_PARTICIPANT_TITLE")}
+							contactSearchDescription={t("TRANSACTION.MULTISIGNATURE.SELECT_PARTICIPANT_DESCRIPTION")}
 							exceptMultiSignature
 							network={wallet.network()}
 							address={address}

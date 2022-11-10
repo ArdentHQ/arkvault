@@ -200,6 +200,8 @@ export const translations = {
 	MULTIPLE: "Multiple",
 	MULTISIGNATURE: {
 		ADD_PARTICIPANT: "Add Participant",
+		SELECT_PARTICIPANT_TITLE: "Select Participant",
+		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
 		AWAITING_BY: "by",
 		AWAITING_CONFIRMATIONS: "Awaiting confirmations",
 		AWAITING_FINAL_SIGNATURE: "Awaiting final signature",
