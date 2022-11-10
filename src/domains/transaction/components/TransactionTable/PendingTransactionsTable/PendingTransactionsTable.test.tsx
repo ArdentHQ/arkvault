@@ -7,7 +7,16 @@ import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic, render, screen, waitFor, renderResponsive, within } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	getDefaultWalletMnemonic,
+	render,
+	screen,
+	waitFor,
+	renderResponsive,
+	within,
+} from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
