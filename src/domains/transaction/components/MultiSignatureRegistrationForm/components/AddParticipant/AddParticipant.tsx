@@ -46,7 +46,14 @@ export const AddParticipant = ({
 
 	useEffect(() => {
 		register("participantAlias");
-	}, [register]);
+		register("address", {
+			required: true,
+			validate: {
+				findByAddress,
+				findDuplicate,
+			},
+		});
+	}, [register, participants]);
 
 	useEffect(() => {
 		if (defaultParticipants.length === 0) {
@@ -156,13 +163,6 @@ export const AddParticipant = ({
 							network={wallet.network()}
 							address={address}
 							profile={profile}
-							ref={register({
-								required: true,
-								validate: {
-									findByAddress,
-									findDuplicate,
-								},
-							})}
 							onChange={(address, alias) => {
 								setValue("address", address, { shouldDirty: true });
 								setValue("participantAlias", alias.alias);
