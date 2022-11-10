@@ -224,6 +224,8 @@ export const translations = {
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
 		REMOVE_NOT_ALLOWED: "Your own address cannot be removed",
+		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
+		SELECT_PARTICIPANT_TITLE: "Select Participant",
 	},
 	NAME: "Name",
 	NETWORK: "Network",
