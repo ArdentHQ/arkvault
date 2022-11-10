@@ -209,7 +209,6 @@ describe("ConfirmRemovePendingTransaction", () => {
 					transaction={multiSignatureFixture}
 					onRemove={onRemove}
 				/>
-				,
 			</Wrapper>,
 		);
 
