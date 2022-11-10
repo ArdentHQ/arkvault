@@ -7,7 +7,7 @@ import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import * as themeUtils from "@/utils/theme";
-import { env, getDefaultProfileId, render, screen, waitFor, renderResponsive, within } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletMnemonic, render, screen, waitFor, renderResponsive, within } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
@@ -695,6 +695,14 @@ describe("Signed Transaction Table", () => {
 		expect(submitButton()).toBeInTheDocument();
 		expect(cancelButton()).toBeInTheDocument();
 
+		expect(submitButton()).toBeDisabled();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
+
 		userEvent.click(submitButton());
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
@@ -732,6 +740,14 @@ describe("Signed Transaction Table", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
 		expect(cancelButton()).toBeInTheDocument();
+
+		expect(submitButton()).toBeDisabled();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => {
+			expect(submitButton()).toBeEnabled();
+		});
 
 		userEvent.click(submitButton());
 
