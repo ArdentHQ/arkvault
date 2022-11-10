@@ -90,6 +90,8 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 			placeholder,
 			exceptMultiSignature,
 			onChange,
+			contactSearchTitle,
+			contactSearchDescription,
 		}: SelectRecipientProperties,
 		reference,
 	) => {
@@ -227,6 +229,8 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 				</div>
 
 				<SearchRecipient
+					title={contactSearchTitle}
+					description={contactSearchDescription}
 					isOpen={isRecipientSearchOpen}
 					recipients={allAddresses}
 					onAction={onAction}
