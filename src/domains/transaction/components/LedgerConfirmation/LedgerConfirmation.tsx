@@ -11,7 +11,7 @@ interface LedgerConfirmationProperties {
 	noHeading?: boolean;
 }
 
-export const LedgerConfirmation = ({ children, detailsHeading, noDescription, noHeading }: LedgerConfirmationProperties) => {
+export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: LedgerConfirmationProperties) => {
 	const { t } = useTranslation();
 
 	return (
