@@ -18,11 +18,12 @@ export const TableRemoveButton = ({
 	...properties
 }: TableRemoveButtonProperties) => {
 	const handleClick = (event: MouseEvent) => {
-		if (isDisabled) {
-			return;
-		}
+		event.stopPropagation();
+		event.preventDefault();
 
-		onClick(event);
+		if (!isDisabled) {
+			onClick(event);
+		}
 	};
 
 	if (isCompact) {
