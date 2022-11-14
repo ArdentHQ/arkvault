@@ -12,9 +12,7 @@ const preSteps = {
 		await visitWelcomeScreen(t);
 		await goToProfile(t);
 		await importWalletByAddress(t, "DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq");
-		await t.click(Selector('[data-testid="UserMenu"]'));
-		await t.expect(Selector('[data-testid="dropdown__option--1"]').withText(translations.COMMON.VOTES).exists).ok();
-		await t.click(Selector('[data-testid="dropdown__option--1"]').withText(translations.COMMON.VOTES));
+		await t.click(Selector("a").withText(translations.COMMON.VOTES));
 		await t.expect(Selector("h1").withText(translations.VOTE.VOTES_PAGE.TITLE).exists).ok();
 	},
 };
