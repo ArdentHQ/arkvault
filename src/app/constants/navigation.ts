@@ -14,10 +14,6 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 		title: t("COMMON.EXCHANGE"),
 	},
-	{
-		mountPath: (profileId) => generatePath(ProfilePaths.News, { profileId }),
-		title: t("COMMON.NEWS"),
-	},
 ];
 
 export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [

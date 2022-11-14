@@ -21,21 +21,6 @@ vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),
 }));
 
-vi.mock("@/domains/news/routing", async () => {
-	const page = await vi.importActual("@/domains/news/pages/News");
-	const { ProfilePaths } = await vi.importActual("@/router/paths");
-
-	return {
-		NewsRoutes: [
-			{
-				component: page.default,
-				exact: true,
-				path: ProfilePaths.News,
-			},
-		],
-	};
-});
-
 vi.mock("@/domains/profile/routing", async () => {
 	const page = await vi.importActual("@/domains/profile/pages/Welcome");
 	const { ProfilePaths } = await vi.importActual("@/router/paths");
@@ -144,7 +129,7 @@ describe("App Main", () => {
 
 	it("should fail to sync and retry", async () => {
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
-		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
+		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 
 		const profile = env.profiles().first();
 		const resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
@@ -161,7 +146,7 @@ describe("App Main", () => {
 		});
 
 		render(
-			<Route path="/profiles/:profileId/news">
+			<Route path="/profiles/:profileId/exchange">
 				<Main />
 			</Route>,
 			{
@@ -194,11 +179,11 @@ describe("App Main", () => {
 		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
 
-		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
+		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
 		render(
-			<Route path="/profiles/:profileId/news">
+			<Route path="/profiles/:profileId/exchange">
 				<Main />
 			</Route>,
 			{
@@ -224,7 +209,7 @@ describe("App Main", () => {
 			return useProfileSynchronizer(useProfileSynchronizer);
 		});
 
-		const profileUrl = `/profiles/${getDefaultProfileId()}/news`;
+		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 		history.push(profileUrl);
 
 		render(

@@ -8,7 +8,6 @@ import {
 	exchangeHandlers,
 	mainnetHandlers,
 	miscHandlers,
-	newsHandlers,
 } from "./handlers";
 
 export const requestMock = (path: string, data: undefined | string | object, options = {}) => {
@@ -60,7 +59,6 @@ const restHandlers = [
 	...exchangeHandlers,
 	...mainnetHandlers,
 	...miscHandlers,
-	...newsHandlers,
 ];
 
 export const server = setupServer(...restHandlers);
