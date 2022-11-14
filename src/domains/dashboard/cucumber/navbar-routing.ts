@@ -1,7 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, getLocation, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, getLocation, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();

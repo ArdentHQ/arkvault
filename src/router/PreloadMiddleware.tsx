@@ -23,13 +23,7 @@ const getPreloadableRoutes = (path: string): RouteItem[] => {
 	}
 
 	if (path.startsWith("/profiles")) {
-		return [
-			...ExchangeRoutes,
-			...MessageRoutes,
-			...WalletRoutes,
-			...TransactionRoutes,
-			...VoteRoutes,
-		];
+		return [...ExchangeRoutes, ...MessageRoutes, ...WalletRoutes, ...TransactionRoutes, ...VoteRoutes];
 	}
 
 	return [];
