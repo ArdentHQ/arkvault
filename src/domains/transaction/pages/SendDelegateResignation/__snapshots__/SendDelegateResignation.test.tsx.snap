@@ -103,6 +103,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -1084,6 +1108,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -2042,6 +2090,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -2915,6 +2987,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -3736,6 +3832,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                 title="Exchange"
               >
                 Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -4684,6 +4804,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -5546,6 +5690,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 title="Exchange"
               >
                 Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -6831,6 +6999,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -7987,6 +8179,30 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 title="Exchange"
               >
                 Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>

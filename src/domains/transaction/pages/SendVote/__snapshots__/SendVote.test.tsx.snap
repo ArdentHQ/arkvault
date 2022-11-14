@@ -230,6 +230,30 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -1489,6 +1513,30 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                 Exchange
               </a>
             </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -2275,6 +2323,30 @@ exports[`SendVote > should show error step and go back 1`] = `
                 title="Exchange"
               >
                 Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
