@@ -226,18 +226,6 @@ exports[`Servers Settings > should render servers settings 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -1538,18 +1526,6 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -3817,18 +3793,6 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -5956,18 +5920,6 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -7684,18 +7636,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -9963,18 +9903,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -11829,18 +11757,6 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -13950,18 +13866,6 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -16214,18 +16118,6 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -18065,18 +17957,6 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>

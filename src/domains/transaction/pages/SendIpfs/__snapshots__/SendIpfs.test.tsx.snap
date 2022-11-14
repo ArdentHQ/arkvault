@@ -103,18 +103,6 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -2417,18 +2405,6 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -3687,18 +3663,6 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -4963,18 +4927,6 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -6112,18 +6064,6 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -7080,18 +7020,6 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>

@@ -228,18 +228,6 @@ exports[`General Settings > should disable submit button when profile is not res
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -2212,18 +2200,6 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -4230,18 +4206,6 @@ exports[`General Settings > should render 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -6210,18 +6174,6 @@ exports[`General Settings > should show identicon when removing image if name is
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
@@ -8194,18 +8146,6 @@ exports[`General Settings > should update profile 1`] = `
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -10176,18 +10116,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 Exchange
               </a>
             </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
-              </a>
-            </li>
           </ul>
           <div
             class="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -12155,18 +12083,6 @@ exports[`General Settings > should update the avatar when removing focus from na
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
-              >
-                News
               </a>
             </li>
           </ul>
