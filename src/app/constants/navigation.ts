@@ -14,21 +14,17 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 		title: t("COMMON.EXCHANGE"),
 	},
+	{
+		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
+		title: t("COMMON.CONTACTS"),
+	},
+	{
+		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
+		title: t("COMMON.VOTES"),
+	},
 ];
 
 export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [
-	{
-		label: t("COMMON.CONTACTS"),
-		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
-		title: "contracts",
-		value: "contacts",
-	},
-	{
-		label: t("COMMON.VOTES"),
-		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
-		title: "votes",
-		value: "votes",
-	},
 	{
 		label: t("COMMON.SETTINGS"),
 		mountPath: (profileId) => generatePath(ProfilePaths.Settings, { profileId }),
@@ -46,13 +42,13 @@ export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBa
 	},
 	{
 		label: t("COMMON.CONTACT_US"),
-		mountPath: () => `/`,
+		mountPath: () => "/",
 		title: "contact",
 		value: "contact",
 	},
 	{
 		label: t("COMMON.SIGN_OUT"),
-		mountPath: () => `/`,
+		mountPath: () => "/",
 		title: "sign-out",
 		value: "sign-out",
 	},

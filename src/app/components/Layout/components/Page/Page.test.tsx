@@ -81,7 +81,7 @@ describe("Page", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["Contacts", "Votes", "Settings", "Documentation"])(
+	it.each(["Settings", "Documentation"])(
 		"should handle '%s' click on user actions dropdown",
 		async (label) => {
 			const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
