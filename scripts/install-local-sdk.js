@@ -20,7 +20,6 @@ packageJson.dependencies["@ardenthq/sdk-cryptography"] = join(sdkPath, "packages
 packageJson.dependencies["@ardenthq/sdk-helpers"] = join(sdkPath, "packages/helpers");
 packageJson.dependencies["@ardenthq/sdk-intl"] = join(sdkPath, "packages/intl");
 packageJson.dependencies["@ardenthq/sdk-ledger"] = join(sdkPath, "packages/ledger");
-packageJson.dependencies["@ardenthq/sdk-news"] = join(sdkPath, "packages/news");
 packageJson.dependencies["@ardenthq/sdk-profiles"] = join(sdkPath, "packages/profiles");
 
 fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, "\t"));

@@ -3,7 +3,6 @@ import { ContactRoutes } from "@/domains/contact/routing";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
 import { MessageRoutes } from "@/domains/message/routing";
-import { NewsRoutes } from "@/domains/news/routing";
 import { SettingRoutes } from "@/domains/setting/routing";
 import { TransactionRoutes } from "@/domains/transaction/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
@@ -24,14 +23,7 @@ const getPreloadableRoutes = (path: string): RouteItem[] => {
 	}
 
 	if (path.startsWith("/profiles")) {
-		return [
-			...ExchangeRoutes,
-			...MessageRoutes,
-			...NewsRoutes,
-			...WalletRoutes,
-			...TransactionRoutes,
-			...VoteRoutes,
-		];
+		return [...ExchangeRoutes, ...MessageRoutes, ...WalletRoutes, ...TransactionRoutes, ...VoteRoutes];
 	}
 
 	return [];

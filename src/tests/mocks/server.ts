@@ -2,14 +2,7 @@ import type { ResponseComposition, DefaultBodyType, RestContext, PathParams, Res
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import {
-	cryptoCompareHandlers,
-	devnetHandlers,
-	exchangeHandlers,
-	mainnetHandlers,
-	miscHandlers,
-	newsHandlers,
-} from "./handlers";
+import { cryptoCompareHandlers, devnetHandlers, exchangeHandlers, mainnetHandlers, miscHandlers } from "./handlers";
 
 export const requestMock = (path: string, data: undefined | string | object, options = {}) => {
 	const requestOptions = {
@@ -60,7 +53,6 @@ const restHandlers = [
 	...exchangeHandlers,
 	...mainnetHandlers,
 	...miscHandlers,
-	...newsHandlers,
 ];
 
 export const server = setupServer(...restHandlers);
