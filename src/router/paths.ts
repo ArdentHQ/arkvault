@@ -3,7 +3,6 @@ export enum ProfilePaths {
 	// Navigation Menu
 	Dashboard = "/profiles/:profileId/dashboard",
 	Exchange = "/profiles/:profileId/exchange",
-	News = "/profiles/:profileId/news",
 	// Contacts
 	Contacts = "/profiles/:profileId/contacts",
 	// Wallet

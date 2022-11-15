@@ -24,7 +24,6 @@ const directories = [
 	"domains/exchange",
 	"domains/message",
 	"domains/network",
-	"domains/news",
 	"domains/profile",
 	"domains/setting",
 	"domains/transaction",

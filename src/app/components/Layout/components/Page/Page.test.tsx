@@ -81,42 +81,39 @@ describe("Page", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["Contacts", "Votes", "Settings", "Documentation"])(
-		"should handle '%s' click on user actions dropdown",
-		async (label) => {
-			const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
-			const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+	it.each(["Settings", "Documentation"])("should handle '%s' click on user actions dropdown", async (label) => {
+		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
+		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<Page>{}</Page>
-				</Route>,
-				{
-					history,
-					route: dashboardURL,
-				},
-			);
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Page>{}</Page>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
 
-			await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
+		await expect(screen.findByTestId("UserMenu")).resolves.toBeVisible();
 
-			const toggle = screen.getByTestId("UserMenu");
+		const toggle = screen.getByTestId("UserMenu");
 
-			userEvent.click(toggle);
+		userEvent.click(toggle);
 
-			await expect(screen.findByText(label)).resolves.toBeVisible();
+		await expect(screen.findByText(label)).resolves.toBeVisible();
 
-			userEvent.click(await screen.findByText(label));
+		userEvent.click(await screen.findByText(label));
 
-			if (label === "Documentation") {
-				expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
-			} else {
-				expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
-			}
+		if (label === "Documentation") {
+			expect(windowSpy).toHaveBeenCalledWith("https://arkvault.io/docs", "_blank");
+		} else {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/${label.toLowerCase()}`);
+		}
 
-			windowSpy.mockRestore();
-			historySpy.mockRestore();
-		},
-	);
+		windowSpy.mockRestore();
+		historySpy.mockRestore();
+	});
 
 	it("should handle 'Sign Out' click on user actions dropdown", async () => {
 		render(
