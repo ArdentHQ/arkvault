@@ -25,4 +25,5 @@ if (process.env.NODE_ENV && ["development", "production"].includes(process.env.N
 	}
 }
 
+console.log("rendering with react dom");
 ReactDOM.createRoot(document.querySelector("#root") as Element | DocumentFragment).render(<App />);

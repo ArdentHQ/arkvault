@@ -27,7 +27,7 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
   '@testing-library/react-hooks': ^8.0.1
-  '@testing-library/user-event': ^14.4.3
+  '@testing-library/user-event': ^13.5.0
   '@tippyjs/react': ^4.2.5
   '@types/dlv': ^1.1.2
   '@types/postcss-import': ^14.0.0
@@ -168,6 +168,7 @@ dependencies:
   react-router: 6.4.3_react@18.2.0
   react-router-dom: 5.3.4_react@18.2.0
   react-table: 7.8.0_react@18.2.0
+  react-test-renderer: 18.2.0_react@18.2.0
   react-toastify: 9.1.1_biqbaboplfbrettd7655fr4n2y
   react-visibility-sensor: 5.1.1_biqbaboplfbrettd7655fr4n2y
   react-zendesk: 0.1.13
@@ -190,7 +191,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@testing-library/react-hooks': 8.0.1_djah6xjkh3i2bchfafvsnwdbb4
-  '@testing-library/user-event': 14.4.3_aaq3sbffpfe3jnxzm2zngsddei
+  '@testing-library/user-event': 13.5.0_aaq3sbffpfe3jnxzm2zngsddei
   '@types/postcss-import': 14.0.0
   '@types/react': 18.0.25
   '@types/react-datepicker': 4.8.0_biqbaboplfbrettd7655fr4n2y
@@ -233,7 +234,6 @@ devDependencies:
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   prop-types: 15.8.1
   react-router-config: 5.1.1_n6chwcsdq6puvu4oljeyhosdga
-  react-test-renderer: 18.2.0_react@18.2.0
   rollup: 3.2.5
   rollup-plugin-visualizer: 5.8.3_rollup@3.2.5
   tailwindcss: 3.2.1_postcss@8.4.18
@@ -2725,12 +2725,13 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@testing-library/user-event/14.4.3_aaq3sbffpfe3jnxzm2zngsddei:
-    resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
-    engines: {node: '>=12', npm: '>=6'}
+  /@testing-library/user-event/13.5.0_aaq3sbffpfe3jnxzm2zngsddei:
+    resolution: {integrity: sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==}
+    engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
+      '@babel/runtime': 7.20.1
       '@testing-library/dom': 8.19.0
     dev: true
 
@@ -7049,7 +7050,7 @@ packages:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
     engines: {node: '>=10'}
     dependencies:
-      chalk: 4.1.1
+      chalk: 4.1.2
       is-unicode-supported: 0.1.0
     dev: true
 
@@ -7586,7 +7587,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.1
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.7.0
       is-interactive: 1.0.0
@@ -8211,7 +8212,6 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
-    dev: true
 
   /react-linkify/1.0.0-alpha:
     resolution: {integrity: sha512-7gcIUvJkAXXttt1fmBK9cwn+1jTa4hbKLGCZ9J1U6EOkyb2/+LKL1Z28d9rtDLMnpvImlNlLPdTPooorl5cpmg==}
@@ -8363,7 +8363,6 @@ packages:
       object-assign: 4.1.1
       react: 18.2.0
       react-is: 18.2.0
-    dev: true
 
   /react-table/7.8.0_react@18.2.0:
     resolution: {integrity: sha512-hNaz4ygkZO4bESeFfnfOft73iBUj8K5oKi1EcSHPAibEydfsX2MyU6Z8KCr3mv3C9Kqqh71U+DhZkFvibbnPbA==}
@@ -8382,7 +8381,6 @@ packages:
       react-is: 18.2.0
       react-shallow-renderer: 16.15.0_react@18.2.0
       scheduler: 0.23.0
-    dev: true
 
   /react-toastify/9.1.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-pkFCla1z3ve045qvjEmn2xOJOy4ZciwRXm1oMPULVkELi5aJdHCN/FHnuqXq8IwGDLB7PPk2/J6uP9D8ejuiRw==}

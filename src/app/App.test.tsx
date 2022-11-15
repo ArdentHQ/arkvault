@@ -16,6 +16,7 @@ import {
 	render,
 	screen,
 	waitFor,
+	act,
 } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {
@@ -217,7 +218,9 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.paste(passwordInput(), "password");
+		act(() => {
+			userEvent.type(passwordInput(), "password");
+		});
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -284,7 +287,7 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.paste(passwordInput(), "password");
+		userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");
@@ -320,7 +323,7 @@ describe("App", () => {
 			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.paste(passwordInput(), "password");
+		userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
 			expect(passwordInput()).toHaveValue("password");

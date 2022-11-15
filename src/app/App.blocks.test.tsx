@@ -12,6 +12,7 @@ import {
 	screen,
 	waitFor,
 	within,
+	act,
 } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import * as useProfileSynchronizerHook from "@/app/hooks/use-profile-synchronizer";
@@ -104,13 +105,22 @@ describe("App Router", () => {
 
 		userEvent.click(screen.getByTestId("ConfirmationModal__no-button"));
 
-		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
-		expect(screen.getByTestId("prompt_action")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("prompt_action")).toBeInTheDocument();
+		});
 
 		userEvent.click(screen.getByTestId("prompt_action"));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("ConfirmationModal__yes-button")).toBeInTheDocument();
+		});
+
 		userEvent.click(screen.getByTestId("ConfirmationModal__yes-button"));
 
-		expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("ConfirmationModal")).not.toBeInTheDocument();
+		});
 	});
 });
 
