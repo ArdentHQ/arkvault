@@ -58,7 +58,6 @@ import { ReactComponent as WorldMap } from "./world-map.svg";
 import { wallet } from "@/domains/wallet/images";
 import { transaction } from "@/domains/transaction/images";
 import { profile } from "@/domains/profile/images";
-import { news } from "@/domains/news/images";
 import { exchange } from "@/domains/exchange/images";
 import { error } from "@/domains/error/images";
 
@@ -116,7 +115,6 @@ export const images = {
 	},
 	error,
 	exchange,
-	news,
 	profile,
 	transaction,
 	wallet,

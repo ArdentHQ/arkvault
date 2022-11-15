@@ -8,7 +8,6 @@ specifiers:
   '@ardenthq/sdk-helpers': ^1.2.7
   '@ardenthq/sdk-intl': ^1.2.7
   '@ardenthq/sdk-ledger': ^1.2.7
-  '@ardenthq/sdk-news': ^1.2.7
   '@ardenthq/sdk-profiles': ^1.2.7
   '@babel/core': ^7.19.6
   '@babel/plugin-transform-react-jsx': ^7.19.0
@@ -132,7 +131,6 @@ dependencies:
   '@ardenthq/sdk-helpers': 1.2.7
   '@ardenthq/sdk-intl': 1.2.7
   '@ardenthq/sdk-ledger': 1.2.7
-  '@ardenthq/sdk-news': 1.2.7
   '@ardenthq/sdk-profiles': 1.2.7
   '@emotion/cache': 11.10.5
   '@emotion/react': 11.10.5_cuziicjcvwawlf5iuhzacuhqcy
@@ -365,14 +363,6 @@ packages:
     dependencies:
       '@ardenthq/sdk': 1.2.7
       '@ardenthq/sdk-intl': 1.2.7
-    dev: false
-
-  /@ardenthq/sdk-news/1.2.7:
-    resolution: {integrity: sha512-lbrosXmU3PkiigeNp+g1vx6CuYUjT5sEOksE1oMplkJYw7kqQAflnhSpevB4cIZRhTWcRusV2br9jOVRz1KXNg==}
-    engines: {node: '>=16.0.0'}
-    dependencies:
-      '@ardenthq/sdk': 1.2.7
-      rss-parser: 3.12.0
     dev: false
 
   /@ardenthq/sdk-profiles/1.2.7:
@@ -4652,10 +4642,6 @@ packages:
       pinkie-promise: 1.0.0
     dev: true
 
-  /entities/2.2.0:
-    resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
-    dev: false
-
   /entities/4.4.0:
     resolution: {integrity: sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==}
     engines: {node: '>=0.12'}
@@ -8755,13 +8741,6 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rss-parser/3.12.0:
-    resolution: {integrity: sha512-aqD3E8iavcCdkhVxNDIdg1nkBI17jgqF+9OqPS1orwNaOgySdpvq6B+DoONLhzjzwV8mWg37sb60e4bmLK117A==}
-    dependencies:
-      entities: 2.2.0
-      xml2js: 0.4.23
-    dev: false
-
   /run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
     engines: {node: '>=0.12.0'}
@@ -8818,10 +8797,6 @@ packages:
     dependencies:
       truncate-utf8-bytes: 1.0.2
     dev: true
-
-  /sax/1.2.4:
-    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
-    dev: false
 
   /saxes/6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
@@ -10636,19 +10611,6 @@ packages:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
     dev: true
-
-  /xml2js/0.4.23:
-    resolution: {integrity: sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==}
-    engines: {node: '>=4.0.0'}
-    dependencies:
-      sax: 1.2.4
-      xmlbuilder: 11.0.1
-    dev: false
-
-  /xmlbuilder/11.0.1:
-    resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
-    engines: {node: '>=4.0'}
-    dev: false
 
   /xmlchars/2.2.0:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}

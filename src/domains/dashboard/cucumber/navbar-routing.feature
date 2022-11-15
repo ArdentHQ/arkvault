@@ -12,12 +12,6 @@ Feature: Navbar Routing
 		When she selects exchange in the navbar
 		Then she is routed to the exchange page
 
-	@routeToNews
-	Scenario: Route to News page via navbar
-		Given Alice is signed into her profile
-		When she selects news in the navbar
-		Then she is routed to the news page
-
 	@routeToSend
 	Scenario: Route to Send page via navbar
 		Given Alice is signed into her profile

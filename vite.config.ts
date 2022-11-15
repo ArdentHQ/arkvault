@@ -40,7 +40,6 @@ export default defineConfig({
 					"sdk-helpers": ["@ardenthq/sdk-helpers"],
 					"sdk-intl": ["@ardenthq/sdk-intl"],
 					"sdk-ledger": ["@ardenthq/sdk-ledger"],
-					"sdk-news": ["@ardenthq/sdk-news"],
 					"sdk-profiles": ["@ardenthq/sdk-profiles"],
 				},
 			},

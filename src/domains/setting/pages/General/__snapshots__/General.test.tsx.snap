@@ -234,10 +234,22 @@ exports[`General Settings > should disable submit button when profile is not res
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -2220,10 +2232,22 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -4285,10 +4309,22 @@ exports[`General Settings > should render 1`] = `
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -6267,10 +6303,22 @@ exports[`General Settings > should show identicon when removing image if name is
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -8249,10 +8297,22 @@ exports[`General Settings > should update profile 1`] = `
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -10227,10 +10287,22 @@ exports[`General Settings > should update the avatar when removing focus from na
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>
@@ -12209,10 +12281,22 @@ exports[`General Settings > should update the avatar when removing focus from na
               <a
                 class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
-                title="News"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
               >
-                News
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
               </a>
             </li>
           </ul>

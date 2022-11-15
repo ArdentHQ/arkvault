@@ -47,7 +47,6 @@
 		"@ardenthq/sdk-helpers": "^1.2.7",
 		"@ardenthq/sdk-intl": "^1.2.7",
 		"@ardenthq/sdk-ledger": "^1.2.7",
-		"@ardenthq/sdk-news": "^1.2.7",
 		"@ardenthq/sdk-profiles": "^1.2.7",
 		"@emotion/cache": "^11.10.5",
 		"@emotion/react": "^11.10.5",
@@ -184,7 +183,6 @@
 				"@ardenthq/sdk-helpers",
 				"@ardenthq/sdk-intl",
 				"@ardenthq/sdk-ledger",
-				"@ardenthq/sdk-news",
 				"@ardenthq/sdk-profiles",
 				"@tippyjs/react",
 				"assert",
@@ -219,7 +217,6 @@
 				"semver",
 				"socks-proxy-agent",
 				"string-hash",
-				"swiper",
 				"twin.macro",
 				"yup",
 				"react-zendesk"
