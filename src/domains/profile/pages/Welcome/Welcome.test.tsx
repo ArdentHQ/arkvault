@@ -34,7 +34,11 @@ const submitTestID = "SignIn__submit-button";
 const passwordTestID = "SignIn__input--password";
 
 const submitPassword = async () => {
-	userEvent.paste(screen.getByTestId(passwordTestID), "password");
+	userEvent.type(screen.getByTestId(passwordTestID), "password");
+
+	await waitFor(() => {
+		expect(screen.getByTestId(passwordTestID)).toHaveValue("password");
+	});
 
 	await waitFor(() => {
 		expect(screen.getByTestId(submitTestID)).toBeEnabled();
