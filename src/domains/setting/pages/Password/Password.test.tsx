@@ -69,12 +69,24 @@ describe("Password Settings", () => {
 
 		expect(screen.queryByTestId(currentPasswordInputID)).not.toBeInTheDocument();
 
-		userEvent.paste(passwordInput(), password);
+		userEvent.type(passwordInput(), password);
 
-		userEvent.paste(confirmPasswordInput(), password);
+		await waitFor(() => {
+			expect(passwordInput()).toHaveValue(password);
+		});
+
+		userEvent.type(confirmPasswordInput(), password);
+
+		await waitFor(() => {
+			expect(confirmPasswordInput()).toHaveValue(password);
+		});
 
 		// wait for formState.isValid to be updated
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.getByTestId(submitID)).not.toBeDisabled();
+		});
 
 		userEvent.click(screen.getByTestId(submitID));
 
@@ -108,15 +120,19 @@ describe("Password Settings", () => {
 
 		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId(currentPasswordInputID), "wrong!");
+		userEvent.type(screen.getByTestId(currentPasswordInputID), "wrong!");
 
 		await waitFor(() => {
 			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue("wrong!");
 		});
 
-		userEvent.paste(passwordInput(), "AnotherS3cUrePa$swordNew");
+		userEvent.type(passwordInput(), "AnotherS3cUrePa$swordNew");
 
-		userEvent.paste(confirmPasswordInput(), "AnotherS3cUrePa$swordNew");
+		await waitFor(() => {
+			expect(passwordInput()).toHaveValue("AnotherS3cUrePa$swordNew");
+		});
+
+		userEvent.type(confirmPasswordInput(), "AnotherS3cUrePa$swordNew");
 
 		await waitFor(() => {
 			expect(screen.getByTestId(submitID)).toBeEnabled();
@@ -128,7 +144,9 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId(submitID)).toBeEnabled();
 		});
 
-		expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -280,7 +298,9 @@ describe("Password Settings", () => {
 		await waitFor(() => expect(screen.queryByTestId(confirmModalInputID)).not.toBeInTheDocument());
 
 		expect(forgetPasswordSpy).toHaveBeenCalledWith(password);
-		expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.PASSWORD.REMOVAL.SUCCESS);
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.PASSWORD.REMOVAL.SUCCESS);
+		});
 
 		forgetPasswordSpy.mockRestore();
 		toastSpy.mockRestore();
