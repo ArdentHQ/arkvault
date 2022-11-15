@@ -38,7 +38,9 @@ const messageInput = () => screen.getByTestId("SignMessage__message-input");
 const signMessage = "Hello World";
 
 const expectHeading = async (text: string) => {
-	await expect(screen.findByRole("heading", { name: text })).resolves.toBeVisible();
+	await waitFor(() => {
+		expect(screen.findByRole("heading", { name: text })).resolves.toBeDefined();
+	});
 };
 
 describe("SignMessage", () => {
@@ -56,6 +58,116 @@ describe("SignMessage", () => {
 		profile.coins().set("ARK", "ark.devnet");
 
 		await triggerMessageSignOnce(wallet);
+	});
+
+	describe("Sign with deeplink", () => {
+		let resetProfileNetworksMock: () => void;
+
+		beforeEach(() => {
+			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
+		});
+
+		afterEach(() => {
+			resetProfileNetworksMock();
+		});
+
+		it("should show address selector if using deeplinking", async () => {
+			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+				signMessage,
+			)}`;
+
+			history.push(signUrl);
+
+			render(
+				<Route path="/profiles/:profileId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: signUrl,
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
+			).toBeInTheDocument();
+
+			expect(messageInput()).toHaveValue(signMessage);
+
+			await waitFor(() => expect(continueButton()).toBeDisabled());
+
+			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+			await waitFor(() => {
+				expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+			});
+
+			const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
+
+			userEvent.click(firstAddress);
+
+			await waitFor(() => expect(continueButton()).toBeEnabled());
+
+			userEvent.click(continueButton());
+
+			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
+		});
+
+		it("should select address from deeplinking", async () => {
+			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+				signMessage,
+			)}&address=${wallet.address()}`;
+
+			history.push(signUrl);
+
+			render(
+				<Route path="/profiles/:profileId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: signUrl,
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			expect(
+				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
+			).toBeInTheDocument();
+
+			expect(messageInput()).toHaveValue(signMessage);
+
+			expect(continueButton()).toBeEnabled();
+		});
+
+		it("back button sends to welcome page", async () => {
+			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
+				signMessage,
+			)}`;
+
+			history.push(signUrl);
+
+			render(
+				<Route path="/profiles/:profileId/sign-message">
+					<SignMessage />
+				</Route>,
+				{
+					history,
+					route: signUrl,
+				},
+			);
+
+			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
+
+			const historySpy = vi.spyOn(history, "push");
+
+			userEvent.click(screen.getByTestId("SignMessage__back-button"));
+
+			expect(historySpy).toHaveBeenCalledWith(`/`);
+		});
 	});
 
 	describe("Sign with Wallet", () => {
@@ -193,6 +305,10 @@ describe("SignMessage", () => {
 
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
+
+			await waitFor(() => {
+				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();
+			});
 
 			userEvent.click(screen.getByTestId("SignMessage__copy-button"));
 
@@ -451,6 +567,10 @@ describe("SignMessage", () => {
 
 			const historySpy = vi.spyOn(history, "push");
 
+			await waitFor(() => {
+				expect(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET })).toBeInTheDocument();
+			});
+
 			userEvent.click(screen.getByRole("button", { name: commonTranslations.BACK_TO_WALLET }));
 
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
@@ -463,116 +583,6 @@ describe("SignMessage", () => {
 			getPublicKeySpy.mockRestore();
 			consoleErrorMock.mockRestore();
 			getVersionMock.mockRestore();
-		});
-	});
-
-	describe("Sign with deeplink", () => {
-		let resetProfileNetworksMock: () => void;
-
-		beforeEach(() => {
-			resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
-		});
-
-		afterEach(() => {
-			resetProfileNetworksMock();
-		});
-
-		it("should show address selector if using deeplinking", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
-				signMessage,
-			)}`;
-
-			history.push(signUrl);
-
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SELECT_WALLET),
-			).toBeInTheDocument();
-
-			expect(messageInput()).toHaveValue(signMessage);
-
-			await waitFor(() => expect(continueButton()).toBeDisabled());
-
-			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
-
-			await waitFor(() => {
-				expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-			});
-
-			const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-
-			userEvent.click(firstAddress);
-
-			await waitFor(() => expect(continueButton()).toBeEnabled());
-
-			userEvent.click(continueButton());
-
-			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
-		});
-
-		it("should select address from deeplinking", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
-				signMessage,
-			)}&address=${wallet.address()}`;
-
-			history.push(signUrl);
-
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			expect(
-				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
-			).toBeInTheDocument();
-
-			expect(messageInput()).toHaveValue(signMessage);
-
-			expect(continueButton()).toBeEnabled();
-		});
-
-		it("back button sends to welcome page", async () => {
-			const signUrl = `/profiles/${getDefaultProfileId()}/sign-message?coin=ARK&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&method=sign&message=${encodeURIComponent(
-				signMessage,
-			)}`;
-
-			history.push(signUrl);
-
-			render(
-				<Route path="/profiles/:profileId/sign-message">
-					<SignMessage />
-				</Route>,
-				{
-					history,
-					route: signUrl,
-				},
-			);
-
-			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
-
-			const historySpy = vi.spyOn(history, "push");
-
-			userEvent.click(screen.getByTestId("SignMessage__back-button"));
-
-			expect(historySpy).toHaveBeenCalledWith(`/`);
 		});
 	});
 });
