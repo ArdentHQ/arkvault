@@ -362,11 +362,23 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
+		userEvent.type(screen.getByTestId("Password-settings__input--currentPassword"), password);
 
-		userEvent.paste(passwordInput(), secondaryPassword);
+		await waitFor(() => {
+			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password);
+		});
 
-		userEvent.paste(confirmPasswordInput(), secondaryPassword);
+		userEvent.type(passwordInput(), secondaryPassword);
+
+		await waitFor(() => {
+			expect(passwordInput()).toHaveValue(secondaryPassword);
+		});
+
+		userEvent.type(confirmPasswordInput(), secondaryPassword);
+
+		await waitFor(() => {
+			expect(confirmPasswordInput()).toHaveValue(secondaryPassword);
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
