@@ -202,7 +202,10 @@ describe("ExchangeForm", () => {
 			expect(onReady).toHaveBeenCalledWith();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
+		});
+
 		expect(container).toMatchSnapshot();
 	});
 
