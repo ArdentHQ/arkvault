@@ -244,7 +244,9 @@ describe("ExchangeForm", () => {
 			expect(onReady).toHaveBeenCalledWith();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+		});
 		expect(container).toMatchSnapshot();
 	});
 
