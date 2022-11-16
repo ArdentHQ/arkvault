@@ -128,7 +128,7 @@ const fillServerForm = async ({ name = "Test", address = musigHostTest }) => {
 const waitUntilServerIsValidated = async () => {
 	await expect(screen.findByTestId("Servertype-fetching")).resolves.toBeVisible();
 
-	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).toBeNull());
+	await waitFor(() => expect(screen.queryByTestId("Servertype-fetching")).not.toBeInTheDocument());
 };
 
 const mockPeerNetwork = () => server.use(requestMock(peerHostLive, peerResponse));
@@ -1235,7 +1235,7 @@ describe("Servers Settings", () => {
 			expect(screen.queryByTestId(serverDeleteConfirmationTestId)).not.toBeInTheDocument();
 		});
 
-		it.skip("can update a server", async () => {
+		it("can update a server", async () => {
 			mockPeerNetwork();
 
 			render(
@@ -1261,14 +1261,19 @@ describe("Servers Settings", () => {
 
 			userEvent.click(editButton);
 
-			expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
-
-			await fillServerForm({
-				address: peerHostLive,
-				name: "New name",
+			await waitFor(() => {
+				expect(screen.getByTestId("ServerFormModal")).toBeInTheDocument();
 			});
 
+			const nameField = screen.getByTestId("ServerFormModal--name");
+			userEvent.clear(nameField);
+			userEvent.type(nameField, "New name");
+
 			await waitUntilServerIsValidated();
+
+			await waitFor(() => {
+				expect(screen.getByTestId(serverFormSaveButtonTestingId)).toBeEnabled();
+			});
 
 			userEvent.click(screen.getByTestId(serverFormSaveButtonTestingId));
 

@@ -345,7 +345,7 @@ describe("DelegateVoteAmount", () => {
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("30"));
 		});
 
-		it.skip("should render with changed the amount voted when there is voted delegate", async () => {
+		it("should render with changed the amount voted when there is voted delegate", async () => {
 			const voted: Contracts.VoteRegistryItem = {
 				amount: 30,
 				wallet: delegate,
@@ -381,7 +381,7 @@ describe("DelegateVoteAmount", () => {
 					delegateAddress: delegate.address(),
 				},
 			];
-			const { rerender, unmount } = render(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
+			const { unmount } = render(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
 
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("50"));
 
@@ -390,9 +390,9 @@ describe("DelegateVoteAmount", () => {
 			// when there is an error
 			selectedVotes[0].amount = 0;
 
-			rerender(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
+			render(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
+			await waitFor(() => expect(screen.getAllByTestId("InputCurrency")[0]).not.toHaveValue());
 
 			unmount();
 
@@ -403,18 +403,18 @@ describe("DelegateVoteAmount", () => {
 				},
 			];
 
-			rerender(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
+			render(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+			await waitFor(() => expect(screen.getAllByTestId("InputCurrency")[1]).toHaveValue("10"));
 
 			unmount();
 
 			// when there is an error
 			selectedUnvotes[0].amount = 0;
 
-			rerender(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
+			render(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
+			await waitFor(() => expect(screen.getAllByTestId("InputCurrency")[0]).not.toHaveValue());
 		});
 	});
 
