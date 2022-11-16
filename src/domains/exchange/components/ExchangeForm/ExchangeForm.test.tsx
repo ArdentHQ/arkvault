@@ -542,7 +542,9 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		expect(payinInput).toHaveValue(payoutValue);
+		await waitFor(() => {
+			expect(payinInput).toHaveValue(payoutValue);
+		});
 	});
 
 	it("should remove amount if removing currency", async () => {
