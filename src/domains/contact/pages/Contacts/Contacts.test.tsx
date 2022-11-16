@@ -87,89 +87,89 @@ describe("Contacts", () => {
 		resetProfileNetworksMock();
 	});
 
-	// it("should render with contacts", () => {
-	// 	const { asFragment } = renderComponent();
-	//
-	// 	expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-	// 	expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-	// 	expect(screen.getByTestId("ContactList")).toBeInTheDocument();
-	//
-	// 	expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
-	//
-	// 	expect(asFragment()).toMatchSnapshot();
-	// });
-	//
-	// it("should render compact on md screen", () => {
-	// 	const { asFragment } = renderResponsiveComponent("md");
-	//
-	// 	expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-	// 	expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-	// 	expect(screen.getByTestId("ContactList")).toBeInTheDocument();
-	//
-	// 	expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
-	//
-	// 	expect(asFragment()).toMatchSnapshot();
-	// });
-	//
-	// it("should render compact on md screen if uses expanded tables", () => {
-	// 	profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-	//
-	// 	const { asFragment } = renderResponsiveComponent("md");
-	//
-	// 	expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-	// 	expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-	// 	expect(screen.getByTestId("ContactList")).toBeInTheDocument();
-	//
-	// 	expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
-	//
-	// 	expect(asFragment()).toMatchSnapshot();
-	//
-	// 	profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	// });
-	//
-	// it("should render responsive with contacts", async () => {
-	// 	const { asFragment } = renderResponsiveComponent("xs");
-	//
-	// 	expect(screen.getByTestId("ContactListMobile")).toBeInTheDocument();
-	//
-	// 	expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
-	//
-	// 	expect(asFragment()).toMatchSnapshot();
-	//
-	// 	const firstContactOptionsDropdown = within(screen.getByTestId("ContactListMobile")).getAllByTestId(
-	// 		"dropdown__toggle",
-	// 	)[0];
-	//
-	// 	userEvent.click(firstContactOptionsDropdown);
-	//
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
-	// 	});
-	//
-	// 	const updateOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT);
-	//
-	// 	userEvent.click(updateOption);
-	//
-	// 	await waitFor(() => {
-	// 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-	// 	});
-	// });
-	//
-	// it("should render without contacts", () => {
-	// 	const contactsSpy = vi.spyOn(profile.contacts(), "values").mockReturnValue([]);
-	//
-	// 	const { asFragment } = renderComponent();
-	//
-	// 	expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-	// 	expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-	//
-	// 	expect(screen.queryByTestId("ContactList")).not.toBeInTheDocument();
-	// 	expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
-	//
-	// 	expect(asFragment()).toMatchSnapshot();
-	//
-	// 	contactsSpy.mockRestore();
-	// });
+	it("should render with contacts", () => {
+		const { asFragment } = renderComponent();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render compact on md screen", () => {
+		const { asFragment } = renderResponsiveComponent("md");
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render compact on md screen if uses expanded tables", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+
+		const { asFragment } = renderResponsiveComponent("md");
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
+
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
+	});
+
+	it("should render responsive with contacts", async () => {
+		const { asFragment } = renderResponsiveComponent("xs");
+
+		expect(screen.getByTestId("ContactListMobile")).toBeInTheDocument();
+
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		const firstContactOptionsDropdown = within(screen.getByTestId("ContactListMobile")).getAllByTestId(
+			"dropdown__toggle",
+		)[0];
+
+		userEvent.click(firstContactOptionsDropdown);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("dropdown__options")).toBeInTheDocument();
+		});
+
+		const updateOption = within(screen.getByTestId("dropdown__options")).getByText(commonTranslations.EDIT);
+
+		userEvent.click(updateOption);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+	});
+
+	it("should render without contacts", () => {
+		const contactsSpy = vi.spyOn(profile.contacts(), "values").mockReturnValue([]);
+
+		const { asFragment } = renderComponent();
+
+		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
+
+		expect(screen.queryByTestId("ContactList")).not.toBeInTheDocument();
+		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+
+		contactsSpy.mockRestore();
+	});
 
 	it.each([
 		["close", "Modal__close-button"],
