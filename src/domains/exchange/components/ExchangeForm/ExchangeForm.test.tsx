@@ -108,10 +108,13 @@ const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
 
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
+let exchangeTransactionUpdateMock;
 
 describe("ExchangeForm", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
+
+		exchangeTransactionUpdateMock = vi.spyOn(profile.exchangeTransactions(), "update").mockReturnValue(undefined);
 	});
 
 	beforeEach(() => {
@@ -123,6 +126,10 @@ describe("ExchangeForm", () => {
 		profile.exchangeTransactions().flush();
 
 		httpClient.clearCache();
+	});
+
+	afterAll(() => {
+		exchangeTransactionUpdateMock.mockRestore();
 	});
 
 	const renderComponent = (component: React.ReactNode) =>
@@ -1124,6 +1131,8 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should perform an exchange", async () => {
+		exchangeTransactionUpdateMock.mockRestore();
+
 		const baseStatus = {
 			amountFrom: 1,
 			amountTo: 100,
