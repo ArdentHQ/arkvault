@@ -108,13 +108,10 @@ const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
 
 const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
-let exchangeTransactionUpdateMock;
 
 describe("ExchangeForm", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
-
-		exchangeTransactionUpdateMock = vi.spyOn(profile.exchangeTransactions(), "update").mockReturnValue(undefined);
 	});
 
 	beforeEach(() => {
@@ -126,10 +123,6 @@ describe("ExchangeForm", () => {
 		profile.exchangeTransactions().flush();
 
 		httpClient.clearCache();
-	});
-
-	afterAll(() => {
-		exchangeTransactionUpdateMock.mockRestore();
 	});
 
 	const renderComponent = (component: React.ReactNode) =>
@@ -217,6 +210,10 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of finished order", async () => {
+		const exchangeTransactionUpdateMock = vi
+			.spyOn(profile.exchangeTransactions(), "update")
+			.mockReturnValue(undefined);
+
 		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
@@ -254,7 +251,10 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		});
+
 		expect(container).toMatchSnapshot();
+
+		exchangeTransactionUpdateMock.mockRestore();
 	});
 
 	it("should go back to exchange page", async () => {
@@ -1131,8 +1131,6 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should perform an exchange", async () => {
-		exchangeTransactionUpdateMock.mockRestore();
-
 		const baseStatus = {
 			amountFrom: 1,
 			amountTo: 100,
