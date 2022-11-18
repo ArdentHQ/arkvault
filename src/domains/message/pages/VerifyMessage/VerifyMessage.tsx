@@ -70,7 +70,7 @@ export const VerifyMessage: React.VFC = () => {
 	const [storedMessage, setStoredMessage] = useState(initialState);
 
 	useEffect(() => {
-		if (verificationMethod === VerificationMethod.Json && (message || signatory || signature)) {
+		if (verificationMethod === VerificationMethod.Json) {
 			setValue("jsonString", JSON.stringify({ message, signatory, signature }), {
 				shouldDirty: isDirty,
 				shouldValidate: isDirty,
