@@ -183,13 +183,13 @@ export const ImportWallet = () => {
 	};
 
 	const importWallet = async (): Promise<void> => {
-		const { network, importOption, encryptedWif } = getValues();
+		const { network, importOption, encryptedWif, value: walletInput } = getValues();
 
 		const wallet = await importWalletByType({
 			encryptedWif,
 			network,
 			type: importOption.value,
-			value: walletGenerationInput!,
+			value: walletInput,
 		});
 
 		assertWallet(wallet);

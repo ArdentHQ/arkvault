@@ -1,4 +1,4 @@
-import { FC, LazyExoticComponent } from "react";
+import { ComponentType, FC, LazyExoticComponent } from "react";
 import { RouteProps } from "react-router";
 import { Environment } from "@ardenthq/sdk-profiles";
 import { History, Location } from "history";
@@ -6,7 +6,7 @@ import { PreloadableComponent } from "@/utils/preload-lazy";
 
 interface RouteItem {
 	path: string;
-	component: LazyExoticComponent<FC<RouteProps>> | PreloadableComponent<FC<RouteProps>>;
+	component: LazyExoticComponent<FC<RouteProps>> | PreloadableComponent<ComponentType<unknown>>;
 	skeleton?: FC;
 	exact: boolean;
 }

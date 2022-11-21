@@ -20,7 +20,7 @@ export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: Tr
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
 
 	const { recipients, returnedAmount } = useMemo(() => {
-		const recipients = [];
+		const recipients: [] = [];
 		let returnedAmount = 0;
 
 		for (const [index, recipient] of transaction.recipients().entries()) {

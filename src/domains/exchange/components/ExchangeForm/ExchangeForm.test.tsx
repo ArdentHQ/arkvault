@@ -29,6 +29,23 @@ const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
 const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: HashHistory;
 
+const transactionStub = {
+	input: {
+		address: "payinAddress",
+		amount: 1,
+		hash: "payinHash",
+		ticker: "btc",
+	},
+	orderId: "id",
+	output: {
+		address: "payoutAddress",
+		amount: 100,
+		hash: "payoutHash",
+		ticker: "ark",
+	},
+	provider: "changenow",
+};
+
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => setTimeout(callback, 200),
 }));
@@ -110,11 +127,20 @@ const refundAddressID = "ExchangeForm__refund-address";
 const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
+	let findExchangeTransactionMock;
+
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
 	beforeEach(() => {
+		profile.exchangeTransactions().flush();
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		findExchangeTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
 		history = createHashHistory();
 		history.push(exchangeURL);
 	});
@@ -123,6 +149,7 @@ describe("ExchangeForm", () => {
 		profile.exchangeTransactions().flush();
 
 		httpClient.clearCache();
+		findExchangeTransactionMock.mockRestore();
 	});
 
 	const renderComponent = (component: React.ReactNode) =>
@@ -169,6 +196,12 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should render exchange form with id of pending order", async () => {
+		profile.exchangeTransactions().flush();
+
+		const exchangeTransactionUpdateMock = vi
+			.spyOn(profile.exchangeTransactions(), "update")
+			.mockReturnValue(undefined);
+
 		const onReady = vi.fn();
 
 		const exchangeTransaction = profile.exchangeTransactions().create({
@@ -202,47 +235,12 @@ describe("ExchangeForm", () => {
 			expect(onReady).toHaveBeenCalledWith();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
-		expect(container).toMatchSnapshot();
-	});
-
-	it("should render exchange form with id of finished order", async () => {
-		const onReady = vi.fn();
-
-		const exchangeTransaction = profile.exchangeTransactions().create({
-			input: {
-				address: "payinAddress",
-				amount: 1,
-				hash: "payinHash",
-				ticker: "btc",
-			},
-			orderId: "id",
-			output: {
-				address: "payoutAddress",
-				amount: 100,
-				hash: "payoutHash",
-				ticker: "ark",
-			},
-			provider: "changenow",
-		});
-		profile
-			.exchangeTransactions()
-			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
-
-		const { container } = renderComponent(
-			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
-		);
-
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
 		});
 
-		await waitFor(() => {
-			expect(onReady).toHaveBeenCalledWith();
-		});
-
-		expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
+		exchangeTransactionUpdateMock.mockRestore();
 	});
 
 	it("should go back to exchange page", async () => {
@@ -542,7 +540,9 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		expect(payinInput).toHaveValue(payoutValue);
+		await waitFor(() => {
+			expect(payinInput).toHaveValue(payoutValue);
+		});
 	});
 
 	it("should remove amount if removing currency", async () => {
@@ -1117,6 +1117,9 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should perform an exchange", async () => {
+		profile.exchangeTransactions().flush();
+		findExchangeTransactionMock.mockRestore();
+
 		const baseStatus = {
 			amountFrom: 1,
 			amountTo: 100,
@@ -1168,7 +1171,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		userEvent.paste(recipientDropdown, "payoutAddress");
+		userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1177,8 +1180,14 @@ describe("ExchangeForm", () => {
 		const payinInput = screen.getAllByTestId("InputCurrency")[0];
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		const findTransactionMock = vi
+			.spyOn(profile.exchangeTransactions(), "findById")
+			.mockReturnValue(exchangeTransaction);
+
 		// amount input
-		userEvent.paste(payinInput, "1");
+		userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1187,6 +1196,8 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue(payoutValue);
 		});
+
+		findTransactionMock.mockRestore();
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
@@ -1265,6 +1276,43 @@ describe("ExchangeForm", () => {
 		});
 
 		historySpy.mockRestore();
+	});
+
+	it("should render exchange form with id of finished order", async () => {
+		const onReady = vi.fn();
+
+		profile.exchangeTransactions().flush();
+		const exchangeTransaction = profile.exchangeTransactions().create(transactionStub);
+
+		profile
+			.exchangeTransactions()
+			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
+
+		const exchangeTransactionUpdateMock = vi
+			.spyOn(profile.exchangeTransactions(), "update")
+			.mockReturnValue(undefined);
+
+		vi.spyOn(profile.exchangeTransactions(), "findById").mockReturnValue(exchangeTransaction);
+
+		const { container } = renderComponent(
+			<ExchangeForm orderId={exchangeTransaction.orderId()} onReady={onReady} />,
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm")).toBeInTheDocument();
+		});
+
+		await waitFor(() => {
+			expect(onReady).toHaveBeenCalledWith();
+		});
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
+		});
+
+		expect(container).toMatchSnapshot();
+
+		exchangeTransactionUpdateMock.mockRestore();
 	});
 });
 

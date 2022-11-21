@@ -186,7 +186,9 @@ describe("Contacts", () => {
 
 		userEvent.click(screen.getByTestId(buttonId));
 
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		await waitFor(() => {
+			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
+		});
 	});
 
 	it("should successfully add contact", async () => {
@@ -198,12 +200,14 @@ describe("Contacts", () => {
 
 		userEvent.click(screen.getByTestId("contacts__add-contact-btn"));
 
-		expect(saveButton()).toBeDisabled();
+		await waitFor(() => {
+			expect(saveButton()).toBeDisabled();
+		});
 		expect(addAddress()).toBeDisabled();
 
 		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "Test Contact");
+		userEvent.type(screen.getByTestId("contact-form__name-input"), "Test Contact");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("Test Contact");
@@ -211,12 +215,12 @@ describe("Contacts", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectNetworkInput, "ARK D");
+		userEvent.type(selectNetworkInput, "ARK D");
 		userEvent.tab();
 
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		userEvent.type(screen.getByTestId("contact-form__address-input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");

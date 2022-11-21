@@ -70,8 +70,11 @@ export const VerifyMessage: React.VFC = () => {
 	const [storedMessage, setStoredMessage] = useState(initialState);
 
 	useEffect(() => {
-		if (verificationMethod === VerificationMethod.Json && (message || signatory || signature)) {
-			setValue("jsonString", JSON.stringify(storedMessage), { shouldDirty: isDirty, shouldValidate: isDirty });
+		if (verificationMethod === VerificationMethod.Json) {
+			setValue("jsonString", JSON.stringify({ message, signatory, signature }), {
+				shouldDirty: isDirty,
+				shouldValidate: isDirty,
+			});
 		}
 
 		if (verificationMethod === VerificationMethod.Manual && jsonString) {
@@ -89,7 +92,7 @@ export const VerifyMessage: React.VFC = () => {
 				// invalid json
 			}
 		}
-	}, [jsonString]);
+	}, [jsonString, message, signatory, signature]);
 
 	useEffect(() => {
 		if (message || signatory || signature) {

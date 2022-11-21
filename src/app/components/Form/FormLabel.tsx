@@ -28,18 +28,20 @@ export function FormLabel(properties: FormLabelProperties) {
 			htmlFor={fieldContext?.name}
 			{...labelProperties}
 		>
-			{properties.label || properties.children}
+			<>
+				{properties.label || properties.children}
 
-			{properties.optional && (
-				<Tooltip content={t("COMMON.VALIDATION.OPTIONAL")}>
-					<span
-						data-testid="FormLabel__optional"
-						className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
-					>
-						{t("COMMON.OPTIONAL")}
-					</span>
-				</Tooltip>
-			)}
+				{properties.optional && (
+					<Tooltip content={t("COMMON.VALIDATION.OPTIONAL")}>
+						<span
+							data-testid="FormLabel__optional"
+							className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
+						>
+							{t("COMMON.OPTIONAL")}
+						</span>
+					</Tooltip>
+				)}
+			</>
 		</label>
 	);
 }

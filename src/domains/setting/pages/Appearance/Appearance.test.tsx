@@ -59,7 +59,9 @@ describe("Appearance Settings", () => {
 			expect(darkButton).toBeChecked();
 		});
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
+		await waitFor(() => {
+			expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
@@ -67,7 +69,9 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("light");
 		});
 
-		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		await waitFor(() => {
+			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		});
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should return items to render in the form in %s", (breakpoint) => {
@@ -112,7 +116,9 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("navy");
 		});
 
-		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		await waitFor(() => {
+			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		});
 	});
 
 	it("should allow to change the viewing mode", async () => {
@@ -148,7 +154,9 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		});
 
-		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		await waitFor(() => {
+			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		});
 	});
 
 	it.each([
@@ -183,6 +191,8 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(key)).toBe(false);
 		});
 
-		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		await waitFor(() => {
+			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+		});
 	});
 });
