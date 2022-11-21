@@ -192,7 +192,7 @@ describe("FeeField", () => {
 
 		rerender(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
 
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"), { timeout: 4000 });
 
 		await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
 
