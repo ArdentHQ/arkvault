@@ -191,3 +191,5 @@ Object.defineProperty(window, "$zopim", {
 		},
 	},
 });
+
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;

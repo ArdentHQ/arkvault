@@ -2408,40 +2408,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                               class="cursor-pointer"
                             >
                               <div
-                                data-testid="NodeStatus--statusok"
+                                data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="text-theme-success-600 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      transform="translate(1054 350.79)"
-                                    >
-                                      <circle
-                                        cx="-1044"
-                                        cy="-341"
-                                        r="9"
-                                        transform="translate(0 .172)"
-                                      />
-                                      <path
-                                        d="M-1040.1-343.8l-4.7 6.3c-.2.3-.5.3-.9.1l-.1-.1-1.3-1.3"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
+                                  class="css-xvdci8"
+                                  color="info"
+                                />
                               </div>
                             </div>
                             <div
@@ -2452,10 +2424,11 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                               class="flex items-center"
                             >
                               <button
+                                disabled=""
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 hover:dark:text-theme-secondary-200 css-v0ob3f"
+                                  class="text-theme-secondary-600 dark:text-theme-secondary-800 css-v0ob3f"
                                   height="16"
                                   width="16"
                                 >
@@ -2519,40 +2492,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                               class="cursor-pointer"
                             >
                               <div
-                                data-testid="NodeStatus--statusok"
+                                data-testid="NodeStatus--statusloading"
                               >
                                 <div
-                                  class="text-theme-success-600 css-1i4b0eq"
-                                  height="20"
-                                  width="20"
-                                >
-                                  <svg
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      transform="translate(1054 350.79)"
-                                    >
-                                      <circle
-                                        cx="-1044"
-                                        cy="-341"
-                                        r="9"
-                                        transform="translate(0 .172)"
-                                      />
-                                      <path
-                                        d="M-1040.1-343.8l-4.7 6.3c-.2.3-.5.3-.9.1l-.1-.1-1.3-1.3"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
+                                  class="css-xvdci8"
+                                  color="info"
+                                />
                               </div>
                             </div>
                             <div
@@ -2563,10 +2508,11 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                               class="flex items-center"
                             >
                               <button
+                                disabled=""
                                 type="button"
                               >
                                 <div
-                                  class="text-theme-primary-300 hover:text-theme-primary-400 dark:text-theme-secondary-600 hover:dark:text-theme-secondary-200 css-v0ob3f"
+                                  class="text-theme-secondary-600 dark:text-theme-secondary-800 css-v0ob3f"
                                   height="16"
                                   width="16"
                                 >
@@ -2849,40 +2795,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex cursor-pointer justify-center"
                                         >
                                           <div
-                                            data-testid="CustomPeersPeer--statusok"
+                                            data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="text-theme-success-600 css-1i4b0eq"
-                                              height="20"
-                                              width="20"
-                                            >
-                                              <svg
-                                                viewBox="0 0 20 20"
-                                                x="0"
-                                                xml:space="preserve"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                y="0"
-                                              >
-                                                <g
-                                                  fill="none"
-                                                  stroke="currentColor"
-                                                  stroke-width="2"
-                                                  transform="translate(1054 350.79)"
-                                                >
-                                                  <circle
-                                                    cx="-1044"
-                                                    cy="-341"
-                                                    r="9"
-                                                    transform="translate(0 .172)"
-                                                  />
-                                                  <path
-                                                    d="M-1040.1-343.8l-4.7 6.3c-.2.3-.5.3-.9.1l-.1-.1-1.3-1.3"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                  />
-                                                </g>
-                                              </svg>
-                                            </div>
+                                              class="css-xvdci8"
+                                              color="info"
+                                            />
                                           </div>
                                         </div>
                                       </div>
@@ -3146,40 +3064,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex cursor-pointer justify-center"
                                         >
                                           <div
-                                            data-testid="CustomPeersPeer--statusok"
+                                            data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="text-theme-success-600 css-1i4b0eq"
-                                              height="20"
-                                              width="20"
-                                            >
-                                              <svg
-                                                viewBox="0 0 20 20"
-                                                x="0"
-                                                xml:space="preserve"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                y="0"
-                                              >
-                                                <g
-                                                  fill="none"
-                                                  stroke="currentColor"
-                                                  stroke-width="2"
-                                                  transform="translate(1054 350.79)"
-                                                >
-                                                  <circle
-                                                    cx="-1044"
-                                                    cy="-341"
-                                                    r="9"
-                                                    transform="translate(0 .172)"
-                                                  />
-                                                  <path
-                                                    d="M-1040.1-343.8l-4.7 6.3c-.2.3-.5.3-.9.1l-.1-.1-1.3-1.3"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                  />
-                                                </g>
-                                              </svg>
-                                            </div>
+                                              class="css-xvdci8"
+                                              color="info"
+                                            />
                                           </div>
                                         </div>
                                       </div>
@@ -3416,40 +3306,12 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                           class="flex cursor-pointer justify-center"
                                         >
                                           <div
-                                            data-testid="CustomPeersPeer--statusok"
+                                            data-testid="CustomPeersPeer--statusloading"
                                           >
                                             <div
-                                              class="text-theme-success-600 css-1i4b0eq"
-                                              height="20"
-                                              width="20"
-                                            >
-                                              <svg
-                                                viewBox="0 0 20 20"
-                                                x="0"
-                                                xml:space="preserve"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                y="0"
-                                              >
-                                                <g
-                                                  fill="none"
-                                                  stroke="currentColor"
-                                                  stroke-width="2"
-                                                  transform="translate(1054 350.79)"
-                                                >
-                                                  <circle
-                                                    cx="-1044"
-                                                    cy="-341"
-                                                    r="9"
-                                                    transform="translate(0 .172)"
-                                                  />
-                                                  <path
-                                                    d="M-1040.1-343.8l-4.7 6.3c-.2.3-.5.3-.9.1l-.1-.1-1.3-1.3"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                  />
-                                                </g>
-                                              </svg>
-                                            </div>
+                                              class="css-xvdci8"
+                                              color="info"
+                                            />
                                           </div>
                                         </div>
                                       </div>

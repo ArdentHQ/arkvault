@@ -19,13 +19,13 @@ export type TransactionDetailProperties = {
 
 const TransactionDetailStyled = styled.div<TransactionDetailProperties>(getStyles);
 
-const RowLabel: React.FC = ({ children }) => (
+const RowLabel = ({ children }: { children: React.ReactNode }) => (
 	<div className="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500">
 		{children}
 	</div>
 );
 
-const TransactionDetailContainer: React.VFC<{
+const TransactionDetailContainer: React.FC<{
 	useDesktop?: boolean;
 	desktopContent: JSX.Element;
 	mobileContent: JSX.Element;

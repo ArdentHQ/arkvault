@@ -28,7 +28,11 @@ describe("PasswordModal", () => {
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Password title");
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Password description");
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeDisabled();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordModal__submit-button")).toBeDisabled();
+		});
+
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -37,15 +41,16 @@ describe("PasswordModal", () => {
 
 		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "password");
+		userEvent.type(screen.getByTestId("PasswordModal__input"), "password");
 
-		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("password");
+		});
 
 		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
-			expect(onSuccess).toHaveBeenCalledWith("password");
+			expect(onSuccess).toHaveBeenCalled();
 		});
 	});
 });

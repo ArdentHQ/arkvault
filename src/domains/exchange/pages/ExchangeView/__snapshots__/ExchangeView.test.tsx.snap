@@ -3,16 +3,12 @@
 exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
 <div>
   <div
-    class="css-w3nefz"
+    class="css-kmmje1"
   >
     <div
-      class="css-tbczne"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -590,7 +586,15 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
           </svg>
         </div>
         <div
-          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl flex"
+          class="py-32"
+        >
+          <div
+            class="css-iepbhh"
+            color="info"
+          />
+        </div>
+        <div
+          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
             class="mx-auto mb-8 h-8"
@@ -692,7 +696,8 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n29l73"
+                                    disabled=""
                                   >
                                     <span
                                       class="hidden sm:inline"
@@ -709,8 +714,9 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                         aria-controls="fromCurrency-menu"
                                         aria-labelledby="fromCurrency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                        class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                         data-testid="SelectDropdown__input"
+                                        disabled=""
                                         id="fromCurrency-input"
                                         name="fromCurrency"
                                         placeholder="Select"
@@ -925,7 +931,8 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n29l73"
+                                      disabled=""
                                     >
                                       <span
                                         class="hidden sm:inline"
@@ -942,8 +949,9 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                           aria-controls="toCurrency-menu"
                                           aria-labelledby="toCurrency-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                          class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                           data-testid="SelectDropdown__input"
+                                          disabled=""
                                           id="toCurrency-input"
                                           name="toCurrency"
                                           placeholder="Select"
@@ -2385,16 +2393,12 @@ exports[`ExchangeView > should render 1`] = `
 exports[`ExchangeView > should render dark theme 1`] = `
 <div>
   <div
-    class="css-w3nefz"
+    class="css-kmmje1"
   >
     <div
-      class="css-tbczne"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -2972,7 +2976,15 @@ exports[`ExchangeView > should render dark theme 1`] = `
           </svg>
         </div>
         <div
-          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl flex"
+          class="py-32"
+        >
+          <div
+            class="css-iepbhh"
+            color="info"
+          />
+        </div>
+        <div
+          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
             class="mx-auto mb-8 h-8"
@@ -3074,7 +3086,8 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n29l73"
+                                    disabled=""
                                   >
                                     <span
                                       class="hidden sm:inline"
@@ -3091,8 +3104,9 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                         aria-controls="fromCurrency-menu"
                                         aria-labelledby="fromCurrency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                        class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                         data-testid="SelectDropdown__input"
+                                        disabled=""
                                         id="fromCurrency-input"
                                         name="fromCurrency"
                                         placeholder="Select"
@@ -3307,7 +3321,8 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n29l73"
+                                      disabled=""
                                     >
                                       <span
                                         class="hidden sm:inline"
@@ -3324,8 +3339,9 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                           aria-controls="toCurrency-menu"
                                           aria-labelledby="toCurrency-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                          class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                           data-testid="SelectDropdown__input"
+                                          disabled=""
                                           id="toCurrency-input"
                                           name="toCurrency"
                                           placeholder="Select"
@@ -3576,16 +3592,12 @@ exports[`ExchangeView > should render dark theme 1`] = `
 exports[`ExchangeView > should render light theme 1`] = `
 <div>
   <div
-    class="css-w3nefz"
+    class="css-kmmje1"
   >
     <div
-      class="css-tbczne"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
@@ -4163,7 +4175,15 @@ exports[`ExchangeView > should render light theme 1`] = `
           </svg>
         </div>
         <div
-          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl flex"
+          class="py-32"
+        >
+          <div
+            class="css-iepbhh"
+            color="info"
+          />
+        </div>
+        <div
+          class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
         >
           <div
             class="mx-auto mb-8 h-8"
@@ -4265,7 +4285,8 @@ exports[`ExchangeView > should render light theme 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-1psxlcd"
+                                    class="css-n29l73"
+                                    disabled=""
                                   >
                                     <span
                                       class="hidden sm:inline"
@@ -4282,8 +4303,9 @@ exports[`ExchangeView > should render light theme 1`] = `
                                         aria-controls="fromCurrency-menu"
                                         aria-labelledby="fromCurrency-label"
                                         autocomplete="off"
-                                        class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                        class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                         data-testid="SelectDropdown__input"
+                                        disabled=""
                                         id="fromCurrency-input"
                                         name="fromCurrency"
                                         placeholder="Select"
@@ -4498,7 +4520,8 @@ exports[`ExchangeView > should render light theme 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-1psxlcd"
+                                      class="css-n29l73"
+                                      disabled=""
                                     >
                                       <span
                                         class="hidden sm:inline"
@@ -4515,8 +4538,9 @@ exports[`ExchangeView > should render light theme 1`] = `
                                           aria-controls="toCurrency-menu"
                                           aria-labelledby="toCurrency-label"
                                           autocomplete="off"
-                                          class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                          class="no-ligatures w-full border-none cursor-default text-theme-secondary-text css-1nupw50"
                                           data-testid="SelectDropdown__input"
+                                          disabled=""
                                           id="toCurrency-input"
                                           name="toCurrency"
                                           placeholder="Select"
@@ -5348,6 +5372,14 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
               fill="#545B74"
             />
           </svg>
+        </div>
+        <div
+          class="py-32"
+        >
+          <div
+            class="css-iepbhh"
+            color="info"
+          />
         </div>
         <div
           class="relative w-full grow flex-col bg-theme-background p-10 sm:max-w-xl sm:grow-0 sm:rounded-2.5xl sm:shadow-2xl lg:max-w-2xl hidden"
