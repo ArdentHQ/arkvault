@@ -48,7 +48,7 @@ exports[`FeeField > should render 1`] = `
     >
       <button
         aria-checked="false"
-        aria-label="0.00357"
+        aria-label="1"
         class="css-17i051m"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -64,13 +64,13 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0.00357 DARK
+            1 DARK
           </span>
         </div>
       </button>
       <button
         aria-checked="true"
-        aria-label="0.07320598"
+        aria-label="3"
         class="css-17i051m"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -86,13 +86,13 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0.07320598 DARK
+            3 DARK
           </span>
         </div>
       </button>
       <button
         aria-checked="false"
-        aria-label="0.1"
+        aria-label="5"
         class="css-17i051m"
         data-testid="ButtonGroupOption"
         role="radio"
@@ -108,7 +108,7 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0.1 DARK
+            5 DARK
           </span>
         </div>
       </button>

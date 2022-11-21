@@ -117,7 +117,10 @@ describe("UnlockTokensModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
-		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("Amount")).toHaveTextContent(
@@ -199,12 +202,20 @@ describe("UnlockTokensModal", () => {
 				  },
 		);
 
+		await waitFor(() => {
+			expect(screen.getByTestId("UnlockTokensAuthentication__send")).toBeEnabled();
+		});
+
 		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		if (expectedOutcome === "success") {
-			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+			});
 		} else {
-			await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
+			});
 		}
 
 		expect(asFragment()).toMatchSnapshot();
