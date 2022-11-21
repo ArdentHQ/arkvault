@@ -128,10 +128,17 @@ describe("SendDelegateResignation", () => {
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(secondMnemonic(), MNEMONICS[2]);
+			await waitFor(() => {
+				expect(secondMnemonic()).toBeEnabled();
+			});
+
+			userEvent.type(secondMnemonic(), MNEMONICS[2]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
 
-			expect(secondMnemonic()).toHaveAttribute("aria-invalid");
+			await waitFor(() => {
+				expect(secondMnemonic()).toHaveAttribute("aria-invalid");
+			});
+
 			expect(sendButton()).toBeDisabled();
 
 			expect(asFragment()).toMatchSnapshot();
@@ -320,15 +327,23 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toBeEnabled());
+
+			userEvent.type(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
+
+			await waitFor(() => {
+				expect(sendButton()).toBeEnabled();
+			});
 
 			userEvent.click(sendButton());
 
-			await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+			});
 
 			expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 			expect(asFragment()).toMatchSnapshot();
@@ -376,8 +391,16 @@ describe("SendDelegateResignation", () => {
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
+			await waitFor(() => {
+				expect(secondMnemonic()).toBeEnabled();
+			});
+
 			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
+
+			await waitFor(() => {
+				expect(sendButton()).toBeEnabled();
+			});
 
 			userEvent.click(sendButton());
 
@@ -420,6 +443,10 @@ describe("SendDelegateResignation", () => {
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+			await waitFor(() => {
+				expect(secondMnemonic()).toBeEnabled();
+			});
 
 			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
@@ -464,15 +491,35 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
-			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
-			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
+			await waitFor(() => {
+				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
+			});
+
+			await waitFor(() => {
+				expect(secondMnemonic()).toBeInTheDocument();
+			});
+
+			await waitFor(() => {
+				expect(secondMnemonic()).toBeEnabled();
+			});
+
+			userEvent.type(secondMnemonic(), MNEMONICS[1]);
+
+			await waitFor(() => {
+				expect(secondMnemonic()).toHaveValue(MNEMONICS[1]);
+			});
+
+			await waitFor(() => {
+				expect(sendButton()).toBeEnabled();
+			});
 
 			userEvent.click(sendButton());
 
-			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+			});
 
 			const historyMock = vi.spyOn(history, "push").mockReturnValue();
 

@@ -7,16 +7,12 @@ exports[`Registration > should register delegate without keyboard 1`] = `<Docume
 exports[`Registration > should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="css-kmmje1"
   >
     <div
-      class="css-tbczne"
+      class="css-1mnbipv"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
