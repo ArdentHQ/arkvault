@@ -183,9 +183,9 @@ describe("CreateProfile", () => {
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(submitButton());
-
-		await waitFor(() => expect(env.profiles().count()).toBe(1));
+		await act(() => {
+			userEvent.click(submitButton());
+		});
 
 		const profile = env.profiles().last();
 

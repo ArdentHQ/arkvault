@@ -1,11 +1,12 @@
+import { ComponentType } from "react";
 import { ProfilePaths } from "@/router/paths";
 import { RouteItem } from "@/router/router.types";
 import preloadLazy from "@/utils/preload-lazy";
 
-const General = preloadLazy(() => import("./pages/General"));
+const General = preloadLazy(() => import("./pages/General") as Promise<{ default: ComponentType<unknown> }>);
 const Password = preloadLazy(() => import("./pages/Password"));
 const Export = preloadLazy(() => import("./pages/Export"));
-const Appearance = preloadLazy(() => import("./pages/Appearance"));
+const Appearance = preloadLazy(() => import("./pages/Appearance") as Promise<{ default: ComponentType<unknown> }>);
 const Servers = preloadLazy(() => import("./pages/Servers"));
 const Networks = preloadLazy(() => import("./pages/Networks"));
 

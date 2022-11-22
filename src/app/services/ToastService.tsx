@@ -68,7 +68,7 @@ export class ToastService {
 	}
 
 	private toast(type: ToastTypeOptions, content: ToastContent, options?: ToastOptions): ToastId {
-		return toast((properties: ToastContentProps<{}>) => this.renderContent(type, content, properties), {
+		return toast((properties: ToastContentProps<any>) => this.renderContent(type, content, properties), {
 			...this.options(),
 			...options,
 		});
@@ -97,7 +97,7 @@ export class ToastService {
 
 	public update(id: ToastId, type: ToastTypeOptions, content: ToastContent): void {
 		toast.update(id, {
-			render: (properties: ToastContentProps<{}>) => this.renderContent(type, content, properties),
+			render: (properties: ToastContentProps<any>) => this.renderContent(type, content, properties),
 		});
 	}
 
@@ -108,7 +108,7 @@ export class ToastService {
 	private renderContent(type: ToastTypeOptions, content: ToastContent, properties: ToastContentProps) {
 		return (
 			<ToastMessage type={type} {...properties}>
-				{content}
+				<>{content}</>
 			</ToastMessage>
 		);
 	}
