@@ -367,8 +367,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			},
 		);
 
-		// eslint-disable-next-line testing-library/prefer-explicit-assert
-		await screen.findByTestId("LedgerWaitingDevice-loading_message");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		await expect(screen.findByTestId("LedgerWaitingDevice-loading_message")).resolves.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 

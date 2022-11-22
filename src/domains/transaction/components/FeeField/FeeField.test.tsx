@@ -135,7 +135,7 @@ describe("FeeField", () => {
 				/>,
 			);
 
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"), { timeout: 4000 });
 
 			expect(toastSpy).toHaveBeenCalledWith(translations.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE);
 
