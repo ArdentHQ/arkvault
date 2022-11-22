@@ -95,8 +95,6 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
-
 		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -113,8 +111,6 @@ describe("UnlockTokensModal", () => {
 		);
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 
@@ -137,8 +133,6 @@ describe("UnlockTokensModal", () => {
 		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 
 		// back to select step
 
@@ -173,8 +167,6 @@ describe("UnlockTokensModal", () => {
 		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 
 		// enter signing key
 
@@ -217,8 +209,6 @@ describe("UnlockTokensModal", () => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
 			});
 		}
-
-		expect(asFragment()).toMatchSnapshot();
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {
