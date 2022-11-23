@@ -66,7 +66,7 @@ describe("WelcomeModal", () => {
 		expect(screen.queryByTestId("WelcomeModal-prev")).not.toBeInTheDocument();
 
 		// Intermediate steps
-		for (const _ of [1, 2, 3]) {
+		for (const _ of [1, 2]) {
 			userEvent.click(screen.getByTestId(nextButtonID));
 
 			expect(screen.getByTestId(nextButtonID)).toBeDefined();

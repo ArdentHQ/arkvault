@@ -119,7 +119,7 @@ describe("useWelcomeModal", () => {
 		expect(result.current.show).toBeTruthy();
 
 		act(() => {
-			result.current.setStep(5);
+			result.current.setStep(4);
 		});
 
 		act(() => {

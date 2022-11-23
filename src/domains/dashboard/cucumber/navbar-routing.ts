@@ -1,7 +1,7 @@
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, getLocation, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, getLocation, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
@@ -31,20 +31,6 @@ cucumber("@routeToExchange", {
 		await t.expect(Selector("h1").withExactText(translations.EXCHANGE.PAGE_EXCHANGES.TITLE).exists).ok();
 	},
 });
-cucumber(
-	"@routeToNews",
-	{
-		...preSteps,
-		"When she selects news in the navbar": async (t: TestController) => {
-			await t.click(Selector("a").withExactText(translations.NEWS.NEWS));
-		},
-		"Then she is routed to the news page": async (t: TestController) => {
-			await t.expect(getLocation()).contains("/news");
-			await t.expect(Selector("h1").withExactText(translations.NEWS.PAGE_NEWS.TITLE).exists).ok();
-		},
-	},
-	[mockRequest("https://news.arkvault.io/api?coins=ARK&page=1", "news/page-1")],
-);
 cucumber("@routeToSend", {
 	...preSteps,
 	"When she selects send in the navbar": async (t: TestController) => {

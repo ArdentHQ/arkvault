@@ -8,9 +8,7 @@ const translations = buildTranslations();
 export const goToContacts = async (t: TestController) => {
 	await goToProfile(t);
 
-	await t.click(Selector('[data-testid="UserMenu"]'));
-	await t.expect(Selector('[data-testid="dropdown__option--0"]').withText(translations.COMMON.CONTACTS).exists).ok();
-	await t.click(Selector('[data-testid="dropdown__option--0"]').withText(translations.COMMON.CONTACTS));
+	await t.click(Selector("a").withText(translations.COMMON.CONTACTS));
 
 	await t.expect(Selector("h1").withText(translations.CONTACTS.CONTACTS_PAGE.TITLE).exists).ok();
 };

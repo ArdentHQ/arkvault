@@ -87,10 +87,6 @@ export const translations = {
 			DESCRIPTION: "With ARKVault, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
 			TITLE: "Exchange Assets On The Fly",
 		},
-		STEP_5: {
-			DESCRIPTION: "Customize or search your news feed to view the latest updates on your favorite cryptoassets.",
-			TITLE: "Stay Up To Date",
-		},
 	},
 	PAGE_CREATE_PROFILE: {
 		DESCRIPTION: "Create a new Profile below.",

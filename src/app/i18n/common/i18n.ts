@@ -218,7 +218,6 @@ export const translations = {
 	NETWORK_NAME: "This name is provided by the network",
 	NETWORK_OR_NETHASH: "network or nethash",
 	NETWORK_STATUS: "Network Status",
-	NEWS: "News",
 	NEXT: "Next",
 	NO: "No",
 	NOT: "not",
