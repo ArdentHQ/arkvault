@@ -39,7 +39,96 @@ describe("FeeField", () => {
 		);
 	};
 
+	it("should render", async () => {
+		const { asFragment } = render(<Component type="transfer" />);
+
+		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should not show warning toast when transaction fees are equal to the previous fees", async () => {
+		let useFeesSpy: vi.SpyInstance;
+
+		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
+		});
+
+		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+		const { rerender } = render(
+			<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />,
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+
+		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
+		});
+
+		rerender(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
+
+		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+
+		await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
+
+		useFeesSpy.mockRestore();
+	});
+
 	describe("when network's fee type is size", () => {
+		it("should override fee when it is lower than the minimum fees", async () => {
+			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
+
+			let useFeesSpy: vi.SpyInstance;
+
+			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),
+			});
+
+			const { rerender } = render(
+				<Component
+					type="transfer"
+					network={networks}
+					data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
+				/>,
+			);
+
+			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
+
+			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("3 DARK");
+			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("5 DARK");
+			expect(screen.getAllByRole("radio")[1]).toBeChecked();
+
+			await waitFor(() => {
+				expect(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED)).toBeEnabled();
+			});
+
+			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
+
+			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
+				calculate: () => Promise.resolve({ avg: 9, isDynamic: false, max: 12, min: 6, static: 3 }),
+			});
+
+			rerender(
+				<Component
+					type="transfer"
+					network={networks}
+					data={{ amount: 2, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
+				/>,
+			);
+
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"), { timeout: 4000 });
+
+			expect(toastSpy).toHaveBeenCalledWith(translations.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE);
+
+			feeTypeSpy.mockRestore();
+			toastSpy.mockRestore();
+			useFeesSpy.mockRestore();
+		});
 		it.each(["transfer", "multiPayment", "vote", "delegateRegistration", "secondSignature"])(
 			"should show 0 when %s data is undefined",
 			async (transactionType) => {
@@ -93,64 +182,6 @@ describe("FeeField", () => {
 			calculate.mockRestore();
 			useFeesMock.mockRestore();
 		});
-
-		it("should override fee when it is lower than the minimum fees", async () => {
-			const feeTypeSpy = vi.spyOn(networks, "feeType").mockReturnValueOnce("size");
-
-			let useFeesSpy: vi.SpyInstance;
-
-			const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-
-			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-				calculate: () => Promise.resolve({ avg: 3, isDynamic: true, max: 5, min: 1, static: 3 }),
-			});
-
-			const { rerender } = render(
-				<Component
-					type="transfer"
-					network={networks}
-					data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
-				/>,
-			);
-
-			await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
-
-			expect(screen.getAllByTestId("Amount")[1]).toHaveTextContent("3 DARK");
-			expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("5 DARK");
-			expect(screen.getAllByRole("radio")[1]).toBeChecked();
-
-			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
-
-			useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-				calculate: () => Promise.resolve({ avg: 9, isDynamic: false, max: 12, min: 6, static: 3 }),
-			});
-
-			rerender(
-				<Component
-					type="transfer"
-					network={networks}
-					data={{ amount: 2, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }}
-				/>,
-			);
-
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"), { timeout: 4000 });
-
-			expect(toastSpy).toHaveBeenCalledWith(translations.PAGE_TRANSACTION_SEND.FORM_STEP.FEE_UPDATE);
-
-			feeTypeSpy.mockRestore();
-			toastSpy.mockRestore();
-			useFeesSpy.mockRestore();
-		});
-	});
-
-	it("should render", async () => {
-		const { asFragment } = render(<Component type="transfer" />);
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should change fee", async () => {
@@ -169,34 +200,6 @@ describe("FeeField", () => {
 		userEvent.click(maxButton);
 
 		expect(maxButton).toHaveAttribute("aria-checked", "true");
-	});
-
-	it("should not show warning toast when transaction fees are equal to the previous fees", async () => {
-		let useFeesSpy: vi.SpyInstance;
-
-		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
-		});
-
-		const toastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-
-		const { rerender } = render(
-			<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />,
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"));
-
-		useFeesSpy = vi.spyOn(useFeesHook, "useFees").mockReturnValue({
-			calculate: () => Promise.resolve({ avg: 1, isDynamic: true, max: 1, min: 1, static: 1 }),
-		});
-
-		rerender(<Component type="transfer" data={{ amount: 1, to: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }} />);
-
-		await waitFor(() => expect(screen.getAllByTestId("Amount")[0]).toHaveTextContent("1 DARK"), { timeout: 4000 });
-
-		await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
-
-		useFeesSpy.mockRestore();
 	});
 
 	it("should set fee to fees.avg when it has no value yet", async () => {
