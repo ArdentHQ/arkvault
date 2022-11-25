@@ -61,6 +61,44 @@ describe("Add Participant", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should handle exception on find and show address not found error", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId">
+				<AddParticipant profile={profile} wallet={wallet} />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		const walletFindMock = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {
+			throw new Error("error");
+		});
+
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+
+		await waitFor(() => {
+			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+		});
+
+		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
+		});
+
+		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
+			"data-errortext",
+			t("TRANSACTION.MULTISIGNATURE.ERROR.ADDRESS_NOT_FOUND"),
+		);
+		expect(asFragment()).toMatchSnapshot();
+
+		walletFindMock.mockRestore();
+	});
+
 	it("should fail with cold wallet", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;

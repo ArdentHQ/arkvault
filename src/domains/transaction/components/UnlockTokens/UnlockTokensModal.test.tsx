@@ -95,8 +95,6 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
-
 		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -114,10 +112,11 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
-
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
-		expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+		});
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("UnlockTokensTotal")[0]).getByTestId("Amount")).toHaveTextContent(
@@ -134,8 +133,6 @@ describe("UnlockTokensModal", () => {
 		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
 
 		// back to select step
 
@@ -171,8 +168,6 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
-
 		// enter signing key
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
@@ -199,15 +194,21 @@ describe("UnlockTokensModal", () => {
 				  },
 		);
 
+		await waitFor(() => {
+			expect(screen.getByTestId("UnlockTokensAuthentication__send")).toBeEnabled();
+		});
+
 		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		if (expectedOutcome === "success") {
-			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+			});
 		} else {
-			await expect(screen.findByTestId("ErrorStep__errorMessage")).resolves.toBeVisible();
+			await waitFor(() => {
+				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
+			});
 		}
-
-		expect(asFragment()).toMatchSnapshot();
 
 		expect(signMock).toHaveBeenCalledWith({
 			data: {

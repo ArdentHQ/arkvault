@@ -380,8 +380,11 @@ describe("Registration", () => {
 		userEvent.paste(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
-		userEvent.click(continueButton());
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
 
+		userEvent.click(continueButton());
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
@@ -395,6 +398,10 @@ describe("Registration", () => {
 
 		userEvent.paste(mnemonic, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
+
+		await waitFor(() => {
+			expect(secondMnemonic).toBeEnabled();
+		});
 
 		userEvent.paste(secondMnemonic, MNEMONICS[2]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[2]));
@@ -423,7 +430,11 @@ describe("Registration", () => {
 		userEvent.paste(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
-		userEvent.keyboard("{enter}");
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
@@ -508,6 +519,10 @@ describe("Registration", () => {
 		userEvent.paste(screen.getByTestId("Input__username"), "delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
 
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
+
 		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
@@ -524,10 +539,18 @@ describe("Registration", () => {
 		userEvent.paste(mnemonic, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonic).toHaveValue(MNEMONICS[0]));
 
+		await waitFor(() => {
+			expect(secondMnemonic).toBeEnabled();
+		});
+
 		userEvent.paste(secondMnemonic, MNEMONICS[1]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+
+		const signMock = vi
+			.spyOn(secondWallet.transaction(), "signDelegateRegistration")
+			.mockReturnValue(Promise.resolve(DelegateRegistrationFixture.data.id));
 
 		const broadcastMock = vi.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");
@@ -535,6 +558,7 @@ describe("Registration", () => {
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
+		await waitFor(() => expect(sendButton()).toBeEnabled());
 		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
@@ -548,6 +572,7 @@ describe("Registration", () => {
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
 
 		historyMock.mockRestore();
+		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		actsWithMnemonicMock.mockRestore();
 		secondPublicKeyMock.mockRestore();
