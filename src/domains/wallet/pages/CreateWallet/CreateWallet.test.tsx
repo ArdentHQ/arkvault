@@ -24,6 +24,7 @@ let bip39GenerateMock: any;
 
 const fixtureProfileId = getDefaultProfileId();
 const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
+const encryptionPassword = "S3cUrePa$sword";
 
 const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
 
@@ -296,8 +297,15 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), "S3cUrePa$sword");
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), "S3cUrePa$sword");
+		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), encryptionPassword);
+		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), encryptionPassword);
+
+		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(
+			encryptionPassword,
+		);
+		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+			encryptionPassword,
+		);
 
 		const continueEncryptionButton = screen.getByTestId("CreateWallet__continue-encryption-button");
 
