@@ -263,12 +263,12 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -277,7 +277,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -687,12 +687,12 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -701,7 +701,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1040,12 +1040,12 @@ exports[`WalletHeader > should render 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1054,7 +1054,7 @@ exports[`WalletHeader > should render 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1363,12 +1363,12 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1377,7 +1377,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -1712,12 +1712,12 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -1726,7 +1726,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -2061,12 +2061,12 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2075,7 +2075,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -2439,12 +2439,12 @@ exports[`WalletHeader > should show modifiers 1`] = `
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2453,7 +2453,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -2726,12 +2726,12 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           type="button"
         >
           <div
-            class=" css-v0ob3f"
+            class="text-theme-warning-400 css-v0ob3f"
             height="16"
             width="16"
           >
             <svg
-              id="star"
+              id="star-filled"
               viewBox="0 0 20 20"
               x="0"
               xml:space="preserve"
@@ -2740,7 +2740,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             >
               <path
                 d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                fill="none"
+                fill="currentColor"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
