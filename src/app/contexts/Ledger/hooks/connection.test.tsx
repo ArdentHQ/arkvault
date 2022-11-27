@@ -361,7 +361,9 @@ describe("Use Ledger Connection", () => {
 
 			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
-			expect(connectSpy).toHaveBeenCalledTimes(1);
+			await waitFor(() => {
+				expect(connectSpy).toHaveBeenCalledTimes(3);
+			});
 
 			listenSpy.mockRestore();
 			connectSpy.mockRestore();
