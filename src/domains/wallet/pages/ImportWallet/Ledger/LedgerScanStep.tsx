@@ -171,7 +171,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	);
 };
 
-const loadedWalletsToastMessage = (wallets: Contracts.WalletData[]) => {
+export const showLoadedLedgerWalletsMessage = (wallets: Contracts.WalletData[]) => {
 	if (wallets.length === 1) {
 		return <Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_WALLET" />;
 	}
@@ -269,9 +269,9 @@ export const LedgerScanStep = ({
 		}
 
 		if (toasts.isActive("wallet-loading")) {
-			toasts.update("wallet-loading", "success", loadedWalletsToastMessage(loadedWallets));
+			toasts.update("wallet-loading", "success", showLoadedLedgerWalletsMessage(loadedWallets));
 		} else {
-			toasts.success(loadedWalletsToastMessage(loadedWallets), {
+			toasts.success(showLoadedLedgerWalletsMessage(loadedWallets), {
 				autoClose: false,
 				toastId: "wallet-loading",
 			});

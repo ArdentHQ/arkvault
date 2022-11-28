@@ -4,7 +4,7 @@ import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { Networks } from "@ardenthq/sdk";
-import { LedgerScanStep } from "./LedgerScanStep";
+import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
@@ -83,6 +83,30 @@ describe("LedgerScanStep", () => {
 			</FormProvider>
 		);
 	};
+
+	it("should show message for 1 or more loaded wallets", async () => {
+		expect(
+			showLoadedLedgerWalletsMessage([
+				{ balance: 1, address: wallet.address() },
+				{ balance: 2, address: profile.wallets().last().address() },
+			]),
+		).toMatchInlineSnapshot(`
+			<Trans
+			  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_WALLETS"
+			  values={
+			    {
+			      "count": 2,
+			    }
+			  }
+			/>
+		`);
+
+		expect(showLoadedLedgerWalletsMessage([{ balance: 1, address: wallet.address() }])).toMatchInlineSnapshot(`
+			<Trans
+			  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_WALLET"
+			/>
+		`);
+	});
 
 	it("should handle select", async () => {
 		render(<Component />);
