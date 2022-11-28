@@ -43,12 +43,7 @@ export const NotificationTransactionItem = ({
 	}
 
 	return (
-		<VisibilitySensor
-			onChange={(isVisible) => onVisibilityChange?.(isVisible)}
-			scrollCheck
-			delayedCall
-			containment={containmentRef?.current}
-		>
+		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
 				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact={isCompact}>
 					<TransactionRowMode

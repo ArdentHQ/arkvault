@@ -52,10 +52,6 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 							<NotificationItem
 								{...notification}
 								onAction={onNotificationAction}
-								onVisibilityChange={(isVisible) => {
-									markAsRead(isVisible, notification.id);
-									persist();
-								}}
 								containmentRef={wrapperReference}
 							/>
 						)}
