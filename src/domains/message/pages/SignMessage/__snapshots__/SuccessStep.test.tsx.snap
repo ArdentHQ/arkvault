@@ -1,0 +1,301 @@
+// Vitest Snapshot v1
+
+exports[`SignMessage success step > should render success step in lg 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Message Successfully Signed
+        </h1>
+      </div>
+    </div>
+    <div
+      class="no-ligatures mt-4 md:mt-2 css-s5w13h"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+        data-testid="TransactionDetail--desktop"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Signatory
+        </div>
+        <div
+          class="flex items-center font-semibold"
+        >
+          <div
+            class="w-0 flex-1 text-right md:text-left"
+          >
+            <div
+              class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="font-semibold text-base text-theme-text"
+                data-testid="Address__alias"
+              >
+                <span
+                  class="css-u3jrna"
+                  data-testid="TruncateEnd"
+                >
+                  ARK Wallet 1
+                </span>
+              </span>
+              <span
+                class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="shrink-0 css-8d0u1i"
+        data-testid="Avatar"
+      >
+        <div
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        >
+          <img
+            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-s5w13h"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="w-40 flex-1 space-y-2 whitespace-nowrap"
+        data-testid="TransactionDetail--desktop"
+      >
+        <div
+          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+        >
+          Message
+        </div>
+        <div
+          class="flex items-center font-semibold"
+        >
+          <span
+            class="min-w-0 whitespace-normal break-words text-right md:text-left"
+          >
+            Test Message
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="pt-4 md:pt-6"
+    >
+      <fieldset
+        class="flex min-w-0 flex-col css-1bcidjh"
+      >
+        <label
+          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          data-testid="FormLabel"
+          for="json-signature"
+        >
+          JSON String
+        </label>
+        <div
+          class="relative"
+        >
+          <div
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="TextArea"
+                disabled=""
+                name="json-signature"
+                style="height: 4px;"
+                type="text"
+                wrap="hard"
+              >
+                {"message":"Test Message","signatory":"!","signature":"1","mnemonic":"1"}
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`SignMessage success step > should render success step in xs 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="flex items-end justify-between bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Message Successfully Signed
+        </h1>
+      </div>
+    </div>
+    <div
+      class="no-ligatures mt-4 md:mt-2 css-s5w13h"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="items-top flex w-full justify-between space-x-4 md:items-center"
+        data-testid="TransactionDetail--mobile"
+      >
+        <div
+          class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        >
+          Signatory
+        </div>
+        <div
+          class="flex min-w-0 grow items-center justify-end space-x-4"
+        >
+          <div
+            class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+          >
+            <div
+              class="w-0 flex-1 text-right md:text-left"
+            >
+              <div
+                class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="css-u3jrna"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="shrink-0 css-1vy2z2u"
+            data-testid="Avatar"
+          >
+            <div
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            >
+              <img
+                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-s5w13h"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="items-top flex w-full justify-between space-x-4 md:items-center"
+        data-testid="TransactionDetail--mobile"
+      >
+        <div
+          class="text-md md:theme-text group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
+        >
+          Message
+        </div>
+        <div
+          class="flex min-w-0 grow items-center justify-end space-x-4"
+        >
+          <div
+            class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
+          >
+            <span
+              class="min-w-0 whitespace-normal break-words text-right md:text-left"
+            >
+              Test Message
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="pt-4 md:pt-6"
+    >
+      <fieldset
+        class="flex min-w-0 flex-col css-1bcidjh"
+      >
+        <label
+          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          data-testid="FormLabel"
+          for="json-signature"
+        >
+          JSON String
+        </label>
+        <div
+          class="relative"
+        >
+          <div
+            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+          />
+          <div
+            class="py-4 css-qner8f"
+            disabled=""
+          >
+            <div
+              class="relative flex h-full flex-1"
+            >
+              <textarea
+                autocomplete="off"
+                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                data-testid="TextArea"
+                disabled=""
+                name="json-signature"
+                style="height: 4px;"
+                type="text"
+                wrap="hard"
+              >
+                {"message":"Test Message","signatory":"!","signature":"1","mnemonic":"1"}
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+</DocumentFragment>
+`;
