@@ -420,7 +420,7 @@ export const useProfileSynchronizer = ({
 
 				await persist();
 				setStatus("synced");
-			} catch (error) {
+			} catch {
 				const { erroredNetworks } = getErroredNetworks(profile);
 				if (erroredNetworks.length > 0) {
 					onProfileSyncError?.(erroredNetworks, () => {

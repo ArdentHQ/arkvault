@@ -16,7 +16,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	act,
 } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {

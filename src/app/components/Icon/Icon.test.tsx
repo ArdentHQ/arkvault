@@ -20,7 +20,7 @@ describe("Icon", () => {
 	});
 
 	it("should render with custom dimensions", () => {
-		const { container, asFragment } = render(<Icon dimensions={[20, 20]} name="ARK" />);
+		const { asFragment } = render(<Icon dimensions={[20, 20]} name="ARK" />);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

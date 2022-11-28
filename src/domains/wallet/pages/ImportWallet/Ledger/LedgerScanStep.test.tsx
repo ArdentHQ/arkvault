@@ -84,11 +84,11 @@ describe("LedgerScanStep", () => {
 		);
 	};
 
-	it("should show message for 1 or more loaded wallets", async () => {
+	it("should show message for 1 or more loaded wallets", () => {
 		expect(
 			showLoadedLedgerWalletsMessage([
-				{ balance: 1, address: wallet.address() },
-				{ balance: 2, address: profile.wallets().last().address() },
+				{ address: wallet.address(), balance: 1 },
+				{ address: profile.wallets().last().address(), balance: 2 },
 			]),
 		).toMatchInlineSnapshot(`
 			<Trans
@@ -101,7 +101,7 @@ describe("LedgerScanStep", () => {
 			/>
 		`);
 
-		expect(showLoadedLedgerWalletsMessage([{ balance: 1, address: wallet.address() }])).toMatchInlineSnapshot(`
+		expect(showLoadedLedgerWalletsMessage([{ address: wallet.address(), balance: 1 }])).toMatchInlineSnapshot(`
 			<Trans
 			  i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.LOADED_SINGLE_WALLET"
 			/>

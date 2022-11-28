@@ -22,11 +22,9 @@ const fixtures: Record<string, any> = {
 	transfer: undefined,
 };
 
-vi.mock("@/app/hooks/use-ledger-model-status", () => {
-	return {
-		useLedgerModelStatus: () => ({ isLedgerModelSupported: true }),
-	};
-});
+vi.mock("@/app/hooks/use-ledger-model-status", () => ({
+	useLedgerModelStatus: () => ({ isLedgerModelSupported: true }),
+}));
 
 vi.mock("@/utils/delay", () => ({
 	delay: (callback: () => void) => callback(),

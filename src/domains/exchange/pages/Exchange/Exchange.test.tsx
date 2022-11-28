@@ -430,7 +430,7 @@ describe("Exchange", () => {
 
 	it("should show exchange transaction history", async () => {
 		profile.exchangeTransactions().create(stubData);
-		const { restoreExchangeMocks } = mockExchangeTransaction(profile);
+		mockExchangeTransaction(profile);
 
 		render(
 			<Route path="/profiles/:profileId/exchange">

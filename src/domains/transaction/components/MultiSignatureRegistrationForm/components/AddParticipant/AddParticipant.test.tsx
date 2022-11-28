@@ -15,6 +15,7 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 const ARKTestURL = "https://ark-test.arkvault.io";
 const walletsURLPath = "/api/wallets";
+const dataErrorText = "data-errortext";
 
 describe("Add Participant", () => {
 	let profile: Contracts.IProfile;
@@ -55,7 +56,7 @@ describe("Add Participant", () => {
 		});
 
 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-			"data-errortext",
+			dataErrorText,
 			t("TRANSACTION.MULTISIGNATURE.ERROR.ADDRESS_NOT_FOUND"),
 		);
 		expect(asFragment()).toMatchSnapshot();
@@ -91,7 +92,7 @@ describe("Add Participant", () => {
 		});
 
 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-			"data-errortext",
+			dataErrorText,
 			t("TRANSACTION.MULTISIGNATURE.ERROR.ADDRESS_NOT_FOUND"),
 		);
 		expect(asFragment()).toMatchSnapshot();
@@ -140,7 +141,7 @@ describe("Add Participant", () => {
 		});
 
 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-			"data-errortext",
+			dataErrorText,
 			t("TRANSACTION.MULTISIGNATURE.ERROR.PUBLIC_KEY_NOT_FOUND"),
 		);
 		expect(asFragment()).toMatchSnapshot();
@@ -181,7 +182,7 @@ describe("Add Participant", () => {
 		});
 
 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-			"data-errortext",
+			dataErrorText,
 			t("TRANSACTION.MULTISIGNATURE.ERROR.ADDRESS_ALREADY_ADDED"),
 		);
 		expect(asFragment()).toMatchSnapshot();
@@ -228,7 +229,7 @@ describe("Add Participant", () => {
 		});
 
 		expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
-			"data-errortext",
+			dataErrorText,
 			t("TRANSACTION.MULTISIGNATURE.ERROR.ADDRESS_NOT_FOUND"),
 		);
 		expect(asFragment()).toMatchSnapshot();

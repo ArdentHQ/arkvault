@@ -27,7 +27,7 @@ describe("Card", () => {
 	it("should render with custom options", async () => {
 		const handleClick = vi.fn();
 		const { container, asFragment } = render(
-			<Card actions={[{ value: "1", label: "Action 1" }]} onClick={() => handleClick()}>
+			<Card actions={[{ label: "Action 1", value: "1" }]} onClick={() => handleClick()}>
 				Test
 			</Card>,
 		);

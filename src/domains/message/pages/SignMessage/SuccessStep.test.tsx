@@ -3,9 +3,9 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { SuccessStep } from "./SuccessStep";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { env, getDefaultProfileId, renderResponsiveWithRoute, screen, waitFor } from "@/utils/testing-library";
-import { SuccessStep } from "./SuccessStep";
 
 const history = createHashHistory();
 
@@ -17,7 +17,7 @@ describe("SignMessage success step", () => {
 			<Route path="/profiles/:profileId/wallets/:walletId/sign-message">
 				<SuccessStep
 					wallet={profile.wallets().first()}
-					signedMessage={{ message: "Test Message", signatory: "!", signature: "1", mnemonic: "1" }}
+					signedMessage={{ message: "Test Message", mnemonic: "1", signatory: "!", signature: "1" }}
 				/>
 			</Route>,
 			breakpoint,

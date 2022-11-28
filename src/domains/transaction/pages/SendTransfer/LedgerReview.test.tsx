@@ -33,8 +33,8 @@ describe("TransferLedgerReview", () => {
 		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
 			defaultValues: {
 				fee: "0",
-				recipients: [],
 				memo: "test",
+				recipients: [],
 			},
 			registerCallback: ({ register }) => {
 				register("memo");

@@ -84,7 +84,7 @@ describe("UnlockTokensModal", () => {
 	it("should render", async () => {
 		const onClose = vi.fn();
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensModal wallet={wallet} onClose={onClose} profile={profile} />
 			</Route>,
@@ -101,7 +101,7 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
 			</Route>,
