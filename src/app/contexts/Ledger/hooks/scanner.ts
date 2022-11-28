@@ -79,6 +79,7 @@ export const useLedgerScanner = (coin: string, network: string) => {
 					ledgerData = uniqBy([...wallets, ...ledgerData], (wallet) => wallet.address);
 				}
 
+				/* istanbul ignore next -- @preserve */
 				if (abortRetryReference.current) {
 					return;
 				}
