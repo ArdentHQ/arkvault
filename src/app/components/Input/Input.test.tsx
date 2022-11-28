@@ -19,8 +19,25 @@ describe("Input", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render as textarea", () => {
+		const { asFragment } = render(<Input isTextArea />);
+		const input = screen.getByTestId("Input");
+
+		expect(input.tagName).toBe("INPUT");
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render with focus", () => {
 		const { asFragment } = render(<Input isFocused />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render disabled", () => {
+		const { asFragment } = render(<Input disabled />);
+
+		expect(screen.getByRole("textbox")).toBeDisabled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

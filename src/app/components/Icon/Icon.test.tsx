@@ -19,6 +19,12 @@ describe("Icon", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with custom dimensions", () => {
+		const { container, asFragment } = render(<Icon dimensions={[20, 20]} name="ARK" />);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it.each(["sm", "md", "lg", "xl"])("should render with size '%s'", (size) => {
 		const { asFragment } = render(<Icon name="ARK" size={size} />);
 
