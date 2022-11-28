@@ -10,7 +10,6 @@ export const SyncErrorMessage = ({
 	failedNetworkNames: string[];
 	onRetry?: () => void;
 }) => {
-	console.log("error----------");
 	const { t } = useTranslation();
 
 	return (

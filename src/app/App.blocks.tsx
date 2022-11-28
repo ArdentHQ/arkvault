@@ -110,10 +110,8 @@ const Main: React.VFC = () => {
 			toasts.success(t("COMMON.PROFILE_SYNC_COMPLETED"));
 		},
 		onProfileSyncError: async (failedNetworkNames, retryProfileSync) => {
-			console.log("testi");
 			await toasts.dismiss();
 
-			console.log("warning");
 			toasts.warning(
 				<SyncErrorMessage
 					failedNetworkNames={failedNetworkNames}
