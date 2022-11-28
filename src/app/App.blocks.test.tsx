@@ -137,8 +137,9 @@ describe("App Main", () => {
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 	});
 
-	it("should fail to sync and retry", async () => {
+	it("should fail to sync", async () => {
 		const dismissToastSpy = vi.spyOn(toasts, "dismiss").mockImplementation(vi.fn());
+		const warningToastSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const profileUrl = `/profiles/${getDefaultProfileId()}/exchange`;
 
 		const profile = env.profiles().first();
@@ -168,20 +169,15 @@ describe("App Main", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
 
-		await waitFor(() => {
-			expect(screen.getByTestId("SyncErrorMessage__retry")).toBeInTheDocument();
-		});
-
-		profileSyncMock.mockRestore();
-		walletRestoreErrorMock.mockRestore();
-		walletSyncErrorMock.mockRestore();
-
-		userEvent.click(within(screen.getByTestId("SyncErrorMessage__retry")).getByRole("link"));
-
-		await waitFor(() => expect(dismissToastSpy).toHaveBeenCalledWith());
+		await waitFor(() => expect(dismissToastSpy).toHaveBeenCalled());
+		await waitFor(() => expect(warningToastSpy).toHaveBeenCalled());
 
 		dismissToastSpy.mockRestore();
+		warningToastSpy.mockRestore();
 		resetProfileNetworksMock();
+		walletSyncErrorMock.mockRestore();
+		walletRestoreErrorMock.mockRestore();
+		profileSyncMock.mockRestore();
 	});
 
 	it("should enter profile and sync", async () => {
@@ -204,6 +200,7 @@ describe("App Main", () => {
 		);
 
 		await waitFor(() => expect(history.location.pathname).toBe(profileUrl));
+		await waitFor(() => expect(successToastSpy).toHaveBeenCalled());
 
 		successToastSpy.mockRestore();
 		warningToastSpy.mockRestore();
