@@ -34,7 +34,7 @@ interface VerifyMessageFormState {
 
 export type VerificationResult = { verified?: boolean } & Services.SignedMessage;
 
-export const VerifyMessage: React.VFC = () => {
+export const VerifyMessage = () => {
 	const { t } = useTranslation();
 
 	const { walletId } = useParams<{ walletId: string }>();

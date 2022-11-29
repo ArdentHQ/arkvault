@@ -11,6 +11,10 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			}
 
 			profile.notifications().transactions().markAllAsRead();
+
+			for (const notification of profile.notifications().releases().recent()) {
+				profile.notifications().markAsRead(notification.id);
+			}
 		};
 
 		const markAsRead = (isVisible: boolean, id: string) => {
