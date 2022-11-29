@@ -195,7 +195,7 @@ describe("VerifyMessage", () => {
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
 
-	it.skip("should verify message using json", async () => {
+	it("should verify message using json", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
 				<VerifyMessage />
@@ -206,14 +206,14 @@ describe("VerifyMessage", () => {
 			},
 		);
 
+		userEvent.type(signatoryInput(), signedMessage.signatory);
+		userEvent.type(messageInput(), signedMessage.message);
+		userEvent.type(signatureInput(), signedMessage.signature);
+
 		userEvent.click(screen.getByRole("checkbox"));
 
-		const jsonStringInput = screen.getByTestId("VerifyMessage__json-jsonString");
-
-		userEvent.paste(jsonStringInput, JSON.stringify(signedMessage));
-
 		await waitFor(() => {
-			expect(jsonStringInput).toHaveValue(JSON.stringify(signedMessage));
+			expect(screen.getByTestId("VerifyMessage__json-jsonString")).toHaveValue(JSON.stringify(signedMessage));
 		});
 
 		await waitFor(() => {
@@ -223,6 +223,32 @@ describe("VerifyMessage", () => {
 		userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
+	});
+
+	it("should not paste json values if all fields are empty", async () => {
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/verify-message">
+				<VerifyMessage />
+			</Route>,
+			{
+				history,
+				route: walletUrl,
+			},
+		);
+
+		userEvent.paste(messageInput(), "");
+		userEvent.paste(signatoryInput(), "");
+		userEvent.paste(signatureInput(), signedMessage.signature);
+
+		userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("VerifyMessage__json-jsonString")).not.toHaveValue(JSON.stringify(signedMessage));
+		});
+
+		await waitFor(() => {
+			expect(verifyButton()).not.toBeEnabled();
+		});
 	});
 
 	it("should render with deeplink values and use them", async () => {
