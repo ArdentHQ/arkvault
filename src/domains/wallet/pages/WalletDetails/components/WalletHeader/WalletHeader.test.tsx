@@ -40,6 +40,7 @@ describe("WalletHeader", () => {
 
 		vi.spyOn(useQRCodeHook, "useQRCode").mockImplementation(() => ({}));
 		vi.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
+		vi.spyOn(profile.wallets().first(), "isStarred").mockReturnValue(true);
 	});
 
 	afterAll(() => {

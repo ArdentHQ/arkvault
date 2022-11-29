@@ -11,7 +11,7 @@ const setTheme = (theme: Theme) => {
 	const htmlElement = document.querySelector("html")!;
 
 	if (theme === "system") {
-		const theme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+		const theme: ViewingModeType = window.matchMedia("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
 
 		htmlElement.classList.remove("dark");
 		htmlElement.classList.remove("light");

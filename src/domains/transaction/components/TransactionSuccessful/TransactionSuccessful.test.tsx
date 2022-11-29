@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -29,7 +29,7 @@ describe("TransactionSuccessful", () => {
 		return transaction[attribute]();
 	};
 
-	it("should render", async () => {
+	it("should render", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -91,7 +91,7 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it's a multisignature registration", async () => {
+	it("should render successfull screen if it's a multisignature registration", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
@@ -117,7 +117,7 @@ describe("TransactionSuccessful", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render successfull screen if it uses multisignature", async () => {
+	it("should render successfull screen if it uses multisignature", () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,

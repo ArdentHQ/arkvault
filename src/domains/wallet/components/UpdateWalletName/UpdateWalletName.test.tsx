@@ -48,7 +48,9 @@ describe("UpdateWalletName", () => {
 			expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name);
 		});
 
-		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
+		});
 
 		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 

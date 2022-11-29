@@ -133,7 +133,7 @@ describe("UpdateContact", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("Input__error")).toBeInTheDocument();
+			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
 		});
 
 		await waitFor(() => {

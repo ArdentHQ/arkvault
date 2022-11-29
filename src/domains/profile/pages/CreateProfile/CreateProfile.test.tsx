@@ -1,5 +1,8 @@
 /* eslint-disable testing-library/no-node-access */
 /* eslint-disable @typescript-eslint/require-await */
+/* eslint-disable @typescript-eslint/await-thenable */
+/* eslint-disable testing-library/no-unnecessary-act */
+
 import { ARK } from "@ardenthq/sdk-ark";
 import userEvent from "@testing-library/user-event";
 import React from "react";

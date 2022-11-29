@@ -49,7 +49,6 @@ export const ImportWallet = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.NetworkStep);
 	const [importedWallet, setImportedWallet] = useState<Contracts.IReadWriteWallet | undefined>(undefined);
 	const [walletGenerationInput, setWalletGenerationInput] = useState<WalletGenerationInput>();
-	const [secondInputValue, setSecondInputValue] = useState<string>();
 
 	const [isImporting, setIsImporting] = useState(false);
 	const [isEncrypting, setIsEncrypting] = useState(false);
@@ -84,12 +83,6 @@ export const ImportWallet = () => {
 			setWalletGenerationInput(value);
 		}
 	}, [value, setWalletGenerationInput]);
-
-	useEffect(() => {
-		if (secondInput !== undefined) {
-			setSecondInputValue(secondInput);
-		}
-	}, [secondInput, setSecondInputValue]);
 
 	useKeydown("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
@@ -216,8 +209,8 @@ export const ImportWallet = () => {
 
 		importedWallet.signingKey().set(walletGenerationInput, encryptionPassword);
 
-		if (secondInputValue) {
-			importedWallet.confirmKey().set(secondInputValue, encryptionPassword);
+		if (secondInput) {
+			importedWallet.confirmKey().set(secondInput, encryptionPassword);
 		}
 
 		if (importedWallet.actsWithMnemonic()) {

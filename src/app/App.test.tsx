@@ -16,7 +16,6 @@ import {
 	render,
 	screen,
 	waitFor,
-	act,
 } from "@/utils/testing-library";
 
 vi.mock("@/domains/dashboard/routing", async () => {
@@ -72,6 +71,43 @@ describe("App", () => {
 	beforeEach(() => {
 		history.replace("/");
 		env.reset();
+	});
+
+	it("should redirect to root if profile restoration error occurs", async () => {
+		process.env.REACT_APP_IS_UNIT = "1";
+
+		render(<App />, { history, withProviders: false });
+
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
+		).resolves.toBeVisible();
+
+		expect(history.location.pathname).toBe("/");
+
+		userEvent.click(screen.getAllByTestId("Card")[1]);
+
+		await waitFor(() => {
+			expect(passwordInput()).toBeInTheDocument();
+		});
+
+		userEvent.paste(passwordInput(), "password");
+
+		await waitFor(() => {
+			expect(passwordInput()).toHaveValue("password");
+		});
+
+		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
+		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
+			throw new Error("password not found");
+		});
+
+		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+
+		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
+
+		memoryPasswordMock.mockRestore();
+		verifyPasswordMock.mockRestore();
 	});
 
 	it("should render page skeleton", async () => {
@@ -199,45 +235,6 @@ describe("App", () => {
 		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should redirect to root if profile restoration error occurs", async () => {
-		process.env.REACT_APP_IS_UNIT = "1";
-
-		render(<App />, { history, withProviders: false });
-
-		await expect(
-			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
-		).resolves.toBeVisible();
-
-		expect(history.location.pathname).toBe("/");
-
-		userEvent.click(screen.getAllByTestId("Card")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		act(() => {
-			userEvent.type(passwordInput(), "password");
-		});
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
-
-		const verifyPasswordMock = vi.spyOn(Bcrypt, "verify").mockReturnValue(true);
-		const memoryPasswordMock = vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
-			throw new Error("password not found");
-		});
-
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledTimes(1), { timeout: 4000 });
-		await waitFor(() => expect(history.location.pathname).toBe("/"));
-
-		memoryPasswordMock.mockRestore();
-		verifyPasswordMock.mockRestore();
 	});
 
 	it.each([false, true])(

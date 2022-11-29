@@ -143,9 +143,17 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
+		await waitFor(() => {
+			expect(screen.getByTestId("CreateWallet__continue-encryption-button")).toBeEnabled();
+		});
+
 		userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("CreateWallet__finish-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
@@ -257,6 +265,10 @@ describe("EncryptionPasswordStep", () => {
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
 		expect(profile.wallets().values()).toHaveLength(0);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("CreateWallet__continue-encryption-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 

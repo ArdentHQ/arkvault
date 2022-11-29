@@ -301,16 +301,27 @@ describe("ImportWallet Methods", () => {
 
 		enableEncryptionToggle();
 
+		await waitFor(() => {
+			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
+		});
+
 		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+			password,
+		);
+
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
 		userEvent.click(continueButton());
 
 		await waitFor(
@@ -352,7 +363,7 @@ describe("ImportWallet Methods", () => {
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, "abc");
+		userEvent.type(passphraseInput, "abc");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -366,18 +377,22 @@ describe("ImportWallet Methods", () => {
 
 		userEvent.paste(screen.getByTestId("EncryptPassword__second-secret"), "abc");
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+
+		await expect(screen.findByTestId("EncryptPassword__second-secret")).resolves.toHaveValue("abc");
+		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
+
+		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+			password,
+		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
-		await waitFor(
-			() => {
-				expect(successStep()).toBeInTheDocument();
-			},
-			{ timeout: 15_000 },
-		);
+		await waitFor(() => {
+			expect(successStep()).toBeInTheDocument();
+		});
 	});
 
 	it("forgets the imported wallet if back from encrypted password step", async () => {

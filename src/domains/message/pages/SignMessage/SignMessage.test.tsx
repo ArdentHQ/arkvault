@@ -6,7 +6,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { SignMessage } from "./SignMessage";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as messageTranslations } from "@/domains/message/i18n";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import {
