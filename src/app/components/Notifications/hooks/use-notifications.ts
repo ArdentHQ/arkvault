@@ -1,5 +1,6 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo } from "react";
+import { NotificationItemProperties } from "@/app/components/Notifications.contracts";
 
 export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) => {
 	const isSyncing = profile.notifications().transactions().isSyncing();
@@ -11,6 +12,10 @@ export const useNotifications = ({ profile }: { profile: Contracts.IProfile }) =
 			}
 
 			profile.notifications().transactions().markAllAsRead();
+
+			for (const notification of profile.notifications().releases().recent()) {
+				profile.notifications().markAsRead(notification.id);
+			}
 		};
 
 		const markAsRead = (isVisible: boolean, id: string) => {
