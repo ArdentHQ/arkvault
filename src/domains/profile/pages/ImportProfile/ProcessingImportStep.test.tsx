@@ -65,7 +65,7 @@ describe("Import Profile - Processing import", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
+		userEvent.type(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
 		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 

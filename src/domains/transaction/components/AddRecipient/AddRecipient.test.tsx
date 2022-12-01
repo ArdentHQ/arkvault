@@ -407,7 +407,10 @@ describe("AddRecipient", () => {
 		});
 
 		expect(addRecipientButton()).toBeInTheDocument();
-		expect(addRecipientButton()).toBeDisabled();
+
+		await waitFor(() => {
+			expect(addRecipientButton()).toBeDisabled();
+		});
 
 		// Valid address
 		userEvent.clear(screen.getByTestId("SelectDropdown__input"));

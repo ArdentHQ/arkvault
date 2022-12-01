@@ -32,7 +32,7 @@ import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters
 
 const MAX_TABS = 5;
 
-export const SendTransfer: React.VFC = () => {
+export const SendTransfer = () => {
 	const history = useHistory();
 	const { t } = useTranslation();
 

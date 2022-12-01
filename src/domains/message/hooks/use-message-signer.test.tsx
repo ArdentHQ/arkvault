@@ -82,6 +82,23 @@ describe("Use Message Signer Hook", () => {
 		walletWifMock.mockRestore();
 	});
 
+	it("should sign message with secret", async () => {
+		const { result } = renderHook(() => useMessageSigner());
+
+		const walletActsWithSecret = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+
+		const signedMessage = await result.current.sign(wallet, "message", undefined, undefined, "password");
+
+		expect(signedMessage).toStrictEqual({
+			message: "message",
+			signatory: "02b568858a407a8721923b89df9963d30013639ac690cce5f555529b77b83cbfc7",
+			signature:
+				"3373c6c3ac0c72120804efac12dbe8e490edf47fe772ca66307dd0a352ef33844ffaab527c4cc4c1653ff901481863dff64ada35ecf34c15b0f0bbae960afbee",
+		});
+
+		walletActsWithSecret.mockRestore();
+	});
+
 	it("should sign message with encrypted wif", async () => {
 		const { result } = renderHook(() => useMessageSigner());
 

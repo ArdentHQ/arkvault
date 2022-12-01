@@ -132,7 +132,9 @@ describe("UpdateContact", () => {
 			expect(nameInput()).toHaveValue(contact.name());
 		});
 
-		expect(screen.getByTestId("Input__error")).toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
+		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();

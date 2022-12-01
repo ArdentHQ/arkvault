@@ -84,6 +84,7 @@ export const ServersSettings = () => {
 	};
 
 	const handleNetworkUpdate = (network: NormalizedNetwork) => {
+		console.log("on network update");
 		const updatedNetworks = updateNetwork(network);
 		setValue("customNetworks", updatedNetworks, { shouldDirty: true });
 

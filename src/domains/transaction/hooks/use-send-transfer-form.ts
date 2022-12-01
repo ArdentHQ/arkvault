@@ -127,13 +127,14 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 		[activeProfile, clearErrors, getValues, persist, transactionBuilder, wallet],
 	);
 
+	const walletBalance = wallet?.balance();
 	useEffect(() => {
 		register("remainingBalance");
 		register("network", sendTransferValidation.network());
 		register("recipients", sendTransferValidation.recipients());
 		register("senderAddress", sendTransferValidation.senderAddress());
 		register("fees");
-		register("fee", commonValidation.fee(remainingBalance, wallet?.network(), fees));
+		register("fee", commonValidation.fee(walletBalance, wallet?.network(), fees));
 		register("memo", sendTransferValidation.memo());
 
 		register("remainingBalance");

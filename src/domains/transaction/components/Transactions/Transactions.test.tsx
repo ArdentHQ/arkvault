@@ -337,7 +337,7 @@ describe("Transactions", () => {
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Transactions isLoading={true} profile={profile} wallets={profile.wallets().values()} />
+				<Transactions isLoading profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
 			{
 				history,
@@ -433,7 +433,7 @@ describe("Transactions", () => {
 		userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
 		);
 	});
 

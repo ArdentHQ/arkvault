@@ -1,11 +1,11 @@
 import cn from "classnames";
 import React from "react";
 
-export const RowWrapper: React.FC = ({ children }) => (
+export const RowWrapper = ({ children }: { children: React.ReactNode }) => (
 	<div className="flex items-center justify-between space-x-4">{children}</div>
 );
 
-export const RowLabel: React.FC = ({ children }) => (
+export const RowLabel = ({ children }: { children: React.ReactNode }) => (
 	<div className="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500">
 		{children}
 	</div>

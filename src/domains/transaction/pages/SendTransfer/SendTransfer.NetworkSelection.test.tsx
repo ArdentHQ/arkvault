@@ -90,20 +90,28 @@ describe("SendTransfer Network Selection", () => {
 			{
 				history,
 				route: transferURL,
-				withProfileSynchronizer: true,
 			},
 		);
 
 		await expect(screen.findByTestId(networkStepID)).resolves.toBeVisible();
 
+		await waitFor(() => {
+			expect(screen.getByTestId(ARKDevnetOptionId)).toBeInTheDocument();
+		});
+
 		userEvent.click(screen.getByTestId(ARKDevnetOptionId));
+
 		await waitFor(() => expect(screen.getByTestId(ARKDevnetOptionId)).toHaveAttribute("aria-label", ARKDevnet));
 
-		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await waitFor(() => {
+			expect(continueButton()).toBeEnabled();
+		});
 
 		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+		});
 
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 

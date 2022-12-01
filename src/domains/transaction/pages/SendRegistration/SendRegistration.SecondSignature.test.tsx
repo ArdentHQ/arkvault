@@ -144,6 +144,10 @@ describe("Second Signature Registration", () => {
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__generation-step")).resolves.toBeVisible();
 
+		await waitFor(() => {
+			expect(screen.getByTestId("InputFee")).toBeInTheDocument();
+		});
+
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
 		userEvent.click(fees[1]);
 

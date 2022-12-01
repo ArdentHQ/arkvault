@@ -603,13 +603,17 @@ describe("SendIpfs", () => {
 		userEvent.paste(mnemonicInput, passphrase);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(passphrase));
 
-		expect(sendButton()).not.toBeDisabled();
+		await waitFor(() => {
+			expect(sendButton()).not.toBeDisabled();
+		});
 
 		mnemonicInput.select();
 		userEvent.paste(mnemonicInput, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(MNEMONICS[0]));
 
-		expect(sendButton()).toBeDisabled();
+		await waitFor(() => {
+			expect(sendButton()).toBeDisabled();
+		});
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -695,7 +699,7 @@ describe("SendIpfs", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -703,6 +707,9 @@ describe("SendIpfs", () => {
 			throw new Error("broadcast error");
 		});
 
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
 		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
@@ -736,7 +743,9 @@ describe("SendIpfs", () => {
 		userEvent.paste(screen.getByTestId("Input__hash"), "invalid-ipfs-hash");
 		await waitFor(() => expect(screen.getByTestId("Input__hash")).toHaveValue("invalid-ipfs-hash"));
 
-		expect(screen.getByTestId("Input__error")).toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId("Input__error")).toBeVisible();
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});

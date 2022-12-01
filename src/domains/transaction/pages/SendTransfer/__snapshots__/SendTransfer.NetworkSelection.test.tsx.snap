@@ -719,13 +719,13 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-19-menu"
+                            aria-owns="downshift-10-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-19-input"
-                                id="downshift-19-label"
+                                for="downshift-10-input"
+                                id="downshift-10-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -768,13 +768,13 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-19-menu"
-                                    aria-labelledby="downshift-19-label"
+                                    aria-controls="downshift-10-menu"
+                                    aria-labelledby="downshift-10-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-19-input"
+                                    id="downshift-10-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -834,8 +834,8 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-19-label"
-                              id="downshift-19-menu"
+                              aria-labelledby="downshift-10-label"
+                              id="downshift-10-menu"
                               role="listbox"
                             />
                           </div>
@@ -1203,7 +1203,7 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
                                   >
-                                    57.60679402
+                                    57.68
                                   </span>
                                   )
                                 </span>
@@ -1316,114 +1316,101 @@ exports[`SendTransfer Network Selection > should select a cryptoasset and select
                       </label>
                       <div
                         class="relative"
-                        data-testid="InputFee"
                       >
                         <div
-                          class="absolute right-0 -mt-7"
+                          class="css-n29l73"
+                          disabled=""
                         >
                           <div
-                            class="flex items-center"
+                            class="relative flex h-full flex-1"
                           >
-                            <span
-                              class="css-w6ofpw"
-                              role="button"
-                            >
-                              Simple
-                            </span>
-                            <label
-                              class="css-1uxo3sa"
-                            >
-                              <input
-                                class="css-1r71f0z toggle-input"
-                                type="checkbox"
-                              />
-                              <div
-                                class="css-1f5xwvv toggle-handle"
-                              >
-                                <span
-                                  class="css-19qsmxy"
-                                />
-                              </div>
-                            </label>
-                            <span
-                              class="css-iwfou6"
-                              role="button"
-                            >
-                              Advanced
-                            </span>
+                            <input
+                              autocomplete="off"
+                              class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                              data-testid="InputCurrency"
+                              disabled=""
+                              name="fee"
+                              type="text"
+                              value=""
+                            />
                           </div>
-                        </div>
-                        <div
-                          class="inline-flex w-full items-center space-x-3"
-                          data-testid="ButtonGroup"
-                          role="radiogroup"
-                        >
-                          <button
-                            aria-checked="false"
-                            aria-label="0.00357"
-                            class="css-17i051m"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
+                          <div
+                            class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                            data-testid="Input__addon-end"
                           >
                             <div
-                              class="flex flex-col space-y-2"
+                              class=""
                             >
-                              <div>
-                                Slow
-                              </div>
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
+                              <div
+                                class="flex items-center"
                               >
-                                0.00357 DARK
-                              </span>
-                            </div>
-                          </button>
-                          <button
-                            aria-checked="true"
-                            aria-label="0.07320598"
-                            class="css-17i051m"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
-                          >
-                            <div
-                              class="flex flex-col space-y-2"
-                            >
-                              <div>
-                                Average
+                                <div
+                                  class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
+                                >
+                                  <button
+                                    class="border-r sm:border-r-0 css-1wqyzac"
+                                    data-testid="InputFeeAdvanced__up"
+                                    disabled=""
+                                    type="button"
+                                  >
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-up-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                  <button
+                                    class="css-1p5qk9o"
+                                    data-testid="InputFeeAdvanced__down"
+                                    disabled=""
+                                    type="button"
+                                  >
+                                    <div
+                                      class="css-15txs7d"
+                                      height="10"
+                                      width="10"
+                                    >
+                                      <svg
+                                        id="chevron-down-small"
+                                        viewBox="0 0 10 10"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
+                                      >
+                                        <path
+                                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
                               </div>
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                0.07320598 DARK
-                              </span>
                             </div>
-                          </button>
-                          <button
-                            aria-checked="false"
-                            aria-label="0.1"
-                            class="css-17i051m"
-                            data-testid="ButtonGroupOption"
-                            role="radio"
-                            type="button"
-                          >
-                            <div
-                              class="flex flex-col space-y-2"
-                            >
-                              <div>
-                                Fast
-                              </div>
-                              <span
-                                class="whitespace-nowrap text-sm"
-                                data-testid="Amount"
-                              >
-                                0.1 DARK
-                              </span>
-                            </div>
-                          </button>
+                          </div>
                         </div>
                       </div>
                     </fieldset>

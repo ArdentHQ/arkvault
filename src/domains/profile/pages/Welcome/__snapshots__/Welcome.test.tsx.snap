@@ -469,7 +469,7 @@ exports[`Welcome > should change route to create profile 1`] = `
 exports[`Welcome > should navigate to previous page with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
@@ -1595,7 +1595,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
 exports[`Welcome > should navigate to profile dashboard with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
@@ -2721,7 +2721,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
 exports[`Welcome > should navigate to profile settings with correct password 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="css-15789f"
   >
     <nav
       aria-labelledby="main menu"
