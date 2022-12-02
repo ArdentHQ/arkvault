@@ -47,6 +47,7 @@ export const translations = {
 		FORM_STEP: {
 			DESCRIPTION: "Authenticate a message from an address below.",
 			JSON_STRING: "JSON String",
+			JSON_PLACEHOLDER: '{"message": "...", "signatory": "...", "signature": "..."}',
 			TITLE: "Verify Message",
 			VERIFICATION_METHOD: {
 				DESCRIPTION: "Input fields manually or provide a JSON string.",
