@@ -11,6 +11,20 @@ describe("MultiSignatureRegistrationDetail", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 
+	const MultiSignatureRegistrationDetailComponent = () => (
+		<Route path="/profiles/:profileId">
+			<MultiSignatureRegistrationDetail
+				transaction={{
+					...TransactionFixture,
+					min: () => 2,
+					publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+					wallet: () => wallet,
+				}}
+				isOpen
+			/>
+		</Route>
+	);
+
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
@@ -20,20 +34,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 	});
 
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
-		const { container } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId">
-				<MultiSignatureRegistrationDetail
-					transaction={{
-						...TransactionFixture,
-						min: () => 2,
-						publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-						wallet: () => wallet,
-					}}
-					isOpen
-				/>
-			</Route>,
-			breakpoint,
-		);
+		const { container } = renderResponsiveWithRoute(<MultiSignatureRegistrationDetailComponent />, breakpoint);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -43,23 +44,9 @@ describe("MultiSignatureRegistrationDetail", () => {
 		async (breakpoint) => {
 			vi.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
-			const { container } = renderResponsiveWithRoute(
-				<Route path="/profiles/:profileId">
-					<MultiSignatureRegistrationDetail
-						transaction={{
-							...TransactionFixture,
-							min: () => 2,
-							publicKeys: () => [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-							wallet: () => wallet,
-						}}
-						isOpen
-					/>
-				</Route>,
-				breakpoint,
-				{
-					route: `/profiles/${profile.id()}`,
-				},
-			);
+			const { container } = renderResponsiveWithRoute(<MultiSignatureRegistrationDetailComponent />, breakpoint, {
+				route: `/profiles/${profile.id()}`,
+			});
 
 			await expect(
 				screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE),
@@ -68,6 +55,21 @@ describe("MultiSignatureRegistrationDetail", () => {
 			await waitFor(() => expect(screen.getAllByText(wallet.address())).toHaveLength(3));
 
 			expect(container).toMatchSnapshot();
+
+			vi.restoreAllMocks();
+		},
+	);
+
+	it.each(["xs", "sm", "md", "lg", "xl"])(
+		"should render sender's address as generated address when musig address derivation is supported in %s",
+		async (breakpoint) => {
+			vi.spyOn(wallet.network(), "allows").mockReturnValue(true);
+
+			renderResponsiveWithRoute(<MultiSignatureRegistrationDetailComponent />, breakpoint, {
+				route: `/profiles/${profile.id()}`,
+			});
+
+			await waitFor(() => expect(screen.getAllByText(wallet.address())).toHaveLength(2));
 
 			vi.restoreAllMocks();
 		},
