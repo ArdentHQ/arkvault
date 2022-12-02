@@ -33,6 +33,7 @@ export const TableRemoveButton = ({
 				data-testid="TableRemoveButton--compact"
 				variant="danger-icon"
 				disabled={isDisabled}
+				isCompact
 				onClick={handleClick}
 				{...properties}
 			>
