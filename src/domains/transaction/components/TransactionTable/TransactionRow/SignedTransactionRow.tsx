@@ -225,9 +225,9 @@ export const SignedTransactionRow = ({
 
 					<Tooltip
 						content={
-							!canBeDeleted
-								? t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
-								: undefined
+							canBeDeleted
+								? undefined
+								: t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
 						}
 					>
 						<div>
