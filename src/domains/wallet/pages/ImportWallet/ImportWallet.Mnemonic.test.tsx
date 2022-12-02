@@ -143,18 +143,20 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
+
+		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
+			password,
+		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
-		await waitFor(
-			() => {
-				expect(successStep()).toBeInTheDocument();
-			},
-			{ timeout: 15_000 },
-		);
+		await waitFor(() => {
+			expect(successStep()).toBeInTheDocument();
+		});
 	});
 
 	it("should disable the encryption option when selecting a methods without encryption", async () => {
@@ -245,12 +247,9 @@ describe("ImportWallet", () => {
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
 
-		await waitFor(
-			() => {
-				expect(successStep()).toBeInTheDocument();
-			},
-			{ timeout: 15_000 },
-		);
+		await waitFor(() => {
+			expect(successStep()).toBeInTheDocument();
+		});
 	});
 
 	it("should show an error message for invalid second mnemonic", async () => {

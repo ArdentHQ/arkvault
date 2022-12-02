@@ -1213,7 +1213,9 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
-		expect(continueButton()).not.toBeDisabled();
+		await waitFor(() => {
+			expect(continueButton()).not.toBeDisabled();
+		});
 
 		userEvent.click(continueButton());
 
@@ -1239,7 +1241,9 @@ describe("SendTransfer", () => {
 		userEvent.paste(inputElement, MNEMONICS[0]);
 		await waitFor(() => expect(inputElement).toHaveValue(MNEMONICS[0]));
 
-		expect(sendButton()).toBeDisabled();
+		await waitFor(() => {
+			expect(sendButton()).toBeDisabled();
+		});
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -1315,6 +1319,10 @@ describe("SendTransfer", () => {
 		});
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
 
 		userEvent.click(sendButton());
 

@@ -376,7 +376,7 @@ describe("Votes", () => {
 
 	it("should select an address without vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		renderPage(route, routePath);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
 
@@ -387,8 +387,6 @@ describe("Votes", () => {
 		userEvent.click(selectAddressButton);
 
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should select a delegate", async () => {

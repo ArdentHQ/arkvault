@@ -47,7 +47,7 @@ export const RouterView: React.VFC<Properties> = ({ routes, middlewares = [] }) 
 					<RouteSuspense skeleton={route.skeleton} path={route.path}>
 						{canActivate ? (
 							<Wrapper data-testid="RouterView__wrapper">
-								{createElement(route.component as PreloadableComponent<FC>)}
+								{createElement(route.component as PreloadableComponent<FC<unknown>>)}
 							</Wrapper>
 						) : (
 							<Redirect to={redirectUrl ?? "/"} />

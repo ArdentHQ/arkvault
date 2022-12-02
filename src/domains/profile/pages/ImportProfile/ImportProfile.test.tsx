@@ -127,7 +127,9 @@ describe("ImportProfile", () => {
 
 		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
 
-		await expect(screen.findByTestId("ProfileForm__form")).resolves.toBeVisible();
+		await waitFor(() => {
+			expect(screen.getByTestId("ProfileForm__form")).toBeInTheDocument();
+		});
 	});
 
 	it("should close password modal and go back to select file", async () => {

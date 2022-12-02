@@ -113,9 +113,8 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-1yqe28v"
+      class="css-1bx0hyc"
       data-testid="UnlockTokensAuthentication__send"
-      disabled=""
       type="submit"
     >
       <div

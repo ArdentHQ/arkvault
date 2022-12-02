@@ -29,6 +29,25 @@ describe("TransferLedgerReview", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render with memo", () => {
+		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
+			defaultValues: {
+				fee: "0",
+				memo: "test",
+				recipients: [],
+			},
+			registerCallback: ({ register }) => {
+				register("memo");
+				register("fee");
+				register("recipients");
+			},
+		});
+
+		expect(screen.getByText("123")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionMemo")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render skeleton while loading expiration", () => {
 		const { asFragment } = renderWithForm(
 			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined} />,

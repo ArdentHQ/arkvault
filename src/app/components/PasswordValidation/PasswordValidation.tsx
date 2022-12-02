@@ -27,7 +27,7 @@ const Rules: React.VFC<RulesProperties> = ({ validationState }) => {
 			<span
 				className={cn("text-sm font-semibold", isValid ? "text-theme-success-600" : "text-theme-secondary-600")}
 			>
-				{t(`COMMON.VALIDATION.PASSWORD_RULES.${rule}`)}
+				<>{t(`COMMON.VALIDATION.PASSWORD_RULES.${rule}`)}</>
 			</span>
 		</div>
 	);

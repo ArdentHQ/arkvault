@@ -679,33 +679,6 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
                         data-testid="FormLabel"
-                        for="signatory"
-                      >
-                        Signatory
-                      </label>
-                      <div
-                        class=" css-1psxlcd"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
-                            data-testid="VerifyMessage__manual-signatory"
-                            name="signatory"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
-                    >
-                      <label
-                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-                        data-testid="FormLabel"
                         for="message"
                       >
                         Message
@@ -721,6 +694,33 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                             class="no-ligatures w-full border-none css-1nupw50"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="flex min-w-0 flex-col css-1bcidjh"
+                    >
+                      <label
+                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                        data-testid="FormLabel"
+                        for="signatory"
+                      >
+                        Signatory
+                      </label>
+                      <div
+                        class=" css-1psxlcd"
+                      >
+                        <div
+                          class="relative flex h-full flex-1"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none css-1nupw50"
+                            data-testid="VerifyMessage__manual-signatory"
+                            name="signatory"
                             type="text"
                             value=""
                           />
@@ -1472,33 +1472,6 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                       <label
                         class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
                         data-testid="FormLabel"
-                        for="signatory"
-                      >
-                        Signatory
-                      </label>
-                      <div
-                        class=" css-1psxlcd"
-                      >
-                        <div
-                          class="relative flex h-full flex-1"
-                        >
-                          <input
-                            autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
-                            data-testid="VerifyMessage__manual-signatory"
-                            name="signatory"
-                            type="text"
-                            value=""
-                          />
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset
-                      class="flex min-w-0 flex-col css-1bcidjh"
-                    >
-                      <label
-                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-                        data-testid="FormLabel"
                         for="message"
                       >
                         Message
@@ -1514,6 +1487,33 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                             class="no-ligatures w-full border-none css-1nupw50"
                             data-testid="VerifyMessage__manual-message"
                             name="message"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset
+                      class="flex min-w-0 flex-col css-1bcidjh"
+                    >
+                      <label
+                        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                        data-testid="FormLabel"
+                        for="signatory"
+                      >
+                        Signatory
+                      </label>
+                      <div
+                        class=" css-1psxlcd"
+                      >
+                        <div
+                          class="relative flex h-full flex-1"
+                        >
+                          <input
+                            autocomplete="off"
+                            class="no-ligatures w-full border-none css-1nupw50"
+                            data-testid="VerifyMessage__manual-signatory"
+                            name="signatory"
                             type="text"
                             value=""
                           />

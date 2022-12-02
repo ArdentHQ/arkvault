@@ -176,18 +176,25 @@ describe("WalletsGroup", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("UpdateWalletName__input");
 
+		await waitFor(() => {
+			expect(inputElement).toBeInTheDocument();
+		});
+
 		inputElement.select();
-		userEvent.paste(inputElement, name);
+		userEvent.type(inputElement, name);
 
 		await waitFor(() => expect(inputElement).toHaveValue(name));
 
-		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
+		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeVisible();
+		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeEnabled();
 
 		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
-		await waitFor(() => expect(profile.wallets().findById(mainnetWallet.id()).alias()).toBe(name));
+		await waitFor(() => {
+			expect(within(walletRow).getByText(name)).toBeInTheDocument();
+		});
 
-		expect(within(walletRow).getByText(name)).toBeInTheDocument();
+		await waitFor(() => expect(profile.wallets().findById(mainnetWallet.id()).alias()).toBe(name));
 	});
 
 	it("should delete wallet through wallet dropdown", async () => {
