@@ -223,7 +223,21 @@ export const SignedTransactionRow = ({
 						onClick={() => onSign?.(transaction)}
 					/>
 
-					<TableRemoveButton isCompact={isCompact} isDisabled={!canBeDeleted} onClick={handleRemove} />
+					<Tooltip
+						content={
+							!canBeDeleted
+								? t("TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG")
+								: undefined
+						}
+					>
+						<div>
+							<TableRemoveButton
+								isCompact={isCompact}
+								isDisabled={!canBeDeleted}
+								onClick={handleRemove}
+							/>
+						</div>
+					</Tooltip>
 				</div>
 
 				{dropdownOptions.length > 0 && (

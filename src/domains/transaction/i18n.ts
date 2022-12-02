@@ -226,6 +226,7 @@ export const translations = {
 		REMOVE_NOT_ALLOWED: "Your own address cannot be removed",
 		SELECT_PARTICIPANT_DESCRIPTION: "Find and select a participant from your contacts and wallets.",
 		SELECT_PARTICIPANT_TITLE: "Select Participant",
+		PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG: "Only participants can remove pending transactions.",
 	},
 	NAME: "Name",
 	NETWORK: "Network",
