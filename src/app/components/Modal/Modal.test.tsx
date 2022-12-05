@@ -31,7 +31,7 @@ describe("Modal", () => {
 		overflowOverlayMock.mockRestore();
 	});
 
-	it("should render with scrollbar if it exceeds window height", (supportsOverflowOverlay) => {
+	it("should render with scrollbar if it exceeds window height", () => {
 		const windowHeight = window.innerHeight;
 		Object.defineProperty(window, "innerHeight", { value: 40 });
 
