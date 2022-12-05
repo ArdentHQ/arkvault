@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
 import { WalletListItemMobileProperties } from ".";
@@ -25,6 +25,8 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { Dot } from "../Dot";
+import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -369,6 +371,21 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 		event.stopPropagation();
 	}, []);
 
+	const {
+		syncPending,
+		startSyncingPendingTransactions,
+		stopSyncingPendingTransactions,
+		hasUnsignedPendingTransaction,
+	} = useWalletTransactions(wallet);
+
+	useEffect(() => {
+		syncPending();
+		startSyncingPendingTransactions();
+		return () => {
+			stopSyncingPendingTransactions();
+		};
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
 	return (
 		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
 			<div onClick={handleStopPropagation}>
@@ -387,23 +404,30 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 				</Button>
 			</div>
 			<div data-testid="WalletListItem__more-button" className={cn({ "ml-3": !isCompact })}>
-				<Dropdown
-					toggleContent={
-						<Button
-							variant={isCompact ? "transparent" : "secondary"}
-							size="icon"
-							disabled={isRestoring}
-							className={cn({
-								"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
-								"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
-							})}
-						>
-							<Icon name="EllipsisVertical" size="lg" />
-						</Button>
-					}
-					onSelect={onSelectOption}
-					options={[primaryOptions, secondaryOptions]}
-				/>
+				<Tooltip
+					content={hasUnsignedPendingTransaction && t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}
+				>
+					<div className="relative">
+						<Dropdown
+							toggleContent={
+								<Button
+									variant={isCompact ? "transparent" : "secondary"}
+									size="icon"
+									disabled={isRestoring}
+									className={cn({
+										"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
+										"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
+									})}
+								>
+									<Icon name="EllipsisVertical" size="lg" />
+								</Button>
+							}
+							onSelect={onSelectOption}
+							options={[primaryOptions, secondaryOptions]}
+						/>
+						{hasUnsignedPendingTransaction && <Dot className="right-0" />}
+					</div>
+				</Tooltip>
 			</div>
 		</TableCell>
 	);

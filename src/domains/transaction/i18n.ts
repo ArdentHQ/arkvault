@@ -208,6 +208,7 @@ export const translations = {
 		AWAITING_OTHER_SIGNATURE_COUNT_other: "Awaiting {{count}} other signatures",
 		AWAITING_OUR_BROADCAST: "Awaiting our broadcast",
 		AWAITING_OUR_SIGNATURE: "Awaiting our signature",
+		AWAITING_SOME_SIGNATURES: "One or more transactions are awaiting our signature.",
 		ERROR: {
 			ADDRESS_ALREADY_ADDED: "The address is already in the list",
 			ADDRESS_NOT_FOUND: "The address could not be found",

@@ -86,10 +86,16 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 
 	const { start, stop } = useSynchronizer(jobs);
 
+	const hasUnsignedPendingTransaction = useMemo(
+		() => pendingTransactions.some(({ isAwaitingOurSignature }) => isAwaitingOurSignature),
+		[pendingTransactions],
+	);
+
 	return {
 		pendingTransactions,
 		startSyncingPendingTransactions: start,
 		stopSyncingPendingTransactions: stop,
 		syncPending,
+		hasUnsignedPendingTransaction,
 	};
 };

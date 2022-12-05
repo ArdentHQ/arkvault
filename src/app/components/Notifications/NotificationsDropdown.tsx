@@ -2,6 +2,7 @@ import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useState } from "react";
 
 import { Button } from "@/app/components/Button";
+import { Dot } from "@/app/components/Dot";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { NavigationButtonWrapper } from "@/app/components/NavigationBar/NavigationBar.blocks";
@@ -26,11 +27,7 @@ export const NotificationsDropdown = ({ profile }: { profile: Contracts.IProfile
 					<NavigationButtonWrapper className="group">
 						<Button variant="transparent" size="icon" data-testid="NavigationBar__buttons--notifications">
 							<Icon name="Bell" size="lg" className="p-1" />
-							{hasUnread && (
-								<div className="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800">
-									<div className="h-2 w-2 rounded-full bg-theme-danger-500" />
-								</div>
-							)}
+							{hasUnread && <Dot />}
 						</Button>
 					</NavigationButtonWrapper>
 				}

@@ -11,7 +11,7 @@ import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 import { MdAndAbove } from "@/app/components/Breakpoint";
 import { AccordionWrapper } from "@/app/components/Accordion";
 
-export const WalletsGroupsList: React.VFC = () => {
+export const WalletsGroupsList = () => {
 	const { t } = useTranslation();
 	const profile = useActiveProfile();
 	const { profileIsSyncing } = useConfiguration();
