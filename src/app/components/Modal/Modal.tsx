@@ -41,8 +41,8 @@ const Modal = ({
 
 	const { overflowYClass } = useModal({
 		isOpen,
-		onClose,
 		modalContainerReference,
+		onClose,
 	});
 
 	useEffect(() => {
