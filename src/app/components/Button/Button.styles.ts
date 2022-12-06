@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 import tw, { css, TwStyle } from "twin.macro";
 
 import { SerializedStyles } from "@emotion/react";
@@ -60,10 +61,15 @@ const getVariant = (
 	responsiveVariant?: ResponsiveButtonVariant,
 	theme?: Theme,
 	disabled?: boolean,
+	isCompact?: boolean,
 ) => {
 	if (disabled) {
 		if (variant === "transparent") {
 			return tw`disabled:(text-theme-secondary-400 dark:text-theme-secondary-700)`;
+		}
+
+		if (variant === "danger-icon" && isCompact) {
+			return tw`disabled:(bg-none text-theme-secondary-400 dark:text-theme-secondary-700)`;
 		}
 
 		if (theme === "dark") {
@@ -239,6 +245,7 @@ export const getStyles = ({
 	showOn,
 	roundedClassName,
 	sizeClassName,
+	isCompact,
 }: {
 	variant?: ButtonVariant;
 	responsiveVariant?: ResponsiveButtonVariant;
@@ -248,8 +255,9 @@ export const getStyles = ({
 	disabled?: boolean;
 	showOn?: LayoutBreakpoint;
 	roundedClassName?: string;
+	isCompact?: boolean;
 }) => [
 	getSize(size, sizeClassName),
 	getBaseStyle(showOn, roundedClassName),
-	getVariant(variant, responsiveVariant, theme, disabled),
+	getVariant(variant, responsiveVariant, theme, disabled, isCompact),
 ];

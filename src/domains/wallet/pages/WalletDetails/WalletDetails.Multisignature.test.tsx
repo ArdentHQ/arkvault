@@ -9,7 +9,16 @@ import { WalletDetails } from "./WalletDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultWalletMnemonic,
+	getDefaultProfileId,
+	render,
+	screen,
+	syncDelegates,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 const translations = buildTranslations();
@@ -175,6 +184,14 @@ describe("WalletDetails", () => {
 		vi.restoreAllMocks();
 
 		const toastsMock = vi.spyOn(toasts, "success");
+
+		expect(screen.getByTestId("DeleteResource__submit-button")).toBeDisabled();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("DeleteResource__submit-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 

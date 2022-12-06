@@ -220,6 +220,7 @@ export const translations = {
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
+		PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG: "Only participants can remove pending transactions.",
 		PARTICIPANTS_COUNT: "Multisignature Participants ({{count}})",
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",

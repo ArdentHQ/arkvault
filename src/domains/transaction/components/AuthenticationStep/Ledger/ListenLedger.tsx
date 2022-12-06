@@ -9,9 +9,11 @@ import { useLedgerContext } from "@/app/contexts";
 export const ListenLedger = ({
 	onDeviceNotAvailable,
 	onDeviceAvailable,
+	noHeading,
 }: {
 	onDeviceNotAvailable: () => void;
 	onDeviceAvailable: () => void;
+	noHeading?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -50,7 +52,7 @@ export const ListenLedger = ({
 
 	return (
 		<section data-testid="LedgerAuthStep" className="space-y-8">
-			<Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />
+			{!noHeading && <Header title={t("WALLETS.CONNECT_LEDGER.HEADER")} />}
 
 			<Image name="AuthLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
 
