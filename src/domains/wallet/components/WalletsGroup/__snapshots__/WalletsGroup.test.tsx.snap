@@ -3313,59 +3313,63 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                         data-testid="WalletListItem__more-button"
                       >
                         <div
-                          class="static sm:relative"
+                          class="relative"
                         >
-                          <span
-                            data-testid="dropdown__toggle"
+                          <div
+                            class="static sm:relative"
                           >
-                            <button
-                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
-                              type="button"
+                            <span
+                              data-testid="dropdown__toggle"
                             >
-                              <div
-                                class="flex items-center space-x-2"
+                              <button
+                                class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-12xyeiw"
+                                type="button"
                               >
                                 <div
-                                  class="css-1i4b0eq"
-                                  height="20"
-                                  width="20"
+                                  class="flex items-center space-x-2"
                                 >
-                                  <svg
-                                    id="ellipsis-vertical"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
+                                  <div
+                                    class="css-1i4b0eq"
+                                    height="20"
+                                    width="20"
                                   >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
+                                    <svg
+                                      id="ellipsis-vertical"
+                                      viewBox="0 0 20 20"
+                                      x="0"
+                                      xml:space="preserve"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      y="0"
                                     >
-                                      <circle
-                                        cx="10"
-                                        cy="16.994"
-                                        r="2.006"
-                                      />
-                                      <circle
-                                        cx="10"
-                                        cy="3"
-                                        r="2"
-                                      />
-                                      <circle
-                                        cx="10"
-                                        cy="10"
-                                        r="2"
-                                      />
-                                    </g>
-                                  </svg>
+                                      <g
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                      >
+                                        <circle
+                                          cx="10"
+                                          cy="16.994"
+                                          r="2.006"
+                                        />
+                                        <circle
+                                          cx="10"
+                                          cy="3"
+                                          r="2"
+                                        />
+                                        <circle
+                                          cx="10"
+                                          cy="10"
+                                          r="2"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </div>
                                 </div>
-                              </div>
-                            </button>
-                          </span>
+                              </button>
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
