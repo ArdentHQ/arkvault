@@ -32,4 +32,14 @@ describe("TableRemoveButton", () => {
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
+
+	it("should not execute onClick callback if disabled", () => {
+		const onClick = vi.fn();
+
+		render(<TableRemoveButton onClick={onClick} isDisabled />);
+
+		userEvent.click(screen.getByTestId("TableRemoveButton"));
+
+		expect(onClick).not.toHaveBeenCalled();
+	});
 });

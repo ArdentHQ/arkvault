@@ -5,7 +5,7 @@ exports[`VoteDetail > should not render if not open 1`] = `<DocumentFragment />`
 exports[`VoteDetail > should render a modal with unvotes 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -419,7 +419,7 @@ exports[`VoteDetail > should render a modal with unvotes 1`] = `
 exports[`VoteDetail > should render a modal with votes 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -833,7 +833,7 @@ exports[`VoteDetail > should render a modal with votes 1`] = `
 exports[`VoteDetail > should render a modal with votes and unvotes 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div

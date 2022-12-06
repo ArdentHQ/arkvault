@@ -13,6 +13,7 @@ import { usePendingTransactionTableColumns } from "@/domains/transaction/compone
 import { useBreakpoint } from "@/app/hooks";
 
 export const PendingTransactions = ({
+	profile,
 	wallet,
 	onClick,
 	onRemove,
@@ -92,12 +93,14 @@ export const PendingTransactions = ({
 				{renderTableRow}
 			</Table>
 
-			<ConfirmRemovePendingTransaction
-				isOpen={!!pendingRemovalTransaction}
-				transaction={pendingRemovalTransaction}
-				onClose={() => setPendingRemovalTransaction(undefined)}
-				onRemove={handleRemove}
-			/>
+			{!!pendingRemovalTransaction && (
+				<ConfirmRemovePendingTransaction
+					profile={profile}
+					transaction={pendingRemovalTransaction}
+					onClose={() => setPendingRemovalTransaction(undefined)}
+					onRemove={handleRemove}
+				/>
+			)}
 		</div>
 	);
 };
