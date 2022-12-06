@@ -25,7 +25,7 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Dot } from "../Dot";
+import { Dot } from "@/app/components/Dot";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 
 const starIconDimensions: [number, number] = [18, 18];
