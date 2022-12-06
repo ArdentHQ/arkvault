@@ -5,7 +5,7 @@ exports[`SearchRecipient > should not render if not open 1`] = `<DocumentFragmen
 exports[`SearchRecipient > should render a modal 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -428,7 +428,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
 exports[`SearchRecipient > should render a modal with custom title and description 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -851,7 +851,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
 exports[`SearchRecipient > should render with contact on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1105,7 +1105,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
 exports[`SearchRecipient > should render with selected address 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1528,7 +1528,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
 exports[`SearchRecipient > should render with selected address on md screen 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1951,7 +1951,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
 exports[`SearchRecipient > should render with selected address on mobile 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2275,7 +2275,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
 exports[`SearchRecipient > should render with selected address when no compact 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div

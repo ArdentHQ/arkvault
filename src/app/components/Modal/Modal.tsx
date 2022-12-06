@@ -37,8 +37,13 @@ const Modal = ({
 }: ModalProperties) => {
 	const referenceShouldClose = useRef<boolean>();
 	const { setShowMobileNavigation } = useNavigationContext();
+	const modalContainerReference = useRef<HTMLDivElement>(null);
 
-	useModal({ isOpen, onClose });
+	const { overflowYClass } = useModal({
+		isOpen,
+		modalContainerReference,
+		onClose,
+	});
 
 	useEffect(() => {
 		if (isOpen) {
@@ -75,12 +80,13 @@ const Modal = ({
 
 	return (
 		<div
-			className="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+			className={`overflow-overlay fixed inset-0 z-50 flex w-full ${overflowYClass} bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20`}
 			onClick={handleClickOverlay}
 			data-testid="Modal__overlay"
 			{...attributes}
 		>
 			<ModalContainer
+				ref={modalContainerReference}
 				size={size}
 				onMouseDown={handleClickContent}
 				onMouseUp={handleClickContent}
