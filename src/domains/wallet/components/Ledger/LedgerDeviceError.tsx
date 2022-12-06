@@ -13,10 +13,12 @@ export const LedgerDeviceErrorContent = ({
 	subtitle,
 	connectedModel,
 	supportedModel,
+	noHeading,
 }: {
 	supportedModel: LedgerModel;
 	connectedModel: LedgerModel;
 	subtitle?: string;
+	noHeading?: boolean;
 }) => {
 	const { t } = useTranslation();
 
@@ -27,13 +29,15 @@ export const LedgerDeviceErrorContent = ({
 
 	return (
 		<div className="mt-8 space-y-8" data-testid="LedgerDeviceError">
-			<Header
-				title={t("WALLETS.MODAL_LEDGER_WALLET.TITLE")}
-				subtitle={
-					subtitle ||
-					t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE_MODEL", { model: modelNames[supportedModel] })
-				}
-			/>
+			{!noHeading && (
+				<Header
+					title={t("WALLETS.MODAL_LEDGER_WALLET.TITLE")}
+					subtitle={
+						subtitle ||
+						t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_DEVICE_MODEL", { model: modelNames[supportedModel] })
+					}
+				/>
+			)}
 
 			<Image name="ErrorTransactionLedgerBanner" domain="transaction" className="mx-auto max-w-full" />
 
