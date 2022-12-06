@@ -78,7 +78,7 @@ specifiers:
   p-retry: ^5.1.1
   postcss: ^8.4.18
   prettier: ^2.7.1
-  prettier-plugin-tailwindcss: ^0.1.13
+  prettier-plugin-tailwindcss: ^0.2.0
   prop-types: ^15.8.1
   qr-scanner: ^1.4.1
   react: ^18.2.0
@@ -229,7 +229,7 @@ devDependencies:
   msw: 0.47.4_typescript@4.8.4
   postcss: 8.4.18
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+  prettier-plugin-tailwindcss: 0.2.0_prettier@2.7.1
   prop-types: 15.8.1
   react-router-config: 5.1.1_n6chwcsdq6puvu4oljeyhosdga
   rollup: 3.2.5
@@ -7954,8 +7954,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
-    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
+  /prettier-plugin-tailwindcss/0.2.0_prettier@2.7.1:
+    resolution: {integrity: sha512-Ruqig/mdWCSpqdq9WK44nrmqM4BFWTzBPhPGwC5NK3coV9eZntEQPB84MGZbjAg0XQU02jVRHXNRPREBzxvM+A==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
