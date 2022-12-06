@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
 import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
 import {
 	ButtonsCell,
@@ -21,6 +21,16 @@ import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createHashHistory();
 
+vi.mock("@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions", async () => {
+	return {
+		useWalletTransactions: () => {
+			return {
+				hasUnsignedPendingTransaction: true,
+				syncPending: () => undefined,
+			};
+		},
+	};
+});
 describe("WalletListItem.blocks", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -36,6 +46,31 @@ describe("WalletListItem.blocks", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
+	});
+
+	it("should render with pending transactions dot indicator", async () => {
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<table>
+					<tbody>
+						<tr>
+							<ButtonsCell wallet={wallet} isCompact={true} onSelectOption={vi.fn()} />
+						</tr>
+					</tbody>
+				</table>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		userEvent.click(screen.getByTestId("WalletListItem__send-button"));
+		await waitFor(() => {
+			expect(screen.getByTestId("PendingDot")).toBeInTheDocument();
+		});
+
+		expect(asFragment).toMatchSnapshot();
 	});
 
 	it("should render WalletListItemMobile", () => {

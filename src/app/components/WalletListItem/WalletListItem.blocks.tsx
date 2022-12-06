@@ -2,7 +2,7 @@ import cn from "classnames";
 import React, { useCallback, useEffect } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { WalletListItemMobileProperties } from ".";
+import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -371,19 +371,10 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 		event.stopPropagation();
 	}, []);
 
-	const {
-		syncPending,
-		startSyncingPendingTransactions,
-		stopSyncingPendingTransactions,
-		hasUnsignedPendingTransaction,
-	} = useWalletTransactions(wallet);
+	const { syncPending, hasUnsignedPendingTransaction } = useWalletTransactions(wallet);
 
 	useEffect(() => {
 		syncPending();
-		startSyncingPendingTransactions();
-		return () => {
-			stopSyncingPendingTransactions();
-		};
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
@@ -425,7 +416,11 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 							onSelect={onSelectOption}
 							options={[primaryOptions, secondaryOptions]}
 						/>
-						{hasUnsignedPendingTransaction && <Dot className="right-0" />}
+						{hasUnsignedPendingTransaction && (
+							<div data-testid="PendingDot">
+								<Dot className="-right-1 group-hover:bg-transparent dark:group-hover:bg-transparent" />
+							</div>
+						)}
 					</div>
 				</Tooltip>
 			</div>

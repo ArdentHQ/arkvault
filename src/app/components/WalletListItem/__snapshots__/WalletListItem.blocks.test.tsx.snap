@@ -21,3 +21,5 @@ exports[`WalletListItem.blocks > should render WalletCell 1`] = `[Function]`;
 exports[`WalletListItem.blocks > should render WalletListItemMobile 1`] = `[Function]`;
 
 exports[`WalletListItem.blocks > should render WalletListItemMobile when selected 1`] = `[Function]`;
+
+exports[`WalletListItem.blocks > should render with pending transactions dot indicator 1`] = `[Function]`;
