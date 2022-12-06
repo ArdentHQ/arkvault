@@ -80,7 +80,7 @@ specifiers:
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
   prop-types: ^15.8.1
-  qr-scanner: ^1.4.1
+  qr-scanner: ^1.4.2
   react: ^18.2.0
   react-datepicker: ^4.8.0
   react-dom: ^18.2.0
@@ -149,7 +149,7 @@ dependencies:
   locale-currency: 0.0.2
   multiformats: 10.0.2
   p-retry: 5.1.1
-  qr-scanner: 1.4.1
+  qr-scanner: 1.4.2
   react: 18.2.0
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
@@ -8065,8 +8065,8 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /qr-scanner/1.4.1:
-    resolution: {integrity: sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w==}
+  /qr-scanner/1.4.2:
+    resolution: {integrity: sha512-kV1yQUe2FENvn59tMZW6mOVfpq9mGxGf8l6+EGaXUOd4RBOLg7tRC83OrirM5AtDvZRpdjdlXURsHreAOSPOUw==}
     dependencies:
       '@types/offscreencanvas': 2019.7.0
     dev: false
