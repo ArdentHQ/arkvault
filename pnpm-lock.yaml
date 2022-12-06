@@ -64,7 +64,7 @@ specifiers:
   eslint-plugin-unused-imports: ^2.0.0
   focus-visible: ^5.2.0
   framer-motion: ^7.6.4
-  gherkin-testcafe: 5.5.0
+  gherkin-testcafe: 5.5.1
   history: ^5.3.0
   i18next: ^22.0.4
   identity-obj-proxy: ^3.0.0
@@ -219,7 +219,7 @@ devDependencies:
   eslint-plugin-testing-library: 5.9.1_rmayb2veg2btbq6mbmnyivgasy
   eslint-plugin-unicorn: 44.0.2_eslint@8.27.0
   eslint-plugin-unused-imports: 2.0.0_v3k3exxvvi5jmnj6aubk5obsz4
-  gherkin-testcafe: 5.5.0_c3qu5emd3ybgb5txlo2inaveaq
+  gherkin-testcafe: 5.5.1_c3qu5emd3ybgb5txlo2inaveaq
   history: 5.3.0
   identity-obj-proxy: 3.0.0
   jest-extended: 3.1.0
@@ -5722,8 +5722,8 @@ packages:
       async: 3.2.4
     dev: true
 
-  /gherkin-testcafe/5.5.0_c3qu5emd3ybgb5txlo2inaveaq:
-    resolution: {integrity: sha512-3qODkwMAzcTZy+3ib7+59Ol1rLeOPfutWqR2wbqR4d0EXtsWGQ21qns4MR0zEDCCo4/BslvcIZcjqrz+BQkM0Q==}
+  /gherkin-testcafe/5.5.1_c3qu5emd3ybgb5txlo2inaveaq:
+    resolution: {integrity: sha512-6ikwx2QhBD4n3jaXMLf+uppYA4LaglTQj9QBZoDCCChjowSfvxqhdzyy8LTKomDqDFlrAMgFSLGT69EI0z8Agw==}
     hasBin: true
     peerDependencies:
       '@cucumber/cucumber': ^8.0.0
@@ -5735,6 +5735,7 @@ packages:
       '@cucumber/gherkin-streams': 5.0.1_bfahkmvo4sajxc62mzoea4mhlm
       '@cucumber/message-streams': 4.0.1_@cucumber+messages@19.1.4
       '@cucumber/messages': 19.1.4
+      chalk: 4.1.2
       testcafe: 2.0.2
     dev: true
 
