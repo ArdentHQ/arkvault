@@ -86,7 +86,7 @@ specifiers:
   react-dom: ^18.2.0
   react-error-boundary: ^3.1.4
   react-hook-form: ^6.15.5
-  react-i18next: ^12.0.0
+  react-i18next: ^12.1.0
   react-idle-timer: ^4.6.4
   react-linkify: ^1.0.0-alpha
   react-loading-skeleton: ^3.1.0
@@ -155,7 +155,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-error-boundary: 3.1.4_react@18.2.0
   react-hook-form: 6.15.8_react@18.2.0
-  react-i18next: 12.0.0_xp3tcnypqfah7nlbdog3oni4pe
+  react-i18next: 12.1.0_xp3tcnypqfah7nlbdog3oni4pe
   react-idle-timer: 4.6.4_v2m5e27vhdewzwhryxwfaorcca
   react-linkify: 1.0.0-alpha
   react-loading-skeleton: 3.1.0_react@18.2.0
@@ -8164,8 +8164,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next/12.0.0_xp3tcnypqfah7nlbdog3oni4pe:
-    resolution: {integrity: sha512-/O7N6aIEAl1FaWZBNvhdIo9itvF/MO/nRKr9pYqRc9LhuC1u21SlfwpiYQqvaeNSEW3g3qUXLREOWMt+gxrWbg==}
+  /react-i18next/12.1.0_xp3tcnypqfah7nlbdog3oni4pe:
+    resolution: {integrity: sha512-zYSWNCKklqulvXQFAo1TTZxI+DOflD8QQaGUIn58/FDJGiczCVf0X3g5zjY6h86+MLS3fpD5Dwziyi2DWmUD7Q==}
     peerDependencies:
       i18next: '>= 19.0.0'
       react: '>= 16.8.0'
@@ -8177,7 +8177,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@babel/runtime': 7.20.1
+      '@babel/runtime': 7.20.6
       html-parse-stringify: 3.0.1
       i18next: 22.0.8
       react: 18.2.0
