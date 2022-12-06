@@ -92,10 +92,10 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 	);
 
 	return {
+		hasUnsignedPendingTransaction,
 		pendingTransactions,
 		startSyncingPendingTransactions: start,
 		stopSyncingPendingTransactions: stop,
 		syncPending,
-		hasUnsignedPendingTransaction,
 	};
 };
