@@ -151,7 +151,7 @@
 		"rollup": "^3.2.5",
 		"rollup-plugin-visualizer": "^5.8.3",
 		"tailwindcss": "3.2.1",
-		"testcafe": "^2.0.2",
+		"testcafe": "^2.1.0",
 		"twin.macro": "2.8.2",
 		"typescript": "^4.8.4",
 		"vite": "^3.2.2",

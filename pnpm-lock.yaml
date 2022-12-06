@@ -108,7 +108,7 @@ specifiers:
   socks-proxy-agent: ^7.0.0
   string-hash: ^1.1.3
   tailwindcss: 3.2.1
-  testcafe: ^2.0.2
+  testcafe: ^2.1.0
   tippy.js: ^6.3.7
   twin.macro: 2.8.2
   typescript: ^4.8.4
@@ -219,7 +219,7 @@ devDependencies:
   eslint-plugin-testing-library: 5.9.1_rmayb2veg2btbq6mbmnyivgasy
   eslint-plugin-unicorn: 44.0.2_eslint@8.27.0
   eslint-plugin-unused-imports: 2.0.0_v3k3exxvvi5jmnj6aubk5obsz4
-  gherkin-testcafe: 5.5.1_c3qu5emd3ybgb5txlo2inaveaq
+  gherkin-testcafe: 5.5.1_su2kvgub65uejz47zg755txuym
   history: 5.3.0
   identity-obj-proxy: 3.0.0
   jest-extended: 3.1.0
@@ -235,7 +235,7 @@ devDependencies:
   rollup: 3.2.5
   rollup-plugin-visualizer: 5.8.3_rollup@3.2.5
   tailwindcss: 3.2.1_postcss@8.4.18
-  testcafe: 2.0.2
+  testcafe: 2.1.0
   twin.macro: 2.8.2
   typescript: 4.8.4
   vite: 3.2.3
@@ -5722,7 +5722,7 @@ packages:
       async: 3.2.4
     dev: true
 
-  /gherkin-testcafe/5.5.1_c3qu5emd3ybgb5txlo2inaveaq:
+  /gherkin-testcafe/5.5.1_su2kvgub65uejz47zg755txuym:
     resolution: {integrity: sha512-6ikwx2QhBD4n3jaXMLf+uppYA4LaglTQj9QBZoDCCChjowSfvxqhdzyy8LTKomDqDFlrAMgFSLGT69EI0z8Agw==}
     hasBin: true
     peerDependencies:
@@ -5736,7 +5736,7 @@ packages:
       '@cucumber/message-streams': 4.0.1_@cucumber+messages@19.1.4
       '@cucumber/messages': 19.1.4
       chalk: 4.1.2
-      testcafe: 2.0.2
+      testcafe: 2.1.0
     dev: true
 
   /glob-parent/5.1.2:
@@ -9383,8 +9383,8 @@ packages:
       - supports-color
     dev: true
 
-  /testcafe-hammerhead/28.0.0:
-    resolution: {integrity: sha512-e6/nVVhaB9dVhQaGSwsz+pWk/6QE6zhxwdKFpC4oi+/VDMDKGf94aIeeFsKzmCS0bLdUCElOZ20ujTIjLcaKFA==}
+  /testcafe-hammerhead/28.1.0:
+    resolution: {integrity: sha512-6J+U1MEV8L7OI467tkpOpewqYE6u0bhDTGQhK1s8cvDZtcvzm1ArFTRJvyG1wMb3/QaGrzoCHpEMRJ2BIK/0lw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       acorn-hammerhead: 0.6.1
@@ -9415,8 +9415,8 @@ packages:
       - supports-color
     dev: true
 
-  /testcafe-legacy-api/5.1.5:
-    resolution: {integrity: sha512-RyNPMuezhVqgv1pG2S+BrlwyEt/Th63r8yqMmOMlq3hAJtjDIf6++S0NHtqHcgjvLd145vdSnm7aJFbZFmATmA==}
+  /testcafe-legacy-api/5.1.6:
+    resolution: {integrity: sha512-Q451IdSUX1NmRfE8kzIcEeoqbUlLaMv2fwVNgQOBEFmA5E57c3jsIpLDTDqv6FPcNwdNMYIZMiB6tzlXB5wf1g==}
     dependencies:
       async: 3.2.3
       dedent: 0.6.0
@@ -9431,7 +9431,7 @@ packages:
       pinkie: 2.0.4
       read-file-relative: 1.2.0
       strip-bom: 2.0.0
-      testcafe-hammerhead: 28.0.0
+      testcafe-hammerhead: 28.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9478,8 +9478,8 @@ packages:
     resolution: {integrity: sha512-6km7D26+KCQGeFlSQ9fVEU7tD8qdioSpqzxU8CCZkd2KzBS0jTFkqaJ54rPaLdd5+wdhgO3+as3LMm4F0EDeYA==}
     dev: true
 
-  /testcafe/2.0.2:
-    resolution: {integrity: sha512-Izod2NaRrtDK7/M7A5wc1BvAZWMLfBrobFo0kkT7VrWu3A44JdXT8CawpX2BsqTieuxmHxVQhQQVjMFxGd0DIQ==}
+  /testcafe/2.1.0:
+    resolution: {integrity: sha512-mfF9UX2U9RyjNfuviaOf/MYEQA7uGxe0n+VXJzdPMqpPjvILe/LrAopyxjkmW5MllZAGW0/tmwOy9xRZl50l7A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -9564,8 +9564,8 @@ packages:
       source-map-support: 0.5.21
       strip-bom: 2.0.0
       testcafe-browser-tools: 2.0.23
-      testcafe-hammerhead: 28.0.0
-      testcafe-legacy-api: 5.1.5
+      testcafe-hammerhead: 28.1.0
+      testcafe-legacy-api: 5.1.6
       testcafe-reporter-dashboard: 0.2.7
       testcafe-reporter-json: 2.2.0
       testcafe-reporter-list: 2.1.0
