@@ -4,6 +4,10 @@ import React from "react";
 import { useInputFocus } from "@/app/hooks/use-input-focus";
 import { renderResponsive, screen } from "@/utils/testing-library";
 
+vi.mock("@/utils/delay", () => ({
+	delay: (callback: () => void) => callback(),
+}));
+
 describe("useInputFocus", () => {
 	const Component = () => {
 		useInputFocus();

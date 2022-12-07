@@ -17,6 +17,7 @@ i18n.use(initReactI18next).init({
 	lng: "en",
 	ns: [defaultNS],
 	resources,
+	returnNull: false,
 });
 
 export { defaultNS, resources };
