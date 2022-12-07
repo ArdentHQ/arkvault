@@ -31,6 +31,20 @@ describe("Modal", () => {
 		overflowOverlayMock.mockRestore();
 	});
 
+	it("should render with scrollbar if it exceeds window height", () => {
+		const windowHeight = window.innerHeight;
+		Object.defineProperty(window, "innerHeight", { value: 40 });
+
+		const { asFragment } = render(
+			<Modal title="ark" isOpen={true}>
+				This is the Modal content
+			</Modal>,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+		Object.defineProperty(window, "innerHeight", { value: windowHeight });
+	});
+
 	it("should render without offset for buttons", () => {
 		const { asFragment } = render(
 			<Modal title="ark" isOpen={true} noButtons>
