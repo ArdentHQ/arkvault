@@ -28,7 +28,7 @@ export const DotNavigation: React.FC<DotNavigationProperties> = ({
 	size = 2,
 	onClick,
 }: DotNavigationProperties) => {
-	const steps = [...Array.from({ length: size })];
+	const steps = Array.from({ length: size });
 
 	return (
 		<DotNavigationWrapper data-testid="DotNavigation">
