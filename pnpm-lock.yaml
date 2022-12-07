@@ -66,7 +66,7 @@ specifiers:
   framer-motion: ^7.6.4
   gherkin-testcafe: 5.5.1
   history: ^5.3.0
-  i18next: ^22.0.8
+  i18next: ^22.1.4
   identity-obj-proxy: ^3.0.0
   jest-extended: ^3.1.0
   jest-when: ^3.5.2
@@ -145,7 +145,7 @@ dependencies:
   downshift: 6.1.12_react@18.2.0
   focus-visible: 5.2.0
   framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
-  i18next: 22.1.2
+  i18next: 22.1.4
   locale-currency: 0.0.2
   multiformats: 10.0.2
   p-retry: 5.1.1
@@ -155,7 +155,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-error-boundary: 3.1.4_react@18.2.0
   react-hook-form: 6.15.8_react@18.2.0
-  react-i18next: 12.1.1_mphadbiqvgig3mapazjclpijx4
+  react-i18next: 12.1.1_uedexzmmdjaqapw3mm5hri2poi
   react-idle-timer: 4.6.4_v2m5e27vhdewzwhryxwfaorcca
   react-linkify: 1.0.0-alpha
   react-loading-skeleton: 3.1.0_react@18.2.0
@@ -1702,7 +1702,7 @@ packages:
     resolution: {integrity: sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      regenerator-runtime: 0.13.10
+      regenerator-runtime: 0.13.11
 
   /@babel/runtime/7.20.6:
     resolution: {integrity: sha512-Q+8MqP7TiHMWzSfwiJwXCjyf4GYA4Dgw3emg/7xmwsdLJOZUp+nMqcOwOzzYheuM1rhDu8FSj2l0aoMygEuXuA==}
@@ -6171,8 +6171,8 @@ packages:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
     dev: false
 
-  /i18next/22.1.2:
-    resolution: {integrity: sha512-HqAjWygRuDvMPdAjMgyv3l07PiN7MtBTCh8aud1iwn1FPBNhF0mzFUYQt+aVKZ3OOl0A+KrlqbCjrR1TCGB4Jw==}
+  /i18next/22.1.4:
+    resolution: {integrity: sha512-MCDtNRyovLY22rgLoZdCzg2QIza1V1A/3Hxb99akJzTDjcqCRWEsglTpFUt0vUjOxSxz+WmxmFETLHORRS+n6Q==}
     dependencies:
       '@babel/runtime': 7.20.6
     dev: false
@@ -8266,7 +8266,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next/12.1.1_mphadbiqvgig3mapazjclpijx4:
+  /react-i18next/12.1.1_uedexzmmdjaqapw3mm5hri2poi:
     resolution: {integrity: sha512-mFdieOI0LDy84q3JuZU6Aou1DoWW2fhapcTGeBS8+vWSJuViuoCLQAMYSb0QoHhXS8B0WKUOPpx4cffAP7r/aA==}
     peerDependencies:
       i18next: '>= 19.0.0'
@@ -8281,7 +8281,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.1
       html-parse-stringify: 3.0.1
-      i18next: 22.1.2
+      i18next: 22.1.4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -8595,9 +8595,6 @@ packages:
   /regenerate/1.4.2:
     resolution: {integrity: sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==}
     dev: true
-
-  /regenerator-runtime/0.13.10:
-    resolution: {integrity: sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==}
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
