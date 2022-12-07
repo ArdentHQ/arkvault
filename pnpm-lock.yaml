@@ -80,7 +80,7 @@ specifiers:
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
   prop-types: ^15.8.1
-  qr-scanner: ^1.4.1
+  qr-scanner: ^1.4.2
   react: ^18.2.0
   react-datepicker: ^4.8.0
   react-dom: ^18.2.0
@@ -93,7 +93,7 @@ specifiers:
   react-qr-reader: 3.0.0-beta-1
   react-range: ^1.8.14
   react-resize-detector: ^7.1.2
-  react-responsive: ^9.0.0
+  react-responsive: ^9.0.2
   react-router: ^6.4.3
   react-router-config: ^5.1.1
   react-router-dom: ^5.3.0
@@ -149,7 +149,7 @@ dependencies:
   locale-currency: 0.0.2
   multiformats: 10.0.2
   p-retry: 5.1.1
-  qr-scanner: 1.4.1
+  qr-scanner: 1.4.2
   react: 18.2.0
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
@@ -162,7 +162,7 @@ dependencies:
   react-qr-reader: 3.0.0-beta-1_biqbaboplfbrettd7655fr4n2y
   react-range: 1.8.14_biqbaboplfbrettd7655fr4n2y
   react-resize-detector: 7.1.2_biqbaboplfbrettd7655fr4n2y
-  react-responsive: 9.0.0_react@18.2.0
+  react-responsive: 9.0.2_react@18.2.0
   react-router: 6.4.3_react@18.2.0
   react-router-dom: 5.3.4_react@18.2.0
   react-table: 7.8.0_react@18.2.0
@@ -8036,8 +8036,8 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /qr-scanner/1.4.1:
-    resolution: {integrity: sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w==}
+  /qr-scanner/1.4.2:
+    resolution: {integrity: sha512-kV1yQUe2FENvn59tMZW6mOVfpq9mGxGf8l6+EGaXUOd4RBOLg7tRC83OrirM5AtDvZRpdjdlXURsHreAOSPOUw==}
     dependencies:
       '@types/offscreencanvas': 2019.7.0
     dev: false
@@ -8247,8 +8247,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /react-responsive/9.0.0_react@18.2.0:
-    resolution: {integrity: sha512-hyJmKpAglo1AdZsGmu1sab0VInEGzUTXT3nJ3Cl7cMDjR0ffV30lOM3N1xag456OsCGAgqRIkgloLy6tHaqZ2w==}
+  /react-responsive/9.0.2_react@18.2.0:
+    resolution: {integrity: sha512-+4CCab7z8G8glgJoRjAwocsgsv6VA2w7JPxFWHRc7kvz8mec1/K5LutNC2MG28Mn8mu6+bu04XZxHv5gyfT7xQ==}
     engines: {node: '>=0.10'}
     peerDependencies:
       react: '>=16.8.0'
