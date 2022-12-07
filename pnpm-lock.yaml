@@ -63,7 +63,7 @@ specifiers:
   eslint-plugin-unicorn: ^45.0.1
   eslint-plugin-unused-imports: ^2.0.0
   focus-visible: ^5.2.0
-  framer-motion: ^7.6.4
+  framer-motion: ^7.6.19
   gherkin-testcafe: 5.5.1
   history: ^5.3.0
   i18next: ^22.1.4
@@ -144,7 +144,7 @@ dependencies:
   classnames: 2.3.2
   downshift: 6.1.12_react@18.2.0
   focus-visible: 5.2.0
-  framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
   i18next: 22.1.4
   locale-currency: 0.0.2
   multiformats: 10.0.2
@@ -5715,8 +5715,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/7.6.5_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-PhS5z9r1OuG6d9xy2B5paYvbWWsOhuPPCawcBwMN3AVzmiXKXZ2Ucizf8SqSE4On5xyCR+A2gmQZhBlYr/Gzjg==}
+  /framer-motion/7.6.19_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-U+ogwGwNw6Y+pdq6GZB5xvnvLDlq3FTmcKaG5MCUjXuqRLrjKbKTqN4iwZISv3ajwUfgNHM6+tu31LRbYfF9YQ==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -5724,7 +5724,6 @@ packages:
       '@motionone/dom': 10.13.1
       framesync: 6.1.2
       hey-listen: 1.0.8
-      popmotion: 11.0.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       style-value-types: 5.1.2
@@ -7957,15 +7956,6 @@ packages:
   /pngjs/5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
-    dev: false
-
-  /popmotion/11.0.5:
-    resolution: {integrity: sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==}
-    dependencies:
-      framesync: 6.1.2
-      hey-listen: 1.0.8
-      style-value-types: 5.1.2
-      tslib: 2.4.0
     dev: false
 
   /postcss-import/14.1.0_postcss@8.4.19:
