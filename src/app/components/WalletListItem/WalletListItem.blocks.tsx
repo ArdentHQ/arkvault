@@ -25,7 +25,6 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
-import { Dot } from "@/app/components/Dot";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 
 const starIconDimensions: [number, number] = [18, 18];
@@ -127,12 +126,35 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact 
 	);
 };
 
-export const Info: React.VFC<InfoProperties> = ({ isCompact, wallet, isLargeScreen = true, className }) => {
-	const renderIcons = () => (
-		<div className={cn("inline-flex items-center space-x-1", className)}>
-			<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
-		</div>
-	);
+export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: InfoProperties) => {
+	const { t } = useTranslation();
+	const { syncPending, hasUnsignedPendingTransaction } = useWalletTransactions(wallet);
+
+	useEffect(() => {
+		syncPending();
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+	const renderIcons = () => {
+		if (hasUnsignedPendingTransaction) {
+			return (
+				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
+					<span data-testid="PendingTransactionIcon">
+						<Icon
+							name="ClockPencil"
+							className="text-theme-warning-300"
+							size={isLargeScreen ? "lg" : "md"}
+						/>
+					</span>
+				</Tooltip>
+			);
+		}
+
+		return (
+			<div className={cn("inline-flex items-center space-x-1", className)}>
+				<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+			</div>
+		);
+	};
 
 	if (!isLargeScreen) {
 		return renderIcons();
@@ -371,12 +393,6 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 		event.stopPropagation();
 	}, []);
 
-	const { syncPending, hasUnsignedPendingTransaction } = useWalletTransactions(wallet);
-
-	useEffect(() => {
-		syncPending();
-	}, []); // eslint-disable-line react-hooks/exhaustive-deps
-
 	return (
 		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
 			<div onClick={handleStopPropagation}>
@@ -395,34 +411,23 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 				</Button>
 			</div>
 			<div data-testid="WalletListItem__more-button" className={cn({ "ml-3": !isCompact })}>
-				<Tooltip
-					content={hasUnsignedPendingTransaction && t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}
-				>
-					<div className="relative">
-						<Dropdown
-							toggleContent={
-								<Button
-									variant={isCompact ? "transparent" : "secondary"}
-									size="icon"
-									disabled={isRestoring}
-									className={cn({
-										"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
-										"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
-									})}
-								>
-									<Icon name="EllipsisVertical" size="lg" />
-								</Button>
-							}
-							onSelect={onSelectOption}
-							options={[primaryOptions, secondaryOptions]}
-						/>
-						{hasUnsignedPendingTransaction && (
-							<div data-testid="PendingDot">
-								<Dot className="-right-1 group-hover:bg-transparent dark:group-hover:bg-transparent" />
-							</div>
-						)}
-					</div>
-				</Tooltip>
+				<Dropdown
+					toggleContent={
+						<Button
+							variant={isCompact ? "transparent" : "secondary"}
+							size="icon"
+							disabled={isRestoring}
+							className={cn({
+								"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
+								"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
+							})}
+						>
+							<Icon name="EllipsisVertical" size="lg" />
+						</Button>
+					}
+					onSelect={onSelectOption}
+					options={[primaryOptions, secondaryOptions]}
+				/>
 			</div>
 		</TableCell>
 	);

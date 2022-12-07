@@ -22,4 +22,4 @@ exports[`WalletListItem.blocks > should render WalletListItemMobile 1`] = `[Func
 
 exports[`WalletListItem.blocks > should render WalletListItemMobile when selected 1`] = `[Function]`;
 
-exports[`WalletListItem.blocks > should render with pending transactions dot indicator 1`] = `[Function]`;
+exports[`WalletListItem.blocks > should render with pending transactions icon 1`] = `[Function]`;

@@ -44,13 +44,13 @@ describe("WalletListItem.blocks", () => {
 		await profile.sync();
 	});
 
-	it("should render with pending transactions dot indicator", async () => {
+	it("should render with pending transactions icon", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<table>
 					<tbody>
 						<tr>
-							<ButtonsCell wallet={wallet} isCompact={true} onSelectOption={vi.fn()} />
+							<Info wallet={wallet} isCompact={true} />
 						</tr>
 					</tbody>
 				</table>
@@ -61,9 +61,8 @@ describe("WalletListItem.blocks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletListItem__send-button"));
 		await waitFor(() => {
-			expect(screen.getByTestId("PendingDot")).toBeInTheDocument();
+			expect(screen.getByTestId("PendingTransactionIcon")).toBeInTheDocument();
 		});
 
 		expect(asFragment).toMatchSnapshot();
