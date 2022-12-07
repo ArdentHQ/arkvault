@@ -275,7 +275,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -889,7 +889,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -1302,7 +1302,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -2119,7 +2119,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -2541,7 +2541,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -2954,7 +2954,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
@@ -3367,7 +3367,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
       <tr>
         <td>
           <div
-            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+            class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
             data-testid="Modal__overlay"
           >
             <div
