@@ -5,6 +5,8 @@ import { useSynchronizer } from "@/app/hooks";
 import { useTransaction } from "@/domains/transaction/hooks";
 
 export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
+	const [isLoading, setIsLoading] = useState(false);
+
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();
 
 	const [pendingTransfers, setPendingTransfers] = useState<DTO.ExtendedConfirmedTransactionData[]>([]);
@@ -15,10 +17,12 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 			return;
 		}
 
+		setIsLoading(true);
 		await wallet.transaction().sync();
 
 		const sent = await fetchWalletUnconfirmedTransactions(wallet);
 
+		setIsLoading(false);
 		setPendingTransfers(sent);
 
 		setPendingSigned(
@@ -97,5 +101,6 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 		startSyncingPendingTransactions: start,
 		stopSyncingPendingTransactions: stop,
 		syncPending,
+		isLoading,
 	};
 };

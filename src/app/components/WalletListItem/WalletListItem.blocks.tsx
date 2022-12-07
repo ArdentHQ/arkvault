@@ -11,7 +11,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
-import { WalletIcons } from "@/app/components/WalletIcons";
+import { WalletIcons, WalletIconsSkeleton } from "@/app/components/WalletIcons";
 import {
 	BalanceProperties,
 	ButtonsCellProperties,
@@ -128,30 +128,34 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact 
 
 export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: InfoProperties) => {
 	const { t } = useTranslation();
-	const { syncPending, hasUnsignedPendingTransaction } = useWalletTransactions(wallet);
+	const { syncPending, hasUnsignedPendingTransaction, isLoading } = useWalletTransactions(wallet);
 
 	useEffect(() => {
 		syncPending();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const renderIcons = () => {
-		if (hasUnsignedPendingTransaction) {
-			return (
-				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
-					<span data-testid="PendingTransactionIcon">
-						<Icon
-							name="ClockPencil"
-							className="text-theme-warning-300"
-							size={isLargeScreen ? "lg" : "md"}
-						/>
-					</span>
-				</Tooltip>
-			);
-		}
-
 		return (
 			<div className={cn("inline-flex items-center space-x-1", className)}>
-				<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+				{isLoading && <WalletIconsSkeleton />}
+
+				{!isLoading && (
+					<>
+						{hasUnsignedPendingTransaction && (
+							<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
+								<span data-testid="PendingTransactionIcon">
+									<Icon
+										name="ClockPencil"
+										className="text-theme-warning-300"
+										size={isLargeScreen ? "lg" : "md"}
+									/>
+								</span>
+							</Tooltip>
+						)}
+
+						<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+					</>
+				)}
 			</div>
 		);
 	};
