@@ -18,6 +18,7 @@ type ButtonProperties = {
 	iconSize?: Size;
 	iconPosition?: "left" | "right";
 	showOn?: LayoutBreakpoint;
+	isCompact?: boolean;
 } & React.ButtonHTMLAttributes<any>;
 
 const StyledButton = styled.button<ButtonProperties>(getStyles);

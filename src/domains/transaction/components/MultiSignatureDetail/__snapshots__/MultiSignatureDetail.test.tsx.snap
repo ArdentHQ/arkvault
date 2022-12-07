@@ -3,7 +3,7 @@
 exports[`MultiSignatureDetail > should fail to broadcast transaction and show error step 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -583,7 +583,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
 exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to do so 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1163,7 +1163,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
 exports[`MultiSignatureDetail > should not show send button when waiting for confirmations 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -1717,7 +1717,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
 exports[`MultiSignatureDetail > should render summary step and handle exception 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2259,7 +2259,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
 exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -2745,7 +2745,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
 exports[`MultiSignatureDetail > should render summary step for multi payment 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3489,7 +3489,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
 exports[`MultiSignatureDetail > should render summary step for multi signature 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -3930,7 +3930,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
 exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4472,7 +4472,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
 exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -4968,7 +4968,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
 exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5464,7 +5464,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
 exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -5782,7 +5782,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
 exports[`MultiSignatureDetail > should show send button when able to add final signature and broadcast 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6350,7 +6350,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
 exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -6930,7 +6930,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
 exports[`MultiSignatureDetail > should sign transaction after authentication page 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -7263,7 +7263,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
 exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
@@ -7514,7 +7514,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
 exports[`MultiSignatureDetail > should submit transaction signing using keyboards enter key 1`] = `
 <div>
   <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
     data-testid="Modal__overlay"
   >
     <div
