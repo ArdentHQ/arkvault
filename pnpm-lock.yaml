@@ -20,7 +20,7 @@ specifiers:
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
   '@faustbrian/node-haveibeenpwned': ^1.1.0
-  '@ledgerhq/hw-transport-mocker': ^6.27.6
+  '@ledgerhq/hw-transport-mocker': ^6.27.8
   '@tailwindcss/forms': ^0.5.3
   '@testing-library/dom': ^8.19.0
   '@testing-library/jest-dom': ^5.16.5
@@ -184,7 +184,7 @@ devDependencies:
   '@babel/preset-typescript': 7.18.6_@babel+core@7.20.2
   '@cucumber/cucumber': 8.7.0
   '@emotion/babel-plugin-jsx-pragmatic': 0.2.0_@babel+core@7.20.2
-  '@ledgerhq/hw-transport-mocker': 6.27.6
+  '@ledgerhq/hw-transport-mocker': 6.27.8
   '@testing-library/dom': 8.19.0
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -2221,6 +2221,16 @@ packages:
       '@ledgerhq/logs': 6.10.1
       rxjs: 6.6.7
       semver: 7.3.8
+    dev: false
+
+  /@ledgerhq/devices/7.0.5:
+    resolution: {integrity: sha512-2o2zD2Yv1Hgd3+R2aLCvlyT7NxBz2nltawTCPSXaf3+8MDIyZbiJlXi43hLEISRFBG3u3bYwAQuiOisimN9C6Q==}
+    dependencies:
+      '@ledgerhq/errors': 6.12.1
+      '@ledgerhq/logs': 6.10.1
+      rxjs: 6.6.7
+      semver: 7.3.8
+    dev: true
 
   /@ledgerhq/errors/5.50.0:
     resolution: {integrity: sha512-gu6aJ/BHuRlpU7kgVpy2vcYk6atjB4iauP2ymF7Gk0ez0Y/6VSMVSJvubeEQN+IV60+OBK0JgeIZG7OiHaw8ow==}
@@ -2228,11 +2238,16 @@ packages:
 
   /@ledgerhq/errors/6.11.1:
     resolution: {integrity: sha512-HT1PFvNrejcN5z3ba6xikacIdHWMkjBeE9U5FFoGHhaKBKGjC74mnCeEo0/oJunyuVId+9mhGnv6lrBl6Mkqdg==}
+    dev: false
 
-  /@ledgerhq/hw-transport-mocker/6.27.6:
-    resolution: {integrity: sha512-qSG+be63tXqGvheUSoRYPL2STESqgXujxhiFNTaww/A3GcFPspCPx5tkXLcWPp99dzoNZ6s9SsXlAXleNUZx1g==}
+  /@ledgerhq/errors/6.12.1:
+    resolution: {integrity: sha512-2qeUSUCpQbMhV9eLJDLI8wycFwTcWszP8g3cJycBt9Jf1VczC5MRERwAQv5AYhPa4rcy+jLKBOVZYxc35r5l7g==}
+    dev: true
+
+  /@ledgerhq/hw-transport-mocker/6.27.8:
+    resolution: {integrity: sha512-I9/TMQK0+3rgvm5+AZVFFB84wyEREqVpVVmkwhuYZj084g0Z+WRINOlr1ep3d21E67li4tzxFtkG1dzfVPD45w==}
     dependencies:
-      '@ledgerhq/hw-transport': 6.27.6
+      '@ledgerhq/hw-transport': 6.27.8
       '@ledgerhq/logs': 6.10.1
     dev: true
 
@@ -2278,6 +2293,15 @@ packages:
       '@ledgerhq/devices': 7.0.3
       '@ledgerhq/errors': 6.11.1
       events: 3.3.0
+    dev: false
+
+  /@ledgerhq/hw-transport/6.27.8:
+    resolution: {integrity: sha512-WSUgF1W3tAikSnAfeNAT2e2dgTdEQd5Vi/095C2mR5Fr0/POCSl9X4T9rlBhK5NSVD+nGXI0rN2ISj08zai8HQ==}
+    dependencies:
+      '@ledgerhq/devices': 7.0.5
+      '@ledgerhq/errors': 6.12.1
+      events: 3.3.0
+    dev: true
 
   /@ledgerhq/logs/5.50.0:
     resolution: {integrity: sha512-swKHYCOZUGyVt4ge0u8a7AwNcA//h4nx5wIi0sruGye1IJ5Cva0GyK9L2/WdX+kWVTKp92ZiEo1df31lrWGPgA==}
