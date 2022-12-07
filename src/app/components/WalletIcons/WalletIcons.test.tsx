@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { WalletIcons } from "./WalletIcons";
+import { WalletIcons, WalletIconsSkeleton } from "./WalletIcons";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
@@ -104,5 +104,10 @@ describe("WalletIcons", () => {
 		expect(document.querySelector("svg#star-filled")).not.toBeInTheDocument();
 
 		walletSpy.mockRestore();
+	});
+
+	it("should render wallet icon skeleton", () => {
+		const { asFragment } = render(<WalletIconsSkeleton />);
+		expect(asFragment()).toMatchSnapshot();
 	});
 });
