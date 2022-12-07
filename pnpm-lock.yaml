@@ -78,7 +78,7 @@ specifiers:
   p-retry: ^5.1.1
   postcss: ^8.4.18
   prettier: ^2.7.1
-  prettier-plugin-tailwindcss: ^0.1.13
+  prettier-plugin-tailwindcss: ^0.2.0
   prop-types: ^15.8.1
   qr-scanner: ^1.4.2
   react: ^18.2.0
@@ -107,7 +107,7 @@ specifiers:
   semver: ^7.3.8
   socks-proxy-agent: ^7.0.0
   string-hash: ^1.1.3
-  tailwindcss: 3.2.1
+  tailwindcss: 3.2.4
   testcafe: ^2.0.2
   tippy.js: ^6.3.7
   twin.macro: 2.8.2
@@ -136,7 +136,7 @@ dependencies:
   '@emotion/react': 11.10.5_cuziicjcvwawlf5iuhzacuhqcy
   '@emotion/styled': 11.10.5_hmjty4frusbltjhl3xd7udcm2y
   '@faustbrian/node-haveibeenpwned': 1.1.0
-  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.1
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@types/dlv': 1.1.2
   assert: 2.0.0
@@ -145,7 +145,7 @@ dependencies:
   downshift: 6.1.12_react@18.2.0
   focus-visible: 5.2.0
   framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
-  i18next: 22.1.0
+  i18next: 22.1.2
   locale-currency: 0.0.2
   multiformats: 10.0.2
   p-retry: 5.1.1
@@ -155,7 +155,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-error-boundary: 3.1.4_react@18.2.0
   react-hook-form: 6.15.8_react@18.2.0
-  react-i18next: 12.1.1_rsp3wrm5lof2knumdd4jfvzjbe
+  react-i18next: 12.1.1_mphadbiqvgig3mapazjclpijx4
   react-idle-timer: 4.6.4_v2m5e27vhdewzwhryxwfaorcca
   react-linkify: 1.0.0-alpha
   react-loading-skeleton: 3.1.0_react@18.2.0
@@ -229,12 +229,12 @@ devDependencies:
   msw: 0.47.4_typescript@4.9.3
   postcss: 8.4.18
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+  prettier-plugin-tailwindcss: 0.2.0_prettier@2.7.1
   prop-types: 15.8.1
   react-router-config: 5.1.1_n6chwcsdq6puvu4oljeyhosdga
   rollup: 3.6.0
   rollup-plugin-visualizer: 5.8.3_rollup@3.6.0
-  tailwindcss: 3.2.1_postcss@8.4.18
+  tailwindcss: 3.2.4_postcss@8.4.18
   testcafe: 2.0.2
   twin.macro: 2.8.2
   typescript: 4.9.3
@@ -2223,7 +2223,7 @@ packages:
   /@ledgerhq/devices/7.0.3:
     resolution: {integrity: sha512-URlcgq6yKklWxj35nIu/eTF0UpGLGUOp69xp8uHeyoMK2wqVC0GNGeD2MvKyJ+ul83edqMEI98GycA98Y7trsg==}
     dependencies:
-      '@ledgerhq/errors': 6.12.1
+      '@ledgerhq/errors': 6.11.1
       '@ledgerhq/logs': 6.10.1
       rxjs: 6.6.7
       semver: 7.3.8
@@ -2649,13 +2649,13 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.1:
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.4:
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.4_postcss@8.4.18
     dev: false
 
   /@teppeis/multimaps/2.0.0:
@@ -6124,8 +6124,8 @@ packages:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
     dev: false
 
-  /i18next/22.1.0:
-    resolution: {integrity: sha512-EfnMstIfu4ZsJMhCGygZotMU2XadNGgF1F4L7PkB6EEPEvurIf8rXajYzMEpJCEvBIl2X11cGe3O9/4VGQrFFQ==}
+  /i18next/22.1.2:
+    resolution: {integrity: sha512-HqAjWygRuDvMPdAjMgyv3l07PiN7MtBTCh8aud1iwn1FPBNhF0mzFUYQt+aVKZ3OOl0A+KrlqbCjrR1TCGB4Jw==}
     dependencies:
       '@babel/runtime': 7.20.6
     dev: false
@@ -8006,8 +8006,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
-    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
+  /prettier-plugin-tailwindcss/0.2.0_prettier@2.7.1:
+    resolution: {integrity: sha512-Ruqig/mdWCSpqdq9WK44nrmqM4BFWTzBPhPGwC5NK3coV9eZntEQPB84MGZbjAg0XQU02jVRHXNRPREBzxvM+A==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
@@ -8210,7 +8210,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next/12.1.1_rsp3wrm5lof2knumdd4jfvzjbe:
+  /react-i18next/12.1.1_mphadbiqvgig3mapazjclpijx4:
     resolution: {integrity: sha512-mFdieOI0LDy84q3JuZU6Aou1DoWW2fhapcTGeBS8+vWSJuViuoCLQAMYSb0QoHhXS8B0WKUOPpx4cffAP7r/aA==}
     peerDependencies:
       i18next: '>= 19.0.0'
@@ -8225,7 +8225,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.1
       html-parse-stringify: 3.0.1
-      i18next: 22.1.0
+      i18next: 22.1.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -9321,8 +9321,8 @@ packages:
       - ts-node
     dev: true
 
-  /tailwindcss/3.2.1_postcss@8.4.18:
-    resolution: {integrity: sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==}
+  /tailwindcss/3.2.4_postcss@8.4.18:
+    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
