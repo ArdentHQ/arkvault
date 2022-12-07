@@ -64,7 +64,7 @@
 		"i18next": "^22.1.4",
 		"locale-currency": "^0.0.2",
 		"multiformats": "^10.0.2",
-		"p-retry": "^5.1.1",
+		"p-retry": "^5.1.2",
 		"qr-scanner": "^1.4.2",
 		"react": "^18.2.0",
 		"react-datepicker": "^4.8.0",
@@ -93,7 +93,7 @@
 		"yup": "^0.32.9"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.19.6",
+		"@babel/core": "^7.20.5",
 		"@babel/plugin-transform-react-jsx": "^7.19.0",
 		"@babel/preset-env": "^7.19.4",
 		"@babel/preset-react": "^7.18.6",
@@ -160,7 +160,7 @@
 		"vite-plugin-package-config": "^0.1.1",
 		"vite-plugin-pwa": "^0.13.1",
 		"vite-plugin-svgr": "^2.2.2",
-		"vite-tsconfig-paths": "^4.0.0",
+		"vite-tsconfig-paths": "^4.0.1",
 		"vitest": "^0.25.5",
 		"workbox-window": "^6.5.4"
 	},
