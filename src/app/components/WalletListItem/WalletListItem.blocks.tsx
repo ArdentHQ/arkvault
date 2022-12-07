@@ -134,31 +134,29 @@ export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: Inf
 		syncPending();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const renderIcons = () => {
-		return (
-			<div className={cn("inline-flex items-center space-x-1", className)}>
-				{isLoading && <WalletIconsSkeleton />}
+	const renderIcons = () => (
+		<div className={cn("inline-flex items-center space-x-1", className)}>
+			{isLoading && <WalletIconsSkeleton />}
 
-				{!isLoading && (
-					<>
-						{hasUnsignedPendingTransaction && (
-							<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
-								<span data-testid="PendingTransactionIcon">
-									<Icon
-										name="ClockPencil"
-										className="text-theme-warning-300"
-										size={isLargeScreen ? "lg" : "md"}
-									/>
-								</span>
-							</Tooltip>
-						)}
+			{!isLoading && (
+				<>
+					{hasUnsignedPendingTransaction && (
+						<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
+							<span data-testid="PendingTransactionIcon">
+								<Icon
+									name="ClockPencil"
+									className="text-theme-warning-300"
+									size={isLargeScreen ? "lg" : "md"}
+								/>
+							</span>
+						</Tooltip>
+					)}
 
-						<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
-					</>
-				)}
-			</div>
-		);
-	};
+					<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+				</>
+			)}
+		</div>
+	);
 
 	if (!isLargeScreen) {
 		return renderIcons();
