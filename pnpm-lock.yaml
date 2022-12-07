@@ -78,7 +78,7 @@ specifiers:
   p-retry: ^5.1.1
   postcss: ^8.4.18
   prettier: ^2.7.1
-  prettier-plugin-tailwindcss: ^0.1.13
+  prettier-plugin-tailwindcss: ^0.2.0
   prop-types: ^15.8.1
   qr-scanner: ^1.4.2
   react: ^18.2.0
@@ -107,7 +107,7 @@ specifiers:
   semver: ^7.3.8
   socks-proxy-agent: ^7.0.0
   string-hash: ^1.1.3
-  tailwindcss: 3.2.1
+  tailwindcss: 3.2.4
   testcafe: ^2.1.0
   tippy.js: ^6.3.7
   twin.macro: 2.8.2
@@ -136,7 +136,7 @@ dependencies:
   '@emotion/react': 11.10.5_cuziicjcvwawlf5iuhzacuhqcy
   '@emotion/styled': 11.10.5_hmjty4frusbltjhl3xd7udcm2y
   '@faustbrian/node-haveibeenpwned': 1.1.0
-  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.1
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tippyjs/react': 4.2.6_biqbaboplfbrettd7655fr4n2y
   '@types/dlv': 1.1.2
   assert: 2.0.0
@@ -229,12 +229,12 @@ devDependencies:
   msw: 0.47.4_typescript@4.9.3
   postcss: 8.4.18
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+  prettier-plugin-tailwindcss: 0.2.0_prettier@2.7.1
   prop-types: 15.8.1
   react-router-config: 5.1.1_n6chwcsdq6puvu4oljeyhosdga
   rollup: 3.6.0
   rollup-plugin-visualizer: 5.8.3_rollup@3.6.0
-  tailwindcss: 3.2.1_postcss@8.4.18
+  tailwindcss: 3.2.4_postcss@8.4.18
   testcafe: 2.1.0
   twin.macro: 2.8.2
   typescript: 4.9.3
@@ -2235,6 +2235,7 @@ packages:
       '@ledgerhq/logs': 6.10.1
       rxjs: 6.6.7
       semver: 7.3.8
+    dev: true
 
   /@ledgerhq/errors/5.50.0:
     resolution: {integrity: sha512-gu6aJ/BHuRlpU7kgVpy2vcYk6atjB4iauP2ymF7Gk0ez0Y/6VSMVSJvubeEQN+IV60+OBK0JgeIZG7OiHaw8ow==}
@@ -2246,6 +2247,7 @@ packages:
 
   /@ledgerhq/errors/6.12.1:
     resolution: {integrity: sha512-2qeUSUCpQbMhV9eLJDLI8wycFwTcWszP8g3cJycBt9Jf1VczC5MRERwAQv5AYhPa4rcy+jLKBOVZYxc35r5l7g==}
+    dev: true
 
   /@ledgerhq/hw-transport-mocker/6.27.8:
     resolution: {integrity: sha512-I9/TMQK0+3rgvm5+AZVFFB84wyEREqVpVVmkwhuYZj084g0Z+WRINOlr1ep3d21E67li4tzxFtkG1dzfVPD45w==}
@@ -2269,7 +2271,7 @@ packages:
     dependencies:
       '@ledgerhq/devices': 7.0.3
       '@ledgerhq/errors': 6.11.1
-      '@ledgerhq/hw-transport': 6.27.8
+      '@ledgerhq/hw-transport': 6.27.6
       '@ledgerhq/logs': 6.10.1
     dev: false
 
@@ -2278,7 +2280,7 @@ packages:
     dependencies:
       '@ledgerhq/devices': 7.0.3
       '@ledgerhq/errors': 6.11.1
-      '@ledgerhq/hw-transport': 6.27.8
+      '@ledgerhq/hw-transport': 6.27.6
       '@ledgerhq/logs': 6.10.1
     dev: false
 
@@ -2290,12 +2292,21 @@ packages:
       events: 3.3.0
     dev: false
 
+  /@ledgerhq/hw-transport/6.27.6:
+    resolution: {integrity: sha512-DRGUsB8WfbeEPuU42nAtwYpA5D6Bq3q1CvC2VjDinkukLcf6XMc22YUJl9mxt+h+/cLTU1Ff/pz+fqYqeELLEA==}
+    dependencies:
+      '@ledgerhq/devices': 7.0.3
+      '@ledgerhq/errors': 6.11.1
+      events: 3.3.0
+    dev: false
+
   /@ledgerhq/hw-transport/6.27.8:
     resolution: {integrity: sha512-WSUgF1W3tAikSnAfeNAT2e2dgTdEQd5Vi/095C2mR5Fr0/POCSl9X4T9rlBhK5NSVD+nGXI0rN2ISj08zai8HQ==}
     dependencies:
       '@ledgerhq/devices': 7.0.5
       '@ledgerhq/errors': 6.12.1
       events: 3.3.0
+    dev: true
 
   /@ledgerhq/logs/5.50.0:
     resolution: {integrity: sha512-swKHYCOZUGyVt4ge0u8a7AwNcA//h4nx5wIi0sruGye1IJ5Cva0GyK9L2/WdX+kWVTKp92ZiEo1df31lrWGPgA==}
@@ -2648,13 +2659,13 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.1:
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.4:
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.4_postcss@8.4.18
     dev: false
 
   /@teppeis/multimaps/2.0.0:
@@ -8007,8 +8018,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
-    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
+  /prettier-plugin-tailwindcss/0.2.0_prettier@2.7.1:
+    resolution: {integrity: sha512-Ruqig/mdWCSpqdq9WK44nrmqM4BFWTzBPhPGwC5NK3coV9eZntEQPB84MGZbjAg0XQU02jVRHXNRPREBzxvM+A==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'
@@ -9310,8 +9321,8 @@ packages:
       - ts-node
     dev: true
 
-  /tailwindcss/3.2.1_postcss@8.4.18:
-    resolution: {integrity: sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==}
+  /tailwindcss/3.2.4_postcss@8.4.18:
+    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
