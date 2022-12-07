@@ -14,7 +14,7 @@ specifiers:
   '@babel/preset-env': ^7.19.4
   '@babel/preset-react': ^7.18.6
   '@babel/preset-typescript': ^7.18.6
-  '@cucumber/cucumber': ^8.7.0
+  '@cucumber/cucumber': ^8.9.0
   '@emotion/babel-plugin-jsx-pragmatic': ^0.2.0
   '@emotion/cache': ^11.10.5
   '@emotion/react': ^11.10.5
@@ -64,7 +64,7 @@ specifiers:
   eslint-plugin-unused-imports: ^2.0.0
   focus-visible: ^5.2.0
   framer-motion: ^7.6.4
-  gherkin-testcafe: 5.5.0
+  gherkin-testcafe: 5.5.1
   history: ^5.3.0
   i18next: ^22.0.8
   identity-obj-proxy: ^3.0.0
@@ -108,7 +108,7 @@ specifiers:
   socks-proxy-agent: ^7.0.0
   string-hash: ^1.1.3
   tailwindcss: 3.2.4
-  testcafe: ^2.0.2
+  testcafe: ^2.1.0
   tippy.js: ^6.3.7
   twin.macro: 2.8.2
   typescript: ^4.9.3
@@ -182,7 +182,7 @@ devDependencies:
   '@babel/preset-env': 7.20.2_@babel+core@7.20.2
   '@babel/preset-react': 7.18.6_@babel+core@7.20.2
   '@babel/preset-typescript': 7.18.6_@babel+core@7.20.2
-  '@cucumber/cucumber': 8.7.0
+  '@cucumber/cucumber': 8.9.0
   '@emotion/babel-plugin-jsx-pragmatic': 0.2.0_@babel+core@7.20.2
   '@ledgerhq/hw-transport-mocker': 6.27.8
   '@testing-library/dom': 8.19.0
@@ -219,7 +219,7 @@ devDependencies:
   eslint-plugin-testing-library: 5.9.1_e3uo4sehh4zr4i6m57mkkxxv7y
   eslint-plugin-unicorn: 44.0.2_eslint@8.27.0
   eslint-plugin-unused-imports: 2.0.0_yzrppqfdvqdw4qg4ntipd2ytwi
-  gherkin-testcafe: 5.5.0_c3qu5emd3ybgb5txlo2inaveaq
+  gherkin-testcafe: 5.5.1_x4wubh2frvbi2427r7urs6siiu
   history: 5.3.0
   identity-obj-proxy: 3.0.0
   jest-extended: 3.1.0
@@ -235,7 +235,7 @@ devDependencies:
   rollup: 3.6.0
   rollup-plugin-visualizer: 5.8.3_rollup@3.6.0
   tailwindcss: 3.2.4_postcss@8.4.18
-  testcafe: 2.0.2
+  testcafe: 2.1.0
   twin.macro: 2.8.2
   typescript: 4.9.3
   vite: 3.2.5
@@ -1750,13 +1750,6 @@ packages:
     dev: true
     optional: true
 
-  /@cspotcode/source-map-support/0.8.1:
-    resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.9
-    dev: true
-
   /@cucumber/ci-environment/9.1.0:
     resolution: {integrity: sha512-jdnF6APXP3GawMue8kdMxhu6TBhyRUO4KDRxTowf06NtclLjIw2Ybpo9IcIOMvE8kHukvJyM00uxWX+CfS7JgQ==}
     dev: true
@@ -1773,20 +1766,19 @@ packages:
       regexp-match-indices: 1.0.2
     dev: true
 
-  /@cucumber/cucumber/8.7.0:
-    resolution: {integrity: sha512-RYhobk+W73UVhd7fRHiKsAchjMl1h3Ic5VSSPwY6KyKw8t0wsfZM+U/a0xcUO/xflABeA0A8J+PupTNB4z9O3Q==}
+  /@cucumber/cucumber/8.9.0:
+    resolution: {integrity: sha512-kU44RHVbS6fNLrEVQAzTtTMP6pDh0gMzB+QXULNymqGGhXDpnk+6PEH88+YG0TsjjPSYYNwOc3mhN/zvQ28yAg==}
     engines: {node: 12 || 14 || >=16}
     hasBin: true
     dependencies:
-      '@cspotcode/source-map-support': 0.8.1
       '@cucumber/ci-environment': 9.1.0
       '@cucumber/cucumber-expressions': 16.0.0
-      '@cucumber/gherkin': 24.0.0
-      '@cucumber/gherkin-streams': 5.0.1_ufbo4b3l4wr2p66zrif5hgdzsq
-      '@cucumber/gherkin-utils': 8.0.0
-      '@cucumber/html-formatter': 20.1.0_@cucumber+messages@19.1.4
-      '@cucumber/message-streams': 4.0.1_@cucumber+messages@19.1.4
-      '@cucumber/messages': 19.1.4
+      '@cucumber/gherkin': 24.1.0
+      '@cucumber/gherkin-streams': 5.0.1_xgc3bvndt5jhhsgumbj3x2cfz4
+      '@cucumber/gherkin-utils': 8.0.1
+      '@cucumber/html-formatter': 20.1.0_@cucumber+messages@20.0.0
+      '@cucumber/message-streams': 4.0.1_@cucumber+messages@20.0.0
+      '@cucumber/messages': 20.0.0
       '@cucumber/tag-expressions': 4.1.0
       assertion-error-formatter: 3.0.0
       capital-case: 1.0.4
@@ -1796,6 +1788,7 @@ packages:
       debug: 4.3.4_supports-color@8.1.1
       duration: 0.2.2
       durations: 3.4.2
+      error-stack-parser: 2.1.4
       figures: 3.2.0
       glob: 7.2.3
       has-ansi: 4.0.1
@@ -1808,14 +1801,14 @@ packages:
       mz: 2.7.0
       progress: 2.0.3
       resolve-pkg: 2.0.0
-      semver: 7.3.7
-      stack-chain: 2.0.0
+      semver: 7.3.8
       string-argv: 0.3.1
       strip-ansi: 6.0.1
       supports-color: 8.1.1
       tmp: 0.2.1
       util-arity: 1.1.0
       verror: 1.10.1
+      xmlbuilder: 15.1.1
       yup: 0.32.11
     dev: true
 
@@ -1834,7 +1827,7 @@ packages:
       source-map-support: 0.5.21
     dev: true
 
-  /@cucumber/gherkin-streams/5.0.1_ufbo4b3l4wr2p66zrif5hgdzsq:
+  /@cucumber/gherkin-streams/5.0.1_xgc3bvndt5jhhsgumbj3x2cfz4:
     resolution: {integrity: sha512-/7VkIE/ASxIP/jd4Crlp4JHXqdNFxPGQokqWqsaCCiqBiu5qHoKMxcWNlp9njVL/n9yN4S08OmY3ZR8uC5x74Q==}
     hasBin: true
     peerDependencies:
@@ -1842,26 +1835,22 @@ packages:
       '@cucumber/message-streams': '>=4.0.0'
       '@cucumber/messages': '>=17.1.1'
     dependencies:
-      '@cucumber/gherkin': 24.0.0
-      '@cucumber/message-streams': 4.0.1_@cucumber+messages@19.1.4
-      '@cucumber/messages': 19.1.4
+      '@cucumber/gherkin': 24.1.0
+      '@cucumber/message-streams': 4.0.1_@cucumber+messages@20.0.0
+      '@cucumber/messages': 20.0.0
       commander: 9.1.0
       source-map-support: 0.5.21
     dev: true
 
-  /@cucumber/gherkin-utils/8.0.0:
-    resolution: {integrity: sha512-8uIZInEe3cO1cASmy3BA0PbVFUI+xWBnZAxmICbVOPsZaMB85MtESZLafzErgfRQPsHf6uYbVagP7MIjNPM5Jw==}
+  /@cucumber/gherkin-utils/8.0.1:
+    resolution: {integrity: sha512-SjDcCYQMEX4yCUoOJU38+UZo2p0Mxh1WnvwoJ3rSnun5HhhLrAn2p/Hnbiq4kudYJkAuQcEXlFOllJ3ZTwztIg==}
     hasBin: true
     dependencies:
+      '@cucumber/gherkin': 24.1.0
       '@cucumber/messages': 19.1.4
       '@teppeis/multimaps': 2.0.0
-      commander: 9.3.0
-    dev: true
-
-  /@cucumber/gherkin/24.0.0:
-    resolution: {integrity: sha512-b7OsnvX1B8myDAKMc+RAiUX9bzgtNdjGsiMj10O13xu2HBWIOQ19EqBJ4xLO5CFG/lGk1J/+L0lANQVowxLVBg==}
-    dependencies:
-      '@cucumber/messages': 19.1.4
+      commander: 9.4.1
+      source-map-support: 0.5.21
     dev: true
 
   /@cucumber/gherkin/24.1.0:
@@ -1870,12 +1859,12 @@ packages:
       '@cucumber/messages': 19.1.4
     dev: true
 
-  /@cucumber/html-formatter/20.1.0_@cucumber+messages@19.1.4:
+  /@cucumber/html-formatter/20.1.0_@cucumber+messages@20.0.0:
     resolution: {integrity: sha512-bu2shjZuVGfAtKaw8ebCBxhgu3Eiaz/P7ZuSxrw9YCa6rOyxMX5zO+4f2FUBTK/AV0b9O5cAB/xitYBrGhlYKg==}
     peerDependencies:
       '@cucumber/messages': '>=18'
     dependencies:
-      '@cucumber/messages': 19.1.4
+      '@cucumber/messages': 20.0.0
     dev: true
 
   /@cucumber/message-streams/4.0.1_@cucumber+messages@19.1.4:
@@ -1886,8 +1875,25 @@ packages:
       '@cucumber/messages': 19.1.4
     dev: true
 
+  /@cucumber/message-streams/4.0.1_@cucumber+messages@20.0.0:
+    resolution: {integrity: sha512-Kxap9uP5jD8tHUZVjTWgzxemi/0uOsbGjd4LBOSxcJoOCRbESFwemUzilJuzNTB8pcTQUh8D5oudUyxfkJOKmA==}
+    peerDependencies:
+      '@cucumber/messages': '>=17.1.1'
+    dependencies:
+      '@cucumber/messages': 20.0.0
+    dev: true
+
   /@cucumber/messages/19.1.4:
     resolution: {integrity: sha512-Pksl0pnDz2l1+L5Ug85NlG6LWrrklN9qkMxN5Mv+1XZ3T6u580dnE6mVaxjJRdcOq4tR17Pc0RqIDZMyVY1FlA==}
+    dependencies:
+      '@types/uuid': 8.3.4
+      class-transformer: 0.5.1
+      reflect-metadata: 0.1.13
+      uuid: 9.0.0
+    dev: true
+
+  /@cucumber/messages/20.0.0:
+    resolution: {integrity: sha512-JFrFwuhxsbig0afaViNhuzoQyC+GQzlI7m+rX+lSiDGV13K3sJzMmHjkbCiNOgoRlKAMwIGR9TRMH0xj9/My0w==}
     dependencies:
       '@types/uuid': 8.3.4
       class-transformer: 0.5.1
@@ -2204,13 +2210,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@jridgewell/trace-mapping/0.3.9:
-    resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
-    dependencies:
-      '@jridgewell/resolve-uri': 3.1.0
-      '@jridgewell/sourcemap-codec': 1.4.14
-    dev: true
-
   /@ledgerhq/devices/5.51.1:
     resolution: {integrity: sha512-4w+P0VkbjzEXC7kv8T1GJ/9AVaP9I6uasMZ/JcdwZBS3qwvKo5A5z9uGhP5c7TvItzcmPb44b5Mw2kT+WjUuAA==}
     dependencies:
@@ -2236,6 +2235,7 @@ packages:
       '@ledgerhq/logs': 6.10.1
       rxjs: 6.6.7
       semver: 7.3.8
+    dev: true
 
   /@ledgerhq/errors/5.50.0:
     resolution: {integrity: sha512-gu6aJ/BHuRlpU7kgVpy2vcYk6atjB4iauP2ymF7Gk0ez0Y/6VSMVSJvubeEQN+IV60+OBK0JgeIZG7OiHaw8ow==}
@@ -2247,6 +2247,7 @@ packages:
 
   /@ledgerhq/errors/6.12.1:
     resolution: {integrity: sha512-2qeUSUCpQbMhV9eLJDLI8wycFwTcWszP8g3cJycBt9Jf1VczC5MRERwAQv5AYhPa4rcy+jLKBOVZYxc35r5l7g==}
+    dev: true
 
   /@ledgerhq/hw-transport-mocker/6.27.8:
     resolution: {integrity: sha512-I9/TMQK0+3rgvm5+AZVFFB84wyEREqVpVVmkwhuYZj084g0Z+WRINOlr1ep3d21E67li4tzxFtkG1dzfVPD45w==}
@@ -2270,7 +2271,7 @@ packages:
     dependencies:
       '@ledgerhq/devices': 7.0.3
       '@ledgerhq/errors': 6.11.1
-      '@ledgerhq/hw-transport': 6.27.8
+      '@ledgerhq/hw-transport': 6.27.6
       '@ledgerhq/logs': 6.10.1
     dev: false
 
@@ -2279,7 +2280,7 @@ packages:
     dependencies:
       '@ledgerhq/devices': 7.0.3
       '@ledgerhq/errors': 6.11.1
-      '@ledgerhq/hw-transport': 6.27.8
+      '@ledgerhq/hw-transport': 6.27.6
       '@ledgerhq/logs': 6.10.1
     dev: false
 
@@ -2291,12 +2292,21 @@ packages:
       events: 3.3.0
     dev: false
 
+  /@ledgerhq/hw-transport/6.27.6:
+    resolution: {integrity: sha512-DRGUsB8WfbeEPuU42nAtwYpA5D6Bq3q1CvC2VjDinkukLcf6XMc22YUJl9mxt+h+/cLTU1Ff/pz+fqYqeELLEA==}
+    dependencies:
+      '@ledgerhq/devices': 7.0.3
+      '@ledgerhq/errors': 6.11.1
+      events: 3.3.0
+    dev: false
+
   /@ledgerhq/hw-transport/6.27.8:
     resolution: {integrity: sha512-WSUgF1W3tAikSnAfeNAT2e2dgTdEQd5Vi/095C2mR5Fr0/POCSl9X4T9rlBhK5NSVD+nGXI0rN2ISj08zai8HQ==}
     dependencies:
       '@ledgerhq/devices': 7.0.5
       '@ledgerhq/errors': 6.12.1
       events: 3.3.0
+    dev: true
 
   /@ledgerhq/logs/5.50.0:
     resolution: {integrity: sha512-swKHYCOZUGyVt4ge0u8a7AwNcA//h4nx5wIi0sruGye1IJ5Cva0GyK9L2/WdX+kWVTKp92ZiEo1df31lrWGPgA==}
@@ -2817,7 +2827,7 @@ packages:
     resolution: {integrity: sha512-O2ZQvaCuvqgpSOFzHST/VELij9sm5P84bouCz6z8DysloeY47JpeUyvv00TE0LrZPsG2qleUK00anUaLsvUMHQ==}
     deprecated: This is a stub types definition for error-stack-parser (https://github.com/stacktracejs/error-stack-parser). error-stack-parser provides its own type definitions, so you don't need @types/error-stack-parser installed!
     dependencies:
-      error-stack-parser: 1.3.6
+      error-stack-parser: 2.1.4
     dev: true
 
   /@types/estree/0.0.39:
@@ -4164,11 +4174,6 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
-  /commander/9.3.0:
-    resolution: {integrity: sha512-hv95iU5uXPbK83mjrJKuZyFM/LBAoCV/XhVGkS5Je6tl7sxr6A0ITMw5WoRV46/UaJ46Nllm3Xt7IaJhXTIkzw==}
-    engines: {node: ^12.20.0 || >=14}
-    dev: true
-
   /commander/9.4.1:
     resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
@@ -4728,6 +4733,12 @@ packages:
     resolution: {integrity: sha512-xhuSYd8wLgOXwNgjcPeXMPL/IiiA1Huck+OPvClpJViVNNlJVtM41o+1emp7bPvlCJwCatFX2DWc05/DgfbWzA==}
     dependencies:
       stackframe: 0.3.1
+    dev: true
+
+  /error-stack-parser/2.1.4:
+    resolution: {integrity: sha512-Sk5V6wVazPhq5MhpO+AUxJn5x7XSXGl1R93Vn7i+zS15KDVxQijejNCrz8340/2bgLBjR9GtEG8ZVKONDjcqGQ==}
+    dependencies:
+      stackframe: 1.3.4
     dev: true
 
   /es-abstract/1.20.4:
@@ -5794,20 +5805,21 @@ packages:
       async: 3.2.4
     dev: true
 
-  /gherkin-testcafe/5.5.0_c3qu5emd3ybgb5txlo2inaveaq:
-    resolution: {integrity: sha512-3qODkwMAzcTZy+3ib7+59Ol1rLeOPfutWqR2wbqR4d0EXtsWGQ21qns4MR0zEDCCo4/BslvcIZcjqrz+BQkM0Q==}
+  /gherkin-testcafe/5.5.1_x4wubh2frvbi2427r7urs6siiu:
+    resolution: {integrity: sha512-6ikwx2QhBD4n3jaXMLf+uppYA4LaglTQj9QBZoDCCChjowSfvxqhdzyy8LTKomDqDFlrAMgFSLGT69EI0z8Agw==}
     hasBin: true
     peerDependencies:
       '@cucumber/cucumber': ^8.0.0
       testcafe: ~1.20.0
     dependencies:
-      '@cucumber/cucumber': 8.7.0
+      '@cucumber/cucumber': 8.9.0
       '@cucumber/cucumber-expressions': 15.2.0
       '@cucumber/gherkin': 24.1.0
       '@cucumber/gherkin-streams': 5.0.1_bfahkmvo4sajxc62mzoea4mhlm
       '@cucumber/message-streams': 4.0.1_@cucumber+messages@19.1.4
       '@cucumber/messages': 19.1.4
-      testcafe: 2.0.2
+      chalk: 4.1.2
+      testcafe: 2.1.0
     dev: true
 
   /glob-parent/5.1.2:
@@ -8883,14 +8895,6 @@ packages:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
     hasBin: true
 
-  /semver/7.3.7:
-    resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
-
   /semver/7.3.8:
     resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
     engines: {node: '>=10'}
@@ -9080,10 +9084,6 @@ packages:
     resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
     engines: {node: '>=6'}
     dev: false
-
-  /stack-chain/2.0.0:
-    resolution: {integrity: sha512-GGrHXePi305aW7XQweYZZwiRwR7Js3MWoK/EHzzB9ROdc75nCnjSJVi21rdAGxFl+yCx2L2qdfl5y7NO4lTyqg==}
-    dev: true
 
   /stack-utils/2.0.5:
     resolution: {integrity: sha512-xrQcmYhOsn/1kX+Vraq+7j4oE2j/6BFscZ0etmYg81xuM8Gq0022Pxb8+IqgOFUIaxHs0KaSb7T1+OegiNrNFA==}
@@ -9414,8 +9414,8 @@ packages:
       - supports-color
     dev: true
 
-  /testcafe-hammerhead/28.0.0:
-    resolution: {integrity: sha512-e6/nVVhaB9dVhQaGSwsz+pWk/6QE6zhxwdKFpC4oi+/VDMDKGf94aIeeFsKzmCS0bLdUCElOZ20ujTIjLcaKFA==}
+  /testcafe-hammerhead/28.1.0:
+    resolution: {integrity: sha512-6J+U1MEV8L7OI467tkpOpewqYE6u0bhDTGQhK1s8cvDZtcvzm1ArFTRJvyG1wMb3/QaGrzoCHpEMRJ2BIK/0lw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       acorn-hammerhead: 0.6.1
@@ -9446,8 +9446,8 @@ packages:
       - supports-color
     dev: true
 
-  /testcafe-legacy-api/5.1.5:
-    resolution: {integrity: sha512-RyNPMuezhVqgv1pG2S+BrlwyEt/Th63r8yqMmOMlq3hAJtjDIf6++S0NHtqHcgjvLd145vdSnm7aJFbZFmATmA==}
+  /testcafe-legacy-api/5.1.6:
+    resolution: {integrity: sha512-Q451IdSUX1NmRfE8kzIcEeoqbUlLaMv2fwVNgQOBEFmA5E57c3jsIpLDTDqv6FPcNwdNMYIZMiB6tzlXB5wf1g==}
     dependencies:
       async: 3.2.3
       dedent: 0.6.0
@@ -9462,7 +9462,7 @@ packages:
       pinkie: 2.0.4
       read-file-relative: 1.2.0
       strip-bom: 2.0.0
-      testcafe-hammerhead: 28.0.0
+      testcafe-hammerhead: 28.1.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -9509,8 +9509,8 @@ packages:
     resolution: {integrity: sha512-6km7D26+KCQGeFlSQ9fVEU7tD8qdioSpqzxU8CCZkd2KzBS0jTFkqaJ54rPaLdd5+wdhgO3+as3LMm4F0EDeYA==}
     dev: true
 
-  /testcafe/2.0.2:
-    resolution: {integrity: sha512-Izod2NaRrtDK7/M7A5wc1BvAZWMLfBrobFo0kkT7VrWu3A44JdXT8CawpX2BsqTieuxmHxVQhQQVjMFxGd0DIQ==}
+  /testcafe/2.1.0:
+    resolution: {integrity: sha512-mfF9UX2U9RyjNfuviaOf/MYEQA7uGxe0n+VXJzdPMqpPjvILe/LrAopyxjkmW5MllZAGW0/tmwOy9xRZl50l7A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -9529,7 +9529,7 @@ packages:
       '@babel/preset-env': 7.20.2_@babel+core@7.20.2
       '@babel/preset-flow': 7.18.6_@babel+core@7.20.2
       '@babel/preset-react': 7.18.6_@babel+core@7.20.2
-      '@babel/runtime': 7.20.1
+      '@babel/runtime': 7.20.6
       '@miherlosev/esm': 3.2.26
       '@types/node': 12.20.55
       async-exit-hook: 1.1.2
@@ -9595,8 +9595,8 @@ packages:
       source-map-support: 0.5.21
       strip-bom: 2.0.0
       testcafe-browser-tools: 2.0.23
-      testcafe-hammerhead: 28.0.0
-      testcafe-legacy-api: 5.1.5
+      testcafe-hammerhead: 28.1.0
+      testcafe-legacy-api: 5.1.6
       testcafe-reporter-dashboard: 0.2.7
       testcafe-reporter-json: 2.2.0
       testcafe-reporter-list: 2.1.0
@@ -10642,6 +10642,11 @@ packages:
   /xml-name-validator/4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
+    dev: true
+
+  /xmlbuilder/15.1.1:
+    resolution: {integrity: sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==}
+    engines: {node: '>=8.0'}
     dev: true
 
   /xmlchars/2.2.0:
