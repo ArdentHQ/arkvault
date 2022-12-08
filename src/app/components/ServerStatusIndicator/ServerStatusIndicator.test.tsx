@@ -4,7 +4,7 @@ import { createHashHistory } from "history";
 import { Route } from "react-router-dom";
 import { useConfiguration, ConfigurationProvider } from "@/app/contexts";
 import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
-import { render, getDefaultProfileId, env } from "@/utils/testing-library";
+import { render, renderResponsiveWithRoute, getDefaultProfileId, env } from "@/utils/testing-library";
 import { ServerHealthStatus } from "@/domains/setting/pages/Servers/Servers.contracts";
 
 const history = createHashHistory();
@@ -33,7 +33,7 @@ describe("Server Status Indicator", () => {
 	);
 
 	it.each(["sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<ServerHealthStatusWrapper status={ServerHealthStatus.Healthy} />
 			</Route>,

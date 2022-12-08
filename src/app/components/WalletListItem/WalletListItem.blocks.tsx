@@ -1,8 +1,8 @@
 import cn from "classnames";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
-import { WalletListItemMobileProperties } from ".";
+import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -11,7 +11,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell } from "@/app/components/Table";
 import { Tooltip } from "@/app/components/Tooltip";
-import { WalletIcons } from "@/app/components/WalletIcons";
+import { WalletIcons, WalletIconsSkeleton } from "@/app/components/WalletIcons";
 import {
 	BalanceProperties,
 	ButtonsCellProperties,
@@ -25,6 +25,7 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
+import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -125,10 +126,35 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact 
 	);
 };
 
-export const Info: React.VFC<InfoProperties> = ({ isCompact, wallet, isLargeScreen = true, className }) => {
+export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: InfoProperties) => {
+	const { t } = useTranslation();
+	const { syncPending, hasUnsignedPendingTransaction, isLoading } = useWalletTransactions(wallet);
+
+	useEffect(() => {
+		syncPending();
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
+
 	const renderIcons = () => (
 		<div className={cn("inline-flex items-center space-x-1", className)}>
-			<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+			{isLoading && <WalletIconsSkeleton />}
+
+			{!isLoading && (
+				<>
+					{hasUnsignedPendingTransaction && (
+						<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_SOME_SIGNATURES")}>
+							<span data-testid="PendingTransactionIcon">
+								<Icon
+									name="ClockPencil"
+									className="text-theme-warning-300"
+									size={isLargeScreen ? "lg" : "md"}
+								/>
+							</span>
+						</Tooltip>
+					)}
+
+					<WalletIcons exclude={excludedIcons} wallet={wallet} iconSize={isLargeScreen ? "lg" : "md"} />
+				</>
+			)}
 		</div>
 	);
 
