@@ -28,7 +28,7 @@ const useModalOverflowYOffset = ({
 		};
 
 		let observer: ResizeObserver;
-		if (!!modalContainerReference?.current) {
+		if (modalContainerReference?.current) {
 			observer = observeElementHeight(modalContainerReference.current, updateModalOffset);
 		}
 
