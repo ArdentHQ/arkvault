@@ -1,6 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { browser } from "@/utils/platform";
 
+export const observeElementHeight = (modalElement: HTMLDivElement, onResize: () => void) => {
+	const observer = new ResizeObserver(onResize);
+
+	observer.observe(modalElement);
+	return observer;
+};
+
 const useModalOverflowYOffset = ({
 	modalContainerReference,
 }: {
@@ -20,10 +27,18 @@ const useModalOverflowYOffset = ({
 			}
 		};
 
+		let observer: ResizeObserver;
+		if (modalContainerReference?.current) {
+			observer = observeElementHeight(modalContainerReference.current, updateModalOffset);
+		}
+
 		window.addEventListener("resize", updateModalOffset);
 		updateModalOffset();
 
-		return () => window.removeEventListener("resize", updateModalOffset);
+		return () => {
+			window.removeEventListener("resize", updateModalOffset);
+			observer?.disconnect();
+		};
 	}, [modalContainerReference.current]);
 
 	return {
