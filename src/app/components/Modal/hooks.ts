@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { browser } from "@/utils/platform";
 
-export const observeElementHeight = (modalElement: HTMLDivElement, onResize: () => undefined) => {
+export const observeElementHeight = (modalElement: HTMLDivElement, onResize: () => void) => {
 	const observer = new ResizeObserver(() => onResize());
 
 	observer.observe(modalElement);
@@ -18,15 +18,13 @@ const useModalOverflowYOffset = ({
 	useEffect(() => {
 		const updateModalOffset = () => {
 			const windowHeight = window.innerHeight;
-			const currentModalHeight = modalContainerReference?.current?.clientHeight || 0;
+			const modalHeight = modalContainerReference?.current?.clientHeight || 0;
 
-			if (windowHeight - currentModalHeight < 85) {
+			if (windowHeight - modalHeight < 85) {
 				setOffsetYClass("overflow-y-auto");
 			} else {
 				setOffsetYClass("overflow-y-hidden");
 			}
-
-			return undefined;
 		};
 
 		let observer: ResizeObserver;
