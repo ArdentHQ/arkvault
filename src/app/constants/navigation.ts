@@ -23,9 +23,9 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		title: t("COMMON.VOTES"),
 	},
 	{
+		hasGradient: true,
 		mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
 		title: t("COMMON.MIGRATION"),
-		hasGradient: true,
 	},
 ];
 
