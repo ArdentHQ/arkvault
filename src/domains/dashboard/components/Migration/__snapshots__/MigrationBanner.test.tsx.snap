@@ -75,6 +75,7 @@ exports[`MigrationBanner > should render 1`] = `
           </button>
           <button
             class="css-pxkhs3"
+            data-testid="MigrationBanner--learnmore"
             type="button"
           >
             <div

@@ -30,7 +30,11 @@ export const MigrationBanner = () => {
 					</div>
 					<div className="mt-8 flex space-x-3 ">
 						<Button variant="primary">{t("COMMON.MIGRATION_BANNER.MIGRATE_TOKENS")}</Button>
-						<Button variant="secondary-alt" onClick={learnMoreClickHandler}>
+						<Button
+							data-testid="MigrationBanner--learnmore"
+							variant="secondary-alt"
+							onClick={learnMoreClickHandler}
+						>
 							{t("COMMON.LEARN_MORE")}
 						</Button>
 					</div>
