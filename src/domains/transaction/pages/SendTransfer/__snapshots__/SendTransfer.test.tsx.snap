@@ -7,7 +7,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -83,7 +83,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -95,7 +95,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -107,7 +107,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -119,12 +119,50 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -1587,7 +1625,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -1663,7 +1701,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -1675,7 +1713,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -1687,7 +1725,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -1699,12 +1737,50 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -2399,7 +2475,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -2475,7 +2551,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -2487,7 +2563,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -2499,7 +2575,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -2511,12 +2587,50 @@ exports[`SendTransfer > should render form and use location state with nethash p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -3855,7 +3969,7 @@ exports[`SendTransfer > should render form and use location state with network p
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -3931,7 +4045,7 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -3943,7 +4057,7 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -3955,7 +4069,7 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -3967,12 +4081,50 @@ exports[`SendTransfer > should render form and use location state with network p
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -5311,7 +5463,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -5387,7 +5539,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -5399,7 +5551,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -5411,7 +5563,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -5423,12 +5575,50 @@ exports[`SendTransfer > should render form and use location state without memo 1
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -11630,7 +11820,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -11706,7 +11896,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -11718,7 +11908,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -11730,7 +11920,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -11742,12 +11932,50 @@ exports[`SendTransfer > should render network selection without selected wallet 
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -14281,7 +14509,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -14357,7 +14585,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -14369,7 +14597,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -14381,7 +14609,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -14393,12 +14621,50 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -15546,7 +15812,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -15622,7 +15888,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -15634,7 +15900,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -15646,7 +15912,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -15658,12 +15924,50 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -17364,7 +17668,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -17440,7 +17744,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -17452,7 +17756,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -17464,7 +17768,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -17476,12 +17780,50 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -18629,7 +18971,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -18705,7 +19047,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -18717,7 +19059,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -18729,7 +19071,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -18741,12 +19083,50 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -19894,7 +20274,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -19970,7 +20350,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -19982,7 +20362,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -19994,7 +20374,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -20006,12 +20386,50 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
@@ -21278,7 +21696,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -21354,7 +21772,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -21366,7 +21784,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -21378,7 +21796,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -21390,12 +21808,50 @@ exports[`SendTransfer > should show error step and go back 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                >
+                  Migration
+                </span>
+                <div
+                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    fill="none"
+                    height="12"
+                    id="sparks"
+                    width="13"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>

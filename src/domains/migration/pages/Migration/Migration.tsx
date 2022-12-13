@@ -2,7 +2,7 @@ import React from "react";
 import { Page } from "@/app/components/Layout";
 import { useTranslation } from "react-i18next";
 
-export const Migration: React.FC = () => {
+export const Migration = () => {
 	const { t } = useTranslation();
 
 	return (
