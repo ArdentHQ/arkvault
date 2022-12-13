@@ -16,7 +16,6 @@ export const routes: RouteItem[] = [
 	...ExchangeRoutes,
 	...MessageRoutes,
 	...MigrationRoutes,
-	,
 	...SettingRoutes,
 	...TransactionRoutes,
 	...VoteRoutes,
