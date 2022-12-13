@@ -229,79 +229,79 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const { pathname } = useLocation();
 
-	const migrationPath = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
-
-	const isActivePath = (path: string) => {
-		console.log(pathname);
-		console.log(migrationPath);
-
-		return pathname === path;
-	};
-
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
-				{navigationMenu.map((menuItem, index) => (
-					<li key={index} className="flex">
-						<NavLink
-							to={menuItem.mountPath(profile.id())}
-							title={menuItem.title}
-							className={(isActive) =>
-								cn(
-									"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-									isActive
-										? "border-b-theme-primary-600 text-theme-text"
-										: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
-								)
-							}
-							data-ring-focus-margin="-mx-2"
-						>
-							{menuItem.title}
-						</NavLink>
-					</li>
-				))}
+				{navigationMenu.map((menuItem, index) => {
+					if (menuItem.hasGradient) {
+						const isActivePath = menuItem.mountPath(profile.id()) === pathname;
 
-				<li className="relative flex">
-					<NavLink
-						to={migrationPath}
-						title={t("COMMON.MIGRATION")}
-						className={(isActive) =>
-							cn(
-								"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-								isActive
-									? "border-b-theme-primary-600 text-theme-text"
-									: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
-							)
-						}
-						data-ring-focus-margin="-mx-2"
-					>
-						<span
-							className={cn(
-								"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
-								isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
-								isActivePath(migrationPath) ? "text-theme-text" : "text-transparent",
-							)}
-						>
-							<span>{t("COMMON.MIGRATION")}</span>
-						</span>
+						return (
+							<li key={index} className="relative flex">
+								<NavLink
+									to={menuItem.mountPath(profile.id())}
+									title={menuItem.title}
+									className={(isActive) =>
+										cn(
+											"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+											isActive
+												? "border-b-theme-primary-600 text-theme-text"
+												: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
+										)
+									}
+									data-ring-focus-margin="-mx-2"
+								>
+									<span
+										className={cn(
+											"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
+											isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+											isActivePath ? "text-theme-text" : "text-transparent",
+										)}
+									>
+										<span>{menuItem.title}</span>
+									</span>
 
-						<div className="absolute -right-4 flex h-6">
-							<div
-								className={cn(
-									"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
-									isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
-									isActivePath(migrationPath)
-										? "bg-theme-text"
-										: "animate-move-bg-offset bg-gradient-to-r",
-								)}
-								style={{ clipPath: "url(#sparksClipPath)" }}
+									<div className="absolute -right-4 flex h-6">
+										<div
+											className={cn(
+												"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
+												isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+												isActivePath
+													? "bg-theme-text"
+													: "animate-move-bg-offset bg-gradient-to-r",
+											)}
+											style={{ clipPath: "url(#sparksClipPath)" }}
+										>
+											<Icon name="Sparks" />
+										</div>
+									</div>
+								</NavLink>
+							</li>
+						);
+					}
+
+					return (
+						<li key={index} className="flex">
+							<NavLink
+								to={menuItem.mountPath(profile.id())}
+								title={menuItem.title}
+								className={(isActive) =>
+									cn(
+										"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+										isActive
+											? "border-b-theme-primary-600 text-theme-text"
+											: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
+									)
+								}
+								data-ring-focus-margin="-mx-2"
 							>
-								<Icon name="Sparks" />
-							</div>
-						</div>
-					</NavLink>
-				</li>
+								{menuItem.title}
+							</NavLink>
+						</li>
+					);
+				})}
 			</ul>
+
 			<div
 				data-testid="NavigationBar__menu-toggle"
 				className="mr-auto ml-2 flex content-center items-center lg:hidden"
@@ -317,13 +317,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						</button>
 					)}
 					onSelect={handleSelectMenuItem}
-					options={[
-						...navigationMenu,
-						{
-							mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
-							title: t("COMMON.MIGRATION"),
-						},
-					].map((menuItem) => ({
+					options={navigationMenu.map((menuItem) => ({
 						label: menuItem.title,
 						value: menuItem.mountPath(profile.id()),
 					}))}

@@ -22,6 +22,11 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		mountPath: (profileId) => generatePath(ProfilePaths.Votes, { profileId }),
 		title: t("COMMON.VOTES"),
 	},
+	{
+		mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
+		title: t("COMMON.MIGRATION"),
+		hasGradient: true,
+	},
 ];
 
 export const getUserMenuActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [
