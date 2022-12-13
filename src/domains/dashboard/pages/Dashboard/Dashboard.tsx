@@ -2,7 +2,7 @@ import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { MigrationBanner } from "../../components/Migration/MigrationBanner";
+import { MigrationBanner } from "@/domains/dashboard/components/Migration/MigrationBanner";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
