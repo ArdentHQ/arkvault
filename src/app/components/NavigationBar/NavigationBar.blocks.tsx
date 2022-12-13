@@ -233,13 +233,46 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<NavLink
 							to={menuItem.mountPath(profile.id())}
 							title={menuItem.title}
-							className="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+							className={(isActive) =>
+								cn(
+									"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+									isActive
+										? "border-b-theme-primary-600 text-theme-text"
+										: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
+								)
+							}
 							data-ring-focus-margin="-mx-2"
 						>
 							{menuItem.title}
 						</NavLink>
 					</li>
 				))}
+
+				<li className="flex">
+					<NavLink
+						to={generatePath(ProfilePaths.Migration, { profileId: profile.id() })}
+						title={t("COMMON.MIGRATION")}
+						className={(isActive) =>
+							cn(
+								"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+								isActive
+									? "border-b-theme-primary-600 text-theme-hint-600 dark:text-theme-hint-400"
+									: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
+							)
+						}
+						data-ring-focus-margin="-mx-2"
+					>
+						<>
+							<span className="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400">
+								{t("COMMON.MIGRATION")}
+							</span>
+							<Icon
+								className="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400"
+								name="Sparks"
+							/>
+						</>
+					</NavLink>
+				</li>
 			</ul>
 			<div
 				data-testid="NavigationBar__menu-toggle"
