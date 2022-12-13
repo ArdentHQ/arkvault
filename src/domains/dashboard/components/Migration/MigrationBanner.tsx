@@ -1,32 +1,34 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
 const { PolygonMigrationBannerDark, PolygonMigrationBannerLight } = images.common;
+const learnMoreClickHandler = () => {
+	const link = "https://ardenthq.com/blog";
+	window.open(link);
+};
 export const MigrationBanner = () => {
-	const learnMoreClickHandler = () => {
-		const link = "https://ardenthq.com/blog";
-		window.open(link);
-	};
+	const { t } = useTranslation();
 
 	return (
 		<div className="bg-theme-primary-100 text-theme-secondary-700 dark:bg-black dark:text-theme-secondary-500">
 			<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
 				<div className="max-w-2xl flex-1  py-6">
 					<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
-						ARK is Moving to 0xPolygon!
+						{t("COMMON.MIGRATION_BANNER.TITLE")}
 					</h3>
 					<p className="leading-7">
-						Users can now migrate their tokens to the new ERC20 token on 0xPolygon. Find out more in our{" "}
+						{t("COMMON.MIGRATION_BANNER.DESCRIPTION")}{" "}
 						<Link to="https://docs.arkvault.io/" isExternal>
-							Migration Guide
+							{t("COMMON.MIGRATION_BANNER.MIGRATION_GUIDE")}
 						</Link>
 						.
 					</p>
 					<div className="mt-8 flex space-x-3 ">
-						<Button variant="primary">Migrate Tokens</Button>
+						<Button variant="primary">{t("COMMON.MIGRATION_BANNER.MIGRATE_TOKENS")}</Button>
 						<Button variant="secondary-alt" onClick={learnMoreClickHandler}>
-							Learn More
+							{t("COMMON.LEARN_MORE")}
 						</Button>
 					</div>
 				</div>
