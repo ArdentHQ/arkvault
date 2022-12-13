@@ -255,7 +255,7 @@ exports[`Votes > should filter current delegates 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -264,31 +264,46 @@ exports[`Votes > should filter current delegates 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -1836,7 +1851,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -1845,31 +1860,46 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -3820,7 +3850,7 @@ exports[`Votes > should render 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -3829,31 +3859,46 @@ exports[`Votes > should render 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -5739,7 +5784,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -5748,31 +5793,46 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -7657,7 +7717,7 @@ exports[`Votes > should render with no wallets 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -7666,31 +7726,46 @@ exports[`Votes > should render with no wallets 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -8413,7 +8488,7 @@ exports[`Votes > should select a delegate 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -8422,31 +8497,46 @@ exports[`Votes > should select a delegate 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -10328,7 +10418,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -10337,31 +10427,46 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -11750,7 +11855,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -11759,31 +11864,46 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -13175,7 +13295,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -13184,31 +13304,46 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -15152,7 +15287,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -15161,31 +15296,46 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -16680,7 +16830,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
               </a>
             </li>
             <li
-              class="flex"
+              class="relative flex"
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
@@ -16689,31 +16839,46 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 title="Migration"
               >
                 <span
-                  class="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400"
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
-                  Migration
+                  <span>
+                    Migration
+                  </span>
                 </span>
                 <div
-                  class="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400 css-v0ob3f"
-                  height="16"
-                  width="16"
+                  class="absolute -right-4 flex h-6"
                 >
-                  <svg
-                    fill="none"
-                    height="12"
-                    id="sparks"
-                    width="13"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                    />
-                  </svg>
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </a>
             </li>
