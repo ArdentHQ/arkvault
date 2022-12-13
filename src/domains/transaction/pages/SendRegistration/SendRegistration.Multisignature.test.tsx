@@ -152,8 +152,7 @@ describe("Multisignature Registration", () => {
 		);
 	});
 
-	//TODO: restore this test
-	it.skip("should send multisignature registration", async () => {
+	it("should send multisignature registration", async () => {
 		const nanoXTransportMock = mockNanoXTransport();
 		await renderPage(wallet, "multiSignature");
 
@@ -201,8 +200,12 @@ describe("Multisignature Registration", () => {
 		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 		const transactionSyncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
 
-		userEvent.paste(mnemonic, passphrase);
+		userEvent.type(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+
+		await waitFor(() => {
+			expect(sendButton()).toBeEnabled();
+		});
 
 		userEvent.click(sendButton());
 

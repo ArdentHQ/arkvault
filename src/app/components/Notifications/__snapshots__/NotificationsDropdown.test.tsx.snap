@@ -46,13 +46,6 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   </g>
                 </svg>
               </div>
-              <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-              >
-                <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-500"
-                />
-              </div>
             </div>
           </button>
         </div>
@@ -518,7 +511,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
       </div>
     </div>
     <div
-      class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-auto bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
+      class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
       data-testid="Modal__overlay"
     >
       <div
@@ -1086,13 +1079,6 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                   </g>
                 </svg>
               </div>
-              <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-              >
-                <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-500"
-                />
-              </div>
             </div>
           </button>
         </div>
@@ -1606,13 +1592,6 @@ exports[`Notifications > should render with transactions in md 1`] = `
                     />
                   </g>
                 </svg>
-              </div>
-              <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-              >
-                <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-500"
-                />
               </div>
             </div>
           </button>
@@ -2128,13 +2107,6 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                   </g>
                 </svg>
               </div>
-              <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-              >
-                <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-500"
-                />
-              </div>
             </div>
           </button>
         </div>
@@ -2554,13 +2526,6 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                     />
                   </g>
                 </svg>
-              </div>
-              <div
-                class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
-              >
-                <div
-                  class="h-2 w-2 rounded-full bg-theme-danger-500"
-                />
               </div>
             </div>
           </button>

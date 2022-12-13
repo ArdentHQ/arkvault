@@ -40,7 +40,7 @@ const ProfileSynchronizer = ({ children, options }: { children?: React.ReactNode
 	return <>{children}</>;
 };
 
-export const WithProviders: React.FC = ({ children }: { children?: React.ReactNode }) => (
+export const WithProviders = ({ children }: { children?: React.ReactNode }) => (
 	<I18nextProvider i18n={i18n}>
 		<EnvironmentProvider env={env}>
 			<LedgerProvider>

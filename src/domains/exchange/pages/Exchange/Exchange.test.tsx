@@ -59,6 +59,26 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	return <></>;
 };
 
+const mockExchangeTransaction = (profile: Contracts.IProfile) => {
+	const exchangeTransaction = profile.exchangeTransactions().values()[0];
+
+	const mockProfileExchangeTransactionValues = vi
+		.spyOn(profile.exchangeTransactions(), "values")
+		.mockReturnValue([exchangeTransaction]);
+
+	const mockProfileExchangeTransactionFind = vi
+		.spyOn(profile.exchangeTransactions(), "findById")
+		.mockReturnValue(exchangeTransaction);
+
+	return {
+		restoreExchangeMocks: async () => {
+			mockProfileExchangeTransactionValues.mockRestore();
+			mockProfileExchangeTransactionFind.mockRestore();
+			return await new Promise((resolve) => setTimeout(resolve, 100));
+		},
+	};
+};
+
 describe("Exchange", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -195,38 +215,6 @@ describe("Exchange", () => {
 		expect(screen.getByTestId("ExchangeTransactionsTable__empty-message")).toBeInTheDocument();
 	});
 
-	it("should show exchange transaction history", async () => {
-		profile.exchangeTransactions().create(stubData);
-
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-
-		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
-			profile.exchangeTransactions().count(),
-		);
-	});
-
 	it("should show exchange transaction history as not compact if user uses expanded tables", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
@@ -290,53 +278,6 @@ describe("Exchange", () => {
 		);
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
-	it("should update exchange transaction status", async () => {
-		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
-		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
-
-		server.use(
-			requestMock(`${exchangeBaseURL}/changenow/orders/id`, {
-				data: { id: exchangeTransaction.orderId(), status: "finished" },
-			}),
-		);
-
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-
-		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
-
-		await waitFor(() => {
-			expect(updateSpy).toHaveBeenCalledWith(
-				exchangeTransaction.id(),
-				expect.objectContaining({
-					status: Contracts.ExchangeTransactionStatus.Finished,
-				}),
-			);
-		});
-
-		updateSpy.mockReset();
 	});
 
 	it("should navigate to exchange transaction", async () => {
@@ -485,5 +426,85 @@ describe("Exchange", () => {
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 		});
+	});
+
+	it("should show exchange transaction history", async () => {
+		profile.exchangeTransactions().create(stubData);
+		mockExchangeTransaction(profile);
+
+		render(
+			<Route path="/profiles/:profileId/exchange">
+				<ExchangeProvider>
+					<Wrapper>
+						<Exchange />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+
+		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
+		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
+			profile.exchangeTransactions().count(),
+		);
+	});
+
+	it("should update exchange transaction status", async () => {
+		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
+		const exchangeTransaction = profile.exchangeTransactions().values()[0];
+
+		server.use(
+			requestMock(`${exchangeBaseURL}/changenow/orders/id`, {
+				data: { id: exchangeTransaction.orderId(), status: "finished" },
+			}),
+		);
+
+		render(
+			<Route path="/profiles/:profileId/exchange">
+				<ExchangeProvider>
+					<Wrapper>
+						<Exchange />
+					</Wrapper>
+				</ExchangeProvider>
+			</Route>,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+
+		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
+
+		await waitFor(() => {
+			expect(updateSpy).toHaveBeenCalledWith(
+				exchangeTransaction.id(),
+				expect.objectContaining({
+					status: Contracts.ExchangeTransactionStatus.Finished,
+				}),
+			);
+		});
+
+		updateSpy.mockReset();
 	});
 });

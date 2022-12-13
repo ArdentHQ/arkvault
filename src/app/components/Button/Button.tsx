@@ -18,6 +18,7 @@ type ButtonProperties = {
 	iconSize?: Size;
 	iconPosition?: "left" | "right";
 	showOn?: LayoutBreakpoint;
+	isCompact?: boolean;
 } & React.ButtonHTMLAttributes<any>;
 
 const StyledButton = styled.button<ButtonProperties>(getStyles);
@@ -46,8 +47,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 				return (
 					<div className="flex items-center">
 						<span className="invisible flex items-center space-x-2">
-							{icon && <Icon name={icon} size={iconSize} />}
-							{children}
+							<>
+								{icon && <Icon name={icon} size={iconSize} />}
+								{children}
+							</>
 						</span>
 
 						<div className="absolute top-0 left-0 flex h-full w-full items-center justify-center">

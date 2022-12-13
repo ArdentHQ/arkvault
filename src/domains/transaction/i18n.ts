@@ -208,6 +208,7 @@ export const translations = {
 		AWAITING_OTHER_SIGNATURE_COUNT_other: "Awaiting {{count}} other signatures",
 		AWAITING_OUR_BROADCAST: "Awaiting our broadcast",
 		AWAITING_OUR_SIGNATURE: "Awaiting our signature",
+		AWAITING_SOME_SIGNATURES: "One or more transactions are awaiting our signature.",
 		ERROR: {
 			ADDRESS_ALREADY_ADDED: "The address is already in the list",
 			ADDRESS_NOT_FOUND: "The address could not be found",
@@ -220,6 +221,7 @@ export const translations = {
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
+		PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG: "Only participants can remove pending transactions.",
 		PARTICIPANTS_COUNT: "Multisignature Participants ({{count}})",
 		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",

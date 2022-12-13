@@ -1,7 +1,7 @@
 import "./styles/app.css";
 
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import { App } from "@/app/App";
 
@@ -25,4 +25,4 @@ if (process.env.NODE_ENV && ["development", "production"].includes(process.env.N
 	}
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.createRoot(document.querySelector("#root") as Element | DocumentFragment).render(<App />);

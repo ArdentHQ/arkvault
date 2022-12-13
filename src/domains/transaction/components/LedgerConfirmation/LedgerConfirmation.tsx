@@ -16,20 +16,22 @@ export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: Ledg
 
 	return (
 		<>
-			<Image name="ConfirmTransactionLedgerBanner" domain="transaction" className="my-8 max-w-full" />
+			<div className="space-y-8">
+				<Image name="ConfirmTransactionLedgerBanner" domain="transaction" className="max-w-full" />
 
-			<div className="mt-8 text-theme-secondary-text" data-testid="LedgerConfirmation-description">
-				{t("TRANSACTION.LEDGER_CONFIRMATION.DESCRIPTION")}
-			</div>
+				<div className="text-theme-secondary-text" data-testid="LedgerConfirmation-description">
+					{t("TRANSACTION.LEDGER_CONFIRMATION.DESCRIPTION")}
+				</div>
 
-			<div className="mt-8 inline-flex w-full items-center justify-center space-x-3">
-				<Spinner />
-				<span
-					className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
-					data-testid="LedgerConfirmation-loading_message"
-				>
-					{t("TRANSACTION.LEDGER_CONFIRMATION.LOADING_MESSAGE")}
-				</span>
+				<div className="inline-flex w-full items-center justify-center space-x-3">
+					<Spinner />
+					<span
+						className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
+						data-testid="LedgerConfirmation-loading_message"
+					>
+						{t("TRANSACTION.LEDGER_CONFIRMATION.LOADING_MESSAGE")}
+					</span>
+				</div>
 			</div>
 
 			{children && (

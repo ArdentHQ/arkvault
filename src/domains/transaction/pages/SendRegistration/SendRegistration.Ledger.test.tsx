@@ -206,9 +206,12 @@ describe("Registration", () => {
 		nanoSSpy.mockRestore();
 	});
 
-	//TODO: restore this test.
-	it.skip("should send multisignature registration with ledger wallet", async () => {
+	it("should send multisignature registration with ledger wallet", async () => {
 		const envPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
+		const pendingMusigWalletsAddMock = vi
+			.spyOn(wallet.profile(), "pendingMusigWallets")
+			.mockImplementation(vi.fn());
+
 		// Ledger mocks
 		const nanoXTransportMock = mockNanoXTransport();
 		const isLedgerMock = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
@@ -249,6 +252,7 @@ describe("Registration", () => {
 		userEvent.click(continueButton());
 
 		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
+
 		// Skip Authentication Step
 		userEvent.click(continueButton());
 
@@ -256,13 +260,14 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		isLedgerMock.mockRestore();
-		getPublicKeyMock.mockRestore();
-		signTransactionMock.mockRestore();
 		multiSignatureRegistrationMock.mockRestore();
+		getPublicKeyMock.mockRestore();
+		isLedgerMock.mockRestore();
+		signTransactionMock.mockRestore();
 		addSignatureMock.mockRestore();
 		mockDerivationPath.mockRestore();
 		nanoXTransportMock.mockRestore();
 		envPersistMock.mockRestore();
+		pendingMusigWalletsAddMock.mockRestore();
 	});
 });

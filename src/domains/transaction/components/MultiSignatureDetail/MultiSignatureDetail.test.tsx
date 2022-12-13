@@ -472,6 +472,55 @@ describe("MultiSignatureDetail", () => {
 		isMultisignatureReadyMock.mockRestore();
 	});
 
+	it("should submit transaction signing using keyboards enter key", async () => {
+		mockPendingTransfers(wallet);
+
+		const actsMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
+		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+		const syncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+
+		vi.spyOn(wallet.transaction(), "transaction").mockReturnValueOnce(fixtures.transfer);
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
+		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
+
+		const { container } = render(
+			<Route path="/profiles/:profileId">
+				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
+			</Route>,
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
+
+		userEvent.click(screen.getByTestId("Paginator__sign"));
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+
+		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).toBeEnabled(), { timeout: 1000 });
+
+		userEvent.keyboard("{enter}");
+
+		await waitFor(() =>
+			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
+		);
+		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
+
+		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
+
+		expect(container).toMatchSnapshot();
+
+		actsMock.mockRestore();
+		canBeBroadcastedMock.mockRestore();
+		canBeSignedMock.mockRestore();
+		syncMock.mockRestore();
+	});
+
 	it("should not broadcast if wallet is not ready to do so", async () => {
 		mockPendingTransfers(wallet);
 
@@ -744,55 +793,6 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).toBeEnabled(), { timeout: 1000 });
 
 		userEvent.click(screen.getByTestId("Paginator__continue"));
-
-		await waitFor(() =>
-			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
-		);
-		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-
-		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
-
-		expect(container).toMatchSnapshot();
-
-		actsMock.mockRestore();
-		canBeBroadcastedMock.mockRestore();
-		canBeSignedMock.mockRestore();
-		syncMock.mockRestore();
-	});
-
-	it("should submit transaction signing using keyboards enter key", async () => {
-		mockPendingTransfers(wallet);
-
-		const actsMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(true);
-		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-		const syncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-
-		vi.spyOn(wallet.transaction(), "transaction").mockReturnValueOnce(fixtures.transfer);
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast");
-		const addSignatureMock = vi.spyOn(wallet.transaction(), "addSignature").mockResolvedValue(void 0);
-
-		const { container } = render(
-			<Route path="/profiles/:profileId">
-				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
-			</Route>,
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
-
-		userEvent.click(screen.getByTestId("Paginator__sign"));
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-
-		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).toBeEnabled(), { timeout: 1000 });
-
-		userEvent.keyboard("{enter}");
 
 		await waitFor(() =>
 			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),

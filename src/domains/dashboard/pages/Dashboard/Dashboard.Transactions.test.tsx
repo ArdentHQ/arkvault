@@ -107,7 +107,9 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(within(screen.getByTestId("TransactionTable")).getByRole("rowgroup")).toBeVisible());
+		await waitFor(() =>
+			expect(within(screen.getByTestId("TransactionTable")).getAllByRole("rowgroup")[0]).toBeVisible(),
+		);
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 

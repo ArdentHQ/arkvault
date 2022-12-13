@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface WalletIconsProperties {
 	exclude?: string[];
@@ -82,3 +83,5 @@ export const WalletIcons = ({ exclude, wallet, ...iconProperties }: WalletIconsP
 		</>
 	);
 };
+
+export const WalletIconsSkeleton = () => <Skeleton width={54} height={20} />;

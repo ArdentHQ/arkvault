@@ -98,6 +98,14 @@ describe("AddRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render with empty array of recipients as default", async () => {
+		const { container } = renderWithFormProvider(
+			<AddRecipient profile={profile} wallet={wallet} onChange={vi.fn()} />,
+		);
+
+		expect(container).toMatchSnapshot();
+	});
+
 	it("should render with single recipient data", async () => {
 		const values = {
 			amount: "1",
@@ -407,7 +415,10 @@ describe("AddRecipient", () => {
 		});
 
 		expect(addRecipientButton()).toBeInTheDocument();
-		expect(addRecipientButton()).toBeDisabled();
+
+		await waitFor(() => {
+			expect(addRecipientButton()).toBeDisabled();
+		});
 
 		// Valid address
 		userEvent.clear(screen.getByTestId("SelectDropdown__input"));

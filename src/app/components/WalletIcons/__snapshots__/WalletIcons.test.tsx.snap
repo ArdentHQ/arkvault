@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`WalletIcons > should render wallet icon skeleton 1`] = `
+<DocumentFragment>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+  >
+    <span
+      class="react-loading-skeleton"
+      style="width: 54px; height: 20px;"
+    >
+      ‌
+    </span>
+    <br />
+  </span>
+</DocumentFragment>
+`;

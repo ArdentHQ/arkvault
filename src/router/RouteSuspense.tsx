@@ -5,9 +5,10 @@ import { ProfilePageSkeleton } from "@/app/components/PageSkeleton/ProfilePageSk
 interface RouteSuspenseProperties {
 	skeleton?: FunctionComponent;
 	path: string;
+	children?: React.ReactNode;
 }
 
-export const RouteSuspense: React.FC<RouteSuspenseProperties> = ({ children, skeleton, path }) => {
+export const RouteSuspense = ({ children, skeleton, path }: RouteSuspenseProperties) => {
 	let fallback = <PageSkeleton />;
 	if (skeleton) {
 		fallback = createElement(skeleton);

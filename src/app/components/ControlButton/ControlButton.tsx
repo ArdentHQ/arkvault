@@ -54,17 +54,19 @@ type ControlButtonProperties = {
 export const ControlButton = ({ isChanged, children, className, ...properties }: ControlButtonProperties) => (
 	<div className="group">
 		<ControlButtonStyled className={cn("ring-focus", className)} {...properties}>
-			{isChanged && (
-				<div
-					className={cn(
-						"absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear",
-						{ "-mr-2.5": properties.noBorder },
-					)}
-				>
-					<div className="h-2 w-2 rounded-full bg-theme-primary-500" />
-				</div>
-			)}
-			{children}
+			<>
+				{isChanged && (
+					<div
+						className={cn(
+							"absolute top-0.5 right-1 flex h-3 w-3 items-center justify-center rounded-full bg-theme-background transition-all duration-100 ease-linear",
+							{ "-mr-2.5": properties.noBorder },
+						)}
+					>
+						<div className="h-2 w-2 rounded-full bg-theme-primary-500" />
+					</div>
+				)}
+				{children}
+			</>
 		</ControlButtonStyled>
 	</div>
 );

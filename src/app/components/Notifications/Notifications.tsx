@@ -17,7 +17,7 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 	const { persist } = useEnvironmentContext();
 	const { isXs, isSm } = useBreakpoint();
 
-	const { releases, transactions, markAsRead, markAllTransactionsAsRead } = useNotifications({ profile });
+	const { releases, transactions, markAllTransactionsAsRead } = useNotifications({ profile });
 	const wrapperReference = useRef();
 
 	useEffect(() => {
@@ -52,10 +52,6 @@ export const Notifications = ({ profile, onNotificationAction, onTransactionClic
 							<NotificationItem
 								{...notification}
 								onAction={onNotificationAction}
-								onVisibilityChange={(isVisible) => {
-									markAsRead(isVisible, notification.id);
-									persist();
-								}}
 								containmentRef={wrapperReference}
 							/>
 						)}

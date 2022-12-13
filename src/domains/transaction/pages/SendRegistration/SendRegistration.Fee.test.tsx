@@ -134,6 +134,10 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
+		await waitFor(() => {
+			expect(screen.getByTestId("InputFee")).toBeInTheDocument();
+		});
+
 		userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);

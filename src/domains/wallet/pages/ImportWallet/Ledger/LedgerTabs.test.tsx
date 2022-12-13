@@ -118,6 +118,7 @@ describe("LedgerTabs", () => {
 
 		useEffect(() => {
 			register("network");
+			register("isFinished");
 			listenDevice();
 		}, [register]);
 
@@ -295,11 +296,12 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
+		const ledgerTransportMock = mockNanoXTransport();
+
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const ledgerTransportMock = mockNanoXTransport();
 		const { history } = render(<Component activeIndex={3} />, {
 			route: `/profiles/${profile.id()}`,
 		});
@@ -312,7 +314,15 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 
+		await waitFor(() => {
+			expect(nextSelector()).toBeEnabled();
+		});
+
 		userEvent.click(nextSelector());
+
+		await waitFor(() => {
+			expect(screen.getByTestId("LedgerImportStep")).toBeInTheDocument();
+		});
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
@@ -408,6 +418,10 @@ describe("LedgerTabs", () => {
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerScanStep__error")).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Paginator__retry-button")).toBeEnabled();
+		});
 
 		userEvent.click(screen.getByTestId("Paginator__retry-button"));
 

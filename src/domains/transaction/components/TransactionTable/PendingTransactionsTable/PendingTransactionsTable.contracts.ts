@@ -10,6 +10,7 @@ interface PendingTransaction {
 }
 
 interface Properties {
+	profile: Contracts.IProfile;
 	isCompact: boolean;
 	wallet: Contracts.IReadWriteWallet;
 	pendingTransactions: PendingTransaction[];

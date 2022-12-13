@@ -26,7 +26,7 @@ const JsonForm = () => {
 					data-testid="VerifyMessage__json-jsonString"
 					className="py-4"
 					initialHeight={90}
-					placeholder={'{"signatory": "...", "message": "...", "signature": "..."}'}
+					placeholder={t("MESSAGE.PAGE_VERIFY_MESSAGE.FORM_STEP.JSON_PLACEHOLDER")}
 					ref={register(verifyMessage.jsonString())}
 				/>
 			</FormField>
@@ -45,14 +45,14 @@ const ManualForm = () => {
 
 	return (
 		<div data-testid="VerifyMessage__manual" className="mt-4 space-y-5">
-			<FormField name="signatory">
-				<FormLabel label={t("COMMON.SIGNATORY")} />
-				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
-			</FormField>
-
 			<FormField name="message">
 				<FormLabel label={t("COMMON.MESSAGE")} />
 				<InputDefault data-testid="VerifyMessage__manual-message" ref={register(verifyMessage.message())} />
+			</FormField>
+
+			<FormField name="signatory">
+				<FormLabel label={t("COMMON.SIGNATORY")} />
+				<InputDefault data-testid="VerifyMessage__manual-signatory" ref={register(verifyMessage.signatory())} />
 			</FormField>
 
 			<FormField name="signature">
