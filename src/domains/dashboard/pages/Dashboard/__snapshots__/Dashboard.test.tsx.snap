@@ -1,0 +1,2873 @@
+// Vitest Snapshot v1
+
+exports[`Dashboard > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="css-kmmje1"
+  >
+    <div
+      class="css-1mnbipv"
+      data-testid="NavigationBarMobile"
+    >
+      <div
+        class="flex h-14 items-center justify-center space-x-4"
+      >
+        <button
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          data-testid="NavigationBar__buttons__mobile--receive"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="received"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          type="vertical"
+        />
+        <button
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          data-testid="NavigationBar__buttons__mobile--home"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                fill="none"
+                viewBox="0 0 21 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.35 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zM16.147 8.153a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm0 10.797a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          type="vertical"
+        />
+        <button
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          data-testid="NavigationBar__buttons__mobile--send"
+          type="button"
+        >
+          <div
+            class="flex items-center space-x-2"
+          >
+            <div
+              class="css-1i4b0eq"
+              height="20"
+              width="20"
+            >
+              <svg
+                id="sent"
+                viewBox="0 0 20 20"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <nav
+      aria-labelledby="main menu"
+      class="css-1ovuwx0"
+    >
+      <div
+        class="relative flex h-21"
+      >
+        <div
+          class="hidden w-12 sm:flex"
+        >
+          <button
+            class="css-11quel4"
+            disabled=""
+          >
+            <div
+              class="mx-auto css-15txs7d"
+              height="10"
+              width="10"
+            >
+              <svg
+                id="chevron-left-small"
+                viewBox="0 0 10 10"
+                x="0"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                y="0"
+              >
+                <path
+                  d="M6.938 9l-3.8-3.8c-.1-.1-.1-.3 0-.4l3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div
+          class="flex flex-1 items-center px-8"
+        >
+          <div
+            class="my-auto flex items-center"
+          >
+            <button
+              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              data-testid="NavigationBarLogo--button"
+              type="button"
+            >
+              <span
+                class="relative"
+              >
+                <svg
+                  fill="none"
+                  height="28"
+                  viewBox="0 0 363 363"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_434_4442)"
+                  >
+                    <path
+                      d="M174.182 352.325a279.256 279.256 0 0 1-25.627-20.536c-8.518-7.525-17.006-15.66-25.229-24.178a470.15 470.15 0 0 1-29.234-33.315 449.417 449.417 0 0 1-57.68-93.623 420.933 420.933 0 0 1-22.044-60.102A416.702 416.702 0 0 1 1.126 51.749c-.512-4.803-.303-10.73 5.9-13.842a393.077 393.077 0 0 1 54.42-19.94 459.697 459.697 0 0 1 52.646-12.195A374.409 374.409 0 0 1 176.15.333h11.6a374.406 374.406 0 0 1 62.057 5.44 459.723 459.723 0 0 1 52.646 12.195 393.328 393.328 0 0 1 54.422 19.939c6.203 3.115 6.41 9.034 5.898 13.842a416.672 416.672 0 0 1-13.242 68.822 421.133 421.133 0 0 1-22.044 60.102 449.395 449.395 0 0 1-57.68 93.623 470 470 0 0 1-29.234 33.315c-8.223 8.518-16.711 16.653-25.229 24.178a279.73 279.73 0 0 1-25.627 20.536 17.811 17.811 0 0 1-15.528 0h-.007zm6.769-230.087c-.412.547-28.363 29.571-48.772 50.764-7.035 7.318-13.229 13.736-17.187 17.853a49.345 49.345 0 0 0-14.37 29.355 42.981 42.981 0 0 0 2.034 17.531 59.295 59.295 0 0 0 10.41 18.547 369.34 369.34 0 0 0 42.811 44.915 223.324 223.324 0 0 0 20.072 16.051 13.364 13.364 0 0 0 12.005 0 223.333 223.333 0 0 0 20.07-16.051 369.191 369.191 0 0 0 42.811-44.915 59.297 59.297 0 0 0 10.411-18.547 42.98 42.98 0 0 0 2.033-17.531 49.34 49.34 0 0 0-14.377-29.358l-14.811-15.385-1.779-1.848c-20.66-21.451-48.955-50.832-49.371-51.383a1.179 1.179 0 0 0-.995-.548 1.184 1.184 0 0 0-.995.548v.002zm1.408-69.483c.136.215.321.505.582.869.391.544 6.257 9.93 14.382 22.92 19.488 31.162 52.102 83.315 60.679 96.014 6.342 9.377 14.353 14.77 21.974 14.772 7.402 0 18.108-5.031 27.079-29.067a332.382 332.382 0 0 0 19.124-81.095c.409-3.84.243-8.568-4.713-11.056a314.32 314.32 0 0 0-43.468-15.926 367.237 367.237 0 0 0-42.052-9.743 299.13 299.13 0 0 0-49.568-4.345h-8.871a299.13 299.13 0 0 0-49.568 4.345 367.225 367.225 0 0 0-42.051 9.743 314.427 314.427 0 0 0-43.469 15.926c-4.951 2.486-5.12 7.213-4.712 11.056a332.313 332.313 0 0 0 19.124 81.095c4.952 13.265 13.67 29.067 27.078 29.067 7.624 0 15.63-5.384 21.974-14.772 8.57-12.687 41.169-64.811 60.643-95.955l.032-.053c8.124-12.993 13.995-22.38 14.384-22.921.259-.364.455-.657.58-.87.209-.327.311-.491.416-.491.105 0 .214.16.421.487zm-55.455 149.533l19.652-20.614h69.159l19.649 20.614h-108.46zm34.197-35.377l20.162-20.871 20.159 20.871h-40.321z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <ul
+            class="mr-auto ml-4 hidden h-21 space-x-8 lg:flex"
+            data-testid="NavigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
+                title="Contacts"
+              >
+                Contacts
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
+                title="Votes"
+              >
+                Votes
+              </a>
+            </li>
+          </ul>
+          <div
+            class="mr-auto ml-2 flex content-center items-center lg:hidden"
+            data-testid="NavigationBar__menu-toggle"
+          >
+            <div
+              class="static sm:relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <button
+                  class="cursor-pointer rounded p-2 focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+                  type="button"
+                >
+                  <div
+                    class="css-1i4b0eq"
+                    height="20"
+                    width="20"
+                  >
+                    <svg
+                      viewBox="0 0 20 20"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.5h18M1 10h18M1 4.5h18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </span>
+            </div>
+          </div>
+          <div
+            class="mr-4 flex items-center space-x-2 sm:space-x-4"
+          >
+            <div>
+              <div
+                class="static sm:relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group css-1ietn6u"
+                  >
+                    <button
+                      class="css-12xyeiw"
+                      data-testid="NavigationBar__buttons--server-status"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            fill="none"
+                            viewBox="0 0 20 15"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.595 6.285c.618-3.372 3.654-5.664 6.932-5.233 3.279.43 5.67 3.435 5.46 6.86-.21 3.426-2.948 6.092-6.252 6.088H4.912c-1.606.003-3.05-1.017-3.64-2.569-.589-1.552-.203-3.32.972-4.457a3.795 3.795 0 0 1 4.35-.69zm0 0C6.5 7 6.6 7.8 7 9"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-2 w-2 rounded-full bg-theme-success-700"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div>
+              <div
+                class="static sm:relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="group css-1ietn6u"
+                  >
+                    <button
+                      class="css-12xyeiw"
+                      data-testid="NavigationBar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="p-1 css-1i4b0eq"
+                          height="20"
+                          width="20"
+                        >
+                          <svg
+                            id="bell"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M8.4 17.8c.3.9 1.2 1.4 2.1 1.1.5-.2 1-.6 1.1-1.1M10 2.8V1M10 2.8c3.3 0 6 2.7 6 6h0c0 5.6 1.2 6.6 1.2 6.6H2.8S4 13.9 4 8.8c0-3.3 2.7-6 6-6z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <div
+                          class="absolute top-1 right-1 flex items-center justify-center rounded-full bg-theme-background p-1 transition-all duration-100 ease-linear group-hover:bg-theme-primary-100 dark:group-hover:bg-theme-secondary-800"
+                        >
+                          <div
+                            class="h-2 w-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="hidden items-center space-x-4 sm:flex"
+            >
+              <div
+                class="flex items-center"
+              >
+                <div
+                  class="css-1ietn6u"
+                >
+                  <button
+                    class="css-12xyeiw"
+                    data-testid="NavigationBar__buttons--receive"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="received"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+              <div
+                class="flex items-center"
+              >
+                <div
+                  class="css-1ietn6u"
+                >
+                  <button
+                    class="css-12xyeiw"
+                    data-testid="NavigationBar__buttons--send"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="p-1 css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="sent"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+              />
+            </div>
+          </div>
+          <div
+            class="my-auto mx-4 hidden items-center md:flex"
+            data-testid="NavigationBar__balance"
+          >
+            <div
+              class="-mt-3 flex flex-row items-center justify-center space-x-2 bg-theme-secondary-100 py-2.5 px-8 dark:bg-black md:m-0 md:flex-col md:items-start md:justify-start md:space-x-0 md:bg-transparent md:p-0 md:text-right md:dark:bg-transparent"
+            >
+              <div
+                class="whitespace-nowrap text-theme-secondary-700 dark:text-theme-secondary-500 md:text-xs md:font-semibold md:text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 md:text-theme-secondary-text md:dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  50.11421128 BTC
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="static sm:relative"
+          >
+            <span
+              data-testid="dropdown__toggle"
+            >
+              <div
+                class="relative cursor-pointer items-center justify-center rounded-full align-middle"
+                data-testid="UserMenu"
+              >
+                <div
+                  class="shrink-0 css-8d0u1i"
+                  data-testid="Avatar"
+                >
+                  <div
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  >
+                    <img
+                      alt="Profile Avatar"
+                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    />
+                    <span
+                      class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                    >
+                      JO
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-1 flex-col"
+    >
+      <div
+        class="bg-theme-primary-100 text-theme-secondary-700 dark:bg-black dark:text-theme-secondary-500"
+        data-testid="MigrationBanner"
+      >
+        <div
+          class="flex items-center px-8 md:px-10 lg:container lg:mx-auto"
+        >
+          <div
+            class="max-w-2xl flex-1  py-6"
+          >
+            <h3
+              class="font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+            >
+              ARK is Moving to 0xPolygon!
+            </h3>
+            <p
+              class="leading-7"
+            >
+              Users can now migrate their tokens to the new ERC20 token on 0xPolygon. Find out more in our 
+              <a
+                class="ring-focus group inline-block css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://docs.arkvault.io/"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-1y2194z"
+                >
+                  Migration Guide
+                </span>
+              </a>
+            </p>
+            <div
+              class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+              data-testid="Link__external"
+              height="16"
+              width="16"
+            >
+              <a
+                class="ring-focus group inline-block css-15tcy38"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://docs.arkvault.io/"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  id="arrow-external"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+            </div>
+            .
+            <p />
+            <div
+              class="mt-8 flex space-x-3 "
+            >
+              <button
+                class="css-1bx0hyc"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Migrate Tokens
+                </div>
+              </button>
+              <button
+                class="css-pxkhs3"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Learn more
+                </div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="hidden w-[304px] flex-shrink-0 pt-2 pb-4 md:block lg:w-[475px]"
+          >
+            <svg
+              class="block w-full dark:hidden"
+              fill="none"
+              viewBox="0 0 477 260"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M298.07 212.234l71.483 41.307a20.002 20.002 0 0 0 20 0l76.014-43.887a20 20 0 0 0 10-17.32v-87.773a20.004 20.004 0 0 0-10-17.32L422.5 62.374M266.5 194l21 12.129"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M303.09 185.611v-69.613a20.005 20.005 0 0 1 10-17.32l56.464-32.6a20.004 20.004 0 0 1 20 0l56.464 32.6a20.001 20.001 0 0 1 10 17.32v39.861M284.07 181.233l85.484 49.885a20.007 20.007 0 0 0 20 0L415 216.427m13.107-7.568l17.911-10.341a20 20 0 0 0 10-17.32v-12.339m-70.518 86.5c-9 3-15.758 4.332-21.946.759l-30.228-17.64m-17.224-10.051c-19.691-11.493-47.032-27.193-47.032-27.193"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M381.107 127.853L323 189l58.107-94 57.683 94-57.683-61.147zm-26.18 41.523l9.286-9.812h33.628l9.286 9.812h-52.2zm15.894-16.64l10.272-10.524 10.13 10.524h-20.402z"
+                fill="#D6D5FF"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M381.107 127.853l.727-.686-.725-.769-.727.766.725.689zM323 189l-.851-.526 1.576 1.215L323 189zm58.107-94l.852-.523-.849-1.384-.854 1.381.851.526zm57.683 94l-.727.686 1.579-1.209-.852.523zm-83.863-19.624l-.726-.687-1.597 1.687h2.323v-1zm9.286-9.812v-1h-.43l-.296.312.726.688zm33.628 0l.726-.688-.296-.312h-.43v1zm9.286 9.812v1h2.323l-1.597-1.687-.726.687zm-36.306-16.64l-.716-.699-1.658 1.699h2.374v-1zm10.272-10.524l.721-.693-.716-.743-.721.738.716.698zm10.13 10.524v1h2.35l-1.63-1.694-.72.694zm-10.841-25.572l-58.107 61.147 1.45 1.378 58.106-61.147-1.449-1.378zm-56.531 62.362l58.106-94-1.701-1.052-58.107 94 1.702 1.052zm56.403-94.003l57.684 94 1.704-1.046-57.683-94-1.705 1.046zm59.263 92.791l-57.683-61.147-1.455 1.372 57.684 61.147 1.454-1.372zm-83.863-18.251l9.286-9.812-1.453-1.375-9.286 9.813 1.453 1.374zm8.559-9.499h33.628v-2h-33.628v2zm32.902-.313l9.286 9.812 1.452-1.374-9.286-9.813-1.452 1.375zm10.012 8.125h-52.2v2h52.2v-2zm-35.591-14.942l10.273-10.523-1.432-1.397-10.272 10.523 1.431 1.397zm8.837-10.528l10.129 10.523 1.441-1.387-10.129-10.523-1.441 1.387zm10.85 8.83h-20.402v2h20.402v-2z"
+                fill="#5452CE"
+              />
+              <path
+                d="M90.383 141.737s22.638-13.509 36.831-38.092a427.106 427.106 0 0 0 19.856-38.247s-23.2 45.149-45.93 41c-8.871 24.928-10.757 35.339-10.757 35.339z"
+                fill="#FEB8AE"
+              />
+              <path
+                d="M163.571 130.508s23.258 8 51.713-51.016c-2.451 6.842-10.4 25.728-23.648 48.67-16.935 29.333-36.235 47.339-36.235 47.339s-7.768-2.345 8.17-44.993zm99.244-22.828s-15.986 37.289-28.971 27.048c-1.274 2.207-5.147 14.631-4.781 24.874.178 4.964 3.208-4.529 6.156-2 4.5-1.5 6.5-3 9.426-4 3.828-7.643 7.801-16.432 10.5-23.64 6.406-17.11 7.67-22.282 7.67-22.282z"
+                fill="#D6D5FF"
+              />
+              <path
+                d="M84.14 137.973l6.39-44.223m-2.132-17.132c-1.709 10.756-6.59 48.7-7.832 58.544-1.242 9.844 6.764 9.034 13.292 3.964s28.156-19.034 52.212-73.728"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M55.534 154.098c-.348 6.635 13.58 28.17 43.3 12.387 29.72-15.783 51.944-47.755 72.446-89.5 13.013-26.495 11.284-45.42 3.42-52.188"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M87.05 176.207s36.355-3.283 76.187-72.274c15.745-27.271 31.275-67.69 10.906-79.451-20.369-11.761-63.489 33.909-83.628 112.72m21.472 32.53s-2.3 15.736 8.192 21.794 50.179-9.085 95.423-112.589"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M89.14 181.025s-2.356 23.124 14.439 32.821c15.878 9.167 47.227 22 103.652-60.784"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M217.25 137.762a225.006 225.006 0 0 0 11.547-21.188c13.979-28.878 27.265-68.438 13.038-76.652"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M130.398 226.654s43.176-1.621 95.846-92.849c10.123-17.534 39.837-79.883 15.589-93.882-6.619-3.821-15.499-.73-25.116 7.074m-63.762 121.164c4.305-27.215 16.799-57.24 31.58-81.56"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M158.078 217.124s37.7 60.322 106.189-42.565c29.33-44.058 27.812-81.138 19.828-85.746"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M202.719 237.798s31.7-3.3 67.535-60.43c29.649-47.264 26.386-81.322 14.4-88.24-21.854-12.614-56.942 39.75-55.611 70.474"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M178.719 199.359c.677 6.099 11.757 11.94 27.496 2.342m56.917-94.576c-6.093 18.102-12.761 34.101-18.917 46.477"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M58.698 98.035c-14.89-8.596-33.048-5.019-40.56 7.991-7.51 13.009-1.53 30.524 13.36 39.122 14.89 8.598 33.048 5.018 40.56-7.991 7.51-13.009 1.527-30.528-13.36-39.122z"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M57.365 99.729c-13.397-7.735-29.734-4.516-36.493 7.19-6.758 11.705-1.377 27.464 12.02 35.198 13.396 7.735 29.734 4.516 36.492-7.19 6.759-11.705 1.376-27.464-12.02-35.198z"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M36.065 139.073c.596-2.286 5.933-24.856 5.933-24.856.084-.268.135-.417.575-.197 0 0 23.432 13.402 23.847 13.571.262.106.324.006.017-.253-1.989-1.666-27.957-21.639-27.957-21.639-.17-.148-.274-.072-.295.097 0 0-2.423 32.216-2.395 33.25.005.172.066.28.136.261.049-.013.1-.085.139-.234zm6.336-9.203l12.54-4.322a.15.15 0 0 0 .063-.22.148.148 0 0 0-.067-.054c-.12-.074-3.153-1.887-3.29-1.964a.481.481 0 0 0-.398-.034c-.122.042-8.012 2.687-8.138 2.731a.515.515 0 0 0-.286.361c-.03.157-.489 3.086-.53 3.259-.043.174.007.269.097.245l.01-.002z"
+                fill="#FFE0DA"
+              />
+              <path
+                d="M43.015 123.075c-.138.048-.21.02-.137-.288.073-.309.966-4.209.966-4.416 0-.208.168-.35.488-.165.32.185 4.087 2.326 4.29 2.44.203.113.408.358.23.419l-5.837 2.01z"
+                fill="#FFE0DA"
+              />
+              <path
+                d="M36.065 139.073c.596-2.286 5.933-24.856 5.933-24.856.084-.268.135-.417.575-.197 0 0 23.432 13.402 23.847 13.571.262.106.324.006.017-.253-1.989-1.666-27.957-21.639-27.957-21.639-.17-.148-.274-.072-.295.097 0 0-2.423 32.216-2.395 33.25.005.172.066.28.136.261.049-.013.1-.085.139-.234zm6.336-9.203l12.54-4.322a.15.15 0 0 0 .063-.22.148.148 0 0 0-.067-.054c-.12-.074-3.153-1.887-3.29-1.964a.481.481 0 0 0-.398-.034c-.122.042-8.012 2.687-8.138 2.731a.515.515 0 0 0-.286.361c-.03.157-.489 3.086-.53 3.259-.043.174.007.269.097.245l.01-.002z"
+                stroke="#DE5846"
+                stroke-width="2"
+              />
+              <path
+                d="M43.015 123.075c-.138.048-.21.02-.137-.288.073-.309.966-4.209.966-4.416 0-.208.168-.35.488-.165.32.185 4.087 2.326 4.29 2.44.203.113.408.358.23.419l-5.837 2.01z"
+                stroke="#DE5846"
+                stroke-width="2"
+              />
+              <path
+                d="M17.963 106.277s-3.06 4.9-3.561 5.765a25.026 25.026 0 0 0-2.622 17.977m2.73 7.495a34.086 34.086 0 0 0 13.25 13.648m3.804 1.906c14.054 6.025 29.874 2.022 36.757-9.895a17.4 17.4 0 0 0 1.287-2.532"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M199.699 190.463c-4.53-2.865 3.74-13.421 18.474-23.578 14.733-10.158 30.349-16.069 34.88-13.205 4.531 2.865-3.74 13.421-18.474 23.579-14.733 10.157-30.349 16.066-34.88 13.204z"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M250.485 157.043c-1.321 4.34-8.069 11.37-17.982 18.205-11.226 7.739-23.006 12.812-29.144 12.87"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M199.246 190.122s7.358 7.722 9.193 8.904c1.665 1.072 4.811.894 8.862-.294m7.299-2.789a107.44 107.44 0 0 0 16.014-9.227m4.208-3.051c9.172-7.004 14.755-13.777 14.422-17.351-.075-.807-5.217-11.574-5.217-11.574M187.87 47.001c10.429-6.094 23.2-3.65 28.526 5.465 5.325 9.114 1.188 21.44-9.242 27.535-9.243 5.402-20.327 4.095-26.435-2.618"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M181.02 73.115c4.549 7.785 15.46 9.875 24.371 4.669 8.91-5.207 12.444-15.74 7.894-23.525-4.549-7.785-15.461-9.875-24.371-4.669a21.48 21.48 0 0 0-2.196 1.471"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M187.281 40.824c9.855-4.284 21.207-1.585 26.086 6.763.73 1.246 2.064 3.376 2.064 3.376"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M244.468 233.17c-8.923 6.092-18.4 10.591-28.044 13.48m24.41-18.135s-33.052 33.332-81.881 14.493"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M240.761 228.544l-1.789-2.336a1.275 1.275 0 0 1-.165-1.257 1.276 1.276 0 0 1 1.007-.772l11.436-1.498a1.27 1.27 0 0 1 1.336 1.743l-4.423 10.652a1.263 1.263 0 0 1-1.007.771 1.268 1.268 0 0 1-1.171-.486l-1.647-2.15M111.782 50.297c5.872-7.97 12.671-14.894 20.071-20.62m-15.637 22.965s18.677-37.937 65.694-40.773"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M116.269 52.587l2.192 1.182a.945.945 0 0 1 .499.923c-.014.192-.08.382-.192.551a1.31 1.31 0 0 1-.446.414l-9.325 5.284c-.18.101-.38.159-.579.166-.2.007-.392-.036-.558-.126a.946.946 0 0 1-.499-.922l.732-9.915c.014-.192.081-.382.193-.551a1.31 1.31 0 0 1 1.025-.58c.2-.008.392.035.558.124l2.019 1.088"
+                stroke="#8AC0F7"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M333 43v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22 0v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm22 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zM96 212v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22 0v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm22 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7z"
+                fill="#8AC0F7"
+              />
+            </svg>
+            <svg
+              class="hidden w-full dark:block"
+              fill="none"
+              viewBox="0 0 477 260"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M298.07 212.234l71.483 41.307a20.002 20.002 0 0 0 20 0l76.014-43.887a20 20 0 0 0 10-17.32v-87.773a20.004 20.004 0 0 0-10-17.32L422.5 62.374M266.5 194l21 12.129"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M303.09 185.611v-69.613a20.005 20.005 0 0 1 10-17.32l56.464-32.6a20.004 20.004 0 0 1 20 0l56.464 32.6a20.001 20.001 0 0 1 10 17.32v39.861M284.07 181.233l85.484 49.885a20.007 20.007 0 0 0 20 0L415 216.427m13.107-7.568l17.911-10.341a20 20 0 0 0 10-17.32v-12.339m-70.518 86.5c-9 3-15.758 4.332-21.946.759l-30.228-17.64m-17.224-10.051c-19.691-11.493-47.032-27.193-47.032-27.193"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M380.107 131.853L322 193l58.107-94 57.683 94-57.683-61.147zm-26.18 41.523l9.286-9.812h33.628l9.286 9.812h-52.2zm15.894-16.64l10.272-10.524 10.13 10.524h-20.402z"
+                fill="#212052"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M380.107 131.853l.727-.686-.725-.769-.727.766.725.689zM322 193l-.851-.526 1.576 1.215L322 193zm58.107-94l.852-.523-.849-1.384-.854 1.381.851.526zm57.683 94l-.727.686 1.579-1.209-.852.523zm-83.863-19.624l-.726-.687-1.597 1.687h2.323v-1zm9.286-9.812v-1h-.43l-.296.312.726.688zm33.628 0l.726-.688-.296-.312h-.43v1zm9.286 9.812v1h2.323l-1.597-1.687-.726.687zm-36.306-16.64l-.716-.699-1.658 1.699h2.374v-1zm10.272-10.524l.721-.693-.716-.743-.721.738.716.698zm10.13 10.524v1h2.35l-1.63-1.694-.72.694zm-10.841-25.572l-58.107 61.147 1.45 1.378 58.106-61.147-1.449-1.378zm-56.531 62.362l58.106-94-1.701-1.052-58.107 94 1.702 1.052zm56.403-94.003l57.684 94 1.704-1.046-57.683-94-1.705 1.046zm59.263 92.791l-57.683-61.147-1.455 1.372 57.684 61.147 1.454-1.372zm-83.863-18.251l9.286-9.812-1.453-1.375-9.286 9.813 1.453 1.374zm8.559-9.499h33.628v-2h-33.628v2zm32.902-.313l9.286 9.812 1.452-1.374-9.286-9.813-1.452 1.375zm10.012 8.125h-52.2v2h52.2v-2zm-35.591-14.942l10.273-10.523-1.432-1.397-10.272 10.523 1.431 1.397zm8.837-10.528l10.129 10.523 1.441-1.387-10.129-10.523-1.441 1.387zm10.85 8.83h-20.402v2h20.402v-2z"
+                fill="#5452CE"
+              />
+              <path
+                d="M90.383 141.737s22.638-13.509 36.831-38.092a427.106 427.106 0 0 0 19.856-38.247s-23.2 45.149-45.93 41c-8.871 24.928-10.757 35.339-10.757 35.339z"
+                fill="#391919"
+              />
+              <path
+                d="M163.571 130.508s23.258 8 51.713-51.016c-2.451 6.842-10.4 25.728-23.648 48.67-16.935 29.333-36.235 47.339-36.235 47.339s-7.768-2.345 8.17-44.993zm99.244-22.828s-15.986 37.289-28.971 27.048c-1.274 2.207-5.147 14.631-4.781 24.874.178 4.964 3.208-4.529 6.156-2 4.5-1.5 6.5-3 9.426-4 3.828-7.643 7.801-16.432 10.5-23.64 6.406-17.11 7.67-22.282 7.67-22.282z"
+                fill="#212052"
+              />
+              <path
+                d="M84.14 137.973l6.39-44.223m-2.132-17.132c-1.709 10.756-6.59 48.7-7.832 58.544-1.242 9.844 6.764 9.034 13.292 3.964s28.156-19.034 52.212-73.728"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M55.534 154.098c-.348 6.635 13.58 28.17 43.3 12.387 29.72-15.783 51.944-47.755 72.446-89.5 13.013-26.495 11.284-45.42 3.42-52.188"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M87.05 176.207s36.355-3.283 76.187-72.274c15.745-27.271 31.275-67.69 10.906-79.451-20.369-11.761-63.489 33.909-83.628 112.72m21.472 32.53s-2.3 15.736 8.192 21.794 50.179-9.085 95.423-112.589"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M89.14 181.025s-2.356 23.124 14.439 32.821c15.878 9.167 47.227 22 103.652-60.784"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M217.25 137.762a225.006 225.006 0 0 0 11.547-21.188c13.979-28.878 27.265-68.438 13.038-76.652"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M130.398 226.654s43.176-1.621 95.846-92.849c10.123-17.534 39.837-79.883 15.589-93.882-6.619-3.821-15.499-.73-25.116 7.074m-63.762 121.164c4.305-27.215 16.799-57.24 31.58-81.56"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M158.078 217.124s37.7 60.322 106.189-42.565c29.33-44.058 27.812-81.138 19.828-85.746"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M202.719 237.798s31.7-3.3 67.535-60.43c29.649-47.264 26.386-81.322 14.4-88.24-21.854-12.614-56.942 39.75-55.611 70.474"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M178.719 199.359c.677 6.099 11.757 11.94 27.496 2.342m56.917-94.576c-6.093 18.102-12.761 34.101-18.917 46.477"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M58.698 98.035c-14.89-8.596-33.048-5.019-40.56 7.991-7.51 13.009-1.53 30.524 13.36 39.122 14.89 8.598 33.048 5.018 40.56-7.991 7.51-13.009 1.527-30.528-13.36-39.122z"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M57.365 99.729c-13.397-7.735-29.734-4.516-36.493 7.19-6.758 11.705-1.377 27.464 12.02 35.198 13.396 7.735 29.734 4.516 36.492-7.19 6.759-11.705 1.376-27.464-12.02-35.198z"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M36.065 139.073c.596-2.286 5.933-24.856 5.933-24.856.084-.268.135-.417.575-.197 0 0 23.432 13.402 23.847 13.571.262.106.324.006.017-.253-1.989-1.666-27.957-21.639-27.957-21.639-.17-.148-.274-.072-.295.097 0 0-2.423 32.216-2.395 33.25.005.172.066.28.136.261.049-.013.1-.085.139-.234zm6.336-9.203l12.54-4.322a.15.15 0 0 0 .063-.22.148.148 0 0 0-.067-.054c-.12-.074-3.153-1.887-3.29-1.964a.481.481 0 0 0-.398-.034c-.122.042-8.012 2.687-8.138 2.731a.515.515 0 0 0-.286.361c-.03.157-.489 3.086-.53 3.259-.043.174.007.269.097.245l.01-.002z"
+                fill="#391919"
+              />
+              <path
+                d="M43.015 123.075c-.138.048-.21.02-.137-.288.073-.309.966-4.209.966-4.416 0-.208.168-.35.488-.165.32.185 4.087 2.326 4.29 2.44.203.113.408.358.23.419l-5.837 2.01z"
+                fill="#391919"
+              />
+              <path
+                d="M36.065 139.073c.596-2.286 5.933-24.856 5.933-24.856.084-.268.135-.417.575-.197 0 0 23.432 13.402 23.847 13.571.262.106.324.006.017-.253-1.989-1.666-27.957-21.639-27.957-21.639-.17-.148-.274-.072-.295.097 0 0-2.423 32.216-2.395 33.25.005.172.066.28.136.261.049-.013.1-.085.139-.234zm6.336-9.203l12.54-4.322a.15.15 0 0 0 .063-.22.148.148 0 0 0-.067-.054c-.12-.074-3.153-1.887-3.29-1.964a.481.481 0 0 0-.398-.034c-.122.042-8.012 2.687-8.138 2.731a.515.515 0 0 0-.286.361c-.03.157-.489 3.086-.53 3.259-.043.174.007.269.097.245l.01-.002z"
+                stroke="#DE5846"
+                stroke-width="2"
+              />
+              <path
+                d="M43.015 123.075c-.138.048-.21.02-.137-.288.073-.309.966-4.209.966-4.416 0-.208.168-.35.488-.165.32.185 4.087 2.326 4.29 2.44.203.113.408.358.23.419l-5.837 2.01z"
+                stroke="#DE5846"
+                stroke-width="2"
+              />
+              <path
+                d="M17.963 106.277s-3.06 4.9-3.561 5.765a25.026 25.026 0 0 0-2.622 17.977m2.73 7.495a34.086 34.086 0 0 0 13.25 13.648m3.804 1.906c14.054 6.025 29.874 2.022 36.757-9.895a17.4 17.4 0 0 0 1.287-2.532"
+                stroke="#DE5846"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M199.699 190.463c-4.53-2.865 3.74-13.421 18.474-23.578 14.733-10.158 30.349-16.069 34.88-13.205 4.531 2.865-3.74 13.421-18.474 23.579-14.733 10.157-30.349 16.066-34.88 13.204z"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M250.485 157.043c-1.321 4.34-8.069 11.37-17.982 18.205-11.226 7.739-23.006 12.812-29.144 12.87"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M199.246 190.122s7.358 7.722 9.193 8.904c1.665 1.072 4.811.894 8.862-.294m7.299-2.789a107.44 107.44 0 0 0 16.014-9.227m4.208-3.051c9.172-7.004 14.755-13.777 14.422-17.351-.075-.807-5.217-11.574-5.217-11.574M187.87 47.001c10.429-6.094 23.2-3.65 28.526 5.465 5.325 9.114 1.188 21.44-9.242 27.535-9.243 5.402-20.327 4.095-26.435-2.618"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M181.02 73.115c4.549 7.785 15.46 9.875 24.371 4.669 8.91-5.207 12.444-15.74 7.894-23.525-4.549-7.785-15.461-9.875-24.371-4.669a21.48 21.48 0 0 0-2.196 1.471"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M187.281 40.824c9.855-4.284 21.207-1.585 26.086 6.763.73 1.246 2.064 3.376 2.064 3.376"
+                stroke="#5452CE"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M244.468 233.17c-8.923 6.092-18.4 10.591-28.044 13.48m24.41-18.135s-33.052 33.332-81.881 14.493"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M240.761 228.544l-1.789-2.336a1.275 1.275 0 0 1-.165-1.257 1.276 1.276 0 0 1 1.007-.772l11.436-1.498a1.27 1.27 0 0 1 1.336 1.743l-4.423 10.652a1.263 1.263 0 0 1-1.007.771 1.268 1.268 0 0 1-1.171-.486l-1.647-2.15M111.782 50.297c5.872-7.97 12.671-14.894 20.071-20.62m-15.637 22.965s18.677-37.937 65.694-40.773"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M116.269 52.587l2.192 1.182a.945.945 0 0 1 .499.923c-.014.192-.08.382-.192.551a1.31 1.31 0 0 1-.446.414l-9.325 5.284c-.18.101-.38.159-.579.166-.2.007-.392-.036-.558-.126a.946.946 0 0 1-.499-.922l.732-9.915c.014-.192.081-.382.193-.551a1.31 1.31 0 0 1 1.025-.58c.2-.008.392.035.558.124l2.019 1.088"
+                stroke="#3C4249"
+                stroke-linecap="round"
+                stroke-width="2"
+              />
+              <path
+                d="M333 43v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22 0v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm22 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zM96 212v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm-22 0v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm22 22v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7zm0-44v2h-7v7h-2v-7h-7v-2h7v-7h2v7h7z"
+                fill="#3C4249"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class=" css-ycib48"
+      >
+        <div
+          class="mx-auto px-8 md:px-10 lg:container"
+        >
+          <div
+            class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 py-4 px-8 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mt-0 sm:mb-6 sm:border-b-0 sm:bg-transparent sm:py-0 sm:px-0 sm:dark:bg-transparent"
+            data-testid="Portfolio__Header"
+          >
+            <div
+              class="text-lg font-bold sm:text-2xl"
+            >
+              Portfolio
+            </div>
+            <div
+              class="-mr-4 text-right sm:mr-0"
+            >
+              <div
+                class="flex items-center justify-end"
+                data-testid="WalletControls"
+              >
+                <div
+                  class="static mr-0 flex items-center border-theme-secondary-300 pr-0 text-theme-primary-300 dark:border-theme-secondary-800 dark:text-theme-secondary-600 sm:mr-8 sm:border-r sm:pr-5 md:relative"
+                >
+                  <div
+                    class="static sm:relative"
+                  >
+                    <span
+                      data-testid="dropdown__toggle"
+                    >
+                      <span>
+                        <div
+                          class="group"
+                        >
+                          <button
+                            class="ring-focus css-1wz6bm9"
+                          >
+                            <div
+                              class="flex h-5 w-5 items-center justify-center"
+                            >
+                              <div
+                                class="css-1i4b0eq"
+                                height="20"
+                                width="20"
+                              >
+                                <svg
+                                  id="sliders-vertical"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M15 9V1M15 19v-4M18 12c0 1.7-1.4 3-3 3-1.7 0-3-1.4-3-3s1.2-3 3-3h0c1.7 0 3 1.3 3 3h0zM5 7.1V19M8 4c0-1.7-1.4-3-3-3S2 2.4 2 4c0 1.7 1.4 3 3 3s3-1.3 3-3c0 .1 0 0 0 0z"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="flex sm:hidden"
+                >
+                  <div
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                    type="vertical"
+                  />
+                </div>
+                <div
+                  class="hidden gap-3 sm:flex"
+                >
+                  <button
+                    class="css-1oyl9hh"
+                    data-testid="WalletControls__import-ledger"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="ledger"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                        <span
+                          class="hidden lg:inline"
+                        >
+                          Import Ledger
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    class="css-1jhy6v9"
+                    data-testid="WalletControls__import-wallet"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="arrow-turn-down-bracket"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M16.55 1h-2.9c-2.1 0-3.7 1.7-3.7 3.7v8.4"
+                              />
+                              <path
+                                d="M14.65 8.4l-4.7 4.7-4.6-4.7m13.65 5v1.9c0 2.1-1.7 3.7-3.7 3.7H4.7c-2 0-3.7-1.7-3.7-3.7v-1.9"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <span>
+                          Import
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    class="css-1bx0hyc"
+                    data-testid="WalletControls__create-wallet"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="plus"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 10h18M10 1v18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <span>
+                          Create
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  class="flex items-center sm:hidden"
+                >
+                  <div
+                    class="static sm:relative"
+                  >
+                    <span
+                      data-testid="dropdown__toggle"
+                    >
+                      <span
+                        class="-mx-1 flex items-center py-3 px-5 text-theme-primary-300 dark:text-theme-secondary-600"
+                      >
+                        <div
+                          class="css-v0ob3f"
+                          height="16"
+                          width="16"
+                        >
+                          <svg
+                            id="plus"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <g
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M1 10h18M10 1v18"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="-mx-8 flex flex-col bg-theme-secondary-100 py-4 px-8 dark:bg-black sm:mx-0 sm:rounded-xl sm:px-4 lg:flex-row"
+            data-testid="PortfolioBreakdown"
+          >
+            <div
+              class="flex"
+            >
+              <div
+                class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+              >
+                <span
+                  class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  Your Balance
+                </span>
+                <span
+                  class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                  data-testid="Amount"
+                >
+                  50.11421128 BTC
+                </span>
+              </div>
+              <div
+                class="ml-auto flex space-x-4 divide-x divide-theme-secondary-300 border-theme-secondary-300 pl-4 text-right dark:divide-theme-secondary-800 dark:border-theme-secondary-800 lg:ml-4 lg:border-l lg:text-left"
+              >
+                <div
+                  class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                  >
+                    Assets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+                    data-testid="PortfolioBreakdown__assets"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col space-y-1 pl-4 font-semibold first:pl-0"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                  >
+                    Wallets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-700 dark:text-theme-secondary-200 lg:text-theme-secondary-900"
+                    data-testid="PortfolioBreakdown__wallets"
+                  >
+                    1
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-3 w-full border-dashed border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-4 sm:border-t sm:pt-4 lg:ml-12 lg:mt-0 lg:flex-1 lg:border-0 lg:pt-0"
+            >
+              <div
+                class="flex flex-col-reverse sm:flex-col"
+              >
+                <div
+                  class="absolute z-10 hidden opacity-0 transition-opacity duration-200"
+                  data-testid="TooltipContainer"
+                />
+                <div
+                  class="mt-3 flex justify-center sm:mb-1 sm:mt-0 sm:justify-start lg:justify-end"
+                  data-testid="LineGraph__legend"
+                >
+                  <div
+                    class="mb-1 flex w-full justify-between lg:justify-end"
+                  >
+                    <button
+                      class="mx-auto text-sm font-semibold sm:mx-0 link"
+                      type="button"
+                    >
+                      More Details
+                    </button>
+                  </div>
+                </div>
+                <svg
+                  class="h-5 w-full"
+                  data-testid="LineGraph__svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="md:px-10 lg:container lg:mx-auto"
+      >
+        <div
+          data-testid="NetworkWalletsGroupList"
+        >
+          <div
+            class="css-1xhm62p"
+            data-testid="WalletsGroup"
+          >
+            <div
+              class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+              data-testid="WalletsGroupHeader"
+            >
+              <div
+                class="flex flex-grow flex-row items-center"
+              >
+                <div
+                  class="css-xfxopm"
+                >
+                  <div
+                    aria-label="ARK"
+                    class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+                    data-testid="NetworkIcon-ARK-ark.mainnet"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+                >
+                  <h1
+                    class="mb-0 text-base md:text-lg"
+                    data-testid="header__title"
+                  >
+                    ARK
+                  </h1>
+                  <div
+                    class="grow"
+                  />
+                </div>
+                <div
+                  class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      50,114.21127898 ARK
+                    </span>
+                  </span>
+                  <span
+                    class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      50.11421128 BTC
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+                >
+                  <span
+                    class="hidden"
+                  />
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Wallets
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      1
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Total Balance
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        50,114.21127898 ARK
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Total Currency
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        50.11421128 BTC
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+              >
+                <div
+                  class="css-16yt50s"
+                  data-testid="Accordion__toggle"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="css-1xhm62p"
+            data-testid="WalletsGroup"
+          >
+            <div
+              class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+              data-testid="WalletsGroupHeader"
+            >
+              <div
+                class="flex flex-grow flex-row items-center"
+              >
+                <div
+                  class="css-xfxopm"
+                >
+                  <div
+                    aria-label="ARK Devnet"
+                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
+                  >
+                    <div
+                      class="css-1i4b0eq"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg
+                        id="ark"
+                        viewBox="0 0 36.3 30.6"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute -right-2 -bottom-2 h-6 w-6 rounded-full bg-theme-background sm:hidden"
+                  >
+                    <div
+                      class="inline-block p-1 text-theme-secondary-700"
+                      data-testid="WalletIcon__TestNetwork"
+                    >
+                      <div
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="code"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="hidden flex-auto items-center justify-between space-x-2 px-3 sm:flex"
+                >
+                  <h1
+                    class="mb-0 text-base md:text-lg"
+                    data-testid="header__title"
+                  >
+                    ARK Devnet
+                  </h1>
+                  <div
+                    class="hidden sm:inline-flex"
+                  >
+                    <div
+                      class="inline-block p-1 text-theme-secondary-700"
+                      data-testid="WalletIcon__TestNetwork"
+                    >
+                      <div
+                        class="css-1i4b0eq"
+                        height="20"
+                        width="20"
+                      >
+                        <svg
+                          id="code"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M6 6L1 9.98 6 14m8-8l5 3.98L14 14M11 4L9 16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="grow"
+                  />
+                </div>
+                <div
+                  class="ml-auto flex flex-col space-y-1.5 text-right font-semibold sm:hidden"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+                  >
+                    <span
+                      class="whitespace-nowrap"
+                      data-testid="Amount"
+                    >
+                      91.43089801 DARK
+                    </span>
+                  </span>
+                  <span
+                    class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+                  >
+                    <span
+                      class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      N/A
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+                >
+                  <span
+                    class="hidden"
+                  />
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Wallets
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      2
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Total Balance
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        91.43089801 DARK
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
+                  >
+                    <span
+                      class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                    >
+                      Total Currency
+                    </span>
+                    <span
+                      class="text-base text-theme-secondary-900 dark:text-theme-secondary-200"
+                    >
+                      <span
+                        class="text-theme-secondary-500 dark:text-theme-secondary-700"
+                      >
+                        N/A
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+              >
+                <div
+                  class="css-16yt50s"
+                  data-testid="Accordion__toggle"
+                >
+                  <div
+                    class="transition-transform css-15txs7d"
+                    height="10"
+                    width="10"
+                  >
+                    <svg
+                      id="chevron-down-small"
+                      viewBox="0 0 10 10"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 md:mt-0 css-ycib48"
+      >
+        <div
+          class="mx-auto px-8 md:px-10 lg:container"
+        >
+          <h2
+            class="mb-6 text-2xl font-bold"
+          >
+            Latest Transactions
+          </h2>
+          <div
+            class="relative"
+            data-testid="TransactionTable"
+          >
+            <div
+              class="-mt-3 css-1m6rt2i"
+              role="table"
+            >
+              <table
+                cellpadding="0"
+                class="table-auto"
+              >
+                <thead>
+                  <tr
+                    class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                    role="row"
+                  >
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                      colspan="1"
+                      data-testid="table__th--0"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div
+                          class=""
+                        >
+                          ID
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden lg:table-cell w-50 min-w-50"
+                      colspan="1"
+                      data-testid="table__th--1"
+                      role="columnheader"
+                      style="cursor: pointer;"
+                      title="Toggle SortBy"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div
+                          class=""
+                        >
+                          Date
+                        </div>
+                        <div
+                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity ml-2"
+                        >
+                          <div
+                            class="transition-transform css-15txs7d"
+                            height="10"
+                            role="img"
+                            width="10"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+                      colspan="1"
+                      data-testid="table__th--2"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div
+                          class=""
+                        >
+                          Sender
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+                      colspan="1"
+                      data-testid="table__th--3"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div
+                          class=""
+                        >
+                          Recipient
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                      colspan="1"
+                      data-testid="table__th--4"
+                      role="columnheader"
+                      style="cursor: pointer;"
+                      title="Toggle SortBy"
+                    >
+                      <div
+                        class="flex flex-inline align-top justify-end flex-row-reverse"
+                      >
+                        <div
+                          class=""
+                        >
+                          Amount
+                        </div>
+                        <div
+                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                        >
+                          <div
+                            class="transition-transform css-15txs7d"
+                            height="10"
+                            role="img"
+                            width="10"
+                          >
+                            <svg
+                              id="chevron-down-small"
+                              viewBox="0 0 10 10"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell w-28 min-w-28"
+                      colspan="1"
+                      data-testid="table__th--5"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top justify-end float-right flex-row-reverse"
+                      >
+                        <div
+                          class=""
+                        >
+                          Currency
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  role="rowgroup"
+                >
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="css-mx19qq"
+                      >
+                        <a
+                          class="ring-focus group inline-block css-15tcy38"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                          rel="noopener noreferrer"
+                        >
+                          <span
+                            class="css-1y2194z"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="magnifying-glass-id"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M19 17l-3.172-3.172"
+                                  />
+                                  <circle
+                                    cx="13"
+                                    cy="11"
+                                    r="4"
+                                  />
+                                </g>
+                                <path
+                                  d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                                  fill="currentColor"
+                                />
+                                <path
+                                  d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="text-theme-secondary-text css-1rods8x"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="TransactionRow__timestamp"
+                        >
+                          23.07.2020 8:03 AM
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center"
+                          data-testid="TransactionAmount__tooltip"
+                        >
+                          <div
+                            class="css-1mirnqf"
+                            color="success"
+                          >
+                            <div
+                              class="flex space-x-1 items-center"
+                            >
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="Amount"
+                              >
+                                + 400,000 DARK
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <span
+                          class="whitespace-nowrap text-theme-secondary-text"
+                          data-testid="TransactionRow__currency"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="css-mx19qq"
+                      >
+                        <a
+                          class="ring-focus group inline-block css-15tcy38"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
+                          rel="noopener noreferrer"
+                        >
+                          <span
+                            class="css-1y2194z"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="magnifying-glass-id"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M19 17l-3.172-3.172"
+                                  />
+                                  <circle
+                                    cx="13"
+                                    cy="11"
+                                    r="4"
+                                  />
+                                </g>
+                                <path
+                                  d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                                  fill="currentColor"
+                                />
+                                <path
+                                  d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="text-theme-secondary-text css-1rods8x"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="TransactionRow__timestamp"
+                        >
+                          23.07.2020 8:03 AM
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center"
+                          data-testid="TransactionAmount__tooltip"
+                        >
+                          <div
+                            class="css-1mirnqf"
+                            color="success"
+                          >
+                            <div
+                              class="flex space-x-1 items-center"
+                            >
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="Amount"
+                              >
+                                + 400,000 DARK
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <span
+                          class="whitespace-nowrap text-theme-secondary-text"
+                          data-testid="TransactionRow__currency"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="css-mx19qq"
+                      >
+                        <a
+                          class="ring-focus group inline-block css-15tcy38"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
+                          rel="noopener noreferrer"
+                        >
+                          <span
+                            class="css-1y2194z"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="magnifying-glass-id"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M19 17l-3.172-3.172"
+                                  />
+                                  <circle
+                                    cx="13"
+                                    cy="11"
+                                    r="4"
+                                  />
+                                </g>
+                                <path
+                                  d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                                  fill="currentColor"
+                                />
+                                <path
+                                  d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="text-theme-secondary-text css-1rods8x"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="TransactionRow__timestamp"
+                        >
+                          23.07.2020 8:01 AM
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center"
+                          data-testid="TransactionAmount__tooltip"
+                        >
+                          <div
+                            class="css-1mirnqf"
+                            color="success"
+                          >
+                            <div
+                              class="flex space-x-1 items-center"
+                            >
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="Amount"
+                              >
+                                + 50,000 DARK
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <span
+                          class="whitespace-nowrap text-theme-secondary-text"
+                          data-testid="TransactionRow__currency"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="group css-1gk67vk"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="css-mx19qq"
+                      >
+                        <a
+                          class="ring-focus group inline-block css-15tcy38"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="Link"
+                          href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
+                          rel="noopener noreferrer"
+                        >
+                          <span
+                            class="css-1y2194z"
+                          >
+                            <div
+                              class="css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="magnifying-glass-id"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M19 17l-3.172-3.172"
+                                  />
+                                  <circle
+                                    cx="13"
+                                    cy="11"
+                                    r="4"
+                                  />
+                                </g>
+                                <path
+                                  d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
+                                  fill="currentColor"
+                                />
+                                <path
+                                  d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </span>
+                        </a>
+                      </div>
+                    </td>
+                    <td
+                      class="table-cell md:hidden lg:table-cell"
+                    >
+                      <div
+                        class="text-theme-secondary-text css-1rods8x"
+                      >
+                        <span
+                          class="whitespace-nowrap"
+                          data-testid="TransactionRow__timestamp"
+                        >
+                          23.07.2020 8:01 AM
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                          data-testid="TransactionRowMode"
+                        >
+                          <span
+                            class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
+                          >
+                            <div
+                              class="css-1i4b0eq"
+                              height="20"
+                              width="20"
+                            >
+                              <svg
+                                id="received"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </span>
+                          <div
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            data-testid="Avatar"
+                          >
+                            <div
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            >
+                              <img
+                                alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="space-x-4 css-1rods8x"
+                      >
+                        <div
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          >
+                            <img
+                              alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="w-0 flex-1"
+                        >
+                          <div
+                            class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          >
+                            <span
+                              class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="justify-end css-1rods8x"
+                      >
+                        <div
+                          class="flex items-center"
+                          data-testid="TransactionAmount__tooltip"
+                        >
+                          <div
+                            class="css-1mirnqf"
+                            color="success"
+                          >
+                            <div
+                              class="flex space-x-1 items-center"
+                            >
+                              <span
+                                class="whitespace-nowrap"
+                                data-testid="Amount"
+                              >
+                                + 50,000 DARK
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="hidden xl:block"
+                    >
+                      <div
+                        class="justify-end css-br23tb"
+                      >
+                        <span
+                          class="whitespace-nowrap text-theme-secondary-text"
+                          data-testid="TransactionRow__currency"
+                        >
+                          N/A
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
