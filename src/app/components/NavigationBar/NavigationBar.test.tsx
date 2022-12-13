@@ -4,9 +4,9 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+import { NavigationBar } from "./NavigationBar";
 import * as themeUtils from "@/utils/theme";
 
-import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
 import * as useScrollHook from "@/app/hooks/use-scroll";
@@ -137,9 +137,9 @@ describe("NavigationBar", () => {
 
 		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
 			{
+				hasGradient: true,
 				mountPath: () => "/test",
 				title: "test",
-				hasGradient: true,
 			},
 		]);
 
@@ -154,9 +154,9 @@ describe("NavigationBar", () => {
 
 		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
 			{
+				hasGradient: true,
 				mountPath: () => "/test",
 				title: "test",
-				hasGradient: true,
 			},
 		]);
 
@@ -166,7 +166,7 @@ describe("NavigationBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		history.push(dashboardURL);
-	})
+	});
 
 	it("should render in small screen variant", async () => {
 		const { asFragment } = render(<NavigationBar />);
