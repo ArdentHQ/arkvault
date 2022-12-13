@@ -190,7 +190,7 @@ const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenu
 	const isActivePath = mountPath === pathname;
 
 	return (
-		<li key={mountPath} className="relative flex">
+		<li className="relative flex">
 			<NavLink
 				to={mountPath}
 				title={menuItem.title}
@@ -284,7 +284,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => {
 					if (menuItem.hasGradient) {
-						return <GradientMenuItem menuItem={menuItem} profileId={profile.id()} />;
+						return <GradientMenuItem key={index} menuItem={menuItem} profileId={profile.id()} />;
 					}
 
 					return (
