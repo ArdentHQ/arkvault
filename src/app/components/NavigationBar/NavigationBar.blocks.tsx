@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, NavLink, useHistory } from "react-router-dom";
+import { generatePath, NavLink, useHistory, useLocation } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
@@ -18,7 +18,7 @@ import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
 import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useInputFocus, useScroll } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useInputFocus, useScroll, useTheme } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -225,6 +225,19 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		[selectedWallet, profile],
 	);
 
+	const { isDarkMode } = useTheme();
+
+	const { pathname } = useLocation();
+
+	const migrationPath = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
+
+	const isActivePath = (path: string) => {
+		console.log(pathname);
+		console.log(migrationPath);
+
+		return pathname === path;
+	};
+
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
@@ -248,29 +261,44 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 					</li>
 				))}
 
-				<li className="flex">
+				<li className="relative flex">
 					<NavLink
-						to={generatePath(ProfilePaths.Migration, { profileId: profile.id() })}
+						to={migrationPath}
 						title={t("COMMON.MIGRATION")}
 						className={(isActive) =>
 							cn(
 								"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
 								isActive
-									? "border-b-theme-primary-600 text-theme-hint-600 dark:text-theme-hint-400"
+									? "border-b-theme-primary-600 text-theme-text"
 									: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
 							)
 						}
 						data-ring-focus-margin="-mx-2"
 					>
-						<>
-							<span className="bg-gradient-to-r from-theme-danger-400 to-theme-hint-600 bg-clip-text group-hover:bg-gradient-to-l dark:to-theme-hint-400">
-								{t("COMMON.MIGRATION")}
-							</span>
-							<Icon
-								className="absolute -right-4 mb-1 text-theme-hint-600 group-hover:text-theme-danger-400 dark:text-theme-hint-400"
-								name="Sparks"
-							/>
-						</>
+						<span
+							className={cn(
+								"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
+								isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+								isActivePath(migrationPath) ? "text-theme-text" : "text-transparent",
+							)}
+						>
+							<span>{t("COMMON.MIGRATION")}</span>
+						</span>
+
+						<div className="absolute -right-4 flex h-6">
+							<div
+								className={cn(
+									"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
+									isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+									isActivePath(migrationPath)
+										? "bg-theme-text"
+										: "animate-move-bg-offset bg-gradient-to-r",
+								)}
+								style={{ clipPath: "url(#sparksClipPath)" }}
+							>
+								<Icon name="Sparks" />
+							</div>
+						</div>
 					</NavLink>
 				</li>
 			</ul>
@@ -289,10 +317,13 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						</button>
 					)}
 					onSelect={handleSelectMenuItem}
-					options={[...navigationMenu, {
-						mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
-						title: t("COMMON.MIGRATION"),
-					}].map((menuItem) => ({
+					options={[
+						...navigationMenu,
+						{
+							mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
+							title: t("COMMON.MIGRATION"),
+						},
+					].map((menuItem) => ({
 						label: menuItem.title,
 						value: menuItem.mountPath(profile.id()),
 					}))}
