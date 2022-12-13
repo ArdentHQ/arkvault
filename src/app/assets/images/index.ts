@@ -24,6 +24,8 @@ import { ReactComponent as NoResultsLightGreen } from "./no-results-light-green.
 import { ReactComponent as NoResultsLightNavy } from "./no-results-light-navy.svg";
 import { ReactComponent as WelcomeBannerDark } from "./welcome-banner-dark.svg";
 import { ReactComponent as WelcomeBannerLight } from "./welcome-banner-light.svg";
+import { ReactComponent as PolygonMigrationBannerLight } from "./polygon-migration-banner-light.svg";
+import { ReactComponent as PolygonMigrationBannerDark } from "./polygon-migration-banner-dark.svg";
 import {
 	ReactComponent as IOsInstructionsStep1DarkBlue,
 	ReactComponent as IOsInstructionsStep1DarkGreen,
@@ -101,6 +103,8 @@ export const images = {
 		NoResultsDarkNavy,
 		NoResultsLightGreen,
 		NoResultsLightNavy,
+		PolygonMigrationBannerDark,
+		PolygonMigrationBannerLight,
 		SuccessDarkGreen,
 		SuccessDarkNavy,
 		SuccessLightGreen,
