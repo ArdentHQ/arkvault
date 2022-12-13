@@ -289,7 +289,10 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						</button>
 					)}
 					onSelect={handleSelectMenuItem}
-					options={navigationMenu.map((menuItem) => ({
+					options={[...navigationMenu, {
+						mountPath: (profileId) => generatePath(ProfilePaths.Migration, { profileId }),
+						title: t("COMMON.MIGRATION"),
+					}].map((menuItem) => ({
 						label: menuItem.title,
 						value: menuItem.mountPath(profile.id()),
 					}))}
