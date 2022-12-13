@@ -4,7 +4,11 @@ import { useTranslation } from "react-i18next";
 import { generatePath, NavLink, useHistory, useLocation } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
-import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
+import {
+	NavigationBarFullProperties,
+	NavigationBarLogoOnlyProperties,
+	NavigationBarMenuItem,
+} from "./NavigationBar.contracts";
 import { defaultStyle } from "./NavigationBar.styles";
 import { Button } from "@/app/components/Button";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
@@ -177,6 +181,56 @@ const NavigationBarMobile: React.VFC<{
 	);
 };
 
+const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenuItem; profileId: string }) => {
+	const { isDarkMode } = useTheme();
+
+	const { pathname } = useLocation();
+
+	const mountPath = menuItem.mountPath(profileId);
+	const isActivePath = mountPath === pathname;
+
+	return (
+		<li key={mountPath} className="relative flex">
+			<NavLink
+				to={mountPath}
+				title={menuItem.title}
+				className={(isActive) =>
+					cn(
+						"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+						isActive
+							? "border-b-theme-primary-600 text-theme-text"
+							: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
+					)
+				}
+				data-ring-focus-margin="-mx-2"
+			>
+				<span
+					className={cn(
+						"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
+						isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+						isActivePath ? "text-theme-text" : "text-transparent",
+					)}
+				>
+					<span>{menuItem.title}</span>
+				</span>
+
+				<div className="absolute -right-4 flex h-6">
+					<div
+						className={cn(
+							"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
+							isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+							isActivePath ? "bg-theme-text" : "animate-move-bg-offset bg-gradient-to-r",
+						)}
+						style={{ clipPath: "url(#sparksClipPath)" }}
+					>
+						<Icon name="Sparks" />
+					</div>
+				</div>
+			</NavLink>
+		</li>
+	);
+};
+
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
@@ -225,59 +279,12 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 		[selectedWallet, profile],
 	);
 
-	const { isDarkMode } = useTheme();
-
-	const { pathname } = useLocation();
-
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
 				{navigationMenu.map((menuItem, index) => {
 					if (menuItem.hasGradient) {
-						const isActivePath = menuItem.mountPath(profile.id()) === pathname;
-
-						return (
-							<li key={index} className="relative flex">
-								<NavLink
-									to={menuItem.mountPath(profile.id())}
-									title={menuItem.title}
-									className={(isActive) =>
-										cn(
-											"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-											isActive
-												? "border-b-theme-primary-600 text-theme-text"
-												: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
-										)
-									}
-									data-ring-focus-margin="-mx-2"
-								>
-									<span
-										className={cn(
-											"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
-											isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
-											isActivePath ? "text-theme-text" : "text-transparent",
-										)}
-									>
-										<span>{menuItem.title}</span>
-									</span>
-
-									<div className="absolute -right-4 flex h-6">
-										<div
-											className={cn(
-												"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
-												isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
-												isActivePath
-													? "bg-theme-text"
-													: "animate-move-bg-offset bg-gradient-to-r",
-											)}
-											style={{ clipPath: "url(#sparksClipPath)" }}
-										>
-											<Icon name="Sparks" />
-										</div>
-									</div>
-								</NavLink>
-							</li>
-						);
+						return <GradientMenuItem menuItem={menuItem} profileId={profile.id()} />;
 					}
 
 					return (
