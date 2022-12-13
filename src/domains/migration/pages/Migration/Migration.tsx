@@ -4,7 +4,7 @@ import { MigrationEmpty, MigrationHeader, MigrationNewMigrationMobileButton } fr
 import { Page } from "@/app/components/Layout";
 
 const newMigrationHandler = () => {
-	console.log("@TODO: newMigrationHandler");
+	// @TODO: newMigrationHandler
 };
 
 export const Migration = () => {

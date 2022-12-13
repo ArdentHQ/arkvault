@@ -1,0 +1,116 @@
+// Vitest Snapshot v1
+
+exports[`MigrationEmpty > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-4 css-ycib48"
+  >
+    <div
+      class="mx-auto px-8 md:px-10 lg:container"
+    >
+      <div
+        class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
+        data-testid="Migrations--empty-results"
+      >
+        <div>
+          You don't have any migration transactions yet.
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationHeader > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+  >
+    <div
+      class="mx-auto px-8 md:px-10 lg:container"
+    >
+      <div
+        class="flex items-end justify-between bg-theme-background"
+      >
+        <div
+          class="space-y-4"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Migrate to Polygon
+          </h1>
+          <div
+            class="flex items-center text-theme-secondary-text"
+            data-testid="header__subtitle"
+          >
+            ARK is Moving to Polygon. Click "New Migration" to get started.
+          </div>
+        </div>
+        <div>
+          <div
+            class="-my-1.5 hidden py-4 sm:block sm:h-auto"
+          >
+            <button
+              class="ml-6 px-5 md:py-3 py-2 css-1ac6umz"
+              data-testid="Migrations__add-migration-btn"
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                New Migration
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationHeaderExtra > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="-my-1.5 hidden py-4 sm:block sm:h-auto"
+  >
+    <button
+      class="ml-6 px-5 md:py-3 py-2 css-1ac6umz"
+      data-testid="Migrations__add-migration-btn"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        New Migration
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MigrationNewMigrationMobileButton > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="sm:hidden"
+  >
+    <div
+      class="css-2wyvkd"
+    >
+      <button
+        class="css-1bx0hyc"
+        data-testid="Migrations__add-migration-btn-mobile"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          New Migration
+        </div>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
