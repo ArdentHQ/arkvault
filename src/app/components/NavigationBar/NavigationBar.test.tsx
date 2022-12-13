@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+import * as themeUtils from "@/utils/theme";
 
 import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
@@ -130,6 +131,42 @@ describe("NavigationBar", () => {
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it.each(["light", "dark"])("should render gradient item with %s theme", async (theme) => {
+		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
+
+		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
+			{
+				mountPath: () => "/test",
+				title: "test",
+				hasGradient: true,
+			},
+		]);
+
+		const { container, asFragment } = render(<NavigationBar />);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with gradient items", () => {
+		history.push("/test");
+
+		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
+			{
+				mountPath: () => "/test",
+				title: "test",
+				hasGradient: true,
+			},
+		]);
+
+		const { container, asFragment } = render(<NavigationBar />);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+
+		history.push(dashboardURL);
+	})
 
 	it("should render in small screen variant", async () => {
 		const { asFragment } = render(<NavigationBar />);

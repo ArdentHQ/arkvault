@@ -61,6 +61,7 @@ import { ReactComponent as QuestionMarkSmall } from "./question-mark-small.svg";
 import { ReactComponent as ShieldCheckMark } from "./shield-check-mark.svg";
 import { ReactComponent as Sliders } from "./sliders.svg";
 import { ReactComponent as SlidersVertical } from "./sliders-vertical.svg";
+import { ReactComponent as Sparks } from "./sparks.svg";
 import { ReactComponent as Star } from "./star.svg";
 import { ReactComponent as StarFilled } from "./star-filled.svg";
 import { ReactComponent as StatusOk } from "./status-ok.svg";
@@ -140,6 +141,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ShieldCheckMark,
 	Sliders,
 	SlidersVertical,
+	Sparks,
 	Star,
 	StarFilled,
 	StatusError,

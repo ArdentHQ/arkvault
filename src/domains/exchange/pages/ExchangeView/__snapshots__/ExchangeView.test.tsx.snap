@@ -128,7 +128,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -204,7 +204,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -217,7 +217,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
             >
               <a
                 aria-current="page"
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -229,7 +229,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -241,12 +241,65 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-400 text-transparent"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-400 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -1331,7 +1384,7 @@ exports[`ExchangeView > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -1407,7 +1460,7 @@ exports[`ExchangeView > should render 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -1420,7 +1473,7 @@ exports[`ExchangeView > should render 1`] = `
             >
               <a
                 aria-current="page"
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -1432,7 +1485,7 @@ exports[`ExchangeView > should render 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -1444,12 +1497,65 @@ exports[`ExchangeView > should render 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -2518,7 +2624,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -2594,7 +2700,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -2607,7 +2713,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
             >
               <a
                 aria-current="page"
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -2619,7 +2725,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -2631,12 +2737,65 @@ exports[`ExchangeView > should render dark theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-400 text-transparent"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-400 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -3717,7 +3876,7 @@ exports[`ExchangeView > should render light theme 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -3793,7 +3952,7 @@ exports[`ExchangeView > should render light theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -3806,7 +3965,7 @@ exports[`ExchangeView > should render light theme 1`] = `
             >
               <a
                 aria-current="page"
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -3818,7 +3977,7 @@ exports[`ExchangeView > should render light theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -3830,12 +3989,65 @@ exports[`ExchangeView > should render light theme 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>
@@ -4916,7 +5128,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1w4a96c"
     >
       <div
         class="relative flex h-21"
@@ -4992,7 +5204,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
                 title="Portfolio"
@@ -5005,7 +5217,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
             >
               <a
                 aria-current="page"
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none active"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
                 title="Exchange"
@@ -5017,7 +5229,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -5029,12 +5241,65 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
                 Votes
+              </a>
+            </li>
+            <li
+              class="relative flex"
+            >
+              <a
+                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none group border-b-transparent text-transparent hover:border-b-theme-primary-600"
+                data-ring-focus-margin="-mx-2"
+                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/migration"
+                title="Migration"
+              >
+                <span
+                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-400 text-transparent"
+                >
+                  <span>
+                    Migration
+                  </span>
+                </span>
+                <div
+                  class="absolute -right-4 flex h-6"
+                >
+                  <div
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-400 animate-move-bg-offset bg-gradient-to-r"
+                    style="clip-path: url(#sparksClipPath);"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        id="sparks"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <clippath
+                          id="sparksClipPath"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M10.051 6.027c-.006 1.475.714 2.313 2.348 2.348-1.517-.005-2.271.808-2.348 2.348-.013-1.453-.664-2.35-2.348-2.348 1.507-.021 2.342-.748 2.348-2.348zM4.905 1.8C4.897 3.879 5.91 5.057 8.212 5.109 6.075 5.1 5.014 6.247 4.905 8.415c-.018-2.046-.935-3.31-3.307-3.307 2.122-.03 3.3-1.054 3.307-3.307z"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.2"
+                          />
+                        </clippath>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </a>
             </li>
           </ul>

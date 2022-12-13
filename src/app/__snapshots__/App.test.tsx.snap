@@ -33,7 +33,7 @@ exports[`App > should not migrate profiles 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-8ijp35"
         >
           <div
             class="relative flex h-21"
@@ -602,7 +602,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="css-97i12m"
+        class="css-8ijp35"
       >
         <div
           class="relative flex h-21"
@@ -895,7 +895,7 @@ exports[`App > should render mock 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-8ijp35"
         >
           <div
             class="relative flex h-21"
@@ -1482,7 +1482,7 @@ exports[`App > should render the offline screen if there is no internet connecti
     >
       <nav
         aria-labelledby="main menu"
-        class="emotion-cache-97i12m"
+        class="emotion-cache-8ijp35"
       >
         <div
           class="relative flex h-21"
@@ -1849,7 +1849,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-8ijp35"
         >
           <div
             class="relative flex h-21"

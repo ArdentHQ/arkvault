@@ -140,6 +140,23 @@ module.exports = {
 			"theme-navy-900": "var(--theme-color-navy-900)",
 		},
 		extend: {
+			backgroundSize: {
+				500: "500px",
+			},
+			animation: {
+				"move-bg": "move-bg 15s infinite linear",
+				"move-bg-offset": "move-bg-offset 15s infinite linear",
+			},
+			keyframes: {
+				"move-bg": {
+					"0%": { "background-position": "calc(100%)" },
+					"100%": { "background-position": "calc(100% + 500px)" },
+				},
+				"move-bg-offset": {
+					"0%": { "background-position": "-16px" },
+					"100%": { "background-position": "484px" },
+				},
+			},
 			lineHeight: {
 				tighter: "1.125rem",
 			},
