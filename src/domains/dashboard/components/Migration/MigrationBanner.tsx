@@ -12,7 +12,10 @@ export const MigrationBanner = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="bg-theme-primary-100 text-theme-secondary-700 dark:bg-black dark:text-theme-secondary-500">
+		<div
+			data-testid="MigrationBanner"
+			className="bg-theme-primary-100 text-theme-secondary-700 dark:bg-black dark:text-theme-secondary-500"
+		>
 			<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
 				<div className="max-w-2xl flex-1  py-6">
 					<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
