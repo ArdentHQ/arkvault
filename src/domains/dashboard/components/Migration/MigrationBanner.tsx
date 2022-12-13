@@ -21,13 +21,13 @@ export const MigrationBanner = () => {
 					<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
 						{t("COMMON.MIGRATION_BANNER.TITLE")}
 					</h3>
-					<p className="leading-7">
+					<div className="leading-7">
 						{t("COMMON.MIGRATION_BANNER.DESCRIPTION")}{" "}
 						<Link to="https://docs.arkvault.io/" isExternal>
 							{t("COMMON.MIGRATION_BANNER.MIGRATION_GUIDE")}
 						</Link>
 						.
-					</p>
+					</div>
 					<div className="mt-8 flex space-x-3 ">
 						<Button variant="primary">{t("COMMON.MIGRATION_BANNER.MIGRATE_TOKENS")}</Button>
 						<Button variant="secondary-alt" onClick={learnMoreClickHandler}>
