@@ -64,11 +64,11 @@ describe("NavigationBar", () => {
 
 	beforeAll(async () => {
 		profile = mockedTestEnvironment.profiles().findById(getDefaultProfileId());
-
-		history.push(dashboardURL);
 	});
 
 	beforeEach(() => {
+		history.push(dashboardURL);
+
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -160,12 +160,18 @@ describe("NavigationBar", () => {
 			},
 		]);
 
-		const { container, asFragment } = render(<NavigationBar />);
+		const { container, asFragment } = render(
+			<Route path="/test">
+				<NavigationBar />
+			</Route>,
+			{
+				history,
+				route: "/test",
+			}
+		);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
-
-		history.push(dashboardURL);
 	});
 
 	it("should render in small screen variant", async () => {

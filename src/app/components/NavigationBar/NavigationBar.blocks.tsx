@@ -194,10 +194,9 @@ const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenu
 			<NavLink
 				to={mountPath}
 				title={menuItem.title}
-				className={(isActive) =>
-					cn(
+				className={cn(
 						"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-						isActive
+						isActivePath
 							? "border-b-theme-primary-600 text-theme-text"
 							: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
 					)
