@@ -51,6 +51,7 @@ export const Dashboard: React.VFC = () => {
 		<>
 			<Page pageTitle={t("DASHBOARD.DASHBOARD_PAGE.TITLE")} isBackDisabled={true}>
 				<MigrationBanner />
+
 				<Section>
 					<PortfolioHeader />
 					<PortfolioBreakdown

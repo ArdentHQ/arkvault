@@ -14,7 +14,7 @@ export const MigrationBanner = () => {
 	return (
 		<div
 			data-testid="MigrationBanner"
-			className="bg-theme-primary-100 text-theme-secondary-700 dark:bg-black dark:text-theme-secondary-500"
+			className="mb-4 bg-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500 sm:mb-0 sm:dark:bg-black"
 		>
 			<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
 				<div className="max-w-2xl flex-1  py-6">
