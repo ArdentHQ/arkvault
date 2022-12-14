@@ -10,14 +10,12 @@ type ImageProperties = {
 	name: string;
 	domain?: string;
 	useAccentColor?: boolean;
-	onlyLight?: boolean;
 } & React.HTMLProps<any>;
 
 export const Image: React.VFC<ImageProperties> = ({
 	name,
 	domain = "common",
 	useAccentColor = true,
-	onlyLight = false,
 	...properties
 }) => {
 	const [imageName, setImageName] = React.useState("");
@@ -35,22 +33,21 @@ export const Image: React.VFC<ImageProperties> = ({
 
 	React.useLayoutEffect(() => {
 		let imageName: string = name;
-		const useDarkColors = shouldUseDarkColors();
 
-		if (useDarkColors) {
+		if (shouldUseDarkColors()) {
 			imageName = `${imageName}Dark`;
 		} else {
 			imageName = `${imageName}Light`;
 		}
 
-		if (useAccentColor && (!onlyLight || !useDarkColors)) {
+		if (useAccentColor) {
 			const theme: string = currentAccentColor.charAt(0).toUpperCase() + currentAccentColor.slice(1);
 
 			setImageName(`${imageName}${theme}`);
 		} else {
 			setImageName(imageName);
 		}
-	}, [name, profile, currentAccentColor, useAccentColor, onlyLight]);
+	}, [name, profile, currentAccentColor, useAccentColor]);
 
 	const Image = (images as any)[domain][imageName] || (images as any)[domain][name];
 

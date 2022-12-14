@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "@/app/hooks";
 import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
 import { Image } from "@/app/components/Image";
@@ -8,6 +9,7 @@ import { useLink } from "@/app/hooks/use-link";
 export const MigrationBanner = () => {
 	const { t } = useTranslation();
 	const { openExternal } = useLink();
+	const { isDarkMode } = useTheme();
 
 	return (
 		<div
@@ -41,7 +43,7 @@ export const MigrationBanner = () => {
 				</div>
 
 				<div className="hidden w-[304px] flex-shrink-0 pt-2 pb-4 md:block lg:w-[475px]">
-					<Image name="PolygonMigrationBanner" onlyLight />
+					<Image name="PolygonMigrationBanner" useAccentColor={!isDarkMode} />
 				</div>
 			</div>
 		</div>
