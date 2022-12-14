@@ -2,14 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Link } from "@/app/components/Link";
-import { images } from "@/app/assets/images";
-const { PolygonMigrationBannerDark, PolygonMigrationBannerLight } = images.common;
-const learnMoreClickHandler = () => {
-	const link = "https://ardenthq.com/blog";
-	window.open(link);
-};
+import { Image } from "@/app/components/Image";
+import { useLink } from "@/app/hooks/use-link";
+
 export const MigrationBanner = () => {
 	const { t } = useTranslation();
+	const { openExternal } = useLink();
 
 	return (
 		<div
@@ -17,7 +15,7 @@ export const MigrationBanner = () => {
 			className="mb-4 bg-theme-primary-100 text-theme-secondary-700 dark:border-theme-secondary-800 dark:bg-theme-secondary-900 dark:text-theme-secondary-500 sm:mb-0 sm:dark:bg-black"
 		>
 			<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
-				<div className="max-w-2xl flex-1  py-6">
+				<div className="max-w-2xl flex-1 py-6">
 					<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
 						{t("COMMON.MIGRATION_BANNER.TITLE")}
 					</h3>
@@ -33,7 +31,7 @@ export const MigrationBanner = () => {
 						<Button
 							data-testid="MigrationBanner--learnmore"
 							variant="secondary-alt"
-							onClick={learnMoreClickHandler}
+							onClick={() => openExternal("https://ardenthq.com/blog")}
 						>
 							{t("COMMON.LEARN_MORE")}
 						</Button>
@@ -41,8 +39,7 @@ export const MigrationBanner = () => {
 				</div>
 
 				<div className="hidden w-[304px] flex-shrink-0 pt-2 pb-4 md:block lg:w-[475px]">
-					<PolygonMigrationBannerLight className="block w-full dark:hidden" />
-					<PolygonMigrationBannerDark className="hidden w-full dark:block" />
+					<Image name="PolygonMigrationBanner" useAccentColor={false} />
 				</div>
 			</div>
 		</div>
