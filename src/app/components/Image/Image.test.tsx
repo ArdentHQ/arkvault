@@ -28,6 +28,15 @@ describe("Image", () => {
 		useThemeMock.mockRestore();
 	});
 
+	it("should render light in dark mode if only Light ", () => {
+		const useThemeMock = vi.spyOn(theme, "shouldUseDarkColors").mockReturnValue(true);
+		const { container, asFragment } = renderWithoutRouter(<Image name="PolygonMigrationBanner" onlyLight />);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+		useThemeMock.mockRestore();
+	});
+
 	it("should render nothing if image can't be found", () => {
 		const { container, asFragment } = renderWithoutRouter(<Image name="NotExistingImage" />);
 
