@@ -12,11 +12,11 @@ exports[`MigrationBanner > should render 1`] = `
       <div
         class="max-w-2xl flex-1 py-6"
       >
-        <h3
-          class="font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+        <h2
+          class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200 md:text-2xl"
         >
           ARK is Moving to 0xPolygon!
-        </h3>
+        </h2>
         <div
           class="leading-7"
         >

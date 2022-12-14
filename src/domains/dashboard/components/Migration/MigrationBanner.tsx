@@ -16,9 +16,10 @@ export const MigrationBanner = () => {
 		>
 			<div className="flex items-center px-8 md:px-10 lg:container lg:mx-auto">
 				<div className="max-w-2xl flex-1 py-6">
-					<h3 className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200">
+					<h2 className="text-lg text-theme-secondary-900 dark:text-theme-secondary-200 md:text-2xl">
 						{t("COMMON.MIGRATION_BANNER.TITLE")}
-					</h3>
+					</h2>
+
 					<div className="leading-7">
 						{t("COMMON.MIGRATION_BANNER.DESCRIPTION")}{" "}
 						<Link to="https://docs.arkvault.io/" isExternal>
@@ -26,6 +27,7 @@ export const MigrationBanner = () => {
 						</Link>
 						.
 					</div>
+
 					<div className="mt-8 flex space-x-3 ">
 						<Button variant="primary">{t("COMMON.MIGRATION_BANNER.MIGRATE_TOKENS")}</Button>
 						<Button
