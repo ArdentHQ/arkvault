@@ -198,6 +198,12 @@ export const translations = {
 	MEMO: "Memo",
 	MESSAGE: "Message",
 	METHOD: "Method",
+	MIGRATION_BANNER: {
+		DESCRIPTION: "Users can now migrate their tokens to the new ERC20 token on 0xPolygon. Find out more in our",
+		MIGRATE_TOKENS: "Migrate Tokens",
+		MIGRATION_GUIDE: "Migration Guide",
+		TITLE: "ARK is Moving to 0xPolygon!",
+	},
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",
