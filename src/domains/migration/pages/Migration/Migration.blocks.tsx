@@ -1,4 +1,4 @@
-import React, { VFC } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import {
 	MigrationHeaderProperties,
@@ -11,7 +11,7 @@ import { FormButtons } from "@/app/components/Form";
 import { Section } from "@/app/components/Layout";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 
-const MigrationHeader: VFC<MigrationHeaderProperties> = ({ onNewMigration }) => {
+const MigrationHeader: React.FC<MigrationHeaderProperties> = ({ onNewMigration }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -24,12 +24,12 @@ const MigrationHeader: VFC<MigrationHeaderProperties> = ({ onNewMigration }) => 
 	);
 };
 
-const MigrationHeaderExtra: VFC<MigrationHeaderExtraProperties> = ({ onNewMigration }) => {
+const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewMigration }) => {
 	const { t } = useTranslation();
 
 	return (
 		<>
-			<div className="-my-1.5 hidden py-4 sm:block sm:h-auto">
+			<div className="hidden py-4 md:py-0 sm:block sm:h-auto">
 				<Button
 					className="ml-6"
 					sizeClassName="px-5 md:py-3 py-2"
@@ -43,7 +43,7 @@ const MigrationHeaderExtra: VFC<MigrationHeaderExtraProperties> = ({ onNewMigrat
 	);
 };
 
-const MigrationNewMigrationMobileButton: VFC<MigrationNewMigrationMobileButtonProperties> = ({ onNewMigration }) => {
+const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileButtonProperties> = ({ onNewMigration }) => {
 	const { t } = useTranslation();
 
 	return (

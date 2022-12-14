@@ -50,7 +50,7 @@ exports[`MigrationHeader > should render 1`] = `
         </div>
         <div>
           <div
-            class="-my-1.5 hidden py-4 sm:block sm:h-auto"
+            class="hidden py-4 md:py-0 sm:block sm:h-auto"
           >
             <button
               class="ml-6 px-5 md:py-3 py-2 css-1ac6umz"
@@ -74,7 +74,7 @@ exports[`MigrationHeader > should render 1`] = `
 exports[`MigrationHeaderExtra > should render 1`] = `
 <DocumentFragment>
   <div
-    class="-my-1.5 hidden py-4 sm:block sm:h-auto"
+    class="hidden py-4 md:py-0 sm:block sm:h-auto"
   >
     <button
       class="ml-6 px-5 md:py-3 py-2 css-1ac6umz"
