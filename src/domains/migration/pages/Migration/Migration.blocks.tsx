@@ -29,7 +29,7 @@ const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewM
 
 	return (
 		<>
-			<div className="hidden py-4 md:py-0 sm:block sm:h-auto">
+			<div className="hidden py-4 sm:block sm:h-auto md:py-0">
 				<Button
 					className="ml-6"
 					sizeClassName="px-5 md:py-3 py-2"
@@ -43,7 +43,9 @@ const MigrationHeaderExtra: React.FC<MigrationHeaderExtraProperties> = ({ onNewM
 	);
 };
 
-const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileButtonProperties> = ({ onNewMigration }) => {
+const MigrationNewMigrationMobileButton: React.FC<MigrationNewMigrationMobileButtonProperties> = ({
+	onNewMigration,
+}) => {
 	const { t } = useTranslation();
 
 	return (
