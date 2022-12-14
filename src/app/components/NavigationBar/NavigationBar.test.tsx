@@ -167,7 +167,7 @@ describe("NavigationBar", () => {
 			{
 				history,
 				route: "/test",
-			}
+			},
 		);
 
 		expect(container).toBeInTheDocument();
