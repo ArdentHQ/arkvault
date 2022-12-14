@@ -41,7 +41,7 @@ export const MigrationBanner = () => {
 				</div>
 
 				<div className="hidden w-[304px] flex-shrink-0 pt-2 pb-4 md:block lg:w-[475px]">
-					<Image name="PolygonMigrationBanner" useAccentColor={false} />
+					<Image name="PolygonMigrationBanner" onlyLight />
 				</div>
 			</div>
 		</div>
