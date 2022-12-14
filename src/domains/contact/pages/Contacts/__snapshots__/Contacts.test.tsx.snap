@@ -226,19 +226,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
               class="flex"
             >
               <a
-                aria-current="page"
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
@@ -2000,19 +1987,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                aria-current="page"
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -3786,19 +3760,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
               class="flex"
             >
               <a
-                aria-current="page"
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
@@ -4734,19 +4695,6 @@ exports[`Contacts > should render with contacts 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                aria-current="page"
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -6514,19 +6462,6 @@ exports[`Contacts > should render without contacts 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                aria-current="page"
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li

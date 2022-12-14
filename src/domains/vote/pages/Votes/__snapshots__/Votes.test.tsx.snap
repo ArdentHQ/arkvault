@@ -236,18 +236,6 @@ exports[`Votes > should filter current delegates 1`] = `
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
@@ -1824,18 +1812,6 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -3831,18 +3807,6 @@ exports[`Votes > should render 1`] = `
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
@@ -5757,18 +5721,6 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -7695,18 +7647,6 @@ exports[`Votes > should render with no wallets 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/cba050f1-880f-45f0-9af9-cfe48f406052/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
                 aria-current="page"
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
@@ -8461,18 +8401,6 @@ exports[`Votes > should select a delegate 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -10396,18 +10324,6 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
                 aria-current="page"
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
@@ -11827,18 +11743,6 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -13268,18 +13172,6 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li
@@ -15265,18 +15157,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
               class="flex"
             >
               <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
                 aria-current="page"
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-theme-primary-600 text-theme-text active"
                 data-ring-focus-margin="-mx-2"
@@ -16803,18 +16683,6 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 title="Exchange"
               >
                 Exchange
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
               </a>
             </li>
             <li

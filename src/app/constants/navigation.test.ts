@@ -9,6 +9,10 @@ describe("Navigation Menu", () => {
 		menuItems = getUserMenuActions(vi.fn());
 	});
 
+	it("should get contacts path", async () => {
+		expect(menuItems[0].mountPath(getDefaultProfileId())).toBe(`/profiles/${getDefaultProfileId()}/contacts`);
+	});
+
 	it("should get settings path", async () => {
 		expect(menuItems[2].mountPath(getDefaultProfileId())).toBe(`/profiles/${getDefaultProfileId()}/settings`);
 	});
