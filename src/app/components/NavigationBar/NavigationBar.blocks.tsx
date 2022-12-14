@@ -204,7 +204,7 @@ const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenu
 			>
 				<span
 					className={cn(
-						"flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
+						"flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text",
 						isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
 						isActivePath ? "text-theme-text" : "text-transparent",
 					)}
@@ -217,7 +217,7 @@ const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenu
 						className={cn(
 							"inline-block from-theme-danger-400 to-theme-danger-400 bg-500",
 							isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
-							isActivePath ? "bg-theme-text" : "animate-move-bg-offset bg-gradient-to-r",
+							isActivePath ? "bg-theme-text" : "animate-move-bg bg-gradient-to-r",
 						)}
 						style={{ clipPath: "url(#sparksClipPath)" }}
 					>
