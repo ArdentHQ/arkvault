@@ -4,7 +4,11 @@ import { useTranslation } from "react-i18next";
 import { generatePath, NavLink, useHistory } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
-import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
+import {
+	NavigationBarFullProperties,
+	NavigationBarLogoOnlyProperties,
+	NavigationBarMenuItem,
+} from "./NavigationBar.contracts";
 import { defaultStyle } from "./NavigationBar.styles";
 import { Button } from "@/app/components/Button";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
@@ -18,7 +22,7 @@ import { ServerStatusIndicator } from "@/app/components/ServerStatusIndicator";
 import { Tooltip } from "@/app/components/Tooltip";
 import { getNavigationMenu } from "@/app/constants/navigation";
 import { useConfiguration, useNavigationContext } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint, useInputFocus, useScroll } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useInputFocus, useScroll, useTheme } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
@@ -177,6 +181,49 @@ const NavigationBarMobile: React.VFC<{
 	);
 };
 
+const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenuItem; profileId: string }) => {
+	const { isDarkMode } = useTheme();
+
+	return (
+		<li className="relative flex">
+			<NavLink
+				to={menuItem.mountPath(profileId)}
+				title={menuItem.title}
+				className={(isActive) =>
+					cn(
+						"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+						isActive
+							? "border-b-theme-primary-600 text-theme-text"
+							: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
+					)
+				}
+				data-ring-focus-margin="-mx-2"
+			>
+				<span
+					className={cn(
+						"flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent",
+						isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+					)}
+				>
+					<span>{menuItem.title}</span>
+				</span>
+
+				<div className="absolute -right-4 flex h-6">
+					<div
+						className={cn(
+							"inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500",
+							isDarkMode ? "via-theme-hint-400" : "via-theme-hint-600",
+						)}
+						style={{ clipPath: "url(#sparksClipPath)" }}
+					>
+						<Icon name="Sparks" />
+					</div>
+				</div>
+			</NavLink>
+		</li>
+	);
+};
+
 export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	isBackDisabled,
 }: NavigationBarFullProperties) => {
@@ -228,19 +275,33 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 	const renderNavigationMenu = () => (
 		<>
 			<ul className="mr-auto ml-4 hidden h-21 space-x-8 lg:flex" data-testid="NavigationBar__menu">
-				{navigationMenu.map((menuItem, index) => (
-					<li key={index} className="flex">
-						<NavLink
-							to={menuItem.mountPath(profile.id())}
-							title={menuItem.title}
-							className="text-md ring-focus relative flex items-center font-semibold text-theme-secondary-text transition-colors duration-200 focus:outline-none"
-							data-ring-focus-margin="-mx-2"
-						>
-							{menuItem.title}
-						</NavLink>
-					</li>
-				))}
+				{navigationMenu.map((menuItem, index) => {
+					if (menuItem.hasGradient) {
+						return <GradientMenuItem key={index} menuItem={menuItem} profileId={profile.id()} />;
+					}
+
+					return (
+						<li key={index} className="flex">
+							<NavLink
+								to={menuItem.mountPath(profile.id())}
+								title={menuItem.title}
+								className={(isActive) =>
+									cn(
+										"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+										isActive
+											? "border-b-theme-primary-600 text-theme-text"
+											: "border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text",
+									)
+								}
+								data-ring-focus-margin="-mx-2"
+							>
+								{menuItem.title}
+							</NavLink>
+						</li>
+					);
+				})}
 			</ul>
+
 			<div
 				data-testid="NavigationBar__menu-toggle"
 				className="mr-auto ml-2 flex content-center items-center lg:hidden"

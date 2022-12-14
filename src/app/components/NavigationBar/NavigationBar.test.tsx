@@ -4,8 +4,9 @@ import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-
 import { NavigationBar } from "./NavigationBar";
+import * as themeUtils from "@/utils/theme";
+
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
 import * as useScrollHook from "@/app/hooks/use-scroll";
@@ -63,11 +64,11 @@ describe("NavigationBar", () => {
 
 	beforeAll(async () => {
 		profile = mockedTestEnvironment.profiles().findById(getDefaultProfileId());
-
-		history.push(dashboardURL);
 	});
 
 	beforeEach(() => {
+		history.push(dashboardURL);
+
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -126,6 +127,48 @@ describe("NavigationBar", () => {
 
 	it("should render with custom menu", () => {
 		const { container, asFragment } = render(<NavigationBar />);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each(["light", "dark"])("should render gradient item with %s theme", async (theme) => {
+		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
+
+		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
+			{
+				hasGradient: true,
+				mountPath: () => "/test",
+				title: "test",
+			},
+		]);
+
+		const { container, asFragment } = render(<NavigationBar />);
+
+		expect(container).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with gradient items", () => {
+		history.push("/test");
+
+		vi.spyOn(navigation, "getNavigationMenu").mockReturnValueOnce([
+			{
+				hasGradient: true,
+				mountPath: () => "/test",
+				title: "test",
+			},
+		]);
+
+		const { container, asFragment } = render(
+			<Route path="/test">
+				<NavigationBar />
+			</Route>,
+			{
+				history,
+				route: "/test",
+			},
+		);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

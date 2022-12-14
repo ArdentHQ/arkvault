@@ -6,6 +6,7 @@ import { NavbarVariant } from "@/types";
 export interface NavigationBarMenuItem {
 	title: string;
 	mountPath: ((profileId: string) => string) | (() => string);
+	hasGradient?: boolean;
 }
 
 export interface NavigationBarProperties {

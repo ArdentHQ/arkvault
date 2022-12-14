@@ -140,6 +140,23 @@ module.exports = {
 			"theme-navy-900": "var(--theme-color-navy-900)",
 		},
 		extend: {
+			backgroundSize: {
+				500: "500px",
+			},
+			animation: {
+				"move-bg": "move-bg 15s infinite linear",
+				"move-bg-start-right": "move-bg-start-right 15s infinite linear",
+			},
+			keyframes: {
+				"move-bg": {
+					"0%": { backgroundPosition: 0 },
+					"100%": { backgroundPosition: "500px" },
+				},
+				"move-bg-start-right": {
+					"0%": { backgroundPosition: "calc(100%)" },
+					"100%": { backgroundPosition: "calc(100% + 500px)" },
+				},
+			},
 			lineHeight: {
 				tighter: "1.125rem",
 			},
