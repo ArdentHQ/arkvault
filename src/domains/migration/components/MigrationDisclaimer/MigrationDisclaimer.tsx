@@ -10,16 +10,16 @@ import { Link } from "@/app/components/Link";
 
 interface MigrationDisclaimerProperties {
 	isOpen: boolean;
-	onClose?: any;
-	onCancel?: any;
-	onConfirm: any;
+	onClose?: () => void;
+	onCancel?: () => void;
+	onConfirm: () => void;
 }
 
 const PRIVACY_POLICY_URL = "https://arkvault.io/privacy-policy";
 const TERMS_URL = "http://arkvault.io/terms-of-service";
 
 export const MigrationDisclaimer = ({ onClose, onCancel, onConfirm, isOpen }: MigrationDisclaimerProperties) => {
-	const [disabled, setDisabled] = useState<boolean>(false);
+	const [disabled, setDisabled] = useState<boolean>(true);
 
 	const agreeCheckboxHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setDisabled(!event.target.checked);
