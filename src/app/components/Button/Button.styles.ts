@@ -195,6 +195,12 @@ const getVariant = (
 				`,
 			);
 		},
+		"secondary-alt": () => tw`
+			bg-theme-primary-200 text-theme-primary-600
+			dark:(bg-theme-secondary-800 text-theme-secondary-200)
+			dark:hover:(bg-theme-primary-700 text-white)
+			hover:(bg-theme-primary-700 text-white)
+		`,
 		warning: () => tw`
 			bg-theme-warning-100 text-theme-warning-700
 			dark:(bg-theme-warning-600 text-white)

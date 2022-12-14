@@ -20,6 +20,7 @@ export type Position =
 export type ButtonVariant =
 	| "primary"
 	| "secondary"
+	| "secondary-alt"
 	| "danger"
 	| "warning"
 	| "transparent"
