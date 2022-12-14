@@ -235,18 +235,6 @@ exports[`Migration > should render 1`] = `
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
                 data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-                data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
               >
@@ -264,7 +252,7 @@ exports[`Migration > should render 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-theme-text"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -274,7 +262,7 @@ exports[`Migration > should render 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 bg-theme-text"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -649,7 +637,7 @@ exports[`Migration > should render 1`] = `
             </div>
             <div>
               <div
-                class="hidden py-4 md:py-0 sm:block sm:h-auto"
+                class="hidden py-4 sm:block sm:h-auto md:py-0"
               >
                 <button
                   class="ml-6 px-5 md:py-3 py-2 css-1ac6umz"

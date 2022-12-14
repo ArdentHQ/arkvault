@@ -108,21 +108,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -140,11 +125,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -154,11 +135,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -1177,21 +1154,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -1209,11 +1171,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -1223,11 +1181,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2223,21 +2177,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -2255,11 +2194,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -2269,11 +2204,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -3184,21 +3115,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -3216,11 +3132,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -3230,11 +3142,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -4091,21 +3999,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -4123,11 +4016,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -4137,11 +4026,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -5125,21 +5010,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -5157,11 +5027,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -5171,11 +5037,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -6077,21 +5939,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -6109,11 +5956,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -6123,11 +5966,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -7448,21 +7287,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -7480,11 +7304,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -7494,11 +7314,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -8694,21 +8510,6 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-<<<<<<< HEAD
-                data-ring-focus-margin="-mx-2"
-                href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
-                title="Contacts"
-              >
-                Contacts
-              </a>
-            </li>
-            <li
-              class="flex"
-            >
-              <a
-                class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
-=======
->>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -8726,11 +8527,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                 title="Migration"
               >
                 <span
-<<<<<<< HEAD
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
-=======
                   class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
->>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -8740,11 +8537,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-<<<<<<< HEAD
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
-=======
                     class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
->>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
