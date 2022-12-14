@@ -145,16 +145,16 @@ module.exports = {
 			},
 			animation: {
 				"move-bg": "move-bg 15s infinite linear",
-				"move-bg-offset": "move-bg-offset 15s infinite linear",
+				"move-bg-start-right": "move-bg-start-right 15s infinite linear",
 			},
 			keyframes: {
 				"move-bg": {
-					"0%": { "background-position": "calc(100%)" },
-					"100%": { "background-position": "calc(100% + 500px)" },
+					"0%": { backgroundPosition: 0 },
+					"100%": { backgroundPosition: "500px" },
 				},
-				"move-bg-offset": {
-					"0%": { "background-position": "-16px" },
-					"100%": { "background-position": "484px" },
+				"move-bg-start-right": {
+					"0%": { backgroundPosition: "calc(100%)" },
+					"100%": { backgroundPosition: "calc(100% + 500px)" },
 				},
 			},
 			lineHeight: {

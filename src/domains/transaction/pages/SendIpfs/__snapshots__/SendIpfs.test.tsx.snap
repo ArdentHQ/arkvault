@@ -108,6 +108,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -120,6 +121,8 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -137,7 +140,11 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -147,7 +154,11 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2061,6 +2072,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -2073,6 +2085,8 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -2090,7 +2104,11 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -2100,7 +2118,11 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -3398,6 +3420,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -3410,6 +3433,8 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -3427,7 +3452,11 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -3437,7 +3466,11 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -4737,6 +4770,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -4749,6 +4783,8 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -4766,7 +4802,11 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -4776,7 +4816,11 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -5951,6 +5995,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -5963,6 +6008,8 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -5980,7 +6027,11 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -5990,7 +6041,11 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -6982,6 +7037,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -6994,6 +7050,8 @@ exports[`SendIpfs > should show error step and go back 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -7011,7 +7069,11 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -7021,7 +7083,11 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div

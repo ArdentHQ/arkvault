@@ -108,6 +108,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -120,6 +121,8 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -137,7 +140,11 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -147,7 +154,11 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -1741,6 +1752,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -1753,6 +1765,8 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -1770,7 +1784,11 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -1780,7 +1798,11 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2606,6 +2628,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -2618,6 +2641,8 @@ exports[`SendTransfer > should render form and use location state with nethash p
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -2635,7 +2660,11 @@ exports[`SendTransfer > should render form and use location state with nethash p
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -2645,7 +2674,11 @@ exports[`SendTransfer > should render form and use location state with nethash p
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -4115,6 +4148,7 @@ exports[`SendTransfer > should render form and use location state with network p
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -4127,6 +4161,8 @@ exports[`SendTransfer > should render form and use location state with network p
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -4144,7 +4180,11 @@ exports[`SendTransfer > should render form and use location state with network p
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -4154,7 +4194,11 @@ exports[`SendTransfer > should render form and use location state with network p
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -5624,6 +5668,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -5636,6 +5681,8 @@ exports[`SendTransfer > should render form and use location state without memo 1
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -5653,7 +5700,11 @@ exports[`SendTransfer > should render form and use location state without memo 1
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -5663,7 +5714,11 @@ exports[`SendTransfer > should render form and use location state without memo 1
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -11996,6 +12051,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -12008,6 +12064,8 @@ exports[`SendTransfer > should render network selection without selected wallet 
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -12025,7 +12083,11 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -12035,7 +12097,11 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -14700,6 +14766,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -14712,6 +14779,8 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -14729,7 +14798,11 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -14739,7 +14812,11 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -16018,6 +16095,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -16030,6 +16108,8 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -16047,7 +16127,11 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -16057,7 +16141,11 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -17889,6 +17977,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -17901,6 +17990,8 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -17918,7 +18009,11 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -17928,7 +18023,11 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -19207,6 +19306,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -19219,6 +19319,8 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -19236,7 +19338,11 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -19246,7 +19352,11 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -20525,6 +20635,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -20537,6 +20648,8 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -20554,7 +20667,11 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -20564,7 +20681,11 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -21962,6 +22083,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+<<<<<<< HEAD
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/contacts"
                 title="Contacts"
@@ -21974,6 +22096,8 @@ exports[`SendTransfer > should show error step and go back 1`] = `
             >
               <a
                 class="text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none border-b-transparent text-theme-secondary-text hover:border-b-theme-primary-600 hover:text-theme-text"
+=======
+>>>>>>> feat/polygon-migration
                 data-ring-focus-margin="-mx-2"
                 href="#/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/votes"
                 title="Votes"
@@ -21991,7 +22115,11 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                 title="Migration"
               >
                 <span
+<<<<<<< HEAD
                   class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+=======
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                 >
                   <span>
                     Migration
@@ -22001,7 +22129,11 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
+<<<<<<< HEAD
                     class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+=======
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
+>>>>>>> feat/polygon-migration
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
