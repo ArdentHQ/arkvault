@@ -10,14 +10,23 @@ const newMigrationHandler = () => {
 export const Migration = () => {
 	const { t } = useTranslation();
 
+	const migrations = [];
+
+	const renderMigrations = () => {
+		/* istanbul ignore else -- @preserve */
+		if (migrations.length === 0) {
+			return <MigrationEmpty />;
+		}
+	};
+
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
 				<MigrationHeader onNewMigration={newMigrationHandler} />
 
-				<MigrationNewMigrationMobileButton onNewMigration={newMigrationHandler} />
+				{renderMigrations()}
 
-				<MigrationEmpty />
+				<MigrationNewMigrationMobileButton onNewMigration={newMigrationHandler} />
 			</Page>
 		</>
 	);
