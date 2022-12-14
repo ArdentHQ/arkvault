@@ -125,7 +125,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -135,7 +135,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -1746,7 +1746,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -1756,7 +1756,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2599,7 +2599,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -2609,7 +2609,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -4096,7 +4096,7 @@ exports[`SendTransfer > should render form and use location state with network p
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -4106,7 +4106,7 @@ exports[`SendTransfer > should render form and use location state with network p
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -5593,7 +5593,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -5603,7 +5603,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -11953,7 +11953,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -11963,7 +11963,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -14645,7 +14645,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -14655,7 +14655,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -15951,7 +15951,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -15961,7 +15961,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -17810,7 +17810,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -17820,7 +17820,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -19116,7 +19116,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -19126,7 +19126,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -20422,7 +20422,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -20432,7 +20432,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -21847,7 +21847,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text text-transparent via-theme-hint-600"
                 >
                   <span>
                     Migration
@@ -21857,7 +21857,7 @@ exports[`SendTransfer > should show error step and go back 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
+                    class="inline-block animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
