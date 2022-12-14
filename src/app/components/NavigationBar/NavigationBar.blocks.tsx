@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { generatePath, NavLink, useHistory, useLocation } from "react-router-dom";
+import { generatePath, NavLink, useHistory } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 import cn from "classnames";
 import {
@@ -189,12 +189,14 @@ const GradientMenuItem = ({ menuItem, profileId }: { menuItem: NavigationBarMenu
 			<NavLink
 				to={menuItem.mountPath(profileId)}
 				title={menuItem.title}
-				className={(isActive) => cn(
-					"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
-					isActive
-						? "border-b-theme-primary-600 text-theme-text"
-						: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
-				)}
+				className={(isActive) =>
+					cn(
+						"text-md ring-focus relative flex items-center border-t-2 border-b-2 border-t-transparent font-semibold transition-colors duration-200 focus:outline-none",
+						isActive
+							? "border-b-theme-primary-600 text-theme-text"
+							: "group border-b-transparent text-transparent hover:border-b-theme-primary-600",
+					)
+				}
 				data-ring-focus-margin="-mx-2"
 			>
 				<span
