@@ -9,10 +9,13 @@ const confirmHandler = () => {
 
 export const Migration = () => {
 	const { t } = useTranslation();
-
 	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
 	const migrations = [];
+
+	const onNewMigrationHandler = () => {
+		setIsDisclaimerOpen(true);
+	};
 
 	const renderMigrations = () => {
 		/* istanbul ignore else -- @preserve */
@@ -24,11 +27,11 @@ export const Migration = () => {
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
-				<MigrationHeader onNewMigration={() => setIsDisclaimerOpen(true)} />
+				<MigrationHeader onNewMigration={onNewMigrationHandler} />
 
 				{renderMigrations()}
 
-				<MigrationNewMigrationMobileButton onNewMigration={() => setIsDisclaimerOpen(true)} />
+				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />
 
 				<MigrationDisclaimer
 					isOpen={isDisclaimerOpen}
