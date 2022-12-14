@@ -262,7 +262,7 @@ exports[`General Settings > should disable submit button when profile is not res
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -272,7 +272,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2313,7 +2313,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -2323,7 +2323,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -4443,7 +4443,7 @@ exports[`General Settings > should render 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -4453,7 +4453,7 @@ exports[`General Settings > should render 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -6490,7 +6490,7 @@ exports[`General Settings > should show identicon when removing image if name is
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -6500,7 +6500,7 @@ exports[`General Settings > should show identicon when removing image if name is
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -8537,7 +8537,7 @@ exports[`General Settings > should update profile 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -8547,7 +8547,7 @@ exports[`General Settings > should update profile 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -10580,7 +10580,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -10590,7 +10590,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -12627,7 +12627,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -12637,7 +12637,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div

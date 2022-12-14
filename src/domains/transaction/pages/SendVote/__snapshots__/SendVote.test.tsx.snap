@@ -264,7 +264,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -274,7 +274,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -1600,7 +1600,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -1610,7 +1610,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
@@ -2461,7 +2461,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                 title="Migration"
               >
                 <span
-                  class="flex animate-move-bg bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
+                  class="flex animate-move-bg-start-right bg-gradient-to-r from-theme-danger-400 to-theme-danger-400 bg-500 bg-clip-text via-theme-hint-600 text-transparent"
                 >
                   <span>
                     Migration
@@ -2471,7 +2471,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                   class="absolute -right-4 flex h-6"
                 >
                   <div
-                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg-offset bg-gradient-to-r"
+                    class="inline-block from-theme-danger-400 to-theme-danger-400 bg-500 via-theme-hint-600 animate-move-bg bg-gradient-to-r"
                     style="clip-path: url(#sparksClipPath);"
                   >
                     <div
