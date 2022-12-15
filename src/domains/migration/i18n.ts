@@ -1,4 +1,10 @@
 export const translations = {
+	MIGRATION_ADD: {
+		STEP_CONNECT: {
+			DESCRIPTION: "Fill in address details below to start the migration process.",
+			TITLE: "Migration",
+		},
+	},
 	PAGE_MIGRATION: {
 		NEW_MIGRATION: "New Migration",
 		NO_MIGRATIONS: "You don't have any migration transactions yet.",
