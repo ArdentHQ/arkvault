@@ -15,6 +15,16 @@ export const translations = {
 				AMOUNT_YOU_GET: "Amount You Get",
 				AMOUNT_YOU_SEND: "Amount You Send",
 				ARK_ADDRESS: "ARK Address",
+				METAMASK: {
+					CONNECT_WALLET: "Connect Wallet",
+					INSTALL_METAMASK: "Install MetaMask",
+					MESSAGES: {
+						NEEDS_METAMASK:
+							"In order to complete the Migration, you must first install MetaMask. Learn more in our <linkMigrationGuide>Migration Guide.</linkMigrationGuide>",
+						NEEDS_POLYGON:
+							"To migrate, you need to have a Polygon network address and the <linkMetamask>MetaMask</linkMetamask> plugin.",
+					},
+				},
 				POLYGON_MIGRATION_ADDRESS: "Polygon Migration Address",
 				SELECT_WALLET_TO_MIGRATE: "Select Wallet to Migrate",
 			},
