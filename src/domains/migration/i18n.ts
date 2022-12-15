@@ -11,6 +11,11 @@ export const translations = {
 	MIGRATION_ADD: {
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",
+			FORM: {
+				AMOUNT_YOU_SEND: "Amount You Send",
+				ARK_ADDRESS: "ARK Address",
+				SELECT_WALLET_TO_MIGRATE: "Select Wallet to Migrate",
+			},
 			TITLE: "Migration",
 		},
 	},
