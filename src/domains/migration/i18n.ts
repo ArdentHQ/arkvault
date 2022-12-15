@@ -1,5 +1,6 @@
 export const translations = {
 	DISCLAIMER_MODAL: {
+		// @TBD
 		DISCLAIMER:
 			"I agree with the rules and with something else <linkTerms>Terms of Service</linkTerms> & <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>",
 		TITLE: "Migration Disclaimer",
