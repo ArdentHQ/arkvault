@@ -26,7 +26,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 			<div className="mt-8 rounded-2.5xl border border-theme-secondary-300 p-5 dark:border-theme-secondary-800">
 				<div>{children}</div>
 
-				<div className="px-5 pb-5 pt-8">
+				<div className="px-5 pb-5">
 					<FormButtons>
 						<Button data-testid="MigrationAdd__cancel-btn" variant="secondary" onClick={onCancel}>
 							{t("COMMON.CANCEL")}
