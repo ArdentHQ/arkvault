@@ -1,4 +1,12 @@
 export const translations = {
+	DISCLAIMER_MODAL: {
+		DISCLAIMER:
+			"I agree with the rules and with something else <linkTerms>Terms of Service</linkTerms> & <linkPrivacyPolicy>Privacy Policy</linkPrivacyPolicy>",
+		TITLE: "Migration Disclaimer",
+		// @TBD
+		WARNING:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus, mollitia natus est, voluptas eligendi nihil dolorum illum accusamus obcaecati itaque corrupti tenetur, accusantium perferendis officiis hic modi neque aspernatur!",
+	},
 	MIGRATION_ADD: {
 		STEP_CONNECT: {
 			DESCRIPTION: "Fill in address details below to start the migration process.",

@@ -36,10 +36,17 @@ describe("Migration", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should have add button", () => {
+	it("should open the disclaimer modal when user calls the add migration button", () => {
 		renderComponent();
 
-		// Not testing the button handler since is not implemented yet
 		userEvent.click(screen.getByTestId("Migrations__add-migration-btn"));
+
+		expect(screen.getByTestId("MigrationDisclaimer__submit-button")).toBeVisible();
+
+		userEvent.click(screen.getByTestId("MigrationDisclaimer-checkbox"));
+
+		expect(screen.getByTestId("MigrationDisclaimer__submit-button")).not.toBeDisabled();
+
+		userEvent.click(screen.getByTestId("MigrationDisclaimer__submit-button"));
 	});
 });

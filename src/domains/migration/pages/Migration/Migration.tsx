@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MigrationEmpty, MigrationHeader, MigrationNewMigrationMobileButton } from "./Migration.blocks";
 import { Page } from "@/app/components/Layout";
-
-const newMigrationHandler = () => {
-	// @TODO: newMigrationHandler
+import { MigrationDisclaimer } from "@/domains/migration/components/MigrationDisclaimer";
+const confirmHandler = () => {
+	// @TODO: Start migration
 };
 
 export const Migration = () => {
 	const { t } = useTranslation();
+	const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
 	const migrations = [];
+
+	const onNewMigrationHandler = () => {
+		setIsDisclaimerOpen(true);
+	};
 
 	const renderMigrations = () => {
 		/* istanbul ignore else -- @preserve */
@@ -22,11 +27,18 @@ export const Migration = () => {
 	return (
 		<>
 			<Page pageTitle={t("MIGRATION.PAGE_MIGRATION.TITLE")} isBackDisabled={true} data-testid="Migration">
-				<MigrationHeader onNewMigration={newMigrationHandler} />
+				<MigrationHeader onNewMigration={onNewMigrationHandler} />
 
 				{renderMigrations()}
 
-				<MigrationNewMigrationMobileButton onNewMigration={newMigrationHandler} />
+				<MigrationNewMigrationMobileButton onNewMigration={onNewMigrationHandler} />
+
+				<MigrationDisclaimer
+					isOpen={isDisclaimerOpen}
+					onClose={() => setIsDisclaimerOpen(false)}
+					onCancel={() => setIsDisclaimerOpen(false)}
+					onConfirm={confirmHandler}
+				/>
 			</Page>
 		</>
 	);
