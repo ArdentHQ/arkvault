@@ -1,0 +1,119 @@
+// Vitest Snapshot v1
+
+exports[`StepIndicatorAlt > should render 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex justify-between"
+    data-testid="StepIndicatorAlt"
+  >
+    <div
+      class="absolute mt-3 w-full border-t-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+    />
+    <div
+      class="absolute mt-3 w-full border-t-2 border-theme-primary-600"
+      style="width: 0%;"
+    />
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
+      data-testid="StepIndicatorAlt__step"
+    >
+      <div
+        class=" h-2 w-2 rounded-full bg-theme-primary-600"
+        data-testid="StepIndicatorAlt__activestep"
+      />
+    </div>
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="StepIndicatorAlt__step"
+    />
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="StepIndicatorAlt__step"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StepIndicatorAlt > should render with active index 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex justify-between"
+    data-testid="StepIndicatorAlt"
+  >
+    <div
+      class="absolute mt-3 w-full border-t-2 border-theme-secondary-300 dark:border-theme-secondary-800"
+    />
+    <div
+      class="absolute mt-3 w-full border-t-2 border-theme-primary-600"
+      style="width: 100%;"
+    />
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
+      data-testid="StepIndicatorAlt__step"
+    >
+      <div
+        class="text-theme-primary-600 css-15txs7d"
+        data-testid="StepIndicatorAlt__prevstep"
+        height="10"
+        width="10"
+      >
+        <svg
+          id="check-mark-small"
+          viewBox="0 0 10 10"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
+      data-testid="StepIndicatorAlt__step"
+    >
+      <div
+        class="text-theme-primary-600 css-15txs7d"
+        data-testid="StepIndicatorAlt__prevstep"
+        height="10"
+        width="10"
+      >
+        <svg
+          id="check-mark-small"
+          viewBox="0 0 10 10"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <path
+            d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="relative z-0 flex h-6 w-6 items-center justify-center rounded-full border-2 bg-white dark:bg-theme-secondary-900 border-theme-primary-600"
+      data-testid="StepIndicatorAlt__step"
+    >
+      <div
+        class=" h-2 w-2 rounded-full bg-theme-primary-600"
+        data-testid="StepIndicatorAlt__activestep"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
