@@ -10,6 +10,9 @@ export const MigrationConnectStep = () => {
 		<MigrationStep
 			title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
+			onCancel={() => {}}
+			onContinue={() => {}}
+			isValid={false}
 		>
 			<p>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quidem velit dolorum hic ipsa eos
