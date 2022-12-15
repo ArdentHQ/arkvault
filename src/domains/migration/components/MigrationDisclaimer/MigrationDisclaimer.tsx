@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { FormButtons, FormField } from "@/app/components/Form";
 import { Modal } from "@/app/components/Modal";
@@ -20,6 +20,10 @@ const TERMS_URL = "http://arkvault.io/terms-of-service";
 
 export const MigrationDisclaimer = ({ onClose, onCancel, onConfirm, isOpen }: MigrationDisclaimerProperties) => {
 	const [disabled, setDisabled] = useState<boolean>(true);
+
+	useEffect(() => {
+		setDisabled(true);
+	}, [isOpen]);
 
 	const agreeCheckboxHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setDisabled(!event.target.checked);
