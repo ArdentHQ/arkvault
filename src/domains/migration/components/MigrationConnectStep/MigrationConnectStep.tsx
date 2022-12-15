@@ -13,7 +13,15 @@ export const MigrationConnectStep = () => {
 	const { t } = useTranslation();
 	const profile = useActiveProfile();
 
-	const wallets = useMemo(() => profile.wallets().findByCoinWithNetwork("ARK", "ark.mainnet"), [profile]);
+	const wallets = useMemo(
+		() =>
+			profile
+				.wallets()
+				.findByCoinWithNetwork("ARK", "ark.mainnet")
+				// Only wallets with a balance greater than the transaction fee +0.05 ARK
+				.filter((wallet) => wallet.balance() >= TRANSACTION_FEE + 0.05),
+		[profile],
+	);
 
 	const [selectedAddress, setSelectedAddress] = useState<string>();
 
@@ -21,6 +29,7 @@ export const MigrationConnectStep = () => {
 		if (!selectedAddress) {
 			return;
 		}
+
 		return profile.wallets().findByAddressWithNetwork(selectedAddress, "ark.mainnet");
 	}, [selectedAddress, profile]);
 
@@ -28,6 +37,7 @@ export const MigrationConnectStep = () => {
 		if (!selectedWallet) {
 			return 0;
 		}
+
 		return selectedWallet.balance();
 	}, [selectedWallet]);
 
