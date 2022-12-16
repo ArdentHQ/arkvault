@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import MigrationStep from "domains/migration/components/MigrationStep";
-import SelectPolygonAddress from "../SelectPolygonAddress";
+import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
+import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useActiveProfile } from "@/app/hooks";
@@ -14,14 +14,17 @@ const TRANSACTION_FEE = 0.05;
 const MIGRATION_GUIDE_URL = "https://arkvault.io/docs";
 // @TBD
 const METAMASK_URL = "https://metamask.io/";
+// @TBD
+const POLYGON_MIGRATION_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const MetamaskButton = ({ children }: { children: React.ReactNode }) => (
-	<button
-		type="button"
-		className="flex space-x-2 rounded-lg bg-gradient-to-r from-[#FFDB80] via-[#F27C0B] to-[#4381C0] bg-size-200 bg-pos-0 py-[14px] px-5 transition-all duration-100 ease-in-out hover:bg-pos-100"
-	>
-		<span>{/* Metamask logo */}</span>
-		<span className="font-semibold text-white">{children}</span>
+	<button type="button" className="group relative overflow-hidden rounded-lg">
+		<span className="pointer-events-none absolute left-0 top-0 block h-full w-full bg-gradient-to-r from-[#FFDB80] to-[#F27C0B] opacity-100 transition-all duration-200 ease-in-out group-hover:opacity-0" />
+		<span className="pointer-events-none absolute left-0 top-0 block h-full w-full bg-gradient-to-r from-[#FFD486] to-[#4381C0] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100" />
+		<div className="flex space-x-2 py-[14px] px-5">
+			<span className="relative">{/* Metamask logo */}</span>
+			<span className="relative font-semibold text-white">{children}</span>
+		</div>
 	</button>
 );
 
@@ -151,7 +154,13 @@ export const MigrationConnectStep = () => {
 							<FormLabel
 								label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.POLYGON_MIGRATION_ADDRESS")}
 							/>
-							<SelectPolygonAddress disabled={polygonFieldIsDisabled} />
+							{polygonFieldIsDisabled ? (
+								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-200 bg-theme-background px-4 dark:border-theme-secondary-700">
+									<div className="h-8 w-8 rounded-full border border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700" />
+								</div>
+							) : (
+								<SelectPolygonAddress value={POLYGON_MIGRATION_ADDRESS} />
+							)}
 						</FormField>
 
 						<div className="mt-4 space-y-2">
@@ -164,7 +173,7 @@ export const MigrationConnectStep = () => {
 						</div>
 					</div>
 					{polygonFieldIsDisabled && (
-						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center backdrop-blur-sm">
+						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center backdrop-blur-[3px]">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
 									<PolygonFieldMessage needsPolygonNetwork={needsPolygonNetwork} />
