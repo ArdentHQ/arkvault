@@ -46,7 +46,7 @@ const AvatarWrapper = styled.div<Properties>`
 	}}
 `;
 
-export const EthereumAvatar: React.FC<Properties> = (properties) => <Avatar {...properties } variant="ethereum" />;
+export const EthereumAvatar: React.FC<Properties> = (properties) => <Avatar {...properties} variant="ethereum" />;
 
 export const Avatar = ({
 	variant,
@@ -60,7 +60,7 @@ export const Avatar = ({
 }: Properties) => {
 	const image = React.useMemo(() => {
 		if (!address) {
-			return undefined;
+			return;
 		}
 
 		if (variant === "ethereum") {
