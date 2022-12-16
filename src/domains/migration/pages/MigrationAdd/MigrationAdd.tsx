@@ -17,6 +17,8 @@ enum Step {
 
 const TOTAL_STEPS = 5;
 
+const submitHandler = () => {};
+
 export const MigrationAdd = () => {
 	const { t } = useTranslation();
 
@@ -24,8 +26,6 @@ export const MigrationAdd = () => {
 		defaultValues: {},
 		mode: "onChange",
 	});
-
-	const submitHandler = () => {};
 
 	const activeTab = useMemo(() => Step.Connect, []);
 
