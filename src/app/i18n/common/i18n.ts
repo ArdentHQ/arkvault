@@ -199,6 +199,7 @@ export const translations = {
 	MESSAGE: "Message",
 	METHOD: "Method",
 	MIGRATION: "Migration",
+	MIGRATION_ADDRESS: "Migration Address",
 	MNEMONIC: "Mnemonic",
 	MNEMONIC_TYPE: {
 		BIP39: "Mnemonic",
