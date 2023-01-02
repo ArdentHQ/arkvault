@@ -23,7 +23,7 @@ exports[`SelectAddress > should render disabled 1`] = `
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
       />
       <div
-        class="relative flex h-full flex-1 invisible"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
@@ -105,7 +105,7 @@ exports[`SelectAddress > should render empty 1`] = `
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
       />
       <div
-        class="relative flex h-full flex-1 invisible"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
@@ -186,7 +186,7 @@ exports[`SelectAddress > should render invalid 1`] = `
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
       />
       <div
-        class="relative flex h-full flex-1 invisible"
+        class="relative flex h-full flex-1"
       >
         <input
           aria-invalid="true"
@@ -302,18 +302,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         class="no-ligatures flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
       >
         <span
-          class="font-semibold text-base text-theme-text"
-          data-testid="Address__alias"
-        >
-          <span
-            class="css-u3jrna"
-            data-testid="TruncateEnd"
-          >
-            testwallet2
-          </span>
-        </span>
-        <span
-          class="min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          class="min-w-0 overflow-hidden text-theme-text font-semibold text-base"
           data-testid="Address__address"
         >
           DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -419,7 +408,7 @@ exports[`SelectAddress > should render without user icon 1`] = `
         class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-459u9r"
       />
       <div
-        class="relative flex h-full flex-1 invisible"
+        class="relative flex h-full flex-1"
       >
         <input
           autocomplete="off"
