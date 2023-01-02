@@ -132,13 +132,18 @@ export const MigrationConnectStep = () => {
 		setSelectedAddress(address);
 	};
 
+	const stepIsValid = useMemo(
+		() => !!account && !accountIsInWrongNetwork && !!selectedWallet,
+		[account, accountIsInWrongNetwork, selectedWallet],
+	);
+
 	return (
 		<MigrationStep
 			title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
 			onCancel={() => {}}
 			onContinue={() => {}}
-			isValid={false}
+			isValid={stepIsValid}
 		>
 			<div className="space-y-3">
 				<div className="rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
