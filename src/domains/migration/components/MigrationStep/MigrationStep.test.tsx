@@ -3,15 +3,15 @@ import userEvent from "@testing-library/user-event";
 import { MigrationStep } from "./MigrationStep";
 import { render, screen } from "@/utils/testing-library";
 
+const title = "A title";
+const description = "A description";
+const isValid = true;
+const children = <div data-testid="MigrationStep__children" />;
+const onCancel = () => {};
+const onContinue = () => {};
+
 describe("MigrationStep", () => {
 	it("should render ", () => {
-		const title = "A title";
-		const description = "A description";
-		const isValid = true;
-		const children = <div data-testid="MigrationStep__children" />;
-		const onCancel = () => {};
-		const onContinue = () => {};
-
 		render(
 			<MigrationStep
 				title={title}
@@ -30,12 +30,7 @@ describe("MigrationStep", () => {
 	});
 
 	it("should handle cancel button", () => {
-		const title = "A title";
-		const description = "A description";
-		const isValid = true;
-		const children = <div />;
 		const onCancel = vi.fn();
-		const onContinue = () => {};
 
 		render(
 			<MigrationStep
@@ -55,11 +50,6 @@ describe("MigrationStep", () => {
 	});
 
 	it("should handle continue button", () => {
-		const title = "A title";
-		const description = "A description";
-		const isValid = true;
-		const children = <div />;
-		const onCancel = () => {};
 		const onContinue = vi.fn();
 
 		render(
@@ -79,12 +69,8 @@ describe("MigrationStep", () => {
 		expect(onContinue).toHaveBeenCalled();
 	});
 	it("disables the continue button if not valid", () => {
-		const title = "A title";
-		const description = "A description";
-		const isValid = false;
-		const children = <div />;
-		const onCancel = () => {};
 		const onContinue = vi.fn();
+		const isValid = false;
 
 		render(
 			<MigrationStep
