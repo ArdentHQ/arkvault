@@ -20,7 +20,7 @@ export const translations = {
 					INSTALL_METAMASK: "Install MetaMask",
 					MESSAGES: {
 						NEEDS_METAMASK:
-							"In order to complete the Migration, you must first install MetaMask. Learn more in our <linkMigrationGuide>Migration Guide.</linkMigrationGuide>",
+							"In order to complete the Migration, you must first install MetaMask. Learn more in our <linkMigrationGuide>Migration Guide</linkMigrationGuide>.",
 						NEEDS_POLYGON:
 							"To migrate, you need to have a Polygon network address and the <linkMetamask>MetaMask</linkMetamask> plugin.",
 					},
