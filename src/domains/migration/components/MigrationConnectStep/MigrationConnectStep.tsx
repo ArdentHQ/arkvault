@@ -19,14 +19,12 @@ const METAMASK_URL = "https://metamask.io/";
 const POLYGON_MIGRATION_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const MetamaskButton = ({ children }: { children: React.ReactNode }) => (
-	<button type="button" className="group relative overflow-hidden rounded-lg">
-		<span className="pointer-events-none absolute left-0 top-0 block h-full w-full bg-gradient-to-r from-[#FFDB80] to-[#F27C0B] opacity-100 transition-all duration-200 ease-in-out group-hover:opacity-0" />
-		<span className="pointer-events-none absolute left-0 top-0 block h-full w-full bg-gradient-to-r from-[#FFD486] to-[#4381C0] opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100" />
-		<div className="flex space-x-2 py-[14px] px-5">
-			<span className="relative">
-				<MetamaskLogo />
-			</span>
-			<span className="relative font-semibold text-white">{children}</span>
+	<button type="button" className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#FFDB80] to-theme-warning-800">
+		<span className="absolute inset-0 bg-gradient-to-r from-theme-warning-200 to-theme-navy-500 opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100" />
+
+		<div className="relative flex space-x-2 py-3.5 px-5">
+			<MetamaskLogo />
+			<span className="font-semibold text-white">{children}</span>
 		</div>
 	</button>
 );
