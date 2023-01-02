@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
 import { useMetaMask } from "@/domains/migration/hooks/use-meta-mask";
@@ -10,6 +10,7 @@ import { useActiveProfile } from "@/app/hooks";
 import { Amount } from "@/app/components/Amount";
 import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
+import { useLink } from "@/app/hooks/use-link";
 const { MetamaskLogo } = images.common;
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -18,8 +19,6 @@ const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION
 const MIGRATION_GUIDE_URL = "https://arkvault.io/docs";
 // @TBD
 const METAMASK_URL = "https://metamask.io/";
-// @TBD
-const POLYGON_MIGRATION_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const MetaMaskButton = ({
 	children,
@@ -70,13 +69,12 @@ const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
 };
 
 export const MigrationConnectStep = () => {
-	const { chainId, needsMetaMask, isOnPolygonNetwork, account, connectWallet } = useMetaMask();
+	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet } = useMetaMask();
 
-	useEffect(() => {
-		console.log({ account, chainId, needsMetaMask });
-	}, [chainId, needsMetaMask, account]);
+	const { openExternal } = useLink();
 
 	const { t } = useTranslation();
+
 	const profile = useActiveProfile();
 
 	const wallets = useMemo(
@@ -196,7 +194,7 @@ export const MigrationConnectStep = () => {
 									<div className="h-8 w-8 rounded-full border border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700" />
 								</div>
 							) : (
-								<SelectPolygonAddress value={POLYGON_MIGRATION_ADDRESS} />
+								<SelectPolygonAddress value={account!} />
 							)}
 						</FormField>
 
@@ -231,7 +229,10 @@ export const MigrationConnectStep = () => {
 								</div>
 
 								{needsMetaMask ? (
-									<MetaMaskButton className="w-full sm:w-auto" onClick={() => {}}>
+									<MetaMaskButton
+										className="w-full sm:w-auto"
+										onClick={() => openExternal("https://metamask.io/download/")}
+									>
 										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK")}
 									</MetaMaskButton>
 								) : (

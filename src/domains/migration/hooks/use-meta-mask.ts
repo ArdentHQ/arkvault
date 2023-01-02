@@ -21,6 +21,8 @@ type Ethereum = ethers.providers.ExternalProvider &
 
 const POLYGON_NETWORK_ID = 137;
 
+type WindowWithEthereum = Window & { ethereum?: Ethereum };
+
 export const useMetaMask = () => {
 	const [needsMetaMask, setNeedsMetaMask] = useState<boolean>(false);
 	const [chainId, setChainId] = useState<number>();
@@ -30,12 +32,12 @@ export const useMetaMask = () => {
 
 	// Initialize the Web3Provider when the page loads
 	useEffect(() => {
-		if (!window.ethereum) {
+		if (!(window as WindowWithEthereum).ethereum) {
 			setNeedsMetaMask(true);
 			return;
 		}
 
-		const ethereum = window.ethereum as Ethereum;
+		const ethereum = (window as WindowWithEthereum).ethereum as Ethereum;
 
 		async function initProvider() {
 			const provider = new ethers.providers.Web3Provider(ethereum, "any");
