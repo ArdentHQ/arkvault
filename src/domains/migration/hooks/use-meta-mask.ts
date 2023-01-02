@@ -24,6 +24,7 @@ const POLYGON_NETWORK_ID = 137;
 type WindowWithEthereum = Window & { ethereum?: Ethereum };
 
 export const useMetaMask = () => {
+	const [initialized, setInitialized] = useState<boolean>(false);
 	const [needsMetaMask, setNeedsMetaMask] = useState<boolean>(false);
 	const [chainId, setChainId] = useState<number>();
 	const [account, setAccount] = useState<string | null>();
@@ -34,6 +35,8 @@ export const useMetaMask = () => {
 	useEffect(() => {
 		if (!(window as WindowWithEthereum).ethereum) {
 			setNeedsMetaMask(true);
+
+			setInitialized(true);
 			return;
 		}
 
@@ -49,15 +52,15 @@ export const useMetaMask = () => {
 			setChainId(chain.chainId);
 
 			setEthereumProvider(provider);
+
+			setInitialized(true);
 		}
 
 		const accountChangedListener = (accounts: string[]) => {
-			console.log("accountsChanged", accounts);
 			setAccount(accounts.length > 0 ? accounts[0] : null);
 		};
 
 		const chainChangedListener = (chainId: string) => {
-			console.log("chainChangedListener", chainId);
 			// Chain ID came in as a hex string, so we need to convert it to decimal
 			setChainId(Number.parseInt(chainId, 16));
 		};
@@ -97,6 +100,7 @@ export const useMetaMask = () => {
 
 	const connectWallet = useCallback(async () => {
 		const { chainId, account } = await requestChainAndAccount();
+
 		setAccount(account);
 		setChainId(chainId);
 	}, [requestChainAndAccount]);
@@ -105,6 +109,7 @@ export const useMetaMask = () => {
 		account,
 		chainId,
 		connectWallet,
+		initialized,
 		isOnPolygonNetwork,
 		needsMetaMask,
 	};
