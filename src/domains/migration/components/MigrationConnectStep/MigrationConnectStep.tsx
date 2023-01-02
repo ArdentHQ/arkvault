@@ -96,9 +96,9 @@ export const MigrationConnectStep = () => {
 		return Math.round(amount * 100) / 100;
 	}, [selectedWallet]);
 
-	// @TODO
+	// @TODO: Check if Metamask is installed
 	const needsMetamask = useMemo(() => true, []);
-	// @TODO
+	// @TODO: Check if the user is connected to Polygon
 	const needsPolygonNetwork = useMemo(() => false, []);
 
 	const polygonFieldIsDisabled = useMemo(
