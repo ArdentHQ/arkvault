@@ -27,6 +27,8 @@ export const translations = {
 				},
 				POLYGON_MIGRATION_ADDRESS: "Polygon Migration Address",
 				SELECT_WALLET_TO_MIGRATE: "Select Wallet to Migrate",
+				SELECT_WALLET_TO_MIGRATE_DESCRIPTION:
+					"Select a wallet for which you want to migrate the balance to the new token.",
 			},
 			TITLE: "Migration",
 		},

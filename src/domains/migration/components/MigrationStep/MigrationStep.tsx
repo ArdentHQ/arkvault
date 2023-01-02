@@ -23,7 +23,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 				<Header title={title} subtitle={description} />
 			</div>
 
-			<div className="mt-8 rounded-2.5xl border border-theme-secondary-300 p-5 dark:border-theme-secondary-800">
+			<div className="mt-6 rounded-2.5xl border border-theme-secondary-300 p-5 dark:border-theme-secondary-800">
 				<div>{children}</div>
 
 				<div className="px-5 pb-5">
