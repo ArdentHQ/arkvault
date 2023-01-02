@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import cn from "classnames";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -18,14 +19,17 @@ const METAMASK_URL = "https://metamask.io/";
 // @TBD
 const POLYGON_MIGRATION_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-const MetamaskButton = ({ children }: { children: React.ReactNode }) => (
+const MetamaskButton = ({ children, className }: { children: React.ReactNode; className?: string }) => (
 	<button
 		type="button"
-		className="group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#FFDB80] to-theme-warning-800"
+		className={cn(
+			"group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#FFDB80] to-theme-warning-800",
+			className,
+		)}
 	>
 		<span className="absolute inset-0 bg-gradient-to-r from-theme-warning-200 to-theme-navy-500 opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100" />
 
-		<div className="relative flex space-x-2 py-3.5 px-5">
+		<div className="relative flex justify-center space-x-2 py-3.5 px-5">
 			<MetamaskLogo />
 			<span className="font-semibold text-white">{children}</span>
 		</div>
@@ -182,18 +186,18 @@ export const MigrationConnectStep = () => {
 						</div>
 					</div>
 					{polygonFieldIsDisabled && (
-						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center backdrop-blur-[3px]">
+						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
 									<PolygonFieldMessage needsMetamask={needsMetamask} />
 								</div>
 
 								{needsMetamask ? (
-									<MetamaskButton>
+									<MetamaskButton className="w-full sm:w-auto">
 										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.CONNECT_WALLET")}
 									</MetamaskButton>
 								) : (
-									<MetamaskButton>
+									<MetamaskButton className="w-full sm:w-auto">
 										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.NEEDS_METAMASK")}
 									</MetamaskButton>
 								)}
