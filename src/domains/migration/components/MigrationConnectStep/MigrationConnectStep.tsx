@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
+import { useMetaMask } from "@/domains/migration/hooks/use-meta-mask";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
 import { FormField, FormLabel } from "@/app/components/Form";
@@ -20,13 +21,22 @@ const METAMASK_URL = "https://metamask.io/";
 // @TBD
 const POLYGON_MIGRATION_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-const MetamaskButton = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+const MetaMaskButton = ({
+	children,
+	className,
+	onClick,
+}: {
+	children: React.ReactNode;
+	className?: string;
+	onClick: () => void;
+}) => (
 	<button
 		type="button"
 		className={cn(
 			"group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#FFDB80] to-theme-warning-800",
 			className,
 		)}
+		onClick={onClick}
 	>
 		<span className="absolute inset-0 bg-gradient-to-r from-theme-warning-200 to-theme-navy-500 opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100" />
 
@@ -37,8 +47,8 @@ const MetamaskButton = ({ children, className }: { children: React.ReactNode; cl
 	</button>
 );
 
-const PolygonFieldMessage = ({ needsMetamask }: { needsMetamask: boolean }) => {
-	if (needsMetamask) {
+const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
+	if (needsMetaMask) {
 		return (
 			<Trans
 				i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_METAMASK"
@@ -51,7 +61,7 @@ const PolygonFieldMessage = ({ needsMetamask }: { needsMetamask: boolean }) => {
 
 	return (
 		<Trans
-			i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_POLYGON"
+			i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_CONNECTED_WALLET"
 			components={{
 				linkMetamask: <Link to={METAMASK_URL} isExternal />,
 			}}
@@ -60,6 +70,12 @@ const PolygonFieldMessage = ({ needsMetamask }: { needsMetamask: boolean }) => {
 };
 
 export const MigrationConnectStep = () => {
+	const { chainId, needsMetaMask, isOnPolygonNetwork, account, connectWallet } = useMetaMask();
+
+	useEffect(() => {
+		console.log({ account, chainId, needsMetaMask });
+	}, [chainId, needsMetaMask, account]);
+
 	const { t } = useTranslation();
 	const profile = useActiveProfile();
 
@@ -101,14 +117,17 @@ export const MigrationConnectStep = () => {
 		return Math.round(amount * 100) / 100;
 	}, [selectedWallet]);
 
-	// @TODO: Check if Metamask is installed
-	const needsMetamask = useMemo(() => true, []);
-	// @TODO: Check if the user is connected to Polygon
-	const needsPolygonNetwork = useMemo(() => false, []);
+	const accountIsInWrongNetwork = useMemo(() => {
+		if (!account) {
+			return false;
+		}
+
+		return !isOnPolygonNetwork;
+	}, [account, isOnPolygonNetwork]);
 
 	const polygonFieldIsDisabled = useMemo(
-		() => needsMetamask || needsPolygonNetwork,
-		[needsMetamask, needsPolygonNetwork],
+		() => needsMetaMask || !account || !isOnPolygonNetwork,
+		[needsMetaMask, account, isOnPolygonNetwork],
 	);
 
 	const addressSelectedHandler = (address: string) => {
@@ -162,7 +181,11 @@ export const MigrationConnectStep = () => {
 					</div>
 				</div>
 
-				<div className="relative overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+				<div
+					className={cn("relative overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black", {
+						"dark:border-2 dark:border-theme-danger-400 ": accountIsInWrongNetwork,
+					})}
+				>
 					<div className="relative">
 						<FormField name="polygonAddress">
 							<FormLabel
@@ -186,21 +209,35 @@ export const MigrationConnectStep = () => {
 							</div>
 						</div>
 					</div>
-					{polygonFieldIsDisabled && (
+
+					{accountIsInWrongNetwork && (
+						<div className="absolute inset-0 flex items-center justify-center rounded-xl bg-theme-danger-50/80 px-4 py-3 backdrop-blur-[3px]  dark:bg-black/70">
+							<div className="max-w-[27rem] text-center text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+								<Trans
+									i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_POLYGON"
+									components={{
+										linkMigrationGuide: <Link to={MIGRATION_GUIDE_URL} isExternal />,
+									}}
+								/>
+							</div>
+						</div>
+					)}
+
+					{polygonFieldIsDisabled && !accountIsInWrongNetwork && (
 						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
-									<PolygonFieldMessage needsMetamask={needsMetamask} />
+									<PolygonFieldMessage needsMetaMask={needsMetaMask} />
 								</div>
 
-								{needsMetamask ? (
-									<MetamaskButton className="w-full sm:w-auto">
-										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.CONNECT_WALLET")}
-									</MetamaskButton>
+								{needsMetaMask ? (
+									<MetaMaskButton className="w-full sm:w-auto" onClick={() => {}}>
+										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK")}
+									</MetaMaskButton>
 								) : (
-									<MetamaskButton className="w-full sm:w-auto">
-										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.NEEDS_METAMASK")}
-									</MetamaskButton>
+									<MetaMaskButton className="w-full sm:w-auto" onClick={connectWallet}>
+										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.CONNECT_WALLET")}
+									</MetaMaskButton>
 								)}
 							</div>
 						</div>
