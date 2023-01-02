@@ -10,8 +10,9 @@ import { Amount } from "@/app/components/Amount";
 import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
 const { MetamaskLogo } = images.common;
-// @TODO: Move this to an env variable
-const TRANSACTION_FEE = 0.05;
+
+const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
+
 // @TBD
 const MIGRATION_GUIDE_URL = "https://arkvault.io/docs";
 // @TBD
