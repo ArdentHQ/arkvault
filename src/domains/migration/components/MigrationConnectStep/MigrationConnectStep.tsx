@@ -11,6 +11,7 @@ import { Amount } from "@/app/components/Amount";
 import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
 import { useLink } from "@/app/hooks/use-link";
+import { Icon } from "@/app/components/Icon";
 const { MetamaskLogo } = images.common;
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -214,7 +215,11 @@ export const MigrationConnectStep = () => {
 					</div>
 
 					{accountIsInWrongNetwork && (
-						<div className="absolute inset-0 flex items-center justify-center rounded-xl bg-theme-danger-50/80 px-4 py-3 backdrop-blur-[3px]  dark:bg-black/70">
+						<div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 rounded-xl bg-theme-danger-50/80 px-4 py-3  backdrop-blur-[3px] dark:bg-black/70">
+							<div>
+								<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
+							</div>
+
 							<div className="max-w-[27rem] text-center text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<Trans
 									i18nKey="MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.MESSAGES.NEEDS_POLYGON"
