@@ -13,7 +13,14 @@ interface Properties {
 	border?: boolean;
 }
 
-export const Header = ({ title, titleSuffix, className, headerClassName = "text-2xl", subtitle, extra }: Properties) => (
+export const Header = ({
+	title,
+	titleSuffix,
+	className,
+	headerClassName = "text-2xl",
+	subtitle,
+	extra,
+}: Properties) => (
 	<div className={cn("flex items-end justify-between bg-theme-background", className)}>
 		<div className="space-y-4">
 			<h1 className={cn("mb-0", headerClassName)} data-testid="header__title">
