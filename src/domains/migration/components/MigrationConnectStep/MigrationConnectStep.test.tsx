@@ -57,6 +57,14 @@ describe("MigrationConnectStep", () => {
 		).toBeInTheDocument();
 	});
 
+	it("should redirect user to migration page if press cancel button", () => {
+		renderComponent();
+
+		userEvent.click(screen.getByTestId("MigrationAdd__cancel-btn"));
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/migration`);
+	});
+
 	it("should show a message when account is not on polygon network", async () => {
 		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
 			account: "0x0000000000000000000000000000000000000000",
@@ -188,6 +196,37 @@ describe("MigrationConnectStep", () => {
 			await waitFor(() =>
 				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
 			);
+		});
+
+		it("should enable the continue button if has address and selected account", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+			});
+
+			renderComponent();
+
+			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeDisabled();
+
+			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+
+			await expect(screen.findByTestId("SearchWalletListItem__select-0")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+
+			await waitFor(() =>
+				expect(screen.getByTestId("SelectAddress__input")).toHaveValue(arkMainnetWallet.address()),
+			);
+
+			expect(screen.getByTestId("MigrationAdd__cancel__continue-btn")).toBeEnabled();
+
+			// @TODO: test the continue button behaviour (currently does nothing)
+			userEvent.click(screen.getByTestId("MigrationAdd__cancel__continue-btn"));
+
+			useMetaMaskMock.mockRestore();
 		});
 	});
 

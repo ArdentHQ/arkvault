@@ -1,6 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import cn from "classnames";
+import { generatePath } from "react-router";
+import { useHistory } from "react-router-dom";
 import { useMetaMask } from "@/domains/migration/hooks/use-meta-mask";
 import SelectPolygonAddress from "@/domains/migration/components/SelectPolygonAddress";
 import MigrationStep from "@/domains/migration/components/MigrationStep";
@@ -13,6 +15,7 @@ import { images } from "@/app/assets/images";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
+import { ProfilePaths } from "@/router/paths";
 const { MetamaskLogo } = images.common;
 
 /* istanbul ignore next -- @preserve */
@@ -74,7 +77,7 @@ const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
 
 export const MigrationConnectStep = () => {
 	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting } = useMetaMask();
-
+	const history = useHistory();
 	const { openExternal } = useLink();
 
 	const { t } = useTranslation();
@@ -141,11 +144,16 @@ export const MigrationConnectStep = () => {
 		[account, accountIsInWrongNetwork, selectedWallet],
 	);
 
+	const cancelHandler = useCallback(() => {
+		const path = generatePath(ProfilePaths.Migration, { profileId: profile.id() });
+		history.push(path);
+	}, [profile, history]);
+
 	return (
 		<MigrationStep
 			title={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.TITLE")}
 			description={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.DESCRIPTION")}
-			onCancel={() => {}}
+			onCancel={cancelHandler}
 			onContinue={() => {}}
 			isValid={stepIsValid}
 		>
