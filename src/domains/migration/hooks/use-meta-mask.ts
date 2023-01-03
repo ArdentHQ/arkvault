@@ -23,20 +23,30 @@ const POLYGON_NETWORK_ID = 137;
 
 type WindowWithEthereum = Window & { ethereum?: Ethereum };
 
+// Metamask supports Chrome, Firefox, Brave, Edge, and Opera, since Edge and
+// Opera are based on Chromium, we can just check for Chrome and Firefox
+// @see https://metamask.io/download/
+function isMetaMaskSupported() {
+	const isCompatible = /chrome|firefox/.test(navigator.userAgent.toLowerCase());
+	const isMobile = /android|iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+
+	return isCompatible && !isMobile;
+}
+
 export const useMetaMask = () => {
 	const [initialized, setInitialized] = useState<boolean>(false);
-	const [needsMetaMask, setNeedsMetaMask] = useState<boolean>(false);
 	const [chainId, setChainId] = useState<number>();
 	const [account, setAccount] = useState<string | null>();
 	const [ethereumProvider, setEthereumProvider] = useState<ethers.providers.Web3Provider>();
 	const [connecting, setConnecting] = useState<boolean>(false);
 	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
 
+	const needsMetaMask = !(window as WindowWithEthereum).ethereum;
+	const supportsMetaMask = isMetaMaskSupported();
+
 	// Initialize the Web3Provider when the page loads
 	useEffect(() => {
-		if (!(window as WindowWithEthereum).ethereum) {
-			setNeedsMetaMask(true);
-
+		if (needsMetaMask || !supportsMetaMask) {
 			setInitialized(true);
 			return;
 		}
@@ -116,5 +126,6 @@ export const useMetaMask = () => {
 		initialized,
 		isOnPolygonNetwork,
 		needsMetaMask,
+		supportsMetaMask,
 	};
 };
