@@ -592,13 +592,13 @@ jobs:
     domains-migrations:
         runs-on: ubuntu-latest
         env:
-            COVERAGE_INCLUDE_PATH: src/domains/migrations
+            COVERAGE_INCLUDE_PATH: src/domains/migration
         strategy:
             matrix:
                 node-version:
                     - 16.17.1
         concurrency:
-            group: ${{ github.head_ref }}-test-domains-migrations
+            group: ${{ github.head_ref }}-test-domains-migration
             cancel-in-progress: true
         steps:
             - uses: actions/checkout@v2
@@ -624,7 +624,7 @@ jobs:
               with:
                   timeout_minutes: 20
                   max_attempts: 1
-                  command: pnpm test:coverage src/domains/migrations
+                  command: pnpm test:coverage src/domains/migration
     router:
         runs-on: ubuntu-latest
         env:
