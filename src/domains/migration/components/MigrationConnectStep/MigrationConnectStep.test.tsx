@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 import { MigrationConnectStep } from "./MigrationConnectStep";
 import { translations as migrationTranslations } from "@/domains/migration/i18n";
 import { render, screen, env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
-
+import * as useMetaMask from "@/domains/migration/hooks/use-meta-mask";
 let profile: Contracts.IProfile;
 
 const history = createHashHistory();
@@ -26,7 +26,6 @@ const renderComponent = (profileId = profile.id()) => {
 	);
 };
 
-// 99,107,115-117,125,134,255
 describe("MigrationConnectStep", () => {
 	let arkMainnetWallet: Contracts.IReadWriteWallet;
 	let arkMainnetWalletSpy: any;
@@ -56,6 +55,46 @@ describe("MigrationConnectStep", () => {
 		expect(
 			screen.getByText(migrationTranslations.MIGRATION_ADD.STEP_CONNECT.FORM.AMOUNT_YOU_GET),
 		).toBeInTheDocument();
+	});
+
+	it("should show a message when account is not on polygon network", async () => {
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: false,
+			needsMetaMask: false,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationStep__wrongnetwork")).resolves.toBeVisible();
+
+		useMetaMaskMock.mockRestore();
+	});
+
+	it("install metamask button opens the download page", async () => {
+		const windowOpenSpy = vi.spyOn(window, "open").mockImplementation(() => null);
+
+		const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+			account: "0x0000000000000000000000000000000000000000",
+			connectWallet: vi.fn(),
+			connecting: false,
+			isOnPolygonNetwork: true,
+			needsMetaMask: true,
+		});
+
+		renderComponent();
+
+		await expect(screen.findByTestId("MigrationConnectStep__metamask-button")).resolves.toBeVisible();
+
+		userEvent.click(screen.getByTestId("MigrationConnectStep__metamask-button"));
+
+		expect(windowOpenSpy).toHaveBeenCalledWith("https://metamask.io/download/", "_blank");
+
+		windowOpenSpy.mockRestore();
+
+		useMetaMaskMock.mockRestore();
 	});
 
 	describe("with valid wallets", () => {

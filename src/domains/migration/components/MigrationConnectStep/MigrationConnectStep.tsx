@@ -32,6 +32,7 @@ const MetaMaskButton = ({
 	onClick: () => void;
 }) => (
 	<button
+		data-testid="MigrationConnectStep__metamask-button"
 		type="button"
 		className={cn(
 			"group relative overflow-hidden rounded-lg bg-gradient-to-r from-[#FFDB80] to-theme-warning-800",
@@ -216,7 +217,10 @@ export const MigrationConnectStep = () => {
 					</div>
 
 					{accountIsInWrongNetwork && (
-						<div className="absolute inset-0 flex flex-col items-center justify-center space-y-3 rounded-xl bg-theme-danger-50/80 px-4 py-3  backdrop-blur-[3px] dark:bg-black/70">
+						<div
+							data-testid="MigrationStep__wrongnetwork"
+							className="absolute inset-0 flex flex-col items-center justify-center space-y-3 rounded-xl bg-theme-danger-50/80 px-4 py-3 backdrop-blur-[3px] dark:bg-black/70"
+						>
 							<div>
 								<Icon name="StatusError" className="text-theme-danger-400" size="lg" />
 							</div>
