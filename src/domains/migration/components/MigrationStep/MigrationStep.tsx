@@ -19,7 +19,7 @@ export const MigrationStep = ({ title, description, children, isValid, onCancel,
 
 	return (
 		<div>
-			<div data-testid="MigrationStep__header" className="sm:px-10">
+			<div data-testid="MigrationStep__header">
 				<Header
 					title={title}
 					subtitle={description}
