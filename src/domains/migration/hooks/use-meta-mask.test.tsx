@@ -6,10 +6,15 @@ import { useMetaMask } from "./use-meta-mask";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
 const TestComponent: React.FC = () => {
-	const { initialized, account, chainId, connectWallet, isOnPolygonNetwork, needsMetaMask } = useMetaMask();
+	const { initialized, connecting, account, chainId, connectWallet, isOnPolygonNetwork, needsMetaMask } =
+		useMetaMask();
 
 	if (!initialized) {
 		return null;
+	}
+
+	if (connecting) {
+		return <div data-testid="TestComponent__connecting">Connecting</div>;
 	}
 
 	if (needsMetaMask) {
@@ -81,6 +86,24 @@ describe("useMetaMask", () => {
 			expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("137");
 		});
 
+		it("should connect and handle case no accounts", async () => {
+			testingUtils.mockNotConnectedWallet();
+
+			testingUtils.mockChainId(137);
+
+			testingUtils.mockRequestAccounts([]);
+
+			render(<TestComponent />);
+
+			await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("TestComponent__connect"));
+
+			await expect(screen.findByTestId("TestComponent__connecting")).resolves.toBeVisible();
+
+			await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
+		});
+
 		it("should handle case cannot connect", async () => {
 			testingUtils.mockNotConnectedWallet();
 
@@ -92,11 +115,9 @@ describe("useMetaMask", () => {
 
 			userEvent.click(screen.getByTestId("TestComponent__connect"));
 
-			// @TODO
+			await expect(screen.findByTestId("TestComponent__connecting")).resolves.toBeVisible();
 
-			// await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
-
-			// expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("137");
+			await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
 		});
 
 		describe("on polygon", () => {
@@ -138,6 +159,20 @@ describe("useMetaMask", () => {
 				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
 					"0x1234567890123456789012345678901234567890",
 				);
+			});
+
+			it("should handle account change when no accounts", async () => {
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
+					"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				);
+
+				testingUtils.mockAccountsChanged([]);
+
+				await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
 			});
 		});
 
