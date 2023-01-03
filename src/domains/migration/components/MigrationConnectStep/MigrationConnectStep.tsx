@@ -169,8 +169,8 @@ export const MigrationConnectStep = () => {
 								label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.POLYGON_MIGRATION_ADDRESS")}
 							/>
 							{polygonFieldIsDisabled ? (
-								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-200 bg-theme-background px-4 dark:border-theme-secondary-700">
-									<div className="h-8 w-8 rounded-full border border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700" />
+								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-200 px-4 dark:border-theme-secondary-700">
+									<div className="h-8 w-8 rounded-full border border-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700" />
 								</div>
 							) : (
 								<SelectPolygonAddress value={POLYGON_MIGRATION_ADDRESS} />
@@ -187,7 +187,7 @@ export const MigrationConnectStep = () => {
 						</div>
 					</div>
 					{polygonFieldIsDisabled && (
-						<div className="bg-theme-secondary-100/70 dark:bg-theme-secondary-900/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
+						<div className="bg-theme-secondary-100/70 dark:bg-black/70 absolute inset-0 flex items-center justify-center px-4 py-3 backdrop-blur-[3px]">
 							<div className="flex max-w-[24rem] flex-col items-center space-y-4 text-center font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 								<div className="text-sm">
 									<PolygonFieldMessage needsMetamask={needsMetamask} />
