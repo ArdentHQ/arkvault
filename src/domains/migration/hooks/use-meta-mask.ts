@@ -29,6 +29,7 @@ export const useMetaMask = () => {
 	const [chainId, setChainId] = useState<number>();
 	const [account, setAccount] = useState<string | null>();
 	const [ethereumProvider, setEthereumProvider] = useState<ethers.providers.Web3Provider>();
+	const [connecting, setConnecting] = useState<boolean>(false);
 	const isOnPolygonNetwork = useMemo(() => chainId === POLYGON_NETWORK_ID, [chainId]);
 
 	// Initialize the Web3Provider when the page loads
@@ -99,16 +100,19 @@ export const useMetaMask = () => {
 	}, [ethereumProvider]);
 
 	const connectWallet = useCallback(async () => {
+		setConnecting(true);
 		const { chainId, account } = await requestChainAndAccount();
 
 		setAccount(account);
 		setChainId(chainId);
+		setConnecting(false);
 	}, [requestChainAndAccount]);
 
 	return {
 		account,
 		chainId,
 		connectWallet,
+		connecting,
 		initialized,
 		isOnPolygonNetwork,
 		needsMetaMask,

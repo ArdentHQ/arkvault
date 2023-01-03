@@ -3,7 +3,7 @@ import React from "react";
 import { generateTestingUtils } from "eth-testing";
 import userEvent from "@testing-library/user-event";
 import { useMetaMask } from "./use-meta-mask";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const TestComponent: React.FC = () => {
 	const { initialized, account, chainId, connectWallet, isOnPolygonNetwork, needsMetaMask } = useMetaMask();
@@ -68,12 +68,7 @@ describe("useMetaMask", () => {
 
 			testingUtils.mockChainId(137);
 
-			testingUtils.mockRequestAccounts([
-				"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
-				{
-					chainId: 137,
-				},
-			]);
+			testingUtils.mockRequestAccounts(["0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf"]);
 
 			render(<TestComponent />);
 
@@ -84,6 +79,24 @@ describe("useMetaMask", () => {
 			await expect(screen.findByTestId("TestComponent")).resolves.toBeVisible();
 
 			expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("137");
+		});
+
+		it("should handle case cannot connect", async () => {
+			testingUtils.mockNotConnectedWallet();
+
+			testingUtils.mockChainId(137);
+
+			render(<TestComponent />);
+
+			await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
+
+			userEvent.click(screen.getByTestId("TestComponent__connect"));
+
+			// @TODO
+
+			// await expect(screen.findByTestId("TestComponent__connect")).resolves.toBeVisible();
+
+			// expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("137");
 		});
 
 		describe("on polygon", () => {
@@ -108,6 +121,24 @@ describe("useMetaMask", () => {
 					"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
 				);
 			});
+
+			it("should handle account change", async () => {
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__account")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
+					"0xf61B443A155b07D2b2cAeA2d99715dC84E839EEf",
+				);
+
+				testingUtils.mockAccountsChanged(["0x1234567890123456789012345678901234567890"]);
+
+				await expect(screen.findByText("0x1234567890123456789012345678901234567890")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__account")).toHaveTextContent(
+					"0x1234567890123456789012345678901234567890",
+				);
+			});
 		});
 
 		describe("not on polygon", () => {
@@ -121,6 +152,18 @@ describe("useMetaMask", () => {
 				await expect(screen.findByTestId("TestComponent__chain")).resolves.toBeVisible();
 
 				expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("1");
+			});
+
+			it("should handle chain change", async () => {
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent")).resolves.toBeVisible();
+
+				expect(screen.getByTestId("TestComponent__chain")).toHaveTextContent("1");
+
+				testingUtils.mockChainChanged("0x89");
+
+				await waitFor(() => expect(screen.queryByTestId("TestComponent__chain")).toHaveTextContent("137"));
 			});
 		});
 	});

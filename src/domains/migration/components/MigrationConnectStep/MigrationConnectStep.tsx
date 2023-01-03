@@ -12,6 +12,7 @@ import { Link } from "@/app/components/Link";
 import { images } from "@/app/assets/images";
 import { useLink } from "@/app/hooks/use-link";
 import { Icon } from "@/app/components/Icon";
+import { Spinner } from "@/app/components/Spinner";
 const { MetamaskLogo } = images.common;
 
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
@@ -70,7 +71,7 @@ const PolygonFieldMessage = ({ needsMetaMask }: { needsMetaMask: boolean }) => {
 };
 
 export const MigrationConnectStep = () => {
-	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet } = useMetaMask();
+	const { needsMetaMask, isOnPolygonNetwork, account, connectWallet, connecting } = useMetaMask();
 
 	const { openExternal } = useLink();
 
@@ -238,17 +239,31 @@ export const MigrationConnectStep = () => {
 									<PolygonFieldMessage needsMetaMask={needsMetaMask} />
 								</div>
 
-								{needsMetaMask ? (
-									<MetaMaskButton
-										className="w-full sm:w-auto"
-										onClick={() => openExternal("https://metamask.io/download/")}
-									>
-										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK")}
-									</MetaMaskButton>
+								{connecting ? (
+									<div className="flex items-center space-x-2 pt-3">
+										<Spinner size="sm" theme="system" width={3} />
+
+										<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+											{t("COMMON.CONNECTING")}
+										</span>
+									</div>
 								) : (
-									<MetaMaskButton className="w-full sm:w-auto" onClick={connectWallet}>
-										{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.CONNECT_WALLET")}
-									</MetaMaskButton>
+									<>
+										{needsMetaMask ? (
+											<MetaMaskButton
+												className="w-full sm:w-auto"
+												onClick={() => openExternal("https://metamask.io/download/")}
+											>
+												{t(
+													"MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.INSTALL_METAMASK",
+												)}
+											</MetaMaskButton>
+										) : (
+											<MetaMaskButton className="w-full sm:w-auto" onClick={connectWallet}>
+												{t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.METAMASK.CONNECT_WALLET")}
+											</MetaMaskButton>
+										)}
+									</>
 								)}
 							</div>
 						</div>
