@@ -58,60 +58,79 @@ const testingUtils = generateTestingUtils({ providerType: "MetaMask" });
 
 describe("useMetaMask", () => {
 	describe("without metamask", () => {
-		it("should require metamask", async () => {
-			const userAgentSpy = vi
-				.spyOn(window.navigator, "userAgent", "get")
-				.mockReturnValue(
-					"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
-				);
+		describe("with compatible browser", () => {
+			let userAgentSpy: any;
 
-			render(<TestComponent />);
+			beforeAll(() => {
+				// Compatible browser since is based on chrome
+				userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+					);
+			});
 
-			await expect(screen.findByTestId("TestComponent__requiremetamask")).resolves.toBeVisible();
+			afterAll(() => {
+				userAgentSpy.mockRestore();
+			});
 
-			userAgentSpy.mockRestore();
+			it("should require metamask", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+					);
+
+				render(<TestComponent />);
+
+				await expect(screen.findByTestId("TestComponent__requiremetamask")).resolves.toBeVisible();
+
+				userAgentSpy.mockRestore();
+			});
 		});
 
-		it("should detect when is browser is not compatible", async () => {
-			const userAgentSpy = vi
-				.spyOn(window.navigator, "userAgent", "get")
-				.mockReturnValue(
-					"ozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
-				);
+		describe("with not compatible browser", () => {
+			it("should detect when browser is not compatible", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"ozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+					);
 
-			render(<TestComponent />);
+				render(<TestComponent />);
 
-			await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
 
-			userAgentSpy.mockRestore();
-		});
+				userAgentSpy.mockRestore();
+			});
 
-		it("should detect when is browser is not compatible for ios user agent", async () => {
-			const userAgentSpy = vi
-				.spyOn(window.navigator, "userAgent", "get")
-				.mockReturnValue(
-					"Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1",
-				);
+			it("should detect when browser is not compatible for ios user agent", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1",
+					);
 
-			render(<TestComponent />);
+				render(<TestComponent />);
 
-			await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
 
-			userAgentSpy.mockRestore();
-		});
+				userAgentSpy.mockRestore();
+			});
 
-		it("should detect when is browser is not compatible for android user agent", async () => {
-			const userAgentSpy = vi
-				.spyOn(window.navigator, "userAgent", "get")
-				.mockReturnValue(
-					"Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36",
-				);
+			it("should detect when browser is not compatible for android user agent", async () => {
+				const userAgentSpy = vi
+					.spyOn(window.navigator, "userAgent", "get")
+					.mockReturnValue(
+						"Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36",
+					);
 
-			render(<TestComponent />);
+				render(<TestComponent />);
 
-			await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
+				await expect(screen.findByTestId("TestComponent__notcompatible")).resolves.toBeVisible();
 
-			userAgentSpy.mockRestore();
+				userAgentSpy.mockRestore();
+			});
 		});
 	});
 
@@ -119,10 +138,14 @@ describe("useMetaMask", () => {
 		let userAgentSpy: any;
 
 		beforeAll(() => {
-			// Manually inject the mocked provider in the window as MetaMask does
 			global.window.ethereum = testingUtils.getProvider();
 
-			userAgentSpy = vi.spyOn(window.navigator, "userAgent", "get").mockReturnValue("chrome");
+			// Compatible browser since is based on chrome
+			userAgentSpy = vi
+				.spyOn(window.navigator, "userAgent", "get")
+				.mockReturnValue(
+					"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54",
+				);
 		});
 
 		afterAll(() => {
@@ -132,7 +155,6 @@ describe("useMetaMask", () => {
 		});
 
 		afterEach(() => {
-			// Clear all mocks between tests
 			testingUtils.clearAllMocks();
 		});
 
