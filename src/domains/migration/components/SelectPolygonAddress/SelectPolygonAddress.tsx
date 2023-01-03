@@ -14,6 +14,7 @@ const AddressAvatar = ({ address }: any) => {
 			/>
 		);
 	}
+
 	return <Avatar address={address} size="sm" noShadow />;
 };
 
