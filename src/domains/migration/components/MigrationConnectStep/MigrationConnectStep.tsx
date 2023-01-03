@@ -124,7 +124,7 @@ export const MigrationConnectStep = () => {
 			isValid={false}
 		>
 			<div className="space-y-3">
-				<div className="rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+				<div className="rounded-xl bg-theme-secondary-100 px-4 py-5 dark:bg-black sm:px-5">
 					<FormField name="address">
 						<FormLabel label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.ARK_ADDRESS")} />
 
@@ -162,7 +162,7 @@ export const MigrationConnectStep = () => {
 					</div>
 				</div>
 
-				<div className="relative overflow-hidden rounded-xl bg-theme-secondary-100 p-5 dark:bg-black">
+				<div className="relative overflow-hidden rounded-xl bg-theme-secondary-100 px-4 py-5 dark:bg-black sm:px-5">
 					<div className="relative">
 						<FormField name="polygonAddress">
 							<FormLabel
