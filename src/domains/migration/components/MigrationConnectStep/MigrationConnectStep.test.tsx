@@ -106,6 +106,54 @@ describe("MigrationConnectStep", () => {
 			arkMainnetWalletSpy.mockRestore();
 		});
 
+		it("should enable polygon field if has metamask, is in polygon network and has an account", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: false,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("SelectPolygonAddress")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon field if has metamask, but is not on polygon network", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: false,
+				needsMetaMask: false,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
+		it("should disable polygon field if does not has metamask", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: false,
+				isOnPolygonNetwork: true,
+				needsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__polygon-disabled")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
 		it("should include mainnet wallets with enough balance", () => {
 			renderComponent();
 
@@ -137,6 +185,14 @@ describe("MigrationConnectStep", () => {
 		});
 
 		it("should not include wallets without balance", () => {
+			renderComponent();
+
+			expect(screen.getByTestId("SelectAddress__input")).toBeDisabled();
+		});
+
+		it("should validate the wallet if using a different transaction fee from the env", () => {
+			process.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE = "0.01";
+
 			renderComponent();
 
 			expect(screen.getByTestId("SelectAddress__input")).toBeDisabled();

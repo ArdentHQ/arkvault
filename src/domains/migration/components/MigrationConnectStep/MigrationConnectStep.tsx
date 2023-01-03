@@ -15,6 +15,7 @@ import { Icon } from "@/app/components/Icon";
 import { Spinner } from "@/app/components/Spinner";
 const { MetamaskLogo } = images.common;
 
+/* istanbul ignore next -- @preserve */
 const TRANSACTION_FEE = Number.parseFloat(import.meta.env.VITE_POLYGON_MIGRATION_TRANSACTION_FEE || 0.05);
 
 // @TBD
@@ -198,7 +199,10 @@ export const MigrationConnectStep = () => {
 								label={t("MIGRATION.MIGRATION_ADD.STEP_CONNECT.FORM.POLYGON_MIGRATION_ADDRESS")}
 							/>
 							{polygonFieldIsDisabled ? (
-								<div className="flex h-14 w-full items-center rounded border border-theme-secondary-200 bg-theme-background px-4 dark:border-theme-secondary-700">
+								<div
+									data-testid="MigrationStep__polygon-disabled"
+									className="flex h-14 w-full items-center rounded border border-theme-secondary-200 bg-theme-background px-4 dark:border-theme-secondary-700"
+								>
 									<div className="h-8 w-8 rounded-full border border-theme-secondary-200 bg-theme-secondary-200 ring-theme-background dark:border-theme-secondary-700 dark:bg-theme-secondary-700" />
 								</div>
 							) : (

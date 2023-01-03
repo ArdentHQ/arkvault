@@ -30,6 +30,7 @@ export const SelectPolygonAddress = ({ placeholder, disabled, value, onChange }:
 
 	return (
 		<button
+			data-testid="SelectPolygonAddress"
 			className="relative w-full rounded focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-default"
 			type="button"
 			disabled={disabled}
