@@ -154,6 +154,22 @@ describe("MigrationConnectStep", () => {
 			useMetaMaskMock.mockRestore();
 		});
 
+		it("should show spinner while connecting", async () => {
+			const useMetaMaskMock = vi.spyOn(useMetaMask, "useMetaMask").mockReturnValue({
+				account: "0x0000000000000000000000000000000000000000",
+				connectWallet: vi.fn(),
+				connecting: true,
+				isOnPolygonNetwork: true,
+				needsMetaMask: true,
+			});
+
+			renderComponent();
+
+			await expect(screen.findByTestId("MigrationStep__connecting")).resolves.toBeVisible();
+
+			useMetaMaskMock.mockRestore();
+		});
+
 		it("should include mainnet wallets with enough balance", () => {
 			renderComponent();
 

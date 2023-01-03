@@ -248,7 +248,10 @@ export const MigrationConnectStep = () => {
 								</div>
 
 								{connecting ? (
-									<div className="flex items-center space-x-2 pt-3">
+									<div
+										data-testid="MigrationStep__connecting"
+										className="flex items-center space-x-2 pt-3"
+									>
 										<Spinner size="sm" theme="system" width={3} />
 
 										<span className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
